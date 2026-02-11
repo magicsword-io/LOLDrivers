@@ -1,0 +1,27 @@
+title: Driver Load - DirectIo32.sys
+id: 730675b9-ab54-5dcb-ad53-93be870f2bc0
+status: experimental
+description: |
+    Detects loading of driver DirectIo32.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/ee2d68aa-1a65-4967-8627-73590b041538/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\directio32.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

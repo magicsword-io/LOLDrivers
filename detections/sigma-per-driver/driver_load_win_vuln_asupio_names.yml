@@ -1,0 +1,29 @@
+title: Driver Load - AsUpIO.sys
+id: 0a827378-92a1-5531-9faa-0350dbe45fa0
+status: experimental
+description: |
+    Detects loading of driver AsUpIO.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/8d97bb7f-e009-4dc7-ab9d-fde293e679dc/
+    - Internal Research
+    - https://github.com/namazso/physmem_drivers
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.m
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asupio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

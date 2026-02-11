@@ -1,0 +1,39 @@
+title: Driver Load - LgDCatcher.sys
+id: 093a100b-153d-5c3c-87a0-33faf72ad83a
+status: experimental
+description: |
+    Detects loading of driver LgDCatcher.sys via hash.
+    NetFilter SDK TDI Hook Driver (WPP)
+references:
+    - https://www.loldrivers.io/drivers/a8e999ee-746f-4788-9102-c1d3d2914f56/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c8c6fadcb7cb85f197ab77e6a7b67aa9'
+            - 'MD5=ad6d5177656dfc5b43def5d13d32f9f6'
+            - 'MD5=ed6348707f177629739df73b97ba1b6e'
+            - 'SHA1=a01c42a5be7950adbc7228a9612255ac3a06b904'
+            - 'SHA1=806832983bb8cb1e26001e60ea3b7c3ade4d3471'
+            - 'SHA1=f86ae53eb61d3c7c316effe86395a4c0376b06db'
+            - 'SHA256=0c42fe45ffa9a9c36c87a7f01510a077da6340ffd86bf8509f02c6939da133c5'
+            - 'SHA256=ae5cc99f3c61c86c7624b064fd188262e0160645c1676d231516bf4e716a22d3'
+            - 'SHA256=58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59'
+            - 'IMPHASH=391ffad95759bc4bac2b737d0d0eaa84'
+            - 'IMPHASH=835e364e2175338d970c2aaee365f3dc'
+            - 'IMPHASH=0ebf1214948a636eba076b14cd8f72d5'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

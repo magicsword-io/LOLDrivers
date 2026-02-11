@@ -1,0 +1,29 @@
+title: Driver Load - viraglt64.sys
+id: af5f2c87-9211-5fc5-8b4a-6ae41137b76f
+status: experimental
+description: |
+    Detects loading of driver viraglt64.sys via name.
+    VirIT Agent System
+references:
+    - https://www.loldrivers.io/drivers/c3cca618-5a7f-4a51-8785-cb328fbfb0df/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\viraglt64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

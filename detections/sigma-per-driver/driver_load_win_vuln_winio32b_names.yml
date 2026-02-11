@@ -1,0 +1,27 @@
+title: Driver Load - WinIO32B.sys
+id: f6d20b72-9436-5c5e-a5de-2cef171f7191
+status: experimental
+description: |
+    Detects loading of driver WinIO32B.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/45f2c348-bf17-40ab-8306-ef14231cc996/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\winio32b.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

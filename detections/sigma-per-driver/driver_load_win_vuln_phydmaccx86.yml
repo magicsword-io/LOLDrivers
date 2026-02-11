@@ -1,0 +1,31 @@
+title: Driver Load - phydmaccx86.sys
+id: 71171304-2e24-59e4-b126-2c527060cd94
+status: experimental
+description: |
+    Detects loading of driver phydmaccx86.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/1055625b-3480-48b3-9556-8628a745d8f0/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8af7fc0eb2e945c1be06238bde456091'
+            - 'SHA1=8892ea0b3a05c65889162761ace8409df270d4c3'
+            - 'SHA256=23787eb342fd38da73ce785023176f98304267c6f6fa8a50e718da096c7a7951'
+            - 'IMPHASH=a1d29a3af6402793ec9d23883512938a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

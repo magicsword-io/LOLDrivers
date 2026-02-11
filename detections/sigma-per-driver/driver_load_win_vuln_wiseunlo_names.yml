@@ -1,0 +1,28 @@
+title: Driver Load - WiseUnlo.sys
+id: 8defcff6-b82a-5c63-9bb0-8d77893b9b55
+status: experimental
+description: |
+    Detects loading of driver WiseUnlo.sys via name.
+    WiseUnlo
+references:
+    - https://www.loldrivers.io/drivers/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\wiseunlo.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

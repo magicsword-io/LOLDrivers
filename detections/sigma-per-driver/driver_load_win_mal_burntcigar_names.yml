@@ -1,0 +1,31 @@
+title: Driver Load - burntcigar.sys
+id: 6a78db8c-0707-53de-bdf0-3a63b9279af4
+status: experimental
+description: |
+    Detects loading of driver burntcigar.sys via name.
+    BurntCigar (aka POORTRY) is a malicious kernel-mode rootkit driver used by multiple ransomware groups including Cuba, BlackCat, Medusa, LockBit, and RansomHub. Designed to disable and remove EDR solutions by terminating security processes and deleting critical security software files. VMProtect-packed driver signed with stolen Blueone Technology certificate. Detected by 32.9% of AV engines. Facilitates ransomware deployment by rendering systems defenseless.
+references:
+    - https://www.loldrivers.io/drivers/bb20edec-ecd4-4acd-9ad2-e4559748b336/
+    - https://www.virustotal.com/gui/file/7c5329b842cc3eaf1ec6c11b00e09a8c5e38ad14134b40a8bae3eda0a167a919
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+    - https://www.fortiguard.com/threat-signal-report/4920
+    - https://securelist.com/cuba-ransomware/110533/
+author: Michael Haag
+date: 2025/10/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\burntcigar.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

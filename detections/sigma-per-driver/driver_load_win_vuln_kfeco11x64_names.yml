@@ -1,0 +1,30 @@
+title: Driver Load - KfeCo11X64.sys
+id: 9e7b95f7-753c-5424-8d19-163c91fa138f
+status: experimental
+description: |
+    Detects loading of driver KfeCo11X64.sys via name.
+    Killer exposes COM interfaces that allow non-privileged users 1) to block network for any process 2) to manage any service in the OS. Killer is preinstalled to laptops equipped with Intel Killer NICs (e.g. Dell). Since Intel patched the vulnerability quietly, it's not clear which version is safe. Also, it is unclear which OEMs are affected. Dell is definitely in the list, but it is likely that other vendors with Killer NICs on board, such as Acer and MSI, are affected too. Some users think that Killer suite is required for the NIC to work properly, so they install it even after a fresh Windows install. This version is confirmed vulnerable based on the script usage from zwclose.
+references:
+    - https://www.loldrivers.io/drivers/76b5dfae-b384-45ce-8646-b2eec6b76a1e/
+    - https://zwclose.github.io/2023/04/18/killer2.html
+    - https://twitter.com/zwclose/status/1648441215808049153
+    - https://zwclose.github.io/2022/12/18/killer1.html
+author: Paul Michaud
+date: 2023/05/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kfeco11x64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

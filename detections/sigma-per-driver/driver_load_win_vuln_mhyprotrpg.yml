@@ -1,0 +1,31 @@
+title: Driver Load - mhyprotrpg.sys
+id: 66af4619-69c4-548e-b20b-02ed66ef8f67
+status: experimental
+description: |
+    Detects loading of driver mhyprotrpg.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/181b89e5-4bdd-4e95-b1bc-a294a4adfb29/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=214a9aba01ee1ba067b2feb382748c16'
+            - 'SHA1=6aa92733aa7b654c3ead8c0a5e81a6b05cbaaeb0'
+            - 'SHA256=8bf84bed9b5fa4576182c84d2f31679dc472acd0f83c9813498e9f71ed9fef3e'
+            - 'IMPHASH=ebb99842fa08915eb8b7f67d8dc7a13a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

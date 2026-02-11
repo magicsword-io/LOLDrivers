@@ -1,0 +1,27 @@
+title: Driver Load - nvflsh64.sys
+id: 3fd041b7-47ce-5f6c-bb9c-6edfebf4d94f
+status: experimental
+description: |
+    Detects loading of driver nvflsh64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/d4664202-d1b9-44d4-97cc-fee2150082db/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nvflsh64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

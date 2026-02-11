@@ -1,0 +1,27 @@
+title: Driver Load - Black.sys
+id: b4752fb5-b30e-5b46-b9e8-879c59e5576e
+status: experimental
+description: |
+    Detects loading of driver Black.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/4b047bb8-c605-4664-baed-25bb70e864a1/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\black.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,28 @@
+title: Driver Load - Dh_Kernel_10.sys
+id: 578e3bc2-e753-5803-9684-462577d088fe
+status: experimental
+description: |
+    Detects loading of driver Dh_Kernel_10.sys via name.
+    dianhu
+references:
+    - https://www.loldrivers.io/drivers/dfce8b0f-d857-4808-80ef-61273c7a4183/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dh_kernel_10.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

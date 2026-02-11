@@ -1,0 +1,28 @@
+title: Driver Load - LMIinfo.sys
+id: 5db8b106-f299-54df-8944-9492d7ea7e0d
+status: experimental
+description: |
+    Detects loading of driver LMIinfo.sys via name.
+    LogMeIn Kernel Information Provider
+references:
+    - https://www.loldrivers.io/drivers/a02ee964-a21e-4b08-9c98-a730c90bfd53/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\lmiinfo.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

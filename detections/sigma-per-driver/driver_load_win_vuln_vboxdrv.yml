@@ -1,0 +1,55 @@
+title: Driver Load - vboxdrv.sys
+id: af14a6c2-cb2f-5524-91c6-3816f50efcb6
+status: experimental
+description: |
+    Detects loading of driver vboxdrv.sys via hash.
+    Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable driver.
+references:
+    - https://www.loldrivers.io/drivers/2da3a276-9e38-4ee6-903d-d15f7c355e7c/
+    - https://unit42.paloaltonetworks.com/acidbox-rare-malware/
+    - https://www.coresecurity.com/core-labs/advisories/virtualbox-privilege-escalation-vulnerability
+    - https://unit42.paloaltonetworks.com/acidbox-rare-malware/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9f94028cbcf6789103cb5bb6fcef355d'
+            - 'MD5=eaea9ccb40c82af8f3867cd0f4dd5e9d'
+            - 'MD5=1c31d4e9ad2d2b5600ae9d0c0969fe59'
+            - 'MD5=bce7f34912ff59a3926216b206deb09f'
+            - 'MD5=ee91da973bebe6442527b3d1abcc3c80'
+            - 'MD5=154fd286c96665946d55a7d49923ad7e'
+            - 'MD5=3b23808de1403961205352e94b8f2f9b'
+            - 'SHA1=7c1b25518dee1e30b5a6eaa1ea8e4a3780c24d0c'
+            - 'SHA1=eaddeefe13bca118369faf95eee85b0a2a553221'
+            - 'SHA1=356172a2e12fd3d54e758aaa4ff0759074259144'
+            - 'SHA1=696d68bdbe1d684029aaad2861c49af56694473a'
+            - 'SHA1=b7fa8278ab7bc485727d075e761a72042c4595f7'
+            - 'SHA1=2ae1456bb0fa5a016954b03967878fb6db4d81eb'
+            - 'SHA1=c8ec23066a50800d42913d5e439700c5cd6a2287'
+            - 'SHA256=78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f'
+            - 'SHA256=b50b11e2203942695380869c6072e15479290bc57da2ec5df3481a36b8a8561e'
+            - 'SHA256=cf3a7d4285d65bf8688215407bce1b51d7c6b22497f09021f0fce31cbeb78986'
+            - 'SHA256=d998ea6d0051e17c1387c9f295b1c79bacb2f61c23809903445f60313d36c7fd'
+            - 'SHA256=73fddd441a764e808ed6d6b8f3d0d13713e61221aa3cfef7da91cdaf112fe061'
+            - 'SHA256=d44848d3e845f8293974e8b621b72a61ec00c8d3cf95fcf41698bbbd4bdf5565'
+            - 'SHA256=775000c4083c8e4dcfc879d83fcd27b40b46820c9834ae4662861386a4d81fe9'
+            - 'IMPHASH=6723b1d5bd0f1fc13216cb44541e619e'
+            - 'IMPHASH=b262e8d078ede007ebd0aa71b9152863'
+            - 'IMPHASH=4c5fc4519f1417f0630c3343aab7c9d2'
+            - 'IMPHASH=a7ff164c1ee5113a0a09e66b2cd03544'
+            - 'IMPHASH=c17c0bd619c1e188ffe27bd328dd7d08'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

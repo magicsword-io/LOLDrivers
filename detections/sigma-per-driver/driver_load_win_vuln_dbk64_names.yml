@@ -1,0 +1,27 @@
+title: Driver Load - dbk64.sys
+id: 31792c62-73b5-56f0-b455-b2804d6e9de2
+status: experimental
+description: |
+    Detects loading of driver dbk64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/1524a54d-520d-4fa4-a7d5-aaaa066fbfc4/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dbk64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

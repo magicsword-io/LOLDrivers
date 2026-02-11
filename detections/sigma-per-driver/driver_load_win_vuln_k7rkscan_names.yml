@@ -1,0 +1,28 @@
+title: Driver Load - K7RKScan.sys
+id: 585d9759-4408-51e8-b8d2-28cfdeb239de
+status: experimental
+description: |
+    Detects loading of driver K7RKScan.sys via name.
+    Driver can be used to load unsigned drivers
+references:
+    - https://www.loldrivers.io/drivers/bd580aba-a804-4afc-adb3-b8ce342c78f6/
+    - https://github.com/BlackSnufkin/BYOVD
+author: Michael Haag
+date: 2025/09/18
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\k7rkscan.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,31 @@
+title: Driver Load - BS_RCIO.sys
+id: f0e96119-4663-5ef9-9912-c33127d95e9c
+status: experimental
+description: |
+    Detects loading of driver BS_RCIO.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/0a2f2700-97b5-42b6-b121-38e5f03e9957/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=ab53d07f18a9697139ddc825b466f696'
+            - 'SHA1=213ba055863d4226da26a759e8a254062ea77814'
+            - 'SHA256=362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc'
+            - 'IMPHASH=1d05fb30a58133da2e9dbdfcf51b80fd'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

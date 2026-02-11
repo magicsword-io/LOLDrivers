@@ -1,0 +1,27 @@
+title: Driver Load - TGSafe.sys
+id: 3dc467fd-88c5-583f-a103-92b42389a149
+status: experimental
+description: |
+    Detects loading of driver TGSafe.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/ad693146-4adf-4407-bb20-f2505e34c226/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=3a95cc82173032b82a0ffc7d2e438df64c13bc16b4574214c9fe3be37250925e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

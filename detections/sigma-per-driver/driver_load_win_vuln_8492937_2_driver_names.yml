@@ -1,0 +1,28 @@
+title: Driver Load - 8492937_2_Driver.sys
+id: b217ba86-1c04-56f0-93a8-c7035e8e8811
+status: experimental
+description: |
+    Detects loading of driver 8492937_2_Driver.sys via name.
+    ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon driver and provides extensive capabilities to terminate processes, remove security callbacks, manipulate files, and disable security tools. It uses stolen certificates from Chinese companies and requires a specific password for activation. The driver was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers with kernel-level capabilities to blind EDR products by removing notification callbacks, detaching mini-filter devices, and replacing driver major functions.
+references:
+    - https://www.loldrivers.io/drivers/c95a796a-a8f6-4cfa-bc42-4936ecb59091/
+    - https://www.elastic.co/security-labs/abyssworker
+author: Michael Haag
+date: 2025/03/26
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\8492937_2_driver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

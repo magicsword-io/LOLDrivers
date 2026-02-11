@@ -1,0 +1,36 @@
+title: Driver Load - WINIODrv.sys
+id: 125d6e5f-9570-5fb3-b704-57b39e409ccc
+status: experimental
+description: |
+    Detects loading of driver WINIODrv.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/b745b5da-9cd6-4b3a-badf-fbe487497705/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=ad22a7b010de6f9c6f39c350a471a440'
+            - 'MD5=a86150f2e29b35369afa2cafd7aa9764'
+            - 'MD5=0761c357aed5f591142edaefdf0c89c8'
+            - 'SHA1=460008b1ffd31792a6deadfa6280fb2a30c8a5d2'
+            - 'SHA1=738b7918d85e5cb4395df9e3f6fc94ddad90e939'
+            - 'SHA1=43419df1f9a07430a18c5f3b3cc74de621be0f8e'
+            - 'SHA256=7cfa5e10dff8a99a5d544b011f676bc383991274c693e21e3af40cf6982adb8c'
+            - 'SHA256=c9b49b52b493b53cd49c12c3fa9553e57c5394555b64e32d1208f5b96a5b8c6e'
+            - 'SHA256=3243aab18e273a9b9c4280a57aecef278e10bfff19abb260d7a7820e41739099'
+            - 'IMPHASH=392aa6863da8d7c14ad7386026e93b58'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

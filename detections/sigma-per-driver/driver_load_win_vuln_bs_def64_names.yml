@@ -1,0 +1,28 @@
+title: Driver Load - BS_Def64.sys
+id: 7aa0edd4-b10b-58fa-b8a1-01df23a5ffbf
+status: experimental
+description: |
+    Detects loading of driver BS_Def64.sys via name.
+    Default BIOS Flash Driver
+references:
+    - https://www.loldrivers.io/drivers/4a80da66-f8f1-4af9-ba56-696cfe6c1e10/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bs_def64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

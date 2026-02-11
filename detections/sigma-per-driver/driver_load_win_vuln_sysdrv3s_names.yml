@@ -1,0 +1,28 @@
+title: Driver Load - SysDrv3S.sys
+id: 2b5ca45e-54fc-5858-83f2-21e0aaf1f02c
+status: experimental
+description: |
+    Detects loading of driver SysDrv3S.sys via name.
+    Vulnerable driver found in https://github.com/hfiref0x/KDU.
+references:
+    - https://www.loldrivers.io/drivers/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+author: Michael Haag
+date: 2023/05/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sysdrv3s.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

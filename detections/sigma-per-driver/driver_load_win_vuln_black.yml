@@ -1,0 +1,27 @@
+title: Driver Load - Black.sys
+id: c45e525d-a779-5c85-b9eb-10e6d7b04d7e
+status: experimental
+description: |
+    Detects loading of driver Black.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/4b047bb8-c605-4664-baed-25bb70e864a1/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=d5562fb90b0b3deb633ab335bcbd82ce10953466a428b3f27cb5b226b453eaf3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

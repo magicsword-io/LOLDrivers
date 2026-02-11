@@ -1,0 +1,31 @@
+title: Driver Load - WiRwaDrv.sys
+id: f2ba0af3-4a2c-5fbf-8580-88339e8b55e5
+status: experimental
+description: |
+    Detects loading of driver WiRwaDrv.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/a4795ab6-d908-44cf-9ebf-a47db367d385/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=7be3a7a743f2013c3e90355219626c2c'
+            - 'SHA1=a951953e3c1bb08653ed7b0daec38be7b0169c27'
+            - 'SHA256=d8fc8e3a1348393c5d7c3a84bcbae383d85a4721a751ad7afac5428e5e579b4e'
+            - 'IMPHASH=21f58b1f2de6ad0e9c019da7a4e7317b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

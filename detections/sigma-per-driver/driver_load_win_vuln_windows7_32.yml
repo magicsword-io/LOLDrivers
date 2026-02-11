@@ -1,0 +1,27 @@
+title: Driver Load - windows7-32.sys
+id: 145d9c98-4a24-57f5-b3b9-19e96cae9d7e
+status: experimental
+description: |
+    Detects loading of driver windows7-32.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/b45a3fdf-592a-4cd9-81e2-8fe03d554cad/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=4941c4298f4560fc1e59d0f16f84bab5c060793700b82be2fd7c63735f1657a8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

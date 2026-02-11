@@ -1,0 +1,31 @@
+title: Driver Load - bs_hwmio64.sys
+id: 7cc56cf3-a8a5-5ed6-8b0c-6a6f422fe712
+status: experimental
+description: |
+    Detects loading of driver bs_hwmio64.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/9c4e2e75-a8be-4d2f-b016-e2a98281c8ec/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8af49cbb873437aeacfbdbcf884f8ebe'
+            - 'SHA1=e7f1f0e62e40ba70aa3227a006f8587b753b4ea3'
+            - 'SHA256=6dafd15ee2fbce87fef1279312660fc399c4168f55b6e6d463bf680f1979adcf'
+            - 'IMPHASH=42bba6b33379ce4af9d401af88faaca3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,28 @@
+title: Driver Load - OpenLibSys.sys
+id: 480a594a-9eb5-5ede-bc08-a5bc353554cf
+status: experimental
+description: |
+    Detects loading of driver OpenLibSys.sys via name.
+    OpenLibSys
+references:
+    - https://www.loldrivers.io/drivers/2e4fedb0-30ed-400d-b4e1-b2b2004c1607/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\openlibsys.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

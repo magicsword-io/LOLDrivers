@@ -1,0 +1,28 @@
+title: Driver Load - VProEventMonitor.sys
+id: 6588f765-80a9-57b1-9a7a-0c8adfd105e2
+status: experimental
+description: |
+    Detects loading of driver VProEventMonitor.sys via name.
+    VProEventMonitor.Sys - Event Monitoring driver
+references:
+    - https://www.loldrivers.io/drivers/4db827b1-325b-444d-9f23-171285a4d12f/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\vproeventmonitor.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

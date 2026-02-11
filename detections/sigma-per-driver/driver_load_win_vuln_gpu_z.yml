@@ -1,0 +1,31 @@
+title: Driver Load - GPU-Z.sys
+id: 079087d0-77dc-51ab-8377-dabe48219486
+status: experimental
+description: |
+    Detects loading of driver GPU-Z.sys via hash.
+    Utilized in RealBlindingEDR.
+references:
+    - https://www.loldrivers.io/drivers/0d6f1b0f-b94d-4254-b3bb-49de61246260/
+    - https://github.com/myzxcg/RealBlindingEDR/
+author: goosvorbook
+date: 2024/06/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=96e7f6770e12dd05a8ecf7b5d5dcd2fd'
+            - 'SHA1=9677a67bf1d6abb41ad2dd2f7218bb5cd3df50b7'
+            - 'SHA256=f9418b5e90a235339a4a1a889490faca39cd117a51ba4446daa1011da06c7ecd'
+            - 'IMPHASH=c1e4bebf7e4ee27e3e75f7289d6e0d7a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

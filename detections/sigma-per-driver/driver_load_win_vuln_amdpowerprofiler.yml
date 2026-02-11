@@ -1,0 +1,31 @@
+title: Driver Load - AMDPowerProfiler.sys
+id: 3399e9c9-af29-5f53-99ed-3ea32179756e
+status: experimental
+description: |
+    Detects loading of driver AMDPowerProfiler.sys via hash.
+    AMD Power Profiling Driver
+references:
+    - https://www.loldrivers.io/drivers/9a4fb66e-9084-4b21-9d76-a7afbe330606/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e4266262a77fffdea2584283f6c4f51d'
+            - 'SHA1=b480c54391a2a2f917a44f91a5e9e4590648b332'
+            - 'SHA256=0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05'
+            - 'IMPHASH=1422b8d354b95d9cd880c8726df45dfc'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

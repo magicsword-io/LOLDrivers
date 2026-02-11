@@ -1,0 +1,31 @@
+title: Driver Load - jokercontroller.sys
+id: ad2fd1df-6d02-52ce-a975-0e8dd59cc408
+status: experimental
+description: |
+    Detects loading of driver jokercontroller.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/4c815256-2534-4476-b15d-7cbf24c80098/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8b6fc18d944ae44403dd03a6c63b7fbb'
+            - 'SHA1=52784cd9a18b53061648c876ccfcb7775d345f3c'
+            - 'SHA256=f6d7faddc3a56875a8d24e4785a139141dd892968f70bf0e37d505af9a3324fd'
+            - 'IMPHASH=409d2ab916237fb129c57aacbb7cb4fe'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,31 @@
+title: Driver Load - malicious.sys
+id: 3d2b3c03-dc57-556e-97c6-3842fb598393
+status: experimental
+description: |
+    Detects loading of driver malicious.sys via hash.
+    This demo is a presentation at the CYBERSEC 2023 in Taiwan. The presentation showcases the abuse of RTCore64.sys (CVE-2019-16098) from MSI and the nullification of the DSE flag to load a malicious unsigned driver. The presentation also demonstrates an attack on 360 Total Security by nulling out its ObRegisterCallbacks and notify callbacks, enabling the execution of any malicious behavior on the processes of 360 Total Security.
+references:
+    - https://www.loldrivers.io/drivers/3e5c0fc4-bfe8-4af2-9613-4f56b0e3c2c8/
+    - https://github.com/zeze-zeze/CYBERSEC2023-BYOVD-Demo
+author: Guus Verbeek
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0b311af53d2f4f77d30f1aed709db257'
+            - 'SHA1=43501832ce50ccaba2706be852813d51de5a900f'
+            - 'SHA256=23e89fd30a1c7db37f3ea81b779ce9acf8a4294397cbb54cff350d54afcfd931'
+            - 'IMPHASH=2de3451f3e7b02970582bb8f9fd8c73a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

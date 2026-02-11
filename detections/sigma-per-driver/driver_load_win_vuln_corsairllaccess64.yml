@@ -1,0 +1,42 @@
+title: Driver Load - CorsairLLAccess64.sys
+id: 04647d4e-d8b2-5876-bab3-4250d82d8280
+status: experimental
+description: |
+    Detects loading of driver CorsairLLAccess64.sys via hash.
+    Corsair LL Access
+references:
+    - https://www.loldrivers.io/drivers/a9d9cbb7-b5f6-4e74-97a5-29993263280e/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=30efb7d485fc9c28fe82a97deac29626'
+            - 'MD5=b34361d151c793415ef92ee5d368c053'
+            - 'MD5=3b9698a9ee85f0b4edf150deef790ccd'
+            - 'MD5=f042e8318cf20957c2339d96690c3186'
+            - 'SHA1=85941b94524da181be8aad290127aa18fc71895c'
+            - 'SHA1=89656051126c3e97477a9985d363fbdde0bc159e'
+            - 'SHA1=2871a631f36cd1ea2fd268036087d28070ef2c52'
+            - 'SHA1=fbfabf309680fbf7c0f6f14c5a0e4840c894e393'
+            - 'SHA256=a334bdf0c0ab07803380eb6ef83eefe7c147d6962595dd9c943a6a76f2200b0d'
+            - 'SHA256=f15ae970e222ce06dbf3752b223270d0e726fb78ebec3598b4f8225b5a0880b1'
+            - 'SHA256=5fad3775feb8b6f6dcbd1642ae6b6a565ff7b64eadfc9bf9777918b51696ab36'
+            - 'SHA256=29a90ae1dcee66335ece4287a06482716530509912be863c85a2a03a6450a5b6'
+            - 'IMPHASH=82e75304c5b7ed87121b8b89c82f2389'
+            - 'IMPHASH=44cbd2ee295f1a35795eb4cd7cdd0864'
+            - 'IMPHASH=163436e69f8e582bdc1c1e6f735de23b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

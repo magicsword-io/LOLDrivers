@@ -1,0 +1,30 @@
+title: Driver Load - piddrv64.sys
+id: 7e10d5c6-27e7-53ce-8690-3d80724c34e0
+status: experimental
+description: |
+    Detects loading of driver piddrv64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/aaa92ef1-5728-4e15-9fca-b054b02f0fb0/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=fd7de498a72b2daf89f321d23948c3c4'
+            - 'SHA1=c4ed28fdfba7b8a8dfe39e591006f25d39990f07'
+            - 'SHA256=b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29'
+            - 'IMPHASH=e80eeed7225a880bbde0d038a5fe1af4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

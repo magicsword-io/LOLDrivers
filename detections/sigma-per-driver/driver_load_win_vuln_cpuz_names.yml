@@ -1,0 +1,28 @@
+title: Driver Load - cpuz.sys
+id: f8b70997-194c-5620-aff6-f868c04e8a70
+status: experimental
+description: |
+    Detects loading of driver cpuz.sys via name.
+    CPUID Driver
+references:
+    - https://www.loldrivers.io/drivers/0f59ce3b-20ac-41ba-8010-2abc74827eb8/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\cpuz.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,27 @@
+title: Driver Load - nt2.sys
+id: af29ff14-120e-54bd-8fda-720d08423e66
+status: experimental
+description: |
+    Detects loading of driver nt2.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nt2.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

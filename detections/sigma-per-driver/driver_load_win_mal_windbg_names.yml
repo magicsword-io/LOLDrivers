@@ -1,0 +1,28 @@
+title: Driver Load - windbg.sys
+id: e73b8a0f-e634-5eca-a2f2-c7c2e17f4a7d
+status: experimental
+description: |
+    Detects loading of driver windbg.sys via name.
+    These samples are related to CopperStealth campaign found by TrendMicro. CopperStealth’s infection chain involves dropping and loading a rootkit, which later injects its payload into explorer.exe and another system process. These payloads are responsible for downloading and running additional tasks. The rootkit also blocks access to blocklisted registry keys and prevents certain executables and drivers from running.
+references:
+    - https://www.loldrivers.io/drivers/da7314dc-6cf1-4d74-a0d1-796fc08944f8/
+    - https://www.trendmicro.com/en_us/research/23/e/water-orthrus-new-campaigns-deliver-rootkit-and-phishing-modules.html
+author: Michael Haag
+date: 2023/05/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\windbg.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

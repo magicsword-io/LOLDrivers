@@ -1,0 +1,30 @@
+title: Driver Load - NQrmq.sys
+id: b8ce5878-10b4-5f75-8141-0becb6754536
+status: experimental
+description: |
+    Detects loading of driver NQrmq.sys via hash.
+    Found via RichPEHeaderHash pivoting.
+references:
+    - https://www.loldrivers.io/drivers/61abe019-08cb-48a3-89b2-62810696f277/
+author: Michael Haag
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=550b7991d93534bc510bc4f237155a7a'
+            - 'SHA1=9382981b05b1fb950245313992444bfa0db5f881'
+            - 'SHA256=ad938d15ecfd70083c474e1642a88b078c3cea02cdbddf66d4fb1c01b9b29d9a'
+            - 'IMPHASH=dbf09dd3e675f15c7cc9b4d2b8e6cd90'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

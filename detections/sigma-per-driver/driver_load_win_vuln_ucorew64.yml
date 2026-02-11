@@ -1,0 +1,30 @@
+title: Driver Load - UCOREW64.SYS
+id: 01d77d82-eb3a-515a-9876-34f13ea48d16
+status: experimental
+description: |
+    Detects loading of driver UCOREW64.SYS via hash.
+references:
+    - https://www.loldrivers.io/drivers/a338a9fc-9fe3-400c-9fe4-69bb7892602d/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a17c58c0582ee560c72f60764ed63224'
+            - 'SHA1=bbc0b9fd67c8f4cefa3d76fcb29ff3cef996b825'
+            - 'SHA256=a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200'
+            - 'IMPHASH=0dcd262801389f839ce909cb173448e2'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

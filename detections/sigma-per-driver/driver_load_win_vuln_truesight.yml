@@ -1,0 +1,35 @@
+title: Driver Load - truesight.sys
+id: e8f21d44-6b22-5793-8001-f8f59bb973f2
+status: experimental
+description: |
+    Detects loading of driver truesight.sys via hash.
+    This is a C# AV/EDR Killer using Rogue Anti-Malware Driver 3.3. This driver is not present in the loldrivers or Windows blocklist at the time of this writing. The only reason I'm making this public is because the company has already published a fix in version 3.4, and Microsoft will likely block this driver soon. This driver can be used in Windows 23H2 with HVCI enabled, loldrivers blocklist, or WDAC enabled. HVCI is designed to ensure the integrity of code executed in the kernel, but it cannot protect against all possible vulnerabilities or actions that can be performed through drivers or system interfaces.
+references:
+    - https://www.loldrivers.io/drivers/e0e93453-1007-4799-ad02-9b461b7e0398/
+    - https://github.com/ph4nt0mbyt3/Darkside
+author: ph4nt0mbyt3, Michael Haag
+date: 2023/11/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f53fa44c7b591a2be105344790543369'
+            - 'MD5=531121e7ed50084b493a69f8f8a7a927'
+            - 'SHA1=363068731e87bcee19ad5cb802e14f9248465d31'
+            - 'SHA1=28c37b1c0af4a2a75a9662544fb3181a71c45dd2'
+            - 'SHA256=bfc2ef3b404294fe2fa05a8b71c7f786b58519175b7202a69fe30f45e607ff1c'
+            - 'SHA256=bfbfcb7cae421739163e7630865009d3197f587265e9e5797142d93e1b72b191'
+            - 'IMPHASH=ba0a77ce9e566f704a1655d999d41048'
+            - 'IMPHASH=b95bc1a99081d695b1c0b37b90a4a0be'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

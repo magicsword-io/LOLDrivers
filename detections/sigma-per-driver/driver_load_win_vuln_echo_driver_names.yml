@@ -1,0 +1,30 @@
+title: Driver Load - echo_driver.sys
+id: e0d797c5-7235-5582-b5e9-495b04a4b59c
+status: experimental
+description: |
+    Detects loading of driver echo_driver.sys via name.
+    Bad access controls in Inspect Element Ltd.'s echo_driver.sys allows attacker to gain arbitrary memory read and write, which allows for easy Privilege Escalation via Token Theft.
+references:
+    - https://www.loldrivers.io/drivers/afb8bb46-1d13-407d-9866-1daa7c82ca63/
+    - https://ioctl.fail/echo-ac-writeup/
+    - https://github.com/kite03/echoac-poc/tree/main/PoC
+    - https://github.com/pseuxide/kur
+author: Protocol & Zach
+date: 2023/07/14
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\echo_driver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

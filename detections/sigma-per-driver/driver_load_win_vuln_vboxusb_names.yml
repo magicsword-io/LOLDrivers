@@ -1,0 +1,27 @@
+title: Driver Load - VBoxUSB.Sys
+id: 60bb85fb-7117-5177-93a3-cbc6daa4b7b3
+status: experimental
+description: |
+    Detects loading of driver VBoxUSB.Sys via name.
+references:
+    - https://www.loldrivers.io/drivers/5938df1d-9513-449f-8252-c442ddca0c2a/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\vboxusb.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

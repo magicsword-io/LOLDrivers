@@ -1,0 +1,55 @@
+title: Driver Load - rtport.sys
+id: d6e197ee-4732-5018-9951-03373b715b0f
+status: experimental
+description: |
+    Detects loading of driver rtport.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/8ecc8439-0554-40d0-9130-c02941deadbe/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=843e39865b29bb3df825bd273f195a98'
+            - 'MD5=4ca0dba9e224473d664c25e411f5a3bd'
+            - 'MD5=3c9f9c1b802f66cf03cbe82dec2bd454'
+            - 'MD5=49832b4f726cdff825257bee33ad8451'
+            - 'MD5=ab81264493c218a0e875a0d50104ac9f'
+            - 'MD5=41ce6b172542a9a227e34a45881e1d2a'
+            - 'MD5=782f165b1d2db23f78e82fee0127cc14'
+            - 'MD5=bc71da7c055e3172226090ba5d8e2248'
+            - 'SHA1=3fd5cd30085450a509eaa6367af26f6c4b9741b6'
+            - 'SHA1=8b037d7a7cb612eabd8e20a9ce93afd92a6db2c2'
+            - 'SHA1=c22dc62e10378191840285814838fe9ed1af55d7'
+            - 'SHA1=bfff0073c936b9a7e2ad6848deb6f9bf03205488'
+            - 'SHA1=f70989f8b17971f13d45ee537e4ce98e93acbbaf'
+            - 'SHA1=dd2b90c9796237036ac7136a172d96274dea14c8'
+            - 'SHA1=1bd4ae9a406bf010e34cdd38e823f732972b18e3'
+            - 'SHA1=717669a1e2380cb61cc4e34618e118cc9cabbcd0'
+            - 'SHA256=71423a66165782efb4db7be6ce48ddb463d9f65fd0f266d333a6558791d158e5'
+            - 'SHA256=e3dbafce5ad2bf17446d0f853aeedf58cc25aa1080ab97e22375a1022d6acb16'
+            - 'SHA256=8fe429c46fedbab8f06e5396056adabbb84a31efef7f9523eb745fc60144db65'
+            - 'SHA256=6f806a9de79ac2886613c20758546f7e9597db5a20744f7dd82d310b7d6457d0'
+            - 'SHA256=ff322cd0cc30976f9dbdb7a3681529aeab0de7b7f5c5763362b02c15da9657a1'
+            - 'SHA256=3c0a36990f7eef89b2d5f454b6452b6df1304609903f31f475502e4050241dd8'
+            - 'SHA256=a29093d4d708185ba8be35709113fb42e402bbfbf2960d3e00fd7c759ef0b94e'
+            - 'SHA256=c490d6c0844f59fdb4aa850a06e283fbf5e5b6ac20ff42ead03d549d8ae1c01b'
+            - 'IMPHASH=8d2a933d039e8b8134ef41236d5ea843'
+            - 'IMPHASH=8b41eacbfbe5f5348579e27d30767e74'
+            - 'IMPHASH=87842ffa59724bda8389394bcaeb5d73'
+            - 'IMPHASH=0f3ddbe229201f6fa9a3dbbaf842a556'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

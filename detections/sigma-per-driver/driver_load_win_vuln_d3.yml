@@ -1,0 +1,27 @@
+title: Driver Load - d3.sys
+id: 83f68a61-3fac-5ad3-9d76-03424ebe7b15
+status: experimental
+description: |
+    Detects loading of driver d3.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/13b2424a-d337-4bc7-ad1d-2049c79906b4/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=36875562e747136313ec5db58174e5fab870997a054ca8d3987d181599c7db6a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

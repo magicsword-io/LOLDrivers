@@ -1,0 +1,30 @@
+title: Driver Load - ACE-BASE.sys
+id: 39e85ed8-6661-5f99-9eb0-fbf97cafb8e1
+status: experimental
+description: |
+    Detects loading of driver ACE-BASE.sys via hash.
+    Allows privilege escalation from regular user to System or PPL
+references:
+    - https://www.loldrivers.io/drivers/ff77b58d-e143-4f61-92de-c0d9bc0af7d5/
+author: Defence Tech security
+date: 2024/02/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e8f177545acc656c837b74102cd76527'
+            - 'SHA1=39402a9a3d90ba62938052089c8cbde9fb4e639f'
+            - 'SHA256=7326aefff9ea3a32286b423a62baebe33b73251348666c1ee569afe62dd60e11'
+            - 'IMPHASH=13ad56e7c65468e58c468f56e33687d4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

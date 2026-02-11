@@ -1,0 +1,31 @@
+title: Driver Load - cg6kwin2k.sys
+id: de90b253-b21a-5d17-bf0e-517e48197256
+status: experimental
+description: |
+    Detects loading of driver cg6kwin2k.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/fda3ff67-12dc-488c-a4c2-603f5bf420bd/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e3d290406de40c32095bd76dc88179fb'
+            - 'SHA1=06ec62c590ca0f1f2575300c151c84640d2523c0'
+            - 'SHA256=223f61c3f443c5047d1aeb905b0551005a426f084b7a50384905e7e4ecb761a1'
+            - 'IMPHASH=6c42ea981bc29a7e2ed56d297e0b56dc'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

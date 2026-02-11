@@ -1,0 +1,28 @@
+title: Driver Load - Agent64.sys
+id: 01d105a9-a895-5806-a1ce-326d2bc45d1d
+status: experimental
+description: |
+    Detects loading of driver Agent64.sys via name.
+    DriverAgent Direct I/O for 64-bit Windows
+references:
+    - https://www.loldrivers.io/drivers/5943b267-64f3-40d4-8669-354f23dec122/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\agent64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

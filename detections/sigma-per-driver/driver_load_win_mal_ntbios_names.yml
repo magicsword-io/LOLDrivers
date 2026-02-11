@@ -1,0 +1,29 @@
+title: Driver Load - ntbios.sys
+id: 19595817-75e7-5957-9e4f-2e77e12c8eeb
+status: experimental
+description: |
+    Detects loading of driver ntbios.sys via name.
+    Driver used in the Daxin malware campaign.
+references:
+    - https://www.loldrivers.io/drivers/eef1fcf4-8c54-420b-8d38-9c5f95129dcc/
+    - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+    - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+author: Michael Haag
+date: 2023/02/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ntbios.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

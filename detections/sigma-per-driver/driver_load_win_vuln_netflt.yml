@@ -1,0 +1,31 @@
+title: Driver Load - netflt.sys
+id: 9d120e69-7326-5c29-81a6-4653f42c078b
+status: experimental
+description: |
+    Detects loading of driver netflt.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/35a9afeb-18f1-4c02-a3aa-830e300138ae/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a5ce055e8970dc56498e3525d61e4982'
+            - 'SHA1=51ea4bed7f62e483dc116e9cffd95d8c2e1c9aa8'
+            - 'SHA256=cf16a2218fc8a3b6fa5aa4a0bc6205792798078c380ccc7e5041476e0f1bc53d'
+            - 'IMPHASH=9c8c681f74950997cd571fd838a847b8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

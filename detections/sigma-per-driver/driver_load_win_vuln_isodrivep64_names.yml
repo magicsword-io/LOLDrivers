@@ -1,0 +1,28 @@
+title: Driver Load - isodrivep64.sys
+id: 74715543-4402-5557-884b-c99d977f5b4e
+status: experimental
+description: |
+    Detects loading of driver isodrivep64.sys via name.
+    ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon driver and provides extensive capabilities to terminate processes, remove security callbacks, manipulate files, and disable security tools. It uses stolen certificates from Chinese companies and requires a specific password for activation. The driver was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers with kernel-level capabilities to blind EDR products by removing notification callbacks, detaching mini-filter devices, and replacing driver major functions.
+references:
+    - https://www.loldrivers.io/drivers/bd6490c2-20ea-441e-803c-bc3b957dae4c/
+    - https://www.elastic.co/security-labs/abyssworker
+author: Michael Haag
+date: 2025/03/26
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\isodrivep64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

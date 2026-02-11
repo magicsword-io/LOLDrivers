@@ -1,0 +1,67 @@
+title: Driver Load - dellbios.sys
+id: 23245e51-b98e-5a8d-9de9-90bd66033b99
+status: experimental
+description: |
+    Detects loading of driver dellbios.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/fa612342-5ae0-4e69-ad9c-14d574d9fb1e/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f4a31e08f89e5f002ef3cf7b1224af5f'
+            - 'MD5=c37b575c3a96b9788c26cefcf43f3542'
+            - 'MD5=637cf50b06bc53deae846b252d56bbdc'
+            - 'MD5=2d64d681d79e0d26650928259530c075'
+            - 'MD5=1a5a95d6bedbe29e5acf5eb6a727c634'
+            - 'MD5=fe937e1ed4c8f1d4eac12b065093ae63'
+            - 'MD5=16a8e8437b94d6207af2f25fd4801b6d'
+            - 'MD5=51c233297c3aa16c4222e35ded1139b6'
+            - 'MD5=0215d0681979987fe908fb19dab83399'
+            - 'MD5=c04a5cdcb446dc708d9302be4e91e46d'
+            - 'MD5=8a70921638ff82bb924456deadcd20e6'
+            - 'SHA1=7c46ecc5ce8e5f6e236a3b169fb46bb357ac3546'
+            - 'SHA1=9e8a87401dc7cc56b3a628b554ba395b1868520f'
+            - 'SHA1=fc154983af4a5be15ae1e4b54e2050530b8bc057'
+            - 'SHA1=be270d94744b62b0d36bef905ef6296165ffcee9'
+            - 'SHA1=c2d18ce26ce2435845f534146d7f353b662ad2b9'
+            - 'SHA1=4f02fb7387ca0bc598c3bcb66c5065d08dbb3f73'
+            - 'SHA1=f7413250e7e8ad83c350092d78f0f75fcca9f474'
+            - 'SHA1=0ff2ad8941fbb80cbccb6db7db1990c01c2869b1'
+            - 'SHA1=724dde837df2ff92b3ea7026fe8a0c4e5773898f'
+            - 'SHA1=c1777fcb7005b707f8c86b2370f3278a8ccd729f'
+            - 'SHA1=a88546fb61a2fa7dab978a9cb678469e8f0ed475'
+            - 'SHA256=6575ea9b319beb3845d43ce2c70ea55f0414da2055fa82eec324c4cebdefe893'
+            - 'SHA256=b3a191ccd1df19cdf17fe6637d48266ac84c4310b013ad6973d8cb336b06ff69'
+            - 'SHA256=b84dc9b885193ced6a1b6842a365a4f18d1683951bb11a5c780ab737ffa06684'
+            - 'SHA256=163912dfa4ad141e689e1625e994ab7c1f335410ebff0ade86bda3b7cdf6e065'
+            - 'SHA256=700b9839fde53e91f0847053b4d2eb8d9bd3aca098844510f1fa3bab6a37eb24'
+            - 'SHA256=a6c11d3bec2a94c40933ec1d3604cfe87617ba828b14f4cded6cfe85656debc0'
+            - 'SHA256=3678ba63d62efd3b706d1b661d631ded801485c08b5eb9a3ef38380c6cff319a'
+            - 'SHA256=5449e4dd1b75a7d52922c30baeca0ca8e32fe2210d1e72af2a2f314a5c2268fb'
+            - 'SHA256=0584520b4b3bdad1d177329bd9952c0589b2a99eb9676cb324d1fce46dad0b9a'
+            - 'SHA256=2288c418ddadd5a1db4e58c118d8455b01fd33728664408ce23b9346ae0ca057'
+            - 'SHA256=5bf3985644308662ebfa2fbcc11fb4d3e2a0c817ad3da1a791020f8c8589ebc8'
+            - 'IMPHASH=a9e22f5e8f4965960716d94ba7639c9f'
+            - 'IMPHASH=6b867dee14a77d0ada8ccad99b16291e'
+            - 'IMPHASH=be69e763a6a858c3e7e1ea6e3af12691'
+            - 'IMPHASH=10917aa77669c6ae714f074d89be9ab8'
+            - 'IMPHASH=1957e33acbc826c69f452ae1d1b89ac9'
+            - 'IMPHASH=edc2197e927392567cf09f7de410b5bb'
+            - 'IMPHASH=e7cbb1ce75bfc69f53855066a936042d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

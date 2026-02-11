@@ -1,0 +1,28 @@
+title: Driver Load - LgDCatcher.sys
+id: fd8228bc-6653-5264-ad6d-8f950e97238a
+status: experimental
+description: |
+    Detects loading of driver LgDCatcher.sys via name.
+    NetFilter SDK TDI Hook Driver (WPP)
+references:
+    - https://www.loldrivers.io/drivers/a8e999ee-746f-4788-9102-c1d3d2914f56/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\lgdcatcher.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

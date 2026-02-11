@@ -1,0 +1,36 @@
+title: Driver Load - filwfp.sys
+id: d6663e04-0614-599a-adc3-2868e92d8a14
+status: experimental
+description: |
+    Detects loading of driver filwfp.sys via hash.
+    Twister Antivirus, fildds.sys, DoS2
+    
+        CVE-2023-1444
+    
+        From IoControlCode 0x8011206B, a normal user can cause DoS due to writing into
+        null address.
+references:
+    - https://www.loldrivers.io/drivers/9d4358c3-5d6e-48a0-971e-e2ad7724c106/
+    - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1444
+author: VirarK
+date: 2024/06/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=09a85a7798059699231c111176a56a16'
+            - 'SHA1=55a540e91527b4c0eadfdf01426bb841f590d9bb'
+            - 'SHA256=490cfbb540dcd70b7bff4fdd62e7ed7400bbfebaf5083523d49f7184670f7b9a'
+            - 'IMPHASH=6461061c996437e942bd925300b79263'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

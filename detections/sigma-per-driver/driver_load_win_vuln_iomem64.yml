@@ -1,0 +1,34 @@
+title: Driver Load - iomem64.sys
+id: de3cc980-ebae-5b93-ade9-16695a2ef059
+status: experimental
+description: |
+    Detects loading of driver iomem64.sys via hash.
+    DTR Kernel mode driver
+references:
+    - https://www.loldrivers.io/drivers/04d377f9-36e0-42a4-8d47-62232163dc68/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f1e054333cc40f79cfa78e5fbf3b54c2'
+            - 'MD5=0898af0888d8f7a9544ef56e5e16354e'
+            - 'SHA1=4b009e91bae8d27b160dc195f10c095f8a2441e1'
+            - 'SHA1=6003184788cd3d2fc624ca801df291ccc4e225ee'
+            - 'SHA256=dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097'
+            - 'SHA256=3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4'
+            - 'IMPHASH=679eba16ab2d51543b7007708838ef7c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

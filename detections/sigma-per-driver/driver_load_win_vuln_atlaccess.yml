@@ -1,0 +1,31 @@
+title: Driver Load - atlAccess.sys
+id: 16eb9432-f4e9-5bb1-b5ad-235a436bbfce
+status: experimental
+description: |
+    Detects loading of driver atlAccess.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/fb783760-cb3f-4cf4-b4ac-8edb756b9821/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=08001b0cdb0946433366032827d7a187'
+            - 'SHA1=6b54b8f7edca5fb25a8ef1a1d31e14b9738db579'
+            - 'SHA256=0b57569aaa0f4789d9642dd2189b0a82466b80ad32ff35f88127210ed105fe57'
+            - 'IMPHASH=8b47d6faba90b5c89e27f7119c987e1a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

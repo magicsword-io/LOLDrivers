@@ -1,0 +1,31 @@
+title: Driver Load - PanIO.sys
+id: 3fedfa79-20fd-5514-a3c3-46bacdf801e5
+status: experimental
+description: |
+    Detects loading of driver PanIO.sys via hash.
+    Temperature and system information driver
+references:
+    - https://www.loldrivers.io/drivers/5f70bde4-9f81-44a8-9d3e-c6c7cf65bfae/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9a9dbf5107848c254381be67a4c1b1dd'
+            - 'SHA1=291b4a88ffd2ac1d6bf812ecaedc2d934dc503cb'
+            - 'SHA256=f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960'
+            - 'IMPHASH=7cf815757705e26b809574488ed56d0e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

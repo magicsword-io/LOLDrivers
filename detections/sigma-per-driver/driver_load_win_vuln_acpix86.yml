@@ -1,0 +1,31 @@
+title: Driver Load - ACPIx86.sys
+id: aed227ee-60f8-58cf-8f36-081c7cab7c49
+status: experimental
+description: |
+    Detects loading of driver ACPIx86.sys via hash.
+    ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon driver and provides extensive capabilities to terminate processes, remove security callbacks, manipulate files, and disable security tools. It uses stolen certificates from Chinese companies and requires a specific password for activation. The driver was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers with kernel-level capabilities to blind EDR products by removing notification callbacks, detaching mini-filter devices, and replacing driver major functions.
+references:
+    - https://www.loldrivers.io/drivers/fd6c52b1-aeaa-4d89-8051-91acc68c3270/
+    - https://www.elastic.co/security-labs/abyssworker
+author: Michael Haag
+date: 2025/03/26
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=608f9ef01086e9a8bdb373925a878c3a'
+            - 'SHA1=3bb535e63c8cf3fe20b188a01062e72d19dabb63'
+            - 'SHA256=c5400ae731464079590aad494bcf2e0799bb4281ea49baa9580ab2f1ee207861'
+            - 'IMPHASH=f5060a845b9d8912eae9b7ced7ee5702'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

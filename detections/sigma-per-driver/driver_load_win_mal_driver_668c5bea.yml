@@ -1,0 +1,31 @@
+title: Driver Load - driver_668c5bea.sys
+id: e49fa968-a581-5e3e-9405-bc1cc6e802cd
+status: experimental
+description: |
+    Detects loading of driver driver_668c5bea.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/04eefdf4-448d-45bb-87fc-93f263fc77f4/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5983eaf01499c65f35302cd962b849f5'
+            - 'SHA1=06b733b2b02753089d743793232bd326204b8919'
+            - 'SHA256=668c5bead3c7fcd919afd742ede7e5fe07972dc4cf730ff37deabdd22d88de4a'
+            - 'IMPHASH=0a36076c1d71bc5362d962fbe0089ccb'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

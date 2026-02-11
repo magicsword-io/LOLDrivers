@@ -1,0 +1,28 @@
+title: Driver Load - wnbios.sys
+id: a1ca6994-df7f-5a1a-92f1-da06a4bfc6e2
+status: experimental
+description: |
+    Detects loading of driver wnbios.sys via name.
+    Utilized in RealBlindingEDR.
+references:
+    - https://www.loldrivers.io/drivers/baa168cd-eba2-42e4-95e9-47cb4b2f9094/
+    - https://github.com/myzxcg/RealBlindingEDR/
+author: goosvorbook
+date: 2024/06/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\wnbios.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,31 @@
+title: Driver Load - LMIinfo.sys
+id: cb3afeef-eb17-57c3-93ea-5759d9f9bb0f
+status: experimental
+description: |
+    Detects loading of driver LMIinfo.sys via hash.
+    LogMeIn Kernel Information Provider
+references:
+    - https://www.loldrivers.io/drivers/a02ee964-a21e-4b08-9c98-a730c90bfd53/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d4f7c14e92b36c341c41ae93159407dd'
+            - 'SHA1=eac1b9e1848dc455ed780292f20cd6a0c38a3406'
+            - 'SHA256=453be8f63cc6b116e2049659e081d896491cf1a426e3d5f029f98146a3f44233'
+            - 'IMPHASH=8f52e36711c80bb9d7e30995e0092e83'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

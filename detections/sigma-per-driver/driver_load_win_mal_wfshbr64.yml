@@ -1,0 +1,36 @@
+title: Driver Load - wfshbr64.sys
+id: abf8a71b-fb78-5d07-a822-45d93fb3c30c
+status: experimental
+description: |
+    Detects loading of driver wfshbr64.sys via hash.
+    wfshbr64.sys and wfshbr32.sys specially crafted payload allows arbitrary user to perform bitwise operation with arbitrary EPROCESS offset and flags value to purposely elevate the game process to CodeGen Full protection by manipulating EPROCESS.Protection and EPROCESS.SignatureLevel flags (security hole as a feature).
+    
+    The driver is signed by Microsoft hardware compatibility publisher that is submitted via Microsoft Hardware Program.
+references:
+    - https://www.loldrivers.io/drivers/ddf661c0-7dfc-4c26-89c5-00cd6a81a139/
+    - https://github.com/kkent030315/CVE-2022-42046
+author: Michael Haag
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b76aee508f68b5b6dccd6e1f66f4cf8b'
+            - 'MD5=c9d4214c850e0cedf033dc8f0cd3aace'
+            - 'SHA1=b2f5d3318aab69e6e0ca8da4a4733849e3f1cee2'
+            - 'SHA1=0167259abd9231c29bec32e6106ca93a13999f90'
+            - 'SHA256=b8807e365be2813b7eccd2e4c49afb0d1e131086715638b7a6307cd7d7e9556c'
+            - 'SHA256=89698cad598a56f9e45efffd15d1841e494a2409cc12279150a03842cd6bb7f3'
+            - 'IMPHASH=df43355c636583e56e92142dcc69cc58'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

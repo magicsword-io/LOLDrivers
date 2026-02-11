@@ -1,0 +1,27 @@
+title: Driver Load - fiddrv64.sys
+id: 319aa4c7-58c7-5e9e-87e3-89341cd858da
+status: experimental
+description: |
+    Detects loading of driver fiddrv64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/64f3d4b0-6d2b-4275-b3d4-15d092af4092/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\fiddrv64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

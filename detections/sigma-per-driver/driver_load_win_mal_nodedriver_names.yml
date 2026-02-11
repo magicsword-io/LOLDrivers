@@ -1,0 +1,28 @@
+title: Driver Load - NodeDriver.sys
+id: 0596414d-a7c9-53be-a66e-3f526fb3c8cb
+status: experimental
+description: |
+    Detects loading of driver NodeDriver.sys via name.
+    Driver categorized as POORTRY by Mandiant.
+references:
+    - https://www.loldrivers.io/drivers/7a5fe570-3b35-4fad-b7d6-7518bd5436a0/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+author: Michael Haag
+date: 2023/03/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nodedriver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

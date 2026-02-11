@@ -1,0 +1,44 @@
+title: Driver Load - AsUpIO.sys
+id: bf48ef06-7d58-5ef7-92e2-a24d215bcdf7
+status: experimental
+description: |
+    Detects loading of driver AsUpIO.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/8d97bb7f-e009-4dc7-ab9d-fde293e679dc/
+    - Internal Research
+    - https://github.com/namazso/physmem_drivers
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.m
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6d4159694e1754f262e326b52a3b305a'
+            - 'MD5=f8dce1eb0f9fcaf07f68fe290aa629e4'
+            - 'MD5=9ba7c30177d2897bb3f7b3dc2f95ae0a'
+            - 'MD5=1392b92179b07b672720763d9b1028a5'
+            - 'SHA1=8b6aa5b2bff44766ef7afbe095966a71bc4183fa'
+            - 'SHA1=d5fd9fe10405c4f90235e583526164cd0902ed86'
+            - 'SHA1=d697a3f4993e7cb15efdeda3b1a798ae25a2d0e9'
+            - 'SHA1=7115929de6fc6b9f09142a878d1a1bf358af5f24'
+            - 'SHA256=bdcacee3695583a0ca38b9a786b9f7334bf2a9a3387e4069c8e6ca378b2791d0'
+            - 'SHA256=b9a4e40a5d80fedd1037eaed958f9f9efed41eb01ada73d51b5dcd86e27e0cbf'
+            - 'SHA256=b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602'
+            - 'SHA256=8f23313adb35782adb0ba97fefbfbb8bbc5fc40ae272e07f6d4629a5305a3fa2'
+            - 'IMPHASH=e0813a780309a0af84b605d95bd194e4'
+            - 'IMPHASH=51780bba04121d6be13f69de08721445'
+            - 'IMPHASH=9d5a58052468c8e07ff3d5bd730e5d00'
+            - 'IMPHASH=b4b90c1b054ebe273bff4b2fd6927990'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

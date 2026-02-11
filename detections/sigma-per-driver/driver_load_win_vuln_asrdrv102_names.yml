@@ -1,0 +1,28 @@
+title: Driver Load - AsrDrv102.sys
+id: cbf1f0bd-b788-575b-9770-f7a0bef6ef9e
+status: experimental
+description: |
+    Detects loading of driver AsrDrv102.sys via name.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/5af9abf0-d8de-4e9b-8141-e9e97a31901a/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrdrv102.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

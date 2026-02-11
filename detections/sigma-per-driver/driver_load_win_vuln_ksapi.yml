@@ -1,0 +1,31 @@
+title: Driver Load - ksapi.sys
+id: 0f49366b-e2ed-51a2-9bb2-51ca16ee4ecd
+status: experimental
+description: |
+    Detects loading of driver ksapi.sys via hash.
+    Driver can be used to load unsigned drivers
+references:
+    - https://www.loldrivers.io/drivers/7f80bb6e-bbf6-46dd-b77d-ecef24f1c2cd/
+    - https://github.com/BlackSnufkin/BYOVD
+author: Michael Haag
+date: 2025/09/18
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6d5fbbb446b119cb151c97b8e16be822'
+            - 'SHA1=38ce6a9e00b059c1710b728af9454a3e9f45e579'
+            - 'SHA256=26ed45461e62d733f33671bfd0724399d866ee7606f3f112c90896ce8355392e'
+            - 'IMPHASH=6b84b4c98d44b362d90f36c816b7f49b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,35 @@
+title: Driver Load - NlsLexicons0024UvN.sys
+id: 8d289c26-825e-565e-86c5-58b2b9f72d66
+status: experimental
+description: |
+    Detects loading of driver NlsLexicons0024UvN.sys via hash.
+    Cisco Talos has identified multiple versions of an undocumented malicious driver named “RedDriver,” a driver-based browser hijacker that uses the Windows Filtering Platform (WFP) to intercept browser traffic. RedDriver has been active since at least 2021.
+    RedDriver utilizes HookSignTool to forge its signature timestamp to bypass Windows driver-signing policies.
+    Code from multiple open-source tools has been used in the development of RedDriver's infection chain, including HP-Socket and a custom implementation of ReflectiveLoader.
+    The authors of RedDriver appear to be skilled in driver development and have deep knowledge of the Windows operating system.
+    This threat appears to target native Chinese speakers, as it searches for Chinese language browsers to hijack. Additionally, the authors are likely Chinese speakers themselves.
+references:
+    - https://www.loldrivers.io/drivers/18a842be-681a-4f32-97fd-57cb72ff5f3a/
+    - https://blog.talosintelligence.com/undocumented-reddriver/
+author: Michael Haag
+date: 2023/07/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=bd91787b5dcb2189b856804e85dfa1d9'
+            - 'SHA1=675cc00de7c1ef508ccd0c91770c82342c0ad4ab'
+            - 'SHA256=7a84703552ae032a0d1699a081e422ed6c958bbe56d5b41839c8bfa6395bee1d'
+            - 'IMPHASH=d51f0f6034eb5e45f0ed4e9b7bbc9c97'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

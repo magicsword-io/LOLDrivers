@@ -1,0 +1,28 @@
+title: Driver Load - amp.sys
+id: 47959358-94ec-5966-93fe-efd9a45ea843
+status: experimental
+description: |
+    Detects loading of driver amp.sys via name.
+    AMP Minifilter
+references:
+    - https://www.loldrivers.io/drivers/ca768fc5-9b5c-4ced-90ab-fd6be9a70199/
+    - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\amp.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

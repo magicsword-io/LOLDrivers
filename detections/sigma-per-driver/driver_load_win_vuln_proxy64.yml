@@ -1,0 +1,27 @@
+title: Driver Load - Proxy64.sys
+id: 2304ae94-c110-5ecc-bb81-5994769ca4bd
+status: experimental
+description: |
+    Detects loading of driver Proxy64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/5d3f0b7d-7413-48e6-8d9c-7fc0bb5a66ee/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=c60fcff9c8e5243bbb22ec94618b9dcb02c59bb49b90c04d7d6ab3ebbd58dc3a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

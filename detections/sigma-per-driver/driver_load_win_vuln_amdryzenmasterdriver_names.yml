@@ -1,0 +1,29 @@
+title: Driver Load - AMDRyzenMasterDriver.sys
+id: cb1c0c8b-0f0e-5405-aefa-70999fa73a44
+status: experimental
+description: |
+    Detects loading of driver AMDRyzenMasterDriver.sys via name.
+    AMD Ryzen Master Service Driver
+references:
+    - https://www.loldrivers.io/drivers/13973a71-412f-4a18-a2a6-476d3853f8de/
+    - Internal Research
+    - https://github.com/elastic/protections-artifacts/search?q=AMDRyzenMasterDriver
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\amdryzenmasterdriver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,31 @@
+title: Driver Load - directio32_legacy.sys
+id: 6e0f7858-9a35-544c-bdd9-355b61778107
+status: experimental
+description: |
+    Detects loading of driver directio32_legacy.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/7a0842ca-1a64-4ad1-9d66-25eb983d1742/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2da707d2fa073d60c4b069ce76a789ef'
+            - 'SHA1=75c924435e87f38f20e5e77b7f2c382b9c9b974b'
+            - 'SHA256=035b96ff8b85d312be0f9df6271714392a802ec8bab59ae8229812ddc67ced5a'
+            - 'IMPHASH=62bc9fd136b469e6cdc0f267f74be4b8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

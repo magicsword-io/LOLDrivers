@@ -1,0 +1,29 @@
+title: Driver Load - rzpnk.sys
+id: f9ee9929-2433-5ac9-8cad-0505fa847bea
+status: experimental
+description: |
+    Detects loading of driver rzpnk.sys via name.
+    A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as of the day of disclosure) which can be leveraged locally by a malicious application to elevate its privileges to those of NT_AUTHORITY\SYSTEM. The vulnerability lies in a specific IOCTL handler in the rzpnk.sys driver that passes a PID specified by the user to ZwOpenProcess. CVE-2017-9769.
+references:
+    - https://www.loldrivers.io/drivers/1c6e1d3b-f825-4065-9e0c-83386883e40f/
+    - https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13
+    - https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rzpnk.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

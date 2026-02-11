@@ -1,0 +1,31 @@
+title: Driver Load - 4.sys
+id: df5fb5df-3fc8-5da7-bc92-aa37b53fe891
+status: experimental
+description: |
+    Detects loading of driver 4.sys via name.
+    SentinelOne has observed prominent threat actors abusing legitimately signed Microsoft drivers in active intrusions into telecommunication, BPO, MSSP, and financial services businesses.
+    Investigations into these intrusions led to the discovery of POORTRY and STONESTOP malware, part of a small toolkit designed to terminate AV and EDR processes.
+    We first reported our discovery to Microsoft’s Security Response Center (MSRC) in October 2022 and received an official case number (75361). Today, MSRC released an associated advisory under ADV220005.
+    This research is being released alongside Mandiant, a SentinelOne technology and incident response partner.
+references:
+    - https://www.loldrivers.io/drivers/05d7cfea-1fb9-4559-8837-d97b713254fe/
+    - https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
+author: Michael Haag
+date: 2023/03/04
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\4.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

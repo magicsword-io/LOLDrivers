@@ -1,0 +1,27 @@
+title: Driver Load - WYProxy64.sys
+id: dbf6f381-fe02-5da7-9b85-7151ef88bdd9
+status: experimental
+description: |
+    Detects loading of driver WYProxy64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/f93e88c2-d0e8-4347-869f-efa568955e9d/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\wyproxy64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

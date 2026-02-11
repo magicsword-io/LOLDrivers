@@ -2,6 +2,7 @@ import yaml
 import os
 from datetime import date
 import hashlib
+import uuid
 
 path_to_yml = "../yaml"
 path_to_yml = os.path.join(os.path.dirname(os.path.realpath(__file__)), path_to_yml)
@@ -456,6 +457,233 @@ def gen_sigma_rule_names(names_list, uuid, rule_name, rule_title, description, l
             f.write("    - If you experience a lot of FP you could comment the driver name or its exact known legitimate location (when possible)\n")
             f.write(f"level: {level}\n")
 
+def _sanitize_rule_slug(value):
+    if not value:
+        return "unknown"
+    allowed = []
+    for ch in value.lower():
+        if ch.isalnum():
+            allowed.append(ch)
+        else:
+            allowed.append("_")
+    slug = "".join(allowed).strip("_")
+    while "__" in slug:
+        slug = slug.replace("__", "_")
+    return slug or "unknown"
+
+def _normalize_date(value):
+    if not value:
+        return date.today().strftime('%Y/%m/%d')
+    value = str(value).strip()
+    if "-" in value:
+        return value.replace("-", "/")
+    return value
+
+def _extract_driver_description(commands, known_samples):
+    description = ""
+    if isinstance(commands, dict):
+        description = commands.get("Description") or ""
+    elif isinstance(commands, list) and commands:
+        for entry in commands:
+            if isinstance(entry, dict) and entry.get("Description"):
+                description = entry.get("Description")
+                break
+    if description:
+        return str(description).strip()
+    for sample in known_samples or []:
+        sample_desc = sample.get("Description")
+        if sample_desc:
+            sample_desc = str(sample_desc).strip()
+            if sample_desc:
+                return sample_desc
+    return ""
+
+def _stable_rule_id(seed_base, rule_type):
+    seed = f"loldrivers:sigma:per-driver:{seed_base}:{rule_type}"
+    return str(uuid.uuid5(uuid.NAMESPACE_URL, seed))
+
+def _collect_driver_hashes(known_samples):
+    md5_list = []
+    sha1_list = []
+    sha256_list = []
+    imphash_list = []
+    for sample in known_samples or []:
+        md5 = sample.get('MD5')
+        sha1 = sample.get('SHA1')
+        sha256 = sample.get('SHA256')
+        imphash = sample.get('Imphash')
+        if md5 and md5 != "-":
+            md5_list.append(md5.lower())
+        if sha1 and sha1 != "-":
+            sha1_list.append(sha1.lower())
+        if sha256 and sha256 != "-":
+            sha256_list.append(sha256.lower())
+        if imphash and imphash != "-":
+            imphash_list.append(imphash.lower())
+    return (
+        list(filter(None, list(set(md5_list)))),
+        list(filter(None, list(set(sha1_list)))),
+        list(filter(None, list(set(sha256_list)))),
+        list(filter(None, list(set(imphash_list)))),
+    )
+
+def gen_sigma_rule_per_driver(file_path):
+    yaml_id = get_yaml_part(file_path=file_path, part_name="Id")
+    category = get_yaml_part(file_path=file_path, part_name="Category") or "unknown"
+    tags = get_yaml_part(file_path=file_path, part_name="Tags") or []
+    driver_name = tags[0] if tags else None
+    author = get_yaml_part(file_path=file_path, part_name="Author") or "Unknown"
+    created = get_yaml_part(file_path=file_path, part_name="Created")
+    resources = get_yaml_part(file_path=file_path, part_name="Resources") or []
+    commands = get_yaml_part(file_path=file_path, part_name="Commands")
+    known_samples = get_yaml_part(file_path=file_path, part_name="KnownVulnerableSamples") or []
+    md5_list, sha1_list, sha256_list, imphash_list = _collect_driver_hashes(known_samples)
+
+    if not driver_name and not (md5_list or sha1_list or sha256_list or imphash_list):
+        return False
+
+    category_value = (category or "").lower()
+    if category_value == "malicious":
+        category_code = "win_mal"
+        category_slug = "malicious"
+    else:
+        category_code = "win_vuln"
+        category_slug = "vulnerable"
+
+    name_for_slug = driver_name or yaml_id or "unknown"
+    if driver_name:
+        trimmed = driver_name.strip()
+        if trimmed.lower().endswith(".sys"):
+            trimmed = trimmed[:-4]
+        name_for_slug = trimmed or name_for_slug
+
+    rule_slug = _sanitize_rule_slug(name_for_slug)[:20]
+    if not rule_slug:
+        rule_slug = "unknown"
+    rule_suffix = (yaml_id or rule_slug)[:8]
+    if driver_name:
+        rule_name = f"driver_load_{category_code}_{rule_slug}"
+    else:
+        rule_name = f"driver_load_{category_code}_{rule_slug}_{rule_suffix}"
+
+    is_malicious = category_value == "malicious"
+    level_hash = "high"
+    level_name = "medium" if is_malicious else "low"
+
+    display_name = driver_name or rule_slug
+    driver_description = _extract_driver_description(commands, known_samples)
+
+    references = []
+    if yaml_id:
+        references.append(f"https://www.loldrivers.io/drivers/{yaml_id}/")
+    if isinstance(resources, list):
+        for ref in resources:
+            if ref:
+                references.append(ref)
+
+    tags = [
+        "attack.privilege_escalation",
+        "attack.t1543.003",
+        "attack.t1068",
+        f"loldrivers.{category_slug}",
+    ]
+
+    def _write_rule(output_name, title, rule_id, description_text, detection_lines, condition, rule_level):
+        with open(f"{directory}{output_name}.yml", "w") as f:
+            f.write(f"title: {title}\n")
+            if rule_id:
+                f.write(f"id: {rule_id}\n")
+            f.write("status: experimental\n")
+            f.write("description: |\n")
+            for line in description_text.splitlines():
+                f.write("    " + line + "\n")
+            f.write("references:\n")
+            for ref in references:
+                f.write(f"    - {ref}\n")
+            f.write(f"author: {author}\n")
+            f.write("date: " + _normalize_date(created) + "\n")
+            f.write("modified: " + date.today().strftime('%Y/%m/%d') + "\n")
+            f.write("tags:\n")
+            for tag in tags:
+                f.write(f"    - {tag}\n")
+            f.write("logsource:\n")
+            f.write("    product: windows\n")
+            f.write("    category: driver_load\n")
+            f.write("detection:\n")
+            for line in detection_lines:
+                f.write(line + "\n")
+            f.write(f"    condition: {condition}\n")
+            f.write("falsepositives:\n")
+            f.write("    - Unknown\n")
+            f.write(f"level: {rule_level}\n")
+
+    has_hashes = bool(md5_list or sha1_list or sha256_list or imphash_list)
+    has_name = bool(driver_name)
+
+    seed_base = yaml_id or os.path.basename(file_path) or rule_name
+    def _make_description(mode_label):
+        base = f"Detects loading of driver {display_name} via {mode_label}."
+        return f"{base}\n{driver_description}" if driver_description else base
+
+    def _build_hash_lines():
+        lines = ["    selection_hashes:", "        Hashes|contains:"]
+        for label, items in (
+            ("MD5", md5_list),
+            ("SHA1", sha1_list),
+            ("SHA256", sha256_list),
+            ("IMPHASH", imphash_list),
+        ):
+            for item in items:
+                lines.append(f"            - '{label}={item}'")
+        return lines
+
+    def _build_name_lines():
+        normalized_name = driver_name.strip().lower()
+        if not normalized_name.startswith("\\"):
+            normalized_name = "\\" + normalized_name
+        return [
+            "    selection_name:",
+            "        ImageLoaded|endswith:",
+            f"            - '{normalized_name}'",
+        ]
+
+    if has_hashes:
+        _write_rule(
+            rule_name,
+            f"Driver Load - {display_name}",
+            _stable_rule_id(seed_base, "hash"),
+            _make_description("hash"),
+            _build_hash_lines(),
+            "selection_hashes",
+            level_hash,
+        )
+
+    if has_name:
+        _write_rule(
+            f"{rule_name}_names",
+            f"Driver Load - {display_name}",
+            _stable_rule_id(seed_base, "name"),
+            _make_description("name"),
+            _build_name_lines(),
+            "selection_name",
+            level_name,
+        )
+
+    return has_hashes or has_name
+
+def gen_sigma_rules_per_driver():
+    output_dir = 'detections/sigma-per-driver/'
+    os.makedirs(output_dir, exist_ok=True)
+    for entry in os.listdir(output_dir):
+        entry_path = os.path.join(output_dir, entry)
+        if os.path.isfile(entry_path):
+            os.unlink(entry_path)
+    generated = 0
+    for file in yield_next_rule_file_path(path_to_yml):
+        if gen_sigma_rule_per_driver(file):
+            generated += 1
+    print(f"[+] Generated {generated} per-driver Sigma rules.")
+
 ###############################################################################
 ############################ GENERATE CLAMAV CONFIG ############################
 ###############################################################################
@@ -586,5 +814,7 @@ if __name__ == "__main__":
     
     gen_sigma_rule_names(names_list_vulnerable, "72cd00d6-490c-4650-86ff-1d11f491daa1", "driver_load_win_vuln_drivers_names", "Vulnerable Driver Load By Name", "Detects loading of known vulnerable drivers via the file name of the drivers.", "low")
     gen_sigma_rule_names(names_list_malicious, "39b64854-5497-4b57-a448-40977b8c9679", "driver_load_win_mal_drivers_names", "Malicious Driver Load By Name", "Detects loading of known malicious drivers via the file name of the drivers.", "medium")
+
+    gen_sigma_rules_per_driver()
 
     print("[+] Finished...Happy Hunting")

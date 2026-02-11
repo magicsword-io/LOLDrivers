@@ -1,0 +1,28 @@
+title: Driver Load - asrdrv104.sys
+id: e60a5198-1ec8-5875-b84c-44c640f81dde
+status: experimental
+description: |
+    Detects loading of driver asrdrv104.sys via name.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/9889da50-3908-4499-a729-187295a60a0e/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrdrv104.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

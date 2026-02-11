@@ -1,0 +1,28 @@
+title: Driver Load - TfSysMon.sys
+id: 857e644f-bd76-519b-81b0-a7f561686152
+status: experimental
+description: |
+    Detects loading of driver TfSysMon.sys via name.
+    ThreatFire System Monitor
+references:
+    - https://www.loldrivers.io/drivers/bd9f084e-b235-4978-bf2a-5f1dc02937df/
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/TfSysMon-Killer
+author: rahulwt
+date: 2024/08/15
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\tfsysmon.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

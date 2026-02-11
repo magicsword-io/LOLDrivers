@@ -1,0 +1,34 @@
+title: Driver Load - OpenLibSys.sys
+id: 4bb2edcf-f80e-55a6-a340-53e76fce2592
+status: experimental
+description: |
+    Detects loading of driver OpenLibSys.sys via hash.
+    OpenLibSys
+references:
+    - https://www.loldrivers.io/drivers/2e4fedb0-30ed-400d-b4e1-b2b2004c1607/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=96421b56dbda73e9b965f027a3bda7ba'
+            - 'MD5=ccf523b951afaa0147f22e2a7aae4976'
+            - 'SHA1=da9cea92f996f938f699902482ac5313d5e8b28e'
+            - 'SHA1=ac600a2bc06b312d92e649b7b55e3e91e9d63451'
+            - 'SHA256=f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008'
+            - 'SHA256=91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c'
+            - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

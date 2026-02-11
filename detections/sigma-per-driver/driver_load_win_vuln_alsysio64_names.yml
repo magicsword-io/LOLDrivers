@@ -1,0 +1,28 @@
+title: Driver Load - ALSysIO64.sys
+id: 148c2adb-e90b-5937-acf0-10c80fa0b6fc
+status: experimental
+description: |
+    Detects loading of driver ALSysIO64.sys via name.
+    ALSysIO64
+references:
+    - https://www.loldrivers.io/drivers/4d365dd0-34c3-492e-a2bd-c16266796ae5/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\alsysio64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

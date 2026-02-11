@@ -1,0 +1,31 @@
+title: Driver Load - VBoxMouseNT.sys
+id: b04c75ff-ec0c-5a2c-97ff-1f1cc3969c04
+status: experimental
+description: |
+    Detects loading of driver VBoxMouseNT.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/ecabc507-2cc7-4011-89ab-7d9d659e6f88/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=77fee376657e3178546185d135656268'
+            - 'SHA1=1f7bd4b4fd717cc7dcaee15c0a461bcd87d41169'
+            - 'SHA256=bbf564a02784d53b8006333406807c3539ee4a594585b1f3713325904cb730ec'
+            - 'IMPHASH=218b721c746ae678c4a55323447495e8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

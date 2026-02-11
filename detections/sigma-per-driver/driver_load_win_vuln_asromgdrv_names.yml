@@ -1,0 +1,28 @@
+title: Driver Load - AsrOmgDrv.sys
+id: ee3679bb-095e-594c-bd52-b249923e25f5
+status: experimental
+description: |
+    Detects loading of driver AsrOmgDrv.sys via name.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/3f39af20-802a-4909-a5de-7f6fe7aab350/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asromgdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

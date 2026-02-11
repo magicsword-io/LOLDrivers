@@ -1,0 +1,42 @@
+title: Driver Load - AsrSetupDrv103.sys
+id: 4711c64d-1160-539e-ab00-ff1ff008115b
+status: experimental
+description: |
+    Detects loading of driver AsrSetupDrv103.sys via hash.
+    AsrSetupDrv103 Driver
+references:
+    - https://www.loldrivers.io/drivers/19003e00-d42d-4cbe-91f3-756451bdd7da/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag, Guus Verbeek
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5cd0ec261c8c2a39d9105fbbcad4e5b9'
+            - 'MD5=9226339848e359f5e4cd519bef7dcd39'
+            - 'SHA1=b33b99ae2653b4e675beb7d9eb2c925a1f105bd4'
+            - 'SHA1=0ac0c21ca05161eaa6a042f347391a2a2fc78c96'
+            - 'SHA1=a7948a4e9a3a1a9ed0e4e41350e422464d8313cd'
+            - 'SHA1=461882bd59887617cadc1c7b2b22d0a45458c070'
+            - 'SHA1=0b6ec2aedc518849a1c61a70b1f9fb068ede2bc3'
+            - 'SHA1=f3cce7e79ab5bd055f311bb3ac44a838779270b6'
+            - 'SHA256=399effe75d32bdab6fa0a6bffe02dbf0a59219d940b654837c3be1c0bd02e9aa'
+            - 'SHA256=7aaf2aa194b936e48bc90f01ee854768c8383c0be50cfb41b346666aec0cf853'
+            - 'SHA256=727e8ba66a8ff07bdc778eacb463b65f2d7167a6616ca2f259ea32571cacf8af'
+            - 'SHA256=9d9346e6f46f831e263385a9bd32428e01919cca26a035bbb8e9cb00bf410bc3'
+            - 'SHA256=a0728184caead84f2e88777d833765f2d8af6a20aad77b426e07e76ef91f5c3f'
+            - 'SHA256=27cd05527feb020084a4a76579c125458571da8843cdfc3733211760a11da970'
+            - 'IMPHASH=88e21ed9e717781eaf87209acbdbb567'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,28 @@
+title: Driver Load - driver7-x86.sys
+id: 32915d0f-8753-5657-aabd-67902942c34d
+status: experimental
+description: |
+    Detects loading of driver driver7-x86.sys via name.
+    The driver for the ECtool driver-based tools
+references:
+    - https://www.loldrivers.io/drivers/670dc258-78b5-4552-a16b-b41917c86f8d/
+    - https://github.com/Chigusa0w0/AsusDriversPrivEscala
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\driver7-x86.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

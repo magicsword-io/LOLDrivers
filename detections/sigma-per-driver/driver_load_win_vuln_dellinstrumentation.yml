@@ -1,0 +1,31 @@
+title: Driver Load - dellinstrumentation.sys
+id: 7659397f-765d-590b-9f7d-426ad03c0a7a
+status: experimental
+description: |
+    Detects loading of driver dellinstrumentation.sys via hash.
+    DellInstrumentation
+references:
+    - https://www.loldrivers.io/drivers/86b9c8d6-9c59-4fd4-befd-ab9a36a19e36/
+    - https://dor00tkit.github.io/Dor00tkit/posts/from-admin-to-kernel-one-year-one-driver-zero-attention/
+author: Dor00tkit
+date: 2025/01/13
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6f922907381ce439790ddf9132f23d74'
+            - 'SHA1=6cf726ad47c47e01147645700233917619ea1714'
+            - 'SHA256=bc2606740e4648c3732541db929f2e02ea8567520d35de57c671e93c71e632f3'
+            - 'IMPHASH=03d4adbc48a8938a7a49def84a9887f1'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,27 @@
+title: Driver Load - bwrs.sys
+id: e0b0cc02-1a56-5757-8b06-9f7e4a5992c8
+status: experimental
+description: |
+    Detects loading of driver bwrs.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/204eccdf-99ca-4f2a-a325-8ebe34fd29a1/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=221dfbc74bbb255b0879360ccc71a74b756b2e0f16e9386b38a9ce9d4e2e34f9'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

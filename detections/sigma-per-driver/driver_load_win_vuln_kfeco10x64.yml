@@ -1,0 +1,33 @@
+title: Driver Load - KfeCo10X64.sys
+id: 1fdde035-1f02-5ef9-b5e2-b1ea5548796c
+status: experimental
+description: |
+    Detects loading of driver KfeCo10X64.sys via hash.
+    Killer exposes COM interfaces that allow non-privileged users 1) to block network for any process 2) to manage any service in the OS. Killer is preinstalled to laptops equipped with Intel Killer NICs (e.g. Dell). Since Intel patched the vulnerability quietly, it's not clear which version is safe. Also, it is unclear which OEMs are affected. Dell is definitely in the list, but it is likely that other vendors with Killer NICs on board, such as Acer and MSI, are affected too. Some users think that Killer suite is required for the NIC to work properly, so they install it even after a fresh Windows install. This version is confirmed vulnerable based on the script usage from zwclose.
+references:
+    - https://www.loldrivers.io/drivers/3e0bf6dc-791b-4170-8c40-427e7299d93d/
+    - https://zwclose.github.io/2023/04/18/killer2.html
+    - https://twitter.com/zwclose/status/1648441215808049153
+    - https://zwclose.github.io/2022/12/18/killer1.html
+author: Paul Michaud
+date: 2023/05/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=697f698b59f32f66cd8166e43a5c49c7'
+            - 'SHA1=f5d58452620b55c2931cba75eb701f4cde90a9e4'
+            - 'SHA256=b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704'
+            - 'IMPHASH=2df11474daf362b1b2fa3d3a89b6acbe'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

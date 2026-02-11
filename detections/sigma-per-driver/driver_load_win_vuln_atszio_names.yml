@@ -1,0 +1,28 @@
+title: Driver Load - ATSZIO.sys
+id: 395f7cd0-6da9-50e4-939e-b6bc22b631ef
+status: experimental
+description: |
+    Detects loading of driver ATSZIO.sys via name.
+    ATSZIO Driver
+references:
+    - https://www.loldrivers.io/drivers/23f11e19-0776-4dd4-9c9c-7f6b60f8553f/
+    - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\atszio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

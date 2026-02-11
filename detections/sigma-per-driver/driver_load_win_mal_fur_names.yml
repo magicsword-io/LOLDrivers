@@ -1,0 +1,28 @@
+title: Driver Load - fur.sys
+id: 04edebcb-3794-526f-abd1-dae7c52fc38a
+status: experimental
+description: |
+    Detects loading of driver fur.sys via name.
+    SophosLabs has discovered that threat actors are using a new driver loader called BURNTCIGAR to install a malicious driver signed with Microsoft.
+references:
+    - https://www.loldrivers.io/drivers/c1265ee4-aed4-4e65-ac54-c64deb5e3b28/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware, https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
+author: Guus Verbeek
+date: 2023/05/07
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\fur.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

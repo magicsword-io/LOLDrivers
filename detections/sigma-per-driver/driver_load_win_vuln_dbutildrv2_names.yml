@@ -1,0 +1,29 @@
+title: Driver Load - DBUtilDrv2.sys
+id: 7bacce55-ba49-598a-a7c0-0aecb699dda1
+status: experimental
+description: |
+    Detects loading of driver DBUtilDrv2.sys via name.
+    DBUtil
+references:
+    - https://www.loldrivers.io/drivers/bb808089-5857-4df2-8998-753a7106cb44/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dbutildrv2.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,28 @@
+title: Driver Load - ProcObsrvesx.sys
+id: f19c7baf-0294-5645-b1b8-333ee1f98035
+status: experimental
+description: |
+    Detects loading of driver ProcObsrvesx.sys via name.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/8a1a4a5d-3e41-4539-80cd-0cb751f7fab3/
+    - https://northwave-cybersecurity.com/vulnerability-notice-escan-antivirus
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\procobsrvesx.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

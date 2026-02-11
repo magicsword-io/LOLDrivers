@@ -1,0 +1,28 @@
+title: Driver Load - driver_290bc782.sys
+id: 7a5acd16-92a0-5d4c-9b8a-e7c7e1b3c578
+status: experimental
+description: |
+    Detects loading of driver driver_290bc782.sys via name.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/f5c1a46f-21e6-4b06-b212-2dc55b699497/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\driver_290bc782.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

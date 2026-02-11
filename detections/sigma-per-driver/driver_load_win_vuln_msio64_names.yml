@@ -1,0 +1,28 @@
+title: Driver Load - MsIo64.sys
+id: b0a06c51-c3e0-5015-b851-d1e29a55f10a
+status: experimental
+description: |
+    Detects loading of driver MsIo64.sys via name.
+    MICSYS IO driver
+references:
+    - https://www.loldrivers.io/drivers/214654eb-90c4-48c8-a183-0157e50bf07f/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\msio64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

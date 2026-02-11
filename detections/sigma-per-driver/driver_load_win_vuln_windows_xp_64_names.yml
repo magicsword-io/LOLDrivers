@@ -1,0 +1,27 @@
+title: Driver Load - windows-xp-64.sys
+id: f293a554-c26a-5d6b-be92-097c9a346a0b
+status: experimental
+description: |
+    Detects loading of driver windows-xp-64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/a1d35b93-e97f-4ddd-a465-2405e804e754/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\windows-xp-64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

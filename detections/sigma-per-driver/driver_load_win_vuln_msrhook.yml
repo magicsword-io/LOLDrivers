@@ -1,0 +1,30 @@
+title: Driver Load - msrhook.sys
+id: 5f602973-26a5-540c-b4c3-e6e54915f47c
+status: experimental
+description: |
+    Detects loading of driver msrhook.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/1a1cf88a-96d0-46cd-a24d-1535e4a5f6e3/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c49a1956a6a25ffc25ad97d6762b0989'
+            - 'SHA1=89909fa481ff67d7449ee90d24c167b17b0612f1'
+            - 'SHA256=6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492'
+            - 'IMPHASH=1429d5c551f71d3ce6a7cc54c9348e95'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

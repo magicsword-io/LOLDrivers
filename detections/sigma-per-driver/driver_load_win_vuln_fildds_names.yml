@@ -1,0 +1,30 @@
+title: Driver Load - fildds.sys
+id: 51667d5b-3b2b-5093-89d5-4508bfa1138d
+status: experimental
+description: |
+    Detects loading of driver fildds.sys via name.
+    Twister Antivirus, fildds.sys, DoS2
+    CVE-2023-1444
+    From IoControlCode 0x8011206B, a normal user can cause DoS due to writing into null address.
+references:
+    - https://www.loldrivers.io/drivers/af98f6e6-f19e-4705-a7b9-e7ee7377447b/
+    - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1444
+author: VirarK
+date: 2024/06/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\fildds.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

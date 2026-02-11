@@ -1,0 +1,27 @@
+title: Driver Load - ni.sys
+id: 6bdb1a96-380d-57ae-bd14-6d41b53b9d8b
+status: experimental
+description: |
+    Detects loading of driver ni.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/4f93e19c-4600-4e2e-943f-a986875fd7d2/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ni.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

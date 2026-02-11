@@ -1,0 +1,28 @@
+title: Driver Load - ElbyCDIO.sys
+id: 1cbdd03e-a48f-5698-b634-2e60f81b8780
+status: experimental
+description: |
+    Detects loading of driver ElbyCDIO.sys via name.
+    ElbyCD Windows x64 I/O driver
+references:
+    - https://www.loldrivers.io/drivers/7a722cd5-69ec-4680-9f20-9387f249a891/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\elbycdio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

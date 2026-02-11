@@ -1,0 +1,32 @@
+title: Driver Load - zam64.sys
+id: a678b192-49a8-5f8e-b4c4-2e87361c788f
+status: experimental
+description: |
+    Detects loading of driver zam64.sys via name.
+    ZAM
+references:
+    - https://www.loldrivers.io/drivers/e5f12b82-8d07-474e-9587-8c7b3714d60c/
+    - Internal Research
+    - https://www.reddit.com/r/crowdstrike/comments/13wjrgn/20230531_situational_awareness_spyboy_defense/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://www.trendmicro.com/en_us/research/23/e/attack-on-security-titans-earth-longzhi-returns-with-new-tricks.html
+    - https://github.com/ZeroMemoryEx/Terminator
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\zam64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

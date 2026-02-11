@@ -1,0 +1,27 @@
+title: Driver Load - BS_Flash64.sys
+id: 22da4cd8-a17e-58a1-a6f2-93672d6a6d95
+status: experimental
+description: |
+    Detects loading of driver BS_Flash64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/e299b0b6-e5e2-45b3-bf0b-c008068cebfa/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bs_flash64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

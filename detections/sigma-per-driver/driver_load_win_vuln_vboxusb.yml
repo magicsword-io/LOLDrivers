@@ -1,0 +1,30 @@
+title: Driver Load - VBoxUSB.Sys
+id: 383feb7e-2148-5a95-8399-5b7450f42bdf
+status: experimental
+description: |
+    Detects loading of driver VBoxUSB.Sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/5938df1d-9513-449f-8252-c442ddca0c2a/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=65b979bcab915c3922578fe77953d789'
+            - 'SHA1=6a2912c8e2aa4373852585bc1134b83c637bc9fd'
+            - 'SHA256=6071db01b50c658cf78665c24f1d21f21b4a12d16bfcfaa6813bf6bbc4d0a1e8'
+            - 'IMPHASH=b262e8d078ede007ebd0aa71b9152863'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

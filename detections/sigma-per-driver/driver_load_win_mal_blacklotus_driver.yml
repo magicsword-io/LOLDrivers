@@ -1,0 +1,37 @@
+title: Driver Load - blacklotus_driver.sys
+id: b0dcff10-2c8e-585f-9137-a260d496072b
+status: experimental
+description: |
+    Detects loading of driver blacklotus_driver.sys via hash.
+    The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully updated UEFI systems is now a reality. Once the persistence is configured, the BlackLotus bootkit is executed on every system start. The bootkits goal is to deploy a kernel driver and a final user-mode component.
+references:
+    - https://www.loldrivers.io/drivers/8750b245-af35-4bc6-9af3-dc858f9db64f/
+    - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+author: Michael Haag
+date: 2023/04/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4ad8fd9e83d7200bd7f8d0d4a9abfb11'
+            - 'MD5=a42249a046182aaaf3a7a7db98bfa69d'
+            - 'SHA1=994dc79255aeb662a672a1814280de73d405617a'
+            - 'SHA1=1f3799fed3cf43254fe30dcdfdb8dc02d82e662b'
+            - 'SHA1=4b882748faf2c6c360884c6812dd5bcbce75ebff'
+            - 'SHA1=17fa047c1f979b180644906fe9265f21af5b0509'
+            - 'SHA1=fff4f28287677caabc60c8ab36786c370226588d'
+            - 'SHA1=91f832f46e4c38ecc9335460d46f6f71352cffed'
+            - 'SHA256=f8236fc01d4efaa48f032e301be2ebba4036b2cd945982a29046eca03944d2ae'
+            - 'SHA256=749b0e8c8c8b7dda8c2063c708047cfe95afa0a4d86886b31a12f3018396e67c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

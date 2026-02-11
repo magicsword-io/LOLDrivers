@@ -1,0 +1,76 @@
+title: Driver Load - zam64.sys
+id: c3f84d5b-f79e-5eaa-b6e4-ecd11e787fb4
+status: experimental
+description: |
+    Detects loading of driver zam64.sys via hash.
+    ZAM
+references:
+    - https://www.loldrivers.io/drivers/e5f12b82-8d07-474e-9587-8c7b3714d60c/
+    - Internal Research
+    - https://www.reddit.com/r/crowdstrike/comments/13wjrgn/20230531_situational_awareness_spyboy_defense/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://www.trendmicro.com/en_us/research/23/e/attack-on-security-titans-earth-longzhi-returns-with-new-tricks.html
+    - https://github.com/ZeroMemoryEx/Terminator
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2a3ce41bb2a7894d939fbd1b20dae5a0'
+            - 'MD5=db46c56849bbce9a55a03283efc8c280'
+            - 'MD5=06897b431c07886454e0681723dd53e6'
+            - 'MD5=d4a10447fdaff7a001715191c1f914b6'
+            - 'MD5=51e7b58f6e9b776568ffbd4dd9972a60'
+            - 'MD5=75e50ae2e0f783e0caf912f45e15248a'
+            - 'MD5=5054083cf29649a76c94658ba7ff5bce'
+            - 'MD5=21e13f2cb269defeae5e1d09887d47bb'
+            - 'MD5=99c131567c10c25589e741e69a8f8aa3'
+            - 'MD5=e5f8fcdfb52155ed4dffd8a205b3d091'
+            - 'MD5=9e0659d443a2b9d1afc75a160f500605'
+            - 'MD5=707ab1170389eba44ffd4cfad01b5969'
+            - 'SHA1=09f117d83f2f206ee37f1eb19eea576a0ac9bdcc'
+            - 'SHA1=a3d612a5ea3439ba72157bd96e390070bdddbbf3'
+            - 'SHA1=16d7ecf09fc98798a6170e4cef2745e0bee3f5c7'
+            - 'SHA1=3b8ddf860861cc4040dea2d2d09f80582547d105'
+            - 'SHA1=8f4b79b8026da7f966d38a8ba494c113c5e3894b'
+            - 'SHA1=90abd7670c84c47e6ffc45c67d676db8c12b1939'
+            - 'SHA1=40d29aa7b3fafd27c8b27c7ca7a3089ccb88d69b'
+            - 'SHA1=dd4cd182192b43d4105786ba87f55a036ec45ef2'
+            - 'SHA1=b99a5396094b6b20cea72fbf0c0083030155f74e'
+            - 'SHA1=628e63caf72c29042e162f5f7570105d2108e3c2'
+            - 'SHA1=cd248648eafca6ef77c1b76237a6482f449f13be'
+            - 'SHA1=2cf75df00c69d907cfe683cb25077015d05be65d'
+            - 'SHA256=543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91'
+            - 'SHA256=76614f2e372f33100a8d92bf372cdbc1e183930ca747eed0b0cf2501293b990a'
+            - 'SHA256=2bbc6b9dd5e6d0327250b32305be20c89b19b56d33a096522ee33f22d8c82ff1'
+            - 'SHA256=8fe9828bea83adc8b1429394db7a556a17f79846ad0bfb7f242084a5c96edf2a'
+            - 'SHA256=3c18ae965fba56d09a65770b4d8da54ccd7801f979d3ebd283397bc99646004b'
+            - 'SHA256=e428ddf9afc9b2d11e2271f0a67a2d6638b860c2c12d4b8cc63d33f3349ee93f'
+            - 'SHA256=de8f8006d8ee429b5f333503defa54b25447f4ed6aeade5e4219e23f3473ef1c'
+            - 'SHA256=ab2632a4d93a7f3b7598c06a9fdc773a1b1b69a7dd926bdb7cf578992628e9dd'
+            - 'SHA256=7cb594af6a3655daebc9fad9c8abf2417b00ba31dcd118707824e5316fc0cc21'
+            - 'SHA256=9a95a70f68144980f2d684e96c79bdc93ebca1587f46afae6962478631e85d0c'
+            - 'SHA256=45f42c5d874369d6be270ea27a5511efcca512aeac7977f83a51b7c4dee6b5ef'
+            - 'SHA256=d7e091e0d478c34232e8479b950c5513077b3a69309885cee4c61063e5f74ac0'
+            - 'IMPHASH=c6a0f65ba653ee78255cc9e314abc442'
+            - 'IMPHASH=089e8a8f2bb007852c63b64e66430293'
+            - 'IMPHASH=3edc60bda68569cac7ad7604728ff40d'
+            - 'IMPHASH=5f6fd4ffba177389f414dd1a6ded24b4'
+            - 'IMPHASH=7fba20994f76fb31b9f5a2b3f0c00055'
+            - 'IMPHASH=519cf5394541bf5e2869edeec81521e1'
+            - 'IMPHASH=b35d1d3faa6c97b106b343823d5df867'
+            - 'IMPHASH=a49a51d7f2ae972483961eb64d17888e'
+            - 'IMPHASH=0e9dfd08346bbe128159bff440d13389'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

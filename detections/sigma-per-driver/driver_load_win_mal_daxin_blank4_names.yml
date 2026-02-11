@@ -1,0 +1,29 @@
+title: Driver Load - daxin_blank4.sys
+id: 048ab7af-3cb9-5852-9160-8fc7fb88f98a
+status: experimental
+description: |
+    Detects loading of driver daxin_blank4.sys via name.
+    Driver used in the Daxin malware campaign.
+references:
+    - https://www.loldrivers.io/drivers/f8bddc8b-49b9-41f7-a877-d15ec3f174f9/
+    - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+    - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+author: Michael Haag
+date: 2023/02/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\daxin_blank4.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

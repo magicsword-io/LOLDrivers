@@ -1,0 +1,31 @@
+title: Driver Load - PanMonFlt.sys
+id: 7b87c96c-01ad-5a34-a046-997513638a36
+status: experimental
+description: |
+    Detects loading of driver PanMonFlt.sys via hash.
+    PanCafe Manager File Monitor
+references:
+    - https://www.loldrivers.io/drivers/cfdc5cb4-be5c-4dcc-a883-825fa72115b4/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2850608430dd089f24386f3336c84729'
+            - 'SHA1=a6816949cd469b6e5c35858d19273936fab1bef6'
+            - 'SHA256=7e0124fcc7c95fdc34408cf154cb41e654dade8b898c71ad587b2090b1da30d7'
+            - 'IMPHASH=78727a5fac8bd281903014ee00dcd553'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

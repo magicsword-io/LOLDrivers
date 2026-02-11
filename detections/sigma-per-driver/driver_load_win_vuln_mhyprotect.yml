@@ -1,0 +1,35 @@
+title: Driver Load - mhyprotect.sys
+id: bc005764-402a-524e-b43e-3f580deef97a
+status: experimental
+description: |
+    Detects loading of driver mhyprotect.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/7abc873d-9c28-44c2-8f60-701a8e26af29/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=982d39a9c76395dd4c826fe77c00a4bd'
+            - 'MD5=3f79ea5d2bbd2023d2f3e47d531f0e33'
+            - 'SHA1=6946f1c8ab8977e9a8db9eade9180b16dcd72bd9'
+            - 'SHA1=134186ba0ba5cda2418818295ca186e80e571ba4'
+            - 'SHA256=8bdcf7457c2caf7fa0386571f972d7f5220d385ad686e2c3536f4c67ba4333e6'
+            - 'SHA256=edeb35e4341034b2de389017c4884b081a821f34349a620897a2a845c84cb09e'
+            - 'IMPHASH=409d2ab916237fb129c57aacbb7cb4fe'
+            - 'IMPHASH=99b8ab1f6f7cf3c4104347e2872bef54'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,31 @@
+title: Driver Load - pchunter.sys
+id: 1f464556-867a-5e11-bce1-7ab6b47c0860
+status: experimental
+description: |
+    Detects loading of driver pchunter.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/73290fcb-a0d7-481e-81a5-65a9859b50f5/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=366bd312aad96a7eb4912688b9e8d268'
+            - 'SHA1=8d15036ef8dd0d79d89cc7b02920bd073849a381'
+            - 'SHA256=3f20ac5dac9171857fc5791865458fdb6eac4fab837d7eabc42cb0a83cb522fc'
+            - 'IMPHASH=c56dbf2e72704141d7b2279a64c54621'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

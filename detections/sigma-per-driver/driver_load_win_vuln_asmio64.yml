@@ -1,0 +1,31 @@
+title: Driver Load - AsmIo64.sys
+id: d36e9421-be51-5885-bb8d-39563e148cf5
+status: experimental
+description: |
+    Detects loading of driver AsmIo64.sys via hash.
+    Asmedia PCI Driver
+references:
+    - https://www.loldrivers.io/drivers/257d425f-f660-466c-8bee-c24cccf06daa/
+    - https://github.com/ucsb-seclab/popkorn-artifact/tree/main/evaluation
+author: Takahiro Haruyama
+date: 2023/10/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8f73c1c48ffddfca7d1a98faf83d18ff'
+            - 'SHA1=8b53284fb23d34ca144544b19f8fba63700830d8'
+            - 'SHA256=e4658d93544f69f5cb9aa6d9fec420fecc8750cb57e1e9798da38c139d44f2eb'
+            - 'IMPHASH=0c2219c9c5eab786fa876f74356eea20'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

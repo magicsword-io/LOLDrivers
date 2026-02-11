@@ -1,0 +1,31 @@
+title: Driver Load - driver_d9f15d91.sys
+id: 1032ab6b-03af-56c3-8cc6-9d9eacde9003
+status: experimental
+description: |
+    Detects loading of driver driver_d9f15d91.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/576bb95a-f15e-4a0d-bcee-08791e1504e2/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b71bbf5838a0346d567bc60e7955b642'
+            - 'SHA1=39ce3d1d083474ecbed453a0ec8344c66d51a4ac'
+            - 'SHA256=d9f15d91397d1c8d01b6d6871c4f18f3a85ca85f091a92f4e9221524344ca5fe'
+            - 'IMPHASH=70295ac5b1bb4091ca166a48afe3cd3a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,28 @@
+title: Driver Load - sfdrvx32.sys
+id: bcfc6d71-2421-58ef-97f8-9c7975d28aa4
+status: experimental
+description: |
+    Detects loading of driver sfdrvx32.sys via name.
+    Speed Fan x32 Driver
+references:
+    - https://www.loldrivers.io/drivers/2ada18ae-2c52-49b6-b1a0-cf3b267f6dc7/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sfdrvx32.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

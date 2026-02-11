@@ -1,0 +1,28 @@
+title: Driver Load - xjokercontroller.sys
+id: 53d2d9d5-cf37-5bd1-b427-b75bb4ae350b
+status: experimental
+description: |
+    Detects loading of driver xjokercontroller.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/b3fd8560-79d3-40b7-b05f-c78044176c8c/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\xjokercontroller.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,28 @@
+title: Driver Load - AsrDrv106.sys
+id: e93f911c-5001-5093-8ab9-e825128fd1ca
+status: experimental
+description: |
+    Detects loading of driver AsrDrv106.sys via name.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/6a50e368-1120-434b-9232-1a0702c80437/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrdrv106.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
