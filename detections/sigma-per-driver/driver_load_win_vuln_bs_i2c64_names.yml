@@ -1,0 +1,28 @@
+title: Driver Load - BS_I2c64.sys
+id: 699cc664-52a0-53ab-89c4-d6785d590cca
+status: experimental
+description: |
+    Detects loading of driver BS_I2c64.sys via name.
+    I/O Interface driver file
+references:
+    - https://www.loldrivers.io/drivers/de4dd27a-1f7e-4271-98a4-55395ab6aabf/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bs_i2c64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

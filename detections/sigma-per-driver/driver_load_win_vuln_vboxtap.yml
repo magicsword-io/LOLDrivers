@@ -1,0 +1,34 @@
+title: Driver Load - VBoxTAP.sys
+id: e65266f1-39a8-5ee5-ad9b-ab7fc03f7622
+status: experimental
+description: |
+    Detects loading of driver VBoxTAP.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/f22e7230-5f32-4c4e-bc9d-9076ebf10baa/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9b25ccf5765034119a61c9beb2ad1369'
+            - 'MD5=298f30c20c6b2b5b56f9946fb4e6f85a'
+            - 'SHA1=a5404c4a57171d8a74e0af6efb4a50aaf7e5fb30'
+            - 'SHA1=ab7f8de9c8ba5fc8692e02f3ae4548cd08ddb17d'
+            - 'SHA256=cfa28e2f624f927d4cbd2952306570d86901d2f24e3d07cc6277e98289d09783'
+            - 'SHA256=994f322def98c99aec7ea0036ef5f4b802120458782ae3867d116d55215c56e4'
+            - 'IMPHASH=76950c8e12482b742f86f2896856a00e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

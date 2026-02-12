@@ -1,0 +1,31 @@
+title: Driver Load - Se64a.sys
+id: 453f6b29-5b06-5e47-9475-b2801a7a74ce
+status: experimental
+description: |
+    Detects loading of driver Se64a.sys via hash.
+    EnTech softEngine x64 kernel-mode driver
+references:
+    - https://www.loldrivers.io/drivers/d819bee2-3bff-481f-a301-acc3d1f5fe58/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0a6a1c9a7f80a2a5dcced5c4c0473765'
+            - 'SHA1=33285b2e97a0aeb317166cce91f6733cf9c1ad53'
+            - 'SHA256=6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc'
+            - 'IMPHASH=626c8ecbc636968157d73f18ac315926'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

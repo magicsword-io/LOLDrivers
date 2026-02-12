@@ -1,0 +1,30 @@
+title: Driver Load - smep_capcom.sys
+id: f49ab09f-afb3-567e-a210-09c041cbbee7
+status: experimental
+description: |
+    Detects loading of driver smep_capcom.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/19897aed-9be8-4111-a7d8-35618b9d75b3/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f406c5536bcf9bacbeb7ce8a3c383bfa'
+            - 'SHA1=21edff2937eb5cd6f6b0acb7ee5247681f624260'
+            - 'SHA256=db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004'
+            - 'IMPHASH=45bfe170e0cd654bc1e2ae3fca3ac3f4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

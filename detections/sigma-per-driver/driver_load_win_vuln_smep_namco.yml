@@ -1,0 +1,30 @@
+title: Driver Load - smep_namco.sys
+id: ae59f384-c449-55ed-a210-6656862c542b
+status: experimental
+description: |
+    Detects loading of driver smep_namco.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/cce291c8-4534-4362-af45-5f45cd32bd92/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=02198692732722681f246c1b33f7a9d9'
+            - 'SHA1=f052dc35b74a1a6246842fbb35eb481577537826'
+            - 'SHA256=7ec93f34eb323823eb199fbf8d06219086d517d0e8f4b9e348d7afd41ec9fd5d'
+            - 'IMPHASH=45bfe170e0cd654bc1e2ae3fca3ac3f4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

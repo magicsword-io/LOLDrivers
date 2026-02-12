@@ -1,0 +1,28 @@
+title: Driver Load - dbutil_2_3.sys
+id: d49034d1-1137-59de-83ac-9697c8042f8b
+status: experimental
+description: |
+    Detects loading of driver dbutil_2_3.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/a4eabc75-edf6-4b74-9a24-6a26187adabf/
+    - https://github.com/namazso/physmem_drivers
+    - https://www.sentinelone.com/labs/cve-2021-21551-hundreds-of-millions-of-dell-computers-at-risk-due-to-multiple-bios-driver-privilege-escalation-flaws/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dbutil_2_3.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

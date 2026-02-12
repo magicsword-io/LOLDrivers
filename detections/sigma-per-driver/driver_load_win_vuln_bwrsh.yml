@@ -1,0 +1,27 @@
+title: Driver Load - bwrsh.sys
+id: d5cc9f6a-0e29-551a-ad0f-e7b9a2074de2
+status: experimental
+description: |
+    Detects loading of driver bwrsh.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/974de971-1f78-47b9-8049-6c34f294acd5/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

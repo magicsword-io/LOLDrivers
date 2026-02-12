@@ -1,0 +1,28 @@
+title: Driver Load - VBoxTAP.sys
+id: 521e6473-cf5e-5836-9e5b-b85c9a151d57
+status: experimental
+description: |
+    Detects loading of driver VBoxTAP.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/f22e7230-5f32-4c4e-bc9d-9076ebf10baa/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\vboxtap.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

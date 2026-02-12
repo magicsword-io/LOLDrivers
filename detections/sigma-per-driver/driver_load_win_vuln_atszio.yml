@@ -1,0 +1,31 @@
+title: Driver Load - ATSZIO.sys
+id: 8b5ab330-1472-5e74-929e-b58bb36be95e
+status: experimental
+description: |
+    Detects loading of driver ATSZIO.sys via hash.
+    ATSZIO Driver
+references:
+    - https://www.loldrivers.io/drivers/23f11e19-0776-4dd4-9c9c-7f6b60f8553f/
+    - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b12d1630fd50b2a21fd91e45d522ba3a'
+            - 'SHA1=490109fa6739f114651f4199196c5121d1c6bdf2'
+            - 'SHA256=01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece'
+            - 'IMPHASH=b19743993dc7f1d48b2a86fe9b9c91e3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

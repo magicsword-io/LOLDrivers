@@ -1,0 +1,31 @@
+title: Driver Load - mimidrv.sys
+id: 23f373f4-e3e5-5ef5-83f8-0e6c3f129135
+status: experimental
+description: |
+    Detects loading of driver mimidrv.sys via name.
+    Mimidrv is a signed Windows Driver Model WDM kernel mode software driver meant to be used with the standard Mimikatz executable.
+references:
+    - https://www.loldrivers.io/drivers/87752fb8-e9f6-4235-91e2-c4343677d817/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+    - https://github.com/hfiref0x/KDU
+    - https://posts.specterops.io/mimidrv-in-depth-4d273d19e148
+    - https://github.com/gentilkiwi/mimikatz
+author: Michael Haag
+date: 2023/05/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\mimidrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

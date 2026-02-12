@@ -1,0 +1,28 @@
+title: Driver Load - rtcoremini64.sys
+id: 9b05d54f-aaa8-5d5f-9bfc-ab34561b6ff8
+status: experimental
+description: |
+    Detects loading of driver rtcoremini64.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/b9e01a11-6395-4837-a202-0c777d717a43/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rtcoremini64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

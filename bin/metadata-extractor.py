@@ -9,6 +9,7 @@ import argparse
 import hashlib
 import yaml
 from cryptography import x509
+from cryptography.x509.oid import ExtendedKeyUsageOID
 
 # Issue in PyYAML resolved with this class https://ttl255.com/yaml-anchors-and-aliases-and-how-to-disable-them/
 class NoAliasDumper(yaml.Dumper):
@@ -168,6 +169,41 @@ def get_metadata(driver):
 
                     # Calculate TBS Hashes // Thanks @yarden_shafir - https://twitter.com/yarden_shafir
                     raw_cert = x509.load_der_x509_certificate(cert.raw)
+                    
+                    # Classify the certificate with error handling
+                    cert_type = "Unknown"
+                    is_ca = False
+                    is_code_signing = False
+                    
+                    try:
+                        # Try to get BasicConstraints
+                        try:
+                            is_ca = raw_cert.extensions.get_extension_for_class(x509.BasicConstraints).value.ca
+                        except (x509.ExtensionNotFound, ValueError):
+                            is_ca = False
+                            
+                        # Try to get ExtendedKeyUsage
+                        try:
+                            ext_key_usage = raw_cert.extensions.get_extension_for_class(x509.ExtendedKeyUsage)
+                            is_code_signing = any(usage.dotted_string == "1.3.6.1.5.5.7.3.3" for usage in ext_key_usage.value)
+                        except (x509.ExtensionNotFound, ValueError):
+                            is_code_signing = False
+                            
+                        # Determine certificate type
+                        if is_ca:
+                            cert_type = "CA"
+                        elif is_code_signing:
+                            cert_type = "Leaf (Code Signing)"
+                        else:
+                            cert_type = "Intermediate"
+                            
+                    except Exception as e:
+                        print(f"[!] Warning: Error parsing certificate extensions for {cert.subject}: {str(e)}")
+                        # Keep default values set above
+                    
+                    tmp_cert_dict['CertificateType'] = cert_type
+                    tmp_cert_dict['IsCodeSigning'] = is_code_signing
+                    tmp_cert_dict['IsCA'] = is_ca
                     tmp_cert_dict['TBS'] = {
                         "MD5": hashlib.md5(raw_cert.tbs_certificate_bytes).hexdigest(),
                         "SHA1": hashlib.sha1(raw_cert.tbs_certificate_bytes).hexdigest(),

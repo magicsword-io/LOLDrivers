@@ -1,0 +1,29 @@
+title: Driver Load - szkg64.sys
+id: 4d9183ae-5985-543e-b651-1782d7d584e2
+status: experimental
+description: |
+    Detects loading of driver szkg64.sys via name.
+    The StopZilla driver is a forgotten but still exploitable vulnerable driver that allows arbitrary kernel memory writes via unvalidated IOCTLs (0x80002063 and 0x8000206F). Attackers can leverage it to escalate privileges, disable LSASS PPL protection, and even modify PreviousMode in _KTHREAD to execute user-mode code as kernel-mode, effectively bypassing security checks. Despite its risks, it remains unblocked by Microsoft’s Driver Block List and many AV/EDR solutions. This driver highlights the persistent threat of forgotten vulnerable drivers still exploitable in modern Windows environments.
+references:
+    - https://www.loldrivers.io/drivers/375e8de3-aae4-488d-8273-66744978b45f/
+    - https://www.greyhathacker.net/?p=1025
+    - https://decoder.cloud/2025/01/09/the-almost-forgotten-vulnerable-driver/
+author: decoder
+date: 2025/01/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\szkg64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

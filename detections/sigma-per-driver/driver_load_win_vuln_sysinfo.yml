@@ -1,0 +1,30 @@
+title: Driver Load - SysInfo.sys
+id: b698453e-c622-5c20-9e9a-8e1059e0eef4
+status: experimental
+description: |
+    Detects loading of driver SysInfo.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/84ccb68d-ce34-4aa2-98d5-7f473c2e1b07/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5228b7a738dc90a06ae4f4a7412cb1e9'
+            - 'SHA1=f0c463d29a5914b01e4607889094f1b7d95e7aaf'
+            - 'SHA256=7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb'
+            - 'IMPHASH=3c61f9a38aaa7650fcd33b46e794d1bb'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

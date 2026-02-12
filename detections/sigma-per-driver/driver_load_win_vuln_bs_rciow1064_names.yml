@@ -1,0 +1,27 @@
+title: Driver Load - BS_RCIOW1064.sys
+id: a5fe3570-6ccb-5c8b-9821-86ac2afc11ca
+status: experimental
+description: |
+    Detects loading of driver BS_RCIOW1064.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/39f427b6-aad3-4cb8-b363-9113a6d53b07/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bs_rciow1064.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

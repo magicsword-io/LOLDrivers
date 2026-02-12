@@ -1,0 +1,39 @@
+title: Driver Load - windivert.sys
+id: 1dccadd0-bd76-5f92-91dc-38e6099020f6
+status: experimental
+description: |
+    Detects loading of driver windivert.sys via hash.
+    WinDivert is a user-mode packet capture and network packet manipulation utility designed for Windows. It provides a powerful and flexible framework for intercepting, modifying, injecting, and dropping network packets at the network stack level. It operates as a lightweight, high-performance driver that interfaces directly with the network stack, allowing for detailed packet inspection and manipulation in real time.
+references:
+    - https://www.loldrivers.io/drivers/45a31a17-f78d-48ec-beba-74f6bfc5f96e/
+    - https://www.3nailsinfosec.com/post/edrprison-borrow-a-legitimate-driver-to-mute-edr-agent
+    - https://github.com/basil00/WinDivert
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=451ec31152318d1249f41aed387dd262'
+            - 'MD5=eb187d171359a5bb1c754107f18cf8bb'
+            - 'MD5=89ed5be7ea83c01d0de33d3519944aa5'
+            - 'SHA1=4c9b9c74529399abacc2284de1dead5f2332ee9b'
+            - 'SHA1=96e6fce6833ea0f2c81bfe0363393aa3302d6916'
+            - 'SHA1=d821fa0c9186a5f863528dc6a3e87b3ff40a1ac5'
+            - 'SHA256=8248306bcc5fae20fd4f3d5c44f962c85cddbe020b34a1799350ce2034154b7d'
+            - 'SHA256=2f43f4251be4d72dd56c91bf6cce475d379eb9ba6c4dda2be3022ea633d5e807'
+            - 'SHA256=8da085332782708d8767bcace5327a6ec7283c17cfb85e40b03cd2323a90ddc2'
+            - 'IMPHASH=bb607f74958acb5ad3d1bbcb8a7407e3'
+            - 'IMPHASH=5bfe3723089cbcfcc271ba6d7ab617aa'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,35 @@
+title: Driver Load - atillk64.sys
+id: d83a44a1-2276-5da0-bfb3-cc5646160e0e
+status: experimental
+description: |
+    Detects loading of driver atillk64.sys via hash.
+    ATI Diagnostics Hardware Abstraction Sys
+references:
+    - https://www.loldrivers.io/drivers/10b1fc3d-c444-4885-8ca9-4b5891885507/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=27d21eeff199ed555a29ca0ea4453cfb'
+            - 'MD5=26d973d6d9a0d133dfda7d8c1adc04b7'
+            - 'SHA1=1045c63eccb54c8aee9fd83ffe48306dc7fe272c'
+            - 'SHA1=eb0d45aa6f537f5b2f90f3ad99013606eafcd162'
+            - 'SHA256=38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7'
+            - 'SHA256=ad40e6d0f77c0e579fb87c5106bf6de3d1a9f30ee2fbf8c9c011f377fa05f173'
+            - 'IMPHASH=b4c2607b2af5376910bf80b561e9a18a'
+            - 'IMPHASH=a18b467c3b43f334ca455c495a3ef70d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

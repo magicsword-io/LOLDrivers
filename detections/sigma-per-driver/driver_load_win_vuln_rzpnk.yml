@@ -1,0 +1,102 @@
+title: Driver Load - rzpnk.sys
+id: 8ee33a22-9d6f-55b9-8977-5cad3a45a9af
+status: experimental
+description: |
+    Detects loading of driver rzpnk.sys via hash.
+    A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as of the day of disclosure) which can be leveraged locally by a malicious application to elevate its privileges to those of NT_AUTHORITY\SYSTEM. The vulnerability lies in a specific IOCTL handler in the rzpnk.sys driver that passes a PID specified by the user to ZwOpenProcess. CVE-2017-9769.
+references:
+    - https://www.loldrivers.io/drivers/1c6e1d3b-f825-4065-9e0c-83386883e40f/
+    - https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13
+    - https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2e7d824a49d731da9fc96262a29c85ce'
+            - 'MD5=2229d5a9a92b62df4df9cf51f48436f7'
+            - 'MD5=8de7dcade65a1f51605a076c1d2b3456'
+            - 'MD5=3fda3d414c31ad73efd8ccceeaa3bdc2'
+            - 'MD5=f5e6ef0dcbb3d4a608e9e0bba4d80d0a'
+            - 'MD5=b4598c05d5440250633e25933fff42b0'
+            - 'MD5=f758e7d53184faab5bc51f751937fa36'
+            - 'MD5=0d8daf471d871deb90225d2953c0eb95'
+            - 'MD5=935a7df222f19ac532e831e6bf9e8e45'
+            - 'MD5=4e92f1c677e08fd09b57032c5b47ca46'
+            - 'MD5=d4a299c595d35264b5cfd12490a138dc'
+            - 'MD5=fef60a37301e1f5a3020fa3487fb2cd7'
+            - 'MD5=05a6f843c43d75fbce8e885bb8656aa4'
+            - 'MD5=4cc3ddd5ae268d9a154a426af2c23ef9'
+            - 'MD5=3c1f92a1386fa6cf1ba51bae5e9a98dd'
+            - 'MD5=6846c2035b4c56b488d2ce2c69a57261'
+            - 'MD5=f8a13d4413a93dd005fad116cbd6b6f7'
+            - 'MD5=288471f132c7249f598032d03575f083'
+            - 'MD5=1c9d2a993e99054050b596d88b307d95'
+            - 'MD5=36527fdb70ed6f74b70a98129f82ad62'
+            - 'MD5=560069dc51d3cc7f9cf1f4e940f93cae'
+            - 'SHA1=e41808b022656befb7dc42bbeceaf867e2fec6b2'
+            - 'SHA1=1a83c8b63d675c940aaec10f70c0c7698e9b0165'
+            - 'SHA1=684786de4b3b3f53816eae9df5f943a22c89601f'
+            - 'SHA1=8edcd4b35f5ae88d14e83252390659c6fc79eae3'
+            - 'SHA1=a95a126b539989e29e68969bfab16df291e7fa8a'
+            - 'SHA1=d72de7e8f0118153dd5cf784f724e725865fc523'
+            - 'SHA1=838823f25436cadc9a145ddac076dce3e0b84d96'
+            - 'SHA1=d083e69055556a36df7c6e02115cbbf90726f35c'
+            - 'SHA1=58ebfb7de214ee09f6bf71c8cc9c139dd4c8b016'
+            - 'SHA1=a4e2e227f984f344d48f4bf088ca9d020c63db4e'
+            - 'SHA1=f0d6b0bcd5f47b41d3c3192e244314d99d1df409'
+            - 'SHA1=7e900b0370a1d3cb8a3ea5394d7d094f95ec5dc0'
+            - 'SHA1=64df813dc0774ef57d21141dcb38d08059fd8660'
+            - 'SHA1=6e191d72b980c8f08a0f60efa01f0b5bf3b34afb'
+            - 'SHA1=3fbe337b6ed1a1a63ae8b4240c01bd68ed531674'
+            - 'SHA1=63cf021c8662fa23ce3e4075a4f849431e473058'
+            - 'SHA1=a6aa7926aa46beaf9882a93053536b75ef2c7536'
+            - 'SHA1=986c1fdfe7c9731f4de15680a475a72cf2245121'
+            - 'SHA1=f999709e5b00a68a0f4fa912619fe6548ad0c42d'
+            - 'SHA1=6293ff11805cd33bccbcca9f0132bff3ae2e2534'
+            - 'SHA1=537923c633d8fc94d9ae45ad9d89e5346f581f17'
+            - 'SHA256=0b547368c03e0a584ae3c5e62af3728426c68b316a15f3290316844d193ad182'
+            - 'SHA256=d59cc3765a2a9fa510273dded5a9f9ac5190f1edf24a00ffd6a1bbd1cb34c757'
+            - 'SHA256=16e2b071991b470a76dff4b6312d3c7e2133ad9ac4b6a62dda4e32281952fb23'
+            - 'SHA256=4c2d2122ef7a100e1651f2ec50528c0d1a2b8a71c075461f0dc58a1aca36bc61'
+            - 'SHA256=9fa120bda98633e30480d8475c9ac6637470c4ca7c63763560bf869138091b01'
+            - 'SHA256=0507d893e3fd2917c81c1dc13ccb22ae5402ab6ca9fb8d89485010838050d08d'
+            - 'SHA256=f15962354d37089884abba417f58e9dbd521569b4f69037a24a37cfc2a490672'
+            - 'SHA256=0c925468c3376458d0e1ec65e097bd1a81a03901035c0195e8f6ef904ef3f901'
+            - 'SHA256=9724488ca2ba4c787640c49131f4d1daae5bd47d6b2e7e5f9e8918b1d6f655be'
+            - 'SHA256=93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63'
+            - 'SHA256=9e3430d5e0e93bc4a5dccc985053912065e65722bfc2eaf431bc1da91410434c'
+            - 'SHA256=dafa4459d88a8ab738b003b70953e0780f6b8f09344ce3cd631af70c78310b53'
+            - 'SHA256=a66d2fb7ef7350ea74d4290c57fb62bc59c6ea93f759d4ca93c3febca7aeb512'
+            - 'SHA256=8ed0c00920ce76e832701d45117ed00b12e20588cb6fe8039fbccdfef9841047'
+            - 'SHA256=e77786b21dbe73e9619ac9aac5e7e92989333d559aa22b4b65c97f0a42ff2e21'
+            - 'SHA256=ad8fd8300ed375e22463cea8767f68857d9a3b0ff8585fbeb60acef89bf4a7d7'
+            - 'SHA256=9eba5d1545fdbf37cf053ac3f3ba45bcb651b8abb7805cbfdfb5f91ea294fb95'
+            - 'SHA256=2665d3127ddd9411af38a255787a4e2483d720aa021be8d6418e071da52ed266'
+            - 'SHA256=46d1dc89cc5fa327e7adf3e3d6d498657240772b85548c17d2e356aac193dd28'
+            - 'SHA256=567809308cfb72d59b89364a6475f34a912d03889aa50866803ac3d0bf2c3270'
+            - 'SHA256=d7b743c3f98662c955c616e0d1bb0800c9602e5b6f2385336a72623037bfd6dd'
+            - 'IMPHASH=e1ecbd956bd016618b07e7dddcaf6e60'
+            - 'IMPHASH=cc335217d6f7ab7a53dcfa55cbda5fb0'
+            - 'IMPHASH=7fb9382c0d754d5aac897d7a3e72b10c'
+            - 'IMPHASH=d67b7c7501e5261df5e66b3219fa52ee'
+            - 'IMPHASH=805e4a267f9495e7c0c430d92b78f8bd'
+            - 'IMPHASH=74081c86ad3e9771011f162c107927de'
+            - 'IMPHASH=dd7c5c0c762169d40ee01280e4ac74fc'
+            - 'IMPHASH=700a9350ac8b218ab9fc62cf25337ad3'
+            - 'IMPHASH=42e3f2ffa29901e572f2df03cb872159'
+            - 'IMPHASH=6b7d4c6283b9b951b7b2f47a0c5be8c7'
+            - 'IMPHASH=5192bc7311bdeb1f3977bdc0d2e943e4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

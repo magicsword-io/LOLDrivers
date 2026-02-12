@@ -1,0 +1,27 @@
+title: Driver Load - My.sys
+id: 2af0aa84-eb75-5b4e-b568-dde380594a66
+status: experimental
+description: |
+    Detects loading of driver My.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/b7ec29c6-e151-4a9f-a293-e61f04ee6489/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\my.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

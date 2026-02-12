@@ -1,0 +1,33 @@
+title: Driver Load - iqvw64e.sys
+id: 220bfb34-8584-55e9-b159-a92265f5cbc8
+status: experimental
+description: |
+    Detects loading of driver iqvw64e.sys via name.
+    (1) IQVW32.sys before 1.3.1.0 and (2) IQVW64.sys before 1.3.1.0 in the Intel Ethernet diagnostics driver for Windows allows local users to cause a denial of service or possibly execute arbitrary code with kernel privileges via a crafted (a) 0x80862013, (b) 0x8086200B, (c) 0x8086200F, or (d) 0x80862007 IOCTL call.
+references:
+    - https://www.loldrivers.io/drivers/1d2cdef1-de44-4849-80e5-e2fa288df681/
+    - https://www.crowdstrike.com/blog/scattered-spider-attempts-to-avoid-detection-with-bring-your-own-vulnerable-driver-tactic/
+    - https://expel.com/blog/well-that-escalated-quickly-how-a-red-team-went-from-domain-user-to-kernel-memory/
+    - https://github.com/Exploitables/CVE-2015-2291
+    - https://github.com/Tare05/Intel-CVE-2015-2291
+    - https://github.com/TheCruZ/kdmapper
+    - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+author: Michael Haag, Guus Verbeek
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\iqvw64e.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

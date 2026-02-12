@@ -1,0 +1,27 @@
+title: Driver Load - t7.sys
+id: 84e3ea28-d9ef-5745-9ad6-97fb09ea8fe6
+status: experimental
+description: |
+    Detects loading of driver t7.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/7196366e-04f0-4aaf-9184-ed0a0d21a75f/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=be03e9541f56ac6ed1e81407dcd7cc85c0ffc538c3c2c2c8a9c747edbcf13100'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

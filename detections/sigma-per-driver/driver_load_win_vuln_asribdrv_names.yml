@@ -1,0 +1,28 @@
+title: Driver Load - AsrIbDrv.sys
+id: 6f640b98-3a2b-5ee4-8e10-2996a0cf13f8
+status: experimental
+description: |
+    Detects loading of driver AsrIbDrv.sys via name.
+    RW-Everything Read & Write Driver
+references:
+    - https://www.loldrivers.io/drivers/31797996-6973-402d-a4a0-d01ce51e02c0/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asribdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

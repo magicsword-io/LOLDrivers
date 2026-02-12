@@ -1,0 +1,31 @@
+title: Driver Load - AsrDrv102.sys
+id: 51fe786a-8784-53c3-9f15-54cc11aec8f3
+status: experimental
+description: |
+    Detects loading of driver AsrDrv102.sys via hash.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/5af9abf0-d8de-4e9b-8141-e9e97a31901a/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=76bb1a4332666222a8e3e1339e267179'
+            - 'SHA1=9923c8f1e565a05b3c738d283cf5c0ed61a0b90f'
+            - 'SHA256=a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc'
+            - 'IMPHASH=9d7183c1d8107495354c4fad9dae3452'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

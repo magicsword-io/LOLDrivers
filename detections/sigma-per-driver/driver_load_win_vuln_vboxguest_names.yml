@@ -1,0 +1,28 @@
+title: Driver Load - vboxguest.sys
+id: ad1acfd3-f5cd-5b6c-a9f8-559f97e676f1
+status: experimental
+description: |
+    Detects loading of driver vboxguest.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/0baa833c-e4e1-449e-86ee-cafeb11f5fd5/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\vboxguest.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

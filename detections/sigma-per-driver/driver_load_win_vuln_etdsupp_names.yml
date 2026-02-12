@@ -1,0 +1,28 @@
+title: Driver Load - etdsupp.sys
+id: e2051080-c501-51bd-ab9c-e34172b1d540
+status: experimental
+description: |
+    Detects loading of driver etdsupp.sys via name.
+    ETDi Support Driver
+references:
+    - https://www.loldrivers.io/drivers/0e8da43d-92e0-43f9-bc34-50a7d15b34bd/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\etdsupp.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

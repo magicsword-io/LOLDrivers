@@ -1,0 +1,27 @@
+title: Driver Load - BlackBoneDrv10.sys
+id: 1c0f27ae-27cb-59eb-bcf6-89e51ad36d97
+status: experimental
+description: |
+    Detects loading of driver BlackBoneDrv10.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/722772ee-a461-48ec-933d-f3df1578963e/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\blackbonedrv10.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

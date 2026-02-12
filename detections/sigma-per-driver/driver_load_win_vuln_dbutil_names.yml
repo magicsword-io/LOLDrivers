@@ -1,0 +1,27 @@
+title: Driver Load - dbutil.sys
+id: 7f892d47-1c7b-503e-aa45-022ae0016e11
+status: experimental
+description: |
+    Detects loading of driver dbutil.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/8d14d798-338f-471e-bacb-6d9371c0f529/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dbutil.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

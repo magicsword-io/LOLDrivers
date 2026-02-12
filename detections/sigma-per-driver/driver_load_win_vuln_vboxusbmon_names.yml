@@ -1,0 +1,28 @@
+title: Driver Load - VBoxUSBMon.sys
+id: 6e48fab8-c90b-5e78-b4fd-0ad7c95df556
+status: experimental
+description: |
+    Detects loading of driver VBoxUSBMon.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/babe348d-f160-41ec-9db9-2413b989c1f0/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\vboxusbmon.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

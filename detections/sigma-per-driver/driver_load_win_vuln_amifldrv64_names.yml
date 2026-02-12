@@ -1,0 +1,30 @@
+title: Driver Load - amifldrv64.sys
+id: 13898c5c-dfb1-5967-aeba-ae08cc23771f
+status: experimental
+description: |
+    Detects loading of driver amifldrv64.sys via name.
+    AMI Generic Utility Driver
+references:
+    - https://www.loldrivers.io/drivers/34fa6ba4-dc7c-4fd6-b947-8a0bb8ebd031/
+    - Internal Research
+    - https://github.com/namazso/physmem_drivers
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\amifldrv64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

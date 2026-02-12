@@ -1,0 +1,27 @@
+title: Driver Load - t.sys
+id: dba5bb0a-b314-5aff-8ced-26c17947a9ba
+status: experimental
+description: |
+    Detects loading of driver t.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/65660363-0080-4432-abd9-64368dac0283/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=146d77e80ca70ea5cb17bfc9a5cea92334f809cbdc87a51c2d10b8579a4b9c88'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

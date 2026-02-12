@@ -7,191 +7,207 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create fiddrv64.sys binPath=C:\windows\temp\fiddrv64.sys type=kernel
-        && sc.exe start fiddrv64.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create fiddrv64.sys binPath=C:\windows\temp\fiddrv64.sys type=kernel
+    && sc.exe start fiddrv64.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: fiddrv64.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: fiddrv64.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: 10e15ba8ff8ed926ddd3636cec66a0f08c9860a4
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: fiddrv64.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 6f12156b03f79cac857e541cc10b7366
     SHA1: 10e15ba8ff8ed926ddd3636cec66a0f08c9860a4
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: fiddrv64.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA1: e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 6f12156b03f79cac857e541cc10b7366
-        SHA1: 10e15ba8ff8ed926ddd3636cec66a0f08c9860a4
-        SHA256: feef191064d18b6fb63b7299415d1b1e2ec8fcdd742854aa96268d0ec4a0f7b6
-    Company: ''
-    Copyright: ''
-    CreationTimestamp: '2009-11-19 11:54:07'
-    Date: ''
-    Description: ''
-    ExportedFunctions: ''
-    FileVersion: ''
-    Filename: ''
-    ImportedFunctions:
-    - IoCreateSymbolicLink
-    - IoCreateDevice
-    - IoDeleteSymbolicLink
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - IofCompleteRequest
-    - KeBugCheckEx
-    - __C_specific_handler
-    Imports:
-    - ntoskrnl.exe
-    InternalName: ''
-    MD5: bd067efb8cafd971142bc964b4f85df1
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: ''
-    PDBPath: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: deba1df19727baf467b29c60b7c563c7
-        SHA1: 710b0baee7b3343dabd7d4d048e2aa88e86a684a
-        SHA256: ada352b06916b92ba7cbc0b7a3465c9e6e3a1ae2068643a99447a003c066f905
-    SHA1: 0d8a832b9383fcdc23e83487b188ddd30963ca82
-    SHA256: 4bf4cced4209c73aa37a9e2bf9ff27d458d8d7201eefa6f6ad4849ee276ad158
-    Sections:
-        .text:
-            Entropy: 5.315469915674853
-            Virtual Size: '0xde'
-        INIT:
-            Entropy: 4.7533822074782845
-            Virtual Size: '0x11a'
-        PAGE:
-            Entropy: 5.562502416171061
-            Virtual Size: '0x23a'
-        .rdata:
-            Entropy: 4.0522535591944555
-            Virtual Size: '0x1d8'
-        .data:
-            Entropy: 4.418157288156419
-            Virtual Size: '0x1d'
-        .pdata:
-            Entropy: 2.7073211214245667
-            Virtual Size: '0x3c'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Intel Corporation, CN=Intel External Basic Policy CA
-            ValidFrom: '2006-02-16 18:01:30'
-            ValidTo: '2016-02-19 18:01:30'
-            Signature: 131038ada454a5489545b02d3772c09f9ed8ef8f0bfb9096d2b6177951cab3df067ebdb4e9083f84a00c939fb31ca86c8acf2deef99012f0f83a26d773810e9fc4319259d4282541f555f1ca3d993dda64c8d21864223209092d1de331fafdd347d764a8f95dea8227e24fd2612124611d54263e145964b098d5f3a7c3aead50
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 05b0ff
-            Version: 3
-            TBS:
-                MD5: f532f9999c3f7a078f0f973c726a2a04
-                SHA1: f56832bc9412c372f9a8744591258f8bb11af2d8
-                SHA256: 4c75ce4be51027c4e1f7422775c3ae79d5195ffc0ff7f379123a603ccb702c60
-                SHA384: 084772ceb63ae50ebd8125ba9eba0c9b38d0e94a806f58513f71f1d5489f52489b0dfbb8c67603a425a603451b3b1719
-        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
-                , G2
-            ValidFrom: '2007-06-15 00:00:00'
-            ValidTo: '2012-06-14 23:59:59'
-            Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
-            Version: 3
-            TBS:
-                MD5: d6c7684e9aaa508cf268335f83afe040
-                SHA1: 18066d20ad92409c567cdfde745279ff71c75226
-                SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
-                SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
-        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-            ValidFrom: '2003-12-04 00:00:00'
-            ValidTo: '2013-12-03 23:59:59'
-            Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-            Version: 3
-            TBS:
-                MD5: 518d2ea8a21e879c942d504824ac211c
-                SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-                SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-                SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
-        -   Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
-            ValidFrom: '2006-05-23 17:01:15'
-            ValidTo: '2016-05-23 17:11:15'
-            Signature: 87a40f6b55916248ff54811ccf5db6c5a514aa671df485f6860d38b31c8d22ce7c867946fb71e16114d0ed4e46a48bca64654094f92ad7870ca9b7bedcc40bbd09c106eb9530841b9d8de7bc70c6f86539c4e5c4e65c8fcda130baef065e555290edd8587f15142ecc21a593dab8508d805e6e22a70fde8093add71d24b02aa2f4f20b98750131cc69bc359b3d13662f21bde54ec3639cc8518d59f5b600937ef10c35b0f4180dbfa7bdb2aae16b9f3ce6bb41b5d904e7c8a63abf8a5bdcaa9a3cd2c8dfcb1774163d78470b4c108e406616a0f300ede034998af0f9460ff27fbf202c972616d59e81da94a6dc61c8f18e092d4e32d03df682267d91d7a6c67bc1311d210ed4a342c1b4dfc0446b4f2aeebb29d62787b0a450ae1a9ab5f996f4ccabe52b3df166e2d5e1c3f0c687b659536638026e6194df1563aa415052f9bb64dc95e05b6c2aacfed6e603c21ff65557fe7e813fcb5a0bc1029cac84e47cd3f4c25a17c312706009ec82e5eccdd0b2106d69868c8da60e0416c57164ebd95bb8b08cfc32427e60846f655b7244272b846181f461d50fd51dbc05a27a5f937f26d1c8b3afa0190723e43e225d32d14a0fcee7b72a5c7b6e1c57126864e8337e8c501340a487b0d3a69b1eacbd3d7812bc52af09e0bab0508e5c81f98383af1482f50a6d035721bb9ac32e66fb04215b0a120fc1c907d63cecabf9a52f90883a
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 610bdc8f00000000001a
-            Version: 3
-            TBS:
-                MD5: 6e11ed171e9a07e607b8ca65bf0e8858
-                SHA1: 6d329a72420f76868584957854cdc45172e9f902
-                SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
-                SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
-        -   Subject: CN=Intel(R) Processor Identification Utility
-            ValidFrom: '2009-03-19 00:29:29'
-            ValidTo: '2012-03-18 00:29:29'
-            Signature: 86c24504c2f46f4eb6f3dc997172bd94eecd17fe47c54e3be9e7d9c6a1dfb0158bbee32ab23b4e48d4c889e91edbde24cd5753feb01ac761e3c236ab02ef21345a0afe54a61cc5587f89484170d6bdd703606685ee22539b68c84201a0ac746ff98a719d7b8a358d0109d599d46bc8dc15392b3f9ed67a5092665aa4c0ece1c1591915ed5479a123c9a2da0aafa79b69dee0e16d89949c2139f73174e914ac0ac224660c083684ff56d29df499539b701e80a45b69107f7dc25e031fb9f491475e0d0ff6c7a2127caad2978c4a292d3e126ff06f841183fea1a4a66e831fd7ecce3132413239db87e78850d743953f73d140b22d7d2a50b468be4662ec2a06a6
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 13fd5f58000000002ea3
-            Version: 3
-            TBS:
-                MD5: b3bd1f3e90334bd036db0c87a99bbe67
-                SHA1: 560fd30788b6778228d6f72d2383fdad0ea7d6f4
-                SHA256: bf0423565349e55db360084fa861a2189f3a186453b49849eea648fbe6c38a06
-                SHA384: 86a06d6f26ddbfe8e607ef1f25ded4a7077162c098a1127b37bff187b9dfdf94ac831eff028d137642a6d7a9fde216ae
-        -   Subject: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA
-                3A
-            ValidFrom: '2006-03-22 22:22:42'
-            ValidTo: '2012-03-22 22:32:42'
-            Signature: ae3429de709faf0e95f3b073b3304cb3e0a8133436c944e1da83c1ff65581aeeca1ca09c82f872aa0df420c627d5a2b6d36d26a3081100c6a83a6db356049eaa28e1479de06b5e410d7f959d0f9d1e093085591577108b0710e43590fd1e35857911de21a7dcbac00495eb3db3f3a3b8faaa2e2c98a8c3800886808a0fcac4c83ece0e04ef8ef2c22a9b15c8f946d633954ac392205d95526b9e0262b74455389e9f37cdeacafe3d06dfba308678840d3e998709147745cbe399edd66ef20293046e75d44c735a5e713e3fdf249379c35dd5b6e6c07ee7159c611dc6a6031d4226603ff7f4299fb264a344ee0729dc8fcee295ea50d588b0b4984e2deca00476
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 612c9489000000000005
-            Version: 3
-            TBS:
-                MD5: 5563adcf63b9dd7859bcf84b3c2c95bb
-                SHA1: 83c83dbb905a1b9612d3de74267f36cfb88f714c
-                SHA256: 335520ee32bdf0d48087cde95c0964d6f64ebfb89223dc1b85ab22307c6328f1
-                SHA384: 3770ae5456ac5ac1e9027fd13495d9cbbb51379a0dc00c7bd8b96b2d566cfd4c158c05ebe9bf63768b9684680a4cc4e4
-        Signer:
-        -   SerialNumber: 13fd5f58000000002ea3
-            Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA
-                3A
-            Version: 1
-    Imphash: 840e656bdb2987fa422092ec9d588895
-    LoadsDespiteHVCI: 'FALSE'
+    SHA256: feef191064d18b6fb63b7299415d1b1e2ec8fcdd742854aa96268d0ec4a0f7b6
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-11-19 13:54:07'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: bd067efb8cafd971142bc964b4f85df1
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: deba1df19727baf467b29c60b7c563c7
+    SHA1: 710b0baee7b3343dabd7d4d048e2aa88e86a684a
+    SHA256: ada352b06916b92ba7cbc0b7a3465c9e6e3a1ae2068643a99447a003c066f905
+  SHA1: 0d8a832b9383fcdc23e83487b188ddd30963ca82
+  SHA256: 4bf4cced4209c73aa37a9e2bf9ff27d458d8d7201eefa6f6ad4849ee276ad158
+  Sections:
+    .text:
+      Entropy: 5.315469915674853
+      Virtual Size: '0xde'
+    INIT:
+      Entropy: 4.7533822074782845
+      Virtual Size: '0x11a'
+    PAGE:
+      Entropy: 5.562502416171061
+      Virtual Size: '0x23a'
+    .rdata:
+      Entropy: 4.0522535591944555
+      Virtual Size: '0x1d8'
+    .data:
+      Entropy: 4.418157288156419
+      Virtual Size: '0x1d'
+    .pdata:
+      Entropy: 2.7073211214245667
+      Virtual Size: '0x3c'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Intel Corporation, CN=Intel External Basic Policy CA
+      ValidFrom: '2006-02-16 18:01:30'
+      ValidTo: '2016-02-19 18:01:30'
+      Signature: 131038ada454a5489545b02d3772c09f9ed8ef8f0bfb9096d2b6177951cab3df067ebdb4e9083f84a00c939fb31ca86c8acf2deef99012f0f83a26d773810e9fc4319259d4282541f555f1ca3d993dda64c8d21864223209092d1de331fafdd347d764a8f95dea8227e24fd2612124611d54263e145964b098d5f3a7c3aead50
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 05b0ff
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: f532f9999c3f7a078f0f973c726a2a04
+        SHA1: f56832bc9412c372f9a8744591258f8bb11af2d8
+        SHA256: 4c75ce4be51027c4e1f7422775c3ae79d5195ffc0ff7f379123a603ccb702c60
+        SHA384: 084772ceb63ae50ebd8125ba9eba0c9b38d0e94a806f58513f71f1d5489f52489b0dfbb8c67603a425a603451b3b1719
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
+        G2
+      ValidFrom: '2007-06-15 00:00:00'
+      ValidTo: '2012-06-14 23:59:59'
+      Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: d6c7684e9aaa508cf268335f83afe040
+        SHA1: 18066d20ad92409c567cdfde745279ff71c75226
+        SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
+      ValidFrom: '2006-05-23 17:01:15'
+      ValidTo: '2016-05-23 17:11:15'
+      Signature: 87a40f6b55916248ff54811ccf5db6c5a514aa671df485f6860d38b31c8d22ce7c867946fb71e16114d0ed4e46a48bca64654094f92ad7870ca9b7bedcc40bbd09c106eb9530841b9d8de7bc70c6f86539c4e5c4e65c8fcda130baef065e555290edd8587f15142ecc21a593dab8508d805e6e22a70fde8093add71d24b02aa2f4f20b98750131cc69bc359b3d13662f21bde54ec3639cc8518d59f5b600937ef10c35b0f4180dbfa7bdb2aae16b9f3ce6bb41b5d904e7c8a63abf8a5bdcaa9a3cd2c8dfcb1774163d78470b4c108e406616a0f300ede034998af0f9460ff27fbf202c972616d59e81da94a6dc61c8f18e092d4e32d03df682267d91d7a6c67bc1311d210ed4a342c1b4dfc0446b4f2aeebb29d62787b0a450ae1a9ab5f996f4ccabe52b3df166e2d5e1c3f0c687b659536638026e6194df1563aa415052f9bb64dc95e05b6c2aacfed6e603c21ff65557fe7e813fcb5a0bc1029cac84e47cd3f4c25a17c312706009ec82e5eccdd0b2106d69868c8da60e0416c57164ebd95bb8b08cfc32427e60846f655b7244272b846181f461d50fd51dbc05a27a5f937f26d1c8b3afa0190723e43e225d32d14a0fcee7b72a5c7b6e1c57126864e8337e8c501340a487b0d3a69b1eacbd3d7812bc52af09e0bab0508e5c81f98383af1482f50a6d035721bb9ac32e66fb04215b0a120fc1c907d63cecabf9a52f90883a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610bdc8f00000000001a
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 6e11ed171e9a07e607b8ca65bf0e8858
+        SHA1: 6d329a72420f76868584957854cdc45172e9f902
+        SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
+    - Subject: CN=Intel(R) Processor Identification Utility
+      ValidFrom: '2009-03-19 00:29:29'
+      ValidTo: '2012-03-18 00:29:29'
+      Signature: 86c24504c2f46f4eb6f3dc997172bd94eecd17fe47c54e3be9e7d9c6a1dfb0158bbee32ab23b4e48d4c889e91edbde24cd5753feb01ac761e3c236ab02ef21345a0afe54a61cc5587f89484170d6bdd703606685ee22539b68c84201a0ac746ff98a719d7b8a358d0109d599d46bc8dc15392b3f9ed67a5092665aa4c0ece1c1591915ed5479a123c9a2da0aafa79b69dee0e16d89949c2139f73174e914ac0ac224660c083684ff56d29df499539b701e80a45b69107f7dc25e031fb9f491475e0d0ff6c7a2127caad2978c4a292d3e126ff06f841183fea1a4a66e831fd7ecce3132413239db87e78850d743953f73d140b22d7d2a50b468be4662ec2a06a6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 13fd5f58000000002ea3
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b3bd1f3e90334bd036db0c87a99bbe67
+        SHA1: 560fd30788b6778228d6f72d2383fdad0ea7d6f4
+        SHA256: bf0423565349e55db360084fa861a2189f3a186453b49849eea648fbe6c38a06
+        SHA384: 86a06d6f26ddbfe8e607ef1f25ded4a7077162c098a1127b37bff187b9dfdf94ac831eff028d137642a6d7a9fde216ae
+    - Subject: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A
+      ValidFrom: '2006-03-22 22:22:42'
+      ValidTo: '2012-03-22 22:32:42'
+      Signature: ae3429de709faf0e95f3b073b3304cb3e0a8133436c944e1da83c1ff65581aeeca1ca09c82f872aa0df420c627d5a2b6d36d26a3081100c6a83a6db356049eaa28e1479de06b5e410d7f959d0f9d1e093085591577108b0710e43590fd1e35857911de21a7dcbac00495eb3db3f3a3b8faaa2e2c98a8c3800886808a0fcac4c83ece0e04ef8ef2c22a9b15c8f946d633954ac392205d95526b9e0262b74455389e9f37cdeacafe3d06dfba308678840d3e998709147745cbe399edd66ef20293046e75d44c735a5e713e3fdf249379c35dd5b6e6c07ee7159c611dc6a6031d4226603ff7f4299fb264a344ee0729dc8fcee295ea50d588b0b4984e2deca00476
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 612c9489000000000005
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 5563adcf63b9dd7859bcf84b3c2c95bb
+        SHA1: 83c83dbb905a1b9612d3de74267f36cfb88f714c
+        SHA256: 335520ee32bdf0d48087cde95c0964d6f64ebfb89223dc1b85ab22307c6328f1
+        SHA384: 3770ae5456ac5ac1e9027fd13495d9cbbb51379a0dc00c7bd8b96b2d566cfd4c158c05ebe9bf63768b9684680a4cc4e4
+    Signer:
+    - SerialNumber: 13fd5f58000000002ea3
+      Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A
+      Version: 1
+  Imphash: 840e656bdb2987fa422092ec9d588895
+  LoadsDespiteHVCI: 'FALSE'

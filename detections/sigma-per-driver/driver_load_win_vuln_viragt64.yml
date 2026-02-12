@@ -1,0 +1,57 @@
+title: Driver Load - viragt64.sys
+id: 7721007d-6900-5083-b896-75df315ed810
+status: experimental
+description: |
+    Detects loading of driver viragt64.sys via hash.
+    VirIT Agent System
+references:
+    - https://www.loldrivers.io/drivers/7edb5602-239f-460a-89d6-363ff1059765/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=688a10e87af9bcf0e40277d927923a00'
+            - 'MD5=650f6531db6fb0ed25d7fc70be35a4da'
+            - 'MD5=25ebe6f757129adbe78ec312a5f1800b'
+            - 'MD5=08e06b839499cb4b752347399db41b57'
+            - 'MD5=779af226b7b72ff9d78ce1f03d4a3389'
+            - 'MD5=3467b0d996251dc56a72fc51a536dd6b'
+            - 'MD5=3d5164e85d740bce0391e2b81d49d308'
+            - 'MD5=3ad7b36a584504b3c70b5f552ba33015'
+            - 'SHA1=388819a7048179848425441c60b3a8390ad04a69'
+            - 'SHA1=ca33c88cd74e00ece898dca32a24bdfcacc3f756'
+            - 'SHA1=9eef72e0c4d5055f6ae5fe49f7f812de29afbf37'
+            - 'SHA1=b53c360b35174bd89f97f681bf7c17f40e519eb6'
+            - 'SHA1=7ce978092fadbef44441a5f8dcb434df2464f193'
+            - 'SHA1=7ee675f0106e36d9159c5507b96c3237fb9348cd'
+            - 'SHA1=d17656f11b899d58dca7b6c3dd6eef3d65ae88e2'
+            - 'SHA1=d363011d6991219d7f152609164aba63c266b740'
+            - 'SHA256=e4eca7db365929ff7c5c785e2eab04ef8ec67ea9edcf7392f2b74eccd9449148'
+            - 'SHA256=ef6d3c00f9d0aa31a218094480299ef73fc85146adf62fd0c2f4f88972c5c850'
+            - 'SHA256=263e8f1e20612849aea95272da85773f577fd962a7a6d525b53f43407aa7ad24'
+            - 'SHA256=9b2f051ac901ab47d0012a1002cb8b2db28c14e9480c0dd55e1ac11c81ba9285'
+            - 'SHA256=2b4c7d3820fe08400a7791e2556132b902a9bbadc1942de57077ecb9d21bf47a'
+            - 'SHA256=d0e25b879d830e4f867b09d6540a664b6f88bad353cd14494c33b31a8091f605'
+            - 'SHA256=18deed37f60b6aa8634dda2565a0485452487d7bce88afb49301a7352db4e506'
+            - 'SHA256=2a6212f3b68a6f263e96420b3607b31cfdfe51afff516f3c87d27bf8a89721e8'
+            - 'IMPHASH=3815f9107b799b863cd905178e6e07d0'
+            - 'IMPHASH=85fd19df117fbc21efbcb1d587063e12'
+            - 'IMPHASH=48e2ef3c2d32ecca62510d90e12b6632'
+            - 'IMPHASH=80ae2342fd6c7f5e1c642918e33dafb1'
+            - 'IMPHASH=f079f8637a1d4fe2fb93af2a267b68ef'
+            - 'IMPHASH=22a9d7a42282b48c566b4423363d3a3e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

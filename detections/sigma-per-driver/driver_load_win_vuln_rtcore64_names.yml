@@ -1,0 +1,27 @@
+title: Driver Load - RTCore64.sys
+id: d3d017e7-c7f9-5b66-a347-e3460d668a05
+status: experimental
+description: |
+    Detects loading of driver RTCore64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/275c80c5-a67c-4536-b29e-4e481242cb01/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rtcore64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

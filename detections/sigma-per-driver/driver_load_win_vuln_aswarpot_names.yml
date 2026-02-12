@@ -1,0 +1,28 @@
+title: Driver Load - aswArPot.sys
+id: a6874848-b37e-5d7c-9017-b5c7ac10a9d5
+status: experimental
+description: |
+    Detects loading of driver aswArPot.sys via name.
+    AVG anti rootkit
+references:
+    - https://www.loldrivers.io/drivers/043773c5-120a-4c6b-8485-8f1f5c47fd3e/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\aswarpot.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

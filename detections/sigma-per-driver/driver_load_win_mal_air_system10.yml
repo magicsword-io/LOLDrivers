@@ -1,0 +1,31 @@
+title: Driver Load - Air_SYSTEM10.sys
+id: 7fe8edcd-a54a-5f4a-bc30-c408cb70a249
+status: experimental
+description: |
+    Detects loading of driver Air_SYSTEM10.sys via hash.
+    Driver categorized as POORTRY by Mandiant.
+references:
+    - https://www.loldrivers.io/drivers/0eb5f4ce-12a7-4b45-b021-42b995de07c5/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+author: Michael Haag
+date: 2023/03/03
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1f2888e57fdd6aee466962c25ba7d62d'
+            - 'SHA1=c23eeb6f18f626ce1fd840227f351fa7543bb167'
+            - 'SHA256=f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212'
+            - 'IMPHASH=41113a3a832353963112b94f4635a383'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

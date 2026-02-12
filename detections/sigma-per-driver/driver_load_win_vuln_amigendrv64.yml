@@ -1,0 +1,30 @@
+title: Driver Load - amigendrv64.sys
+id: 3a0e9d0d-b129-5eea-b047-90855d334373
+status: experimental
+description: |
+    Detects loading of driver amigendrv64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/5c45ae9e-cb6f-4eab-a070-b0187202e080/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=32365e3e64d28cc94756ac9a09b67f06'
+            - 'SHA1=d48757b74eff02255f74614f35aa27abbe3f72c7'
+            - 'SHA256=09043c51719d4bf6405c9a7a292bb9bb3bcc782f639b708ddcc4eedb5e5c9ce9'
+            - 'IMPHASH=1f2627fc453dc35031a9502372bd3549'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

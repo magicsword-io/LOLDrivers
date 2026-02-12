@@ -1,0 +1,29 @@
+title: Driver Load - DcProtect.sys
+id: 5c64e611-be4a-58a2-b8e7-ac857b531a4a
+status: experimental
+description: |
+    Detects loading of driver DcProtect.sys via name.
+    bundled with chinese application "DrvCeo" is a set of rootkits. The malicious functionality. prevents registry value writing where the registry key or value includes "dcprotect" or "drvceo". Prevents file deletion if pathname contains "driverdownload", "program files\sysceo", "program files (x86)\sysceo"
+references:
+    - https://www.loldrivers.io/drivers/7cee2ce8-7881-4a9a-bb18-61587c95f4a2/
+    - https://github.com/magicsword-io/LOLDrivers/issues/154
+    - https://www.virustotal.com/gui/user/slipstream
+author: Wack0
+date: 2023/11/30
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dcprotect.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

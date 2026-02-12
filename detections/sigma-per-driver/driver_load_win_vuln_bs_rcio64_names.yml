@@ -1,0 +1,30 @@
+title: Driver Load - BS_RCIO64.sys
+id: 8618ea3d-a2ce-5b56-b14d-f94b8382a8e2
+status: experimental
+description: |
+    Detects loading of driver BS_RCIO64.sys via name.
+    I/O Interface driver file
+references:
+    - https://www.loldrivers.io/drivers/e7c958da-fd5d-40d6-975e-582c6fee7f69/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+    - https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L54
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bs_rcio64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

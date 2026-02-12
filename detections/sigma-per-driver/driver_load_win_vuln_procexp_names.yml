@@ -1,0 +1,35 @@
+title: Driver Load - procexp.Sys
+id: d7a9a110-e834-52e9-9348-b1c15a39f77d
+status: experimental
+description: |
+    Detects loading of driver procexp.Sys via name.
+    Process Explorer
+references:
+    - https://www.loldrivers.io/drivers/0567c6c4-282f-406f-9369-7f876b899c25/
+    - Internal Research
+    - https://malware.news/t/lazarus-group-attack-case-using-vulnerability-of-certificate-software-commonly-used-by-public-institutions-and-universities/67715
+    - https://waawaa.github.io/en/Bypass-PPL-Using-Process-Explorer/
+    - https://github.com/magicsword-io/LOLDrivers/issues/57
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://github.com/Yaxser/Backstab/blob/master/resources/PROCEXP.sys
+    - https://news.sophos.com/en-us/2023/04/19/aukill-edr-killer-malware-abuses-process-explorer-driver/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\procexp.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

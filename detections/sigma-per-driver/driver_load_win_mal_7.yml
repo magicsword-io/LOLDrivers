@@ -1,0 +1,31 @@
+title: Driver Load - 7.sys
+id: 33ca6a3d-3b1b-5a28-9444-413a766cb626
+status: experimental
+description: |
+    Detects loading of driver 7.sys via hash.
+    Driver categorized as POORTRY by Mandiant.
+references:
+    - https://www.loldrivers.io/drivers/f7f88ef4-ada4-4210-a40d-9d84142ef0fb/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+author: Michael Haag
+date: 2023/03/04
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=dc564bac7258e16627b9de0ce39fae25'
+            - 'SHA1=0291d0457acaf0fe8ed5c3137302390469ce8b35'
+            - 'SHA256=6839fcae985774427c65fe38e773aa96ec451a412caa5354ad9e2b9b54ffe6c1'
+            - 'IMPHASH=b351627263648b1d220bb488e7ec7202'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

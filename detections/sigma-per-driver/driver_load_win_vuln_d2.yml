@@ -1,0 +1,27 @@
+title: Driver Load - d2.sys
+id: a7d721a4-10f7-5218-82f9-6061f361cd38
+status: experimental
+description: |
+    Detects loading of driver d2.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/d05a0a6c-c037-4647-99ac-c41593190223/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=cb57f3a7fe9e1f8e63332c563b0a319b26c944be839eabc03e9a3277756ba612'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

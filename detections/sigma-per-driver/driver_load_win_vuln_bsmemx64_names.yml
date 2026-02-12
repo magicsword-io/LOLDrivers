@@ -1,0 +1,28 @@
+title: Driver Load - BSMEMx64.sys
+id: 950d6152-41aa-567b-96a5-474ca32d3a72
+status: experimental
+description: |
+    Detects loading of driver BSMEMx64.sys via name.
+    I/O Interface driver file
+references:
+    - https://www.loldrivers.io/drivers/9e87b6b0-00ed-4259-bcd7-05e2c924d58c/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bsmemx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

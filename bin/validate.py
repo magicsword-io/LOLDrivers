@@ -7,11 +7,31 @@ Validates YAML files in a directory against a JSON schema.
 import glob
 import json
 import jsonschema
+import re
 import yaml
 import sys
 import argparse
 from pathlib import Path
 from os import path, walk
+
+# UUID regex pattern (8-4-4-4-12 hex format)
+UUID_PATTERN = re.compile(r'^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$', re.IGNORECASE)
+
+
+def check_filename_matches_id(yaml_file, yaml_data):
+    """Validates that the YAML filename matches the Id field inside the file."""
+    filename = Path(yaml_file).stem  # Get filename without extension
+    file_id = yaml_data.get('Id', '')
+    
+    # Check if filename matches Id
+    if filename != file_id:
+        return f"ERROR: Filename '{filename}.yaml' does not match Id '{file_id}'"
+    
+    # Check if Id is a valid UUID format
+    if not UUID_PATTERN.match(file_id):
+        return f"ERROR: Id '{file_id}' is not a valid UUID format (expected: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)"
+    
+    return None
 
 
 def check_hash_length(object, hash_algo, hash_length):
@@ -57,6 +77,7 @@ def validate_schema(yaml_dir, schema_file, verbose):
 
         # Additional YAML checks
         check_errors = [
+            check_filename_matches_id(yaml_file, yaml_data),
             check_hash_length(yaml_data, "MD5", 32),
             check_hash_length(yaml_data, "SHA1", 40),
             check_hash_length(yaml_data, "SHA256", 64),

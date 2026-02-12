@@ -1,0 +1,28 @@
+title: Driver Load - HOSTNT.sys
+id: ab487323-97c6-52cc-b772-05c1f1f95a17
+status: experimental
+description: |
+    Detects loading of driver HOSTNT.sys via name.
+    Hostnt 64-bit driver
+references:
+    - https://www.loldrivers.io/drivers/e42cd285-4dda-4086-a696-93ab1d6f17ca/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\hostnt.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

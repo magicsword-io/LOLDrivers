@@ -1,0 +1,28 @@
+title: Driver Load - Se64a.sys
+id: f2f0aff6-3d12-56b1-917b-a1242a9a2e1f
+status: experimental
+description: |
+    Detects loading of driver Se64a.sys via name.
+    EnTech softEngine x64 kernel-mode driver
+references:
+    - https://www.loldrivers.io/drivers/d819bee2-3bff-481f-a301-acc3d1f5fe58/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\se64a.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -19,7 +19,6 @@ The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCor
 - **UUID**: e32bc3da-4db1-4858-a62c-6fbe4db6afbd
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/2d8e4f38b36c334d0a32a7324832501d.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
@@ -48,11 +47,11 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 #### YARA 🏹
 {{< details "Expand" >}}
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -64,10 +63,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 #### Sigma 🛡️
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
 
 {{< /details >}}
 
@@ -78,9 +77,9 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 #### Sysmon 🔎
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -102,7 +101,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | RTCore64.sys |
-| Creation Timestamp           | 2016-09-30 06:03:17 |
+| Creation Timestamp           | 2016-09-30 08:03:17 |
 | MD5                | [2d8e4f38b36c334d0a32a7324832501d](https://www.virustotal.com/gui/file/2d8e4f38b36c334d0a32a7324832501d) |
 | SHA1               | [f6f11ad2cd2b0cf95ed42324876bee1d83e01775](https://www.virustotal.com/gui/file/f6f11ad2cd2b0cf95ed42324876bee1d83e01775) |
 | SHA256             | [01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd](https://www.virustotal.com/gui/file/01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd) |
@@ -237,7 +236,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -253,7 +255,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -269,7 +274,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -285,7 +293,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -301,7 +312,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -334,7 +348,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | RTCore64.sys |
-| Creation Timestamp           | 2016-09-30 06:03:16 |
+| Creation Timestamp           | 2016-09-30 08:03:16 |
 | MD5                | [0ec361f2fba49c73260af351c39ff9cb](https://www.virustotal.com/gui/file/0ec361f2fba49c73260af351c39ff9cb) |
 | SHA1               | [af50109b112995f8c82be8ef3a88be404510cdde](https://www.virustotal.com/gui/file/af50109b112995f8c82be8ef3a88be404510cdde) |
 | SHA256             | [cdd2a4575a46bada4837a6153a79c14d60ee3129830717ef09e0e3efd9d00812](https://www.virustotal.com/gui/file/cdd2a4575a46bada4837a6153a79c14d60ee3129830717ef09e0e3efd9d00812) |
@@ -396,7 +410,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -412,7 +429,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -428,7 +448,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -444,7 +467,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -460,7 +486,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -578,7 +607,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -594,7 +626,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -610,7 +645,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -626,7 +664,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -642,7 +683,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -675,7 +719,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [9a5a35112c4f8016abcc6363b44d3385](https://www.virustotal.com/gui/file/9a5a35112c4f8016abcc6363b44d3385) |
 | SHA1               | [8800a33a37c640922ce6a2996cd822ed4603b8bb](https://www.virustotal.com/gui/file/8800a33a37c640922ce6a2996cd822ed4603b8bb) |
 | SHA256             | [ad215185dc833c54d523350ef3dbc10b3357a88fc4dde00281d9af81ea0764d5](https://www.virustotal.com/gui/file/ad215185dc833c54d523350ef3dbc10b3357a88fc4dde00281d9af81ea0764d5) |
@@ -807,7 +851,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -823,7 +870,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -839,7 +889,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -855,7 +908,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -871,7 +927,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -904,7 +963,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [a5afd20e34bcd634ebd25b3ab2ff3403](https://www.virustotal.com/gui/file/a5afd20e34bcd634ebd25b3ab2ff3403) |
 | SHA1               | [fb349c3cde212ef33a11a9d58a622dc58dff3f74](https://www.virustotal.com/gui/file/fb349c3cde212ef33a11a9d58a622dc58dff3f74) |
 | SHA256             | [d9a2bf0f5ba185170441f003dc46fbb570e1c9fdf2132ab7de28b87ba7ad1a0c](https://www.virustotal.com/gui/file/d9a2bf0f5ba185170441f003dc46fbb570e1c9fdf2132ab7de28b87ba7ad1a0c) |
@@ -1036,7 +1095,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1052,7 +1114,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1068,7 +1133,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1084,7 +1152,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1100,7 +1171,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1133,7 +1207,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2011-09-06 06:24:50 |
+| Creation Timestamp           | 2011-09-06 08:24:50 |
 | MD5                | [6691e873354f1914692df104718eebad](https://www.virustotal.com/gui/file/6691e873354f1914692df104718eebad) |
 | SHA1               | [d3d2fe8080f0b18465520785f3a955e1a24ae462](https://www.virustotal.com/gui/file/d3d2fe8080f0b18465520785f3a955e1a24ae462) |
 | SHA256             | [22e125c284a55eb730f03ec27b87ab84cf897f9d046b91c76bea2b5809fd51c5](https://www.virustotal.com/gui/file/22e125c284a55eb730f03ec27b87ab84cf897f9d046b91c76bea2b5809fd51c5) |
@@ -1280,7 +1354,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1296,7 +1373,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1312,7 +1392,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1328,7 +1411,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1344,7 +1430,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1377,7 +1466,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [b994110f069d197222508a724d8afdac](https://www.virustotal.com/gui/file/b994110f069d197222508a724d8afdac) |
 | SHA1               | [47df454cb030c1f4f7002d46b1308a32b03148e7](https://www.virustotal.com/gui/file/47df454cb030c1f4f7002d46b1308a32b03148e7) |
 | SHA256             | [dd2c1aa4e14c825f3715891bfa2b6264650a794f366d5f73ed1ef1d79ff0dbf9](https://www.virustotal.com/gui/file/dd2c1aa4e14c825f3715891bfa2b6264650a794f366d5f73ed1ef1d79ff0dbf9) |
@@ -1509,7 +1598,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1525,7 +1617,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1541,7 +1636,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1557,7 +1655,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1573,7 +1674,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1606,7 +1710,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [4b194021d6bd6650cbd1aed9370b2329](https://www.virustotal.com/gui/file/4b194021d6bd6650cbd1aed9370b2329) |
 | SHA1               | [c8a4a64b412fd8ef079661db4a4a7cd7394514ca](https://www.virustotal.com/gui/file/c8a4a64b412fd8ef079661db4a4a7cd7394514ca) |
 | SHA256             | [96df0b01eeba3e6e50759d400df380db27f0d0e34812d0374d22ac1758230452](https://www.virustotal.com/gui/file/96df0b01eeba3e6e50759d400df380db27f0d0e34812d0374d22ac1758230452) |
@@ -1738,7 +1842,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1754,7 +1861,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1770,7 +1880,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1786,7 +1899,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1802,7 +1918,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1835,7 +1954,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-03-10 23:32:06 |
+| Creation Timestamp           | 2013-03-11 01:32:06 |
 | MD5                | [6b16512bffe88146a7915f749bd81641](https://www.virustotal.com/gui/file/6b16512bffe88146a7915f749bd81641) |
 | SHA1               | [fad014ec98529644b5db5388d96bc4f9b77dcdc3](https://www.virustotal.com/gui/file/fad014ec98529644b5db5388d96bc4f9b77dcdc3) |
 | SHA256             | [5fe5a6f88fbbc85be9efe81204eee11dff1a683b426019d330b1276a3b5424f4](https://www.virustotal.com/gui/file/5fe5a6f88fbbc85be9efe81204eee11dff1a683b426019d330b1276a3b5424f4) |
@@ -1968,7 +2087,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1984,7 +2106,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2000,7 +2125,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2016,7 +2144,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2032,7 +2163,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2065,7 +2199,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [0be80db5d9368fdb29fe9d9bfdd02e7c](https://www.virustotal.com/gui/file/0be80db5d9368fdb29fe9d9bfdd02e7c) |
 | SHA1               | [6cc28df318a9420b49a252d6e8aaeda0330dc67d](https://www.virustotal.com/gui/file/6cc28df318a9420b49a252d6e8aaeda0330dc67d) |
 | SHA256             | [5de78cf5f0b1b09e7145db84e91a2223c3ed4d83cceb3ef073c068cf88b9d444](https://www.virustotal.com/gui/file/5de78cf5f0b1b09e7145db84e91a2223c3ed4d83cceb3ef073c068cf88b9d444) |
@@ -2123,7 +2257,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2139,7 +2276,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2155,7 +2295,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2171,7 +2314,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2187,7 +2333,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2220,7 +2369,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [61e8367fb57297a949c9a80c2e0e5a38](https://www.virustotal.com/gui/file/61e8367fb57297a949c9a80c2e0e5a38) |
 | SHA1               | [a37616f0575a683bd81a0f49fadbbc87e1525eba](https://www.virustotal.com/gui/file/a37616f0575a683bd81a0f49fadbbc87e1525eba) |
 | SHA256             | [d3eaf041ce5f3fd59885ead2cb4ce5c61ac9d83d41f626512942a50e3da7b75a](https://www.virustotal.com/gui/file/d3eaf041ce5f3fd59885ead2cb4ce5c61ac9d83d41f626512942a50e3da7b75a) |
@@ -2352,7 +2501,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2368,7 +2520,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2384,7 +2539,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2400,7 +2558,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2416,7 +2577,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2449,7 +2613,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [98583b2f2efe12d2a167217a3838c498](https://www.virustotal.com/gui/file/98583b2f2efe12d2a167217a3838c498) |
 | SHA1               | [8f266edf9f536c7fc5bb3797a1cf9039fde8e97c](https://www.virustotal.com/gui/file/8f266edf9f536c7fc5bb3797a1cf9039fde8e97c) |
 | SHA256             | [5ab48bf8c099611b217cc9f78af2f92e9aaeedf1cea4c95d5dd562f51e9f0d09](https://www.virustotal.com/gui/file/5ab48bf8c099611b217cc9f78af2f92e9aaeedf1cea4c95d5dd562f51e9f0d09) |
@@ -2581,7 +2745,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2597,7 +2764,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2613,7 +2783,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2629,7 +2802,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2645,7 +2821,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2678,7 +2857,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2011-09-06 06:24:50 |
+| Creation Timestamp           | 2011-09-06 08:24:50 |
 | MD5                | [dca1c62c793f84bb2d8e41ca50efbff1](https://www.virustotal.com/gui/file/dca1c62c793f84bb2d8e41ca50efbff1) |
 | SHA1               | [7cf7644e38746c9be4537b395285888d5572ae1b](https://www.virustotal.com/gui/file/7cf7644e38746c9be4537b395285888d5572ae1b) |
 | SHA256             | [fded693528f7e6ac1af253e0bd2726607308fdaa904f1e7242ed44e1c0b29ae8](https://www.virustotal.com/gui/file/fded693528f7e6ac1af253e0bd2726607308fdaa904f1e7242ed44e1c0b29ae8) |
@@ -2811,7 +2990,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2827,7 +3009,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2843,7 +3028,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2859,7 +3047,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2875,7 +3066,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2908,7 +3102,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2015-04-24 01:01:47 |
+| Creation Timestamp           | 2015-04-24 03:01:47 |
 | MD5                | [027e10a5048b135862d638b9085d1402](https://www.virustotal.com/gui/file/027e10a5048b135862d638b9085d1402) |
 | SHA1               | [a528cdeed550844ca7d31c9e231a700b4185d0da](https://www.virustotal.com/gui/file/a528cdeed550844ca7d31c9e231a700b4185d0da) |
 | SHA256             | [bac1cd96ba242cdf29f8feac501110739f1524f0db1c8fcad59409e77b8928ba](https://www.virustotal.com/gui/file/bac1cd96ba242cdf29f8feac501110739f1524f0db1c8fcad59409e77b8928ba) |
@@ -3043,7 +3237,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3059,7 +3256,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3075,7 +3275,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3091,7 +3294,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3107,7 +3313,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3140,7 +3349,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [592065b29131af32aa18a9e546be9617](https://www.virustotal.com/gui/file/592065b29131af32aa18a9e546be9617) |
 | SHA1               | [079627e0f5b1ad1fb3fe64038a09bc6e8b8d289d](https://www.virustotal.com/gui/file/079627e0f5b1ad1fb3fe64038a09bc6e8b8d289d) |
 | SHA256             | [f9bc6b2d5822c5b3a7b1023adceb25b47b41e664347860be4603ee81b644590e](https://www.virustotal.com/gui/file/f9bc6b2d5822c5b3a7b1023adceb25b47b41e664347860be4603ee81b644590e) |
@@ -3198,7 +3407,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3214,7 +3426,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3230,7 +3445,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3246,7 +3464,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3262,7 +3483,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3295,7 +3519,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [ada5f19423f91795c0372ff39d745acf](https://www.virustotal.com/gui/file/ada5f19423f91795c0372ff39d745acf) |
 | SHA1               | [dd893cd3520b2015790f7f48023d833f8fe81374](https://www.virustotal.com/gui/file/dd893cd3520b2015790f7f48023d833f8fe81374) |
 | SHA256             | [613d6cc154586c21b330018142a89eac4504e185f0be7f86af975e5b6c046c55](https://www.virustotal.com/gui/file/613d6cc154586c21b330018142a89eac4504e185f0be7f86af975e5b6c046c55) |
@@ -3427,7 +3651,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3443,7 +3670,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3459,7 +3689,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3475,7 +3708,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3491,7 +3727,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3524,7 +3763,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [8a108158431e9a7d08e330fd7a46d175](https://www.virustotal.com/gui/file/8a108158431e9a7d08e330fd7a46d175) |
 | SHA1               | [27aa3f1b4baccd70d95ea75a0a3e54e735728aa2](https://www.virustotal.com/gui/file/27aa3f1b4baccd70d95ea75a0a3e54e735728aa2) |
 | SHA256             | [0e10d3c73596e359462dc6bfcb886768486ff59e158f0f872d23c5e9a2f7c168](https://www.virustotal.com/gui/file/0e10d3c73596e359462dc6bfcb886768486ff59e158f0f872d23c5e9a2f7c168) |
@@ -3656,7 +3895,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3672,7 +3914,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3688,7 +3933,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3704,7 +3952,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3720,7 +3971,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3753,7 +4007,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [c475c7d0f2d934f150b6c32c01479134](https://www.virustotal.com/gui/file/c475c7d0f2d934f150b6c32c01479134) |
 | SHA1               | [2739c2cfa8306e6f78c335c55639566b3d450644](https://www.virustotal.com/gui/file/2739c2cfa8306e6f78c335c55639566b3d450644) |
 | SHA256             | [54bf602a6f1baaec5809a630a5c33f76f1c3147e4b05cecf17b96a93b1d41dca](https://www.virustotal.com/gui/file/54bf602a6f1baaec5809a630a5c33f76f1c3147e4b05cecf17b96a93b1d41dca) |
@@ -3885,7 +4139,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3901,7 +4158,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3917,7 +4177,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3933,7 +4196,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3949,7 +4215,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3982,7 +4251,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [79b8119b012352d255961e76605567d6](https://www.virustotal.com/gui/file/79b8119b012352d255961e76605567d6) |
 | SHA1               | [ea63567ea8d168cb6e9aae705b80a09f927b2f77](https://www.virustotal.com/gui/file/ea63567ea8d168cb6e9aae705b80a09f927b2f77) |
 | SHA256             | [7149fbd191d7e4941a32a3118ab017426b551d5d369f20c94c4f36ae4ef54f26](https://www.virustotal.com/gui/file/7149fbd191d7e4941a32a3118ab017426b551d5d369f20c94c4f36ae4ef54f26) |
@@ -4114,7 +4383,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4130,7 +4402,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4146,7 +4421,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4162,7 +4440,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4178,7 +4459,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4211,7 +4495,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [6fb3d42a4f07d8115d59eb2ea6504de5](https://www.virustotal.com/gui/file/6fb3d42a4f07d8115d59eb2ea6504de5) |
 | SHA1               | [f56186b6a7aa3dd7832c9d821f9d2d93bc2a9360](https://www.virustotal.com/gui/file/f56186b6a7aa3dd7832c9d821f9d2d93bc2a9360) |
 | SHA256             | [67e9d1f6f7ed58d86b025d3578cb7a3f3c389b9dd425b7f46bb1056e83bffc78](https://www.virustotal.com/gui/file/67e9d1f6f7ed58d86b025d3578cb7a3f3c389b9dd425b7f46bb1056e83bffc78) |
@@ -4357,7 +4641,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4373,7 +4660,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4389,7 +4679,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4405,7 +4698,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4421,7 +4717,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4454,7 +4753,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [700e9902b0a28979724582f116288bad](https://www.virustotal.com/gui/file/700e9902b0a28979724582f116288bad) |
 | SHA1               | [38a863bcd37c9c56d53274753d5b0e614ba6c8bb](https://www.virustotal.com/gui/file/38a863bcd37c9c56d53274753d5b0e614ba6c8bb) |
 | SHA256             | [f48f31bf9c6abbd44124b66bce2ab1200176e31ef1e901733761f2b5ceb60fb2](https://www.virustotal.com/gui/file/f48f31bf9c6abbd44124b66bce2ab1200176e31ef1e901733761f2b5ceb60fb2) |
@@ -4600,7 +4899,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4616,7 +4918,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4632,7 +4937,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4648,7 +4956,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4664,7 +4975,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4697,7 +5011,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2011-09-06 06:24:50 |
+| Creation Timestamp           | 2011-09-06 08:24:50 |
 | MD5                | [ef5ba21690c2f4ba7e62bf022b2df1f7](https://www.virustotal.com/gui/file/ef5ba21690c2f4ba7e62bf022b2df1f7) |
 | SHA1               | [dd49a71f158c879fb8d607cc558b507c7c8bc5b9](https://www.virustotal.com/gui/file/dd49a71f158c879fb8d607cc558b507c7c8bc5b9) |
 | SHA256             | [c181ce9a57e8d763db89ba7c45702a8cf66ef1bb58e3f21874cf0265711f886b](https://www.virustotal.com/gui/file/c181ce9a57e8d763db89ba7c45702a8cf66ef1bb58e3f21874cf0265711f886b) |
@@ -4830,7 +5144,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4846,7 +5163,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4862,7 +5182,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4878,7 +5201,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4894,7 +5220,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4927,7 +5256,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [d6cc5709aca6a6b868962a6506d48abc](https://www.virustotal.com/gui/file/d6cc5709aca6a6b868962a6506d48abc) |
 | SHA1               | [c0568bcdf57db1fa43cdee5a2a12b768a0064622](https://www.virustotal.com/gui/file/c0568bcdf57db1fa43cdee5a2a12b768a0064622) |
 | SHA256             | [ad0309c2d225d8540a47250e3773876e05ce6a47a7767511e2f68645562c0686](https://www.virustotal.com/gui/file/ad0309c2d225d8540a47250e3773876e05ce6a47a7767511e2f68645562c0686) |
@@ -5073,7 +5402,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5089,7 +5421,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5105,7 +5440,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5121,7 +5459,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5137,7 +5478,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5170,7 +5514,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [adc1e141b57505fd011bc1efb1ae6967](https://www.virustotal.com/gui/file/adc1e141b57505fd011bc1efb1ae6967) |
 | SHA1               | [d28b604b9bb608979cc0eab1e9e93e11c721aa3d](https://www.virustotal.com/gui/file/d28b604b9bb608979cc0eab1e9e93e11c721aa3d) |
 | SHA256             | [1c425793a8ce87be916969d6d7e9dd0687b181565c3b483ce53ad1ec6fb72a17](https://www.virustotal.com/gui/file/1c425793a8ce87be916969d6d7e9dd0687b181565c3b483ce53ad1ec6fb72a17) |
@@ -5302,7 +5646,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5318,7 +5665,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5334,7 +5684,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5350,7 +5703,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5366,7 +5722,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5399,7 +5758,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [2e887e52e45bba3c47ccd0e75fc5266f](https://www.virustotal.com/gui/file/2e887e52e45bba3c47ccd0e75fc5266f) |
 | SHA1               | [022f7aa4d0f04d594588ae9fa65c90bcc4bda833](https://www.virustotal.com/gui/file/022f7aa4d0f04d594588ae9fa65c90bcc4bda833) |
 | SHA256             | [d21aba58222930cb75946a0fb72b4adc96de583d3f7d8dc13829b804eb877257](https://www.virustotal.com/gui/file/d21aba58222930cb75946a0fb72b4adc96de583d3f7d8dc13829b804eb877257) |
@@ -5545,7 +5904,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5561,7 +5923,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5577,7 +5942,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5593,7 +5961,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5609,7 +5980,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5642,7 +6016,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2011-09-06 06:24:50 |
+| Creation Timestamp           | 2011-09-06 08:24:50 |
 | MD5                | [7f7b8cde26c4943c9465e412adbb790f](https://www.virustotal.com/gui/file/7f7b8cde26c4943c9465e412adbb790f) |
 | SHA1               | [879e92a7427bdbcc051a18bbb3727ac68154e825](https://www.virustotal.com/gui/file/879e92a7427bdbcc051a18bbb3727ac68154e825) |
 | SHA256             | [08828990218ebb4415c1bb33fa2b0a009efd0784b18b3f7ecd3bc078343f7208](https://www.virustotal.com/gui/file/08828990218ebb4415c1bb33fa2b0a009efd0784b18b3f7ecd3bc078343f7208) |
@@ -5775,7 +6149,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5791,7 +6168,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5807,7 +6187,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5823,7 +6206,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5839,7 +6225,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5872,7 +6261,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2016-09-30 06:03:17 |
+| Creation Timestamp           | 2016-09-30 08:03:17 |
 | MD5                | [86635fdc8e28957e6c01fc483fe7b020](https://www.virustotal.com/gui/file/86635fdc8e28957e6c01fc483fe7b020) |
 | SHA1               | [089411e052ea17d66033155f77ae683c50147018](https://www.virustotal.com/gui/file/089411e052ea17d66033155f77ae683c50147018) |
 | SHA256             | [1cedd5815bb6e20d3697103cfc0275f5015f469e6007e8cac16892c97731c695](https://www.virustotal.com/gui/file/1cedd5815bb6e20d3697103cfc0275f5015f469e6007e8cac16892c97731c695) |
@@ -6007,7 +6396,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6023,7 +6415,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6039,7 +6434,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6055,7 +6453,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6071,7 +6472,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6104,7 +6508,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2015-04-24 01:01:47 |
+| Creation Timestamp           | 2015-04-24 03:01:47 |
 | MD5                | [e6ea0e8d2edcc6cad3c414a889d17ac4](https://www.virustotal.com/gui/file/e6ea0e8d2edcc6cad3c414a889d17ac4) |
 | SHA1               | [9db1585c0fab6a9feb411c39267ac4ad29171696](https://www.virustotal.com/gui/file/9db1585c0fab6a9feb411c39267ac4ad29171696) |
 | SHA256             | [a0dd3d43ab891777b11d4fdcb3b7f246b80bc66d12f7810cf268a5f6f4f8eb7b](https://www.virustotal.com/gui/file/a0dd3d43ab891777b11d4fdcb3b7f246b80bc66d12f7810cf268a5f6f4f8eb7b) |
@@ -6239,7 +6643,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6255,7 +6662,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6271,7 +6681,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6287,7 +6700,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6303,7 +6719,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6336,7 +6755,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-03-10 23:32:06 |
+| Creation Timestamp           | 2013-03-11 01:32:06 |
 | MD5                | [0d992b69029d1f23a872ff5a3352fb5b](https://www.virustotal.com/gui/file/0d992b69029d1f23a872ff5a3352fb5b) |
 | SHA1               | [b5dfa3396136236cc9a5c91f06514fa717508ef5](https://www.virustotal.com/gui/file/b5dfa3396136236cc9a5c91f06514fa717508ef5) |
 | SHA256             | [0aca4447ee54d635f76b941f6100b829dc8b2e0df27bdf584acb90f15f12fbda](https://www.virustotal.com/gui/file/0aca4447ee54d635f76b941f6100b829dc8b2e0df27bdf584acb90f15f12fbda) |
@@ -6469,7 +6888,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6485,7 +6907,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6501,7 +6926,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6517,7 +6945,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6533,7 +6964,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6566,7 +7000,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-03-10 23:32:06 |
+| Creation Timestamp           | 2013-03-11 01:32:06 |
 | MD5                | [b418293e25632c5f377bf034bb450e57](https://www.virustotal.com/gui/file/b418293e25632c5f377bf034bb450e57) |
 | SHA1               | [22c905fcdd7964726b4be5e8b5a9781322687a45](https://www.virustotal.com/gui/file/22c905fcdd7964726b4be5e8b5a9781322687a45) |
 | SHA256             | [63af3fdb1e85949c8adccb43f09ca4556ae258b363a99ae599e1e834d34c8670](https://www.virustotal.com/gui/file/63af3fdb1e85949c8adccb43f09ca4556ae258b363a99ae599e1e834d34c8670) |
@@ -6699,7 +7133,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6715,7 +7152,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6731,7 +7171,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6747,7 +7190,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6763,7 +7209,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6796,7 +7245,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [f4b2580cf0477493908b7ed81e4482f8](https://www.virustotal.com/gui/file/f4b2580cf0477493908b7ed81e4482f8) |
 | SHA1               | [57cc324326ab6c4239f8c10d2d1ce8862b2ce4d5](https://www.virustotal.com/gui/file/57cc324326ab6c4239f8c10d2d1ce8862b2ce4d5) |
 | SHA256             | [d7a61c671eab1dfaa62fe1088a85f6d52fb11f2f32a53822a49521ca2c16585e](https://www.virustotal.com/gui/file/d7a61c671eab1dfaa62fe1088a85f6d52fb11f2f32a53822a49521ca2c16585e) |
@@ -6942,7 +7391,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6958,7 +7410,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6974,7 +7429,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6990,7 +7448,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7006,7 +7467,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7039,7 +7503,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [bc5366760098dc14ec00ae36c359f42b](https://www.virustotal.com/gui/file/bc5366760098dc14ec00ae36c359f42b) |
 | SHA1               | [ba3faca988ff56f4850dede2587d5a3eff7c6677](https://www.virustotal.com/gui/file/ba3faca988ff56f4850dede2587d5a3eff7c6677) |
 | SHA256             | [a10b4ed33a13c08804da8b46fd1b7bd653a6f2bb65668e82086de1940c5bb5d1](https://www.virustotal.com/gui/file/a10b4ed33a13c08804da8b46fd1b7bd653a6f2bb65668e82086de1940c5bb5d1) |
@@ -7171,7 +7635,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7187,7 +7654,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7203,7 +7673,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7219,7 +7692,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7235,7 +7711,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7268,7 +7747,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [7c40ec9ed020cc9404de8fe3a5361a09](https://www.virustotal.com/gui/file/7c40ec9ed020cc9404de8fe3a5361a09) |
 | SHA1               | [3d3b42d7b0af68da01019274e341b03d7c54f752](https://www.virustotal.com/gui/file/3d3b42d7b0af68da01019274e341b03d7c54f752) |
 | SHA256             | [e6a2b1937fa277526a1e0ca9f9b32f85ab9cb7cb1a32250dd9c607e93fc2924f](https://www.virustotal.com/gui/file/e6a2b1937fa277526a1e0ca9f9b32f85ab9cb7cb1a32250dd9c607e93fc2924f) |
@@ -7400,7 +7879,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7416,7 +7898,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7432,7 +7917,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7448,7 +7936,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7464,7 +7955,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7497,7 +7991,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [b971b79bdca77e8755e615909a1c7a9f](https://www.virustotal.com/gui/file/b971b79bdca77e8755e615909a1c7a9f) |
 | SHA1               | [398e8209e5c5fdcb6c287c5f9561e91887caca7d](https://www.virustotal.com/gui/file/398e8209e5c5fdcb6c287c5f9561e91887caca7d) |
 | SHA256             | [5da0ffe33987f8d5fb9c151f0eff29b99f42233b27efcad596add27bdc5c88ff](https://www.virustotal.com/gui/file/5da0ffe33987f8d5fb9c151f0eff29b99f42233b27efcad596add27bdc5c88ff) |
@@ -7629,7 +8123,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7645,7 +8142,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7661,7 +8161,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7677,7 +8180,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7693,7 +8199,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7726,7 +8235,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-03-10 23:32:06 |
+| Creation Timestamp           | 2013-03-11 01:32:06 |
 | MD5                | [96c850e53caca0469e1c4604e6c1aad1](https://www.virustotal.com/gui/file/96c850e53caca0469e1c4604e6c1aad1) |
 | SHA1               | [dbf3abdc85d6a0801c4af4cd1b77c44d5f57b03e](https://www.virustotal.com/gui/file/dbf3abdc85d6a0801c4af4cd1b77c44d5f57b03e) |
 | SHA256             | [4eb1b9f3fe3c79f20c9cdeba92f6d6eb9b9ed15b546851e1f5338c0b7d36364b](https://www.virustotal.com/gui/file/4eb1b9f3fe3c79f20c9cdeba92f6d6eb9b9ed15b546851e1f5338c0b7d36364b) |
@@ -7873,7 +8382,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7889,7 +8401,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7905,7 +8420,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7921,7 +8439,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7937,7 +8458,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7970,7 +8494,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [cb22776d06f1e81cc87faeb0245acde8](https://www.virustotal.com/gui/file/cb22776d06f1e81cc87faeb0245acde8) |
 | SHA1               | [8347487b32b993da87275e3d44ff3683c8130d33](https://www.virustotal.com/gui/file/8347487b32b993da87275e3d44ff3683c8130d33) |
 | SHA256             | [a6c05b10a5c090b743a61fa225b09e390e2dd2bd6cb4fd96b987f1e0d3f2124a](https://www.virustotal.com/gui/file/a6c05b10a5c090b743a61fa225b09e390e2dd2bd6cb4fd96b987f1e0d3f2124a) |
@@ -8102,7 +8626,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8118,7 +8645,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8134,7 +8664,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8150,7 +8683,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8166,7 +8702,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8199,7 +8738,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-03-10 23:32:06 |
+| Creation Timestamp           | 2013-03-11 01:32:06 |
 | MD5                | [1440c0da81c700bd61142bc569477d81](https://www.virustotal.com/gui/file/1440c0da81c700bd61142bc569477d81) |
 | SHA1               | [4a2bb97d395634b67194856d79a1ee5209aa06a7](https://www.virustotal.com/gui/file/4a2bb97d395634b67194856d79a1ee5209aa06a7) |
 | SHA256             | [7fc01f25c4c18a6c539cda38fdbf34b2ff02a15ffd1d93a7215e1f48f76fb3be](https://www.virustotal.com/gui/file/7fc01f25c4c18a6c539cda38fdbf34b2ff02a15ffd1d93a7215e1f48f76fb3be) |
@@ -8346,7 +8885,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8362,7 +8904,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8378,7 +8923,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8394,7 +8942,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8410,7 +8961,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8443,7 +8997,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
+| Creation Timestamp           | 2005-05-25 02:39:12 |
 | MD5                | [70c2c29643ee1edd3bbcd2ef1ffc9a73](https://www.virustotal.com/gui/file/70c2c29643ee1edd3bbcd2ef1ffc9a73) |
 | SHA1               | [62244c704b0f227444d3a515ea0dc1003418a028](https://www.virustotal.com/gui/file/62244c704b0f227444d3a515ea0dc1003418a028) |
 | SHA256             | [67cd6166d791bdf74453e19c015b2cb1e85e41892c04580034b65f9f03fe2e79](https://www.virustotal.com/gui/file/67cd6166d791bdf74453e19c015b2cb1e85e41892c04580034b65f9f03fe2e79) |
@@ -8575,7 +9129,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8591,7 +9148,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8607,7 +9167,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8623,7 +9186,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8639,7 +9205,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8672,7 +9241,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2015-04-24 01:01:47 |
+| Creation Timestamp           | 2015-04-24 03:01:47 |
 | MD5                | [ddb7da975d90b2a9c9c58e1af55f0285](https://www.virustotal.com/gui/file/ddb7da975d90b2a9c9c58e1af55f0285) |
 | SHA1               | [977fd907b6a2509019d8ef4f6213039f2523f2b5](https://www.virustotal.com/gui/file/977fd907b6a2509019d8ef4f6213039f2523f2b5) |
 | SHA256             | [d9a3dc47699949c8ec0c704346fb2ee86ff9010daa0dbac953cfa5f76b52fcd1](https://www.virustotal.com/gui/file/d9a3dc47699949c8ec0c704346fb2ee86ff9010daa0dbac953cfa5f76b52fcd1) |
@@ -8807,7 +9376,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8823,7 +9395,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8839,7 +9414,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8855,7 +9433,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8871,7 +9452,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -8904,7 +9488,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2016-09-30 06:03:17 |
+| Creation Timestamp           | 2016-09-30 08:03:17 |
 | MD5                | [72acbdd8fac58b71b301980eab3ebfc8](https://www.virustotal.com/gui/file/72acbdd8fac58b71b301980eab3ebfc8) |
 | SHA1               | [d57c732050d7160161e096a8b238cb05d89d1bb2](https://www.virustotal.com/gui/file/d57c732050d7160161e096a8b238cb05d89d1bb2) |
 | SHA256             | [11208bbba148736309a8d2a4ab9ab6b8f22f2297547b100d8bdfd7d413fe98b2](https://www.virustotal.com/gui/file/11208bbba148736309a8d2a4ab9ab6b8f22f2297547b100d8bdfd7d413fe98b2) |
@@ -9039,7 +9623,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9055,7 +9642,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9071,7 +9661,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9087,7 +9680,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9103,7 +9699,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9136,7 +9735,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-03-10 23:32:06 |
+| Creation Timestamp           | 2013-03-11 01:32:06 |
 | MD5                | [260eef181a9bf2849bfec54c1736613b](https://www.virustotal.com/gui/file/260eef181a9bf2849bfec54c1736613b) |
 | SHA1               | [0f78974194b604122b1cd4e82768155f946f6d24](https://www.virustotal.com/gui/file/0f78974194b604122b1cd4e82768155f946f6d24) |
 | SHA256             | [b749566057dee0439f54b0d38935e5939b5cb011c46d7022530f748ebc63efe5](https://www.virustotal.com/gui/file/b749566057dee0439f54b0d38935e5939b5cb011c46d7022530f748ebc63efe5) |
@@ -9269,7 +9868,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9285,7 +9887,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9301,7 +9906,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9317,7 +9925,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9333,7 +9944,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9366,7 +9980,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2011-09-06 06:24:50 |
+| Creation Timestamp           | 2011-09-06 08:24:50 |
 | MD5                | [aa55dd14064cb808613d09195e3ba749](https://www.virustotal.com/gui/file/aa55dd14064cb808613d09195e3ba749) |
 | SHA1               | [604870e76e55078dfb8055d49ae8565ed6177f7c](https://www.virustotal.com/gui/file/604870e76e55078dfb8055d49ae8565ed6177f7c) |
 | SHA256             | [3ac8e54be2804f5fa60d0d23a11ba323fba078a942c96279425aabad935b8236](https://www.virustotal.com/gui/file/3ac8e54be2804f5fa60d0d23a11ba323fba078a942c96279425aabad935b8236) |
@@ -9499,7 +10113,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9515,7 +10132,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9531,7 +10151,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9547,7 +10170,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9563,7 +10189,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9596,7 +10225,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-03-10 23:32:06 |
+| Creation Timestamp           | 2013-03-11 01:32:06 |
 | MD5                | [710b290a00598fbb1bcc49b30174b2c9](https://www.virustotal.com/gui/file/710b290a00598fbb1bcc49b30174b2c9) |
 | SHA1               | [1e6c2763f97e4275bba581de880124d64666a2fe](https://www.virustotal.com/gui/file/1e6c2763f97e4275bba581de880124d64666a2fe) |
 | SHA256             | [bbbeb5020b58e6942ec7dec0d1d518e95fc12ddae43f54ef0829d3393c6afd63](https://www.virustotal.com/gui/file/bbbeb5020b58e6942ec7dec0d1d518e95fc12ddae43f54ef0829d3393c6afd63) |
@@ -9729,7 +10358,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0400000000012f4ee152d7",
       "Signature": "4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9745,7 +10377,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0400000000012f4ee1355c",
       "Signature": "225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9761,7 +10396,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "1121d699a764973ef1f8427ee919cc534114",
       "Signature": "8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9777,7 +10415,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "112158044863e4dc19cf29a85668b7f45842",
       "Signature": "8c35a5b5d3503f50119ab8f99b07a4bb4b71cafaf983206f744545c2997ae1762032fa2d37f4780cfe83bfa999d7bcbd863dc4a51ff39978160e2e191482ae6d7f08e8ffa337c96d8c2d38ddf476a497265a890c1bbf0dee89b1abd32343889a3757732d205ba06525fa8f6e15005405a53e55cef71ac0b6af3a640e4c8aef5e950ab8a8b5c8bcddb2ade96ad9473a3d860ae16fdbe3362cabfd916da089167d906d378dbf4534f7ffb77d87baba29f8f5bbbd9b4b7c127ac170a270dc7a7272d38fdf3bbadbfb448d47e5dd4d310a588666a0d66762e1b3704b1e00e39739190c02f4b981cf2d27ba07d2472ec320edf29e263f26278995d162102968c999b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9793,7 +10434,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610b7f6b000000000019",
       "Signature": "13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -9826,9 +10470,9 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/e32bc3da-4db1-4858-a62c-6fbe4db6afbd.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/e32bc3da-4db1-4858-a62c-6fbe4db6afbd.yaml)
 
-*last_updated:* 2025-03-26
+*last_updated:* 2026-02-01
 
 {{< /column >}}
 {{< /block >}}

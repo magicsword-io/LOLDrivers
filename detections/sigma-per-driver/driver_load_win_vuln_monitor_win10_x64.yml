@@ -1,0 +1,33 @@
+title: Driver Load - Monitor_win10_x64.sys
+id: 07df4091-39e1-5230-abe0-d846a09bdedc
+status: experimental
+description: |
+    Detects loading of driver Monitor_win10_x64.sys via hash.
+    CVE-2018-16712
+references:
+    - https://www.loldrivers.io/drivers/ca415ed5-b611-4840-bfb2-6e1eacac33d1/
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=988dabdcf990b134b0ac1e00512c30c4'
+            - 'SHA1=ef80da613442047697bec35ea228cde477c09a3d'
+            - 'SHA256=e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb'
+            - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

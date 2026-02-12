@@ -1,0 +1,31 @@
+title: Driver Load - sfdrvx32.sys
+id: 6c06ac1d-3af9-5926-8a1c-a80aa71d38b0
+status: experimental
+description: |
+    Detects loading of driver sfdrvx32.sys via hash.
+    Speed Fan x32 Driver
+references:
+    - https://www.loldrivers.io/drivers/2ada18ae-2c52-49b6-b1a0-cf3b267f6dc7/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9f70cd5edcc4efc48ae21e04fb03be9d'
+            - 'SHA1=42bb38b0b93d83b62fe2604b154ada9314c98df7'
+            - 'SHA256=ad23d77a38655acb71216824e363df8ac41a48a1a0080f35a0d23aa14b54460b'
+            - 'IMPHASH=c3c9e6c0c33bad17eb055ec795fc113e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

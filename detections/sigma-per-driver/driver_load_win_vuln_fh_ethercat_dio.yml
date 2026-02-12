@@ -1,0 +1,35 @@
+title: Driver Load - FH-EtherCAT_DIO.sys
+id: a4214552-98ee-58dd-8e66-6a1dcc08291e
+status: experimental
+description: |
+    Detects loading of driver FH-EtherCAT_DIO.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/f16f82de-1ad0-47d8-a869-2c10ed25d9f1/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5c55fcfe39336de769bfa258ab4c901d'
+            - 'MD5=eb0a8eeb444033ebf9b4b304f114f2c8'
+            - 'SHA1=b8d19cd28788ce4570623a5433b091a5fbd4c26d'
+            - 'SHA1=170a50139f95ad1ec94d51fdd94c1966dbed0e47'
+            - 'SHA256=ae71f40f06edda422efcd16f3a48f5b795b34dd6d9bb19c9c8f2e083f0850eb7'
+            - 'SHA256=8001d7161d662a6f4afb4d17823144e042fd24696d8904380d48065209f28258'
+            - 'IMPHASH=69163e5596280d3319375c9bcd4b5da1'
+            - 'IMPHASH=68a12eb3f32f7e193bd0d722ea6be4ab'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

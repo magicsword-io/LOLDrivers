@@ -1,0 +1,31 @@
+title: Driver Load - SMARTEIO64.SYS
+id: 375032b5-c5b3-5d8e-a7e1-1430dba8440b
+status: experimental
+description: |
+    Detects loading of driver SMARTEIO64.SYS via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/2a7a59c1-35b8-42b6-a560-2fbf4247a584/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=bdd8dc8880dfbc19d729ca51071de288'
+            - 'SHA1=87d2b638e5dfab1e37961d27ca734b83ece02804'
+            - 'SHA256=3c95ebf3f1a87f67d2861dbd1c85dc26c118610af0c9fbf4180428e653ac3e50'
+            - 'IMPHASH=b84820037d6a51ba108e0e81ce01db0b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

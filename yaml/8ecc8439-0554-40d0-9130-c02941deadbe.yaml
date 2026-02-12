@@ -7,738 +7,765 @@ Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create rtportsys binPath= C:\windows\temp\rtportsys.sys type=kernel
-        && sc.exe start rtportsys
-    Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique
-        vulnerable drivers (237 file hashes) accepting firmware access. Six allow
-        kernel memory access. All give full control of the devices to non-admin users.
-        By exploiting the vulnerable drivers, an attacker without the system privilege
-        may erase/alter firmware, and/or elevate privileges. As of the time of writing
-        in October 2023, the filenames of the vulnerable drivers have not been made
-        public until now.
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create rtportsys binPath= C:\windows\temp\rtportsys.sys type=kernel
+    && sc.exe start rtportsys
+  Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable
+    drivers (237 file hashes) accepting firmware access. Six allow kernel memory access.
+    All give full control of the devices to non-admin users. By exploiting the vulnerable
+    drivers, an attacker without the system privilege may erase/alter firmware, and/or
+    elevate privileges. As of the time of writing in October 2023, the filenames of
+    the vulnerable drivers have not been made public until now.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Company: Windows (R) 2003 DDK 3790 provider
-    Date: ''
-    Description: Generic Port I/O for Win32
-    FileVersion: 5.0.2195.1711
-    Filename: ''
-    MD5: 41ce6b172542a9a227e34a45881e1d2a
-    MachineType: I386
-    OriginalFilename: rtport.sys
-    Product: Windows (R) 2003 DDK 3790 provider
-    ProductVersion: 5.0.2195.1711
-    Publisher: ''
-    SHA1: dd2b90c9796237036ac7136a172d96274dea14c8
-    SHA256: 3c0a36990f7eef89b2d5f454b6452b6df1304609903f31f475502e4050241dd8
-    Signature: ''
-    Imphash: 87842ffa59724bda8389394bcaeb5d73
-    Authentihash:
-        MD5: cb185e6027fd0f1bf0e00657aea623a8
-        SHA1: f61d01c700cdd2ad50ae7fd5b1f017a216efb46d
-        SHA256: 31add0358eb679d7c10ac1622403a85891bf764154280a589e71ccd297fc7a16
-    RichPEHeaderHash:
-        MD5: a93b122801093616058ea4fb3bf99573
-        SHA1: f263bee2a167bc0377231b850db3301b1cd022c6
-        SHA256: 77b21b1ef7ae058833c017d1d662b39c455fa6e93f372476bb8fd80ced199c4a
-    Sections:
-        .text:
-            Entropy: 5.81057548117791
-            Virtual Size: '0xc5a'
-        .rdata:
-            Entropy: 4.310767375468368
-            Virtual Size: '0xd5'
-        .data:
-            Entropy: 0.9833557549816874
-            Virtual Size: '0x18'
-        INIT:
-            Entropy: 5.24695617711003
-            Virtual Size: '0x2ea'
-        .rsrc:
-            Entropy: 3.4164766974482492
-            Virtual Size: '0x450'
-        .reloc:
-            Entropy: 4.33595482765136
-            Virtual Size: '0xea'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2005-08-01 03:36:49'
-    InternalName: rtport.sys
-    Copyright: Copyright (C) Microsoft Corp. 2005
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - READ_REGISTER_USHORT
-    - READ_REGISTER_UCHAR
-    - WRITE_REGISTER_ULONG
-    - WRITE_REGISTER_USHORT
-    - READ_REGISTER_ULONG
-    - IoDeleteSymbolicLink
-    - KeTickCount
-    - KeBugCheckEx
-    - MmMapIoSpace
-    - MmUnmapIoSpace
-    - IofCompleteRequest
-    - RtlInitUnicodeString
-    - IoCreateDevice
-    - memset
-    - IoCreateSymbolicLink
-    - WRITE_REGISTER_UCHAR
-    - IoDeleteDevice
-    - WRITE_PORT_UCHAR
-    - WRITE_PORT_USHORT
-    - WRITE_PORT_ULONG
-    - HalGetBusDataByOffset
-    - READ_PORT_UCHAR
-    - READ_PORT_USHORT
-    - READ_PORT_ULONG
-    - HalSetBusDataByOffset
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-            ValidFrom: '2003-12-04 00:00:00'
-            ValidTo: '2013-12-03 23:59:59'
-            Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-            Version: 3
-            TBS:
-                MD5: 518d2ea8a21e879c942d504824ac211c
-                SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-                SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-                SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
-        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
-            ValidFrom: '2003-12-04 00:00:00'
-            ValidTo: '2008-12-03 23:59:59'
-            Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0de92bf0d4d82988183205095e9a7688
-            Version: 3
-            TBS:
-                MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
-                SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
-                SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
-                SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code
-                Signing 2004 CA
-            ValidFrom: '2004-07-16 00:00:00'
-            ValidTo: '2014-07-15 23:59:59'
-            Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 4191a15a3978dfcf496566381d4c75c2
-            Version: 3
-            TBS:
-                MD5: 41011f8d0e7c7a6408334ca387914c61
-                SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
-                SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
-                SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
-        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
-                Authority
-            ValidFrom: '2006-05-23 17:01:29'
-            ValidTo: '2016-05-23 17:11:29'
-            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 610c120600000000001b
-            Version: 3
-            TBS:
-                MD5: 53c41bc1164e09e0cd1617a5bf913efd
-                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-        -   Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
-                ID Class 3 , Microsoft Software Validation v2, OU=RTCN, CN=Realtek
-                Semiconductor Corp
-            ValidFrom: '2006-05-20 00:00:00'
-            ValidTo: '2007-06-12 23:59:59'
-            Signature: bc3a69c57e45345a7cd678527d54cd8e4503514aa700e44bd47c4103dd810c1ed274eae1e2b7fec81837c7dd08bb2dd97994ecb77f03c7b839a395483a5f4b84b84435d836a5ec1f8fbc122d1049c4fd6d50957709611bd2c73606a116198aa5c3e1dd99369c2600113325dd16cc20d4b69b0ec465a11114888001a2375b115d6f4beb214875a52cee652f1dc4673cb69fa8721d07984a8befbe3873bcb7ec38cc30e18fc10e4b17843e5480ec6bd10805628efb6b17b9490c0b138aa9b3310829f8cc8c655be98e052c9e48c710362207eede03981c3fb91c63c02a1ae8ff5470ea3d5e278627fc000f935164bda45f7b8cba77eb5bc8fcb1d8fe10a404fea2
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 042f5c7333af1e4a87e231eccedb269e
-            Version: 3
-            TBS:
-                MD5: a8a4ba9fa58f073453b57664f7ebfc31
-                SHA1: 0fc0164d109c25e0dcdd95495085900e2fcd0f95
-                SHA256: 401d7f2783fa2d98821b6e47f1fb7aac1422cfa1c7621234b812a3c1e4b2d45d
-                SHA384: d89eaa06d7de2a3f6cb2292697070067e58dfca68fc2592738240e688505ace0e4b4331775babcf69b36d1a8a81a805d
-        Signer:
-        -   SerialNumber: 042f5c7333af1e4a87e231eccedb269e
-            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code
-                Signing 2004 CA
-            Version: 1
-    LoadsDespiteHVCI: 'FALSE'
--   Company: Windows (R) 2000 DDK provider
-    Date: ''
-    Description: Generic Port I/O
-    FileVersion: 5.00.2195.1620
-    Filename: ''
-    MD5: 782f165b1d2db23f78e82fee0127cc14
-    MachineType: I386
-    OriginalFilename: rtport.sys
-    Product: Windows (R) 2000 DDK driver
-    ProductVersion: 5.00.2195.1620
-    Publisher: ''
-    SHA1: 717669a1e2380cb61cc4e34618e118cc9cabbcd0
-    SHA256: 6f806a9de79ac2886613c20758546f7e9597db5a20744f7dd82d310b7d6457d0
-    Signature: ''
-    Imphash: 8b41eacbfbe5f5348579e27d30767e74
-    Authentihash:
-        MD5: 8bbc2897655f0b6a7d0efae5826e6da2
-        SHA1: f22a85998893776f55fad2fbec28cf18faca4322
-        SHA256: 7801aa20b87b815481f88f7369c5a6f59dca356a3674ce38ad7ebede43b94365
-    RichPEHeaderHash:
-        MD5: 72e6be525c0e5cfe3d35b914a5297b20
-        SHA1: 2ffd414097e1c5d7ff411de4282156dcc56debfb
-        SHA256: e751caf2de0700ea8773c18415cabbb9d1b29fe3766752813adea89d69d1cc75
-    Sections:
-        .text:
-            Entropy: 6.138937737987914
-            Virtual Size: '0x55b'
-        .rdata:
-            Entropy: 2.339209208802996
-            Virtual Size: '0xa4'
-        .data:
-            Entropy: -0.0
-            Virtual Size: '0x1'
-        INIT:
-            Entropy: 4.911897101597002
-            Virtual Size: '0x1be'
-        .rsrc:
-            Entropy: 3.4101388576278246
-            Virtual Size: '0x3b0'
-        .reloc:
-            Entropy: 3.686715655862542
-            Virtual Size: '0x62'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2002-04-22 10:54:09'
-    InternalName: rtport.sys
-    Copyright: Copyright (C) Microsoft Corp. 1981-1999
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoDeleteSymbolicLink
-    - RtlInitUnicodeString
-    - MmUnmapIoSpace
-    - IofCompleteRequest
-    - IoDeleteDevice
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - READ_PORT_UCHAR
-    - READ_PORT_USHORT
-    - HalSetBusData
-    - WRITE_PORT_ULONG
-    - WRITE_PORT_UCHAR
-    - HalGetBusData
-    - READ_PORT_ULONG
-    - WRITE_PORT_USHORT
-    Signatures: {}
-    LoadsDespiteHVCI: 'TRUE'
--   Company: Windows (R) 2003 DDK 3790 provider
-    Date: ''
-    Description: Generic Port I/O for Win64
-    FileVersion: 5.0.2195.1711
-    Filename: ''
-    MD5: 4ca0dba9e224473d664c25e411f5a3bd
-    MachineType: AMD64
-    OriginalFilename: rtport.sys
-    Product: Windows (R) 2003 DDK 3790 provider
-    ProductVersion: 5.0.2195.1711
-    Publisher: ''
-    SHA1: c22dc62e10378191840285814838fe9ed1af55d7
-    SHA256: 71423a66165782efb4db7be6ce48ddb463d9f65fd0f266d333a6558791d158e5
-    Signature: ''
-    Imphash: 0f3ddbe229201f6fa9a3dbbaf842a556
-    Authentihash:
-        MD5: 7712f7c4cc208b66d3cbc726b490b167
-        SHA1: c613b7797a6c1f31271f8f5dced8515d8e4f5732
-        SHA256: 489c02d8102fc401010793d7388b59dc944a2e77cf4179424015cd863701b19b
-    RichPEHeaderHash:
-        MD5: acf8ea66ce39d933aaa355fab4e53b92
-        SHA1: ffbe48da20152db08e7ee2c56005994d4ebb7c16
-        SHA256: 63f29b4cdfe8b5a4579f99f31fcdb035f104e7cc491c0330354b751d216fe338
-    Sections:
-        .text:
-            Entropy: 5.296431755002034
-            Virtual Size: '0xf56'
-        .rdata:
-            Entropy: 3.940422250794907
-            Virtual Size: '0x110'
-        .data:
-            Entropy: 0.0
-            Virtual Size: '0x10'
-        .pdata:
-            Entropy: 3.0907173430310837
-            Virtual Size: '0x54'
-        INIT:
-            Entropy: 4.27593242579279
-            Virtual Size: '0x1a2'
-        .rsrc:
-            Entropy: 3.419986029858509
-            Virtual Size: '0x450'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2005-08-01 03:36:00'
-    InternalName: rtport.sys
-    Copyright: Copyright (C) Microsoft Corp. 2005
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoCreateDevice
-    - RtlInitUnicodeString
-    - IofCompleteRequest
-    - RtlZeroMemory
-    - MmMapIoSpace
-    - IoDeleteSymbolicLink
-    - IoCreateSymbolicLink
-    - MmUnmapIoSpace
-    - IoDeleteDevice
-    - HalGetBusDataByOffset
-    - HalSetBusDataByOffset
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-            ValidFrom: '2003-12-04 00:00:00'
-            ValidTo: '2013-12-03 23:59:59'
-            Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-            Version: 3
-            TBS:
-                MD5: 518d2ea8a21e879c942d504824ac211c
-                SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-                SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-                SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
-        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
-            ValidFrom: '2003-12-04 00:00:00'
-            ValidTo: '2008-12-03 23:59:59'
-            Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0de92bf0d4d82988183205095e9a7688
-            Version: 3
-            TBS:
-                MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
-                SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
-                SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
-                SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code
-                Signing 2004 CA
-            ValidFrom: '2004-07-16 00:00:00'
-            ValidTo: '2014-07-15 23:59:59'
-            Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 4191a15a3978dfcf496566381d4c75c2
-            Version: 3
-            TBS:
-                MD5: 41011f8d0e7c7a6408334ca387914c61
-                SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
-                SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
-                SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
-        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
-                Authority
-            ValidFrom: '2006-05-23 17:01:29'
-            ValidTo: '2016-05-23 17:11:29'
-            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 610c120600000000001b
-            Version: 3
-            TBS:
-                MD5: 53c41bc1164e09e0cd1617a5bf913efd
-                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-        -   Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
-                ID Class 3 , Microsoft Software Validation v2, OU=RTCN, CN=Realtek
-                Semiconductor Corp
-            ValidFrom: '2006-05-20 00:00:00'
-            ValidTo: '2007-06-12 23:59:59'
-            Signature: bc3a69c57e45345a7cd678527d54cd8e4503514aa700e44bd47c4103dd810c1ed274eae1e2b7fec81837c7dd08bb2dd97994ecb77f03c7b839a395483a5f4b84b84435d836a5ec1f8fbc122d1049c4fd6d50957709611bd2c73606a116198aa5c3e1dd99369c2600113325dd16cc20d4b69b0ec465a11114888001a2375b115d6f4beb214875a52cee652f1dc4673cb69fa8721d07984a8befbe3873bcb7ec38cc30e18fc10e4b17843e5480ec6bd10805628efb6b17b9490c0b138aa9b3310829f8cc8c655be98e052c9e48c710362207eede03981c3fb91c63c02a1ae8ff5470ea3d5e278627fc000f935164bda45f7b8cba77eb5bc8fcb1d8fe10a404fea2
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 042f5c7333af1e4a87e231eccedb269e
-            Version: 3
-            TBS:
-                MD5: a8a4ba9fa58f073453b57664f7ebfc31
-                SHA1: 0fc0164d109c25e0dcdd95495085900e2fcd0f95
-                SHA256: 401d7f2783fa2d98821b6e47f1fb7aac1422cfa1c7621234b812a3c1e4b2d45d
-                SHA384: d89eaa06d7de2a3f6cb2292697070067e58dfca68fc2592738240e688505ace0e4b4331775babcf69b36d1a8a81a805d
-        Signer:
-        -   SerialNumber: 042f5c7333af1e4a87e231eccedb269e
-            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code
-                Signing 2004 CA
-            Version: 1
-    LoadsDespiteHVCI: 'FALSE'
--   Company: Windows (R) 2003 DDK 3790 provider
-    Date: ''
-    Description: Generic Port I/O for Win64
-    FileVersion: 5.0.2195.1711
-    Filename: ''
-    MD5: 49832b4f726cdff825257bee33ad8451
-    MachineType: AMD64
-    OriginalFilename: rtport.sys
-    Product: Windows (R) 2003 DDK 3790 provider
-    ProductVersion: 5.0.2195.1711
-    Publisher: ''
-    SHA1: 1bd4ae9a406bf010e34cdd38e823f732972b18e3
-    SHA256: 8fe429c46fedbab8f06e5396056adabbb84a31efef7f9523eb745fc60144db65
-    Signature: ''
-    Imphash: 0f3ddbe229201f6fa9a3dbbaf842a556
-    Authentihash:
-        MD5: 7712f7c4cc208b66d3cbc726b490b167
-        SHA1: c613b7797a6c1f31271f8f5dced8515d8e4f5732
-        SHA256: 489c02d8102fc401010793d7388b59dc944a2e77cf4179424015cd863701b19b
-    RichPEHeaderHash:
-        MD5: acf8ea66ce39d933aaa355fab4e53b92
-        SHA1: ffbe48da20152db08e7ee2c56005994d4ebb7c16
-        SHA256: 63f29b4cdfe8b5a4579f99f31fcdb035f104e7cc491c0330354b751d216fe338
-    Sections:
-        .text:
-            Entropy: 5.296431755002034
-            Virtual Size: '0xf56'
-        .rdata:
-            Entropy: 3.940422250794907
-            Virtual Size: '0x110'
-        .data:
-            Entropy: 0.0
-            Virtual Size: '0x10'
-        .pdata:
-            Entropy: 3.0907173430310837
-            Virtual Size: '0x54'
-        INIT:
-            Entropy: 4.27593242579279
-            Virtual Size: '0x1a2'
-        .rsrc:
-            Entropy: 3.419986029858509
-            Virtual Size: '0x450'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2005-08-01 03:36:00'
-    InternalName: rtport.sys
-    Copyright: Copyright (C) Microsoft Corp. 2005
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoCreateDevice
-    - RtlInitUnicodeString
-    - IofCompleteRequest
-    - RtlZeroMemory
-    - MmMapIoSpace
-    - IoDeleteSymbolicLink
-    - IoCreateSymbolicLink
-    - MmUnmapIoSpace
-    - IoDeleteDevice
-    - HalGetBusDataByOffset
-    - HalSetBusDataByOffset
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-    LoadsDespiteHVCI: 'FALSE'
--   Company: Windows (R) 2000 DDK provider
-    Date: ''
-    Description: Generic Port I/O
-    FileVersion: 5.00.2195.1
-    Filename: ''
-    MD5: ab81264493c218a0e875a0d50104ac9f
-    MachineType: I386
-    OriginalFilename: rtport.sys
-    Product: Windows (R) 2000 DDK driver
-    ProductVersion: 5.00.2195.1
-    Publisher: ''
-    SHA1: f70989f8b17971f13d45ee537e4ce98e93acbbaf
-    SHA256: a29093d4d708185ba8be35709113fb42e402bbfbf2960d3e00fd7c759ef0b94e
-    Signature: ''
-    Imphash: 8d2a933d039e8b8134ef41236d5ea843
-    Authentihash:
-        MD5: dcee8c51e6e84857f06da54dc7d2073c
-        SHA1: fa8556d4cc17e094e05da7c045d862929c790145
-        SHA256: e612437334ae16e8499d7af7f017f34874a7b9ba47295374f646900c9ff3d579
-    RichPEHeaderHash:
-        MD5: c556eabb01acc563d3072cd12969940b
-        SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
-        SHA256: b504d7ea2fc4141ba8a6c1bebbf2087260ee56052ec6ff451ea655bd319b5cb4
-    Sections:
-        .text:
-            Entropy: 6.127973258441329
-            Virtual Size: '0x547'
-        .rdata:
-            Entropy: 2.4380962642117003
-            Virtual Size: '0xa4'
-        .data:
-            Entropy: -0.0
-            Virtual Size: '0x1'
-        INIT:
-            Entropy: 4.911897101597002
-            Virtual Size: '0x1be'
-        .rsrc:
-            Entropy: 3.387028874338483
-            Virtual Size: '0x3a0'
-        .reloc:
-            Entropy: 3.708569833924545
-            Virtual Size: '0x62'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2000-05-26 01:03:37'
-    InternalName: rtport.sys
-    Copyright: Copyright (C) Microsoft Corp. 1981-1999
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoDeleteSymbolicLink
-    - RtlInitUnicodeString
-    - MmUnmapIoSpace
-    - IofCompleteRequest
-    - IoDeleteDevice
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - READ_PORT_UCHAR
-    - READ_PORT_USHORT
-    - HalSetBusData
-    - WRITE_PORT_UCHAR
-    - WRITE_PORT_USHORT
-    - HalGetBusData
-    - READ_PORT_ULONG
-    - WRITE_PORT_ULONG
-    Signatures: {}
-    LoadsDespiteHVCI: 'TRUE'
--   Company: Windows (R) 2000 DDK provider
-    Date: ''
-    Description: Generic Port I/O
-    FileVersion: 5.00.2195.1
-    Filename: ''
-    MD5: bc71da7c055e3172226090ba5d8e2248
-    MachineType: I386
-    OriginalFilename: rtport.sys
-    Product: Windows (R) 2000 DDK driver
-    ProductVersion: 5.00.2195.1
-    Publisher: ''
-    SHA1: bfff0073c936b9a7e2ad6848deb6f9bf03205488
-    SHA256: c490d6c0844f59fdb4aa850a06e283fbf5e5b6ac20ff42ead03d549d8ae1c01b
-    Signature: ''
-    Imphash: 8d2a933d039e8b8134ef41236d5ea843
-    Authentihash:
-        MD5: 077f5c4d8b8c0887d247a906e71f2640
-        SHA1: 73ea0a18fa99217415a52b98b649b5fd87399a80
-        SHA256: bba6f166037925ec82432ffd4a70dfaafc01e166d3208ad3027afc5565524bc8
-    RichPEHeaderHash:
-        MD5: c556eabb01acc563d3072cd12969940b
-        SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
-        SHA256: b504d7ea2fc4141ba8a6c1bebbf2087260ee56052ec6ff451ea655bd319b5cb4
-    Sections:
-        .text:
-            Entropy: 6.127973258441329
-            Virtual Size: '0x547'
-        .rdata:
-            Entropy: 2.4380962642117003
-            Virtual Size: '0xa4'
-        .data:
-            Entropy: -0.0
-            Virtual Size: '0x1'
-        INIT:
-            Entropy: 4.911897101597002
-            Virtual Size: '0x1be'
-        .rsrc:
-            Entropy: 3.387028874338483
-            Virtual Size: '0x3a0'
-        .reloc:
-            Entropy: 3.708569833924545
-            Virtual Size: '0x62'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2000-05-26 01:03:37'
-    InternalName: rtport.sys
-    Copyright: Copyright (C) Microsoft Corp. 1981-1999
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoDeleteSymbolicLink
-    - RtlInitUnicodeString
-    - MmUnmapIoSpace
-    - IofCompleteRequest
-    - IoDeleteDevice
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - READ_PORT_UCHAR
-    - READ_PORT_USHORT
-    - HalSetBusData
-    - WRITE_PORT_UCHAR
-    - WRITE_PORT_USHORT
-    - HalGetBusData
-    - READ_PORT_ULONG
-    - WRITE_PORT_ULONG
-    Signatures: {}
-    LoadsDespiteHVCI: 'TRUE'
--   Company: Windows (R) 2000 DDK provider
-    Date: ''
-    Description: Generic Port I/O
-    FileVersion: 5.00.2195.1
-    Filename: ''
-    MD5: 843e39865b29bb3df825bd273f195a98
-    MachineType: I386
-    OriginalFilename: rtport.sys
-    Product: Windows (R) 2000 DDK driver
-    ProductVersion: 5.00.2195.1
-    Publisher: ''
-    SHA1: 3fd5cd30085450a509eaa6367af26f6c4b9741b6
-    SHA256: e3dbafce5ad2bf17446d0f853aeedf58cc25aa1080ab97e22375a1022d6acb16
-    Signature: ''
-    Imphash: 8d2a933d039e8b8134ef41236d5ea843
-    Authentihash:
-        MD5: a6982af0453b5717abfbb22f66c2a229
-        SHA1: 93db30c4988af9365ba36837d9ecbffc8380048c
-        SHA256: f8579a22fe49ceeb6cbccb9265a111a7e34a704507ac0dbe7a27842a553fbe27
-    RichPEHeaderHash:
-        MD5: c556eabb01acc563d3072cd12969940b
-        SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
-        SHA256: b504d7ea2fc4141ba8a6c1bebbf2087260ee56052ec6ff451ea655bd319b5cb4
-    Sections:
-        .text:
-            Entropy: 6.127973258441329
-            Virtual Size: '0x547'
-        .rdata:
-            Entropy: 2.4380962642117003
-            Virtual Size: '0xa4'
-        .data:
-            Entropy: -0.0
-            Virtual Size: '0x1'
-        INIT:
-            Entropy: 4.911897101597002
-            Virtual Size: '0x1be'
-        .rsrc:
-            Entropy: 3.387028874338483
-            Virtual Size: '0x3a0'
-        .reloc:
-            Entropy: 3.708569833924545
-            Virtual Size: '0x62'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2000-05-26 01:03:37'
-    InternalName: rtport.sys
-    Copyright: Copyright (C) Microsoft Corp. 1981-1999
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoDeleteSymbolicLink
-    - RtlInitUnicodeString
-    - MmUnmapIoSpace
-    - IofCompleteRequest
-    - IoDeleteDevice
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - READ_PORT_UCHAR
-    - READ_PORT_USHORT
-    - HalSetBusData
-    - WRITE_PORT_UCHAR
-    - WRITE_PORT_USHORT
-    - HalGetBusData
-    - READ_PORT_ULONG
-    - WRITE_PORT_ULONG
-    Signatures: {}
-    LoadsDespiteHVCI: 'TRUE'
--   Company: REALTEK Semiconductor Corp.
-    Date: ''
-    Description: REALTEK Port I/O
-    FileVersion: 1.0.01.0000
-    Filename: ''
-    MD5: 3c9f9c1b802f66cf03cbe82dec2bd454
-    MachineType: I386
-    OriginalFilename: RTPORT.SYS
-    Product: REALTEK Port I/O
-    ProductVersion: 1.0.01.0000
-    Publisher: ''
-    SHA1: 8b037d7a7cb612eabd8e20a9ce93afd92a6db2c2
-    SHA256: ff322cd0cc30976f9dbdb7a3681529aeab0de7b7f5c5763362b02c15da9657a1
-    Signature: ''
-    Imphash: 8b41eacbfbe5f5348579e27d30767e74
-    Authentihash:
-        MD5: 850ebd7bd83ffaa8d0d91469659bcde3
-        SHA1: aaeddf6ae6fd85bc5ffe19f7e75f8c4363962f60
-        SHA256: ac08e26be1c689d4f90e1dd8860cbe238027c66af033f87dc047b4df1d88fc06
-    RichPEHeaderHash:
-        MD5: c556eabb01acc563d3072cd12969940b
-        SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
-        SHA256: b504d7ea2fc4141ba8a6c1bebbf2087260ee56052ec6ff451ea655bd319b5cb4
-    Sections:
-        .text:
-            Entropy: 6.119116084439144
-            Virtual Size: '0x553'
-        .rdata:
-            Entropy: 2.4380962642117003
-            Virtual Size: '0xa4'
-        .data:
-            Entropy: -0.0
-            Virtual Size: '0x1'
-        INIT:
-            Entropy: 4.911897101597002
-            Virtual Size: '0x1be'
-        .rsrc:
-            Entropy: 3.328665252524552
-            Virtual Size: '0x3a0'
-        .reloc:
-            Entropy: 3.732353824331908
-            Virtual Size: '0x64'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2001-03-08 18:15:23'
-    InternalName: RTPORT.SYS
-    Copyright: Copyright (c) 1999-2001 REALTEK Semiconductor Corp.
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoDeleteSymbolicLink
-    - RtlInitUnicodeString
-    - MmUnmapIoSpace
-    - IofCompleteRequest
-    - IoDeleteDevice
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - READ_PORT_UCHAR
-    - READ_PORT_USHORT
-    - HalSetBusData
-    - WRITE_PORT_ULONG
-    - WRITE_PORT_UCHAR
-    - HalGetBusData
-    - READ_PORT_ULONG
-    - WRITE_PORT_USHORT
-    Signatures: {}
-    LoadsDespiteHVCI: 'TRUE'
+- Company: Windows (R) 2003 DDK 3790 provider
+  Date: ''
+  Description: Generic Port I/O for Win32
+  FileVersion: 5.0.2195.1711
+  Filename: ''
+  MD5: 41ce6b172542a9a227e34a45881e1d2a
+  MachineType: I386
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2003 DDK 3790 provider
+  ProductVersion: 5.0.2195.1711
+  Publisher: ''
+  SHA1: dd2b90c9796237036ac7136a172d96274dea14c8
+  SHA256: 3c0a36990f7eef89b2d5f454b6452b6df1304609903f31f475502e4050241dd8
+  Signature: ''
+  Imphash: 87842ffa59724bda8389394bcaeb5d73
+  Authentihash:
+    MD5: cb185e6027fd0f1bf0e00657aea623a8
+    SHA1: f61d01c700cdd2ad50ae7fd5b1f017a216efb46d
+    SHA256: 31add0358eb679d7c10ac1622403a85891bf764154280a589e71ccd297fc7a16
+  RichPEHeaderHash:
+    MD5: a93b122801093616058ea4fb3bf99573
+    SHA1: f263bee2a167bc0377231b850db3301b1cd022c6
+    SHA256: 77b21b1ef7ae058833c017d1d662b39c455fa6e93f372476bb8fd80ced199c4a
+  Sections:
+    .text:
+      Entropy: 5.81057548117791
+      Virtual Size: '0xc5a'
+    .rdata:
+      Entropy: 4.310767375468368
+      Virtual Size: '0xd5'
+    .data:
+      Entropy: 0.9833557549816874
+      Virtual Size: '0x18'
+    INIT:
+      Entropy: 5.24695617711003
+      Virtual Size: '0x2ea'
+    .rsrc:
+      Entropy: 3.4164766974482492
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 4.33595482765136
+      Virtual Size: '0xea'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2005-08-01 05:36:49'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 2005
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - READ_REGISTER_USHORT
+  - READ_REGISTER_UCHAR
+  - WRITE_REGISTER_ULONG
+  - WRITE_REGISTER_USHORT
+  - READ_REGISTER_ULONG
+  - IoDeleteSymbolicLink
+  - KeTickCount
+  - KeBugCheckEx
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - IoCreateDevice
+  - memset
+  - IoCreateSymbolicLink
+  - WRITE_REGISTER_UCHAR
+  - IoDeleteDevice
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_ULONG
+  - HalGetBusDataByOffset
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - READ_PORT_ULONG
+  - HalSetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2008-12-03 23:59:59'
+      Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
+        SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
+        SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
+        CA
+      ValidFrom: '2004-07-16 00:00:00'
+      ValidTo: '2014-07-15 23:59:59'
+      Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 4191a15a3978dfcf496566381d4c75c2
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 41011f8d0e7c7a6408334ca387914c61
+        SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
+        SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      ValidFrom: '2006-05-23 17:01:29'
+      ValidTo: '2016-05-23 17:11:29'
+      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610c120600000000001b
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 53c41bc1164e09e0cd1617a5bf913efd
+        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+    - Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, OU=RTCN, CN=Realtek Semiconductor
+        Corp
+      ValidFrom: '2006-05-20 00:00:00'
+      ValidTo: '2007-06-12 23:59:59'
+      Signature: bc3a69c57e45345a7cd678527d54cd8e4503514aa700e44bd47c4103dd810c1ed274eae1e2b7fec81837c7dd08bb2dd97994ecb77f03c7b839a395483a5f4b84b84435d836a5ec1f8fbc122d1049c4fd6d50957709611bd2c73606a116198aa5c3e1dd99369c2600113325dd16cc20d4b69b0ec465a11114888001a2375b115d6f4beb214875a52cee652f1dc4673cb69fa8721d07984a8befbe3873bcb7ec38cc30e18fc10e4b17843e5480ec6bd10805628efb6b17b9490c0b138aa9b3310829f8cc8c655be98e052c9e48c710362207eede03981c3fb91c63c02a1ae8ff5470ea3d5e278627fc000f935164bda45f7b8cba77eb5bc8fcb1d8fe10a404fea2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 042f5c7333af1e4a87e231eccedb269e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: a8a4ba9fa58f073453b57664f7ebfc31
+        SHA1: 0fc0164d109c25e0dcdd95495085900e2fcd0f95
+        SHA256: 401d7f2783fa2d98821b6e47f1fb7aac1422cfa1c7621234b812a3c1e4b2d45d
+        SHA384: d89eaa06d7de2a3f6cb2292697070067e58dfca68fc2592738240e688505ace0e4b4331775babcf69b36d1a8a81a805d
+    Signer:
+    - SerialNumber: 042f5c7333af1e4a87e231eccedb269e
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
+        CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+- Company: Windows (R) 2000 DDK provider
+  Date: ''
+  Description: Generic Port I/O
+  FileVersion: 5.00.2195.1620
+  Filename: ''
+  MD5: 782f165b1d2db23f78e82fee0127cc14
+  MachineType: I386
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2000 DDK driver
+  ProductVersion: 5.00.2195.1620
+  Publisher: ''
+  SHA1: 717669a1e2380cb61cc4e34618e118cc9cabbcd0
+  SHA256: 6f806a9de79ac2886613c20758546f7e9597db5a20744f7dd82d310b7d6457d0
+  Signature: ''
+  Imphash: 8b41eacbfbe5f5348579e27d30767e74
+  Authentihash:
+    MD5: b4c4aace0c7a95285c71409310e9d5bd
+    SHA1: daf2e7e6d8b811ce52de19e239cce1a1b94cb6e0
+    SHA256: c3db6290145dc8905c0f97e218e0ef071f435a6ffaf1ed4c0699605d9a540038
+  RichPEHeaderHash:
+    MD5: 72e6be525c0e5cfe3d35b914a5297b20
+    SHA1: 2ffd414097e1c5d7ff411de4282156dcc56debfb
+    SHA256: e751caf2de0700ea8773c18415cabbb9d1b29fe3766752813adea89d69d1cc75
+  Sections:
+    .text:
+      Entropy: 6.138937737987914
+      Virtual Size: '0x55b'
+    .rdata:
+      Entropy: 2.339209208802996
+      Virtual Size: '0xa4'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0x1'
+    INIT:
+      Entropy: 4.911897101597002
+      Virtual Size: '0x1be'
+    .rsrc:
+      Entropy: 3.4101388576278246
+      Virtual Size: '0x3b0'
+    .reloc:
+      Entropy: 3.686715655862542
+      Virtual Size: '0x62'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2002-04-22 12:54:09'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 1981-1999
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - HalSetBusData
+  - WRITE_PORT_ULONG
+  - WRITE_PORT_UCHAR
+  - HalGetBusData
+  - READ_PORT_ULONG
+  - WRITE_PORT_USHORT
+  Signatures: {}
+  LoadsDespiteHVCI: 'TRUE'
+- Company: Windows (R) 2003 DDK 3790 provider
+  Date: ''
+  Description: Generic Port I/O for Win64
+  FileVersion: 5.0.2195.1711
+  Filename: ''
+  MD5: 4ca0dba9e224473d664c25e411f5a3bd
+  MachineType: AMD64
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2003 DDK 3790 provider
+  ProductVersion: 5.0.2195.1711
+  Publisher: ''
+  SHA1: c22dc62e10378191840285814838fe9ed1af55d7
+  SHA256: 71423a66165782efb4db7be6ce48ddb463d9f65fd0f266d333a6558791d158e5
+  Signature: ''
+  Imphash: 0f3ddbe229201f6fa9a3dbbaf842a556
+  Authentihash:
+    MD5: 7712f7c4cc208b66d3cbc726b490b167
+    SHA1: c613b7797a6c1f31271f8f5dced8515d8e4f5732
+    SHA256: 489c02d8102fc401010793d7388b59dc944a2e77cf4179424015cd863701b19b
+  RichPEHeaderHash:
+    MD5: acf8ea66ce39d933aaa355fab4e53b92
+    SHA1: ffbe48da20152db08e7ee2c56005994d4ebb7c16
+    SHA256: 63f29b4cdfe8b5a4579f99f31fcdb035f104e7cc491c0330354b751d216fe338
+  Sections:
+    .text:
+      Entropy: 5.296431755002034
+      Virtual Size: '0xf56'
+    .rdata:
+      Entropy: 3.940422250794907
+      Virtual Size: '0x110'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.0907173430310837
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 4.27593242579279
+      Virtual Size: '0x1a2'
+    .rsrc:
+      Entropy: 3.419986029858509
+      Virtual Size: '0x450'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2005-08-01 05:36:00'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 2005
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - RtlZeroMemory
+  - MmMapIoSpace
+  - IoDeleteSymbolicLink
+  - IoCreateSymbolicLink
+  - MmUnmapIoSpace
+  - IoDeleteDevice
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2008-12-03 23:59:59'
+      Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
+        SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
+        SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
+        CA
+      ValidFrom: '2004-07-16 00:00:00'
+      ValidTo: '2014-07-15 23:59:59'
+      Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 4191a15a3978dfcf496566381d4c75c2
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 41011f8d0e7c7a6408334ca387914c61
+        SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
+        SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      ValidFrom: '2006-05-23 17:01:29'
+      ValidTo: '2016-05-23 17:11:29'
+      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610c120600000000001b
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 53c41bc1164e09e0cd1617a5bf913efd
+        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+    - Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, OU=RTCN, CN=Realtek Semiconductor
+        Corp
+      ValidFrom: '2006-05-20 00:00:00'
+      ValidTo: '2007-06-12 23:59:59'
+      Signature: bc3a69c57e45345a7cd678527d54cd8e4503514aa700e44bd47c4103dd810c1ed274eae1e2b7fec81837c7dd08bb2dd97994ecb77f03c7b839a395483a5f4b84b84435d836a5ec1f8fbc122d1049c4fd6d50957709611bd2c73606a116198aa5c3e1dd99369c2600113325dd16cc20d4b69b0ec465a11114888001a2375b115d6f4beb214875a52cee652f1dc4673cb69fa8721d07984a8befbe3873bcb7ec38cc30e18fc10e4b17843e5480ec6bd10805628efb6b17b9490c0b138aa9b3310829f8cc8c655be98e052c9e48c710362207eede03981c3fb91c63c02a1ae8ff5470ea3d5e278627fc000f935164bda45f7b8cba77eb5bc8fcb1d8fe10a404fea2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 042f5c7333af1e4a87e231eccedb269e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: a8a4ba9fa58f073453b57664f7ebfc31
+        SHA1: 0fc0164d109c25e0dcdd95495085900e2fcd0f95
+        SHA256: 401d7f2783fa2d98821b6e47f1fb7aac1422cfa1c7621234b812a3c1e4b2d45d
+        SHA384: d89eaa06d7de2a3f6cb2292697070067e58dfca68fc2592738240e688505ace0e4b4331775babcf69b36d1a8a81a805d
+    Signer:
+    - SerialNumber: 042f5c7333af1e4a87e231eccedb269e
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
+        CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+- Company: Windows (R) 2003 DDK 3790 provider
+  Date: ''
+  Description: Generic Port I/O for Win64
+  FileVersion: 5.0.2195.1711
+  Filename: ''
+  MD5: 49832b4f726cdff825257bee33ad8451
+  MachineType: AMD64
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2003 DDK 3790 provider
+  ProductVersion: 5.0.2195.1711
+  Publisher: ''
+  SHA1: 1bd4ae9a406bf010e34cdd38e823f732972b18e3
+  SHA256: 8fe429c46fedbab8f06e5396056adabbb84a31efef7f9523eb745fc60144db65
+  Signature: ''
+  Imphash: 0f3ddbe229201f6fa9a3dbbaf842a556
+  Authentihash:
+    MD5: 7712f7c4cc208b66d3cbc726b490b167
+    SHA1: c613b7797a6c1f31271f8f5dced8515d8e4f5732
+    SHA256: 489c02d8102fc401010793d7388b59dc944a2e77cf4179424015cd863701b19b
+  RichPEHeaderHash:
+    MD5: acf8ea66ce39d933aaa355fab4e53b92
+    SHA1: ffbe48da20152db08e7ee2c56005994d4ebb7c16
+    SHA256: 63f29b4cdfe8b5a4579f99f31fcdb035f104e7cc491c0330354b751d216fe338
+  Sections:
+    .text:
+      Entropy: 5.296431755002034
+      Virtual Size: '0xf56'
+    .rdata:
+      Entropy: 3.940422250794907
+      Virtual Size: '0x110'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.0907173430310837
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 4.27593242579279
+      Virtual Size: '0x1a2'
+    .rsrc:
+      Entropy: 3.419986029858509
+      Virtual Size: '0x450'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2005-08-01 05:36:00'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 2005
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - RtlZeroMemory
+  - MmMapIoSpace
+  - IoDeleteSymbolicLink
+  - IoCreateSymbolicLink
+  - MmUnmapIoSpace
+  - IoDeleteDevice
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+  LoadsDespiteHVCI: 'FALSE'
+- Company: Windows (R) 2000 DDK provider
+  Date: ''
+  Description: Generic Port I/O
+  FileVersion: 5.00.2195.1
+  Filename: ''
+  MD5: ab81264493c218a0e875a0d50104ac9f
+  MachineType: I386
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2000 DDK driver
+  ProductVersion: 5.00.2195.1
+  Publisher: ''
+  SHA1: f70989f8b17971f13d45ee537e4ce98e93acbbaf
+  SHA256: a29093d4d708185ba8be35709113fb42e402bbfbf2960d3e00fd7c759ef0b94e
+  Signature: ''
+  Imphash: 8d2a933d039e8b8134ef41236d5ea843
+  Authentihash:
+    MD5: 54e480b9f11b70e944e0e5b1130116c8
+    SHA1: 24d9958ec0fedb77e9b5d5deba3117abaca9803f
+    SHA256: fe275be26ecca4c69f1c8ec35145fcae8cd83a5cb20f7ca71ff998d91091bb7e
+  RichPEHeaderHash:
+    MD5: c556eabb01acc563d3072cd12969940b
+    SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
+    SHA256: b504d7ea2fc4141ba8a6c1bebbf2087260ee56052ec6ff451ea655bd319b5cb4
+  Sections:
+    .text:
+      Entropy: 6.127973258441329
+      Virtual Size: '0x547'
+    .rdata:
+      Entropy: 2.4380962642117003
+      Virtual Size: '0xa4'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0x1'
+    INIT:
+      Entropy: 4.911897101597002
+      Virtual Size: '0x1be'
+    .rsrc:
+      Entropy: 3.387028874338483
+      Virtual Size: '0x3a0'
+    .reloc:
+      Entropy: 3.708569833924545
+      Virtual Size: '0x62'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2000-05-26 03:03:37'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 1981-1999
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - HalSetBusData
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - HalGetBusData
+  - READ_PORT_ULONG
+  - WRITE_PORT_ULONG
+  Signatures: {}
+  LoadsDespiteHVCI: 'TRUE'
+- Company: Windows (R) 2000 DDK provider
+  Date: ''
+  Description: Generic Port I/O
+  FileVersion: 5.00.2195.1
+  Filename: ''
+  MD5: bc71da7c055e3172226090ba5d8e2248
+  MachineType: I386
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2000 DDK driver
+  ProductVersion: 5.00.2195.1
+  Publisher: ''
+  SHA1: bfff0073c936b9a7e2ad6848deb6f9bf03205488
+  SHA256: c490d6c0844f59fdb4aa850a06e283fbf5e5b6ac20ff42ead03d549d8ae1c01b
+  Signature: ''
+  Imphash: 8d2a933d039e8b8134ef41236d5ea843
+  Authentihash:
+    MD5: 914defd13cc2e1b6c4d42a7f806c8b45
+    SHA1: c2308ff02a8a05d7b20e59d7734b90fe950d15bc
+    SHA256: 74264ce2e0ed67730b0f3c719aee37664d4688f872875322a64022cd68e060bb
+  RichPEHeaderHash:
+    MD5: c556eabb01acc563d3072cd12969940b
+    SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
+    SHA256: b504d7ea2fc4141ba8a6c1bebbf2087260ee56052ec6ff451ea655bd319b5cb4
+  Sections:
+    .text:
+      Entropy: 6.127973258441329
+      Virtual Size: '0x547'
+    .rdata:
+      Entropy: 2.4380962642117003
+      Virtual Size: '0xa4'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0x1'
+    INIT:
+      Entropy: 4.911897101597002
+      Virtual Size: '0x1be'
+    .rsrc:
+      Entropy: 3.387028874338483
+      Virtual Size: '0x3a0'
+    .reloc:
+      Entropy: 3.708569833924545
+      Virtual Size: '0x62'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2000-05-26 03:03:37'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 1981-1999
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - HalSetBusData
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - HalGetBusData
+  - READ_PORT_ULONG
+  - WRITE_PORT_ULONG
+  Signatures: {}
+  LoadsDespiteHVCI: 'TRUE'
+- Company: Windows (R) 2000 DDK provider
+  Date: ''
+  Description: Generic Port I/O
+  FileVersion: 5.00.2195.1
+  Filename: ''
+  MD5: 843e39865b29bb3df825bd273f195a98
+  MachineType: I386
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2000 DDK driver
+  ProductVersion: 5.00.2195.1
+  Publisher: ''
+  SHA1: 3fd5cd30085450a509eaa6367af26f6c4b9741b6
+  SHA256: e3dbafce5ad2bf17446d0f853aeedf58cc25aa1080ab97e22375a1022d6acb16
+  Signature: ''
+  Imphash: 8d2a933d039e8b8134ef41236d5ea843
+  Authentihash:
+    MD5: 21b25c420a7e1569c8b26d93edf9548f
+    SHA1: 5599900b51571f6557c862f5d82b8f6706a21a9d
+    SHA256: 353a36d445e4ff60396702ad7b22b5f30bdce52aa05126e2701714a3f11a11c7
+  RichPEHeaderHash:
+    MD5: c556eabb01acc563d3072cd12969940b
+    SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
+    SHA256: b504d7ea2fc4141ba8a6c1bebbf2087260ee56052ec6ff451ea655bd319b5cb4
+  Sections:
+    .text:
+      Entropy: 6.127973258441329
+      Virtual Size: '0x547'
+    .rdata:
+      Entropy: 2.4380962642117003
+      Virtual Size: '0xa4'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0x1'
+    INIT:
+      Entropy: 4.911897101597002
+      Virtual Size: '0x1be'
+    .rsrc:
+      Entropy: 3.387028874338483
+      Virtual Size: '0x3a0'
+    .reloc:
+      Entropy: 3.708569833924545
+      Virtual Size: '0x62'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2000-05-26 03:03:37'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 1981-1999
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - HalSetBusData
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - HalGetBusData
+  - READ_PORT_ULONG
+  - WRITE_PORT_ULONG
+  Signatures: {}
+  LoadsDespiteHVCI: 'TRUE'
+- Company: REALTEK Semiconductor Corp.
+  Date: ''
+  Description: REALTEK Port I/O
+  FileVersion: 1.0.01.0000
+  Filename: ''
+  MD5: 3c9f9c1b802f66cf03cbe82dec2bd454
+  MachineType: I386
+  OriginalFilename: RTPORT.SYS
+  Product: REALTEK Port I/O
+  ProductVersion: 1.0.01.0000
+  Publisher: ''
+  SHA1: 8b037d7a7cb612eabd8e20a9ce93afd92a6db2c2
+  SHA256: ff322cd0cc30976f9dbdb7a3681529aeab0de7b7f5c5763362b02c15da9657a1
+  Signature: ''
+  Imphash: 8b41eacbfbe5f5348579e27d30767e74
+  Authentihash:
+    MD5: 418f88ade9d08467bc9401fc7b76cc2a
+    SHA1: 93c1b76f3fb828aaf98d37e6c138fc948f75f748
+    SHA256: ebe114a72d27b5abf47e17137dbb85f52ca987c8bb80ea709eb3293c9637f73c
+  RichPEHeaderHash:
+    MD5: c556eabb01acc563d3072cd12969940b
+    SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
+    SHA256: b504d7ea2fc4141ba8a6c1bebbf2087260ee56052ec6ff451ea655bd319b5cb4
+  Sections:
+    .text:
+      Entropy: 6.119116084439144
+      Virtual Size: '0x553'
+    .rdata:
+      Entropy: 2.4380962642117003
+      Virtual Size: '0xa4'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0x1'
+    INIT:
+      Entropy: 4.911897101597002
+      Virtual Size: '0x1be'
+    .rsrc:
+      Entropy: 3.328665252524552
+      Virtual Size: '0x3a0'
+    .reloc:
+      Entropy: 3.732353824331908
+      Virtual Size: '0x64'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2001-03-08 20:15:23'
+  InternalName: RTPORT.SYS
+  Copyright: Copyright (c) 1999-2001 REALTEK Semiconductor Corp.
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - HalSetBusData
+  - WRITE_PORT_ULONG
+  - WRITE_PORT_UCHAR
+  - HalGetBusData
+  - READ_PORT_ULONG
+  - WRITE_PORT_USHORT
+  Signatures: {}
+  LoadsDespiteHVCI: 'TRUE'

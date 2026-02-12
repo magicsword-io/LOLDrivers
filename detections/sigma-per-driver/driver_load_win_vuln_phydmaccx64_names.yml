@@ -1,0 +1,28 @@
+title: Driver Load - phydmaccx64.sys
+id: c820a3ac-3745-5e81-a77d-dfd156575e91
+status: experimental
+description: |
+    Detects loading of driver phydmaccx64.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/96c8fe71-3acc-41bc-9402-ebd69a961d74/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\phydmaccx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

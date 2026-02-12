@@ -1,0 +1,31 @@
+title: Driver Load - MSqPq.sys
+id: 61413a24-5f92-5f9f-84fb-36d94d454f16
+status: experimental
+description: |
+    Detects loading of driver MSqPq.sys via hash.
+    BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware incident that occurred in February 2023.
+references:
+    - https://www.loldrivers.io/drivers/8198f5af-4b40-4800-a22a-4a7cf957ef37/
+    - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+author: Guus Verbeek
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=97539c78d6e2b5356ce79e40bcd4d570'
+            - 'SHA1=f6793243ad20359d8be40d3accac168a15a327fb'
+            - 'SHA256=56066ed07bad3b5c1474e8fae5ee2543d17d7977369b34450bd0775517e3b25c'
+            - 'IMPHASH=fca0f3c7b6d79f494034b9d2a1f5921a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

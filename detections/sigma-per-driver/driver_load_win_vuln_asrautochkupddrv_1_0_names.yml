@@ -1,0 +1,28 @@
+title: Driver Load - AsrAutoChkUpdDrv_1_0_32.sys
+id: b157e376-74cd-5cba-8ad5-b320e285318b
+status: experimental
+description: |
+    Detects loading of driver AsrAutoChkUpdDrv_1_0_32.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/02e4a30f-8aa8-4ff0-8e02-1bff1d0f088f/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrautochkupddrv_1_0_32.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

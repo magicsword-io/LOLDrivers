@@ -1,0 +1,31 @@
+title: Driver Load - stdcdrvws64.sys
+id: af04eca6-5987-59b0-bb48-d9eb3892c8e1
+status: experimental
+description: |
+    Detects loading of driver stdcdrvws64.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/dc3fdbd3-601a-4d2a-bf34-d2e84c6ff1d3/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=003dc41d148ec3286dc7df404ba3f2aa'
+            - 'SHA1=948fa3149742f73bf3089893407df1b20f78a563'
+            - 'SHA256=70afdc0e11db840d5367afe53c35d9642c1cf616c7832ab283781d085988e505'
+            - 'IMPHASH=67affe6126c1d4a774b2504061c96a2e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

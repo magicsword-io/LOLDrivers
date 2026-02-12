@@ -1,0 +1,28 @@
+title: Driver Load - goad.sys
+id: ec03b679-807b-5c83-9814-5551564f7518
+status: experimental
+description: |
+    Detects loading of driver goad.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/29cb263b-b0b0-40d5-a97d-5ddf4ba79c1e/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\goad.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

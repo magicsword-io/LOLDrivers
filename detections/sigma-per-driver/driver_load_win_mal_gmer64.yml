@@ -1,0 +1,38 @@
+title: Driver Load - gmer64.sys
+id: ef54daa2-1a77-5a90-a691-90470d67129c
+status: experimental
+description: |
+    Detects loading of driver gmer64.sys via hash.
+    Driver used by the GMER application. Which is an application that detects and removes rootkits
+references:
+    - https://www.loldrivers.io/drivers/7ce8fb06-46eb-4f4f-90d5-5518a6561f15/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+    - http://www.gmer.net/
+    - https://github.com/gtworek/PSBits/blob/master/Misc/KillWithLolDriver.ps1
+    - https://github.com/ZeroMemoryEx/Blackout
+    - https://github.com/b1-team/superman
+author: Michael Haag
+date: 2023/05/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=98b8507e725b3d28537fc374eb2de72d'
+            - 'MD5=a822b9e6eedf69211013e192967bf523'
+            - 'SHA1=83506de48bd0c50ea00c9e889fe980f56e6c6e1b'
+            - 'SHA1=c80d7fe8279ddfd466505a24b9c8cc7a68b9d0e4'
+            - 'SHA256=18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7'
+            - 'SHA256=0052aa88e42055a2eed5ddd17c3499c692360155e5e031a211edfcef577acce3'
+            - 'IMPHASH=a998fe47a44bfbf2399968e21cfdf7ca'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

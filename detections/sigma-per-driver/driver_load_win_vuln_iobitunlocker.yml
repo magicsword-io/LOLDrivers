@@ -1,0 +1,106 @@
+title: Driver Load - iobitunlocker.sys
+id: 90ed9a71-4246-5951-bede-3b82e7aa0baf
+status: experimental
+description: |
+    Detects loading of driver iobitunlocker.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/e368efc7-cf69-47ae-8204-f69dac000b22/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2f6cf948117cbd383315ebf070d27aa4'
+            - 'MD5=3a3d54e49cae4b51f5231d3ae6724fcd'
+            - 'MD5=b2ada4eb20649839a54db078fa6bb1bd'
+            - 'MD5=5cc5fc8ce149dca1d05fb47c0aec9497'
+            - 'MD5=3a41edc1dda049a1b8aa411f728831e0'
+            - 'MD5=2491a4ddb3f7a6688669831969b47669'
+            - 'MD5=ad6ec006e29343c466f73bf47fe0caf3'
+            - 'MD5=2391fb461b061d0e5fccb050d4af7941'
+            - 'MD5=67f6d2a931f194396bda9b05690008d2'
+            - 'MD5=57fdf2cc39a2865dd67dcf762d2c0b7f'
+            - 'MD5=a7c2bc345d60cddf2cf4f5dd416a127b'
+            - 'MD5=848690ca707b4850c967e3217f285fcc'
+            - 'MD5=a8dd685a6afb748c9f487a139c9c367b'
+            - 'MD5=e6ed15980616aa706bf85e6f256d2ebe'
+            - 'MD5=f58e9309d8251a3010ee022aa5a6e377'
+            - 'MD5=98eaed36ba245047410a19c191cd1a69'
+            - 'MD5=501945a3f0055033edc64be09717eef2'
+            - 'MD5=3b967b644881ccb5a95f06e903d8b218'
+            - 'MD5=47aa03a10ac3a407f8f30f1088edcbc9'
+            - 'MD5=9c14315e086882e89a01c9700c4b5530'
+            - 'MD5=d7b749051da5fb4604f4141f19c47660'
+            - 'MD5=05ad4a6ef441e94acb1a1a9a11a26f3a'
+            - 'MD5=724a9e06f0a846f2556f2e3edd251cc4'
+            - 'SHA1=8628a983d81e5df59187d3272b509a5a8e12137a'
+            - 'SHA1=3a97b4f93c69cbf25fa4c4696e44577524c3c9a0'
+            - 'SHA1=9e8c4fea1f2bc9fce1e08a6e0a448e567b504f66'
+            - 'SHA1=288daefd1ce65fb01011dc8a64491111207d3965'
+            - 'SHA1=373d015e5faa183edc164821f68f6bf172f8b364'
+            - 'SHA1=abc5bbd11f26232bab2a68ecbff3cbb05f59701b'
+            - 'SHA1=c90d334d807a0dc7f15ecff38e8f0137a378504b'
+            - 'SHA1=db649f5adb5e857b2167925f270df56e5f8e5612'
+            - 'SHA1=dcf6ee994e23893ac3b5e90a08003e026cc1fd8e'
+            - 'SHA1=40cfe5793a25722aaf47388f8059af53e77a4b22'
+            - 'SHA1=b5d78a1d3ae93bd343c6d65e64c0945d1d558758'
+            - 'SHA1=b589662db0d96993cd83e97b11e9238d3d70dc2d'
+            - 'SHA1=e1aa2dcd6702f26c14805bb117acfb4a99b9d673'
+            - 'SHA1=7f4bef1dbc56974f36c25e37b344213d144ffcb4'
+            - 'SHA1=d032ad51c9d12e08709e7b31ea705585a52cbf23'
+            - 'SHA1=d7f12c8d515a0ad401fa02cc8ac42b11b5b7fa55'
+            - 'SHA1=7c6cad6a268230f6e08417d278dda4d66bb00d13'
+            - 'SHA1=2446597bd4fd1f67657425310bec5db5614a8616'
+            - 'SHA1=14488a51c38e647c2347928f675a167acec8fbd6'
+            - 'SHA1=239e41b1a860c2b12225be48930312773726e7fc'
+            - 'SHA1=ac593c6f4d2ad88bfca455a3a189af6d3cdace32'
+            - 'SHA1=8d404be8d892e5a073eca1d872a5023014dd0b73'
+            - 'SHA1=338679dfda8828c6aa98e0a5c9fa9e0a1fe9e9e8'
+            - 'SHA256=d8096325bfe81b093dd522095b6153d9c4850ba2eaa790e12e7056ef160d0432'
+            - 'SHA256=a7416a7d9573f1d8873ec1b3109ec683e85412ba817e0001c3ab2d2c92043d4d'
+            - 'SHA256=a38c26c0754f6c9389ea43dd0149db26b95742c1b37468fcf0d8ced66da1dcb9'
+            - 'SHA256=2b33df9aff7cb99a782b252e8eb65ca49874a112986a1c49cd9971210597a8ae'
+            - 'SHA256=7a1feb8649a5c0679e1073e6d8a02c8a6ebc5825f02999f16c9459284f1b198b'
+            - 'SHA256=507724d96a54f3e45c16a065bf38ae82a9b80d07096a461068a701cae0c1cf29'
+            - 'SHA256=698353791261d5a9ca3245ae8f86334493df554690ec7962895c2affe4050db2'
+            - 'SHA256=e41d4fd99252fcf9aea529b6e148b311aa26a4ab04f6b79cce4cd19c61db0c87'
+            - 'SHA256=c2e1a3dd0dfb3477a3e855368b23d12b8818df8fa3bc3508abf069a0873d6bf8'
+            - 'SHA256=a92d2736c8cd99195a1ef4d0d9a3412bee481acf585944e3b5946b465361a3e7'
+            - 'SHA256=b6ae324b84a4632cf690dd565954d64b205104fc3fa42181612c3f5b830579c6'
+            - 'SHA256=831b62145c21557928a694e6261e830f1545b5756ad51dcbd28a15fde570f4e7'
+            - 'SHA256=0209934453e9ce60b1a5e4b85412e6faf29127987505bfb1185fc9296c578b09'
+            - 'SHA256=d3e95b8d8cbb0c4c3bb78d929408b37fd3b8f305b6234f7f03954465d52454eb'
+            - 'SHA256=b0dd55b4dc7e561dfe413b029673674e2a5381f5f4daede03ddf3484310a6e11'
+            - 'SHA256=5ea5f339b2e40dea57378626790ca7e9a82777aacdada5bc61ebb7d82043fa07'
+            - 'SHA256=faa9aa7118ecf9bb6594281f6b582f1ced0cc62d5db09a2fbf9b7ce70c532285'
+            - 'SHA256=11bc55c0771d692279298211c1d434c04168e7c7f7c4328bfd600215b88c819b'
+            - 'SHA256=29cf2d374d7afe009bbf60ba5f50db7016314de682cf3a6f90c0996810c821ef'
+            - 'SHA256=c79a2bb050af6436b10b58ef04dbc7082df1513cec5934432004eb56fba05e66'
+            - 'SHA256=969f73a1da331e43777a3c1f08ec0734e7cf8c8136e5d469cbad8035fbfe3b47'
+            - 'SHA256=0aff83f28d70f425539fee3d6a780210d0406264f8a4eb124e32b074e8ffd556'
+            - 'SHA256=f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004'
+            - 'IMPHASH=0627ee7f7d86e0c552a7bc8ee31a1b18'
+            - 'IMPHASH=51957e796400bc7de3cfa02db5a95bce'
+            - 'IMPHASH=df732a700824119a3aa46e52712d50e1'
+            - 'IMPHASH=711b758670a45a9eda505018717c0966'
+            - 'IMPHASH=81c7c94c8652b882268a4770e95a5b03'
+            - 'IMPHASH=a9e02912a3b2915e7bd0d33d49adc21e'
+            - 'IMPHASH=b4627789883457d50964a248104cb4c2'
+            - 'IMPHASH=c89216a982b8a3b67a507c41afa93c04'
+            - 'IMPHASH=c12936f479be6928286027facebe1c59'
+            - 'IMPHASH=878e0ad08d61b8eeabe5f33873401f2d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

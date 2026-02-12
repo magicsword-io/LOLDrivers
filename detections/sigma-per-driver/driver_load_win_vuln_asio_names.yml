@@ -1,0 +1,30 @@
+title: Driver Load - asio.sys
+id: 57b52fe9-8c50-550c-9ea6-39c73807a4ee
+status: experimental
+description: |
+    Detects loading of driver asio.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/2651f5c4-d9e1-4b06-92be-e9e7313f87c4/
+    - Internal Research
+    - https://github.com/namazso/physmem_drivers
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Nasreddine Bencherchali, Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

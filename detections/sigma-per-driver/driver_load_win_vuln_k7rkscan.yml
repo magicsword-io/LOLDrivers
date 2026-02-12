@@ -1,0 +1,31 @@
+title: Driver Load - K7RKScan.sys
+id: ce12ca04-3390-5608-8d9a-cb1b97ae39a4
+status: experimental
+description: |
+    Detects loading of driver K7RKScan.sys via hash.
+    Driver can be used to load unsigned drivers
+references:
+    - https://www.loldrivers.io/drivers/bd580aba-a804-4afc-adb3-b8ce342c78f6/
+    - https://github.com/BlackSnufkin/BYOVD
+author: Michael Haag
+date: 2025/09/18
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9b04a93e05ccff94667f04bffa7af600'
+            - 'SHA1=468121e7d6952799f92940677268937c4c5f92ed'
+            - 'SHA256=b16e217cdca19e00c1b68bdfb28ead53b20adeabd6edcd91542f9fbf48942877'
+            - 'IMPHASH=1398f66d7e712e0d8ec9238cbb4a30da'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

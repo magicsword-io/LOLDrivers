@@ -1,0 +1,28 @@
+title: Driver Load - changsha
+id: e4d20150-8187-5a0a-be9c-35baa78627a6
+status: experimental
+description: |
+    Detects loading of driver changsha via name.
+    Malicious rootkit masquerading as legitimate CrowdStrike Falcon Sensor driver (CSAgent.sys). Signed with stolen/expired Chinese certificate from 2015. Detected by 61.6% of AV engines as Rootkit.Win64.Agent and Trojan:Win64/AVTamper. Used to establish kernel-level persistence while evading detection by impersonating trusted security software.
+references:
+    - https://www.loldrivers.io/drivers/636d30fd-2b95-4dc2-a413-be0e43d1482c/
+    - https://www.virustotal.com/gui/file/06eccd102c9105957773b32538943531d9c39d0a504ceb3b9b155e97e3b0b134
+author: Michael Haag
+date: 2025/10/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\changsha'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

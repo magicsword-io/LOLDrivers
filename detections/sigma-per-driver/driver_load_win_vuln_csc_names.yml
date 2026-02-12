@@ -1,0 +1,30 @@
+title: Driver Load - CSC.sys
+id: 8475b403-6fa9-503c-bc7a-a43c7ec71bf6
+status: experimental
+description: |
+    Detects loading of driver CSC.sys via name.
+    Improper Address Validation in IOCTL with METHOD_NEITHER I/O Control Code in the csc.sys driver
+references:
+    - https://www.loldrivers.io/drivers/1c92e1bf-103b-4545-b242-e5a9858ec9c8/
+    - https://github.com/varwara/CVE-2024-26229/tree/main
+    - https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-26229
+    - https://github.com/zer0condition/ZeroHVCI
+author: Nasreddine Bencherchali
+date: 2024/08/21
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\csc.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

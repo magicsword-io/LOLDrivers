@@ -1,0 +1,27 @@
+title: Driver Load - fidpcidrv64.sys
+id: 3dba4985-6ecd-5b9c-a09b-041075240e7e
+status: experimental
+description: |
+    Detects loading of driver fidpcidrv64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/a005e057-c84f-47cd-9b4b-5b1e51a06ab4/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\fidpcidrv64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

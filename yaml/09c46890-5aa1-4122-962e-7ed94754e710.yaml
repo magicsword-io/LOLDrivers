@@ -1,0 +1,169 @@
+Id: 09c46890-5aa1-4122-962e-7ed94754e710
+Author: valium
+Created: '2025-05-28'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create SmSerl64.sys binPath=C:\windows\temp\SmSerl64.sys type=kernel
+    && sc.exe start SmSerl64.sys
+  Description: A vulnerability exits in driver SmSerl64.sys in Motorola SM56 Modem
+    WDM Driver v6.12.23.0, which allows low-privileged users to mapping physical memory
+    via specially crafted IOCTL requests . This can be exploited for privilege escalation,
+    code execution under high privileges, and information disclosure. These signed
+    drivers can also be used to bypass the Microsoft driver-signing policy to deploy
+    malicious code.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://nvd.nist.gov/vuln/detail/CVE-2024-55414
+- https://github.com/heyheysky/vulnerable-driver/blob/master/CVE-2024-55414/CVE-2024-55414_SmSerl64.sys_README.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: SmSerl64.sys
+  Libraries:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WMILIB.SYS
+  ImportedFunctions:
+  - KeInitializeEvent
+  - RtlInitUnicodeString
+  - ExFreePool
+  - ExAllocatePoolWithTag
+  - KeReleaseSpinLockFromDpcLevel
+  - KeSetEvent
+  - KeClearEvent
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - RtlUnicodeStringToAnsiString
+  - KeCancelTimer
+  - IoDeleteSymbolicLink
+  - RtlAppendUnicodeToString
+  - IoCreateDevice
+  - RtlCopyUnicodeString
+  - IoCreateUnprotectedSymbolicLink
+  - KeInitializeTimer
+  - KeInitializeDpc
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - RtlAppendUnicodeStringToString
+  - ZwQueryValueKey
+  - ZwClose
+  - ZwDeleteKey
+  - RtlIntegerToUnicodeString
+  - RtlQueryRegistryValues
+  - wcsstr
+  - RtlWriteRegistryValue
+  - KeResetEvent
+  - PoCallDriver
+  - KeRemoveQueueDpc
+  - KeAcquireSpinLockRaiseToDpc
+  - MmMapLockedPagesSpecifyCache
+  - IoAllocateMdl
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - IoCreateSymbolicLink
+  - IoAttachDeviceToDeviceStack
+  - IoGetDeviceProperty
+  - IoDetachDevice
+  - ExSetTimerResolution
+  - PoStartNextPowerIrp
+  - PoRequestPowerIrp
+  - PoSetPowerState
+  - IoCancelIrp
+  - IoDisconnectInterrupt
+  - IoConnectInterrupt
+  - KeSynchronizeExecution
+  - MmIsAddressValid
+  - KeInsertQueueDpc
+  - KeSetTimer
+  - IoFreeWorkItem
+  - IoAllocateWorkItem
+  - IoQueueWorkItem
+  - ExSystemTimeToLocalTime
+  - RtlTimeToTimeFields
+  - IoBuildSynchronousFsdRequest
+  - KeSetImportanceDpc
+  - IoGetDmaAdapter
+  - IoRegisterDeviceInterface
+  - IoSetDeviceInterfaceState
+  - KeBugCheckEx
+  - IoAcquireCancelSpinLock
+  - IofCompleteRequest
+  - KeReleaseSpinLock
+  - KeAcquireSpinLockAtDpcLevel
+  - IoDeleteDevice
+  - DbgPrint
+  - RtlUnicodeToMultiByteN
+  - strstr
+  - strchr
+  - RtlEqualUnicodeString
+  - ZwSetValueKey
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - ObReferenceObjectByPointer
+  - MmUnmapLockedPages
+  - KeDelayExecutionThread
+  - IoReleaseCancelSpinLock
+  - __C_specific_handler
+  - RtlRaiseException
+  - KeStallExecutionProcessor
+  - KeQueryPerformanceCounter
+  - WmiSystemControl
+  ExportedFunctions: ''
+  MD5: 7ae8bca90539ecbde87ac45ba1436be3
+  SHA1: 68ca0b533ec923a2375d88eef60a0dc32bc84589
+  SHA256: e599200c44eca5eb06475f90f67a58723b30c3c2887bd12ed7c31ff1042382ea
+  Imphash: 21728cd772a10f8a18b2d9bfc8823b2e
+  Machine: AMD64
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2008-09-26 14:15:56'
+  RichPEHeaderMD5: e7d075a5133f3e510a76dfdb5d809384
+  RichPEHeaderSHA1: 1163c5669247c0dde8a99960aa729935208a695a
+  RichPEHeaderSHA256: ce4422d96dcc3230d613218aaafd5e3634a4cd684e30111eb3093c01fffd384f
+  AuthentihashMD5: 26c816418b290cd18299aaf23c1c340b
+  AuthentihashSHA1: b393c7504067827e5e5414a86342e7eadf4093e4
+  AuthentihashSHA256: c9b2be7c9a161967aa5028fa9ea400bb3bb8e70919bf69f6629c62dbe187d4c9
+  Sections:
+    .text:
+      Entropy: 6.57541281030857
+      Virtual Size: '0xe4f46'
+    .rdata:
+      Entropy: 6.377356462437951
+      Virtual Size: '0x2d308'
+    .data:
+      Entropy: 5.0292192736399635
+      Virtual Size: '0x178f0'
+    .pdata:
+      Entropy: 5.852956539522021
+      Virtual Size: '0x7524'
+    PAGESRP0:
+      Entropy: 6.108435683076659
+      Virtual Size: '0x4e5'
+    INIT:
+      Entropy: 5.182040230370807
+      Virtual Size: '0xb06'
+    .rsrc:
+      Entropy: 3.3717128199981996
+      Virtual Size: '0x3c8'
+    .reloc:
+      Entropy: 5.007795437061797
+      Virtual Size: '0x2a9a'
+  CompanyName: Motorola Inc.
+  FileDescription: Motorola SM56 Modem WDM Driver
+  InternalName: SmSerl64.sys
+  OriginalFilename: SmSerl64.sys
+  FileVersion: 'SM56 Rel. 6.12.23 built by: WinDDK'
+  ProductName: Motorola SM56 Modem
+  LegalCopyright: Copyright Motorola, Inc. 1995-2008
+  ProductVersion: SM56 Rel. 6.12.23
+  Signatures: {}
+Tags:
+- SmSerl64.sys

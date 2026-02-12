@@ -1,0 +1,32 @@
+title: Driver Load - wantd_4.sys
+id: 73e763af-d7f6-5277-8045-dc323c75116b
+status: experimental
+description: |
+    Detects loading of driver wantd_4.sys via hash.
+    Driver used in the Daxin malware campaign.
+references:
+    - https://www.loldrivers.io/drivers/72637cb1-5ca2-4ad0-a5df-20da17b231b5/
+    - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+    - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+author: Michael Haag
+date: 2023/02/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=79df0eabbf2895e4e2dae15a4772868c'
+            - 'SHA1=d02403f85be6f243054395a873b41ef8a17ea279'
+            - 'SHA256=8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce'
+            - 'IMPHASH=c32d9a9af7f702814e1368c689877f3a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

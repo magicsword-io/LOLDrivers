@@ -1,0 +1,91 @@
+title: Driver Load - libnicm.sys
+id: 8ea6e9f4-cdb0-5ac0-a18d-31d61db30e22
+status: experimental
+description: |
+    Detects loading of driver libnicm.sys via hash.
+    Novell XTCOM Services Driver
+references:
+    - https://www.loldrivers.io/drivers/2b949a0d-939f-456a-a34f-4589d7712227/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=fb7637cfe8562095937f4d6cff420784'
+            - 'MD5=0703c1e07186cb98837a2ae76f50d42e'
+            - 'MD5=c1fce7aac4e9dd7a730997e2979fa1e2'
+            - 'MD5=20afd54ca260e2bf6589fac72935fecf'
+            - 'MD5=1c591efa8660d4d36a75db9b82474174'
+            - 'MD5=da7e98b23b49b7293ee06713032c74f6'
+            - 'MD5=bafd6bad121e42f940a0b8abc587eadf'
+            - 'MD5=d48f681f70e19d2fa521df63bc72ab9e'
+            - 'MD5=f026460a7a720d0b8394f28a1f9203dc'
+            - 'MD5=fc6dadb97bd3b7a61d06f20d0d2e1bac'
+            - 'MD5=6822566b28be75b2a76446a57064369f'
+            - 'MD5=5dd25029499cd5656927e9c559955b07'
+            - 'MD5=41339c852c6e8e4c94323f500c87a79c'
+            - 'MD5=7eeb4c0cb786a409b94066986addf315'
+            - 'MD5=1bd38ac06ef8709ad23af666622609c9'
+            - 'MD5=aae268c4b593156bdae25af5a2a4af21'
+            - 'MD5=55c36d43dd930069148008902f431ea5'
+            - 'MD5=46cae59443ae41f4dbb42e050a9b501a'
+            - 'MD5=21e72a43aedefcd70ca8999cc353b51b'
+            - 'SHA1=c3a893680cd33706546a7a3e8fbcc4bd063ce07e'
+            - 'SHA1=34ec04159d2c653a583a73285e6e2ac3c7b416dd'
+            - 'SHA1=116679c4b2cca6ec69453309d9d85d3793cbe05f'
+            - 'SHA1=b671677079bf7c660579bee08b8875a48ff61896'
+            - 'SHA1=25d812a5ece19ea375178ef9d60415841087726e'
+            - 'SHA1=63f9ee1e7aefd961cf36eeffd455977f1b940f6c'
+            - 'SHA1=f52c2d897fa00910d5566503dd5a297970f13dc6'
+            - 'SHA1=e9f576137181c261dc3b23871d1d822731d54a12'
+            - 'SHA1=10fc6933deb7de9813e07d864ce03334a4f489d9'
+            - 'SHA1=9ca90642cff9ca71c7022c0f9dfd87da2b6a0bff'
+            - 'SHA1=3def50587309440e3b9e595bdbe4dde8d69a64e7'
+            - 'SHA1=bca4bbe4388ebeb834688e97fac281c09b0f3ac1'
+            - 'SHA1=c22c28a32a5e43a76514faf4fac14d135e0d4ffd'
+            - 'SHA1=005ac9213a8a4a6c421787a7b25c0bc7b9f3b309'
+            - 'SHA1=a5f9aef55c64722ff2db96039af3b9c7dd8163e3'
+            - 'SHA1=e3266b046d278194ade4d8f677772d0cb4ecfaf1'
+            - 'SHA1=a4ae87b7802c82dfb6a4d26ab52788410af98532'
+            - 'SHA1=19bf65bdd9d77f54f1e8ccf189dc114e752344b0'
+            - 'SHA1=e1bf5dd17f84bce3b2891dffa855d81a21914418'
+            - 'SHA256=6cf1cac0e97d30bb445b710fd8513879678a8b07be95d309cbf29e9b328ff259'
+            - 'SHA256=d1c78c8ba70368e96515fb0596598938a8f9efa8f9f5d9e068ee008f03020fee'
+            - 'SHA256=72b67b6b38f5e5447880447a55fead7f1de51ca37ae4a0c2b2f23a4cb7455f35'
+            - 'SHA256=834a3d755b5ae798561f8e5fbb18cf28dfcae7a111dc6a03967888e9d10f6d78'
+            - 'SHA256=e89cb7217ec1568b43ad9ca35bf059b17c3e26f093e373ab6ebdeee24272db21'
+            - 'SHA256=d04c72fd31e7d36b101ad30e119e14f6df9cbc7a761526da9b77f9e0b9888bc4'
+            - 'SHA256=66f8bd2b29763acfbb7423f4c3c9c3af9f3ca4113bd580ab32f6e3ee4a4fc64e'
+            - 'SHA256=c190e4a7f1781ec9fa8c17506b4745a1369dcdf174ce07f85de1a66cf4b5ed8a'
+            - 'SHA256=95d50c69cdbf10c9c9d61e64fe864ac91e6f6caa637d128eb20e1d3510e776d3'
+            - 'SHA256=4cd80f4e33b713570f6a16b9f77679efa45a466737e41db45b41924e7d7caef4'
+            - 'SHA256=7f84f009704bc36f0e97c7be3de90648a5e7c21b4f870e4f210514d4418079a0'
+            - 'SHA256=00c02901472d74e8276743c847b8148be3799b0e3037c1dfdca21fa81ad4b922'
+            - 'SHA256=f27febff1be9e89e48a9128e2121c7754d15f8a5b2e88c50102cecee5fe60229'
+            - 'SHA256=8138b219a2b1be2b0be61e5338be470c18ad6975f11119aee3a771d4584ed750'
+            - 'SHA256=3b7177e9a10c1392633c5f605600bb23c8629379f7f42957972374a05d4dc458'
+            - 'SHA256=66a20fc2658c70facd420f5437a73fa07a5175998e569255cfb16c2f14c5e796'
+            - 'SHA256=0cfb7ea2cc515a7fe913ab3619cbfcf1ca96d8cf72dc350905634a5782907a49'
+            - 'SHA256=dd2f1f7012fb1f4b2fb49be57af515cb462aa9c438e5756285d914d65da3745b'
+            - 'SHA256=87e094214feb56a482cd8ae7ee7c7882b5a8dccce7947fdaa04a660fa19f41e5'
+            - 'IMPHASH=acd1b0130287133223d26c91f27f6899'
+            - 'IMPHASH=28d780857f0f6616f938aca3a38b5072'
+            - 'IMPHASH=ad34ea17f90a34f6f84a399a96383ada'
+            - 'IMPHASH=96f270be3f73ec3fc2f2237fe84efca0'
+            - 'IMPHASH=262d8fbbf1f514399bb3f230cddc12af'
+            - 'IMPHASH=3f4a90b2976641ad2c0164792b24d322'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

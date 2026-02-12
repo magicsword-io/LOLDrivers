@@ -1,0 +1,32 @@
+title: Driver Load - bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56
+id: fbe12f0c-54af-568a-aa70-7a58db95dfc8
+status: experimental
+description: |
+    Detects loading of driver bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56 via hash.
+    hlpdrv.sys is a malicious driver used to disable Windows Defender by modifying registry settings. This driver has been observed in Akira ransomware campaigns, where it is deployed to facilitate AV/EDR evasion or disablement through a Bring Your Own Vulnerable Driver (BYOVD) exploitation chain. The malware modifies the DisableAntiSpyware registry key via regedit.exe execution.
+references:
+    - https://www.loldrivers.io/drivers/73bd234a-6c4f-4304-9e7d-5bc7a3f263e2/
+    - https://www.guidepointsecurity.com/blog/gritrep-akira-sonicwall/
+    - https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/cf7cad39407d8cd93135be42b6bd258f.bin
+author: Michael Haag
+date: 2025/10/27
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=cf7cad39407d8cd93135be42b6bd258f'
+            - 'SHA1=ce1b9909cef820e5281618a7a0099a27a70643dc'
+            - 'SHA256=bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56'
+            - 'IMPHASH=bb62d5bfbc06bfc0791bfc589467b350'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

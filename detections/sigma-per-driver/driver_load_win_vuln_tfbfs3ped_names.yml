@@ -1,0 +1,28 @@
+title: Driver Load - tfbfs3ped.sys
+id: 7b1f679e-b817-5bc5-96e6-21c6690be210
+status: experimental
+description: |
+    Detects loading of driver tfbfs3ped.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/500e07cb-77c6-4e83-ae3f-73f70f1c10b5/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\tfbfs3ped.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

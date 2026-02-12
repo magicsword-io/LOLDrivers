@@ -1,0 +1,27 @@
+title: Driver Load - nt6.sys
+id: dde2f464-ebca-5b9e-b3ea-976214edcda7
+status: experimental
+description: |
+    Detects loading of driver nt6.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/e71f0866-e317-44d4-a456-d6f0c555aa73/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nt6.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

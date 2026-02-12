@@ -1,0 +1,28 @@
+title: Driver Load - msio32.sys
+id: a274d74e-e11d-5e6b-aaa8-554a5c62372e
+status: experimental
+description: |
+    Detects loading of driver msio32.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/58509acb-50b4-41a0-9de3-76c571a459e3/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\msio32.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

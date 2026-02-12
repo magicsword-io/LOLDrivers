@@ -1,0 +1,28 @@
+title: Driver Load - nscm.sys
+id: 422fc094-ae7f-56cf-afa6-2b0c5369a19c
+status: experimental
+description: |
+    Detects loading of driver nscm.sys via name.
+    Novell XTier Session Manager
+references:
+    - https://www.loldrivers.io/drivers/90afa27c-0f67-46a6-b4a9-809f55157c71/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nscm.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,28 @@
+title: Driver Load - yyprotect64.sys
+id: dfe0b104-ce1a-55db-a924-3c5b03c24002
+status: experimental
+description: |
+    Detects loading of driver yyprotect64.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/12ccd18a-11da-495a-b4b4-98a2f2bff180/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\yyprotect64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

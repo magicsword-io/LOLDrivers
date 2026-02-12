@@ -1,0 +1,27 @@
+title: Driver Load - nt4.sys
+id: 21ce66b5-4214-5f7a-95a8-9c592f6e917b
+status: experimental
+description: |
+    Detects loading of driver nt4.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/1d4f7a3a-786b-4a74-b34f-14d44343de9e/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=d7bc7306cb489fe4c285bbeddc6d1a09e814ef55cf30bd5b8daf87a52396f102'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

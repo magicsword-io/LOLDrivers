@@ -1,0 +1,30 @@
+title: Driver Load - rwdrv.sys
+id: a2c88c1c-d8ed-5ef1-971a-9d4e37e078f6
+status: experimental
+description: |
+    Detects loading of driver rwdrv.sys via name.
+    This utility access almost all the computer hardware, including PCI (PCI Express), PCI Index/Data, Memory, Memory Index/Data, I/O Space, I/O Index/Data, Super I/O, Clock Generator, DIMM SPD, SMBus Device, CPU MSR Registers, ATA/ATAPI Identify Data, Disk Read Write, ACPI Tables Dump (include AML decode), Embedded Controller, USB Information, SMBIOS Structures, PCI Option ROMs, MP Configuration Table, E820, EDID and Remote Access. And also a Command Window is provided to access hardware manually.
+references:
+    - https://www.loldrivers.io/drivers/fbdd993b-47b1-4448-8c41-24c310802398/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+    - http://rweverything.com/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rwdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

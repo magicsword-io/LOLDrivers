@@ -1,0 +1,32 @@
+title: Driver Load - FairplayKD.sys
+id: f45ccc27-235e-5440-bee4-7ef87a953579
+status: experimental
+description: |
+    Detects loading of driver FairplayKD.sys via hash.
+    Multi Theft Auto patch driver
+references:
+    - https://www.loldrivers.io/drivers/31686f0e-3748-48c2-be09-fc8f3252e780/
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4e90cd77509738d30d3181a4d0880bfa'
+            - 'SHA1=b4dcdbd97f38b24d729b986f84a9cdb3fc34d59f'
+            - 'SHA256=9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5'
+            - 'IMPHASH=cb15f8046e159c17b0510738fa18f758'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

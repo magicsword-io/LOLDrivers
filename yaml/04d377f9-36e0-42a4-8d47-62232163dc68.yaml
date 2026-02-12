@@ -7,343 +7,373 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel
-        && sc.exe start iomem64.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel
+    && sc.exe start iomem64.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4.yara
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: 9b6609bd5d9d8de37273fe2d355ae349
-        SHA1: 4bf9ce7ffca224020572af6c13e866d8d41ad5bf
-        SHA256: 46ffe559f5a8f6bd611ac5a9264edf92d8449d8d31b2ddf6b2add5971e309c56
-    Company: DT Research, Inc.
-    Copyright: DT Research Inc. All Rights Reserved.
-    CreationTimestamp: '2013-01-28 01:45:17'
-    Date: ''
-    Description: DTR Kernel mode driver
-    ExportedFunctions: ''
-    FileVersion: 2.3.0.0
-    Filename: iomem64.sys
-    ImportedFunctions:
-    - IoDeleteDevice
-    - MmUnmapIoSpace
-    - KeEnterCriticalRegion
-    - MmFreeNonCachedMemory
-    - MmMapIoSpace
-    - RtlInitUnicodeString
-    - IoCreateSymbolicLink
-    - MmAllocateNonCachedMemory
-    - IoCreateDevice
-    - KeBugCheckEx
-    - KeLeaveCriticalRegion
-    - IofCompleteRequest
-    - IoDeleteSymbolicLink
-    - HalSetBusDataByOffset
-    - HalGetBusDataByOffset
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: iomem.sys
-    MD5: 0898af0888d8f7a9544ef56e5e16354e
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: iomem.sys
-    Product: iomem.sys
-    ProductVersion: 2.3.0.0
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 0ae286be57b21fec5b461a83d859358d
-        SHA1: 2f485c062bee896fc4fa28cc256c4f7466f3ff81
-        SHA256: 1beb30ca75a71912c068d962caa0f4a651ff924c1cbb1b88cf2bdcb357590e21
-    SHA1: 4b009e91bae8d27b160dc195f10c095f8a2441e1
-    SHA256: 3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4
-    Sections:
-        .text:
-            Entropy: 5.429433941896276
-            Virtual Size: '0x13b4'
-        .rdata:
-            Entropy: 4.340575063764079
-            Virtual Size: '0x198'
-        .data:
-            Entropy: 0.5035334969292564
-            Virtual Size: '0x118'
-        .pdata:
-            Entropy: 3.3340349653294203
-            Virtual Size: '0xa8'
-        INIT:
-            Entropy: 5.039084100171449
-            Virtual Size: '0x2a6'
-        .rsrc:
-            Entropy: 3.2363116153206524
-            Virtual Size: '0x350'
-    Signature:
-    - DT RESEARCH, INC. TAIWAN BRANCH
-    - VeriSign Class 3 Code Signing 2010 CA
-    - VeriSign
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                CA , G2
-            ValidFrom: '2012-12-21 00:00:00'
-            ValidTo: '2020-12-30 23:59:59'
-            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-            Version: 3
-            TBS:
-                MD5: d0785ad36e427c92b19f6826ab1e8020
-                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G4
-            ValidFrom: '2012-10-18 00:00:00'
-            ValidTo: '2020-12-29 23:59:59'
-            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-            Version: 3
-            TBS:
-                MD5: e9d38360b914c8863f6cba3ee58764d3
-                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-        -   Subject: C=TW, ST=Taipei, L=Zhongzheng, O=DT RESEARCH, INC. TAIWAN BRANCH,
-                OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=DT RESEARCH,
-                INC. TAIWAN BRANCH
-            ValidFrom: '2012-11-28 00:00:00'
-            ValidTo: '2014-02-27 23:59:59'
-            Signature: f0db051a101a03822142ad6370846fde79334c0ca76bd6e57fe4dca43570ce0936b1a9c4e3372dfbe23eecf858c76228a3dda166e0a9890c3a9558ee704b9ac6fda3d31e0dfb250d369568f623a15c8c041bfd94332adfd636c16e6e5a00d4fff2d53f85398ce97de15f54baebc937904f72fa829e848b83f9aec30e201930e2811167fc1c7f5b1570b197bc7d797e91060df7946148f43944021c30c2a73a6af1b916358071208ef26c6b3bc59bb2d3db066c0575200b6d65ed47f267412a4a5983735235506602282aa045c6b716827243955ace1bc0222a3d611dab9e84f960c4cb66e23c60b75d50aca0ee9f7dbff7e2a157e5525dfcd8b90448944190e1
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 79666acda698ffe7bb2f8c23ade9d57d
-            Version: 3
-            TBS:
-                MD5: dbb1dd5e54c789f66640d658709fedf2
-                SHA1: c5216c75242d0744a48ee5527b5f32953eca22de
-                SHA256: 2a3d22ff84046ce3ef33bb5b856892a9154243c11be3c5938ffbb68f3e6d33ba
-                SHA384: cc2c9885bd39100045b4cc7339c25b4ccbac9cc1dc8afbe382bedf2406bd1b71500d59f9ed298d7ad716dd961ac44c23
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
-                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
-                Primary Certification Authority , G5
-            ValidFrom: '2011-02-22 19:25:17'
-            ValidTo: '2021-02-22 19:35:17'
-            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 611993e400000000001c
-            Version: 3
-            TBS:
-                MD5: 78a717e082dcc1cda3458d917e677d14
-                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            ValidFrom: '2010-02-08 00:00:00'
-            ValidTo: '2020-02-07 23:59:59'
-            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-            Version: 3
-            TBS:
-                MD5: b30c31a572b0409383ed3fbe17e56e81
-                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-        Signer:
-        -   SerialNumber: 79666acda698ffe7bb2f8c23ade9d57d
-            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            Version: 1
-    Imphash: 679eba16ab2d51543b7007708838ef7c
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 91896c53af5ab967f7f131285354e4ac
-        SHA1: 7eec42b3027252dea4c777bbdbd47560bc179986
-        SHA256: 57d36936fbf8785380536b03e5d9be172e5dd5c3bf435e19875a80aa96f97e1f
-    Company: DT Research, Inc.
-    Copyright: DT Research Inc. All Rights Reserved.
-    CreationTimestamp: '2012-12-03 01:39:06'
-    Date: ''
-    Description: DTR Kernel mode driver
-    ExportedFunctions: ''
-    FileVersion: 2.2.0.0
-    Filename: iomem64.sys
-    ImportedFunctions:
-    - IoDeleteDevice
-    - MmUnmapIoSpace
-    - KeEnterCriticalRegion
-    - MmFreeNonCachedMemory
-    - MmMapIoSpace
-    - RtlInitUnicodeString
-    - IoCreateSymbolicLink
-    - MmAllocateNonCachedMemory
-    - IoCreateDevice
-    - KeBugCheckEx
-    - KeLeaveCriticalRegion
-    - IofCompleteRequest
-    - IoDeleteSymbolicLink
-    - HalSetBusDataByOffset
-    - HalGetBusDataByOffset
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: iomem.sys
-    MD5: f1e054333cc40f79cfa78e5fbf3b54c2
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: iomem.sys
-    Product: iomem.sys
-    ProductVersion: 2.2.0.0
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 0ae286be57b21fec5b461a83d859358d
-        SHA1: 2f485c062bee896fc4fa28cc256c4f7466f3ff81
-        SHA256: 1beb30ca75a71912c068d962caa0f4a651ff924c1cbb1b88cf2bdcb357590e21
-    SHA1: 6003184788cd3d2fc624ca801df291ccc4e225ee
-    SHA256: dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097
-    Sections:
-        .text:
-            Entropy: 5.4276217868285315
-            Virtual Size: '0x1384'
-        .rdata:
-            Entropy: 4.330082770085826
-            Virtual Size: '0x198'
-        .data:
-            Entropy: 0.5035334969292564
-            Virtual Size: '0x118'
-        .pdata:
-            Entropy: 3.3340349653294203
-            Virtual Size: '0xa8'
-        INIT:
-            Entropy: 5.039084100171449
-            Virtual Size: '0x2a6'
-        .rsrc:
-            Entropy: 3.227189755068873
-            Virtual Size: '0x350'
-    Signature:
-    - DT RESEARCH, INC. TAIWAN BRANCH
-    - VeriSign Class 3 Code Signing 2010 CA
-    - VeriSign
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G3
-            ValidFrom: '2012-05-01 00:00:00'
-            ValidTo: '2012-12-31 23:59:59'
-            Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
-            Version: 3
-            TBS:
-                MD5: e6d820afb23af20a65cf0b03247ea05e
-                SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
-                SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
-                SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
-        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-            ValidFrom: '2003-12-04 00:00:00'
-            ValidTo: '2013-12-03 23:59:59'
-            Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-            Version: 3
-            TBS:
-                MD5: 518d2ea8a21e879c942d504824ac211c
-                SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-                SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-                SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
-        -   Subject: C=TW, ST=Taiwan, L=Taipei, O=DT RESEARCH, INC. TAIWAN BRANCH,
-                OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=DT RESEARCH,
-                INC. TAIWAN BRANCH
-            ValidFrom: '2012-01-18 00:00:00'
-            ValidTo: '2013-01-17 23:59:59'
-            Signature: b8ae271018c3961846bf8143d1fc6ab9ce843d08c492ac7d179086c44a9453bc00ccfaeb638fce7fef3b83104a060a2e3284f63818f0798ae33db982098c7f4bcff265294f27248dd5874243e55451a30061fff3f1a9e78ca0aadabd376ec0d20176e731df3655c1328763c8fc2cae631e33abcc244a829cebb7bdf54eaf41fc2a63ba2671896ae6371792f40af06b9ac5de4b34837e7b85676eca74761b6e6872be25f14fda20ddd845b155e290b909a3c84329aded0d04a0a79843d71035467c61a72f66668e7941d69c1e2c69c8c2bc4a09243472bcbcec9af16ee4b286109325935364790810d40a59d7ef5758ef9e9444e2623977329efd8c5d38431af7
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 215c8fa3dc44a29e86e5e59bd239b3c8
-            Version: 3
-            TBS:
-                MD5: a64ea916f6938102e6116b8283e3597f
-                SHA1: 888f188d39a9c8b14375f1bbcf5c88f5b1e92d63
-                SHA256: 1ad8fb0027b18802ed025be6d1258c99c5d2ee586e2eb5ecfaa706bc8b8170c9
-                SHA384: 9bf7495220fe2b9cd3c86a155aacdf93325f370a32233aaa8c4a185864d52f178b26c6af87335146f7f716237f13c854
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
-                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
-                Primary Certification Authority , G5
-            ValidFrom: '2011-02-22 19:25:17'
-            ValidTo: '2021-02-22 19:35:17'
-            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 611993e400000000001c
-            Version: 3
-            TBS:
-                MD5: 78a717e082dcc1cda3458d917e677d14
-                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            ValidFrom: '2010-02-08 00:00:00'
-            ValidTo: '2020-02-07 23:59:59'
-            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-            Version: 3
-            TBS:
-                MD5: b30c31a572b0409383ed3fbe17e56e81
-                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-        Signer:
-        -   SerialNumber: 215c8fa3dc44a29e86e5e59bd239b3c8
-            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            Version: 1
-    Imphash: 679eba16ab2d51543b7007708838ef7c
-    LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 9b6609bd5d9d8de37273fe2d355ae349
+    SHA1: 4bf9ce7ffca224020572af6c13e866d8d41ad5bf
+    SHA256: 46ffe559f5a8f6bd611ac5a9264edf92d8449d8d31b2ddf6b2add5971e309c56
+  Company: DT Research, Inc.
+  Copyright: DT Research Inc. All Rights Reserved.
+  CreationTimestamp: '2013-01-28 03:45:17'
+  Date: ''
+  Description: DTR Kernel mode driver
+  ExportedFunctions: ''
+  FileVersion: 2.3.0.0
+  Filename: iomem64.sys
+  ImportedFunctions:
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - KeEnterCriticalRegion
+  - MmFreeNonCachedMemory
+  - MmMapIoSpace
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - MmAllocateNonCachedMemory
+  - IoCreateDevice
+  - KeBugCheckEx
+  - KeLeaveCriticalRegion
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: iomem.sys
+  MD5: 0898af0888d8f7a9544ef56e5e16354e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: iomem.sys
+  Product: iomem.sys
+  ProductVersion: 2.3.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 0ae286be57b21fec5b461a83d859358d
+    SHA1: 2f485c062bee896fc4fa28cc256c4f7466f3ff81
+    SHA256: 1beb30ca75a71912c068d962caa0f4a651ff924c1cbb1b88cf2bdcb357590e21
+  SHA1: 4b009e91bae8d27b160dc195f10c095f8a2441e1
+  SHA256: 3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4
+  Sections:
+    .text:
+      Entropy: 5.429433941896276
+      Virtual Size: '0x13b4'
+    .rdata:
+      Entropy: 4.340575063764079
+      Virtual Size: '0x198'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.3340349653294203
+      Virtual Size: '0xa8'
+    INIT:
+      Entropy: 5.039084100171449
+      Virtual Size: '0x2a6'
+    .rsrc:
+      Entropy: 3.2363116153206524
+      Virtual Size: '0x350'
+  Signature:
+  - DT RESEARCH, INC. TAIWAN BRANCH
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=TW, ST=Taipei, L=Zhongzheng, O=DT RESEARCH, INC. TAIWAN BRANCH, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=DT RESEARCH, INC. TAIWAN
+        BRANCH
+      ValidFrom: '2012-11-28 00:00:00'
+      ValidTo: '2014-02-27 23:59:59'
+      Signature: f0db051a101a03822142ad6370846fde79334c0ca76bd6e57fe4dca43570ce0936b1a9c4e3372dfbe23eecf858c76228a3dda166e0a9890c3a9558ee704b9ac6fda3d31e0dfb250d369568f623a15c8c041bfd94332adfd636c16e6e5a00d4fff2d53f85398ce97de15f54baebc937904f72fa829e848b83f9aec30e201930e2811167fc1c7f5b1570b197bc7d797e91060df7946148f43944021c30c2a73a6af1b916358071208ef26c6b3bc59bb2d3db066c0575200b6d65ed47f267412a4a5983735235506602282aa045c6b716827243955ace1bc0222a3d611dab9e84f960c4cb66e23c60b75d50aca0ee9f7dbff7e2a157e5525dfcd8b90448944190e1
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 79666acda698ffe7bb2f8c23ade9d57d
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: dbb1dd5e54c789f66640d658709fedf2
+        SHA1: c5216c75242d0744a48ee5527b5f32953eca22de
+        SHA256: 2a3d22ff84046ce3ef33bb5b856892a9154243c11be3c5938ffbb68f3e6d33ba
+        SHA384: cc2c9885bd39100045b4cc7339c25b4ccbac9cc1dc8afbe382bedf2406bd1b71500d59f9ed298d7ad716dd961ac44c23
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 79666acda698ffe7bb2f8c23ade9d57d
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+  Imphash: 679eba16ab2d51543b7007708838ef7c
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 91896c53af5ab967f7f131285354e4ac
+    SHA1: 7eec42b3027252dea4c777bbdbd47560bc179986
+    SHA256: 57d36936fbf8785380536b03e5d9be172e5dd5c3bf435e19875a80aa96f97e1f
+  Company: DT Research, Inc.
+  Copyright: DT Research Inc. All Rights Reserved.
+  CreationTimestamp: '2012-12-03 03:39:06'
+  Date: ''
+  Description: DTR Kernel mode driver
+  ExportedFunctions: ''
+  FileVersion: 2.2.0.0
+  Filename: iomem64.sys
+  ImportedFunctions:
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - KeEnterCriticalRegion
+  - MmFreeNonCachedMemory
+  - MmMapIoSpace
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - MmAllocateNonCachedMemory
+  - IoCreateDevice
+  - KeBugCheckEx
+  - KeLeaveCriticalRegion
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: iomem.sys
+  MD5: f1e054333cc40f79cfa78e5fbf3b54c2
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: iomem.sys
+  Product: iomem.sys
+  ProductVersion: 2.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 0ae286be57b21fec5b461a83d859358d
+    SHA1: 2f485c062bee896fc4fa28cc256c4f7466f3ff81
+    SHA256: 1beb30ca75a71912c068d962caa0f4a651ff924c1cbb1b88cf2bdcb357590e21
+  SHA1: 6003184788cd3d2fc624ca801df291ccc4e225ee
+  SHA256: dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097
+  Sections:
+    .text:
+      Entropy: 5.4276217868285315
+      Virtual Size: '0x1384'
+    .rdata:
+      Entropy: 4.330082770085826
+      Virtual Size: '0x198'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.3340349653294203
+      Virtual Size: '0xa8'
+    INIT:
+      Entropy: 5.039084100171449
+      Virtual Size: '0x2a6'
+    .rsrc:
+      Entropy: 3.227189755068873
+      Virtual Size: '0x350'
+  Signature:
+  - DT RESEARCH, INC. TAIWAN BRANCH
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G3
+      ValidFrom: '2012-05-01 00:00:00'
+      ValidTo: '2012-12-31 23:59:59'
+      Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e6d820afb23af20a65cf0b03247ea05e
+        SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
+        SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=TW, ST=Taiwan, L=Taipei, O=DT RESEARCH, INC. TAIWAN BRANCH, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=DT RESEARCH, INC. TAIWAN
+        BRANCH
+      ValidFrom: '2012-01-18 00:00:00'
+      ValidTo: '2013-01-17 23:59:59'
+      Signature: b8ae271018c3961846bf8143d1fc6ab9ce843d08c492ac7d179086c44a9453bc00ccfaeb638fce7fef3b83104a060a2e3284f63818f0798ae33db982098c7f4bcff265294f27248dd5874243e55451a30061fff3f1a9e78ca0aadabd376ec0d20176e731df3655c1328763c8fc2cae631e33abcc244a829cebb7bdf54eaf41fc2a63ba2671896ae6371792f40af06b9ac5de4b34837e7b85676eca74761b6e6872be25f14fda20ddd845b155e290b909a3c84329aded0d04a0a79843d71035467c61a72f66668e7941d69c1e2c69c8c2bc4a09243472bcbcec9af16ee4b286109325935364790810d40a59d7ef5758ef9e9444e2623977329efd8c5d38431af7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 215c8fa3dc44a29e86e5e59bd239b3c8
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: a64ea916f6938102e6116b8283e3597f
+        SHA1: 888f188d39a9c8b14375f1bbcf5c88f5b1e92d63
+        SHA256: 1ad8fb0027b18802ed025be6d1258c99c5d2ee586e2eb5ecfaa706bc8b8170c9
+        SHA384: 9bf7495220fe2b9cd3c86a155aacdf93325f370a32233aaa8c4a185864d52f178b26c6af87335146f7f716237f13c854
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 215c8fa3dc44a29e86e5e59bd239b3c8
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+  Imphash: 679eba16ab2d51543b7007708838ef7c
+  LoadsDespiteHVCI: 'FALSE'

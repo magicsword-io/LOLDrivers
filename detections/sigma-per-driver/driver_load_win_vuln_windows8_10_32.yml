@@ -1,0 +1,27 @@
+title: Driver Load - windows8-10-32.sys
+id: 24948938-6ceb-5e02-867c-ea42b31d8864
+status: experimental
+description: |
+    Detects loading of driver windows8-10-32.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/7437388f-821e-421f-a3c1-62ce2c725a6a/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=5b9623da9ba8e5c80c49473f40ffe7ad315dcadffc3230afdc9d9226d60a715a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

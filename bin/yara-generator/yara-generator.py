@@ -4,9 +4,9 @@
 #
 # Generates YARA rules for a usable subset of the known vulnerable / malicious drivers
 # Florian Roth
-# june 2023
+# July 2025
 
-__version__ = "0.4.1"
+__version__ = "0.4.2"
 __author__ = "Florian Roth"
 
 import sys
@@ -43,6 +43,10 @@ rule $$$RULENAME$$$ {
 }
 '''
 
+SKIP_DRIVERS = [
+	"3748096bd604a91bc26b2aa1c6883fce.bin" # driver_290bc782.sys - see https://magicswordio.slack.com/archives/C0533A7USGM/p1751462576699979
+	]
+
 def process_folders(input_folders, debug):
 	input_files = []
 	print(input_folders)
@@ -52,6 +56,12 @@ def process_folders(input_folders, debug):
 		else:
 			for dirpath, dirnames, files in os.walk(d):
 				for f in files:
+					# Print processed file in debug mode
+					Log.debug("Processing file: %s" % f)
+					# Skip files that are in the SKIP_DRIVERS list
+					if f in SKIP_DRIVERS:
+						Log.debug("Skipping file %s as it is in the SKIP_DRIVERS list" % f)
+						continue
 					# if ".sys" in f:
 					input_files.append(os.path.join(dirpath, f))
 	return input_files
@@ -140,12 +150,18 @@ def process_files(input_files, debug):
 		#pprint(header_infos)
 		if not is_duplicate:
 			header_infos.append(yara_rule_infos)
-	
+
+	# Sort lists to get the same order across different Python versions and operating systems
+	for hi in header_infos:
+		for key, value in hi.items():
+			if isinstance(value, list):
+				hi[key] = sorted(value)
+
 	return header_infos
 
 
 def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, renamed):
-    rules = list()
+    rules = dict()
 
     # Loop over the header infos 
     for hi in header_infos:
@@ -244,8 +260,9 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
 
         Log.debug(new_rule)
         # Append rule to the list
-        rules.append(new_rule)
-    return rules
+        rules[rule_name] = new_rule
+		
+    return [rules[rule_name] for rule_name in sorted(rules)]
 
 
 
@@ -268,8 +285,8 @@ def generate_string_values(version_info):
 	string_values = []
 	for field, value in version_info.items():
 		if value: # if not empty
-			field_hex = binascii.hexlify(field.encode('utf-16-be')).decode()
-			value_hex = binascii.hexlify(value.encode('utf-16-be')).decode()
+			field_hex = binascii.hexlify(field.encode('utf-16-le')).decode()
+			value_hex = binascii.hexlify(value.encode('utf-16-le')).decode()
 			search_value = "{ %s[1-8]%s } /* %s %s */" % (field_hex, value_hex, field, removeNonAsciiDrop(value))
 			string_values.append(search_value)
 	return string_values

@@ -1,0 +1,28 @@
+title: Driver Load - truesight.sys
+id: e1f2d813-2d4f-5956-914c-2ac9f5275eb5
+status: experimental
+description: |
+    Detects loading of driver truesight.sys via name.
+    This is a C# AV/EDR Killer using Rogue Anti-Malware Driver 3.3. This driver is not present in the loldrivers or Windows blocklist at the time of this writing. The only reason I'm making this public is because the company has already published a fix in version 3.4, and Microsoft will likely block this driver soon. This driver can be used in Windows 23H2 with HVCI enabled, loldrivers blocklist, or WDAC enabled. HVCI is designed to ensure the integrity of code executed in the kernel, but it cannot protect against all possible vulnerabilities or actions that can be performed through drivers or system interfaces.
+references:
+    - https://www.loldrivers.io/drivers/e0e93453-1007-4799-ad02-9b461b7e0398/
+    - https://github.com/ph4nt0mbyt3/Darkside
+author: ph4nt0mbyt3, Michael Haag
+date: 2023/11/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\truesight.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

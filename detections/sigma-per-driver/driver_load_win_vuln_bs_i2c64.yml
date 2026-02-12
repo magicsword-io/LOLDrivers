@@ -1,0 +1,31 @@
+title: Driver Load - BS_I2c64.sys
+id: 88c2422b-08f3-5f9b-8b57-fc88737eb513
+status: experimental
+description: |
+    Detects loading of driver BS_I2c64.sys via hash.
+    I/O Interface driver file
+references:
+    - https://www.loldrivers.io/drivers/de4dd27a-1f7e-4271-98a4-55395ab6aabf/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=83601bbe5563d92c1fdb4e960d84dc77'
+            - 'SHA1=dc55217b6043d819eadebd423ff07704ee103231'
+            - 'SHA256=55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a'
+            - 'IMPHASH=07a513d1599c93bd34f01323b1ef7430'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

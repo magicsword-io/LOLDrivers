@@ -1,0 +1,31 @@
+title: Driver Load - wnbios.sys
+id: cb3beb7a-6e2a-5995-9999-f70d8026789d
+status: experimental
+description: |
+    Detects loading of driver wnbios.sys via hash.
+    Utilized in RealBlindingEDR.
+references:
+    - https://www.loldrivers.io/drivers/baa168cd-eba2-42e4-95e9-47cb4b2f9094/
+    - https://github.com/myzxcg/RealBlindingEDR/
+author: goosvorbook
+date: 2024/06/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a55bcd596643362ddb2ee558aa238baf'
+            - 'SHA1=aec96520e85330594d3165c86cb92eac34c1e095'
+            - 'SHA256=530d9223ec7e4123532a403abef96dfd1af5291eb49497392ff5d14d18fccfbb'
+            - 'IMPHASH=72374a1c4c0e0db4efcb1386f470a2f3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

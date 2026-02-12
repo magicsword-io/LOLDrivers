@@ -1,0 +1,28 @@
+title: Driver Load - iomem64.sys
+id: c3e57a96-4aed-55e8-a8a1-923f668e9510
+status: experimental
+description: |
+    Detects loading of driver iomem64.sys via name.
+    DTR Kernel mode driver
+references:
+    - https://www.loldrivers.io/drivers/04d377f9-36e0-42a4-8d47-62232163dc68/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\iomem64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

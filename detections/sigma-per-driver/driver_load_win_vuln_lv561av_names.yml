@@ -1,0 +1,28 @@
+title: Driver Load - Lv561av.sys
+id: f2f2a931-c055-5b2d-b3f7-6ce5d2658783
+status: experimental
+description: |
+    Detects loading of driver Lv561av.sys via name.
+    Logitech Video Driver
+references:
+    - https://www.loldrivers.io/drivers/47a351ee-8abe-40d8-bc2b-557390fa0945/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\lv561av.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

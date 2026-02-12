@@ -1,0 +1,31 @@
+title: Driver Load - driver_312c83a9.sys
+id: a274468c-fe11-56e0-a637-9d3c65875f3a
+status: experimental
+description: |
+    Detects loading of driver driver_312c83a9.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/495f0f36-c5e0-467d-8115-b5bdbe7ff686/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=63366b4fb6f3b974900985ab064beb9b'
+            - 'SHA1=8d75f08e0ab4502ba0e871204723749596685232'
+            - 'SHA256=312c83a99928c30c1fc55a0a1e7571a63b0e04391abe3392115bb3b7e3f60f47'
+            - 'IMPHASH=bf06985f2031c08da05742e19dae38a7'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

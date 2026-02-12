@@ -1,0 +1,34 @@
+title: Driver Load - dbk64.sys
+id: 76152d8b-5af5-5cf9-8669-50a68066e7b9
+status: experimental
+description: |
+    Detects loading of driver dbk64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/1524a54d-520d-4fa4-a7d5-aaaa066fbfc4/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1c294146fc77565030603878fd0106f9'
+            - 'MD5=3a48f0e4297947663fbb11702aa1d728'
+            - 'SHA1=a54ae1793e9d77e61416e0d9fb81269a4bc8f8a2'
+            - 'SHA1=6053d258096bccb07cb0057d700fe05233ab1fbb'
+            - 'SHA256=18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6'
+            - 'SHA256=626fae47811450d080d08c3d9fd890aa64bfecdc45eacd42a40850c1833c8763'
+            - 'IMPHASH=5759d90322a7311eaccf4f0ab2c2a7c4'
+            - 'IMPHASH=105b74485670215ab231a942c9101ccf'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,31 @@
+title: Driver Load - PhlashNT.sys
+id: 35cec55f-fb81-5c32-a686-96cb7fe6c334
+status: experimental
+description: |
+    Detects loading of driver PhlashNT.sys via hash.
+    SWinFlash Driver for Windows NT
+references:
+    - https://www.loldrivers.io/drivers/be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e9e786bdba458b8b4f9e93d034f73d00'
+            - 'SHA1=c6d349823bbb1f5b44bae91357895dba653c5861'
+            - 'SHA256=65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890'
+            - 'IMPHASH=b1336b0cb67918ed39f1f88c354910d0'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,220 @@
+Id: c95a796a-a8f6-4cfa-bc42-4936ecb59091
+Author: Michael Haag
+Created: '2025-03-26'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create 8492937_2_Driver.sys binPath=C:\windows\temp\8492937_2_Driver.sys
+    type=kernel && sc.exe start 8492937_2_Driver.sys
+  Description: ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks
+    to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon
+    driver and provides extensive capabilities to terminate processes, remove security
+    callbacks, manipulate files, and disable security tools. It uses stolen certificates
+    from Chinese companies and requires a specific password for activation. The driver
+    was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers
+    with kernel-level capabilities to blind EDR products by removing notification
+    callbacks, detaching mini-filter devices, and replacing driver major functions.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.elastic.co/security-labs/abyssworker
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: aa2be4dc59afe5a8433882bc29429139
+  SHA1: 0ffbfa08d0ebbe245e77ceb97abb6ae5261cb6c8
+  SHA256: d51d00127ddd4551fb1eafe14255715014944ad4c60eabb9e568c3ff98ff4a2e
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Imphash: 64ff03c62192b398da2cd3816f5f04a5
+  Authentihash:
+    MD5: 0ebbc45176b9727211bef35bae509762
+    SHA1: 9c333ff04b202ce80a8cf9706d6a3176f1b6cc6b
+    SHA256: 331a5bf8965b6410c5517df3ffad4d15afc4390f5b482a6e5fae1c01dd55059f
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0x3051'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x7ac'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x1504'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x24c'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0x55a'
+    .r0H:
+      Entropy: 0.0
+      Virtual Size: '0x5e5ff8'
+    .3a{:
+      Entropy: 0.6274241318240428
+      Virtual Size: '0x388'
+    .!LZ:
+      Entropy: 7.7246593758398525
+      Virtual Size: '0x9c7e40'
+    .reloc:
+      Entropy: 3.792946361767891
+      Virtual Size: '0x10c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-12-22 04:33:27'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - ntoskrnl.exe
+  - HAL.dll
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - strstr
+  - NtQuerySystemInformation
+  - KeQueryPerformanceCounter
+  - ExAllocatePool
+  - NtQuerySystemInformation
+  - ExFreePoolWithTag
+  - IoAllocateMdl
+  - MmProbeAndLockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnlockPages
+  - IoFreeMdl
+  - KeQueryActiveProcessors
+  - KeSetSystemAffinityThread
+  - KeRevertToUserAffinityThread
+  - DbgPrint
+  - KeQueryPerformanceCounter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, ST=, L=, O=, CN=
+      ValidFrom: '2015-03-20 00:00:00'
+      ValidTo: '2016-03-19 23:59:59'
+      Signature: ca84c8ad3a1c9e9b8bfe2e19f98d222c970dcd9db773e56d964090656869bd15920e174b7bb29636f6a8ea72f0ea0f577cf75d763fa291dd31c575fcd35ced7fc52ef7dee9af0567ff60e8645b97b33ec06789f992b541c8cccc80975476a51c7bdeacb9a80527e769bb336d1a5ba0da5137b67e8d18fb218a95e5523465a5deff0c8905850e430d354420456c06664078e42d97b25fde7e524a907258477ea725c1c227131d03d308a55a7aba8d4a49a4ca7c5325454d24ed90d3d15888ea27574014a33bf51fd84cf55d941c845503155864cea2d89b3f0f57ac8227926d2c27b0a8157918bfe9d9da123de7d6b051cac51acf19e99f4f14978dfafd321cf7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 75e8e7b9043b13df60e76499663021c1
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: c744e90982da6083d0d56173dba4c9fa
+        SHA1: 633b38d9372b85e02e013beca47cf5b1b7b10bee
+        SHA256: 09a47ae5b166910e92028c035d2550ccec79b4c9b221bc476380ddb69b5b4770
+        SHA384: 240cbfa8fdb38172da35d1f761200717e8824a6eb58cf2be0421e825fc7ddf5c62a93136a6f844af06d2c5779d80841a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-08-01 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 70a0bf435c55e7385fa0a3741b3db616d7f7bf5707bd9aaca1872cec855ea91abb22f8871a695422eda488776dbd1a14f4134a7a2f2db738eff4ff80b9f8a1f7f272de24bc5203c84ed02adefa2d56cff9f4f7ac307a9a8bb25ed4cfd143449b4321eb9672a148b499cb9d4fa7060313772744d4e77fe859a8f0bf2f0ba6e9f2343cecf703c787a8d24c401935466a6954b0b8a1568eeca4d53de8b1dcfd1cd8f4775a5c548c6fefa1503dfc760968849f6fcadb208d35601c0203cb20b0ac58a00e4063c59822c1b259f5556bcf27ab6c76ce6f232df47e716a236b22ff12b8542d277ed83ad9f0b68796fd5bd15cac18c34d9f73b701a99f57aa5e28e2b994
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 21a266bd49f2778b24d13d95641ea6ac
+        SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
+        SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
+        SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp 2024
+      ValidFrom: '2024-09-26 00:00:00'
+      ValidTo: '2035-11-25 23:59:59'
+      Signature: 3dad1e1f76995be338841247d94391f611db9b4e081dd1284fcfd3dc7b814b265eab78d28b91977963fbc422a1562ade2829c2b3ef06665dae55816f41efa93d349c549782652b0ca35242a1937698c7b0fcbe2da6a54d6d2a563bd4061707cc132eb41e87cde95e75b0c2cc5cd4cb7e156ab3e7bc85aba95a202b4a8cf2026187ffaa0c400874efca9187ac2f24d53a8278793abb823f541402f552bb892a54e709568cd94794516ffccf77ef8f184dea1753f7c56bd85625092ecc6dbe07bf9b303be6805f15949b75a90725ed815431881953558cea7cb0db7bd3e904a0c17e4fab69b4c50d95e85247bbccf82d77bfdfbd64e50acdf4540184b2c84998b6c9e996d0ff1965fc78cef496cd55e901bf64e07a6fa62e9b51ef222ba5a89d4495eb23e53307abc0964ffc6b5bbb708a95d3279fe2e69914e44d7a45204074ea75d9ac3c21086103fbc46c5904885d9a6e1b858b1503a1b65a034561a80b0c1ce99a4f75d38590cd8b9536cc72a152ce6e1c7746e81a106aeef92a235b87473e85ab5217ed369142e47ed0118ecc84a472ac17bbb9cca45bb79a0ae581b016f81ce2911550dcad981dc1a488a8c0e208b8380fe4cf5602b1d8480475ea073474fd977643043f9781b17edb7ff3063782b71cfe74bffd35647a3f6799462ef37043b5c7071d72a26ccb3fc971e10d7364a0f21dca7855024bbb69164ec2ac3aa4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0bae66bc5aba7f9587c6f9e904e33304
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 5faeccba4a92388250daca99221094c6
+        SHA1: e7399d858dbfec688f4e86d3f47d9f6b246b6b9f
+        SHA256: 353e1ce405ef48a69201d83710435c456e3afbab46e42ec7ae65a60c63993d20
+        SHA384: c4e718fa372b7de6b6a40a5ee138ca8fd346017641f4f2d9df254eddfb88cdb50584bb25e1aa1ef3f7dd38a3dc2f44e5
+    Signer:
+    - SerialNumber: 75e8e7b9043b13df60e76499663021c1
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+Tags:
+- 8492937_2_Driver.sys

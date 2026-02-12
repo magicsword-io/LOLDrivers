@@ -1,0 +1,31 @@
+title: Driver Load - skill.sys
+id: 1efe8222-4ff7-5fdb-b346-616dbd116226
+status: experimental
+description: |
+    Detects loading of driver skill.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/724d7989-dfce-4bb2-9beb-dee15df5b790/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2b36d61f6e7420977648ed27e784adf1'
+            - 'SHA1=c92a386622f04a5733cb238d33cedea4272a3f85'
+            - 'SHA256=0c1b21978c6aef881f056f7b9c909b56488019459ed256511d78a4588d1aa7a4'
+            - 'IMPHASH=45bfe170e0cd654bc1e2ae3fca3ac3f4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

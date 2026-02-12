@@ -7,296 +7,326 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel
-        && sc.exe start ProtectS.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel
+    && sc.exe start ProtectS.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: ProtectS.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA256: 9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: ProtectS.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: ProtectS.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: 9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: ProtectS.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: d490f971f9503765a947997d7c54a4c7
+    SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
     SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: d490f971f9503765a947997d7c54a4c7
-        SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
-        SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
-    Company: ''
-    Copyright: ''
-    CreationTimestamp: '2018-12-23 19:03:09'
-    Date: ''
-    Description: ''
-    ExportedFunctions: ''
-    FileVersion: ''
-    Filename: ''
-    ImportedFunctions:
-    - RtlFreeAnsiString
-    - RtlFreeAnsiString
-    - FltCloseClientPort
-    - FltCloseClientPort
-    - FltCloseClientPort
-    - FltCloseClientPort
-    Imports:
-    - ntoskrnl.exe
-    - FLTMGR.SYS
-    InternalName: ''
-    MD5: 3db2afc15e7cc78bd11f4c726060db5c
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: ''
-    PDBPath: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 18623b4d88442645503926b328abb317
-        SHA1: 1e18f1576c30891e0fc129a5a5d3ed62f92a47cc
-        SHA256: 57ee8839c76bdd17ee60e0df2c3c4ee98bb5ce9fd3923fc2db10e708168514ca
-    SHA1: 5a7bcb1864d1e8ecde0b58d21b98518ca4b2f1f2
-    SHA256: c7079033659ac9459b3b7ab2510805832db2e2a70fe9beb1a6e13c1f51890d88
-    Sections:
-        .text:
-            Entropy: 7.954665405440423
-            Virtual Size: '0xd000'
-        .sedata:
-            Entropy: 7.68195090334756
-            Virtual Size: '0x108000'
-        .idata:
-            Entropy: 1.5285230640331269
-            Virtual Size: '0x1000'
-        .reloc:
-            Entropy: 3.7182355926860398
-            Virtual Size: '0x1000'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2028-01-28 12:00:00'
-            Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee152d7
-            Version: 3
-            TBS:
-                MD5: e140543fe3256027cfa79fc3c19c1776
-                SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
-                SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
-                SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
-            ValidFrom: '2016-03-16 00:00:00'
-            ValidTo: '2024-03-16 00:00:00'
-            Signature: 3b41bbc84f561182b719e3d96dc185ae9e690ec84326234b8d44c8e87d5f070e5341d563444a890bb874ac7db578792f8426e2d7f7bad1ae2dfd69cffa7c64dc24162a4adac097a9bbd5dd88e7a1929a0aa5f6f7bace85d6e4e3d455deeddc3e211f1bc87788cffc65fb05b48f12a630d30d66982f6c2e6f85187c8ff5f6fbb1ab10e183270885b07321ba5d2cba8330b73984dd5db67fd28bb455534c42a2bc4a6c78395b631ca37827bfbe34836b6d7b1e60fbc29b0d88ac8c72546bdc3b88ba81525e689783b8ce7fa3cdf9ea2f2676facd0b06ac4344497bf64c9442b2abcfd542d51942696e618664c7b37d078bdbe5767b6e5f65a91690a2cee4ae6492
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 47c30ffefc22bb280f96fea75251
-            Version: 3
-            TBS:
-                MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
-                SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
-                SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
-                SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
-        -   Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
-                , G2
-            ValidFrom: '2016-05-24 00:00:00'
-            ValidTo: '2027-06-24 00:00:00'
-            Signature: 8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 1121d699a764973ef1f8427ee919cc534114
-            Version: 3
-            TBS:
-                MD5: acb5170547d76873f1e4ff18ed5de2eb
-                SHA1: bd6e261e75b807381bada7287de04d259258a5fa
-                SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
-                SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
-        -   Subject: C=CN, ST=, L=, O=, CN=
-            ValidFrom: '2017-12-08 05:01:50'
-            ValidTo: '2021-01-01 08:01:33'
-            Signature: 0ffa0e6fd50ae2d624724fcd237a21b0b7c6e198cfe7236ea203a1ea53ed23c306e8b6e23704583b50986a34b0cd0cb26d7a06fe5ca90f4f45320f2d59a2f88d1fe793c9baf7d328fd60317d21ae9242e85710a5c2184a7f93b82abbb8a8eb705722e17c0ce0eda8f2cdd44da7ba54ecf400584636802e7ec786354386807768df2a49f88330eb86e89b8db3894ccebc7db0ddbc48165f8b802469e9a5c0c95395b631328cf867519024b1d5229768f2b2b070e5529eb2186a694fa134c9494d82dc028c2428c6b72ba9289830e0222b27952d4abb3c639de8ecb47f5b37bc53df7c781e83850dcbb0a9c4c1d8ce917fac942af20e8bd4a58537a3b5a71ea679
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 388c116793e1e1d856228d71
-            Version: 3
-            TBS:
-                MD5: 75180555124339ca60ebf14f4557be81
-                SHA1: 77633d11569cd564679dc30224d0ae48e1edccae
-                SHA256: 61dba159677df60bad1a8fcc134eb94160b690c25ec944d49cf02359d8c757c7
-                SHA384: cec93517c684da5a56d69a31cd126b5f83cb8e23462ba393ba4fee53949fc4948202a1c672ad29a43e5110da4531c0d9
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        Signer:
-        -   SerialNumber: 388c116793e1e1d856228d71
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
-            Version: 1
-    Imphash: 8b6c1a09e11200591663b880a94a8d18
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: d490f971f9503765a947997d7c54a4c7
-        SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
-        SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
-    Company: ''
-    Copyright: ''
-    CreationTimestamp: '2018-12-23 19:03:09'
-    Date: ''
-    Description: ''
-    ExportedFunctions: ''
-    FileVersion: ''
-    Filename: ''
-    ImportedFunctions:
-    - RtlFreeAnsiString
-    - RtlFreeAnsiString
-    - FltCloseClientPort
-    - FltCloseClientPort
-    - FltCloseClientPort
-    - FltCloseClientPort
-    Imports:
-    - ntoskrnl.exe
-    - FLTMGR.SYS
-    InternalName: ''
-    MD5: 986f083e5fd01eea4ec3b2575a110a95
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: ''
-    PDBPath: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 18623b4d88442645503926b328abb317
-        SHA1: 1e18f1576c30891e0fc129a5a5d3ed62f92a47cc
-        SHA256: 57ee8839c76bdd17ee60e0df2c3c4ee98bb5ce9fd3923fc2db10e708168514ca
-    SHA1: ebced350ea447df8e10ebb080e3a3e5b32aca348
-    SHA256: 082d4d4d4ba1bda5e1599bd24e930ae9f000e7d12b00f7021cca90a4600ea470
-    Sections:
-        .text:
-            Entropy: 7.954665405440423
-            Virtual Size: '0xd000'
-        .sedata:
-            Entropy: 7.68195090334756
-            Virtual Size: '0x108000'
-        .idata:
-            Entropy: 1.5285230640331269
-            Virtual Size: '0x1000'
-        .reloc:
-            Entropy: 3.7182355926860398
-            Virtual Size: '0x1000'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2028-01-28 12:00:00'
-            Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee152d7
-            Version: 3
-            TBS:
-                MD5: e140543fe3256027cfa79fc3c19c1776
-                SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
-                SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
-                SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
-            ValidFrom: '2016-03-16 00:00:00'
-            ValidTo: '2024-03-16 00:00:00'
-            Signature: 3b41bbc84f561182b719e3d96dc185ae9e690ec84326234b8d44c8e87d5f070e5341d563444a890bb874ac7db578792f8426e2d7f7bad1ae2dfd69cffa7c64dc24162a4adac097a9bbd5dd88e7a1929a0aa5f6f7bace85d6e4e3d455deeddc3e211f1bc87788cffc65fb05b48f12a630d30d66982f6c2e6f85187c8ff5f6fbb1ab10e183270885b07321ba5d2cba8330b73984dd5db67fd28bb455534c42a2bc4a6c78395b631ca37827bfbe34836b6d7b1e60fbc29b0d88ac8c72546bdc3b88ba81525e689783b8ce7fa3cdf9ea2f2676facd0b06ac4344497bf64c9442b2abcfd542d51942696e618664c7b37d078bdbe5767b6e5f65a91690a2cee4ae6492
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 47c30ffefc22bb280f96fea75251
-            Version: 3
-            TBS:
-                MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
-                SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
-                SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
-                SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
-        -   Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
-                , G2
-            ValidFrom: '2016-05-24 00:00:00'
-            ValidTo: '2027-06-24 00:00:00'
-            Signature: 8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 1121d699a764973ef1f8427ee919cc534114
-            Version: 3
-            TBS:
-                MD5: acb5170547d76873f1e4ff18ed5de2eb
-                SHA1: bd6e261e75b807381bada7287de04d259258a5fa
-                SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
-                SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
-        -   Subject: C=CN, ST=, L=, O=, CN=
-            ValidFrom: '2019-03-25 08:28:21'
-            ValidTo: '2021-01-01 08:01:33'
-            Signature: 1bb1fdbb9443a09ed9116cefc42898629cc241933acd0732b579933b8658315d82b85c4e67f0f17bd8d0f0b01842e8d16ba5be8b1d6151e979df5509c2723be19dbf7678c670656aa3c59ec6649877610352f3f1940c5f015dc83bddccbd394929e14f8df29619c0c9a3a10280b520237150882c0bcaff759b1be9b80d44a6e9beb47e3f179f5b506099dc90097b484cd793a27b145e9dfa969fa1d6a62194d3674951db43a19ef821d15c2fdd0c11ad01a08892bb2b049dbe568ae5d48b32740b59d9c3513be87e533ab1fa99aa03b68911431b605fd7cc3bfe2af1cc15856dd5ce1ccb8c5e1000c14314153f6967157f69bc867f5436ee81061655e61dde0d
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 6260caa0dfd6e5dd9d99e2ac
-            Version: 3
-            TBS:
-                MD5: fa7f67540996b008a11a94e03d6d24cb
-                SHA1: 321a7da448b3b0accf8ad08a1ff68e40d7f0f38a
-                SHA256: 56f735f32eb7c2522d538c5021e5a9662188c06f4a73e5abdee2ed692d5cd1d6
-                SHA384: b7eed2633ded0b5f40f747c088a900e4d057f61a895848e1bdbdf3fc0ec849ba8b2592ed2f91d6122f34cd2c6727c137
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        Signer:
-        -   SerialNumber: 6260caa0dfd6e5dd9d99e2ac
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
-            Version: 1
-    Imphash: 8b6c1a09e11200591663b880a94a8d18
-    LoadsDespiteHVCI: 'FALSE'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2018-12-23 21:03:09'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - RtlFreeAnsiString
+  - RtlFreeAnsiString
+  - FltCloseClientPort
+  - FltCloseClientPort
+  - FltCloseClientPort
+  - FltCloseClientPort
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  InternalName: ''
+  MD5: 3db2afc15e7cc78bd11f4c726060db5c
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 18623b4d88442645503926b328abb317
+    SHA1: 1e18f1576c30891e0fc129a5a5d3ed62f92a47cc
+    SHA256: 57ee8839c76bdd17ee60e0df2c3c4ee98bb5ce9fd3923fc2db10e708168514ca
+  SHA1: 5a7bcb1864d1e8ecde0b58d21b98518ca4b2f1f2
+  SHA256: c7079033659ac9459b3b7ab2510805832db2e2a70fe9beb1a6e13c1f51890d88
+  Sections:
+    .text:
+      Entropy: 7.954665405440423
+      Virtual Size: '0xd000'
+    .sedata:
+      Entropy: 7.68195090334756
+      Virtual Size: '0x108000'
+    .idata:
+      Entropy: 1.5285230640331269
+      Virtual Size: '0x1000'
+    .reloc:
+      Entropy: 3.7182355926860398
+      Virtual Size: '0x1000'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee152d7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e140543fe3256027cfa79fc3c19c1776
+        SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
+        SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
+      ValidFrom: '2016-03-16 00:00:00'
+      ValidTo: '2024-03-16 00:00:00'
+      Signature: 3b41bbc84f561182b719e3d96dc185ae9e690ec84326234b8d44c8e87d5f070e5341d563444a890bb874ac7db578792f8426e2d7f7bad1ae2dfd69cffa7c64dc24162a4adac097a9bbd5dd88e7a1929a0aa5f6f7bace85d6e4e3d455deeddc3e211f1bc87788cffc65fb05b48f12a630d30d66982f6c2e6f85187c8ff5f6fbb1ab10e183270885b07321ba5d2cba8330b73984dd5db67fd28bb455534c42a2bc4a6c78395b631ca37827bfbe34836b6d7b1e60fbc29b0d88ac8c72546bdc3b88ba81525e689783b8ce7fa3cdf9ea2f2676facd0b06ac4344497bf64c9442b2abcfd542d51942696e618664c7b37d078bdbe5767b6e5f65a91690a2cee4ae6492
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47c30ffefc22bb280f96fea75251
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
+        SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
+        SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
+        SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
+    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+        , G2
+      ValidFrom: '2016-05-24 00:00:00'
+      ValidTo: '2027-06-24 00:00:00'
+      Signature: 8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1121d699a764973ef1f8427ee919cc534114
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: acb5170547d76873f1e4ff18ed5de2eb
+        SHA1: bd6e261e75b807381bada7287de04d259258a5fa
+        SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
+    - Subject: C=CN, ST=, L=, O=, CN=
+      ValidFrom: '2017-12-08 05:01:50'
+      ValidTo: '2021-01-01 08:01:33'
+      Signature: 0ffa0e6fd50ae2d624724fcd237a21b0b7c6e198cfe7236ea203a1ea53ed23c306e8b6e23704583b50986a34b0cd0cb26d7a06fe5ca90f4f45320f2d59a2f88d1fe793c9baf7d328fd60317d21ae9242e85710a5c2184a7f93b82abbb8a8eb705722e17c0ce0eda8f2cdd44da7ba54ecf400584636802e7ec786354386807768df2a49f88330eb86e89b8db3894ccebc7db0ddbc48165f8b802469e9a5c0c95395b631328cf867519024b1d5229768f2b2b070e5529eb2186a694fa134c9494d82dc028c2428c6b72ba9289830e0222b27952d4abb3c639de8ecb47f5b37bc53df7c781e83850dcbb0a9c4c1d8ce917fac942af20e8bd4a58537a3b5a71ea679
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 388c116793e1e1d856228d71
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 75180555124339ca60ebf14f4557be81
+        SHA1: 77633d11569cd564679dc30224d0ae48e1edccae
+        SHA256: 61dba159677df60bad1a8fcc134eb94160b690c25ec944d49cf02359d8c757c7
+        SHA384: cec93517c684da5a56d69a31cd126b5f83cb8e23462ba393ba4fee53949fc4948202a1c672ad29a43e5110da4531c0d9
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 388c116793e1e1d856228d71
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
+      Version: 1
+  Imphash: 8b6c1a09e11200591663b880a94a8d18
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: d490f971f9503765a947997d7c54a4c7
+    SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
+    SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2018-12-23 21:03:09'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - RtlFreeAnsiString
+  - RtlFreeAnsiString
+  - FltCloseClientPort
+  - FltCloseClientPort
+  - FltCloseClientPort
+  - FltCloseClientPort
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  InternalName: ''
+  MD5: 986f083e5fd01eea4ec3b2575a110a95
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 18623b4d88442645503926b328abb317
+    SHA1: 1e18f1576c30891e0fc129a5a5d3ed62f92a47cc
+    SHA256: 57ee8839c76bdd17ee60e0df2c3c4ee98bb5ce9fd3923fc2db10e708168514ca
+  SHA1: ebced350ea447df8e10ebb080e3a3e5b32aca348
+  SHA256: 082d4d4d4ba1bda5e1599bd24e930ae9f000e7d12b00f7021cca90a4600ea470
+  Sections:
+    .text:
+      Entropy: 7.954665405440423
+      Virtual Size: '0xd000'
+    .sedata:
+      Entropy: 7.68195090334756
+      Virtual Size: '0x108000'
+    .idata:
+      Entropy: 1.5285230640331269
+      Virtual Size: '0x1000'
+    .reloc:
+      Entropy: 3.7182355926860398
+      Virtual Size: '0x1000'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee152d7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e140543fe3256027cfa79fc3c19c1776
+        SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
+        SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
+      ValidFrom: '2016-03-16 00:00:00'
+      ValidTo: '2024-03-16 00:00:00'
+      Signature: 3b41bbc84f561182b719e3d96dc185ae9e690ec84326234b8d44c8e87d5f070e5341d563444a890bb874ac7db578792f8426e2d7f7bad1ae2dfd69cffa7c64dc24162a4adac097a9bbd5dd88e7a1929a0aa5f6f7bace85d6e4e3d455deeddc3e211f1bc87788cffc65fb05b48f12a630d30d66982f6c2e6f85187c8ff5f6fbb1ab10e183270885b07321ba5d2cba8330b73984dd5db67fd28bb455534c42a2bc4a6c78395b631ca37827bfbe34836b6d7b1e60fbc29b0d88ac8c72546bdc3b88ba81525e689783b8ce7fa3cdf9ea2f2676facd0b06ac4344497bf64c9442b2abcfd542d51942696e618664c7b37d078bdbe5767b6e5f65a91690a2cee4ae6492
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47c30ffefc22bb280f96fea75251
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
+        SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
+        SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
+        SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
+    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+        , G2
+      ValidFrom: '2016-05-24 00:00:00'
+      ValidTo: '2027-06-24 00:00:00'
+      Signature: 8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1121d699a764973ef1f8427ee919cc534114
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: acb5170547d76873f1e4ff18ed5de2eb
+        SHA1: bd6e261e75b807381bada7287de04d259258a5fa
+        SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
+    - Subject: C=CN, ST=, L=, O=, CN=
+      ValidFrom: '2019-03-25 08:28:21'
+      ValidTo: '2021-01-01 08:01:33'
+      Signature: 1bb1fdbb9443a09ed9116cefc42898629cc241933acd0732b579933b8658315d82b85c4e67f0f17bd8d0f0b01842e8d16ba5be8b1d6151e979df5509c2723be19dbf7678c670656aa3c59ec6649877610352f3f1940c5f015dc83bddccbd394929e14f8df29619c0c9a3a10280b520237150882c0bcaff759b1be9b80d44a6e9beb47e3f179f5b506099dc90097b484cd793a27b145e9dfa969fa1d6a62194d3674951db43a19ef821d15c2fdd0c11ad01a08892bb2b049dbe568ae5d48b32740b59d9c3513be87e533ab1fa99aa03b68911431b605fd7cc3bfe2af1cc15856dd5ce1ccb8c5e1000c14314153f6967157f69bc867f5436ee81061655e61dde0d
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 6260caa0dfd6e5dd9d99e2ac
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: fa7f67540996b008a11a94e03d6d24cb
+        SHA1: 321a7da448b3b0accf8ad08a1ff68e40d7f0f38a
+        SHA256: 56f735f32eb7c2522d538c5021e5a9662188c06f4a73e5abdee2ed692d5cd1d6
+        SHA384: b7eed2633ded0b5f40f747c088a900e4d057f61a895848e1bdbdf3fc0ec849ba8b2592ed2f91d6122f34cd2c6727c137
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 6260caa0dfd6e5dd9d99e2ac
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
+      Version: 1
+  Imphash: 8b6c1a09e11200591663b880a94a8d18
+  LoadsDespiteHVCI: 'FALSE'

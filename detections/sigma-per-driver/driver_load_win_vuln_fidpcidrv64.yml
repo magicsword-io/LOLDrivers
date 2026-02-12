@@ -1,0 +1,30 @@
+title: Driver Load - fidpcidrv64.sys
+id: 5a0b92ca-fa3a-5c74-b410-c383ca355b19
+status: experimental
+description: |
+    Detects loading of driver fidpcidrv64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/a005e057-c84f-47cd-9b4b-5b1e51a06ab4/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2fed983ec44d1e7cffb0d516407746f2'
+            - 'SHA1=eb93d2f564fea9b3dc350f386b45de2cd9a3e001'
+            - 'SHA256=3ac5e01689a3d745e60925bc7faca8d4306ae693e803b5e19c94906dc30add46'
+            - 'IMPHASH=67bace81ce26ddf73732dd75cbd0c0f2'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

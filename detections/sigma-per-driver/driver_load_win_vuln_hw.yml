@@ -1,0 +1,44 @@
+title: Driver Load - hw.sys
+id: 025fad4d-4ffc-5699-b8d7-164ab7d67756
+status: experimental
+description: |
+    Detects loading of driver hw.sys via hash.
+    HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI access
+references:
+    - https://www.loldrivers.io/drivers/5969b6dc-b136-480e-a527-3cb2ea2f0da9/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+    - https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
+    - https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
+author: Guus Verbeek
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=45c2d133d41d2732f3653ed615a745c8'
+            - 'MD5=3247014ba35d406475311a2eab0c4657'
+            - 'MD5=376b1e8957227a3639ec1482900d9b97'
+            - 'MD5=3cf7a55ec897cc938aebb8161cb8e74f'
+            - 'SHA1=74e4e3006b644392f5fcea4a9bae1d9d84714b57'
+            - 'SHA1=4e56e0b1d12664c05615c69697a2f5c5d893058a'
+            - 'SHA1=18f34a0005e82a9a1556ba40b997b0eae554d5fd'
+            - 'SHA1=22fc833e07dd163315095d32ebcd3b3e377c33a4'
+            - 'SHA256=fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c'
+            - 'SHA256=55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa'
+            - 'SHA256=6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5'
+            - 'SHA256=4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8'
+            - 'IMPHASH=bd093a7d5ba5632ee52f3466a688ee55'
+            - 'IMPHASH=91ee149529956a79a91eeb8c48f00b3d'
+            - 'IMPHASH=67d92a28cd2923a923adf7fd958905d8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

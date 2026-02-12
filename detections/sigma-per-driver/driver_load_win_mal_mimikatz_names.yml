@@ -1,0 +1,28 @@
+title: Driver Load - mimikatz.sys
+id: 83ebcf83-7d75-5aa5-b8e9-5f6ba2ab4c17
+status: experimental
+description: |
+    Detects loading of driver mimikatz.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/14556074-b235-4378-b356-f58721629d72/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\mimikatz.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

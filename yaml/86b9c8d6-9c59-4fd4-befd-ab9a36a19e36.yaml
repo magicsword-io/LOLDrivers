@@ -12,7 +12,7 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 11
 Resources:
-- 'https://dor00tkit.github.io/Dor00tkit/posts/from-admin-to-kernel-one-year-one-driver-zero-attention/'
+- https://dor00tkit.github.io/Dor00tkit/posts/from-admin-to-kernel-one-year-one-driver-zero-attention/
 Acknowledgement:
   Person: ''
   Handle: ''
@@ -67,7 +67,7 @@ KnownVulnerableSamples:
       Entropy: 4.021567004295789
       Virtual Size: '0x3c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-08-25 05:08:50'
+  CreationTimestamp: '2023-08-25 07:08:50'
   InternalName: ''
   Copyright: "\xA9 2023 Dell Inc. All Rights Reserved. "
   Imports:
@@ -128,6 +128,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000f3158ea57d1c559f290000000000f3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8d4476692bcda36ed89244b94bd705f0
         SHA1: ce72176d5cad611366e13a9a997ad7ecc7eb815f
@@ -142,6 +145,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150

@@ -1,0 +1,65 @@
+title: Driver Load - HWiNFO32.SYS
+id: 2ab929eb-9ac6-503e-b3d4-ae5a287727f7
+status: experimental
+description: |
+    Detects loading of driver HWiNFO32.SYS via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/2225128d-a23f-434a-aaee-69a88ea64fbd/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a058cb2f78d6c44d26def1e264d67e78'
+            - 'MD5=76c8d022c6788a3b29ebc19e8d7956c4'
+            - 'MD5=a57afed9703b5893fbfee5f9710b8aee'
+            - 'MD5=7ceb48348ecd008c97bb5f74bdbea843'
+            - 'MD5=52c7dac60d4b5c673441da38983df4ad'
+            - 'MD5=49dbc80ecf8e331ff828b964e491621b'
+            - 'MD5=2293aa65ada1c1d15a1ffb596612aee3'
+            - 'MD5=6b5a579b2039eaa97b1694468dab2119'
+            - 'MD5=28042093c08db49d0e0dc1903cf46907'
+            - 'MD5=ecbc7e628a7ea22a3b90d9b16a948707'
+            - 'MD5=8602bd2326f95beecf25fded10f5bc8a'
+            - 'SHA1=4146c0612ec8de7a98e20d181312b5a4ef139227'
+            - 'SHA1=7b706f7db6d2e46ca532e261a296d1f6afb30f03'
+            - 'SHA1=cc48296d367e57a6523be40237f4a5ec6cc3d1a5'
+            - 'SHA1=712c1d34ea7883e79bc5714d14065a27607fe219'
+            - 'SHA1=9917a514887f4cbdfb0aa3a61b9b2988d9be80c6'
+            - 'SHA1=7a6bc9fc1eb4900039ee88e099e90fc19e248257'
+            - 'SHA1=61c88c44d20e79c5d39109d1d91ac8e9ed3c46ad'
+            - 'SHA1=9d038803e4f032e02c7c4b90eedf73e50b63fa80'
+            - 'SHA1=74a71f4ffd335823293370a6161199e78e923de5'
+            - 'SHA1=db065f44371c966abbc81eb0ddc49e037eac67de'
+            - 'SHA1=38238d15b27bc56a3092e31fafb28ef4d742d726'
+            - 'SHA256=6e9e9e0b9a23deec5f28dc45f0bbe7423565f037f74be2957e82e5f72c886094'
+            - 'SHA256=4ac08a6035cfcafdac712d7c3cf2eef6e10258f14cee6e80e1ef2f71f5045173'
+            - 'SHA256=ec9bd7fb90c3a2aa4605bd73fe1f74399e2cda75fd4c5fff84660ad4f797c4fe'
+            - 'SHA256=76af3f9fa111d694e37058606f2636430bdd378c85b94f426fbfcd6666ebe6cc'
+            - 'SHA256=4e54e98df13110aac41f3207e400cce2a00df29ce18c32186e536c1de25a75ce'
+            - 'SHA256=7125c9831a52d89d3d59fb28043b67fbe0068d69732da006fabb95550d1fa730'
+            - 'SHA256=ff1ccef7374a1a5054a6f4437e3e0504b14ed76e17090cc6b1a4ec0e2da427a5'
+            - 'SHA256=1b17d12076d047e74d15e6e51e10497ad49419bec7fbe93386c57d3efbaadc0b'
+            - 'SHA256=6701433861742c08eb50f1e785962378143ad5b6c374ac29118168599f8a0f1c'
+            - 'SHA256=7702f240800528d8186e3e6a26e2680486fed65a6fb5a2a000ad12c1fb61a398'
+            - 'SHA256=8dcec67a1f4903981c3e0ab938784c2f241e041e26748e1c22059e0e507cfb37'
+            - 'IMPHASH=d2fa238bfc29e657ae072c3e8da62b84'
+            - 'IMPHASH=280d5f0b7808e698f0875e61137fcd71'
+            - 'IMPHASH=51a803d670d7387a629e352b6fe6cf1e'
+            - 'IMPHASH=66a7ec523da3903012905eb161c9e50c'
+            - 'IMPHASH=925dac5c06451818cb2c5e37de425af9'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

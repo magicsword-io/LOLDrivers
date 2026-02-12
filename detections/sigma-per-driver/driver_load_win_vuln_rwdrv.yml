@@ -1,0 +1,44 @@
+title: Driver Load - rwdrv.sys
+id: e0df902e-2a9b-5bf7-801e-099e66a3bca1
+status: experimental
+description: |
+    Detects loading of driver rwdrv.sys via hash.
+    This utility access almost all the computer hardware, including PCI (PCI Express), PCI Index/Data, Memory, Memory Index/Data, I/O Space, I/O Index/Data, Super I/O, Clock Generator, DIMM SPD, SMBus Device, CPU MSR Registers, ATA/ATAPI Identify Data, Disk Read Write, ACPI Tables Dump (include AML decode), Embedded Controller, USB Information, SMBIOS Structures, PCI Option ROMs, MP Configuration Table, E820, EDID and Remote Access. And also a Command Window is provided to access hardware manually.
+references:
+    - https://www.loldrivers.io/drivers/fbdd993b-47b1-4448-8c41-24c310802398/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+    - http://rweverything.com/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=257483d5d8b268d0d679956c7acdf02d'
+            - 'MD5=9650db2ef0a44984845841ab24972ced'
+            - 'MD5=1276f735d22cf04676a719edc6b0df18'
+            - 'MD5=f7a09ac4a91a6390f8d00bf09f53ae37'
+            - 'SHA1=fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2'
+            - 'SHA1=9d191bee98f0af4969a26113098e3ea85483ae2d'
+            - 'SHA1=108575d8f0b98fed29514a54052f7bf5a8cb3ff0'
+            - 'SHA1=8031ecbff95f299b53113ccd105582defad38d7b'
+            - 'SHA256=d15a0bc7a39bbeff10019496c1ed217b7c1b26da37b2bdd46820b35161ddb3c4'
+            - 'SHA256=bdcacb9f373b017d0905845292bca2089feb0900ce80e78df1bcaae8328ce042'
+            - 'SHA256=83fbf5d46cff38dd1c0f83686708b3bd6a3a73fddd7a2da2b5a3acccd1d9359c'
+            - 'SHA256=ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3'
+            - 'IMPHASH=176d8e75a27a45e2c6f5d4cceca4d869'
+            - 'IMPHASH=6f0b9814da4da038669c47e77c2f268f'
+            - 'IMPHASH=955e7b12a8fa06444c68e54026c45de1'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

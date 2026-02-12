@@ -1,0 +1,30 @@
+title: Driver Load - SSPORT.sys
+id: 62d6b34a-177e-5ad1-b6e1-16cf272cb5c7
+status: experimental
+description: |
+    Detects loading of driver SSPORT.sys via hash.
+    Port Contention Driver
+references:
+    - https://www.loldrivers.io/drivers/c854b612-0b9f-4fc3-a7b8-a93bed7a291e/
+    - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/ssport_v1.0
+author: Nasreddine Bencherchali
+date: 2023/04/15
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0211ab46b73a2623b86c1cfcb30579ab'
+            - 'SHA1=ccd547ef957189eddb6ee213e5e0136e980186f9'
+            - 'SHA256=7cc9ba2df7b9ea6bb17ee342898edd7f54703b93b6ded6a819e83a7ee9f938b4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

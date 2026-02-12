@@ -1,0 +1,31 @@
+title: Driver Load - VdBSv64.sys
+id: e2cc8083-8b23-55dc-be55-39e2b069a6eb
+status: experimental
+description: |
+    Detects loading of driver VdBSv64.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/5901421f-7929-487d-87bd-632f29290352/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4353b713487a2945b823423bbbf709bd'
+            - 'SHA1=4ffa89f8dbdade28813e12db035cf9bd8665ef72'
+            - 'SHA256=91afa3de4b70ee26a4be68587d58b154c7b32b50b504ff0dc0babc4eb56578f4'
+            - 'IMPHASH=9523103b30fb194643b97ccc3ab7abb0'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

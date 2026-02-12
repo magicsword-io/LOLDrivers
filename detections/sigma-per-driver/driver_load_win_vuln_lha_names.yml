@@ -1,0 +1,28 @@
+title: Driver Load - LHA.sys
+id: b79e03e8-96da-5a3c-b59d-153ef9541722
+status: experimental
+description: |
+    Detects loading of driver LHA.sys via name.
+    LHA
+references:
+    - https://www.loldrivers.io/drivers/1c7631f0-f92f-4be5-8ba7-3eefb0601d45/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\lha.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

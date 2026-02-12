@@ -1,0 +1,37 @@
+title: Driver Load - kprocesshacker.sys
+id: c736f509-5bfc-5c53-9833-37587ad933ed
+status: experimental
+description: |
+    Detects loading of driver kprocesshacker.sys via hash.
+    KProcessHacker
+references:
+    - https://www.loldrivers.io/drivers/edd29861-6984-4dbe-8e7c-22e9b6cf68d0/
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/312791-bypaph-process-hackers-bypass-read-write-process-virtual-memory-kernel-mem.html#post2315763
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1b5c3c458e31bede55145d0644e88d75'
+            - 'MD5=bbbc9a6cc488cfb0f6c6934b193891eb'
+            - 'SHA1=d8498707f295082f6a95fd9d32c9782951f5a082'
+            - 'SHA1=a21c84c6bf2e21d69fa06daaf19b4cc34b589347'
+            - 'SHA256=70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4'
+            - 'SHA256=c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c'
+            - 'IMPHASH=821d74031d3f625bcbd0df08b70f1e77'
+            - 'IMPHASH=f86759bb4de4320918615dc06e998a39'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

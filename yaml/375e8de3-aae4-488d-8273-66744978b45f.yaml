@@ -81,7 +81,7 @@ KnownVulnerableSamples:
       Entropy: 3.582279956777612
       Virtual Size: '0x212'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-26 09:16:17'
+  CreationTimestamp: '2011-09-26 11:16:17'
   InternalName: Avenger 64
   Copyright: Copyright (c)2005-2011  iS3 Inc . All rights reserved.
   Imports:
@@ -172,6 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -185,6 +188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -200,6 +206,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -214,6 +223,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 62cbc29a336a0ac6486b699bddb44775
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 444683938e8730c9f041139b55f53200
         SHA1: 967c2149fe1b6b5e943e379e3eebe6348854257f
@@ -227,6 +239,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

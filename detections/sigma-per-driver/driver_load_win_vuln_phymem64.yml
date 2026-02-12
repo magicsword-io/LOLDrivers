@@ -1,0 +1,31 @@
+title: Driver Load - phymem64.sys
+id: fbc7f8eb-70c5-589c-a183-577f7ff07eff
+status: experimental
+description: |
+    Detects loading of driver phymem64.sys via hash.
+    phymem Application
+references:
+    - https://www.loldrivers.io/drivers/47fe1aaf-02cd-4a41-8bf5-0047015a2a6e/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2c54859a67306e20bfdc8887b537de72'
+            - 'SHA1=d7f7594ff084201c0d9fa2f4ef1626635b67bce5'
+            - 'SHA256=1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52'
+            - 'IMPHASH=69260cce3156aa2dc0540fb78f5fe826'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,31 @@
+title: Driver Load - NTIOLib_X64.sys
+id: f93487d7-09f0-5dff-8df1-c16b51e0277d
+status: experimental
+description: |
+    Detects loading of driver NTIOLib_X64.sys via hash.
+    NTIOLib
+references:
+    - https://www.loldrivers.io/drivers/54d67d79-0268-4c5f-be7e-0f74cd20828a/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c02f70960fa934b8defa16a03d7f6556'
+            - 'SHA1=3805e4e08ad342d224973ecdade8b00c40ed31be'
+            - 'SHA256=d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530'
+            - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

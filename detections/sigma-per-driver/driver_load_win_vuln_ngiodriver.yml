@@ -1,0 +1,67 @@
+title: Driver Load - ngiodriver.sys
+id: 84c1d5fb-f5f0-5259-9bee-a500544388af
+status: experimental
+description: |
+    Detects loading of driver ngiodriver.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/b8339454-0e84-4a5b-92d0-6a626ced6677/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b9cf3294c13cdea624ab95ca3e2e483f'
+            - 'MD5=ef1afb3a5ddad6795721f824690b4a69'
+            - 'MD5=8fcf90cb5f9cb7205c075c662720f762'
+            - 'MD5=fa0d1fca7c5b44ce3b799389434fcaa5'
+            - 'MD5=0199a59af05d9986842ecbdee3884f0c'
+            - 'MD5=9b5533c4af38759d167d5399e83b475f'
+            - 'MD5=c9b046a6961957cc6c93a5192d3e61e3'
+            - 'MD5=dff6c75c9754a6be61a47a273364cdf7'
+            - 'MD5=9988fc825675d4d3e2298537fc78e303'
+            - 'MD5=ef18d594c862d6d3704b777fa3445ac2'
+            - 'MD5=ac591a3b4df82a589edbb236263ec70a'
+            - 'MD5=55cd6b46ac25bbe01245f2270a0d6cb8'
+            - 'SHA1=446130c61555e5c9224197963d32e108cd899ea0'
+            - 'SHA1=cef5a329f7a36c76a546d9528e57245127f37246'
+            - 'SHA1=74bf2ec32cb881424a79e99709071870148d242d'
+            - 'SHA1=004d9353f334e42c79a12c3a31785a96f330bbef'
+            - 'SHA1=b91c34bb846fd5b2f13f627b7da16c78e3ee7b0f'
+            - 'SHA1=1a8b737dff81aa9e338b1fce0dc96ee7ee467bd5'
+            - 'SHA1=8146ed4a9c9a2f7e7aeae0a0539610c3c1cd3563'
+            - 'SHA1=55cffb0ef56e52686b0c407b94bbea3701d6eccd'
+            - 'SHA1=184729ec2ffd0928a408255a23b3f532ffb3db3d'
+            - 'SHA1=c127c4d0917f54cee13a61c6c0029c95ae0746cf'
+            - 'SHA1=8795df6494b724d9f279f007db33c24c27a91d08'
+            - 'SHA1=dbe26c67a4cabba16d339a1b256ca008effcf6c8'
+            - 'SHA256=5fae7e491b0d919f0b551e15e0942ac7772f2889722684aea32cff369e975879'
+            - 'SHA256=d1463b7fec911c10a8c96d84eb7c0f9e95fa488d826647a591a38c0593f812a4'
+            - 'SHA256=1a450ae0c9258ab0ae64f126f876b5feed63498db729ec61d06ed280e6c46f67'
+            - 'SHA256=42b31b850894bf917372ff50fbe1aff3990331e8bd03840d75e29dcc1026c180'
+            - 'SHA256=e8eb1c821dbf56bde05c0c49f6d560021628df89c29192058ce68907e7048994'
+            - 'SHA256=5e3bc2d7bc56971457d642458563435c7e5c9c3c7c079ef5abeb6a61fb4d52ea'
+            - 'SHA256=2ad8c38f6e0ca6c93abe3228c8a5d4299430ce0a2eeb80c914326c75ba8a33f9'
+            - 'SHA256=d0e4d3e1f5d5942aaf2c72631e9490eecc4d295ee78c323d8fe05092e5b788eb'
+            - 'SHA256=85fdd255c5d7add25fd7cd502221387a5e11f02144753890218dd31a8333a1a3'
+            - 'SHA256=733789d0a253e8d80cc3240e365b8d4274e510e36007f6e4b5fd13b07b084c3e'
+            - 'SHA256=c0c52425dd90f36d110952c665e5b644bb1092f952942c07bb4da998c9ce6e5b'
+            - 'SHA256=1072beb3ff6b191b3df1a339e3a8c87a8dc5eae727f2b993ea51b448e837636a'
+            - 'IMPHASH=77d6a7153b3015318622b793227fb394'
+            - 'IMPHASH=4946030efb34ab167180563899d5eb27'
+            - 'IMPHASH=54e54063abbf1edaa9cf9ed8a18916d6'
+            - 'IMPHASH=5a50a9a44f5d36af5df1bde995d22e42'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

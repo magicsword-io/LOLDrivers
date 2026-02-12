@@ -1,0 +1,28 @@
+title: Driver Load - ktgn.sys
+id: 2e339b65-4e98-55b8-8330-ca0d7d6ffe51
+status: experimental
+description: |
+    Detects loading of driver ktgn.sys via name.
+    BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware incident that occurred in February 2023.
+references:
+    - https://www.loldrivers.io/drivers/3ea63674-2599-43b5-9390-4a929ec99f48/
+    - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+author: Guus Verbeek
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ktgn.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

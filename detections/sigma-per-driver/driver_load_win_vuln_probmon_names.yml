@@ -1,0 +1,29 @@
+title: Driver Load - probmon.sys
+id: 2265a2dc-b5f2-5f69-bd85-f5e6d59c9f50
+status: experimental
+description: |
+    Detects loading of driver probmon.sys via name.
+    A vulnerable kernel driver that can be used to terminate arbitrary processes
+references:
+    - https://www.loldrivers.io/drivers/3bf3fd5d-dee3-42da-b8be-6a0b8b7bc88c/
+    - Internal Research
+    - https://www.welivesecurity.com/en/eset-research/embargo-ransomware-rocknrust/
+author: Antonio Parata, Andrea Monzani
+date: 2025/01/29
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\probmon.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

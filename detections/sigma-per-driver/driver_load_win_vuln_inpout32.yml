@@ -1,0 +1,44 @@
+title: Driver Load - inpout32.sys
+id: 535777c8-203f-5632-a37e-540f57668f49
+status: experimental
+description: |
+    Detects loading of driver inpout32.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/97fa88f6-3819-4d56-a82c-52a492a9e2b5/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f08ebaf4493e99f4f095a4f7696287d4'
+            - 'MD5=892ba05649cfdc690bb66325c85d9c5c'
+            - 'MD5=d045c3499d42c257be2163b3f1f785fa'
+            - 'MD5=381144bb812e0244ea8923814fda2949'
+            - 'MD5=b2aba4fa678c272ece36f928e5b81dd9'
+            - 'SHA1=b85078ef651f74919bf971cbdd87bcdc498dbee5'
+            - 'SHA1=b68e54bf68f1aae7d2c6ac790c0331b4f87019f7'
+            - 'SHA1=dd0eb190ea088a869c378e495ffc9bf22c6bcbfb'
+            - 'SHA1=b500e9753f4788dea109256b39fe5bfab92b850e'
+            - 'SHA1=062cec364b033d343c46ee64282b632687229790'
+            - 'SHA256=945ee05244316ff2f877718cf0625d4eb34e6ec472f403f958f2a700f9092507'
+            - 'SHA256=16360ead229b13deb47bc2bef40f282474c9f18c213c636cdfb8cc2495168251'
+            - 'SHA256=b8ded5e10dfc997482ba4377c60e7902e6f755674be51b0e181ae465529fb2f2'
+            - 'SHA256=cfab93885e5129a86d13fd380d010cc8c204429973b776ab1b472d84a767930f'
+            - 'SHA256=7db320e49139f636c8b6d12b6c78b666a62599e9d59587ba87c6b89b0a34b18d'
+            - 'IMPHASH=d612d61779252088a1f49b157237cecd'
+            - 'IMPHASH=b04821c5dd5dd8ebda962bff9f7eb928'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

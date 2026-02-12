@@ -1,0 +1,27 @@
+title: Driver Load - WinIO32B.sys
+id: 1cd76214-a886-5002-b559-871fdd8660d1
+status: experimental
+description: |
+    Detects loading of driver WinIO32B.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/45f2c348-bf17-40ab-8306-ef14231cc996/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA1=f1c8c3926d0370459a1b7f0cf3d17b22ff9d0c7f'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

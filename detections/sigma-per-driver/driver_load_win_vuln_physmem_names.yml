@@ -1,0 +1,31 @@
+title: Driver Load - physmem.sys
+id: acb30468-e53e-5b37-be44-735d61977a8e
+status: experimental
+description: |
+    Detects loading of driver physmem.sys via name.
+    Physical Memory Access Driver
+references:
+    - https://www.loldrivers.io/drivers/f4c22f4d-eff8-40c5-8b31-146abe5f17b7/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55
+    - https://github.com/hfiref0x/KDU
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\physmem.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

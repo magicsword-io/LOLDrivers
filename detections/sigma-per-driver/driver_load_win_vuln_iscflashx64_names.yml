@@ -1,0 +1,27 @@
+title: Driver Load - iscflashx64.sys
+id: 294be759-0483-5d89-857e-52e5788853aa
+status: experimental
+description: |
+    Detects loading of driver iscflashx64.sys via name.
+    CVE-2021-33834
+references:
+    - https://www.loldrivers.io/drivers/97ed6c7b-be4c-4f60-9157-c788a555ca9f/
+author: Takahiro Haruyama
+date: 2023/10/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\iscflashx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

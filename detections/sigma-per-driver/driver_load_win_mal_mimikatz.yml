@@ -1,0 +1,67 @@
+title: Driver Load - mimikatz.sys
+id: 908d4660-c96f-5e34-9f97-15dbb03fd4fe
+status: experimental
+description: |
+    Detects loading of driver mimikatz.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/14556074-b235-4378-b356-f58721629d72/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2d37d2fb9b9f8ac52bc02cba4487e3cb'
+            - 'MD5=63060b756377fce2ce4ab9d079ca732f'
+            - 'MD5=6a4fbcfb44717eae2145c761c1c99b6a'
+            - 'MD5=1ee9f6326649cd23381eb9d7dfdeddf7'
+            - 'MD5=7073cd0085fcba1cd7d3568f9e6d652c'
+            - 'MD5=84763d8ca9fe5c3bff9667b2adf667de'
+            - 'MD5=a3d69c7e24300389b56782aa63b0e357'
+            - 'MD5=85093bb9f027027c2c61aee50796de30'
+            - 'MD5=650ef9dd70cb192027e536754d6e0f63'
+            - 'MD5=ac6e29f535b2c42999c50d2fc32f2c9c'
+            - 'MD5=76f8607fc4fb9e828d613a7214436b66'
+            - 'MD5=ed2b653d55c03f0bffa250372d682b75'
+            - 'SHA1=b7ff8536553cb236ea2607941e634b23aadb59ee'
+            - 'SHA1=f6a18fc9c4abe4a82c1ab28abc0a7259df8de7a3'
+            - 'SHA1=632c80a3c95cf589b03812539dea59594eaefae0'
+            - 'SHA1=4da007dd298723f920e194501bb49bab769dfb14'
+            - 'SHA1=197811ec137e9916e6692fc5c28f6d6609ffc20e'
+            - 'SHA1=bd39ef9c758e2d9d6037e067fbb2c1f2ac7feac8'
+            - 'SHA1=b555aad38df7605985462f3899572931ee126259'
+            - 'SHA1=6b5aa51f4717d123a468e9e9d3d154e20ca39d56'
+            - 'SHA1=6a95860594cd8b7e3636bafa8f812e05359a64ca'
+            - 'SHA1=766949d4599fbf8f45e888c9d6fedf21e04fb333'
+            - 'SHA1=92138cfc14f9e2271f641547e031d5d63c6de19a'
+            - 'SHA1=8b9dd4c001f17e7835fdaf0d87a2f3e026557e84'
+            - 'SHA256=36f45a42ebf2de6962db92aaf8845d7f9fd6895bedc31422adcf31c59a79602d'
+            - 'SHA256=2c14bea0d85c9cad5c5f5c8d0e5442f6deb9e93fe3ad8ea5e8e147821c6f9304'
+            - 'SHA256=accb1a6604efb1b3ce9345c9fd62fe717a84c3e089e09c638e461df89193ef01'
+            - 'SHA256=47356707e610cfd0be97595fbe55246b96a69141e1da579e6f662ddda6dc5280'
+            - 'SHA256=3033ff03e6f523726638b43d954bc666cdd26483fa5abcf98307952ff88f80ee'
+            - 'SHA256=c13f5bc4edfbe8f1884320c5d76ca129d00de41a1e61d45195738f125dfe60a7'
+            - 'SHA256=b7956e31c2fcc0a84bcedf30e5f8115f4e74eed58916253a0c05c8be47283c57'
+            - 'SHA256=e5ddfa39540d4e7ada56cdc1ebd2eb8c85a408ec078337488a81d1c3f2aaa4ff'
+            - 'SHA256=be70be9d84ae14ea1fa5ec68e2a61f6acfe576d965fe51c6bac78fba01a744fb'
+            - 'SHA256=ece76b79feafb38ae4371e104b6dcbb4253ff3b2acbe5bd14ce6e47525c24f4a'
+            - 'SHA256=083a311875173f8c4653e9bbbabb689d14aa86b852e7fa9f5512fc60e0fd2c43'
+            - 'SHA256=deade507504d385d8cae11365a2ac9b5e2773ff9b61624d75ffa882d6bb28952'
+            - 'IMPHASH=7df0d3ee663fc0e7c72a95e44ba4c82c'
+            - 'IMPHASH=7d017945bf90936a6c40f73f91ed02c2'
+            - 'IMPHASH=7641a0c227f0a3a45b80bb8af43cd152'
+            - 'IMPHASH=7bf14377888c429897eb10a85f70266c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

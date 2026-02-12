@@ -1,0 +1,31 @@
+title: Driver Load - driver_16773074.sys
+id: a12ad930-5222-5ff0-8e8c-b8b1ea3ea017
+status: experimental
+description: |
+    Detects loading of driver driver_16773074.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/a0f0d0db-15a2-48e4-af39-50967ee8b541/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=cef82e32c1a0d1d2cc035d22773340ae'
+            - 'SHA1=ab044b9cd7b83bd2a3c54f3d28bf734578b17af5'
+            - 'SHA256=167730744bd7cb117aae9931f81d20cbd2ec6eee480388c53d2fc973ede920ea'
+            - 'IMPHASH=96861132665e8d66c0a91e6c02cc6639'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

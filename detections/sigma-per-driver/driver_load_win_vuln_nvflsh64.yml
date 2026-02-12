@@ -1,0 +1,72 @@
+title: Driver Load - nvflsh64.sys
+id: 49b8c0c6-1398-594a-9446-cd45c9d7f840
+status: experimental
+description: |
+    Detects loading of driver nvflsh64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/d4664202-d1b9-44d4-97cc-fee2150082db/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0e51d96a3b878b396708535f49a6d7cb'
+            - 'MD5=be54aabf09c3fa4671b6efacafa389e3'
+            - 'MD5=87982977500b93330df08bf372435641'
+            - 'MD5=02fc655279b8ea3ef37237c488b675cc'
+            - 'MD5=01f092be2a36a5574005e25368426ad2'
+            - 'MD5=2e48c3b8042fdcef0ed435562407bd21'
+            - 'MD5=697bbd86ee1d386ae1e99759b1e38919'
+            - 'MD5=c60a4bc4fec820d88113afb1da6e4db3'
+            - 'MD5=db2fc89098ac722dabe3c37ed23de340'
+            - 'MD5=9ade14e58996a6abbfe2409d6cddba6a'
+            - 'MD5=547971da89a47b6ad6459cd7d7854e12'
+            - 'MD5=7644bed8b74dc294ac77bf406df8ad77'
+            - 'MD5=7bdf418a65ec33ec8ff47e7de705a4e1'
+            - 'MD5=05bf59560656c8a9a3191812b0e1235b'
+            - 'MD5=d3e40644a91327da2b1a7241606fe559'
+            - 'SHA1=81a319685d0b6112edee4bc25d14d6236f4e12da'
+            - 'SHA1=970af806aa5e9a57d42298ab5ffa6e0d0e46deda'
+            - 'SHA1=e840904ce12cc2f94eb1ec16b0b89e2822c24805'
+            - 'SHA1=5622caf22032e5cbef52f48077cfbcbbbe85e961'
+            - 'SHA1=7667b72471689151e176baeba4e1cd9cd006a09a'
+            - 'SHA1=a9ea84ee976c66977bb7497aa374bba4f0dd2b27'
+            - 'SHA1=cb25d537f4e2872e5fcbd893da8ce3807137df80'
+            - 'SHA1=1a01f3bdbfae4f8111674068a001aaf3363f21ea'
+            - 'SHA1=4dba2ac32ed58ead57dd36b18d1cb30cc1c7b9aa'
+            - 'SHA1=2027e5e8f2cfdfbd9081f99b65af4921626d77f9'
+            - 'SHA1=2f86a4828ba86034f0c043db3e3db33aa2cf5da5'
+            - 'SHA1=343ec3073fc84968e40a145dc9260a403966bcb4'
+            - 'SHA1=1e959d6ae22c4d9fa5613c3a9d3b6e1b472be05d'
+            - 'SHA1=a2167b723dfb24bf8565cbe2de0ecce77307fb9e'
+            - 'SHA1=a32232a426c552667f710d2dcbd2fb9f9c50331d'
+            - 'SHA256=e2d6cdc3d8960a50d9f292bb337b3235956a61e4e8b16cf158cb979b777f42aa'
+            - 'SHA256=fe2fb5d6cfcd64aeb62e6bf5b71fd2b2a87886eb97ab59e5353ba740da9f5db5'
+            - 'SHA256=f2a4ddc38e68efd2eac27b2562529926f5ade93575a82e8d3e0abb2b37347257'
+            - 'SHA256=c188b36f258f38193ace21a7d254f0aec36b59ad7e3f9bcb9c2958108effebad'
+            - 'SHA256=eef68fdc5df91660410fb9bed005ed08c258c44d66349192faf5bb5f09f5fa90'
+            - 'SHA256=7ef8949637cb947f1a4e1d4e68d31d1385a600d1b1054b53e7417767461fafa7'
+            - 'SHA256=0e9072759433abf3304667b332354e0c635964ff930de034294bf13d40da2a6f'
+            - 'SHA256=20dd9542d30174585f2623642c7fbbda84e2347e4365e804e3f3d81f530c4ece'
+            - 'SHA256=50aa2b3a762abb1306fa003c60de3c78e89ea5d29aab8a9c6479792d2be3c2d7'
+            - 'SHA256=7c933f5d07ccb4bd715666cd6eb35a774b266ddd8d212849535a54192a44f667'
+            - 'SHA256=a899b659b08fbae30b182443be8ffb6a6471c1d0497b52293061754886a937a3'
+            - 'SHA256=f583cfb8aab7d084dc052dbd0b9d56693308cbb26bd1b607c2aedf8ee2b25e44'
+            - 'SHA256=747a4dc50915053649c499a508853a42d9e325a5eec22e586571e338c6d32465'
+            - 'SHA256=1ce9e4600859293c59d884ea721e9b20b2410f6ef80699f8a78a6b9fad505dfc'
+            - 'SHA256=ffd1aef19646ffed09b56a2ace4fc8cdf5b2f714fcca1e7ffb82256264c94b18'
+            - 'IMPHASH=96861132665e8d66c0a91e6c02cc6639'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

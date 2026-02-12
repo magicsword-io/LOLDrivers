@@ -1,0 +1,31 @@
+title: Driver Load - nvaudio.sys
+id: cda6ab4a-7369-5461-a755-ae41f359ef69
+status: experimental
+description: |
+    Detects loading of driver nvaudio.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/837ad058-65f4-4b75-8f21-b842e48db8a5/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b2600502a5b962b8cdfac2ead24b17b4'
+            - 'SHA1=bda102afbc60f3f3c5bcbd5390ffbbbb89170b9c'
+            - 'SHA256=b0dcdbdc62949c981c4fc04ccea64be008676d23506fc05637d9686151a4b77f'
+            - 'IMPHASH=f475387e3959dbea86854d61602db136'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

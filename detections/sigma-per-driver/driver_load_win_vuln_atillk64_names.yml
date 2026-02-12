@@ -1,0 +1,28 @@
+title: Driver Load - atillk64.sys
+id: 05760c0f-3c07-520f-8a17-2dbd96a6630d
+status: experimental
+description: |
+    Detects loading of driver atillk64.sys via name.
+    ATI Diagnostics Hardware Abstraction Sys
+references:
+    - https://www.loldrivers.io/drivers/10b1fc3d-c444-4885-8ca9-4b5891885507/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\atillk64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

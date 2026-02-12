@@ -1,0 +1,35 @@
+title: Driver Load - avalueio.sys
+id: 9b9877e5-de36-5920-809d-df597d44f44c
+status: experimental
+description: |
+    Detects loading of driver avalueio.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/4f0a65a7-9a01-40cb-8d95-0844515103e6/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=09b3d078ffa3b4ed0ad2e477a2ee341f'
+            - 'MD5=1da1cfe6aa15325c9ecf8f8c9b2cd12d'
+            - 'SHA1=b406920634361f4b7d7c1ec3b11bb40872d85105'
+            - 'SHA1=54a4772212da2025bd8fb2dc913e1c4490e7a0cd'
+            - 'SHA256=defde359045213ae6ae278e2a92c5b4a46a74119902364c7957a38138e9c9bbd'
+            - 'SHA256=a5a4a3c3d3d5a79f3ed703fc56d45011c21f9913001fcbcc43a3f7572cff44ec'
+            - 'IMPHASH=485f7e86663d49c68c8b5f705d310f50'
+            - 'IMPHASH=340e874a1ca966e45fc2a314ef228cce'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

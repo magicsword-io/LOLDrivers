@@ -1,0 +1,35 @@
+title: Driver Load - ProxyDrv.sys
+id: 86cbefc0-f416-56d8-bfc4-ed2f7120136a
+status: experimental
+description: |
+    Detects loading of driver ProxyDrv.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/0e3b0052-18c7-4c8b-a064-a1332df07af2/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=54313eadbe10511393d42b902436a30d'
+            - 'MD5=b224ef59e8f31d8f397000fe6548b0c7'
+            - 'SHA1=1c9e3bc640de5065535925a75d7dda51af2c9836'
+            - 'SHA1=f8e8b3e49b04b837b4d774a6c027e380971c221d'
+            - 'SHA256=c0e74f565237c32989cb81234f4b5ad85f9dd731c112847c0a143d771021cb99'
+            - 'SHA256=0b205838a8271daea89656b1ec7c5bb7244c42a8b8000d7697e92095da6b9b94'
+            - 'IMPHASH=710e0a840c6027b3c64add0ff18631c3'
+            - 'IMPHASH=ff016f73670717be3741d1044bf4b7a6'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

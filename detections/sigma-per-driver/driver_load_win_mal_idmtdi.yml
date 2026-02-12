@@ -1,0 +1,59 @@
+title: Driver Load - idmtdi.sys
+id: 2ea1fda9-2ac7-59ac-aaeb-33534d329917
+status: experimental
+description: |
+    Detects loading of driver idmtdi.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/c2e98102-2055-48f0-9449-3e7a7f2c0ffe/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/08/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5200ecb17fb554f13723c9c63145da64'
+            - 'MD5=a06880ad1efe6b57ca1d59d878dea82a'
+            - 'MD5=fe499663cd2bf11e0fa3aaead28b05c9'
+            - 'MD5=66d0f20927a7acc0f6821d73f468c647'
+            - 'MD5=cf1bc2fb73f82c43e05541100808a217'
+            - 'MD5=11cf20a428b8fb81ff20dfe4dc3e28bd'
+            - 'MD5=8cf9ec579ba36fc4a4edbc4788b5f209'
+            - 'MD5=b503cd460a61d303107aa459956781fd'
+            - 'MD5=44a0db8d9ea165b2ae5e84b72550a4e7'
+            - 'SHA1=e179f62fb4f074284945f3ab90406d2d3f19ee73'
+            - 'SHA1=55a139fe44e836a1886774d7c89c70796060f1c4'
+            - 'SHA1=dc8211cb76ed434f2f627a440604f7c3f8e04a41'
+            - 'SHA1=668b0274d350a6d895d140a9700a88156c0db06f'
+            - 'SHA1=c99b1093d11469729796ab5743c4bb1d16e3b975'
+            - 'SHA1=3dc2887dbb227d780bf05fd25235d7314a67e9ed'
+            - 'SHA1=2e96749e78704b8ca13ec84bd047dd271eb12122'
+            - 'SHA1=a264b74f8ff47ae4fac9d3361508adac82e15c0b'
+            - 'SHA1=2d0d89e275d2ea7a0b40af6bf5f284a9f61bcafe'
+            - 'SHA256=4421ff85aacbcc36695a018c5c47e884d56d62d7d5b8172bb70384ffc4d6a2e4'
+            - 'SHA256=2cd7a0c4e8d24404c92e4ed8539b2136028a8ca663f3432e417b00665493e13f'
+            - 'SHA256=44ebb0f534e7cdfec06d5234358d219798a313219b214d72aa23afc5a57d7ea9'
+            - 'SHA256=94b87b1cdaf1d86c2bc4eacef45608d0f16fdd3b981b88cdddc16b6bc64fe25d'
+            - 'SHA256=7af2ff5d405cf9cd1aee2410a969ba22d6df78d98e9d4e60cbe624d8a3bc64a6'
+            - 'SHA256=08c4b75a9b715647a60b946f3743c4e49a6f5c36c1bc889e741d658508dc50c0'
+            - 'SHA256=ce106afd6a9996ac0150709a30d61ece7d7bfe1f27492c00f4fabab9ec40575d'
+            - 'SHA256=2c1b65c2988b337182f1ba57b404793454e30a7fd328d34bc2e79857dc437a4a'
+            - 'SHA256=3855b2df32e0eedec454b25e6e2da6b3df19c4b0f575e45bc06482d4ebce7551'
+            - 'IMPHASH=5961803e998a48ab6f2322c35124b67b'
+            - 'IMPHASH=4859205cb010367bf6f38080900035fb'
+            - 'IMPHASH=ce10082e1aa4c1c2bd953b4a7208e56a'
+            - 'IMPHASH=b6839c3b1c51c236429c9dcd0ebce978'
+            - 'IMPHASH=7d86ef6f47b0f5c432d168eae5b4dfcf'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,111 @@
+title: Driver Load - amifldrv64.sys
+id: 638a3a50-bd9d-5d0c-9720-cf506d8bdb53
+status: experimental
+description: |
+    Detects loading of driver amifldrv64.sys via hash.
+    AMI Generic Utility Driver
+references:
+    - https://www.loldrivers.io/drivers/34fa6ba4-dc7c-4fd6-b947-8a0bb8ebd031/
+    - Internal Research
+    - https://github.com/namazso/physmem_drivers
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=7331720a5522d5cd972623326cf87a3f'
+            - 'MD5=e5e8ecb20bc5630414707295327d755e'
+            - 'MD5=119f0656ab4bb872f79ee5d421e2b9f9'
+            - 'MD5=6ab7b8ef0c44e7d2d5909fdb58d37fa5'
+            - 'MD5=530feb1e37831302f58b7c219be6b844'
+            - 'MD5=2503c4cf31588f0b011eb992ca3ee7ff'
+            - 'MD5=b15a6de1b4a01c73a16f158c2b6b979f'
+            - 'MD5=c098f8aeb67eeb2262dbf681690a9306'
+            - 'MD5=cb6173824b31a721e5cf332c75bb2473'
+            - 'MD5=f22740ba54a400fd2be7690bb204aa08'
+            - 'MD5=f41f65189b796534d8ef6bf9caa06853'
+            - 'MD5=6b53c79248a6699da703c4c3ff9d4a7e'
+            - 'MD5=785045f8b25cd2e937ddc6b09debe01a'
+            - 'MD5=2971d4ee95f640d2818e38d8877c8984'
+            - 'MD5=24156523b923fd9dcfdd0ac684dcdb20'
+            - 'MD5=0dff47f3b14fb1c1bad47cc517f0581a'
+            - 'MD5=1f7b2a00fe0c55d17d1b04c5e0507970'
+            - 'MD5=304f7b25251e688516aa452411c0d439'
+            - 'MD5=ee57cbe6ec6a703678eaa6c59542ff57'
+            - 'MD5=df5f8e118a97d1b38833fcdf7127ab29'
+            - 'MD5=73fc2954829a49fc8eb178b000d10120'
+            - 'MD5=7b9717c608a5f5a1c816128a609e9575'
+            - 'MD5=28463a6a70f9a686a45934f6559b9b17'
+            - 'MD5=5f463e27d90035be365077d1d1ebb3d7'
+            - 'SHA1=bb962c9a8dda93e94fef504c4159de881e4706fe'
+            - 'SHA1=41f2d0f9863bce8920c207b1ef5d3d32b603edef'
+            - 'SHA1=28fa0e9429af24197134306b6c7189263e939136'
+            - 'SHA1=7019169a8348050774aa49a0e31c3670ee867277'
+            - 'SHA1=ff9048c451644c9c5ff2ba1408b194a0970b49e6'
+            - 'SHA1=7e8efd93a1dad02385ec56c8f3b1cfd23aa47977'
+            - 'SHA1=1e09f3dd6ba9386fa9126f0116e49c2371401e01'
+            - 'SHA1=a0e95166bb6f80ef56cd645717d93174e47b750a'
+            - 'SHA1=c614ab686e844c7a7d2b20bc7061ab15290e2cfd'
+            - 'SHA1=61ec6cb5de378948ef036ff627c87c32f7308bad'
+            - 'SHA1=e700fcfae0582275dbaee740f4f44b081703d20d'
+            - 'SHA1=db3538f324f9e52defaba7be1ab991008e43d012'
+            - 'SHA1=e35969966769e7760094cbcffb294d0d04a09db6'
+            - 'SHA1=029c678674f482ababe8bbfdb93152392457109d'
+            - 'SHA1=456a1acacaa02664517c2f2fb854216e8e967f9d'
+            - 'SHA1=06ecf73790f0277b8e27c8138e2c9ad0fc876438'
+            - 'SHA1=5fece994f2409810a0ad050b3ca9b633c93919e4'
+            - 'SHA1=27661f6a951a7fa031644bdf014e864c4ee6ec76'
+            - 'SHA1=3a2e9523fa861714f1acf76009c2b024aa78ad03'
+            - 'SHA1=5812387783d61c6ab5702213bb968590a18065e3'
+            - 'SHA1=eb1ecad3d37bb980f908bf1a912415cff32e79e6'
+            - 'SHA1=4040f6974119ff2486f9a0cbd749ce240cbee2aa'
+            - 'SHA1=ec457a53ea03287cbbd1edcd5f27835a518ef144'
+            - 'SHA1=4d7d514b13de9bd3e9753bf058958e7f03f36983'
+            - 'SHA256=e7cbfb16261de1c7f009431d374d90e9eb049ba78246e38bc4c8b9e06f324b6f'
+            - 'SHA256=3cb75429944e60f6c820c7638adbf688883ad44951bca3f8912428afe72bc134'
+            - 'SHA256=65c26276cadda7a36f8977d1d01120edb5c3418be2317d501761092d5f9916c9'
+            - 'SHA256=f06fdfe50ebc8d1d2daf5811b66288563f26a09a2ec9c2a21e2a71ff19756062'
+            - 'SHA256=42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00'
+            - 'SHA256=26ba58c9af9c8a7aebf222f491f786daa0626be44d34f170fea3623d92828e63'
+            - 'SHA256=3482f671cb1b6414e43ab2c9bccc94c1fba67ceac6e9831249f18f31ad68880c'
+            - 'SHA256=5e238d351e16d4909ca394f1db0326a60d33c9ac7b4d78aefcf17a6d9cc72be9'
+            - 'SHA256=5f487829527802983d5c120e3b99f3cf89333ca14f5e49ac32df0798cfb1f7aa'
+            - 'SHA256=2f60536b25ba8c9014e4a57d7a9a681bd3189fa414eea88c256d029750e15cae'
+            - 'SHA256=3972159a58fd04da06f648c3828648cf394d3eb6af89538166cae8e6184c3eb6'
+            - 'SHA256=b95b2d9b29bd25659f1c7ba5a187f8d23cde01162d9b5b1a2c4aea8f64b38441'
+            - 'SHA256=20f11a64bc4548f4edb47e3d3418da0f6d54a83158224b71662a6292bf45b5fb'
+            - 'SHA256=bc7ebd191e0991fd0865a5c956a92e63792a0bb2ff888af43f7a63bb65a22248'
+            - 'SHA256=38d87b51f4b69ba2dae1477684a1415f1a3b578eee5e1126673b1beaefee9a20'
+            - 'SHA256=7c942801884999057aabdc01707570371afdb077979ee2f318c05276123b78e7'
+            - 'SHA256=fc22977ff721b3d718b71c42440ee2d8a144f3fbc7755e4331ddd5bcc65158d2'
+            - 'SHA256=fda506e2aa85dc41a4cbc23d3ecc71ab34e06f1def736e58862dc449acbc2330'
+            - 'SHA256=c2fcc0fec64d5647813b84b9049d430406c4c6a7b9f8b725da21bcae2ff12247'
+            - 'SHA256=ffc72f0bde21ba20aa97bee99d9e96870e5aa40cce9884e44c612757f939494f'
+            - 'SHA256=990165725debccea7ca15aa4ed7a0e3a2a25b4a72cb309a27c899bd0e4b5148f'
+            - 'SHA256=36aafa127736c7226c50061ea065f71e14f64ec60321f705bc52686d24117e0d'
+            - 'SHA256=37073e42ffa0322500f90cd7e3c8d02c4cdd695d31c77e81560abec20bfb68ba'
+            - 'SHA256=6c64688444d3e004da77dcfb769d064bb38afceeef7ff915dfc71e60e19ff18a'
+            - 'IMPHASH=07a42e80559d960b176c0fc8fd309bfe'
+            - 'IMPHASH=4199ed50502e00f57d9b66e9305450f5'
+            - 'IMPHASH=b05ee5c816a30bc52378c759486af0b9'
+            - 'IMPHASH=f9141c3df8f7ec7b3f2d46265a3b5528'
+            - 'IMPHASH=4c0161f638d5acafe23fcee3c5e86f15'
+            - 'IMPHASH=4c304943af1b07b15a5efa80f17d9b89'
+            - 'IMPHASH=bd607d71fdc1444aa96dc431591c5c44'
+            - 'IMPHASH=9943d029b8ce940ac6c9a8ab0737bf35'
+            - 'IMPHASH=363922cc73591e60f2af113182414230'
+            - 'IMPHASH=4fbdc03e4487f98fb59360ea5b3e640d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

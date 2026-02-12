@@ -12,16 +12,16 @@ CVE:
 - CVE-2015-2291
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel
-        && sc.exe start iqvw64e.sys
-    Description: (1) IQVW32.sys before 1.3.1.0 and (2) IQVW64.sys before 1.3.1.0 in
-        the Intel Ethernet diagnostics driver for Windows allows local users to cause
-        a denial of service or possibly execute arbitrary code with kernel privileges
-        via a crafted (a) 0x80862013, (b) 0x8086200B, (c) 0x8086200F, or (d) 0x80862007
-        IOCTL call.
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel
+    && sc.exe start iqvw64e.sys
+  Description: (1) IQVW32.sys before 1.3.1.0 and (2) IQVW64.sys before 1.3.1.0 in
+    the Intel Ethernet diagnostics driver for Windows allows local users to cause
+    a denial of service or possibly execute arbitrary code with kernel privileges
+    via a crafted (a) 0x80862013, (b) 0x8086200B, (c) 0x8086200F, or (d) 0x80862007
+    IOCTL call.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://www.crowdstrike.com/blog/scattered-spider-attempts-to-avoid-detection-with-bring-your-own-vulnerable-driver-tactic/
 - https://expel.com/blog/well-that-escalated-quickly-how-a-red-team-went-from-domain-user-to-kernel-memory/
@@ -30,393 +30,419 @@ Resources:
 - https://github.com/TheCruZ/kdmapper
 - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Filename: iQVW64.SYS
-    MD5: 69ba501a268f09f694ff0e8e208aa20e
-    SHA1: 3d6d53b0f1cc908b898610227b9f1b9352137aba
-    SHA256: 37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9
-    Signature: ''
-    Date: ''
-    Publisher: ''
-    Company: 'Intel Corporation '
-    Description: Intel(R) Network Adapter Diagnostic Driver
-    Product: Intel(R) iQVW64.SYS
-    ProductVersion: 1.3.2.17
-    FileVersion: '1.3.2.17 built by: WinDDK'
-    MachineType: AMD64
-    OriginalFilename: iQVW64.SYS
-    Imphash: 2cf48a541dc193e91bb2a831adcf278e
-    Authentihash:
-        MD5: 61c9bc2fd776b341f21b71fb1891eb5a
-        SHA1: 9af173db51828d2a3c64d34e9120f1fd129a2359
-        SHA256: ecd6e879e5521ca4053a59ef6682a95d97f6d9ba75f313b87bd133afe5267852
-    RichPEHeaderHash:
-        MD5: 84dfb7245aa6b7f3efec05cfa6559636
-        SHA1: 695bd45c0e89dcb58253e90c9a43400b03ae2202
-        SHA256: 3ff178ffbb2c17ce7c3a02ef5943ddf3b580e3e28f6cc59775c5369062a0b9ab
-    Sections:
-        .text:
-            Entropy: 6.2614381305981635
-            Virtual Size: '0x4945'
-        .rdata:
-            Entropy: 4.781156413274236
-            Virtual Size: '0xed0'
-        .data:
-            Entropy: 1.1262035268835313
-            Virtual Size: '0x5ca0a0'
-        .pdata:
-            Entropy: 4.658699009524359
-            Virtual Size: '0x678'
-        PAGE:
-            Entropy: 6.1261566082145595
-            Virtual Size: '0x1b71'
-        INIT:
-            Entropy: 5.7698100081018655
-            Virtual Size: '0xb4c'
-        .rsrc:
-            Entropy: 3.4436811351467087
-            Virtual Size: '0x3f8'
-        .reloc:
-            Entropy: 1.2072398645622464
-            Virtual Size: '0x60'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2018-09-17 03:18:08'
-    InternalName: iQVW64.SYS
-    Copyright: Copyright (C) 2002-2018 Intel Corporation All Rights Reserved.
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoCreateSymbolicLink
-    - IofCompleteRequest
-    - MmIsAddressValid
-    - ExAllocatePoolWithTag
-    - ExFreePoolWithTag
-    - MmGetPhysicalAddress
-    - DbgPrint
-    - strncpy
-    - vsprintf
-    - IoFreeMdl
-    - MmMapLockedPagesSpecifyCache
-    - MmBuildMdlForNonPagedPool
-    - IoAllocateMdl
-    - MmUnmapIoSpace
-    - MmUnmapLockedPages
-    - MmAllocateContiguousMemory
-    - MmFreeContiguousMemory
-    - MmMapIoSpace
-    - RtlInitUnicodeString
-    - KeWaitForSingleObject
-    - IofCallDriver
-    - IoBuildSynchronousFsdRequest
-    - KeInitializeEvent
-    - ZwClose
-    - RtlFreeAnsiString
-    - strstr
-    - RtlUnicodeStringToAnsiString
-    - ZwEnumerateValueKey
-    - ZwOpenKey
-    - wcsncpy
-    - IoGetDeviceObjectPointer
-    - IoGetDeviceInterfaces
-    - ObReferenceObjectByPointer
-    - MmAllocateNonCachedMemory
-    - MmFreeNonCachedMemory
-    - KeBugCheckEx
-    - IoDeleteSymbolicLink
-    - ObfDereferenceObject
-    - IoDeleteDevice
-    - MmGetSystemRoutineAddress
-    - ZwSetSecurityObject
-    - ObOpenObjectByPointer
-    - IoDeviceObjectType
-    - IoCreateDevice
-    - RtlGetDaclSecurityDescriptor
-    - RtlGetSaclSecurityDescriptor
-    - RtlGetGroupSecurityDescriptor
-    - RtlGetOwnerSecurityDescriptor
-    - _snwprintf
-    - RtlLengthSecurityDescriptor
-    - SeCaptureSecurityDescriptor
-    - SeExports
-    - IoIsWdmVersionAvailable
-    - _wcsnicmp
-    - RtlAddAccessAllowedAce
-    - RtlLengthSid
-    - wcschr
-    - RtlAbsoluteToSelfRelativeSD
-    - RtlSetDaclSecurityDescriptor
-    - RtlCreateSecurityDescriptor
-    - ZwCreateKey
-    - ZwQueryValueKey
-    - ZwSetValueKey
-    - RtlFreeUnicodeString
-    - KeStallExecutionProcessor
-    - KeQueryPerformanceCounter
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust
-                External CA Root
-            ValidFrom: '2013-08-15 20:26:30'
-            ValidTo: '2023-08-15 20:36:30'
-            Signature: 362ba2f2e1331fe493f7f26985c6640ec99b632fe4703798fd94ec7bcff8a14246f9ed6a4e8d34693605557a1ebbad8c99429606e925a82684bec1bf16a97caa5b04b7fdd1c0f402be28edf577c79bfe3af6e8c17bd382abfa144ecf2bcfe5d5b54840b1a38f838bad2b2553aba634cef243f74f2ce9dd1e4e5ab6bae83b10992400bc50fd78f6e523a8899493f7b74130374a57b7e644d9c9df9905aa44fc74af8264cc07cb01b609c32ee3e832a7b49f4178c7a184365462f2ec150ac8ead084f8f1e06bf456125f95e0fcddb77693fe294a25e90400f1b4110ec9849edb177df51ea58e3629193a6d6c464bd7ab7024288d05a3d9d524f2f8a0d13c8239d4a8820e693a8109fc06f0c75933843693064191232c22a5a7012b50b428aedb46b0591b86b39b87e8494e390b6d14df4c03301e1f5f74aef55b590353ec9816e0d06235751b48b87d13e57a48b87752a40798253b069b7a4e6a6f44864f144f2779273d5073414c9c413edd290c73b1c7fb1f760c176504ebd25010924149ece4067d3615446f89bf697df94d40c13a98b6a07e31d2b5aecafb53d53f5086cd5e933b6d5d7c9a3f3ff7a9255884dd114900a2c7c89e37dd778e6d718be05b81345d54baccf59347886de7ef5be228e4801b40e40f2ad17f2315655aac9994433f465526d6c4fa8895e2919aa32d0b85deac8ce0f967709f71790231f761a229c4
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 3300000035d8d5595b0671412b000000000035
-            Version: 3
-            TBS:
-                MD5: 3d488d41aaeb5661974952080abef2fd
-                SHA1: df01e35e6befc7d65625319f17397b861e618d56
-                SHA256: 3d6ef38b5d26773dc77392e415e88b3a744b30ea9f2081e2a992b5818db2f0c4
-                SHA384: ac7c06916fe4a00307834b2499f12799d3fe463c2e63d1881df669a2786745beeee2b3a7d87cd6bc9e4fe293c22e5a59
-        -   Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited,
-                CN=COMODO RSA Certification Authority
-            ValidFrom: '2000-05-30 10:48:38'
-            ValidTo: '2020-05-30 10:48:38'
-            Signature: 64bf83f15f9a85d0cdb8a129570de85af7d1e93ef276046ef15270bb1e3cff4d0d746acc818225d3c3a02a5d4cf5ba8ba16dc4540975c7e3270e5d847937401377f5b4ac1cd03bab1712d6ef34187e2be979d3ab57450caf28fad0dbe5509588bbdf8557697d92d852ca7381bf1cf3e6b86e661105b31e942d7f91959259f14ccea391714c7c470c3b0b19f6a1b16c863e5caac42e82cbf90796ba484d90f294c8a973a2eb067b239ddea2f34d559f7a6145981868c75e406b23f5797aef8cb56b8bb76f46f47bf13d4b04d89380595ae041241db28f15605847dbef6e46fd15f5d95f9ab3dbd8b8e440b3cd9739ae85bb1d8ebcdc879bd1a6eff13b6f10386f
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.12
-            IsCertificateAuthority: true
-            SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
-            Version: 3
-            TBS:
-                MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
-                SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
-                SHA256: 0d73a614eef7596cf5a34733f74daf2ccfe4df7b4a40069bf43c43e428264177
-                SHA384: 7ce102d63c57cb48f80a65d1a5e9b350a7a618482aa5a36775323ca933ddfcb00def83796a6340dec5ebf7596cfd8e5d
-        -   Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=ND, CN=Intel(R)
-                INTELND1820
-            ValidFrom: '2018-08-09 21:34:08'
-            ValidTo: '2020-08-08 21:34:08'
-            Signature: 714c055fff1a2bd770c1b7103eb47360ca789a29c9e4a59a9050dd5f9b20d559fa927bd5a6a7bb8e90be3324862edbe148f96f164427cd86b7c99ef8e972368a3aad8789e77ad0787ca5361a940eceb6b575a78655040f4104ddc57610bb1045c9aa03f3044b67c067a57c1d2dcf6be9969ce946684d131c1f8e750ddde70bf6740ea6c912945b8aea873d8a2653180e02fa8cd0803d617f6bc1a432d3dd39ee49cb520959cffcab34bf6deba98ce8a8eba46eec31a34a075e1269c8cf68fe8d70b17e72c83206ca40797c51997ee0521ed3ebf4f20fb5a8c48c93722362f65ffb68f49325f479e30b398938d8b87a8adfe0d8c1e68b0be9de1d11dca8aca582ba3a568c0f94b344c0cc5acd6b13870baf515fe169110c33d54f5e475272e485e949bf8f6dd4c7306bc32859dbbcde89228d1f92a7b9a0b20dd88097f76a19e6149afa28fb25574f9885252460aadb51be7695a59f13fe307a8346f4cf54f36b94dd1d8d082747f9869da38daed9301a20e728f7562dd789b52e11d061800bf8eb5bfce47c114b939ed0787760bb530a86585de6b79927216dfadc3b6ab3234b94e3069feedfcac8adfa9ab3f910104f32fb18a44c90a8b9dab58915cccf8ce134bcb39a9eb4ddc158607cccbce0cfb7f23506fc40b99d3c79b6de258c7c1734e29abae3a2330cf45871fc0dd444abbe8057a27b67cb4467f5bfd199d4ddedb7
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: false
-            SerialNumber: 560000077b478c76c9afcafcaf00000000077b
-            Version: 3
-            TBS:
-                MD5: f3eba8fe0d2dd1bc861e0b0e6e23d96e
-                SHA1: bce46695d618b69de8a4bb5ebede302378c1aebb
-                SHA256: 5de689926c95c269de72cd6edf9cad152c5ce41729dfc7835607b9b1182fe66e
-                SHA384: 348401b8898e24fd502451c161739c56eecd8f5a8159045b1fc312dd636174aba9627306025387736bf478ade2b773a0
-        -   Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External
-                Issuing CA 7B
-            ValidFrom: '2015-10-28 00:00:00'
-            ValidTo: '2021-06-17 23:59:59'
-            Signature: 35bb03eacc9b601a13d075528e8095454e9ebf6ec0bb64aac36eb1021d465e2fe82f48cc8410f7ad993bfffa856829b0d37c31e21ab47bc166e2a53bc729189835ae6301a845209561db104db90d6bd39964ce5f8bb86c1346a06e5a0d3ee790ebb731a121f58dde3b7b6936f10800b9aabf1c566156d7cc923f29d4d96bd8222f0e56f56ad146e8808f397a923c6748b7e2fa190f3767e2df292d02aa43282eae2c464224be6dbb6a8849a64c20dfe5654ffae1c1be71d5f85ef59d6692b23b64e1e8aeac995517bddb1bdfa0934f3f56f23b83d5d2b7c1085a524042e33e9120f735b491f04de134694879c0ed30c9931a84d572198f6d8039f459ab2016d8f9ff7026237becc50033227c3d203aedb428bc7a810ce70bc13f7c300c4e50b8670fd76417b7c3c52085ca8fced5262a1254b9ff22f8a8273cca0e853714ee02e52f66156263876a5ecf29d3b89178b76172177bc119a6180822dad09125f606090926b02dac808874335fc7e044c1309976d877b14701ef69922bedae582963a0358ee41db704f1da3ab23280b1c8bcf0e70f71007a333a06e8a4d879d9d953cd9bfeb2685b8884856b0771d04f930a0760033408d273bf141adfe3c7041b2d999e931c95b38798425a1c916352398a8f4a2ac24c7b70693a3cf1fb2fff0e0a8794e4016acf9bb41fa30ea9ea2adcaf2b8c4401fd3a587d3278a219d5c974c5
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.12
-            IsCertificateAuthority: true
-            SerialNumber: 069b5e99277284c8767f1368a7deb0f3
-            Version: 3
-            TBS:
-                MD5: 5578c7331db18bb448db403ad32c94ee
-                SHA1: dfcfe5d6087cf830513d705aa701ff957d960298
-                SHA256: 5b619f82064ace7ecf48d26ce8ae6fa3b52671915fa81ee81cddbe740dd8698b
-                SHA384: 5fa042c979faba67de861093b4aca808ae4be0fcedf123cb8afe126856c0b6ac3451393048211db8993914c5ff410bd8
-        Signer:
-        -   SerialNumber: 560000077b478c76c9afcafcaf00000000077b
-            Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External
-                Issuing CA 7B
-            Version: 1
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 1789a16d20ca2b55f491ad71848166a2
-        SHA1: 2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7
-        SHA256: 785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087
-    Company: 'Intel Corporation '
-    Copyright: Copyright (C) 2002-2013 Intel Corporation All Rights Reserved.
-    CreationTimestamp: '2013-11-14 08:22:43'
-    Date: ''
-    Description: Intel(R) Network Adapter Diagnostic Driver
-    ExportedFunctions: ''
-    FileVersion: '1.03.0.7 built by: WinDDK'
-    Filename: iqvw64e.sys
-    ImportedFunctions:
-    - IoCreateSymbolicLink
-    - IoCreateDevice
-    - IofCompleteRequest
-    - ExAllocatePoolWithTag
-    - ExFreePoolWithTag
-    - MmGetPhysicalAddress
-    - DbgPrint
-    - strncpy
-    - vsprintf
-    - IoFreeMdl
-    - MmMapLockedPagesSpecifyCache
-    - MmBuildMdlForNonPagedPool
-    - IoAllocateMdl
-    - MmUnmapIoSpace
-    - MmUnmapLockedPages
-    - MmAllocateContiguousMemory
-    - MmFreeContiguousMemory
-    - RtlInitUnicodeString
-    - ObfDereferenceObject
-    - KeWaitForSingleObject
-    - IofCallDriver
-    - IoBuildSynchronousFsdRequest
-    - KeInitializeEvent
-    - ZwClose
-    - RtlFreeAnsiString
-    - strstr
-    - RtlUnicodeStringToAnsiString
-    - ZwEnumerateValueKey
-    - ZwOpenKey
-    - wcsncpy
-    - IoGetDeviceObjectPointer
-    - IoGetDeviceInterfaces
-    - ObReferenceObjectByPointer
-    - KeBugCheckEx
-    - IoDeleteSymbolicLink
-    - MmMapIoSpace
-    - IoDeleteDevice
-    - KeStallExecutionProcessor
-    - KeQueryPerformanceCounter
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: iQVW64.SYS
-    MD5: 1898ceda3247213c084f43637ef163b3
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: iQVW64.SYS
-    Product: Intel(R) iQVW64.SYS
-    ProductVersion: 1.03.0.7
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 4521e9ed78c16f8d1e49a1981dfb32eb
-        SHA1: 557230bdf881a5a09523f4b063c81e10594ee183
-        SHA256: 4d270337cbd39f54b308a8b11869c2d85075acb846ce369f90aeceb8dd87782f
-    SHA1: d04e5db5b6c848a29732bfd52029001f23c3da75
-    SHA256: 4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b
-    Sections:
-        .text:
-            Entropy: 6.312074870341971
-            Virtual Size: '0x4615'
-        .rdata:
-            Entropy: 4.765757053328623
-            Virtual Size: '0x7c0'
-        .data:
-            Entropy: 0.30140680731160896
-            Virtual Size: '0x5c9ec0'
-        .pdata:
-            Entropy: 4.307215755522235
-            Virtual Size: '0x408'
-        INIT:
-            Entropy: 5.835829282045137
-            Virtual Size: '0x7a8'
-        .rsrc:
-            Entropy: 3.423830950438437
-            Virtual Size: '0x3f8'
-    Signature:
-    - Intel Corporation
-    - VeriSign Class 3 Code Signing 2010 CA
-    - VeriSign
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                CA , G2
-            ValidFrom: '2012-12-21 00:00:00'
-            ValidTo: '2020-12-30 23:59:59'
-            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-            Version: 3
-            TBS:
-                MD5: d0785ad36e427c92b19f6826ab1e8020
-                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G4
-            ValidFrom: '2012-10-18 00:00:00'
-            ValidTo: '2020-12-29 23:59:59'
-            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-            Version: 3
-            TBS:
-                MD5: e9d38360b914c8863f6cba3ee58764d3
-                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-        -   Subject: C=US, ST=Oregon, L=Hillsboro, O=Intel Corporation, OU=Digital
-                ID Class 3 , Microsoft Software Validation v2, OU=LAN Access Division,
-                CN=Intel Corporation
-            ValidFrom: '2012-05-17 00:00:00'
-            ValidTo: '2015-05-30 23:59:59'
-            Signature: 285fe626bdcc91182509755ed38bee901a395d2f11b14eb7857cb9b3624afadee423a07cca07804cd51a299716b3bd127c84e6d827dd786b29964aee3b6dd0193d366813ff62ab31f61e2c37bda7a2cd4c19a877cd410dcd066acefa7013e47436b8b4270238dbf631a4907c380f2397eda3a013d8d3d006a15b581edf946d7cc16896d2af8e79981802555b12bb1b177f7e9a85c0c92b8af3d423ecbd858a1aa0d8face738f4f4934b2a0f9654db4cc1e388afad699371e83992bd317de8ae0dce9df2f6de60191af4462eca8a2ba30e8b203b68bff09f4753cfbedbf41a64f1e0cc999f90c83dc3062dd62dd46773f8e93d1051f19a29a97377c1d0bee7f39
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 2776ab5cf2d09872f1ad05fbc3f21a87
-            Version: 3
-            TBS:
-                MD5: fa13cce803fbe5b5256430f9bfee76de
-                SHA1: ce566e0c55909bbf2bb0d43280ee78b4ba3d582f
-                SHA256: 7959ee2235998f36a9cdbd9b5ef7759e5846e0eecd7e868c5f042360a25482aa
-                SHA384: 82fcff4effee6971cfc9d0d684d13479eac42b53f23590e0df172e2804ff94abc1fbf0e2b6af0cf05b099fc97cf26789
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
-                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
-                Primary Certification Authority , G5
-            ValidFrom: '2011-02-22 19:25:17'
-            ValidTo: '2021-02-22 19:35:17'
-            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 611993e400000000001c
-            Version: 3
-            TBS:
-                MD5: 78a717e082dcc1cda3458d917e677d14
-                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            ValidFrom: '2010-02-08 00:00:00'
-            ValidTo: '2020-02-07 23:59:59'
-            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-            Version: 3
-            TBS:
-                MD5: b30c31a572b0409383ed3fbe17e56e81
-                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-        Signer:
-        -   SerialNumber: 2776ab5cf2d09872f1ad05fbc3f21a87
-            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            Version: 1
-    Imphash: 55db306bc2be3ff71a6b91fd9db051b8
-    LoadsDespiteHVCI: 'FALSE'
+- Filename: iQVW64.SYS
+  MD5: 69ba501a268f09f694ff0e8e208aa20e
+  SHA1: 3d6d53b0f1cc908b898610227b9f1b9352137aba
+  SHA256: 37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: 'Intel Corporation '
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.3.2.17
+  FileVersion: '1.3.2.17 built by: WinDDK'
+  MachineType: AMD64
+  OriginalFilename: iQVW64.SYS
+  Imphash: 2cf48a541dc193e91bb2a831adcf278e
+  Authentihash:
+    MD5: 61c9bc2fd776b341f21b71fb1891eb5a
+    SHA1: 9af173db51828d2a3c64d34e9120f1fd129a2359
+    SHA256: ecd6e879e5521ca4053a59ef6682a95d97f6d9ba75f313b87bd133afe5267852
+  RichPEHeaderHash:
+    MD5: 84dfb7245aa6b7f3efec05cfa6559636
+    SHA1: 695bd45c0e89dcb58253e90c9a43400b03ae2202
+    SHA256: 3ff178ffbb2c17ce7c3a02ef5943ddf3b580e3e28f6cc59775c5369062a0b9ab
+  Sections:
+    .text:
+      Entropy: 6.2614381305981635
+      Virtual Size: '0x4945'
+    .rdata:
+      Entropy: 4.781156413274236
+      Virtual Size: '0xed0'
+    .data:
+      Entropy: 1.1262035268835313
+      Virtual Size: '0x5ca0a0'
+    .pdata:
+      Entropy: 4.658699009524359
+      Virtual Size: '0x678'
+    PAGE:
+      Entropy: 6.1261566082145595
+      Virtual Size: '0x1b71'
+    INIT:
+      Entropy: 5.7698100081018655
+      Virtual Size: '0xb4c'
+    .rsrc:
+      Entropy: 3.4436811351467087
+      Virtual Size: '0x3f8'
+    .reloc:
+      Entropy: 1.2072398645622464
+      Virtual Size: '0x60'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-09-17 05:18:08'
+  InternalName: iQVW64.SYS
+  Copyright: Copyright (C) 2002-2018 Intel Corporation All Rights Reserved.
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoCreateSymbolicLink
+  - IofCompleteRequest
+  - MmIsAddressValid
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmGetPhysicalAddress
+  - DbgPrint
+  - strncpy
+  - vsprintf
+  - IoFreeMdl
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmUnmapIoSpace
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - MmMapIoSpace
+  - RtlInitUnicodeString
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - KeInitializeEvent
+  - ZwClose
+  - RtlFreeAnsiString
+  - strstr
+  - RtlUnicodeStringToAnsiString
+  - ZwEnumerateValueKey
+  - ZwOpenKey
+  - wcsncpy
+  - IoGetDeviceObjectPointer
+  - IoGetDeviceInterfaces
+  - ObReferenceObjectByPointer
+  - MmAllocateNonCachedMemory
+  - MmFreeNonCachedMemory
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - ObfDereferenceObject
+  - IoDeleteDevice
+  - MmGetSystemRoutineAddress
+  - ZwSetSecurityObject
+  - ObOpenObjectByPointer
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - SeExports
+  - IoIsWdmVersionAvailable
+  - _wcsnicmp
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlSetDaclSecurityDescriptor
+  - RtlCreateSecurityDescriptor
+  - ZwCreateKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - RtlFreeUnicodeString
+  - KeStallExecutionProcessor
+  - KeQueryPerformanceCounter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust
+        External CA Root
+      ValidFrom: '2013-08-15 20:26:30'
+      ValidTo: '2023-08-15 20:36:30'
+      Signature: 362ba2f2e1331fe493f7f26985c6640ec99b632fe4703798fd94ec7bcff8a14246f9ed6a4e8d34693605557a1ebbad8c99429606e925a82684bec1bf16a97caa5b04b7fdd1c0f402be28edf577c79bfe3af6e8c17bd382abfa144ecf2bcfe5d5b54840b1a38f838bad2b2553aba634cef243f74f2ce9dd1e4e5ab6bae83b10992400bc50fd78f6e523a8899493f7b74130374a57b7e644d9c9df9905aa44fc74af8264cc07cb01b609c32ee3e832a7b49f4178c7a184365462f2ec150ac8ead084f8f1e06bf456125f95e0fcddb77693fe294a25e90400f1b4110ec9849edb177df51ea58e3629193a6d6c464bd7ab7024288d05a3d9d524f2f8a0d13c8239d4a8820e693a8109fc06f0c75933843693064191232c22a5a7012b50b428aedb46b0591b86b39b87e8494e390b6d14df4c03301e1f5f74aef55b590353ec9816e0d06235751b48b87d13e57a48b87752a40798253b069b7a4e6a6f44864f144f2779273d5073414c9c413edd290c73b1c7fb1f760c176504ebd25010924149ece4067d3615446f89bf697df94d40c13a98b6a07e31d2b5aecafb53d53f5086cd5e933b6d5d7c9a3f3ff7a9255884dd114900a2c7c89e37dd778e6d718be05b81345d54baccf59347886de7ef5be228e4801b40e40f2ad17f2315655aac9994433f465526d6c4fa8895e2919aa32d0b85deac8ce0f967709f71790231f761a229c4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000035d8d5595b0671412b000000000035
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 3d488d41aaeb5661974952080abef2fd
+        SHA1: df01e35e6befc7d65625319f17397b861e618d56
+        SHA256: 3d6ef38b5d26773dc77392e415e88b3a744b30ea9f2081e2a992b5818db2f0c4
+        SHA384: ac7c06916fe4a00307834b2499f12799d3fe463c2e63d1881df669a2786745beeee2b3a7d87cd6bc9e4fe293c22e5a59
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Certification Authority
+      ValidFrom: '2000-05-30 10:48:38'
+      ValidTo: '2020-05-30 10:48:38'
+      Signature: 64bf83f15f9a85d0cdb8a129570de85af7d1e93ef276046ef15270bb1e3cff4d0d746acc818225d3c3a02a5d4cf5ba8ba16dc4540975c7e3270e5d847937401377f5b4ac1cd03bab1712d6ef34187e2be979d3ab57450caf28fad0dbe5509588bbdf8557697d92d852ca7381bf1cf3e6b86e661105b31e942d7f91959259f14ccea391714c7c470c3b0b19f6a1b16c863e5caac42e82cbf90796ba484d90f294c8a973a2eb067b239ddea2f34d559f7a6145981868c75e406b23f5797aef8cb56b8bb76f46f47bf13d4b04d89380595ae041241db28f15605847dbef6e46fd15f5d95f9ab3dbd8b8e440b3cd9739ae85bb1d8ebcdc879bd1a6eff13b6f10386f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
+        SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
+        SHA256: 0d73a614eef7596cf5a34733f74daf2ccfe4df7b4a40069bf43c43e428264177
+        SHA384: 7ce102d63c57cb48f80a65d1a5e9b350a7a618482aa5a36775323ca933ddfcb00def83796a6340dec5ebf7596cfd8e5d
+    - Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=ND, CN=Intel(R)
+        INTELND1820
+      ValidFrom: '2018-08-09 21:34:08'
+      ValidTo: '2020-08-08 21:34:08'
+      Signature: 714c055fff1a2bd770c1b7103eb47360ca789a29c9e4a59a9050dd5f9b20d559fa927bd5a6a7bb8e90be3324862edbe148f96f164427cd86b7c99ef8e972368a3aad8789e77ad0787ca5361a940eceb6b575a78655040f4104ddc57610bb1045c9aa03f3044b67c067a57c1d2dcf6be9969ce946684d131c1f8e750ddde70bf6740ea6c912945b8aea873d8a2653180e02fa8cd0803d617f6bc1a432d3dd39ee49cb520959cffcab34bf6deba98ce8a8eba46eec31a34a075e1269c8cf68fe8d70b17e72c83206ca40797c51997ee0521ed3ebf4f20fb5a8c48c93722362f65ffb68f49325f479e30b398938d8b87a8adfe0d8c1e68b0be9de1d11dca8aca582ba3a568c0f94b344c0cc5acd6b13870baf515fe169110c33d54f5e475272e485e949bf8f6dd4c7306bc32859dbbcde89228d1f92a7b9a0b20dd88097f76a19e6149afa28fb25574f9885252460aadb51be7695a59f13fe307a8346f4cf54f36b94dd1d8d082747f9869da38daed9301a20e728f7562dd789b52e11d061800bf8eb5bfce47c114b939ed0787760bb530a86585de6b79927216dfadc3b6ab3234b94e3069feedfcac8adfa9ab3f910104f32fb18a44c90a8b9dab58915cccf8ce134bcb39a9eb4ddc158607cccbce0cfb7f23506fc40b99d3c79b6de258c7c1734e29abae3a2330cf45871fc0dd444abbe8057a27b67cb4467f5bfd199d4ddedb7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 560000077b478c76c9afcafcaf00000000077b
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: f3eba8fe0d2dd1bc861e0b0e6e23d96e
+        SHA1: bce46695d618b69de8a4bb5ebede302378c1aebb
+        SHA256: 5de689926c95c269de72cd6edf9cad152c5ce41729dfc7835607b9b1182fe66e
+        SHA384: 348401b8898e24fd502451c161739c56eecd8f5a8159045b1fc312dd636174aba9627306025387736bf478ade2b773a0
+    - Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External
+        Issuing CA 7B
+      ValidFrom: '2015-10-28 00:00:00'
+      ValidTo: '2021-06-17 23:59:59'
+      Signature: 35bb03eacc9b601a13d075528e8095454e9ebf6ec0bb64aac36eb1021d465e2fe82f48cc8410f7ad993bfffa856829b0d37c31e21ab47bc166e2a53bc729189835ae6301a845209561db104db90d6bd39964ce5f8bb86c1346a06e5a0d3ee790ebb731a121f58dde3b7b6936f10800b9aabf1c566156d7cc923f29d4d96bd8222f0e56f56ad146e8808f397a923c6748b7e2fa190f3767e2df292d02aa43282eae2c464224be6dbb6a8849a64c20dfe5654ffae1c1be71d5f85ef59d6692b23b64e1e8aeac995517bddb1bdfa0934f3f56f23b83d5d2b7c1085a524042e33e9120f735b491f04de134694879c0ed30c9931a84d572198f6d8039f459ab2016d8f9ff7026237becc50033227c3d203aedb428bc7a810ce70bc13f7c300c4e50b8670fd76417b7c3c52085ca8fced5262a1254b9ff22f8a8273cca0e853714ee02e52f66156263876a5ecf29d3b89178b76172177bc119a6180822dad09125f606090926b02dac808874335fc7e044c1309976d877b14701ef69922bedae582963a0358ee41db704f1da3ab23280b1c8bcf0e70f71007a333a06e8a4d879d9d953cd9bfeb2685b8884856b0771d04f930a0760033408d273bf141adfe3c7041b2d999e931c95b38798425a1c916352398a8f4a2ac24c7b70693a3cf1fb2fff0e0a8794e4016acf9bb41fa30ea9ea2adcaf2b8c4401fd3a587d3278a219d5c974c5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 069b5e99277284c8767f1368a7deb0f3
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5578c7331db18bb448db403ad32c94ee
+        SHA1: dfcfe5d6087cf830513d705aa701ff957d960298
+        SHA256: 5b619f82064ace7ecf48d26ce8ae6fa3b52671915fa81ee81cddbe740dd8698b
+        SHA384: 5fa042c979faba67de861093b4aca808ae4be0fcedf123cb8afe126856c0b6ac3451393048211db8993914c5ff410bd8
+    Signer:
+    - SerialNumber: 560000077b478c76c9afcafcaf00000000077b
+      Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing
+        CA 7B
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 1789a16d20ca2b55f491ad71848166a2
+    SHA1: 2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7
+    SHA256: 785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087
+  Company: 'Intel Corporation '
+  Copyright: Copyright (C) 2002-2013 Intel Corporation All Rights Reserved.
+  CreationTimestamp: '2013-11-14 10:22:43'
+  Date: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  ExportedFunctions: ''
+  FileVersion: '1.03.0.7 built by: WinDDK'
+  Filename: iqvw64e.sys
+  ImportedFunctions:
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCompleteRequest
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmGetPhysicalAddress
+  - DbgPrint
+  - strncpy
+  - vsprintf
+  - IoFreeMdl
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmUnmapIoSpace
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - RtlInitUnicodeString
+  - ObfDereferenceObject
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - KeInitializeEvent
+  - ZwClose
+  - RtlFreeAnsiString
+  - strstr
+  - RtlUnicodeStringToAnsiString
+  - ZwEnumerateValueKey
+  - ZwOpenKey
+  - wcsncpy
+  - IoGetDeviceObjectPointer
+  - IoGetDeviceInterfaces
+  - ObReferenceObjectByPointer
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - MmMapIoSpace
+  - IoDeleteDevice
+  - KeStallExecutionProcessor
+  - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: iQVW64.SYS
+  MD5: 1898ceda3247213c084f43637ef163b3
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: iQVW64.SYS
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.7
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 4521e9ed78c16f8d1e49a1981dfb32eb
+    SHA1: 557230bdf881a5a09523f4b063c81e10594ee183
+    SHA256: 4d270337cbd39f54b308a8b11869c2d85075acb846ce369f90aeceb8dd87782f
+  SHA1: d04e5db5b6c848a29732bfd52029001f23c3da75
+  SHA256: 4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b
+  Sections:
+    .text:
+      Entropy: 6.312074870341971
+      Virtual Size: '0x4615'
+    .rdata:
+      Entropy: 4.765757053328623
+      Virtual Size: '0x7c0'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x5c9ec0'
+    .pdata:
+      Entropy: 4.307215755522235
+      Virtual Size: '0x408'
+    INIT:
+      Entropy: 5.835829282045137
+      Virtual Size: '0x7a8'
+    .rsrc:
+      Entropy: 3.423830950438437
+      Virtual Size: '0x3f8'
+  Signature:
+  - Intel Corporation
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=Oregon, L=Hillsboro, O=Intel Corporation, OU=Digital ID Class
+        3 , Microsoft Software Validation v2, OU=LAN Access Division, CN=Intel Corporation
+      ValidFrom: '2012-05-17 00:00:00'
+      ValidTo: '2015-05-30 23:59:59'
+      Signature: 285fe626bdcc91182509755ed38bee901a395d2f11b14eb7857cb9b3624afadee423a07cca07804cd51a299716b3bd127c84e6d827dd786b29964aee3b6dd0193d366813ff62ab31f61e2c37bda7a2cd4c19a877cd410dcd066acefa7013e47436b8b4270238dbf631a4907c380f2397eda3a013d8d3d006a15b581edf946d7cc16896d2af8e79981802555b12bb1b177f7e9a85c0c92b8af3d423ecbd858a1aa0d8face738f4f4934b2a0f9654db4cc1e388afad699371e83992bd317de8ae0dce9df2f6de60191af4462eca8a2ba30e8b203b68bff09f4753cfbedbf41a64f1e0cc999f90c83dc3062dd62dd46773f8e93d1051f19a29a97377c1d0bee7f39
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 2776ab5cf2d09872f1ad05fbc3f21a87
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: fa13cce803fbe5b5256430f9bfee76de
+        SHA1: ce566e0c55909bbf2bb0d43280ee78b4ba3d582f
+        SHA256: 7959ee2235998f36a9cdbd9b5ef7759e5846e0eecd7e868c5f042360a25482aa
+        SHA384: 82fcff4effee6971cfc9d0d684d13479eac42b53f23590e0df172e2804ff94abc1fbf0e2b6af0cf05b099fc97cf26789
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 2776ab5cf2d09872f1ad05fbc3f21a87
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+  Imphash: 55db306bc2be3ff71a6b91fd9db051b8
+  LoadsDespiteHVCI: 'FALSE'

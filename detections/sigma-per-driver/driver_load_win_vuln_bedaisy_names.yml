@@ -1,0 +1,29 @@
+title: Driver Load - bedaisy.sys
+id: 3e7ea070-3ae2-58e9-9dd0-c22a92a54016
+status: experimental
+description: |
+    Detects loading of driver bedaisy.sys via name.
+    BattlEye Anti-Cheat BEDAISY.SYS PPL privesc.
+references:
+    - https://www.loldrivers.io/drivers/db666d40-c9fa-4039-bfac-a5d7afd61b67/
+    - https://github.com/magicsword-io/LOLDrivers/issues/23
+    - https://infosec.exchange/@Rairii/109310279380973806
+author: Wack0
+date: 2023/04/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bedaisy.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

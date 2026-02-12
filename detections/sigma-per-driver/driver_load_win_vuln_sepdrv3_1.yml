@@ -1,0 +1,31 @@
+title: Driver Load - sepdrv3_1.sys
+id: b8c402a8-019f-5364-bcd9-a5782ec32edf
+status: experimental
+description: |
+    Detects loading of driver sepdrv3_1.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/942f58d2-1300-4957-98a0-5f8d601bf55b/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=29b1ddc69e89b160cc3722e5e0738fd8'
+            - 'SHA1=c60cf6dea446e4a52c6b1cfc2a76e9aadd954dab'
+            - 'SHA256=b2bc7514201727d773c09a1cfcfae793fcdbad98024251ccb510df0c269b04e6'
+            - 'IMPHASH=ee9cc2f584c2f06fbff67d484adcf426'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

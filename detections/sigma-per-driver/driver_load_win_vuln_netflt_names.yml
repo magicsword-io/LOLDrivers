@@ -1,0 +1,28 @@
+title: Driver Load - netflt.sys
+id: f95a0b53-3f10-53bb-b314-be75003cea6b
+status: experimental
+description: |
+    Detects loading of driver netflt.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/35a9afeb-18f1-4c02-a3aa-830e300138ae/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\netflt.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

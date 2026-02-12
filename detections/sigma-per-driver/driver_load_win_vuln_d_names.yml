@@ -1,0 +1,27 @@
+title: Driver Load - d.sys
+id: 25be7e37-4274-56bc-a753-78b451575632
+status: experimental
+description: |
+    Detects loading of driver d.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/7a7630d6-d007-4d84-a17d-81236d9693e1/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\d.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,31 @@
+title: Driver Load - capcom2.sys
+id: 5e5c7efc-fb15-5813-9f6b-6394a65fb909
+status: experimental
+description: |
+    Detects loading of driver capcom2.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/45c42e32-6261-43c1-bdbd-cab58da729d8/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1838e8ea8b471a6fc54a06e8a796b118'
+            - 'SHA1=ac5bd1e80e59b3c5c15b298f269bf065f57ac3f2'
+            - 'SHA256=6621fb2e761237d2b09863fd31951789697f119d118d2e5db0e957ab0173f06a'
+            - 'IMPHASH=45bfe170e0cd654bc1e2ae3fca3ac3f4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

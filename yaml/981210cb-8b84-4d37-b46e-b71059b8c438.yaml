@@ -1,0 +1,308 @@
+Id: 981210cb-8b84-4d37-b46e-b71059b8c438
+Author: The Haag
+Created: '2025-08-28'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create amsdk binPath=C:\windows\temp\amsdk.sys type=kernel &&
+    sc.exe start amsdk
+  Description: Vulnerable WatchDog Antimalware driver used by Silver Fox APT group to load unsigned drivers and execute malicious code in kernel mode
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://research.checkpoint.com/2025/silver-fox-apt-vulnerable-drivers/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: amsdk.sys
+  MD5: 47960eb7affa4987ebed6193b0a636b9
+  SHA1: 5001b8cd2cfb80c8ef43ecb89e45fe687d891e78
+  SHA256: 12b3d8bc5cc1ea6e2acd741d8a80f56cf2a0a7ebfa0998e3f0743fcf83fabb9e
+  Filesize: 199336
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: WatchDogDevelopment.com, LLC.
+  Description: WatchDog Antimalware Driver
+  Product: amsdk
+  ProductVersion: 1.0.600
+  FileVersion: 1.0.600
+  MachineType: AMD64
+  OriginalFilename: amsdk.sys
+  InternalName: amsdk.sys
+  Copyright: Copyright (C) 2023
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ZwClose
+  - RtlUpperString
+  - ZwOpenProcess
+  - ProbeForRead
+  - KeAcquireSpinLockRaiseToDpc
+  - RtlAppendUnicodeToString
+  - PsCreateSystemThread
+  - _vsnprintf
+  - KeInitializeSpinLock
+  - ZwWriteFile
+  - KeReleaseSpinLock
+  - KeInitializeSemaphore
+  - PsThreadType
+  - KeReleaseSemaphore
+  - ZwDeleteFile
+  - strchr
+  - PsGetCurrentThreadId
+  - ZwQueryInformationFile
+  - KeWaitForSingleObject
+  - PsTerminateSystemThread
+  - PsGetProcessSessionId
+  - PsSetCreateProcessNotifyRoutine
+  - RtlAppendUnicodeStringToString
+  - ZwDeleteValueKey
+  - ZwSetValueKey
+  - ZwQuerySystemInformation
+  - ZwQuerySymbolicLinkObject
+  - MmProbeAndLockPages
+  - ZwReadFile
+  - IoFreeIrp
+  - IoGetRelatedDeviceObject
+  - IoAllocateMdl
+  - ObCloseHandle
+  - FsRtlGetFileSize
+  - ZwOpenSymbolicLinkObject
+  - IoGetDeviceAttachmentBaseRef
+  - IoGetDeviceObjectPointer
+  - IoFileObjectType
+  - KeSetEvent
+  - KeLowerIrql
+  - KeAcquireSpinLockAtDpcLevel
+  - ZwSetInformationFile
+  - IoFreeMdl
+  - ObfReferenceObject
+  - IoAllocateIrp
+  - IoCreateFileSpecifyDeviceObjectHint
+  - KeReleaseSpinLockFromDpcLevel
+  - IofCallDriver
+  - KeInitializeEvent
+  - KfRaiseIrql
+  - RtlIntegerToUnicodeString
+  - towupper
+  - NtQuerySystemInformation
+  - NtBuildNumber
+  - NtOpenProcess
+  - MmGetSystemRoutineAddress
+  - DbgPrint
+  - ExGetPreviousMode
+  - ZwDeleteKey
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - MmIsDriverVerifying
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - RtlSetDaclSecurityDescriptor
+  - PsGetProcessId
+  - IoThreadToProcess
+  - MmMapLockedPagesSpecifyCache
+  - KeGetCurrentIrql
+  - ZwWaitForSingleObject
+  - PsProcessType
+  - KeStackAttachProcess
+  - ZwOpenThread
+  - ZwTerminateProcess
+  - KeUnstackDetachProcess
+  - ExInterlockedInsertHeadList
+  - CmUnRegisterCallback
+  - ExInterlockedRemoveHeadList
+  - CmRegisterCallback
+  - ZwQueryKey
+  - RtlCreateRegistryKey
+  - ZwEnumerateKey
+  - ZwQueryValueKey
+  - ZwOpenKey
+  - RtlFreeAnsiString
+  - PsRemoveLoadImageNotifyRoutine
+  - PsSetLoadImageNotifyRoutine
+  - MmSystemRangeStart
+  - ProbeForWrite
+  - RtlUnicodeStringToAnsiString
+  - PsGetProcessSectionBaseAddress
+  - strstr
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - wcsstr
+  - PsGetProcessImageFileName
+  - RtlGetVersion
+  - ObReferenceObjectByHandle
+  - PsGetCurrentProcessId
+  - PsLookupProcessByProcessId
+  - RtlCopyUnicodeString
+  - RtlInitUnicodeString
+  - ZwQueryInformationProcess
+  - RtlUpcaseUnicodeString
+  - ObfDereferenceObject
+  - ZwCreateFile
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - KeDelayExecutionThread
+  - ZwCreateEvent
+  - __C_specific_handler
+  - FltSendMessage
+  - FltCancelFileOpen
+  - FltStartFiltering
+  - FltGetStreamHandleContext
+  - FltReleaseFileNameInformation
+  - FltQueryInformationFile
+  - FltFreePoolAlignedWithTag
+  - FltGetFileNameInformation
+  - FltReadFile
+  - FltSetStreamHandleContext
+  - FltReleaseContext
+  - FltCreateCommunicationPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltAllocatePoolAlignedWithTag
+  - FltParseFileNameInformation
+  - FltAllocateContext
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltCloseCommunicationPort
+  PDBPath: ''
+  Authentihash:
+    MD5: cc54e3bc196b4399aa9ed15810a9b3ff
+    SHA1: aecf36814312d5e03dcde35d57367d1994ebbd8f
+    SHA256: cf1bb76946253f9a5b709b5237becfee05d7f56670767aed896763a2641bc854
+  Imphash: eed27f23ed1b96d3456a64d7611c40ba
+  RichPEHeaderHash:
+    MD5: 8a490bc67c3f99eac1aec81f33880388
+    SHA1: 05b7bff16d911646e6eae6eb55fdf497d7d99f58
+    SHA256: 8d477e06fac431fe637624db20aae214c2fe8083f3c00941c25b3b61616812ba
+  Sections:
+    .text:
+      Entropy: 6.230940692584366
+      Virtual Size: '0x1bb55'
+    .rdata:
+      Entropy: 4.922213595255239
+      Virtual Size: '0x780c'
+    .data:
+      Entropy: 5.4008037654137135
+      Virtual Size: '0x511e8'
+    .pdata:
+      Entropy: 5.058768959655745
+      Virtual Size: '0x738'
+    PAGE:
+      Entropy: 6.247460149770447
+      Virtual Size: '0x1c8c'
+    INIT:
+      Entropy: 5.289072823670283
+      Virtual Size: '0x1304'
+    .rsrc:
+      Entropy: 3.2921656061904527
+      Virtual Size: '0x348'
+    .reloc:
+      Entropy: 4.548873304244352
+      Virtual Size: '0x7c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-06-17 07:05:30'
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA , R3
+      ValidFrom: '2018-09-19 00:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 2370e9cfe2bef559ae94426fc44333aacd3f3ab96417f262064b48f140880617a1feabd15f3cc633f2f38edd1f1d3ecc1a6099820bacc7fc7e9a872aa57d0fa657eeac3b6a85d6debd4063f8ada6c888b012fcf641df0f09971e38ea539fbe05f43eead39f501276be098bc20b487d1e2e51f68d53d3ab1f401b8a8eed7dfb4f7956705f0cd38e1bb3a7700d372b9795abdae0126b1c40cec5c77eedc26258ec77ed7322c28af5864388adea136efdd8fe422fb97d5ead18ef9490ca3d27ab26949975c7cbd37bf7ca4cd3af5121925b847d2b9f153f74cb51e89e830e166f1be746ce23bdf9e4a28bd2396baa791c912ce261242d8e2a487090c41ec5e8e070
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 01ee5f169dff97352b6465d66a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 51c3959a45cecf3d21a3effb05762573
+        SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
+        SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
+    - Subject: CN=GlobalSign Code Signing Root R45,O=GlobalSign nv,sa,C=BE
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2029-03-18 00:00:00'
+      Signature: acf7cc158b3079a81d0b28881909d71c7ffe86bd7b5a336e0d670e7b62d9e1185cb0bd135d1d23ae39507637aa44fd5f01235986564cccadbc64131430a420a8e03fe89c72dc7ef3d80c23baa82daa3cf6ec9f87310765f539a7518275e1f22f97f6d1e165968364fea11d51fbb5249bf5d27769bc852c5cfa5877d1aea7b10be2d677bba9b4344aa96f3df4f30d955de6f97a45b02517312edbf70f68e6831fa9f7e5d49d988cd3614b2fc3287e7ade930eb47da00a6d92c4b4663f7da758eeacf7ecc30801ab38fc0a1ca9c597b288c8090219f65c9a1af14d6c30d4b306ab0060480d78abcf17ad9293622077756cbdc832b4dc4debd9dfc1909629bdc17f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 7803184245708a41cf6f01b8eeb4a954
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: a33260428269bc902bc1cd280e4b1837
+        SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
+        SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
+        SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
+    - Subject: CN=GlobalSign GCC R45 EV CodeSigning CA 2020,O=GlobalSign nv,sa,C=BE
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2030-07-28 00:00:00'
+      Signature: 2575a009c939bab7a139892f189fabd6eb1d4be8947c0d07689b1c9def71b6176a6b024fb33f864587cc659b4ce35806022266d56102c5638fd4a2f1b65e250b7796e9cd7140338829eceef3a26dbc4db53e064bc97333ca08142d3d4ce8b0ba75a6742da4583a6c1349f8a5150a149685b16a68342542af9656f410fa247df12b72c116e16bebe6a998c73e5af4d0189dfd74978677462a3d237d28738aaeef2b1b9abf6c53a7149e3c8771c05e8ec8fbd32a9233ea574d5e075ecac118ac812d1a21fa6ecf97617bdf717a3aca63f7d530443732febb4385dcbafca6ca33192b776ddbcb05f07e5f752ea2b6bf35aa3663c9ce64d9bdfcbc2cf3495600c8122bc627bb37af57efc4cf1e29c4f4e22dce2a61cf57edf50a40e2f518d61ee9902fcad3875f938a481a111de537859f2e66629a5e814e95ac555743dc538b257e3c610f8a0bbaf53fa6d78ef704565e21bb9fd76a7180bf96de7203d8d8222bf327164f38e851400cae92efbe3d7df780c64c36578495a7841548300e5227088d8ea2bd22c719c9a6ca0ea87a36db6aba615f112495a4e28e68ee19a949995ed0b434bdd6f940c710973152393529118724d3c4fba963cb7748d5fa62fc24e0047a4ed0e46edece9e385026f4217165d70925d4c907007ab8c7f377e8c5d4e255d0d31ef67f52e2498db911720c88442633660144dfe4330e21de62894807daf5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 65fd1dac1f115d9507f4e1840c8cb36a
+        SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
+        SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
+        SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
+    - Subject: CN=WATCHDOGDEVELOPMENT.COM, LLC,O=WATCHDOGDEVELOPMENT.COM, LLC,STREET=614
+        N Dupont Hwy Ste 210,L=Dover,ST=Delaware,C=US,1.3.6.1.4.1.311.60.2.1.2=DELAWARE,1.3.6.1.4.1.311.60.2.1.3=US,2.5.4.5=6061961,2.5.4.15=Private
+        Organization
+      ValidFrom: '2023-03-29 12:22:13'
+      ValidTo: '2025-05-25 19:57:48'
+      Signature: 6c0b00891e9e34e24b9d231204a9ce42a0aadcf0eb6746f4fbc9450991df396f226a3b0193a647d8e4e7c549adc85dc047aa5fa7302e70dfab4d01b1e0aec26db351c1faa278478e06c2d9f025f9e853026354b0a600769fcd86101693929176b8e40d1ad5d6423284d14c75eec207705c214940fbca3404a7425a8150f6e9f31192a8d00f4d4c480edae913fa1c0374cfe2ca91672edce5fb9c380559870fce5b19e286efffcc8522c82603d04e4cbf00312da115efd73e01166b610a7729b98d68438d988b70e3f9ab688316d7b6aac91d96ff7e1d1e9eb700e178e848802bcf0323e7a85887231ab7fa5346a6fb14405b14d8b594828c5455e65c4ae81e4bbd8c05863b422fd7178712f2943c99155799eb8fa767feb9378327a24372262a55999c73ad7db192c4137bd70d3b97a23e7fdfebc4b9442e32e70bdb5373cf59f471c7e785e8dc4cd0e2cbaf96a8323f5862558e1f8958dc974115898414f5166f4499b23b1a92cf0d7f610d7179dc8b3ea18872eff5c6186380796faf80ea49e2edd1951eb46e9f702775f199fabd84f72fac0f97cff015864350c031c17827e04ffcb88fb81af7a3e8cd4394a89538c2abd17f3172de46c968d6b4eea971a8f9d2510d3938518487a83e54a4d242e89c29f33343f1c25b89471c34d52648fa8cd65741607f10cb059163ade5a3e562005bb885cfc3653e38db6a60af52462b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 6be3b9f8b88cf334b1ce34f0
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 1b84ef4399e934d606f4292a2129e679
+        SHA1: 7291bfbb373b5751c418a287a2344931ac09ecd8
+        SHA256: 6d43c49ee9cffad680c7140282be66587d666021dcc83c4f42a832175081f7a9
+        SHA384: 7eb3adec9cfa6dd3e1a8a1aa835dc88e86462dfa42a862d6e8e3a90db3cc80d3540046c5f6ffe660f5d53e801722b796
+    Signer:
+    - SerialNumber: 6be3b9f8b88cf334b1ce34f0
+      Issuer: CN=GlobalSign Root CA,OU=Root CA,O=GlobalSign nv,sa,C=BE
+      Version: 1
+Tags:
+- amsdk.sys

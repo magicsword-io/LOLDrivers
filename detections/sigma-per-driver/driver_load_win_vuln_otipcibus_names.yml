@@ -1,0 +1,28 @@
+title: Driver Load - otipcibus.sys
+id: d97a3e68-88e8-5c99-b684-913f90410b96
+status: experimental
+description: |
+    Detects loading of driver otipcibus.sys via name.
+    Hardware Access Driver
+references:
+    - https://www.loldrivers.io/drivers/17cf4fac-88f1-467d-9f62-481d33accc5b/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\otipcibus.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,47 @@
+title: Driver Load - sandra.sys
+id: 97f91bdf-e918-5e60-b64a-41f25fa29ade
+status: experimental
+description: |
+    Detects loading of driver sandra.sys via hash.
+    Sandra Device Driver (Win64 x64)(Unicode)
+references:
+    - https://www.loldrivers.io/drivers/bc5e020a-ecff-43c8-b57b-ee17b5f65b21/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=230fd3749904ca045ea5ec0aa14006e9'
+            - 'MD5=d86269ba823c9ecf49a145540cd0b3df'
+            - 'MD5=0be4a11bc261f3cd8b4dbfebee88c209'
+            - 'MD5=9a237fa07ce3ed06ea924a9bed4a6b99'
+            - 'MD5=5efbbfcc6adac121c8e2fe76641ed329'
+            - 'SHA1=82ba5513c33e056c3f54152c8555abf555f3e745'
+            - 'SHA1=2fe874274bac6842819c1e9fe9477e6d5240944d'
+            - 'SHA1=22c08d67bf687bf7ddd57056e274cbbbdb647561'
+            - 'SHA1=d32408c3b79b1f007331d2a3c78b1a7e96f37f79'
+            - 'SHA1=f9eb4c942a89b4ba39d2bdbfd23716937ccb9925'
+            - 'SHA256=cbf74bed1a4d3d5819b7c50e9d91e5760db1562d8032122edac6f0970f427183'
+            - 'SHA256=1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b'
+            - 'SHA256=0eab16c7f54b61620277977f8c332737081a46bc6bbde50742b6904bdd54f502'
+            - 'SHA256=d7c79238f862b471740aff4cc3982658d1339795e9ec884a8921efe2e547d7c3'
+            - 'SHA256=1284a1462a5270833ec7719f768cdb381e7d0a9c475041f9f3c74fa8eea83590'
+            - 'IMPHASH=756adaea6a3f9f0cdaff73d1a49ca201'
+            - 'IMPHASH=8e96d1a56746c6f6f30f1a0963ce2f26'
+            - 'IMPHASH=296afaa5ea70bbd17135afcd04758148'
+            - 'IMPHASH=abbab73b191d90dc642cbbc1f31d750d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

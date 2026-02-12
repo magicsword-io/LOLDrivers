@@ -7,160 +7,175 @@ Created: '2024-09-10'
 MitreID: T1068
 Category: malicious
 Commands:
-    Command: sc.exe create driver_d9f15d91.sys binPath=C:\windows\temp\driver_d9f15d91.sys
-        type=kernel && sc.exe start driver_d9f15d91.sys
-    Description: Sophos, from time to time, has observed a threat actor deploy variants
-        of Poortry on different machines within a single estate during an attack.
-        These variants contain the same payload, but signed with a different certificate
-        than the driver first seen used during the attack.
-    Usecase: Elevate privileges
-    Privileges: kernel
-    OperatingSystem: Windows 10
+  Command: sc.exe create driver_d9f15d91.sys binPath=C:\windows\temp\driver_d9f15d91.sys
+    type=kernel && sc.exe start driver_d9f15d91.sys
+  Description: Sophos, from time to time, has observed a threat actor deploy variants
+    of Poortry on different machines within a single estate during an attack. These
+    variants contain the same payload, but signed with a different certificate than
+    the driver first seen used during the attack.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
 Detection: []
 Acknowledgement:
-    Person: ''
-    Handle: ''
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
--   Filename: ''
-    MD5: cef82e32c1a0d1d2cc035d22773340ae
-    SHA1: ab044b9cd7b83bd2a3c54f3d28bf734578b17af5
-    SHA256: 167730744bd7cb117aae9931f81d20cbd2ec6eee480388c53d2fc973ede920ea
-    Signature: ''
-    Date: ''
-    Publisher: ''
-    Company: ''
-    Description: ''
-    Product: ''
-    ProductVersion: ''
-    FileVersion: ''
-    MachineType: AMD64
-    OriginalFilename: ''
-    Imphash: 96861132665e8d66c0a91e6c02cc6639
-    Authentihash:
-        MD5: ddfe4092e284607758fb6f84bc0790fb
-        SHA1: 68ac771380af33171823835a9c3d9a491da1b5c2
-        SHA256: 65205e494d01e07c27da9a623ee5edad33dbcedc755ef5155b19cb2e908cf185
-    RichPEHeaderHash:
-        MD5: ecfb3bbf1d60b610a6c44fb7be827131
-        SHA1: 862f9bdcc05548b8f7d53768c41488a9713ced4d
-        SHA256: ac08512daaffa35ed865486d3bc4afbede422e341788a404424aaa065716fa4e
-    Sections:
-        .text:
-            Entropy: 5.728812801931185
-            Virtual Size: '0x930'
-        .rdata:
-            Entropy: 4.142193727996488
-            Virtual Size: '0x208'
-        .data:
-            Entropy: 0.5035334969292564
-            Virtual Size: '0x118'
-        .pdata:
-            Entropy: 3.4299412084355048
-            Virtual Size: '0xd8'
-        INIT:
-            Entropy: 4.869482280779335
-            Virtual Size: '0x2a2'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2015-01-16 11:57:09'
-    InternalName: ''
-    Copyright: ''
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - ZwMapViewOfSection
-    - ObReferenceObjectByHandle
-    - ZwOpenSection
-    - RtlInitUnicodeString
-    - ZwUnmapViewOfSection
-    - IofCompleteRequest
-    - ObfDereferenceObject
-    - IoDeleteSymbolicLink
-    - ExFreePoolWithTag
-    - IoCreateSymbolicLink
-    - IoCreateDevice
-    - ExAllocatePoolWithTag
-    - KeBugCheckEx
-    - IoDeleteDevice
-    - ZwClose
-    - HalTranslateBusAddress
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
-            ValidFrom: '2016-03-16 00:00:00'
-            ValidTo: '2024-03-16 00:00:00'
-            Signature: 3b41bbc84f561182b719e3d96dc185ae9e690ec84326234b8d44c8e87d5f070e5341d563444a890bb874ac7db578792f8426e2d7f7bad1ae2dfd69cffa7c64dc24162a4adac097a9bbd5dd88e7a1929a0aa5f6f7bace85d6e4e3d455deeddc3e211f1bc87788cffc65fb05b48f12a630d30d66982f6c2e6f85187c8ff5f6fbb1ab10e183270885b07321ba5d2cba8330b73984dd5db67fd28bb455534c42a2bc4a6c78395b631ca37827bfbe34836b6d7b1e60fbc29b0d88ac8c72546bdc3b88ba81525e689783b8ce7fa3cdf9ea2f2676facd0b06ac4344497bf64c9442b2abcfd542d51942696e618664c7b37d078bdbe5767b6e5f65a91690a2cee4ae6492
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 47c30ffefc22bb280f96fea75251
-            Version: 3
-            TBS:
-                MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
-                SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
-                SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
-                SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
-        -   Subject: C=HK, ST=Kowloon, L=Mongkok, O=EVANGEL TECHNOLOGY (HK) LIMITED,
-                CN=EVANGEL TECHNOLOGY (HK) LIMITED
-            ValidFrom: '2016-10-31 09:08:30'
-            ValidTo: '2017-11-01 09:08:30'
-            Signature: 490dffced6c24c4a22c71f545a9a13a11b353b1cc4ddd343b4ce20c61e2d3eb7206c8a8a7e7570591d1be650d2ef0924d918ec0dcc269e84b9eed9aafbd8fdc176b023165f4e5071b2060f07b58a8847dcc1ae965e14e531b878873c6e186e549a1b8718c9f7237d5ac0579b21b1f9154ff97c2c07b7e8a6f0f999b87dca091e296baa8204f4d168c63fa01f28879dfb2e72456e6e416194264e3a0bb6cd7a4a1dd1b898c7ce7b1ddabd51d05d17fbec9ebffa3f0ebe8d168cfe254ba4174dc47d03d0596b4ad6e4b3a4c59df934dda305c10f51576d2f6d659cf610ab41c464d523ac6c9b1d7c76168148a8e7e561a89e80ffc81bfdbcff336bf8867e4d956b
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 7595d72f16ab2f8a1961f5c6
-            Version: 3
-            TBS:
-                MD5: d0d8ec83d250b150803ea3804a9943ee
-                SHA1: 47af16721f241af735aa231f6555269b1e749173
-                SHA256: 23d457a285af4f77f0177f4cef6937113bb97dd58039701f41bc0ee8046fdb0b
-                SHA384: 42a42ea9c25ef0bcd4cb4541e177192fa1b13561055c2b79f2bd1685a7a7072c5a2e5e449ea07f01cf05e8f172802c59
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        -   Subject: C=CN, O=JemmyLoveJenny PKI Service, OU=timestamp.pki.jemmylovejenny.tk,
-                CN=Fake TimeStamp Responder
-            ValidFrom: '2000-01-01 00:00:00'
-            ValidTo: '2099-12-31 23:59:59'
-            Signature: 21ce1a74cffdc5be464c890b9ae11fe6f037b1145a8a3be179136f33eb4e74650c0d22055a26096e231fdc9be25bcfbe8d8d590d84d2443e19d0d8bb163e7d492162ba8f1ee020445d0338d6cf96bc7543da921f04874ae92a524585895d0f358b045c941ab49b34f287579f7d7aaa70122b519c8bb604c7f072ea20fb5e1b1c2c048f4c7e42dc6ee7caab6de80627c32632d0ea2756277ca3c98c2fa58a9d07364017c29844e99cac28cefc4d4bca807da970d2bdf548cec8844b5f72541940835e827c447773ed5b4e8114c2cf04d39bc2f2dc8c2ba8a6e67687e76b7805971e8b87096474fcac24da030e8d591f9edae5644199a235280d05761143af1292
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 1eb132d57e7968960df26e854eb0dda6
-            Version: 3
-            TBS:
-                MD5: 5ab6e3eff526144c0498d28f2e8744cc
-                SHA1: 7ab94f2c92d6886a876615876fb3c7d996cc0ea3
-                SHA256: ff83ab76196af2d3172c0be1ab23720770de769bed8daf815a059ca46df241af
-                SHA384: 9990f7fd996aa8f520b4d64eee4060d0009b6cd517416b7300245df65cb15eb72ab985f520bc02346c544d46ad172ae5
-        -   Subject: C=CN, O=JemmyLoveJenny PKI Service, OU=pki.jemmylovejenny.tk,
-                CN=JemmyLoveJenny SHA1 TimeStamping Services CA
-            ValidFrom: '2000-01-01 00:00:00'
-            ValidTo: '2099-12-31 23:59:59'
-            Signature: 7a25039f8882f1960adb0b6781366e4e15e38a1b13b332e864e5b39e93128f9400648246af7f78526380ebc32a670c0d7184c0172442e5bdbb7873dac548349bbb5681f1f0b2e5fb7230153f95caaa5d7aeeb64cdc6f4cb9505f4b62b2e61f7b8856c43e91be32fc9918cd4ace9060388c8ef39c745adb7cbe0943353ae6c7e8f9e3a9a26da5fab1e43d7fafc02fa8433e1d9a3f3981c78f70c040e03c74258d5abca8231e3bff819e85f52d422dd507879f4e922b52f4ea358e887d8d3deb4bc81d5b3c42ae13aac56364c929da045225104ed04f3a041c9677cc731acbc153746b1f5e968cb468f52ab576515f967ce0159331e1ac575f27f4faf159ec70c3825d7366eb08f579909cab42adf8fe71c14f71d19326dad89dcd763ed3c4aad601c34aa8fa5ea6f16843d15692198c1c79f92c1d1feadeecae329206d02133c625875839baa3265b8e635a43c192755dfd260f0ffe7f2e320be8713639c0204fde54d92c59cb12c253b837e7fcbb3f1a47d7a1066a9568e1b5d9ddf1dc69da4bb6e5965dc72f35c5e8d78eca195cd7b18e41a12bb4eb4de8fc938b919c509871fcd1f808938bb5de8da978371b64ce5269a983f03d937c28a547ad3defd5d24c032fa67493cd00e9f0f835a3c22948ff71ec8c29eb66906ead31e09c6bd3fe0137bfcec27cd8bcbefed081fb2df4ee70ebe2d7c4b2a19419c2f3d79df8344236
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 1eb132d57e796896
-            Version: 3
-            TBS:
-                MD5: 953110dc4528bb8653d24128ec59f13b
-                SHA1: 3a111b3ec6c092f7181132509479ba73bc3c828f
-                SHA256: 3434a95dfbfdb4b2cdff9d76632bcfc1d8c9a2b805596ed3f8af1c97f61643b1
-                SHA384: 41c54e667a7ccaab3d4b6288e8c78789163e4adce5029f5e43de2a25ea9ad07bd3f4679538ebc301477917f46cfb8788
-        Signer:
-        -   SerialNumber: 7595d72f16ab2f8a1961f5c6
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
-            Version: 1
-    LoadsDespiteHVCI: 'TRUE'
+- Filename: ''
+  MD5: cef82e32c1a0d1d2cc035d22773340ae
+  SHA1: ab044b9cd7b83bd2a3c54f3d28bf734578b17af5
+  SHA256: 167730744bd7cb117aae9931f81d20cbd2ec6eee480388c53d2fc973ede920ea
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Imphash: 96861132665e8d66c0a91e6c02cc6639
+  Authentihash:
+    MD5: ddfe4092e284607758fb6f84bc0790fb
+    SHA1: 68ac771380af33171823835a9c3d9a491da1b5c2
+    SHA256: 65205e494d01e07c27da9a623ee5edad33dbcedc755ef5155b19cb2e908cf185
+  RichPEHeaderHash:
+    MD5: ecfb3bbf1d60b610a6c44fb7be827131
+    SHA1: 862f9bdcc05548b8f7d53768c41488a9713ced4d
+    SHA256: ac08512daaffa35ed865486d3bc4afbede422e341788a404424aaa065716fa4e
+  Sections:
+    .text:
+      Entropy: 5.728812801931185
+      Virtual Size: '0x930'
+    .rdata:
+      Entropy: 4.142193727996488
+      Virtual Size: '0x208'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.4299412084355048
+      Virtual Size: '0xd8'
+    INIT:
+      Entropy: 4.869482280779335
+      Virtual Size: '0x2a2'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2015-01-16 13:57:09'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - RtlInitUnicodeString
+  - ZwUnmapViewOfSection
+  - IofCompleteRequest
+  - ObfDereferenceObject
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ExAllocatePoolWithTag
+  - KeBugCheckEx
+  - IoDeleteDevice
+  - ZwClose
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
+      ValidFrom: '2016-03-16 00:00:00'
+      ValidTo: '2024-03-16 00:00:00'
+      Signature: 3b41bbc84f561182b719e3d96dc185ae9e690ec84326234b8d44c8e87d5f070e5341d563444a890bb874ac7db578792f8426e2d7f7bad1ae2dfd69cffa7c64dc24162a4adac097a9bbd5dd88e7a1929a0aa5f6f7bace85d6e4e3d455deeddc3e211f1bc87788cffc65fb05b48f12a630d30d66982f6c2e6f85187c8ff5f6fbb1ab10e183270885b07321ba5d2cba8330b73984dd5db67fd28bb455534c42a2bc4a6c78395b631ca37827bfbe34836b6d7b1e60fbc29b0d88ac8c72546bdc3b88ba81525e689783b8ce7fa3cdf9ea2f2676facd0b06ac4344497bf64c9442b2abcfd542d51942696e618664c7b37d078bdbe5767b6e5f65a91690a2cee4ae6492
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47c30ffefc22bb280f96fea75251
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
+        SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
+        SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
+        SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
+    - Subject: C=HK, ST=Kowloon, L=Mongkok, O=EVANGEL TECHNOLOGY (HK) LIMITED, CN=EVANGEL
+        TECHNOLOGY (HK) LIMITED
+      ValidFrom: '2016-10-31 09:08:30'
+      ValidTo: '2017-11-01 09:08:30'
+      Signature: 490dffced6c24c4a22c71f545a9a13a11b353b1cc4ddd343b4ce20c61e2d3eb7206c8a8a7e7570591d1be650d2ef0924d918ec0dcc269e84b9eed9aafbd8fdc176b023165f4e5071b2060f07b58a8847dcc1ae965e14e531b878873c6e186e549a1b8718c9f7237d5ac0579b21b1f9154ff97c2c07b7e8a6f0f999b87dca091e296baa8204f4d168c63fa01f28879dfb2e72456e6e416194264e3a0bb6cd7a4a1dd1b898c7ce7b1ddabd51d05d17fbec9ebffa3f0ebe8d168cfe254ba4174dc47d03d0596b4ad6e4b3a4c59df934dda305c10f51576d2f6d659cf610ab41c464d523ac6c9b1d7c76168148a8e7e561a89e80ffc81bfdbcff336bf8867e4d956b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 7595d72f16ab2f8a1961f5c6
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: d0d8ec83d250b150803ea3804a9943ee
+        SHA1: 47af16721f241af735aa231f6555269b1e749173
+        SHA256: 23d457a285af4f77f0177f4cef6937113bb97dd58039701f41bc0ee8046fdb0b
+        SHA384: 42a42ea9c25ef0bcd4cb4541e177192fa1b13561055c2b79f2bd1685a7a7072c5a2e5e449ea07f01cf05e8f172802c59
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    - Subject: C=CN, O=JemmyLoveJenny PKI Service, OU=timestamp.pki.jemmylovejenny.tk,
+        CN=Fake TimeStamp Responder
+      ValidFrom: '2000-01-01 00:00:00'
+      ValidTo: '2099-12-31 23:59:59'
+      Signature: 21ce1a74cffdc5be464c890b9ae11fe6f037b1145a8a3be179136f33eb4e74650c0d22055a26096e231fdc9be25bcfbe8d8d590d84d2443e19d0d8bb163e7d492162ba8f1ee020445d0338d6cf96bc7543da921f04874ae92a524585895d0f358b045c941ab49b34f287579f7d7aaa70122b519c8bb604c7f072ea20fb5e1b1c2c048f4c7e42dc6ee7caab6de80627c32632d0ea2756277ca3c98c2fa58a9d07364017c29844e99cac28cefc4d4bca807da970d2bdf548cec8844b5f72541940835e827c447773ed5b4e8114c2cf04d39bc2f2dc8c2ba8a6e67687e76b7805971e8b87096474fcac24da030e8d591f9edae5644199a235280d05761143af1292
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1eb132d57e7968960df26e854eb0dda6
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 5ab6e3eff526144c0498d28f2e8744cc
+        SHA1: 7ab94f2c92d6886a876615876fb3c7d996cc0ea3
+        SHA256: ff83ab76196af2d3172c0be1ab23720770de769bed8daf815a059ca46df241af
+        SHA384: 9990f7fd996aa8f520b4d64eee4060d0009b6cd517416b7300245df65cb15eb72ab985f520bc02346c544d46ad172ae5
+    - Subject: C=CN, O=JemmyLoveJenny PKI Service, OU=pki.jemmylovejenny.tk, CN=JemmyLoveJenny
+        SHA1 TimeStamping Services CA
+      ValidFrom: '2000-01-01 00:00:00'
+      ValidTo: '2099-12-31 23:59:59'
+      Signature: 7a25039f8882f1960adb0b6781366e4e15e38a1b13b332e864e5b39e93128f9400648246af7f78526380ebc32a670c0d7184c0172442e5bdbb7873dac548349bbb5681f1f0b2e5fb7230153f95caaa5d7aeeb64cdc6f4cb9505f4b62b2e61f7b8856c43e91be32fc9918cd4ace9060388c8ef39c745adb7cbe0943353ae6c7e8f9e3a9a26da5fab1e43d7fafc02fa8433e1d9a3f3981c78f70c040e03c74258d5abca8231e3bff819e85f52d422dd507879f4e922b52f4ea358e887d8d3deb4bc81d5b3c42ae13aac56364c929da045225104ed04f3a041c9677cc731acbc153746b1f5e968cb468f52ab576515f967ce0159331e1ac575f27f4faf159ec70c3825d7366eb08f579909cab42adf8fe71c14f71d19326dad89dcd763ed3c4aad601c34aa8fa5ea6f16843d15692198c1c79f92c1d1feadeecae329206d02133c625875839baa3265b8e635a43c192755dfd260f0ffe7f2e320be8713639c0204fde54d92c59cb12c253b837e7fcbb3f1a47d7a1066a9568e1b5d9ddf1dc69da4bb6e5965dc72f35c5e8d78eca195cd7b18e41a12bb4eb4de8fc938b919c509871fcd1f808938bb5de8da978371b64ce5269a983f03d937c28a547ad3defd5d24c032fa67493cd00e9f0f835a3c22948ff71ec8c29eb66906ead31e09c6bd3fe0137bfcec27cd8bcbefed081fb2df4ee70ebe2d7c4b2a19419c2f3d79df8344236
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 1eb132d57e796896
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 953110dc4528bb8653d24128ec59f13b
+        SHA1: 3a111b3ec6c092f7181132509479ba73bc3c828f
+        SHA256: 3434a95dfbfdb4b2cdff9d76632bcfc1d8c9a2b805596ed3f8af1c97f61643b1
+        SHA384: 41c54e667a7ccaab3d4b6288e8c78789163e4adce5029f5e43de2a25ea9ad07bd3f4679538ebc301477917f46cfb8788
+    Signer:
+    - SerialNumber: 7595d72f16ab2f8a1961f5c6
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'

@@ -1,0 +1,32 @@
+title: Driver Load - gmer64.sys
+id: 7098a26c-400b-5f44-b3be-687eb9b01774
+status: experimental
+description: |
+    Detects loading of driver gmer64.sys via name.
+    Driver used by the GMER application. Which is an application that detects and removes rootkits
+references:
+    - https://www.loldrivers.io/drivers/7ce8fb06-46eb-4f4f-90d5-5518a6561f15/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+    - http://www.gmer.net/
+    - https://github.com/gtworek/PSBits/blob/master/Misc/KillWithLolDriver.ps1
+    - https://github.com/ZeroMemoryEx/Blackout
+    - https://github.com/b1-team/superman
+author: Michael Haag
+date: 2023/05/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\gmer64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium
