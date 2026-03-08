@@ -1,0 +1,51 @@
+Id: b4f3a1c2-e8d7-4f92-a301-5c6d9e0b1a2f
+Tags:
+    - TVicPort64.sys
+Author: Joao Leko Monteiro
+Created: '2026-02-13'
+MitreID: T1068
+CVE:
+    - CVE-PENDING
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+    Command: 'sc.exe create TVicPort64 binPath=C:\windows\temp\TVicPort64.sys type=kernel && sc.exe start TVicPort64'
+    Description: 'Load TVicPort64.sys kernel driver. Once loaded, device \\.\TVicPortDevice0 is accessible from any integrity level (no DACL). Send IOCTL 0x80002008 to map arbitrary physical memory into user-mode VA space via ZwMapViewOfSection and perform token stealing for LPE to SYSTEM.'
+    Usecase: Arbitrary physical memory read/write from user mode. Exploitable from Low Integrity Level, Guest, or any AppContainer. Used for local privilege escalation to NT AUTHORITY\SYSTEM via token stealing, KASLR bypass, and kernel code execution.
+    Privileges: User (Low Integrity sufficient — no DACL on device object)
+    OperatingSystem: Windows 10, Windows 11
+Resources:
+    - 'https://www.entechtaiwan.com/dev/port/index.shtm'
+Acknowledgement:
+    Person: 'Joao Leko Monteiro'
+    Handle: '@lleekkoo-0xdeadbeeftimestwo'
+Detection:
+-   type: Sigma
+    value: 'Detect load of TVicPort64.sys by hash or device name \\.\TVicPortDevice0'
+KnownVulnerableSamples:
+-   Filename: TVicPort64.sys
+    MD5: A65643ED30A30E46317C0B25818BC9B7
+    SHA1: 3740F2BC7E81D75604E47A3119FAA887D4A92A44
+    SHA256: 9C9AB56C8BCF5EC958E7C2346F23A3027F69ABDF8AF923B591518EEE64AD98AD
+    Signature:
+        - 'EnTech Taiwan'
+    Date: 10:20 AM 10/13/2006
+    Publisher: EnTech Taiwan
+    Company: EnTech Taiwan
+    Description: 'TVicPort Generic Device Driver for direct hardware I/O'
+    Product: TVicPort
+    ProductVersion: 4, 0, 0, 0
+    FileVersion: 5, 2, 1, 0
+    MachineType: AMD64
+    OriginalFilename: TVicPort64.sys
+    Authentihash:
+        MD5: A65643ED30A30E46317C0B25818BC9B7
+        SHA1: 3740F2BC7E81D75604E47A3119FAA887D4A92A44
+        SHA256: 9C9AB56C8BCF5EC958E7C2346F23A3027F69ABDF8AF923B591518EEE64AD98AD
+    InternalName: TVicPort64.sys
+    Copyright: Copyright(C) EnTech Taiwan 2005
+    Imports:
+        - ntoskrnl.exe
+        - hal.dll
+    ExportedFunctions: DriverEntry
+    PDBPath: ''
