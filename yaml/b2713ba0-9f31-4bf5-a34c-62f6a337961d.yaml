@@ -1,0 +1,44 @@
+Id: b2713ba0-9f31-4bf5-a34c-62f6a337961d
+Tags:
+    - hlpdrv.sys
+Author: Dylan Deane, ReliaQuest Threat Research
+Created: '2026-01-26'
+MitreID: T1547.008
+Category: malicious driver
+Commands:
+    Command: 'sc.exe create KMHLPDRV binPath=C:\windows\temp\hlpdrv.sys type=kernel && sc.exe start KMHLPDRV'
+    Description: 'Create and start hlpdrv.sys kernel driver'
+    Usecase: EDR Evasion - Process Termination
+    Privileges: kernel
+    OperatingSystem: Windows 10
+Resources:
+    - 'https://www.virustotal.com/gui/file/bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56/relations'
+Acknowledgement:
+    Person: Dylan Deane
+    Handle: ReliaQuest Threat Research
+KnownVulnerableSamples:
+    - Filename: hlpdrv.sys
+      MD5: ''
+      SHA1: ''
+      SHA256: bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56
+      Company: ''
+      Description: EDR Killer Driver - Malicious
+      Product: ''
+      ProductVersion: ''
+      Authentihash:
+          MD5: ''
+          SHA1: ''
+          SHA256: ''
+      InternalName: KMHLPDRV
+      Copyright: ''
+      Imports: []
+Detection:
+    - Description: Purpose-built malicious driver with no legitimate functionality
+    - Device: \\.\KMHLPDRV
+    - Service Name: KMHLPDRV
+    - IOCTLs: 0x222000, 0x222004, 0x222008
+    - Capabilities: Process termination, code signing manipulation, PPL bypass
+References:
+    - 'https://www.virustotal.com/gui/file/bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56'
+    - 'ReliaQuest Threat Research Analysis'
+Acknowledgement: []
