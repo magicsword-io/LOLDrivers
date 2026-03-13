@@ -63,12 +63,43 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
 
 {{< block "grid-1" >}}
 {{< column >}}
-<div style="display:flex; align-items:center; gap:16px; padding:14px 16px; background:#ffffff; border:1px solid #e6f4f2; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-  <img src="images/magicsword-logo.png" alt="MagicSword Logo" style="height:84px; width:auto; display:block; filter: drop-shadow(0 6px 14px rgba(0,194,168,0.35));" />
-  <div style="line-height:1.5; color:#111;">
-    <div>Block <strong style="color:red;">Living‑off‑the‑Land</strong> techniques RMM tools, LOLBAS, and BYOVD with native Windows controls.</div>
-    <a href="https://www.magicsword.io" style="display:inline-block; margin-top:8px; padding:12px 18px; background: rgb(0 170 108 / var(--tw-bg-opacity,1)); color:#ffffff; border-radius:12px; font-weight:800; text-decoration:none;">Block with MagicSword</a>
+<style>
+.ms-cta{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:28px 40px;text-align:center;position:relative;overflow:hidden;}
+.ms-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#10B981,transparent);}
+.ms-cta-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:20px;font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;}
+.ms-cta-badge svg{stroke:#059669;}
+.ms-cta h3{margin:0 0 6px;font-size:1.5rem;font-weight:800;color:#111;line-height:1.3;}
+.ms-cta h3 em{font-style:normal;color:#059669;}
+.ms-cta p{margin:0 auto 18px;max-width:560px;font-size:0.95rem;color:#6b7280;line-height:1.5;}
+.ms-cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:#111 !important;color:#fff !important;border-radius:8px;font-weight:800;font-size:1rem;text-decoration:none !important;transition:background 0.15s,transform 0.1s;}
+.ms-cta-btn:hover{background:#333 !important;color:#fff !important;text-decoration:none !important;transform:translateY(-1px);}
+.ms-cta-btn:active{transform:translateY(0);}
+[data-mode="dark"] .ms-cta{background:#08080A;border-color:rgba(255,255,255,0.06);}
+[data-mode="dark"] .ms-cta-badge{color:#10B981;background:rgba(16,185,129,0.1);}
+[data-mode="dark"] .ms-cta-badge svg{stroke:#10B981;}
+[data-mode="dark"] .ms-cta h3{color:#fff;}
+[data-mode="dark"] .ms-cta h3 em{color:#10B981;}
+[data-mode="dark"] .ms-cta p{color:rgba(255,255,255,0.55);}
+[data-mode="dark"] .ms-cta-btn{background:#10B981 !important;color:#fff !important;}
+[data-mode="dark"] .ms-cta-btn:hover{background:#059669 !important;}
+/* Table column sizing */
+#chartTable{table-layout:fixed;width:100%;}
+#chartTable th:nth-child(1),#chartTable td:nth-child(1){width:22%;}
+#chartTable th:nth-child(2),#chartTable td:nth-child(2){width:40%;word-break:break-all;font-family:monospace;font-size:0.82rem;}
+#chartTable th:nth-child(3),#chartTable td:nth-child(3){width:20%;}
+#chartTable th:nth-child(4),#chartTable td:nth-child(4){width:18%;}
+</style>
+<div class="ms-cta">
+  <div class="ms-cta-badge">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Free Prevention
   </div>
+  <h3>Stop BYOVD attacks.<br><em>Free for up to 100 endpoints.</em></h3>
+  <p>Turn this driver list into enforceable block policies with MagicSword, threat-driven application control.</p>
+  <a class="ms-cta-btn" href="https://www.magicsword.io/plan?utm_source=loldrivers&utm_medium=website&utm_campaign=free_prevention&utm_content=homepage_cta">
+    Start Blocking for Free
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+  </a>
 </div>
 
 {{< /column >}}
