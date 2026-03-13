@@ -6,7 +6,7 @@ Author: Northwave Cyber Security
 Created: '2024-09-11'
 MitreID: T1068
 CVE: CVE-2023-52271
-Category: vulnerable
+Category: vulnerable driver
 Commands:
   Command: sc.exe create wsftprm binPath=C:\windows\temp\wsftprm.sys type=kernel &&
     sc.exe start wsftprm

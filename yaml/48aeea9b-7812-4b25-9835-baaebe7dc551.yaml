@@ -5,7 +5,7 @@ Verified: 'TRUE'
 Author: Northwave Cyber Security
 Created: '2024-09-11'
 MitreID: T1068
-Category: vulnerable
+Category: vulnerable driver
 Commands:
   Command: sc.exe create ADRMDRVSYS binPath=C:\windows\temp\ADRMDRVSYS.sys type=kernel
     && sc.exe start ADRMDRVSYS

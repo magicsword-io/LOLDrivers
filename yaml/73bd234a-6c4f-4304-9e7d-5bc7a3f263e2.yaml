@@ -4,7 +4,7 @@ Tags:
 Author: Michael Haag
 Created: '2025-10-27'
 MitreID: T1068
-Category: malicious driver
+Category: malicious
 Verified: 'TRUE'
 Commands:
   Command: sc.exe create KMHLPSVC binPath=C:\windows\temp\hlpdrv.sys type=kernel

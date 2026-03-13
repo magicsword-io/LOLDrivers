@@ -6,7 +6,7 @@
     "Author": {"type": "string", "example": "Your Name"},
     "Created": {"type": "string", "format": "date", "example": "2023-04-15"},
     "MitreID": {"type": "string", "example": "TXXXX"},
-    "Category": {"type": "string", "example": "Category Name"},
+    "Category": {"type": "string", "enum": ["vulnerable driver", "malicious"], "example": "vulnerable driver"},
     "Verified": {"type": "string", "example": "TRUE"},
     "Commands": {
       "type": "object",
