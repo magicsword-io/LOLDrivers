@@ -34,6 +34,20 @@ def check_filename_matches_id(yaml_file, yaml_data):
     return None
 
 
+VALID_CATEGORIES = ["vulnerable driver", "malicious"]
+
+
+def check_category(yaml_data):
+    """Validates that Category uses an allowed value."""
+    category = yaml_data.get('Category', '')
+    if category not in VALID_CATEGORIES:
+        return (
+            f"ERROR: Invalid Category '{category}' for object: {yaml_data['Id']}. "
+            f"Allowed values: {VALID_CATEGORIES}"
+        )
+    return None
+
+
 def check_hash_length(object, hash_algo, hash_length):
     known_vulnerable_samples = object.get('KnownVulnerableSamples', [])
     for sample in known_vulnerable_samples:
@@ -78,6 +92,7 @@ def validate_schema(yaml_dir, schema_file, verbose):
         # Additional YAML checks
         check_errors = [
             check_filename_matches_id(yaml_file, yaml_data),
+            check_category(yaml_data),
             check_hash_length(yaml_data, "MD5", 32),
             check_hash_length(yaml_data, "SHA1", 40),
             check_hash_length(yaml_data, "SHA256", 64),

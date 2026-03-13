@@ -105,10 +105,10 @@ def gen_authentihash_lists(category_):
                             if key == "MD5" and value != "-":
                                 authentihash_md5_list.append(value)
                             if key == "SHA1" and value != "-":
-                                if i['SHA1'] != "-":
+                                if i.get('SHA1', '-') != "-":
                                     authentihash_sha1_list.append(value)
                             if key == "SHA256" and value != "-":
-                                if i['SHA256'] != "-":
+                                if i.get('SHA256', '-') != "-":
                                     authentihash_sha256_list.append(value)
     
     # Remove leading and trailing spaces as well as any duplicates
@@ -171,12 +171,12 @@ def gen_loadsdespitehvci_authentihash_lists(category_):
                                 if key == "MD5" and value != "-":
                                     authentihash_md5_list.append(value)
                                 if key == "SHA1" and value != "-":
-                                    if i['SHA1'] != "-":
+                                    if i.get('SHA1', '-') != "-":
                                         authentihash_sha1_list.append(value)
                                 if key == "SHA256" and value != "-":
-                                    if i['SHA256'] != "-":
+                                    if i.get('SHA256', '-') != "-":
                                         authentihash_sha256_list.append(value)
-    
+
     # Remove leading and trailing spaces as well as any duplicates
     authentihash_md5_list = list(set([i.lstrip().strip().lower() for i in authentihash_md5_list]))
     authentihash_sha1_list = list(set([i.lstrip().strip().lower() for i in authentihash_sha1_list]))
