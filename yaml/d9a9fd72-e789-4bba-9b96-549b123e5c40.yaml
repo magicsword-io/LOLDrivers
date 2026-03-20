@@ -1,0 +1,295 @@
+Id: d9a9fd72-e789-4bba-9b96-549b123e5c40
+Tags:
+- rspot.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-03-20'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create rspot.sys binPath=C:\windows\temp\rspot.sys type=kernel &&
+    sc.exe start rspot.sys
+  Description: Rising Antivirus rspot.sys driver with kernel-level process termination
+    capabilities. Identified in ESET EDR killers research (March 2026) as actively
+    abused by threat actors to disable EDR products.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
+Detection: []
+Acknowledgement:
+  Person: ESET Research
+  Handle: '@ESETresearch'
+KnownVulnerableSamples:
+- Filename: rspot.sys
+  MD5: 054a32d6033b1744dca7f49b2e466ea2
+  SHA1: c85c9a09cd1cb1691da0d96772391be6ddba3555
+  SHA256: ea8c8f834523886b07d87e85e24f124391d69a738814a0f7c31132b6b712ed65
+  Signature:
+  - Beijing Rising Network Security Technology Co., Ltd.
+  - DigiCert Assured ID Code Signing CA,1
+  - DigiCert Assured ID Root CA
+  Date: ''
+  Publisher: ''
+  Company: Beijing Rising Network Security Technology Co., Ltd.
+  Description: rspot.sys
+  Product: rspot.sys
+  ProductVersion: 1, 0, 0, 16
+  FileVersion: 1, 0, 0, 16
+  MachineType: AMD64
+  OriginalFilename: rspot.sys
+  Authentihash:
+    MD5: 76d32c7414a895472faa84ce1eb97b87
+    SHA1: 5a7b5f578ec0919e82af48deedcd55bacafd1bd0
+    SHA256: 87d4a698bcc41a0e725bfeb00d464478d7add9e1abb687e52c8ef3d0d66cc730
+  RichPEHeaderHash:
+    MD5: 13d6c9556aeb5f12cb4f0fbb1d6a47ca
+    SHA1: c3317fb67fb9965a2eea5e30df217f210feee8aa
+    SHA256: e7e43c74583206f9a59ce9936fb42afbd70c1a706c6737a8083a498097172f46
+  InternalName: Beijing Rising Network Security Technology Co., Ltd.
+  Copyright: Copyright(C) 2018-2019 Beijing Rising Network Security Technology Co.,
+    Ltd. All Rights Reserved.
+  Imports:
+  - rsndispot.sys
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - rsndisp_init
+  - rsndisp_deregister
+  - rsndisp_register
+  - FltSetInformationFile
+  - FltFreeSecurityDescriptor
+  - FltBuildDefaultSecurityDescriptor
+  - FltSendMessage
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltGetRoutineAddress
+  - FltAllocatePoolAlignedWithTag
+  - FltFreePoolAlignedWithTag
+  - FltGetFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltGetDestinationFileNameInformation
+  - FltAllocateCallbackData
+  - FltFreeCallbackData
+  - FltPerformSynchronousIo
+  - FltCreateFile
+  - FltReadFile
+  - FltQueryInformationFile
+  - FltClose
+  - FltCancelFileOpen
+  - FltAllocateContext
+  - FltSetStreamContext
+  - FltSetStreamHandleContext
+  - FltGetStreamContext
+  - FltGetStreamHandleContext
+  - FltReleaseContext
+  - FltGetVolumeFromInstance
+  - FltGetVolumeProperties
+  - FltObjectDereference
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - KeBugCheckEx
+  - ExInitializeResourceLite
+  - ZwQuerySystemInformation
+  - MmIsAddressValid
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeSetPriorityThread
+  - KeWaitForSingleObject
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwClose
+  - PsThreadType
+  - wcsncpy
+  - KeDelayExecutionThread
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - ExAcquireResourceSharedLite
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - PsGetCurrentProcessId
+  - PsGetCurrentThreadId
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - PsLookupProcessByProcessId
+  - ZwTerminateProcess
+  - ObOpenObjectByPointer
+  - RtlInitUnicodeString
+  - RtlGetVersion
+  - ExDeleteResourceLite
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - SeTokenIsAdmin
+  - PsReferencePrimaryToken
+  - PsDereferencePrimaryToken
+  - MmUserProbeAddress
+  - NtBuildNumber
+  - InitSafeBootMode
+  - wcschr
+  - wcsncmp
+  - wcsrchr
+  - RtlCopyUnicodeString
+  - MmMapLockedPagesSpecifyCache
+  - IoGetTopLevelIrp
+  - ZwQueryInformationFile
+  - __C_specific_handler
+  - ExAllocatePool
+  - ProbeForWrite
+  - IoGetDeviceObjectPointer
+  - ExRaiseDatatypeMisalignment
+  - ExRaiseAccessViolation
+  - ZwOpenProcess
+  - ObQueryNameString
+  - ZwAllocateVirtualMemory
+  - ZwQueryInformationProcess
+  - MmSystemRangeStart
+  - swprintf
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - ExInitializeNPagedLookasideList
+  - ExDeleteNPagedLookasideList
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ExInitializePagedLookasideList
+  - ExDeletePagedLookasideList
+  - _wcsupr
+  - wcsstr
+  - _wcslwr
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 6.31
+      Virtual Size: '0x9ac8'
+    .rdata:
+      Entropy: 4.51
+      Virtual Size: '0x12e8'
+    .data:
+      Entropy: 4.42
+      Virtual Size: '0x14f0'
+    .pdata:
+      Entropy: 4.54
+      Virtual Size: '0x678'
+    .KRT:
+      Entropy: -0.0
+      Virtual Size: '0x10'
+    INIT:
+      Entropy: 5.05
+      Virtual Size: '0xed6'
+    .rsrc:
+      Entropy: 3.38
+      Virtual Size: '0x4a0'
+    .reloc:
+      Entropy: 4.46
+      Virtual Size: '0x90'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-05-14 02:14:02'
+  Imphash: 33df0c29b1e8562acd8168ef019b3f66
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
+        CA
+      ValidFrom: '2011-04-15 19:41:37'
+      ValidTo: '2021-04-15 19:51:37'
+      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611cb28a000000000026
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 983a0c315a50542362f2bd6a5d71c8d0
+        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+    - Subject: C=CN, L=Beijing, O=Beijing Rising Network Security Technology Co.,
+        Ltd., CN=Beijing Rising Network Security Technology Co., Ltd.
+      ValidFrom: '2019-07-19 00:00:00'
+      ValidTo: '2022-07-22 12:00:00'
+      Signature: 82d451a7e01dcb1b20cecbf0223335dae16995cd0926920761c8bd0498a8b8b0336a81f50e97899b690b3c00b3413a872f3a2b144944f6818b060c7f0f78f2096a00150ea48beaa67105555a36161603d1843fb679793a7527a283ef0c20c72ef7474207be80d284a9233385eb83e662b65496ba50af88ace34ad4c7b4e737b944cf9554d3db5e1ed0882ada1e24edace73da498cb1e2b7294ae3096f68485bc38e1540308e7aa9d3f8e3f7d34522d9b6aeb0149df558e3212e026fc8b8f63dbf236ce2eac81d621b410ee4c921e4dd806bcee70c1d32382a2fc262b66064d639456652e803d9e8fb9aec0ca85906221d26e52e4cd1dcbef638e9e2c023b6c6f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0d5597774a955f38abaa9e39fb18f67c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ea3d28cda78bdcdb37eb10f8f27aeaa4
+        SHA1: d063bc59e4c47916db73377f2572f112478d7c8c
+        SHA256: 42f844946b5d241bd1718fb96e9d5e80988607be8bc4a24f7592c216559825bb
+        SHA384: bcf88940cae867fa9bdd14877ad5b100d3de86b217d2564a5a3a945506d2de1dcac2730a9ec724539fa43e5a5fb09de5
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
+        Signing CA,1
+      ValidFrom: '2011-02-11 12:00:00'
+      ValidTo: '2026-02-10 12:00:00'
+      Signature: 7b721d64ff88c83ac1b7e9e7a9c487bbdb9492d7905933fa2b87dea85b80253f138f9b831b7c43c4e68cdf393ec315ecb0da3b21257b24c1725db84791811346fa9c3f6a5138deb425cbf0abdfc528015479104624d1380f26a161904dbabd28e63ff1c4aa9bf6da35534fc9f23dd36cdc23edaaa04d6709f33a803d3cfb364c90e776a4ddf23abf56352fa24c65e8e0d4dad1c7c8916a2d234f373b199418d4d59c103cd5b11c19ff8fc86b9b9ef8ae9c999678d1cd9c51155b4226725a8d0a4a239240e886de22c2933ad49b68a6df297f06b93c0ebd9fc4869c82474271328609997209794b9d7169f541ff7f397764f1848dbe8b1eb27d68a3a590b10cff
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: a9a31555bbc92b6033975c5428fb3679
+        SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
+        SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
+    Signer:
+    - SerialNumber: 0d5597774a955f38abaa9e39fb18f67c
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
+        Signing CA,1
+      Version: 1
