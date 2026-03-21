@@ -1,0 +1,167 @@
+Id: 81211b5b-36a7-41d6-a6e3-8e43cf7d0405
+Tags:
+- HwRwDrv.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-03-20'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
+    && sc.exe start HwRwDrv.sys
+  Description: Hardware read/write driver signed by a revoked Certum certificate (Open
+    Source Developer, Jun Liu). Provides arbitrary physical memory read/write and PCI
+    bus data access. Identified in ESET EDR killers research (March 2026) with 174
+    execution parents indicating widespread abuse by threat actors to disable EDR products.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
+Detection: []
+Acknowledgement:
+  Person: ESET Research
+  Handle: '@ESETresearch'
+KnownVulnerableSamples:
+- Filename: HwRwDrv.sys
+  MD5: a2b2cacd5ab0e553d9b3d359564014dc
+  SHA1: db8bcb8693ddf715552f85b8e2628f060070f920
+  SHA256: 017933be6023795e944a2a373e74e2cc6885b5c9bc1554c437036250c20c3a7d
+  Signature:
+  - Open Source Developer, Jun Liu
+  - Certum Code Signing 2021 CA
+  - Certum Trusted Network CA 2
+  - Certum Trusted Network CA
+  Date: ''
+  Publisher: ''
+  Company: "Windows\xAE winows 7 driver kits provider"
+  Description: Hardware read & write driver
+  Product: Hardware read & write driver
+  ProductVersion: 1.0.6.0
+  FileVersion: 1.0.6.0
+  MachineType: AMD64
+  OriginalFilename: HwRwDrv.sys
+  Authentihash:
+    MD5: 212b7b4655e27c7ee3e3b20666067a69
+    SHA1: 8c40a82df3d606a87df243c787283c26ce9b0458
+    SHA256: 579b30aab603eb66d04584d227da63bbe9dc0910792e8208df1ec29c072a651c
+  RichPEHeaderHash:
+    MD5: 41ddd08b440611823bc5d8cb732c563d
+    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
+    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
+  InternalName: HwRwDrv.sys
+  Copyright: "Copyright\xA9 Microsoft Corporation. All rights reserved."
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoCreateDevice
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 6.04
+      Virtual Size: '0x738'
+    .rdata:
+      Entropy: 4.35
+      Virtual Size: '0x1bc'
+    .data:
+      Entropy: 0.51
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.24
+      Virtual Size: '0x78'
+    INIT:
+      Entropy: 5.05
+      Virtual Size: '0x242'
+    .rsrc:
+      Entropy: 3.26
+      Virtual Size: '0x458'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-06-03 19:28:11'
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=PL, O=Unizeto Technologies S.A., OU=Certum Certification Authority,
+        CN=Certum Trusted Network CA
+      ValidFrom: '2011-04-15 20:15:34'
+      ValidTo: '2021-04-15 20:25:34'
+      Signature: 419f12160eedee2491fe5d5f10a097a8749e0dccf3115163122a5bb95dc7afac5aa25c0002cb728e0d9225b6522653be3c77a2c28c8089d84118571ab8d05057c328e7fad044804e7e8933286f3a47ef5e231ef27afe3a2a19dead6b1a2847786e9bbfeb7367589a2719d8eb5c3d085860629d5914cf9e76b3cfd962af7b72ac80f9e015ab9c7a5c4b1c7083db7094117bd22a4c7734dc36cccd46d40b198c09f6610ade481c9b3fff0b43d7f1018061abda70cfa78444acb31cce2630f5ca5f696735836ea3888c0fb8939bd65b0615e64b7db950ab09e07b2beb4c1a6bba1cca791bc59f81bde443f02de195d5a166076ce6e5456e060bdbf5bc4395b88aa50555e59668ac1d31db3804bc1c3db61975d1b5802a821e385c4676256c4d8b7483544375e77bb395bfee13609e0ecdfbcaf73a2a52a0a625497a17193ae8941f2c8204035ea9513cef526f7b43ceda2b81b47fda1a2c6265d1ec2837823014319d15bdffacc88b256e41bd1f23741be3fcf94be2eb46e68151530ec94a84788deca8b80f8d4c7fe0f6b0d2c538b24f82c410fe87b88ec6b6b0f87c12a7b4834dfc1e8b6a5bf9d564793ed1e37e1af6c81e59db4dca605c577ea25877ecfa05260032a7f6ff134e98d86f5b434cb336e425bcd93b9f38e00ee9be81e6c91f0f022f8d3a1288a88e1bb1e776913e18de361228fef766557c5bd464487452c32189
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 613bc791000000000034
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: f5f0d604dd56b0446f98fb67e98a76f8
+        SHA1: c749c146cc00030ff36ecf9b698e6a377bc15605
+        SHA256: df5dacc623d44348fff0bc8ebe2cedc8ba212e33c6f10d7fd608f37f92a2c273
+        SHA384: c394dc13768746f008b4ffa082d6e8a2e55a83052d63e3c0a8f2fcfc30dcd51849afd21b0adf86bc50490629a89da09b
+    - Subject: C=PL, O=Unizeto Technologies S.A., OU=Certum Certification Authority,
+        CN=Certum Trusted Network CA 2
+      ValidFrom: '2021-05-31 06:43:06'
+      ValidTo: '2029-09-17 06:43:06'
+      Signature: 51c2a1581622108bfc8631d4c232d35cf84ba22f6a3e4df8ab081eedd5e8fae7080decb7c61e0eb275057ab10bfad7746a00061fa4ceaaf26b7dd811c01108d40e4d61c53aa8fab1e1e398eae263fd41f5937d0dbc5d923b919a65bad05f4cbe4c8d68031016d5f1d0048a8533f937e75b2e2669423cbacdbcd47ae94d9ddae743fb6352808504c4259555f07ea79f01c55b28f8e0ce8670a6273b39fb382e98536522752dd7f6dd22229196ebdd68ed3fa31997d33b2588ec36123da97ece028d059a92a7276e45b29c6286370da4338ed7a84ed04a17434cc5f1a76cd21e586c14517e8a54a1f6ef9f797a5d819a16900fe1bbf14a00f9f9ddbeedaaecce0a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 1bb58f252adf23004928c9ae3d7eed27
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 69cb867ce49223f535ece0868e90994c
+        SHA1: cbd9a7638dff8fd54ed84e017b0c2718817ce4ac
+        SHA256: 773fd006eb50b7a95c7aed1cb24f19aa112300fc9dabe8a4fb9dda9db2b46a10
+        SHA384: cc6524780cfb09af0367df309a67dbac8548310fa4fafce6e7f5866bd4c1a8f7d50c7fcbb50c029a3dd4803dc9840937
+    - Subject: C=PL, O=Asseco Data Systems S.A., CN=Certum Code Signing 2021 CA
+      ValidFrom: '2021-05-19 05:32:18'
+      ValidTo: '2036-05-18 05:32:18'
+      Signature: 7588580fe58f50289a539f10ec43fcf43b6dc99a86627d9744384990be8ffbf4f420f672c5fc625ee99894044c8304732d1512b49978f742fde02f4b185def8f3cc7f09ab7891ef80519643b5f09df321d9822906b92f2678f087c80894d9549782843532b90cbaac60f12d4500b0ed1ea9e2cd84b56c830ebfcce7c898d94044a9f514fee8d1f4db8fc8a9346c47048bad891b16ae158cd9ff295dd777c7699b24228ab65dace3683d29424710888b9e2f41ca8a8852e97819b94b42280ed2e821edb5912c39b409d63dacd2eac80dda85ef16971556931cab40b8c7f08b48d7b45dc926986b25f73e14520b8026d7fee6013c195b0483f81ede31c64d8699fccc9fba313c84e98a04052455aecd33145207511d3c5a4d229127fe9487b922fe91637fdb140125a0c53ebd405f4a8b8245e67048ba3c59dac394f5ed4748227039f2b4eede679f36ecd4b6c7b8020626c449890e875ff0d6d5714e957635adcf47b9f161594fbb524fa116426c7f3a81cf7a513bee5a23abb969b238430b3861a7891fb1fb33c5ff60da1a02b65b578425fa36ab2ac134fbc5ef0b80c907e21572f0bd61da9a862d3d9a342c7b87f17de7f42fb137861a363b76cb0cceafeb4ac84540a2d9f253dbf211539a218324dc8781ae61679f481b29e4d3c98784114cff430b781ce5010ab5bad363429af3b59e6fbff349cbcb9af4019bc2431690e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 0099a3800a26553b65abdc6e84a6b3ea39
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: d6ac8af874bb5e4067324d4ac178c9c6
+        SHA1: d8c3bffb3b839d2c3502355480cb7908e1d298cd
+        SHA256: 894d91b0d64bd6f068585589cd49e489ac1f7f2eaef784e6098388ecf3def5ed
+        SHA384: fe3e46caae9b3738657e194d23bec1433ce0f8c8c83136e6563c6ddee64f58865a267b30a81d5114f3cc6d23a301b03f
+    - Subject: C=CN, ST=Jiangsu, L=Huaian, O=Open Source Developer, CN=Open Source
+        Developer, Jun Liu
+      ValidFrom: '2024-09-03 07:08:52'
+      ValidTo: '2025-09-03 07:08:51'
+      Signature: 7a7ed3e7b8a7c924b7c0349745c39228873ea8ad50025630c777ce0eae8ae681a931e68a439faf7eedf1cef9be7fdd1d3c971e856c77de853fa605b6da9de37b558671e73000c34a0eba9bdd0aa1280ac87a4e40ed120480abb261e709c935e94bdfc9519b3477e94e99b91a046ef229a3ee46aece5ade5e059305ff0841e424a94c05c10de2bc26ae88a93412406d0ebc4dc5f8331977043424c3cf8fb59845dc6f44d12a52c78f68350c35f2f1c98f6399b33c1787c8bd449ef7513c7359dd95d36fdcea46db75940457c303803050385cb67caffff12b97b9f58216e93cac19d1188ac7c584e416cbb50ae9aab568da13d5604396191b6bd52c4e56db1a8e0e517ca4cc66937b5ba97ab9b7b99fe4ffde1d2292776e94b3520bd841228d37f0ad3759cef0b3f1e827d41232ae40262c27d857d7cc363bcfa79643389fdad4c8f952b68491a607da51a5bf21f7c4e36d5ba08e5665d7df36f31c7e26fbb0a88eb5c5331a70e8cdd809e9ade4c1b81a7a66a7c7aebdaa99a1976327d041fc2f7d38a64c75bf5e3843c871a1700244c985ae30d6c1da54dfc656c7612f081676e6d2d9d3ff5e70d99bf516dc9490b31b55b4e0c4ebeb64b3283aeaf66793d6b2b01ba94189f03f542d22fd089a4febfbe317c9148a11239441ce8919fa54ca8d1fb8998181d97c870c679dd0ec16dbd4cb9671a86816ce9aa526dcda9ad2c23e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 6fff0dd6fca58ec92230b6d2eec53101
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 339232103a20991a1990ec5a7522409e
+        SHA1: e99654d1f35d2513fc0e4dfdbb1f015b085853a6
+        SHA256: 4c8ca2c3c3bc78cf1920426882e119b26f9fad6b6be4b67f981448955a2b7579
+        SHA384: d75e0ffaaceb28a49dba5a5f4c63b1e37dcbd5fbdf90b24c9134a20f2b93e2af020bf9f0111c7292e9f934b786247ebb
+    Signer:
+    - SerialNumber: 6fff0dd6fca58ec92230b6d2eec53101
+      Issuer: C=PL, O=Asseco Data Systems S.A., CN=Certum Code Signing 2021 CA
+      Version: 1
