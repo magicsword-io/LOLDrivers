@@ -5,6 +5,8 @@ Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
+CVE:
+- CVE-2024-41498
 Category: vulnerable driver
 Commands:
   Command: sc.exe create IOMap64.sys binPath=C:\windows\temp\IOMap64.sys type=kernel
@@ -15,6 +17,7 @@ Commands:
   Usecase: Elevate privileges
 Resources:
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://www.asus.com/content/asus-product-security-advisory/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41.yara
@@ -208,4 +211,148 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 9928d53dbe860aba1b7c891831680629
+  LoadsDespiteHVCI: 'FALSE'
+- Filename: IOMap64.sys
+  MD5: 4da690ba853b12927fafd6b6387828cf
+  SHA1: 849bcfd80ecfe74e5344238d5ea219ee8e2bcf14
+  SHA256: e62d0c1353a3d913497e6016d0f48d7cf9ef99e4026b94ccd873d6c7a9a54565
+  Authentihash:
+    MD5: 7651960891e16982932b8036cb8cbd34
+    SHA1: b4b275af4ab6fcddebc68948c103ba5882c7b1e2
+    SHA256: e6d1017bb3ef8198ab693b8a3cecb14263d7d132678610348440ce64e147cf3a
+  Description: 'ASUS Kernel Mode Driver for NT '
+  Company: ASUSTeK Computer Inc.
+  InternalName: IOMap.sys
+  OriginalFilename: IOMap.sys
+  FileVersion: '2.50'
+  Product: ASUS Kernel Mode Driver for Windows
+  ProductVersion: '2.50'
+  Copyright: Copyright 2023 ASUSTeK Computer Inc.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - KeInitializeMutex
+  - IoDeleteSymbolicLink
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeBugCheckEx
+  - ZwCreateKey
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - __C_specific_handler
+  - MmGetSystemRoutineAddress
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - RtlFreeUnicodeString
+  - KeStallExecutionProcessor
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2022-04-08 00:00:00'
+      ValidTo: '2025-03-27 23:59:59'
+      Signature: 937c645145253f3315a6d3da886d6ee5f03621a74b2266721cc6d71f96dbc73b7b0e9ce33a2a887118c3282c254f2d3686d322edc371b3845b542efecf88f147532486206aa7e887e71d296535fc034117402f30740b99f9f12edc3328e8ce2f6ca4544bcb475e0893206bec0bb5f9948fef5c677d9c056be02531ee23d35f5933de8bcd98650d722d445a797d0278cc990f0102999307cade1d224bc7c7f46cd5c12130a5e1b6eb8849b6f00a994c575ba29baa67e850d85d8488916e2ae52565ee22bbe71b7e3d3fa623e9f228879a679b1c538a676b4b79475ddb5b78da076197d294fb90a5cc8036611aa1d6809ea85ccf5e6e5473537812eaaeab322951447fcf35a1be2ba84f31b264e4bb61b4382a978627632f9155d62560a11e5210d5888b31faa79bb71a51201e281c1ac36380f5e8fa2a87df333969912400ac7a6bbe93592e28726a9688585c44f030917615e1bd11f7c3aa863eb05e30831fff9a624db6a1233db9ac2b46ec1fc8bb7a8104ff049621d9ef61be13d76eda0a573de6a370d185fc7ce4c522f2450b26b4cf5a9d804778c4ad05e0c782502187dd7c090c18c3b001d60a21e89f76be044d1ce40cd6e7ff40fd9d9ec8557fe275cea2d78b5bdc8b0359a9f4403c9923385dd5fdf865e6fff883ecdb5b12d185691411e2fb37077571f738b95736ce34a7fc276a1462a25f521bf5c9091a5941911f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0414dcf7ac18be7b0e5d1db9a3fee469
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 57dbc9dba7e9561f375fcc5b9033b319
+        SHA1: f85e6de5d479506c2a3dabab8491d9e0bba33603
+        SHA256: 86107afeccad1c24431c5ed73b3621705c4eaaf93ab68fa9360ff50c44e94a4a
+        SHA384: 6450ff6a38ec387a2c2ab23e327a0d7e735fee3e6c4be5e07e4453f9705005967a6c4ee5b1d98d9284b94b6e5675d975
+    Signer:
+    - SerialNumber: 0414dcf7ac18be7b0e5d1db9a3fee469
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 07d607cfdadf931605cb55702c16b391
+    SHA1: bcb28f8f7a4ed0f3020b572e8190e3e04a527ea8
+    SHA256: 9a774274259d13fecb0eee265a4b312954a4fc61cf54e932eff813cc7c432d48
+  Sections:
+    .text:
+      Entropy: 6.28
+      Virtual Size: '0x32d8'
+    .rdata:
+      Entropy: 4.42
+      Virtual Size: '0x124c'
+    .data:
+      Entropy: 1.27
+      Virtual Size: '0x4d6'
+    .pdata:
+      Entropy: 4.37
+      Virtual Size: '0x48c'
+    PAGE:
+      Entropy: 6.23
+      Virtual Size: '0x1c8c'
+    INIT:
+      Entropy: 5.25
+      Virtual Size: '0x63a'
+    .rsrc:
+      Entropy: 3.29
+      Virtual Size: '0x418'
+    .reloc:
+      Entropy: 3.81
+      Virtual Size: '0x38'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-01-18 23:35:19'
+  Imphash: 892a0ac24a43307d5efc9e8365227577
   LoadsDespiteHVCI: 'FALSE'
