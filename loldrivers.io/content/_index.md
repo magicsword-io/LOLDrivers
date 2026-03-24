@@ -64,19 +64,21 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
 {{< block "grid-1" >}}
 {{< column >}}
 <style>
-.ms-cta{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:28px 40px;text-align:center;position:relative;overflow:hidden;}
+.ms-cta{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 40px 20px;text-align:center;position:relative;overflow:hidden;}
 .ms-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#10B981,transparent);}
-.ms-cta-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:20px;font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;}
-.ms-cta-badge svg{stroke:#059669;}
-.ms-cta h3{margin:0 0 6px;font-size:1.5rem;font-weight:800;color:#111;line-height:1.3;}
+.ms-cta-logo{margin-bottom:8px;}
+.ms-cta-logo img{height:120px;width:auto;}
+.ms-cta-logo .ms-logo-dark{display:none;}
+.ms-cta-logo .ms-logo-light{display:inline;}
+.ms-cta h3{margin:0 0 4px;font-size:1.5rem;font-weight:800;color:#111;line-height:1.2;}
 .ms-cta h3 em{font-style:normal;color:#059669;}
-.ms-cta p{margin:0 auto 18px;max-width:560px;font-size:0.95rem;color:#6b7280;line-height:1.5;}
+.ms-cta p{margin:0 auto 12px;max-width:560px;font-size:0.95rem;color:#6b7280;line-height:1.4;}
 .ms-cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:#111 !important;color:#fff !important;border-radius:8px;font-weight:800;font-size:1rem;text-decoration:none !important;transition:background 0.15s,transform 0.1s;}
 .ms-cta-btn:hover{background:#333 !important;color:#fff !important;text-decoration:none !important;transform:translateY(-1px);}
 .ms-cta-btn:active{transform:translateY(0);}
 [data-mode="dark"] .ms-cta{background:#08080A;border-color:rgba(255,255,255,0.06);}
-[data-mode="dark"] .ms-cta-badge{color:#10B981;background:rgba(16,185,129,0.1);}
-[data-mode="dark"] .ms-cta-badge svg{stroke:#10B981;}
+[data-mode="dark"] .ms-cta-logo .ms-logo-light{display:none;}
+[data-mode="dark"] .ms-cta-logo .ms-logo-dark{display:inline;}
 [data-mode="dark"] .ms-cta h3{color:#fff;}
 [data-mode="dark"] .ms-cta h3 em{color:#10B981;}
 [data-mode="dark"] .ms-cta p{color:rgba(255,255,255,0.55);}
@@ -90,9 +92,9 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
 #chartTable th:nth-child(4),#chartTable td:nth-child(4){width:18%;}
 </style>
 <div class="ms-cta">
-  <div class="ms-cta-badge">
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    Free Prevention
+  <div class="ms-cta-logo">
+    <img class="ms-logo-light" src="/images/magicsword-logo-light.png" alt="MagicSword">
+    <img class="ms-logo-dark" src="/images/magicsword-logo-dark.png" alt="MagicSword">
   </div>
   <h3>Stop BYOVD attacks.<br><em>Free for up to 100 endpoints.</em></h3>
   <p>Turn this driver list into enforceable block policies with MagicSword, threat-driven application control.</p>
@@ -293,5 +295,22 @@ Note: The maintained lookup CSV can be found here: [splunk/security_content look
 {{< block "grid-1" >}}
 {{< column >}}
 {{% chart "dataset1" "table" %}}
+
+<script>
+// Default sort: Created column (4th) descending so newest drivers appear first
+document.addEventListener('DOMContentLoaded', function(){
+  var table = document.getElementById('chartTable');
+  if (!table) return;
+  var rows = Array.from(table.querySelectorAll('.row'));
+  rows.sort(function(a, b){
+    var da = a.querySelector('td:nth-child(4)').textContent.trim();
+    var db = b.querySelector('td:nth-child(4)').textContent.trim();
+    return db.localeCompare(da);
+  });
+  var parent = rows[0].parentNode;
+  rows.forEach(function(row){ parent.appendChild(row); });
+});
+</script>
+
 {{< /column >}}
 {{< /block >}}
