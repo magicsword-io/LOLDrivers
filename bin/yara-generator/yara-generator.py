@@ -4,9 +4,9 @@
 #
 # Generates YARA rules for a usable subset of the known vulnerable / malicious drivers
 # Florian Roth
-# July 2025
+# March 2026
 
-__version__ = "0.4.2"
+__version__ = "0.5.0"
 __author__ = "Florian Roth"
 
 import sys
@@ -44,8 +44,13 @@ rule $$$RULENAME$$$ {
 '''
 
 SKIP_DRIVERS = [
-	"3748096bd604a91bc26b2aa1c6883fce.bin" # driver_290bc782.sys - see https://magicswordio.slack.com/archives/C0533A7USGM/p1751462576699979
-	]
+		"3748096bd604a91bc26b2aa1c6883fce.bin" # driver_290bc782.sys - see https://magicswordio.slack.com/archives/C0533A7USGM/p1751462576699979
+		]
+
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+DEFAULT_DRIVER_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../drivers/"))
+DEFAULT_YAML_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../yaml/"))
+DEFAULT_OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../detections/yara/"))
 
 def process_folders(input_folders, debug):
 	input_files = []
@@ -71,12 +76,28 @@ def process_yaml_files(input_folders, debug):
 	# print(input_folders)
 	yaml_data_list = []
 	for yaml_folder in input_folders:
+		if not os.path.isdir(yaml_folder):
+			Log.error("[E] Error: YAML input directory '%s' doesn't exist" % yaml_folder)
+			continue
 		for filename in os.listdir(yaml_folder):
 			if filename.endswith('.yaml') or filename.endswith('.yml'):
 				file_path = os.path.join(yaml_folder, filename)
-				with open(file_path, 'r') as file:
-					yaml_data = yaml.safe_load(file)
-					yaml_data_list.append(yaml_data)
+				try:
+					with open(file_path, 'r') as file:
+						yaml_data = yaml.safe_load(file)
+				except Exception as e:
+					Log.error("Cannot process YAML file: %s (%s)" % (file_path, str(e)))
+					if debug:
+						traceback.print_exc()
+					continue
+				if not isinstance(yaml_data, dict):
+					Log.info("Skipping YAML file without top-level mapping: %s" % file_path)
+					continue
+				samples = yaml_data.get('KnownVulnerableSamples')
+				if not isinstance(samples, list):
+					Log.info("Skipping YAML file without KnownVulnerableSamples list: %s" % file_path)
+					continue
+				yaml_data_list.append(yaml_data)
 	return yaml_data_list
 
 def process_files(input_files, debug):
@@ -163,7 +184,7 @@ def process_files(input_files, debug):
 def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, renamed):
     rules = dict()
 
-    # Loop over the header infos 
+    # Loop over the header infos
     for hi in header_infos:
         # Get YAML info to determine the type of rule
         yaml_info = get_yaml_info_for_sample(hi['sha256'][0], yaml_infos)
@@ -171,6 +192,7 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
         if not yaml_info:
             Log.info("No YAML info found for %s - skipping YARA rule generation" % hi['file_names'])
             continue
+
         # Category and values
         type_driver = "vulnerable driver"
         type_string = "PUA_VULN"
@@ -179,50 +201,23 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
         if renamed:
             type_score = 70
             type_string = "PUA_VULN_Renamed"
-        # for malicious drivers
-        if 'Category' in yaml_info:
-            #print(yaml_info['Category'])
-            if yaml_info['Category'] == "malicious":
-                type_driver = "malicious"
-                type_string = "MAL_"
-                type_desc = "malicious"
-                type_score = 70
-                if strict:
-                    type_score = 85
+
+        # For malicious drivers
+        if yaml_info.get('Category') == "malicious":
+            type_driver = "malicious"
+            type_string = "MAL_"
+            type_desc = "malicious"
+            type_score = 70
+            if strict:
+                type_score = 85
+
         # File names (use the file names in field 'Tags' otherwise use the driver file names)
         file_names = hi['file_names']
         if 'Tags' in yaml_info:
             file_names = yaml_info['Tags']
-        # Apply filter
-        if driver_filter is not type_driver:
-            continue
-
-        # Category and values
-        type_driver = "vulnerable driver"
-        type_string = "PUA_VULN"
-        type_desc = "vulnerable"
-        type_score = 40
-        if renamed:
-            type_score = 70
-            type_string = "PUA_VULN_Renamed"
-        
-        print(yaml_info)
-        if 'Category' in yaml_info:
-            if yaml_info['Category'] == "malicious":
-                type_driver = "malicious"
-                type_string = "MAL_"
-                type_desc = "malicious"
-                type_score = 70
-                if strict:
-                    type_score = 85
-
-        # File names (use the file names in field 'Tags' otherwise use the driver file names)
-        file_names = hi['file_names']
-        if yaml_info is not None and 'Tags' in yaml_info:
-            file_names = yaml_info['Tags']
 
         # Apply filter
-        if driver_filter is not type_driver:
+        if driver_filter != type_driver:
             continue
 
         # Generate Rule
@@ -249,25 +244,22 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
             new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % max(hi['file_sizes']))
         else:
             new_rule = new_rule.replace('$$$STRICT$$$', '')
-        if 'Tags' in yaml_info:
-            if renamed and len(yaml_info['Tags']) > 0:
-                filename_string = generate_filename_string(yaml_info['Tags'])
-                new_rule = new_rule.replace('$$$RENAMED$$$', filename_string)
-            else:
-                new_rule = new_rule.replace('$$$RENAMED$$$', '')
+        if 'Tags' in yaml_info and renamed and len(yaml_info['Tags']) > 0:
+            filename_string = generate_filename_string(yaml_info['Tags'])
+            new_rule = new_rule.replace('$$$RENAMED$$$', filename_string)
         else:
             new_rule = new_rule.replace('$$$RENAMED$$$', '')
 
         Log.debug(new_rule)
         # Append rule to the list
         rules[rule_name] = new_rule
-		
+
     return [rules[rule_name] for rule_name in sorted(rules)]
 
 
 
 def generate_filename_string(tags):
-	filename_expression = " and not filename matches /$VALUE$/i"
+	filename_expression = " and not filename icontains \"$VALUE$\""
 	filenames = []
 	expression = ""
 	for t in tags:
@@ -295,7 +287,12 @@ def generate_string_values(version_info):
 def get_yaml_info_for_sample(sample_hash, yaml_infos):
 	# Loop over YAML infos and find the sample using its hash
 	for yi in yaml_infos:
-		for sample_info in yi['KnownVulnerableSamples']:
+		samples = yi.get('KnownVulnerableSamples')
+		if not isinstance(samples, list):
+			continue
+		for sample_info in samples:
+			if not isinstance(sample_info, dict):
+				continue
 			# print(sample_info)
 			sample_hashes = []
 			if 'MD5' in sample_info:
@@ -358,13 +355,13 @@ if __name__ == '__main__':
 	# Parse Arguments
 	parser = argparse.ArgumentParser(description='YARA Rule Generator for PE Header Info')
 	parser.add_argument('-d', nargs='*', 
-                    help='Path to driver directories (can be used multiple times)',
-                    metavar='driver-files', default=['../../drivers/'])
+	                    help='Path to driver directories (can be used multiple times)',
+	                    metavar='driver-files', default=[DEFAULT_DRIVER_DIR])
 	parser.add_argument('-y', nargs='*', 
-                    help='Path to YAML files with information on the drivers (can be used multiple times)',
-                    metavar='yaml-files', default=['../../yaml/'])
+	                    help='Path to YAML files with information on the drivers (can be used multiple times)',
+	                    metavar='yaml-files', default=[DEFAULT_YAML_DIR])
 	parser.add_argument('-f', help="Write a log file)", metavar='log-file', default='yara-generator.log')
-	parser.add_argument('-o', help="Output folder for rules", metavar='output-folder', default='../../detections/yara/')
+	parser.add_argument('-o', help="Output folder for rules", metavar='output-folder', default=DEFAULT_OUTPUT_DIR)
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
 	args = parser.parse_args()
@@ -429,5 +426,3 @@ if __name__ == '__main__':
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict_renamed), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict_renamed))
-	# The single rules for each driver
-	output_path_single_rules = os.path.join(args.o, '/single-rules')
