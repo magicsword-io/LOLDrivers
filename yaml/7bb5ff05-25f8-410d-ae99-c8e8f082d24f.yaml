@@ -2,6 +2,7 @@ Id: 7bb5ff05-25f8-410d-ae99-c8e8f082d24f
 Tags:
 - WinRing0.sys
 - WinRing0x64
+- OpenHardwareMonitorLib.sys
 Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
@@ -707,4 +708,305 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: d41fa95d4642dc981f10de36f4dc8cd7
+  LoadsDespiteHVCI: 'FALSE'
+- Filename: WinRing0.sys
+  MD5: 845af1ba23c8d5e64def61bcc441604c
+  SHA1: 8ac34eb21b9b38f67cd29684c45696c20ab2e75a
+  SHA256: 206ee7a7c3f4d9496f742ccb84718f556ecb4ba2a95fe7e0cdf3a003ffbe4597
+  Authentihash:
+    MD5: 4f656b084d9df85129cddc642ae8a5e7
+    SHA1: a04d7019946d9dd3516150b4789de92fd31870af
+    SHA256: b051e5898c7154161b57a6acc7595873c44a3772bd48da71f14a9204cd46babe
+  Description: WinRing0
+  Company: OpenLibSys.org
+  InternalName: WinRing0.sys
+  OriginalFilename: WinRing0.sys
+  FileVersion: 1.2.0.5
+  Product: WinRing0
+  ProductVersion: 1.2.0.5
+  Copyright: Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.
+  MachineType: I386
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoCreateSymbolicLink
+  - IofCompleteRequest
+  - KeTickCount
+  - MmMapIoSpace
+  - READ_REGISTER_BUFFER_ULONG
+  - READ_REGISTER_BUFFER_USHORT
+  - READ_REGISTER_BUFFER_UCHAR
+  - MmUnmapIoSpace
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - IoCreateDevice
+  - IoDeleteDevice
+  - RtlUnwind
+  - KeBugCheckEx
+  - HalGetBusDataByOffset
+  - WRITE_PORT_ULONG
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_UCHAR
+  - READ_PORT_ULONG
+  - READ_PORT_USHORT
+  - READ_PORT_UCHAR
+  - HalSetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=JP, CN=Noriyuki MIYAZAKI, emailAddress=hiyohiyo@crystalmark.info
+      ValidFrom: '2007-09-24 10:50:55'
+      ValidTo: '2008-09-24 10:50:55'
+      Signature: 4b6c4ea808b550cbae0f97c27726a0445d0e3e021ee0e0087bfe5bbc290e3e45ca35333f2a97fb7667f64326629f7a99fe2fec4da9fe14f0d858419982b983457848fbd6a9115769db6c5626b4d2f87fc77019a755a9efdf81b1968dfbfa638bf87bd25a8adf1c6c3bba3735f06b54d127462ed40dc364ad4c4f29c9f9692b29ff9557300a7c0d395f250172e312ff253b7ce8885ef8c1fe60c448676180e4ca09b34b52ae116b01f22b446b827a748ca80aee5f8e9ff6725e1dce5a7984c26eb72a615a9ef272f6f7b2e03e6d34665caf506b93cb5a2de127177eb1923cf5bc499e312d6c43ff5a26124ea63a4dc9a3340daa6449c2322857adf98166423cfb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 01000000000115372421a8
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: c11203d7c1fcb38e1eaff246bb8e7595
+        SHA1: 99f00de6eefb2076662465e682a2429373ebcb26
+        SHA256: 08a073aa77d42d608a9457a6b1d63eadcf5113407d8a55025ea1bbef0716dca5
+        SHA384: ef57f44999a39185b9ebf97894ce5a3cca2894e15bc0733a865501c3a41ea9054be5d7517aa59006b04a853cadbed567
+    - Subject: CN=GlobalSign RootSign Partners CA, OU=RootSign Partners CA, O=GlobalSign
+        nv,sa, C=BE
+      ValidFrom: '2003-12-16 13:00:00'
+      ValidTo: '2014-01-27 11:00:00'
+      Signature: 5c2f2e674a26b3e7b53f353cdda003ed569af9443752163065c7d14ea20f8db7b6b6678ee74cec8d95bee6cea7227874acd7f87499b3f7ce8b1338d596cc8d76c52f38b23aae61be0b8799e321626423398d84f6858df777ffb03806f07ec1485fb5ee582606660522749283a7dbb5f992e3e8c3192c2e63efbb1fdff9f70747660d0789977ef8332c9ecbae143df11cdfa3f179afc8928f9471c4d144c554db1eb50b0aa942a3afd643391dee8f9398585bbe6e9c0bf563ec5e99c2f954fa010746da0db06424cf8ed1061d4f3ca26377455ba4bc5fb080bb31e00b54015c161d724ed52a6947d11b667e5f016ef135916be02efeb045d81627b5c58bc2da53
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 040000000000f97faa2e1e
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 59466cb0c1788b2f251fce3495837102
+        SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
+        SHA256: eedda02668f7636eeec69429a7164cc47ca3de0539122d37f5b8078df7ee56db
+        SHA384: 982b72c3ee7066ce80ee642444c91adc60e7009fc6ef981a32edf666591d6aedb09d258e10e86f4ef265eae8149bbd92
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
+        Primary Object Publishing CA
+      ValidFrom: '1999-01-28 12:00:00'
+      ValidTo: '2014-01-27 11:00:00'
+      Signature: a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 04000000000108d9611cd6
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 698f075151097d84c0b1f3e7bc3d6fca
+        SHA1: 041750993d7c9e063f02dfe74699598640911aab
+        SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
+    - Subject: O=GlobalSign, CN=GlobalSign Time Stamping Authority, emailAddress=timestampinfo@globalsign.com
+      ValidFrom: '2007-02-05 09:00:00'
+      ValidTo: '2014-01-27 09:00:00'
+      Signature: 649b07caaccc411e37ef6f349cb5e8ca48f9daeafaf7172e5cad193b7311ec5adbfd7b213161c092515bb166b07c64d8fe10b471a8bc9e75379c5f6ff2da0437b8ecc003e256b7785995581d7a7c3e18d74c32bdf91ee723457fdee08d65825b45fd64c66fc3d7ea12411d0c395ef696f8c3cd9e1fff51886976988b8eb42788821ad63c7aabb04eb73ee8d434d2c1a439533cb2747b15373054a6ebb924cc2f084b4364f14aaf8d9ce8546cb2dbdc3bb1c722849f558e72a8b2a8f6f0ff03c996ebab8273dabe45561936fdba6cbc71f0d3c7c376d7e4bce2a1a67200cfbdb200ed92aa39ab09d16e3953862ad43b517398b754e9972d9977ee123e3642257f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000011092eb8295
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 11d73a3638fc78e0bac6c459feadcc42
+        SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
+        SHA256: 1eb5fc1d2e3254b1e3c4587a6efed87ee65306525e684b4cfa4b51893cfe86a3
+        SHA384: a13c07e505c79c58654ad2cffe219c6c801fa092c52f18c489a6061420c6475706f11c200f4dadd51718c660e49b3f24
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      ValidFrom: '2004-01-22 09:00:00'
+      ValidTo: '2014-01-27 10:00:00'
+      Signature: 11d45d8af43d0d9d7e4fa70071610b56b34caa70e1b2d1dec7886d1d897c2ba946e58b1f8e4cc26695911fe34d394ae31b70b7446edc068a4d6d25e89812dcbca0dd864eae8f81130540905a542529944acaf165b4ef0679dae7cb86f004c918dcee72b320015748dfe333e12ccd9c077f9447278d888d340ca67c5c20c17d07b3736b648c26d29bd7e87965a6a891a174862a050282c1847cf279cd3c2a2b0f99291eea8c8a1ab16aeaa266380e65e1add8c6c91f888d3976ee1782c4138d97ce6341e77af5b4b66c15c33813b3930b620688dde1447f10a950248b60dc05f75ba514b27b56720b96eabffc057090659e051ca4dd07af4b57dec639673bc574
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 04000000000108d9612448
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 2fc76031fc24eec1ef3db2d246d21d6a
+        SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
+        SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2006-05-23 17:00:51'
+      ValidTo: '2016-05-23 17:10:51'
+      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610b7f6b000000000019
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 4798d55be7663a75649cda4dedc686ef
+        SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
+        SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
+    Signer:
+    - SerialNumber: 01000000000115372421a8
+      Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: a96ff2c8a6f10b7189ad5f134537031f
+    SHA1: d941b4b7fc027b18ae91da9311dabcc292d2c183
+    SHA256: c7425dda77b641dc99ccd1d3e107565d03454d28949dcbb2515928705d8b56e3
+  Sections:
+    .text:
+      Entropy: 6.17
+      Virtual Size: '0xa72'
+    .rdata:
+      Entropy: 3.92
+      Virtual Size: '0x184'
+    .data:
+      Entropy: 2.92
+      Virtual Size: '0xc'
+    INIT:
+      Entropy: 5.42
+      Virtual Size: '0x2c6'
+    .rsrc:
+      Entropy: 3.29
+      Virtual Size: '0x3c0'
+    .reloc:
+      Entropy: 4.82
+      Virtual Size: '0xbc'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2008-07-26 07:25:10'
+  Imphash: 7cf815757705e26b809574488ed56d0e
+  LoadsDespiteHVCI: 'FALSE'
+- Filename: WinRing0x64.sys
+  MD5: 1c57d067b9fc5e9ef9aeb14223481243
+  SHA1: 4ee59164d3259667d3cade58f4c93b4dddf5a92b
+  SHA256: d5bca2ca464a6cc91344bd85e812a7bac6e7c67038c4929a29e0bc60c7eabe4d
+  Authentihash:
+    MD5: c8bddfc109c3949bd94893036cb8fe23
+    SHA1: c678f2d2c64fd4b2141958ed4bbf552a29dd81f4
+    SHA256: 93ae26aa102215c0e9aa3b4f2f5a480c9c9b8a18f102c5fd87979d8697a69a69
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteDevice
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCompleteRequest
+  - __C_specific_handler
+  - IoDeleteSymbolicLink
+  - WdfVersionBindClass
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, ST=Zhejiang, L=Hangzhou, O=NetEase(Hangzhou) Network Co. Ltd.,
+        OU=NetEase(Hangzhou), CN=NetEase(Hangzhou) Network Co. Ltd.
+      ValidFrom: '2018-10-08 00:00:00'
+      ValidTo: '2019-03-07 23:59:59'
+      Signature: 53cdafd8ca9393f413dbe3ebb3e02c166ab29e2671eeab558f77593bcb5fab0a2642985e3cc150cbadaa133eadb0f790f217cab0bd075dbe1fba1b233a06d9a5a8f072c413298c3c4c1649315e232104b21dbc3993ec694f278fd63da4802b6808b1ae0416cfcdf4df0eb80083891cf3723c542cf63266ae6c3b4a93695799019b318e80b64539388e8554e012341d486137dc0072e2d8a12fffeedc19fe51010e94b366e1d2f981d35257b1bbe7a622f1023a0ae9ecbae9634f298caa7a3cb3a4973fd6da532494db7acf3afd1fe2777f0a6ba9d7e7b9f7654ed7e617d95947927276be9e6603e634b1af65193d714c2895e78118334b99beac1ccdfa146b6c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 74af57b25c70c644502a0f9de39cc00e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 48396cefb1dcd75373dd293fb7454f35
+        SHA1: adde2691306c88138a9f2e646b8f6869898b0e8a
+        SHA256: 31abdbde5f2e816592e19cad6c0f782d5d262a4eb330f88fdf0d44cacf860440
+        SHA384: 663e8a63c96fcc2a9771bb7094e922a9edb0bba506dd6d3736b0f74bb828b137ad07d47217ba39d82cccdb96621b2d07
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 74af57b25c70c644502a0f9de39cc00e
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 82bd50f0a4b80d63feaea2d9e0cd75ec
+    SHA1: 7ed3aa24d9dff49b37d3656ace94a0e602a45e42
+    SHA256: ed2553694707a61786aa74a821e70bde63d812cbe4b8675d0c74af73c2270cb1
+  Sections:
+    .text:
+      Entropy: 5.82
+      Virtual Size: '0x756'
+    .rdata:
+      Entropy: 3.66
+      Virtual Size: '0x4fc'
+    .data:
+      Entropy: 0.61
+      Virtual Size: '0xf38'
+    .pdata:
+      Entropy: 3.28
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.01
+      Virtual Size: '0x230'
+    .reloc:
+      Entropy: 2.98
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-11-29 23:39:29'
+  Imphash: 345a00bc31828117dd5247b4d3d32ee3
   LoadsDespiteHVCI: 'FALSE'

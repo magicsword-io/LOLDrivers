@@ -1,0 +1,238 @@
+Id: 8d23f7e6-341a-431e-9dc1-bc797773d411
+Tags:
+- shimano32.sys
+- shimano64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-03-20'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create shimano binPath=C:\windows\temp\shimano64.sys type=kernel
+    && sc.exe start shimano
+  Description: HyperTech DNP CrackProof DRM kernel drivers (32-bit and 64-bit variants)
+    from Shimano E-TUBE Project. Expose EPROCESS manipulation IOCTLs (0xAA013880,
+    0xAA013884, 0xAA013888) similar to capcom.sys exploitation technique. Device
+    accessible at \\.\Htsysm4EFB. Zero detections (0/72 and 0/73) on VirusTotal.
+    Signed by Microsoft WHCP via HyperTech DNP CrackProof (Japanese DRM vendor).
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/163
+Detection: []
+Acknowledgement:
+  Person: Wack0
+  Handle: '@Wack0'
+KnownVulnerableSamples:
+- Filename: shimano32.sys
+  MD5: 6a4cced9a784369f50e618d85a16d234
+  SHA1: ae47836896e8e996d3dd6f860c63b95d011ee741
+  SHA256: e8b1a0ddc7a4404eb3c46217e07b5ed91723f44464a6ef589634aeb4fb8f5666
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
+  Date: '2021-10-01 00:11:36'
+  Publisher: Microsoft Windows Hardware Compatibility Publisher
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: I386
+  OriginalFilename: ''
+  Authentihash:
+    MD5: edadfe645e5fb9d921f81aa383b6fcac
+    SHA1: 632b17a46a046ee021b0d4e77c50c1cc0601865d
+    SHA256: 41011afde89ff9727fbd0380ec2d5cc733e1e0289d1f45d5bd45b7b1aa963aea
+  RichPEHeaderHash:
+    MD5: 9e8b6394a353fa378bfb1ecdec27cd1f
+    SHA1: bd28d0459b13b937ff9fafdf0aa0715553046d7a
+    SHA256: 139a965a13022e02329daa44012c9037fba79bb05b21e4f0d783cea2e0fa9aff
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - wcscat
+  - wcscpy
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - KeQuerySystemTime
+  - PsGetCurrentProcessId
+  - IoGetCurrentProcess
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 6.39
+      Virtual Size: '0x5a9'
+    .rdata:
+      Entropy: 2.57
+      Virtual Size: '0x9e'
+    .data:
+      Entropy: 0.26
+      Virtual Size: '0xd0'
+    .info:
+      Entropy: 1.65
+      Virtual Size: '0xa0'
+    INIT:
+      Entropy: 4.61
+      Virtual Size: '0x13e'
+    .reloc:
+      Entropy: 2.92
+      Virtual Size: '0x7e'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-10-01 00:11:36'
+  Imphash: df3935786e2f33563e5ace152d5d7517
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2020-12-15 22:25:28'
+      ValidTo: '2021-12-02 22:25:28'
+      Signature: 3a8e15af3660c47a1def4303906af38b6ca69186409b4f44ebe8106ece701f6e00e734fe1d0bb290d1496c3f17859e1f9ff1f31080dd8bfd2bb5013956c2f49ffe73916654f04c35b9df2fb27c55a71df3d8e1f25185d398abed244b42e27741c0b1c953c139c011b801f00e80ea992005a1305dd65bcb2032790b0d87636b75d2fb8f431546cd906ab0a55083a26d2649d822871b6aacd1b4d8c74ea2366903eeb318e7826db64e3a858d6377cf2f9a628f21d6ef65279603c18d25d365dd370cef1a45527deec589a331a221c909a8b0d2010d078970678c648d62168056e3b775233eac20e50cc039a85900749f627a419e8959fcf21efc89da76426107e43261ccdcaebad659b89abfdd5d1a78e9d438868b9ff58cac5176bddff8c8dd11008ed72ed249bb7d78af559b04561e6b44aae7846b103d2db8c0e31a5f661851f97acba0757b474c1caa49cf8eed86de15a4118743a418b6b415e7770265801ba51061b5d32125ed5ba1e27fe83ac795f9cc868949b14d59eb4f596763da9102f9e6ae8fe92de61d68af67a906e0be424f5c81dcecd4d190953a66384c3b5fe33f7b402a0934c2befd4a51b2f2850ef05e156fc4e1460eab2f67e3cbc999db761f57970ccafbc49040e999965f5306c1f5c90ce172d889a3aa63ec502a60020b2a7b4fff562b9dc5c50a8e06bc52f04ff0fe535591e2e6b7325239666152819a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000433a68189e33902987000000000043
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 3d790bd5602e84a4aa8560133ced0a41
+        SHA1: 909e31e3e3808ab55d508fc0ba47e0132a57d7ab
+        SHA256: ac1acbcba260f10270527c3762457c1b96818466df9da51dfec3b147c90db453
+        SHA384: c548f472f381df2da149c036e2f47be20293838eb23adce5e1b0ad1ba1fe8c33f688528452146c87dcb26070a2a23ced
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 33000000433a68189e33902987000000000043
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+- Filename: shimano64.sys
+  MD5: c047c92696e5cef5485a22df97e6646e
+  SHA1: 37de60ae6adc042b596a90446ce12d53030c5db2
+  SHA256: e3a1f0d967335c8a080a5b1e7e3a06a61f6cea39739cda3ebab11d2908713d80
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
+  Date: '2021-10-01 00:11:36'
+  Publisher: Microsoft Windows Hardware Compatibility Publisher
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 08bbf3b41df7fb7629edf67fb9206e0c
+    SHA1: 06a02e1ec8d9fd2f25770706f0034e7d70d8290b
+    SHA256: bf8734d83d2b8bc9798ba931794504af791e9a0d913266fa39d41b574ce53d88
+  RichPEHeaderHash:
+    MD5: 1cae7fcf3f9627d90b3aa959faa5495d
+    SHA1: a6fdd5b1bebd1c134a1ff6e613d9694d2ad2f81d
+    SHA256: 46e9b36f8db362f22fa5d1fcd13371e9cd34ee5302ea3a7be320d7cf07815bbd
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - PsGetCurrentProcessId
+  - IoGetCurrentProcess
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 6.38
+      Virtual Size: '0x677'
+    .rdata:
+      Entropy: 3.2
+      Virtual Size: '0x120'
+    .data:
+      Entropy: 0.18
+      Virtual Size: '0xd0'
+    .pdata:
+      Entropy: 3.26
+      Virtual Size: '0x6c'
+    .info:
+      Entropy: 1.67
+      Virtual Size: '0xa0'
+    INIT:
+      Entropy: 4.1
+      Virtual Size: '0x12e'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-10-01 00:11:36'
+  Imphash: df43355c636583e56e92142dcc69cc58
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2020-12-15 22:25:28'
+      ValidTo: '2021-12-02 22:25:28'
+      Signature: 3a8e15af3660c47a1def4303906af38b6ca69186409b4f44ebe8106ece701f6e00e734fe1d0bb290d1496c3f17859e1f9ff1f31080dd8bfd2bb5013956c2f49ffe73916654f04c35b9df2fb27c55a71df3d8e1f25185d398abed244b42e27741c0b1c953c139c011b801f00e80ea992005a1305dd65bcb2032790b0d87636b75d2fb8f431546cd906ab0a55083a26d2649d822871b6aacd1b4d8c74ea2366903eeb318e7826db64e3a858d6377cf2f9a628f21d6ef65279603c18d25d365dd370cef1a45527deec589a331a221c909a8b0d2010d078970678c648d62168056e3b775233eac20e50cc039a85900749f627a419e8959fcf21efc89da76426107e43261ccdcaebad659b89abfdd5d1a78e9d438868b9ff58cac5176bddff8c8dd11008ed72ed249bb7d78af559b04561e6b44aae7846b103d2db8c0e31a5f661851f97acba0757b474c1caa49cf8eed86de15a4118743a418b6b415e7770265801ba51061b5d32125ed5ba1e27fe83ac795f9cc868949b14d59eb4f596763da9102f9e6ae8fe92de61d68af67a906e0be424f5c81dcecd4d190953a66384c3b5fe33f7b402a0934c2befd4a51b2f2850ef05e156fc4e1460eab2f67e3cbc999db761f57970ccafbc49040e999965f5306c1f5c90ce172d889a3aa63ec502a60020b2a7b4fff562b9dc5c50a8e06bc52f04ff0fe535591e2e6b7325239666152819a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000433a68189e33902987000000000043
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 3d790bd5602e84a4aa8560133ced0a41
+        SHA1: 909e31e3e3808ab55d508fc0ba47e0132a57d7ab
+        SHA256: ac1acbcba260f10270527c3762457c1b96818466df9da51dfec3b147c90db453
+        SHA384: c548f472f381df2da149c036e2f47be20293838eb23adce5e1b0ad1ba1fe8c33f688528452146c87dcb26070a2a23ced
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 33000000433a68189e33902987000000000043
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
