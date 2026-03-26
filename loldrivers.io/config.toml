@@ -1,9 +1,0 @@
-baseURL = "https://www.loldrivers.io/"
-title = "LOLDrivers"
-enableRobotsTXT = true
-theme = ["compose"] # loading from local
-enableGitInfo = true
-# Google Analytics
-googleAnalytics = "G-33C5VXLWPQ"
-[outputs]
-  home = ["HTML", "RSS","JSON"]
