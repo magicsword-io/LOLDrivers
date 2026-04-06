@@ -1,15 +1,15 @@
 title: Driver Load - HpPortIox64.sys
-id: 562f7df9-c169-503a-836a-008af6cd921a
+id: 471d0a1a-334a-5168-889f-7f092d790746
 status: experimental
 description: |
     Detects loading of driver HpPortIox64.sys via hash.
     HpPortIo
 references:
-    - https://www.loldrivers.io/drivers/080ff223-f8e0-49c0-a7b5-e97349cf81a0/
-    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-author: Michael Haag
-date: 2023/01/09
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/13637210-2e1c-45a4-9f76-fe38c3c34264/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=a641e3dccba765a10718c9cb0da7879e'
-            - 'SHA1=8c377ab4eebc5f4d8dd7bb3f90c0187dfdd3349f'
-            - 'SHA256=c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5'
-            - 'IMPHASH=75018719e85e67b75e73c57d682dbcbf'
+            - 'MD5=7b9e1e5e8ff4f18f84108bb9f7b5d108'
+            - 'SHA1=a59006308c4b5d33bb8f34ac6fb16701814fb8dc'
+            - 'SHA256=a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9'
+            - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
     condition: selection_hashes
 falsepositives:
     - Unknown

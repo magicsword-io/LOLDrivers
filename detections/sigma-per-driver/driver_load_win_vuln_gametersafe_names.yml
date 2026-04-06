@@ -1,15 +1,14 @@
-title: Driver Load - gametersafe.sys
-id: 1a1a4598-c301-54bb-8cd0-70cd0f9f4207
+title: Driver Load - GameTerSafe.sys
+id: 42d4f24d-ab31-577a-a238-548e550df2d8
 status: experimental
 description: |
-    Detects loading of driver gametersafe.sys via name.
-    Confirmed vulnerable driver from Microsoft Block List
+    Detects loading of driver GameTerSafe.sys via name.
 references:
-    - https://www.loldrivers.io/drivers/1ab1ec8c-1231-4ba4-8804-4a2cda103bb8/
-    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+    - https://www.loldrivers.io/drivers/067589f2-4f29-4dc4-bd50-a2e2ee57b25f/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 author: Michael Haag
-date: 2023/07/22
-modified: 2026/02/06
+date: 2023/01/09
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

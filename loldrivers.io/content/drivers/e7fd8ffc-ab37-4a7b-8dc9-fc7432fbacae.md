@@ -20,12 +20,13 @@ Sophos, from time to time, has observed a threat actor deploy variants of Poortr
 - **Created**: 2024-09-10
 - **Author**: Michael Haag
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/cf42cc217c139298641901aad4e5db08.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/cf42cc217c139298641901aad4e5db08.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malicious driver!
 
 {{< /tip >}}
 
+{{< blockbanner "driver_4d8bc539.sys" >}}
 ### Commands
 
 ```
@@ -385,7 +386,7 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/e7fd8ffc-ab37-4a7b-8dc9-fc7432fbacae.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

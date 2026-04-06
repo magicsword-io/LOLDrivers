@@ -1,0 +1,28 @@
+title: Driver Load - tm_filter.sys
+id: 6302efb4-1a4d-5118-a59a-e512f9281a89
+status: experimental
+description: |
+    Detects loading of driver tm_filter.sys via name.
+    Teramind Inc. kernel-mode filter drivers (tm_filter.sys and tmfsdrv2.sys) providing kernel-level input capture including keylogging and screen capture capabilities. Both signed by DigiCert under Teramind Inc. certificate. Execution parents point to teramind_agent MSI installer. Abused by threat actors for stealth monitoring operations. tmfsdrv2.sys has 1/73 detections on VirusTotal.
+references:
+    - https://www.loldrivers.io/drivers/651d1cdc-3e13-405f-b8b3-65cc70cef5a8/
+    - https://github.com/magicsword-io/LOLDrivers/issues/243
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\tm_filter.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

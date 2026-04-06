@@ -1,14 +1,14 @@
-title: Driver Load - eneio64.sys
-id: 8f51bf3e-747d-58f0-9ce3-54a6cbec705f
+title: Driver Load - EneIo64.sys
+id: aaf5bba5-46b7-5f8d-80d2-d1f2b6d2d138
 status: experimental
 description: |
-    Detects loading of driver eneio64.sys via hash.
+    Detects loading of driver EneIo64.sys via hash.
 references:
-    - https://www.loldrivers.io/drivers/90ecbbf7-b02f-424d-8b7d-56cc9e3b5873/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/9b65dba4-81a0-48cc-8ff0-a4f353881062/
+    - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -20,14 +20,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=66066d9852bc65988fb4777f0ff3fbb4'
-            - 'MD5=86fd54c56dcafe2de918c36f8dfda67e'
-            - 'SHA1=0b01c4c1f18d72eb622be2553114f32edfe7b7aa'
-            - 'SHA1=24343ec4dfec11796a8800a3059b630e8be89070'
-            - 'SHA256=9ee33ffd80611a13779df6286c1e04d3c151f1e2f65e3d664a08997fcd098ef3'
-            - 'SHA256=38c18db050b0b2b07f657c03db1c9595febae0319c746c3eede677e21cd238b0'
-            - 'IMPHASH=baa420e9d4e3baf0d65d4fc2bf497708'
-            - 'IMPHASH=b3204707f6e489cd5a2484881eaf78ca'
+            - 'MD5=11fb599312cb1cf43ca5e879ed6fb71e'
+            - 'SHA1=b4d014b5edd6e19ce0e8395a64faedf49688ecb5'
+            - 'SHA256=9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374'
+            - 'IMPHASH=85f86c7c8ce81a78e84efa545d7edc65'
     condition: selection_hashes
 falsepositives:
     - Unknown

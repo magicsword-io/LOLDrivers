@@ -11,7 +11,7 @@ references:
     - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/02/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -27,10 +27,10 @@ detection:
             - 'MD5=bbbc9a6cc488cfb0f6c6934b193891eb'
             - 'SHA1=d8498707f295082f6a95fd9d32c9782951f5a082'
             - 'SHA1=a21c84c6bf2e21d69fa06daaf19b4cc34b589347'
-            - 'SHA256=70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4'
             - 'SHA256=c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c'
-            - 'IMPHASH=821d74031d3f625bcbd0df08b70f1e77'
+            - 'SHA256=70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4'
             - 'IMPHASH=f86759bb4de4320918615dc06e998a39'
+            - 'IMPHASH=821d74031d3f625bcbd0df08b70f1e77'
     condition: selection_hashes
 falsepositives:
     - Unknown

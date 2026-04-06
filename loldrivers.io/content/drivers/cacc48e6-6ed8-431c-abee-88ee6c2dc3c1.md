@@ -27,6 +27,7 @@ nt2.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 
 
+{{< blockbanner "nt2.sys" >}}
 ### Commands
 
 ```
@@ -102,7 +103,10 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 | Creation Timestamp           |  |
 | MD5                | [](https://www.virustotal.com/gui/file/) |
 | SHA1               | [](https://www.virustotal.com/gui/file/) |
-| SHA256             | [cb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec](https://www.virustotal.com/gui/file/cb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec) |
+| SHA256             | [](https://www.virustotal.com/gui/file/) |
+| Authentihash MD5   | [](https://www.virustotal.com/gui/search/authentihash%253A) |
+| Authentihash SHA1  | [8f0b99b53eb921547afecf1f12b3299818c4e5d1](https://www.virustotal.com/gui/search/authentihash%253A8f0b99b53eb921547afecf1f12b3299818c4e5d1) |
+| Authentihash SHA256| [cb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec](https://www.virustotal.com/gui/search/authentihash%253Acb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec) |
 
 
 
@@ -133,7 +137,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

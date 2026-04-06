@@ -1,15 +1,17 @@
-title: Driver Load - msio32.sys
-id: 62f6d50d-183e-5279-941e-238a58dbf5ed
+title: Driver Load - MsIo32.sys
+id: d7cbcc30-3d2a-5cc5-b0b5-53cbaeca5bfb
 status: experimental
 description: |
-    Detects loading of driver msio32.sys via hash.
-    Confirmed vulnerable driver from Microsoft Block List
+    Detects loading of driver MsIo32.sys via hash.
+    The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow local users (including low integrity processes) to read and write to arbitrary memory locations, and consequently gain NT AUTHORITY\SYSTEM privileges, by mapping \Device\PhysicalMemory into the calling process via ZwOpenSection and ZwMapViewOfSection.
 references:
-    - https://www.loldrivers.io/drivers/58509acb-50b4-41a0-9de3-76c571a459e3/
-    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+    - https://www.loldrivers.io/drivers/4e5064b4-48d3-418c-a7a8-f0dc7ac0a176/
+    - https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845
+    - http://blog.rewolf.pl/blog/?p=1630
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 author: Michael Haag
-date: 2023/07/22
-modified: 2026/02/06
+date: 2023/01/09
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +23,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=9c00a44418a8e719c0034f0d55802693'
-            - 'SHA1=7478eb19b453f82ef99734b8aed1e0911aab9d55'
-            - 'SHA256=c7d4943ddac34e1a38692c624d799e634ad4c4e3ae7e3bb2ae4cf0d8eb8985bc'
-            - 'IMPHASH=24b344cd341f8b20003ac85be08df979'
+            - 'MD5=d9e7e5bcc5b01915dbcef7762a7fc329'
+            - 'SHA1=e6305dddd06490d7f87e3b06d09e9d4c1c643af0'
+            - 'SHA256=525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd'
+            - 'IMPHASH=8a424cd36ae3eab0d11332ce3b982a02'
     condition: selection_hashes
 falsepositives:
     - Unknown

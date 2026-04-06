@@ -1,0 +1,28 @@
+title: Driver Load - vsdatant.sys
+id: 92580818-89b7-59cc-b69e-2bef3b289e52
+status: experimental
+description: |
+    Detects loading of driver vsdatant.sys via name.
+    Check Point ZoneAlarm driver (vsdatant.sys) abused in BYOVD attacks to gain kernel privileges and bypass protections such as Memory Integrity.
+references:
+    - https://www.loldrivers.io/drivers/87d5ec39-482e-4e78-a003-be4b662f85fc/
+    - https://venaksecurity.com/2025/03/20/cybercriminals-exploit-checkpoints-driver-in-a-byovd-attack/
+author: Kyaw Pyiyt Htet
+date: 2025/03/22
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\vsdatant.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

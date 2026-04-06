@@ -1,14 +1,14 @@
 title: Driver Load - winio64.sys
-id: b649bd06-1d26-5013-8269-5b0d79d6786d
+id: 10bd5010-527d-5642-bda2-45eeea051bfb
 status: experimental
 description: |
     Detects loading of driver winio64.sys via name.
 references:
-    - https://www.loldrivers.io/drivers/94eb0694-29ba-4f8e-b763-86c6371db6cc/
-    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-author: Michael Haag
-date: 2023/01/09
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/1ff757df-9a40-4f78-a28a-64830440abf7/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

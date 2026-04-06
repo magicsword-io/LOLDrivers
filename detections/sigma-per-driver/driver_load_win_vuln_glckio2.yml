@@ -1,14 +1,14 @@
 title: Driver Load - GLCKIO2.sys
-id: 51148219-f1c6-502e-bfaf-92dab8b07b57
+id: f016ef07-1e2e-5da1-9f1e-8983107550ca
 status: experimental
 description: |
     Detects loading of driver GLCKIO2.sys via hash.
 references:
-    - https://www.loldrivers.io/drivers/52ded752-2708-499e-8f37-98e4a9adc23c/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/868c6920-f6cb-4088-8277-095a1358abe1/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -20,9 +20,12 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=dedd07993780d973c22c93e77ab69fa3'
-            - 'SHA1=83b5e60943a92050fccb8acef7aa464c8f81d38e'
-            - 'SHA256=e5b0772be02e2bc807804874cf669e97aa36f5aff1f12fa0a631a3c7b4dd0dc8'
+            - 'MD5=d253c19194a18030296ae62a10821640'
+            - 'MD5=e700a820f117f65e813b216fccbf78c9'
+            - 'SHA1=2dfcb799b3c42ecb0472e27c19b24ac7532775ce'
+            - 'SHA1=cc51be79ae56bc97211f6b73cc905c3492da8f9d'
+            - 'SHA256=61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0'
+            - 'SHA256=3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25'
             - 'IMPHASH=531d2392dbdd314fb1d9318fe9e5c4d2'
     condition: selection_hashes
 falsepositives:

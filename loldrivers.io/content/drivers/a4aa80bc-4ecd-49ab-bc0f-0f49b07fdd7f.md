@@ -20,12 +20,13 @@ segwindrvx64.sys is a vulnerable driver and more information will be added as fo
 - **Created**: 2023-01-09
 - **Author**: Michael Haag, Nasreddine Bencherchali
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/9cbdb5fb6dc63cb13f10b6333407cbb9.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/9cbdb5fb6dc63cb13f10b6333407cbb9.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the vulnerable driver!
 
 {{< /tip >}}
 
+{{< blockbanner "segwindrvx64.sys" >}}
 ### Commands
 
 ```
@@ -2170,7 +2171,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

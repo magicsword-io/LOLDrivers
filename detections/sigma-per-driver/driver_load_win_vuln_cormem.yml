@@ -1,0 +1,33 @@
+title: Driver Load - CorMem.sys
+id: ec7cc74b-029a-52ff-8b3c-bd80bb4e4556
+status: experimental
+description: |
+    Detects loading of driver CorMem.sys via hash.
+    Teledyne Digital Imaging CorMem.sys (Sapera Memory Manager) exposes physical memory read/write, contiguous memory allocation, and I/O port access to user-mode processes via CorMem.dll wrapper functions. The driver provides 36 exported functions including CorMemGetPhysMemory, CorMemMapPhysMemory, CorMemAllocPhysMemory, CorMemReadIo, and CorMemWriteIo. Actively abused for BYOVD with 0/71 VT detection. Execution parents include Cobalt Strike/IcedID malware and game cheat kernel loaders.
+references:
+    - https://www.loldrivers.io/drivers/a7c3e2d1-8f4b-4e6a-b5d9-3c1f0e7a9b82/
+    - https://github.com/KeServiceDescriptorTable/cormem.sys-vulnerable-driver
+    - https://www.virustotal.com/gui/file/40c855d20d497823716a08a443dc85846233226985ee653770bc3b245cf2ed0f
+    - https://x.com/skept1kal/status/2040200734570877354
+author: Michael Haag
+date: 2026/04/06
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=78fb9882e498d964f42169ce511f07fc'
+            - 'SHA1=bceae6dc87c9c6c33555a4a9008be14c66fd1e20'
+            - 'SHA256=40c855d20d497823716a08a443dc85846233226985ee653770bc3b245cf2ed0f'
+            - 'IMPHASH=d4c9146f538e07774dc7a0e570b47edc'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

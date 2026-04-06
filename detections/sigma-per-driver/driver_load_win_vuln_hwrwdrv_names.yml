@@ -1,15 +1,15 @@
 title: Driver Load - HwRwDrv.sys
-id: 715d5d64-fcba-5c64-9cac-dc183a701a03
+id: 9c3ec870-de14-56d8-9384-fd21801a6069
 status: experimental
 description: |
     Detects loading of driver HwRwDrv.sys via name.
-    Hardware read & write driver
+    Hardware read/write driver signed by a revoked Certum certificate (Open Source Developer, Jun Liu). Provides arbitrary physical memory read/write and PCI bus data access. Identified in ESET EDR killers research (March 2026) with 174 execution parents indicating widespread abuse by threat actors to disable EDR products.
 references:
-    - https://www.loldrivers.io/drivers/e4609b54-cb25-4433-a75a-7a17f43cec00/
-    - https://github.com/namazso/physmem_drivers
+    - https://www.loldrivers.io/drivers/81211b5b-36a7-41d6-a6e3-8e43cf7d0405/
+    - https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
 author: Michael Haag
-date: 2023/01/09
-modified: 2026/02/06
+date: 2026/03/20
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

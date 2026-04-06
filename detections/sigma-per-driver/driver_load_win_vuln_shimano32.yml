@@ -1,0 +1,35 @@
+title: Driver Load - shimano32.sys
+id: e236a311-4d1a-5636-a251-1f8cfe384500
+status: experimental
+description: |
+    Detects loading of driver shimano32.sys via hash.
+    HyperTech DNP CrackProof DRM kernel drivers (32-bit and 64-bit variants) from Shimano E-TUBE Project. Expose EPROCESS manipulation IOCTLs (0xAA013880, 0xAA013884, 0xAA013888) similar to capcom.sys exploitation technique. Device accessible at \\.\Htsysm4EFB. Zero detections (0/72 and 0/73) on VirusTotal. Signed by Microsoft WHCP via HyperTech DNP CrackProof (Japanese DRM vendor).
+references:
+    - https://www.loldrivers.io/drivers/8d23f7e6-341a-431e-9dc1-bc797773d411/
+    - https://github.com/magicsword-io/LOLDrivers/issues/163
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c047c92696e5cef5485a22df97e6646e'
+            - 'MD5=6a4cced9a784369f50e618d85a16d234'
+            - 'SHA1=37de60ae6adc042b596a90446ce12d53030c5db2'
+            - 'SHA1=ae47836896e8e996d3dd6f860c63b95d011ee741'
+            - 'SHA256=e3a1f0d967335c8a080a5b1e7e3a06a61f6cea39739cda3ebab11d2908713d80'
+            - 'SHA256=e8b1a0ddc7a4404eb3c46217e07b5ed91723f44464a6ef589634aeb4fb8f5666'
+            - 'IMPHASH=df3935786e2f33563e5ace152d5d7517'
+            - 'IMPHASH=df43355c636583e56e92142dcc69cc58'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

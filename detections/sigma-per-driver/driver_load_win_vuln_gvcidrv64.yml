@@ -1,14 +1,14 @@
-title: Driver Load - gvcidrv64.sys
-id: 2792cc5d-d2a1-5c8c-b20c-f60657bdcad0
+title: Driver Load - GVCIDrv64.sys
+id: 91dac58f-e77e-5b5d-82eb-d919184356e1
 status: experimental
 description: |
-    Detects loading of driver gvcidrv64.sys via hash.
+    Detects loading of driver GVCIDrv64.sys via hash.
 references:
-    - https://www.loldrivers.io/drivers/56cdac8e-d87d-49c8-b281-6e096c2390d1/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/7c83cb1a-a5ab-4ea0-aa69-0e9a1d09a82f/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -20,12 +20,9 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=acd221ff7cf10b6117fd609929cde395'
-            - 'MD5=1a22a85489a94db6ff68cd624ef43bad'
-            - 'SHA1=d302ae7f016299af323a3542d840004888ab91ff'
-            - 'SHA1=1586f121d38cc42e5d04fe2f56091e91c6cdd8fa'
-            - 'SHA256=f85784fa8e7a7ec86cb3fe76435802f6bb82256e1824ed7b5d61bf075f054573'
-            - 'SHA256=a2353030d4ea3ad9e874a0f7ff35bbfa10562c98c949d88cabab27102bbb8e48'
+            - 'MD5=8b287636041792f640f92e77e560725e'
+            - 'SHA1=e92817a8744ebc4e4fa5383cdce2b2977f01ecd4'
+            - 'SHA256=42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f'
             - 'IMPHASH=ad374977f06fefefbb9c77155f7a0733'
     condition: selection_hashes
 falsepositives:

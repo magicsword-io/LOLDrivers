@@ -1,15 +1,15 @@
 title: Driver Load - HwRwDrv.sys
-id: 9dad7b92-79a6-5da9-998b-6db14daa5e84
+id: 93c9918e-a595-5cd1-b9e7-b3d81dd20a5a
 status: experimental
 description: |
     Detects loading of driver HwRwDrv.sys via hash.
-    Hardware read & write driver
+    Hardware read/write driver signed by a revoked Certum certificate (Open Source Developer, Jun Liu). Provides arbitrary physical memory read/write and PCI bus data access. Identified in ESET EDR killers research (March 2026) with 174 execution parents indicating widespread abuse by threat actors to disable EDR products.
 references:
-    - https://www.loldrivers.io/drivers/e4609b54-cb25-4433-a75a-7a17f43cec00/
-    - https://github.com/namazso/physmem_drivers
+    - https://www.loldrivers.io/drivers/81211b5b-36a7-41d6-a6e3-8e43cf7d0405/
+    - https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
 author: Michael Haag
-date: 2023/01/09
-modified: 2026/02/06
+date: 2026/03/20
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,9 +21,9 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=dbc415304403be25ac83047c170b0ec2'
-            - 'SHA1=2b0bb408ff0e66bcdf6574f1ca52cbf4015b257b'
-            - 'SHA256=21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21'
+            - 'MD5=a2b2cacd5ab0e553d9b3d359564014dc'
+            - 'SHA1=db8bcb8693ddf715552f85b8e2628f060070f920'
+            - 'SHA256=017933be6023795e944a2a373e74e2cc6885b5c9bc1554c437036250c20c3a7d'
             - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
     condition: selection_hashes
 falsepositives:

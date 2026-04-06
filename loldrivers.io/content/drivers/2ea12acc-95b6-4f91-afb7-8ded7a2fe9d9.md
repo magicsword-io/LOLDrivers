@@ -20,12 +20,13 @@ vmdrv.sys is a vulnerable driver and more information will be added as found.
 - **Created**: 2023-05-06
 - **Author**: Nasreddine Bencherchali
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/6d67da13cf84f15f6797ed929dd8cf5d.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/6d67da13cf84f15f6797ed929dd8cf5d.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the vulnerable driver!
 
 {{< /tip >}}
 
+{{< blockbanner "vmdrv.sys" >}}
 ### Commands
 
 ```
@@ -506,7 +507,7 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

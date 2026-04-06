@@ -1,0 +1,32 @@
+title: Driver Load - DriversCloud_amd64.sys
+id: c8adb5a2-fe67-557b-8190-e75acaefb0bb
+status: experimental
+description: |
+    Detects loading of driver DriversCloud_amd64.sys via hash.
+    CYBELSOFT DriversCloud_amd64.sys exposes 7 IOCTLs with no access checks and a zero security descriptor on the device object, meaning any user (including low-integrity processes) can open a handle. Primitives include arbitrary physical memory read via MmMapIoSpace (up to 2MB per call), arbitrary MSR read/write (including IA32_LSTAR for instant kernel code execution), arbitrary I/O port read/write, and arbitrary PCI configuration space read/write. A full LSTAR hijack PoC with crash-safe ROP restore has been demonstrated. The developer acknowledged the issue and is working on a rewritten driver.
+references:
+    - https://www.loldrivers.io/drivers/b3f7c8d2-4a19-4e5b-9d6c-2f8e1a3b7c04/
+    - https://github.com/magicsword-io/LOLDrivers/issues/284
+    - https://www.virustotal.com/gui/file/2bc72d11fa0beda25dc1dbc372967db49bd3c3a3903913f0877bff6792724dfe
+author: Michael Haag
+date: 2026/04/06
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=49d1002443655bc63b8d49fef0b584fd'
+            - 'SHA1=6397f7a838b541614a03379787033be9285053cb'
+            - 'SHA256=2bc72d11fa0beda25dc1dbc372967db49bd3c3a3903913f0877bff6792724dfe'
+            - 'IMPHASH=609a0efe14b66b1a341d1856df00b9fa'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

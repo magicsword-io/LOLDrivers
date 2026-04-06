@@ -1,15 +1,15 @@
 title: Driver Load - CorsairLLAccess64.sys
-id: 19778803-2be3-5633-97df-1ad8f33d9b3a
+id: 509a697d-6c89-5055-888e-033d202f1234
 status: experimental
 description: |
     Detects loading of driver CorsairLLAccess64.sys via name.
     Corsair LL Access
 references:
-    - https://www.loldrivers.io/drivers/a9d9cbb7-b5f6-4e74-97a5-29993263280e/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/ff74f03e-e4ce-4242-bfe3-60601056bb34/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

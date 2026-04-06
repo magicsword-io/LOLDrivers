@@ -1,0 +1,32 @@
+title: Driver Load - STProcessMonitor.sys
+id: 7d667d88-4b2e-5681-8ac2-3345fdd1d693
+status: experimental
+description: |
+    Detects loading of driver STProcessMonitor.sys via hash.
+    Safetica Technologies process monitoring kernel driver vulnerable to BYOVD-style process termination via IOCTL. CVE-2025-70795. 18 execution parents observed in VirusTotal indicating active abuse by threat actors. 1/73 detections. Driver facilitates arbitrary process kill from kernel context, enabling EDR/AV bypass.
+references:
+    - https://www.loldrivers.io/drivers/0712c54c-69fd-41f2-950a-da678ac51246/
+    - https://www.cve.org/CVERecord?id=CVE-2025-70795
+    - https://github.com/magicsword-io/LOLDrivers/issues/268
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5761bd63da03686fc480245da7bd1e9f'
+            - 'SHA1=68fec379f2ae76c3d2ce913f7be650cea1d06990'
+            - 'SHA256=5b4f59236a9b950bcd5191b35d19125f60cfb9e1a1e1aa2e4f914b6745dde9df'
+            - 'IMPHASH=51777abf89572dc6d0ba931ade6ae5b9'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

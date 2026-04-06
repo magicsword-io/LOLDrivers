@@ -14,7 +14,7 @@ references:
     - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 author: Michael Haag, Guus Verbeek
 date: 2023/01/09
-modified: 2026/02/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -27,12 +27,8 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=1898ceda3247213c084f43637ef163b3'
-            - 'MD5=69ba501a268f09f694ff0e8e208aa20e'
-            - 'SHA1=3d6d53b0f1cc908b898610227b9f1b9352137aba'
             - 'SHA1=d04e5db5b6c848a29732bfd52029001f23c3da75'
-            - 'SHA256=37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9'
             - 'SHA256=4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b'
-            - 'IMPHASH=2cf48a541dc193e91bb2a831adcf278e'
             - 'IMPHASH=55db306bc2be3ff71a6b91fd9db051b8'
     condition: selection_hashes
 falsepositives:

@@ -1,17 +1,15 @@
-title: Driver Load - hw.sys
-id: fc8a48bd-f33f-516a-95e1-dd749937d7cb
+title: Driver Load - HW.sys
+id: 9e98b0a7-1945-5389-a98e-ed36177983e3
 status: experimental
 description: |
-    Detects loading of driver hw.sys via name.
-    HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI access
+    Detects loading of driver HW.sys via name.
+    HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI access
 references:
-    - https://www.loldrivers.io/drivers/5969b6dc-b136-480e-a527-3cb2ea2f0da9/
-    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-    - https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
-    - https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
-author: Guus Verbeek
-date: 2023/01/09
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/2d7c96d3-2d6c-44cd-a8a1-5239f571a24a/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

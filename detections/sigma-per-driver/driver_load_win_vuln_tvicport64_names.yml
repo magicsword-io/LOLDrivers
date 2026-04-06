@@ -1,0 +1,28 @@
+title: Driver Load - TVicPort64.sys
+id: 34d1d816-4f36-5553-9a8a-fd63d3b66fd9
+status: experimental
+description: |
+    Detects loading of driver TVicPort64.sys via name.
+    Load TVicPort64.sys kernel driver. Once loaded, device \\.\TVicPortDevice0 is accessible from any integrity level (no DACL). Send IOCTL 0x80002008 to map arbitrary physical memory into user-mode VA space via ZwMapViewOfSection and perform token stealing for LPE to SYSTEM.
+references:
+    - https://www.loldrivers.io/drivers/b4f3a1c2-e8d7-4f92-a301-5c6d9e0b1a2f/
+    - https://www.entechtaiwan.com/dev/port/index.shtm
+author: Joao Leko Monteiro
+date: 2026/02/13
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\tvicport64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

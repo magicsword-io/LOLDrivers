@@ -9,7 +9,7 @@ references:
     - https://github.com/ph4nt0mbyt3/Darkside
 author: ph4nt0mbyt3, Michael Haag
 date: 2023/11/10
-modified: 2026/02/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,14 +21,14 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=f53fa44c7b591a2be105344790543369'
             - 'MD5=531121e7ed50084b493a69f8f8a7a927'
+            - 'MD5=f53fa44c7b591a2be105344790543369'
             - 'SHA1=363068731e87bcee19ad5cb802e14f9248465d31'
             - 'SHA1=28c37b1c0af4a2a75a9662544fb3181a71c45dd2'
             - 'SHA256=bfc2ef3b404294fe2fa05a8b71c7f786b58519175b7202a69fe30f45e607ff1c'
             - 'SHA256=bfbfcb7cae421739163e7630865009d3197f587265e9e5797142d93e1b72b191'
-            - 'IMPHASH=ba0a77ce9e566f704a1655d999d41048'
             - 'IMPHASH=b95bc1a99081d695b1c0b37b90a4a0be'
+            - 'IMPHASH=ba0a77ce9e566f704a1655d999d41048'
     condition: selection_hashes
 falsepositives:
     - Unknown

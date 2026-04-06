@@ -9,7 +9,7 @@ references:
     - https://github.com/namazso/physmem_drivers
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/02/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,8 +21,8 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=f1e054333cc40f79cfa78e5fbf3b54c2'
             - 'MD5=0898af0888d8f7a9544ef56e5e16354e'
+            - 'MD5=f1e054333cc40f79cfa78e5fbf3b54c2'
             - 'SHA1=4b009e91bae8d27b160dc195f10c095f8a2441e1'
             - 'SHA1=6003184788cd3d2fc624ca801df291ccc4e225ee'
             - 'SHA256=dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097'

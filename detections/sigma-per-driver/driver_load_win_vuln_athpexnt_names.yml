@@ -1,0 +1,28 @@
+title: Driver Load - athpexnt.sys
+id: d69a2309-9dcb-50b6-9a80-e11530368e05
+status: experimental
+description: |
+    Detects loading of driver athpexnt.sys via name.
+    AhnLab kernel driver exposing arbitrary physical memory read/write via IOCTL 0x81000000. Device accessible at \\.\ATHpEx. Signed by AhnLab Inc. with VeriSign certificate (first seen 2014). Zero detections (0/73) on VirusTotal but exploitable for privilege escalation by mapping attacker-controlled physical memory into kernel address space.
+references:
+    - https://www.loldrivers.io/drivers/f4e00816-97a8-4c2d-b990-9812f16fe3d3/
+    - https://github.com/magicsword-io/LOLDrivers/issues/255
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\athpexnt.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

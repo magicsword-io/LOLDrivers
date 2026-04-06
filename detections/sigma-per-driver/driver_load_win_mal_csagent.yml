@@ -1,0 +1,31 @@
+title: Driver Load - CSAgent.sys
+id: f6e66839-85f8-51b8-ac47-596d7c9e1a3e
+status: experimental
+description: |
+    Detects loading of driver CSAgent.sys via hash.
+    AbyssWorker rootkit masquerading as a CrowdStrike Falcon sensor driver (CSAgent.sys). Signed with a revoked certificate from Shenzhen yundian Technology Co., Ltd. This is a fully malicious driver that blinds security products by stripping handles, terminating processes, and removing notification callbacks. Identified in ESET EDR killers research (March 2026) deployed alongside Medusa ransomware via the HEARTCRYPT packer.
+references:
+    - https://www.loldrivers.io/drivers/6c84d133-c619-4deb-a91a-5cf05e4cb7c2/
+    - https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9e82ee5bde6b5d29281a3c280e6d1f2e'
+            - 'SHA1=75f85caea52fe5a124fa77e2934abd3161690add'
+            - 'SHA256=b7703a59c39a0d2f7ef6422945aaeaaf061431af0533557246397551b8eed505'
+            - 'IMPHASH=97066db6d02bb0811e5e120968f3d28f'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

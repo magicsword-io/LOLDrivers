@@ -1,0 +1,31 @@
+title: Driver Load - rspot.sys
+id: f9a610b0-30f4-598c-9ebe-38ee5279c6a4
+status: experimental
+description: |
+    Detects loading of driver rspot.sys via hash.
+    Rising Antivirus rspot.sys driver with kernel-level process termination capabilities. Identified in ESET EDR killers research (March 2026) as actively abused by threat actors to disable EDR products.
+references:
+    - https://www.loldrivers.io/drivers/d9a9fd72-e789-4bba-9b96-549b123e5c40/
+    - https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=054a32d6033b1744dca7f49b2e466ea2'
+            - 'SHA1=c85c9a09cd1cb1691da0d96772391be6ddba3555'
+            - 'SHA256=ea8c8f834523886b07d87e85e24f124391d69a738814a0f7c31132b6b712ed65'
+            - 'IMPHASH=33df0c29b1e8562acd8168ef019b3f66'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

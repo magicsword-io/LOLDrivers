@@ -20,12 +20,13 @@ Cisco Talos has identified multiple versions of an undocumented malicious driver
 - **Created**: 2023-07-31
 - **Author**: Alice Climent-Pommeret
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/c94f405c5929cfcccc8ad00b42c95083.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/c94f405c5929cfcccc8ad00b42c95083.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malicious driver!
 
 {{< /tip >}}
 
+{{< blockbanner "c94f405c5929cfcccc8ad00b42c95083.sys" >}}
 ### Commands
 
 ```
@@ -350,7 +351,7 @@ sc.exe create c94f405c5929cfcccc8ad00b42c95083.sys binPath=C:\windows\temp\c94f4
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/ddefecdd-9410-46d9-8957-e23aac1aba0c.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

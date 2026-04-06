@@ -1,15 +1,15 @@
 title: Driver Load - HpPortIox64.sys
-id: 3258047b-6e79-595a-89eb-56bf2b2fe322
+id: ddc51ed1-9df0-5ecf-aaac-55efd86d4162
 status: experimental
 description: |
     Detects loading of driver HpPortIox64.sys via name.
     HpPortIo
 references:
-    - https://www.loldrivers.io/drivers/080ff223-f8e0-49c0-a7b5-e97349cf81a0/
-    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-author: Michael Haag
-date: 2023/01/09
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/13637210-2e1c-45a4-9f76-fe38c3c34264/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

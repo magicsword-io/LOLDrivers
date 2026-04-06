@@ -20,12 +20,13 @@ A vulnerable kernel driver that can be used to terminate arbitrary processes
 - **Created**: 2025-01-29
 - **Author**: Antonio Parata, Andrea Monzani
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/8c8c93a6b6c6d6e632a54877fc1a209e.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/8c8c93a6b6c6d6e632a54877fc1a209e.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the vulnerable driver!
 
 {{< /tip >}}
 
+{{< blockbanner "probmon.sys" >}}
 ### Commands
 
 ```
@@ -414,7 +415,7 @@ sc.exe create probmon.sys binPath=C:\windows\temp\probmon.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/3bf3fd5d-dee3-42da-b8be-6a0b8b7bc88c.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

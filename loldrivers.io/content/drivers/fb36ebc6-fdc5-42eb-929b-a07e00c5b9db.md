@@ -20,12 +20,13 @@ Driver can be used to load unsigned drivers
 - **Created**: 2025-09-18
 - **Author**: Michael Haag
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/a7681a49d1ac6efb31409f17a7011a8b.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/a7681a49d1ac6efb31409f17a7011a8b.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the vulnerable driver!
 
 {{< /tip >}}
 
+{{< blockbanner "ksapi.sys" >}}
 ### Commands
 
 ```
@@ -468,7 +469,7 @@ sc.exe create ksapi.sys binPath=C:\windows\temp\ksapi.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/fb36ebc6-fdc5-42eb-929b-a07e00c5b9db.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

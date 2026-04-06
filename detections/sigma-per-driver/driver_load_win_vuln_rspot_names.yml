@@ -1,0 +1,28 @@
+title: Driver Load - rspot.sys
+id: b0e71b3a-7f4c-50ad-94a1-3b1c18b4772e
+status: experimental
+description: |
+    Detects loading of driver rspot.sys via name.
+    Rising Antivirus rspot.sys driver with kernel-level process termination capabilities. Identified in ESET EDR killers research (March 2026) as actively abused by threat actors to disable EDR products.
+references:
+    - https://www.loldrivers.io/drivers/d9a9fd72-e789-4bba-9b96-549b123e5c40/
+    - https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rspot.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

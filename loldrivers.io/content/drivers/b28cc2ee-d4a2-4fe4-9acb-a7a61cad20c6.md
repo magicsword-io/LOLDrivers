@@ -20,12 +20,13 @@ WiseUnlo.sys is a vulnerable driver and more information will be added as found.
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/33b3842172f21ba22982bfb6bffbda27.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/33b3842172f21ba22982bfb6bffbda27.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the vulnerable driver!
 
 {{< /tip >}}
 
+{{< blockbanner "WiseUnlo.sys" >}}
 ### Commands
 
 ```
@@ -1471,7 +1472,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

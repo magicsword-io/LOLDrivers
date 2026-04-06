@@ -1,14 +1,14 @@
-title: Driver Load - gvcidrv64.sys
-id: 229fb01c-3b3a-5cc0-addb-43b4b46e967f
+title: Driver Load - GVCIDrv64.sys
+id: 2aaa05fc-a8fc-547a-bd41-26c07738360e
 status: experimental
 description: |
-    Detects loading of driver gvcidrv64.sys via name.
+    Detects loading of driver GVCIDrv64.sys via name.
 references:
-    - https://www.loldrivers.io/drivers/56cdac8e-d87d-49c8-b281-6e096c2390d1/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/7c83cb1a-a5ab-4ea0-aa69-0e9a1d09a82f/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

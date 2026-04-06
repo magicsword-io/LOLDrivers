@@ -1,0 +1,29 @@
+title: Driver Load - termdd.sys
+id: c1470506-6adb-5c9e-bafb-fa03179e1593
+status: experimental
+description: |
+    Detects loading of driver termdd.sys via name.
+    A vulnerable kernel driver that can be used to disable Code Integrity
+references:
+    - https://www.loldrivers.io/drivers/ef848b1c-e197-4f98-aa19-4580f41a98b8/
+    - Internal Research
+    - https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+author: Andrea Monzani, Antonio Parata
+date: 2025/11/07
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\termdd.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

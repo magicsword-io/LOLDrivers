@@ -20,12 +20,13 @@ Driver can be used to load unsigned drivers
 - **Created**: 2025-09-18
 - **Author**: Michael Haag
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/9b04a93e05ccff94667f04bffa7af600.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/9b04a93e05ccff94667f04bffa7af600.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the vulnerable driver!
 
 {{< /tip >}}
 
+{{< blockbanner "K7RKScan.sys" >}}
 ### Commands
 
 ```
@@ -408,7 +409,7 @@ sc.exe create K7RKScan.sys binPath=C:\windows\temp\K7RKScan.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/bd580aba-a804-4afc-adb3-b8ce342c78f6.yaml)
 
-*last_updated:* 2026-02-01
+*last_updated:* 2026-04-06
 
 {{< /column >}}
 {{< /block >}}

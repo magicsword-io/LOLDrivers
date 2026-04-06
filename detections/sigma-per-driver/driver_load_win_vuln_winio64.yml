@@ -1,14 +1,14 @@
 title: Driver Load - winio64.sys
-id: c7f93d10-eba9-582e-893b-b2d8e1dda716
+id: 0fd85f73-a7bc-5031-a56a-2cf3aa91628e
 status: experimental
 description: |
     Detects loading of driver winio64.sys via hash.
 references:
-    - https://www.loldrivers.io/drivers/94eb0694-29ba-4f8e-b763-86c6371db6cc/
-    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-author: Michael Haag
-date: 2023/01/09
-modified: 2026/02/06
+    - https://www.loldrivers.io/drivers/1ff757df-9a40-4f78-a28a-64830440abf7/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -20,14 +20,13 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=97221e16e7a99a00592ca278c49ffbfc'
-            - 'MD5=11fb599312cb1cf43ca5e879ed6fb71e'
-            - 'SHA1=943593e880b4d340f2548548e6e673ef6f61eed3'
-            - 'SHA1=b4d014b5edd6e19ce0e8395a64faedf49688ecb5'
-            - 'SHA256=e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf'
-            - 'SHA256=9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374'
+            - 'MD5=7c0b186d1912686cfcb8cd9cdebabe58'
+            - 'MD5=8fc6cafd4e63a3271edf6a1897a892ae'
+            - 'SHA1=6bb68e1894bfbc1ac86bcdc048f7fe7743de2f92'
+            - 'SHA1=f8d7369527cc6976283cc73cd761f93bd1cec49d'
+            - 'SHA256=15fb486b6b8c2a2f1b067f48fba10c2f164638fe5e6cee618fb84463578ecac9'
+            - 'SHA256=dbe9f17313e1164f06401234b875fbc7f71d41dc7271de643865af1358841fef'
             - 'IMPHASH=9e15ce38f071c916bea830247f1241bb'
-            - 'IMPHASH=85f86c7c8ce81a78e84efa545d7edc65'
     condition: selection_hashes
 falsepositives:
     - Unknown

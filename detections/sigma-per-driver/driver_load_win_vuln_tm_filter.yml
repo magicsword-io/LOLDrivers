@@ -1,0 +1,35 @@
+title: Driver Load - tm_filter.sys
+id: 19628c02-6c40-588b-aedc-b78723f1f6c2
+status: experimental
+description: |
+    Detects loading of driver tm_filter.sys via hash.
+    Teramind Inc. kernel-mode filter drivers (tm_filter.sys and tmfsdrv2.sys) providing kernel-level input capture including keylogging and screen capture capabilities. Both signed by DigiCert under Teramind Inc. certificate. Execution parents point to teramind_agent MSI installer. Abused by threat actors for stealth monitoring operations. tmfsdrv2.sys has 1/73 detections on VirusTotal.
+references:
+    - https://www.loldrivers.io/drivers/651d1cdc-3e13-405f-b8b3-65cc70cef5a8/
+    - https://github.com/magicsword-io/LOLDrivers/issues/243
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=3f9829071109fc051bd7f6b01a35ed46'
+            - 'MD5=d8d1c6cd663c9c5a457d8147e10c4e64'
+            - 'SHA1=fc5d815dde49b85efb51e89af45dd011c044f72a'
+            - 'SHA1=b2c1222c96221e031e9e3b64cf3ae00de5cdcff6'
+            - 'SHA256=e9fda504c9bdbe785c55a279ebb27e31783155570ab0c242e1de5bf79fbca6ed'
+            - 'SHA256=2cea1a8d5d23a5ed2c2ac2a0c7c0d95da516aa355224cc707f86de8ade5880ef'
+            - 'IMPHASH=2ccbad8d475d8dbeb3912f266880f807'
+            - 'IMPHASH=d65005590d47deb80879f60133ea0147'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

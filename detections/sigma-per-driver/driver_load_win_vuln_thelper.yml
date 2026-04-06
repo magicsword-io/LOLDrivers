@@ -1,0 +1,31 @@
+title: Driver Load - thelper.sys
+id: 79ccaa86-a505-5d8a-980b-1197a502d4d5
+status: experimental
+description: |
+    Detects loading of driver thelper.sys via hash.
+    OCular THelper driver with arbitrary kernel memory read/write and process manipulation capabilities. Identified in ESET EDR killers research (March 2026) with 46 execution parents linked to AgentStp campaigns abusing the driver to disable EDR products.
+references:
+    - https://www.loldrivers.io/drivers/4c009d0a-8dfa-49f7-b043-b9cef3b01101/
+    - https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
+author: Michael Haag
+date: 2026/03/20
+modified: 2026/04/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0f5b41e746b09c740e57c0262edbd140'
+            - 'SHA1=6ee94f6bdc4c4ed0fff621fec36c70ff093659ed'
+            - 'SHA256=7e783b0a0ff4710306bb3bca29296cf962ae77abc81245a99f12a9039158226f'
+            - 'IMPHASH=9823fa9dc48fb8be6f585ea4c49bdb7e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

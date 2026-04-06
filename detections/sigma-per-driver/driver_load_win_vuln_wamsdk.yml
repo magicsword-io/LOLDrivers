@@ -9,7 +9,7 @@ references:
     - https://research.checkpoint.com/2025/silver-fox-apt-vulnerable-drivers/
 author: The Haag
 date: 2025/08/28
-modified: 2026/02/06
+modified: 2026/04/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=b6b51508ad6f462c45fe102c85d246c8'
             - 'MD5=68def3004db45cb974e789241472fd59'
-            - 'SHA1=3cfad07bdf8006047a78b8234cc6c3c2f35b24ed'
+            - 'MD5=b6b51508ad6f462c45fe102c85d246c8'
             - 'SHA1=96f0dbf52aed0afd43e44500116b04b674f7358e'
+            - 'SHA1=3cfad07bdf8006047a78b8234cc6c3c2f35b24ed'
             - 'SHA256=0be8483c2ea42f1ce4c90e84ac474a4e7017bc6d682e06f96dc1e31922a07b10'
             - 'SHA256=5af1dae21425dda8311a2044209c308525135e1733eeff5dd20649946c6e054c'
             - 'IMPHASH=e504668ae8fd87fe157662fab1e99cb1'
