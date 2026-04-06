@@ -1,0 +1,460 @@
+Id: 651d1cdc-3e13-405f-b8b3-65cc70cef5a8
+Tags:
+- tm_filter.sys
+- tmfsdrv2.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-03-20'
+MitreID: T1056.001
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create tmfsdrv2 binPath=C:\windows\temp\tmfsdrv2.sys type=kernel
+    && sc.exe start tmfsdrv2
+  Description: Teramind Inc. kernel-mode filter drivers (tm_filter.sys and tmfsdrv2.sys)
+    providing kernel-level input capture including keylogging and screen capture capabilities.
+    Both signed by DigiCert under Teramind Inc. certificate. Execution parents point
+    to teramind_agent MSI installer. Abused by threat actors for stealth monitoring
+    operations. tmfsdrv2.sys has 1/73 detections on VirusTotal.
+  Usecase: Capture user input and screen content for surveillance
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/243
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: tm_filter.sys
+  MD5: 3f9829071109fc051bd7f6b01a35ed46
+  SHA1: b2c1222c96221e031e9e3b64cf3ae00de5cdcff6
+  SHA256: e9fda504c9bdbe785c55a279ebb27e31783155570ab0c242e1de5bf79fbca6ed
+  Signature:
+  - Teramind Inc.
+  - DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+  - DigiCert Trusted Root G4
+  Date: '2025-10-02 03:41:24'
+  Publisher: Teramind Inc.
+  Company: Windows (R) Win 7 DDK provider
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: '25.38.2933.0 built by: WinDDK'
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 84ac341afb37740eb5149192da7ff4dc
+    SHA1: abc638c91be3713c31ca41deb4a8e93a4dd18575
+    SHA256: 1b3a8c75a3baa3eb37b7c768798cdbbb0cf9390c05f6769691652fd73a239268
+  RichPEHeaderHash:
+    MD5: a5d847b1d4e2dffec844c685fe6f55d4
+    SHA1: e6bb9a763d04341a76370adb44340dcc915145dd
+    SHA256: 75c80f52145071465b2fbb7cf15ad1d193ce1ad23567e979a5b06b944f3b39fd
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - fwpkclnt.sys
+  - NDIS.SYS
+  ImportedFunctions:
+  - KeAcquireSpinLockRaiseToDpc
+  - RtlValidSid
+  - RtlCompareMemory
+  - MmUnmapLockedPages
+  - IoDeleteSymbolicLink
+  - RtlCreateAcl
+  - PsLookupProcessByProcessId
+  - RtlSetDaclSecurityDescriptor
+  - IoDeleteDevice
+  - KeSetEvent
+  - MmGetSystemRoutineAddress
+  - RtlAppendUnicodeToString
+  - KeInitializeEvent
+  - MmAllocatePagesForMdl
+  - MmBuildMdlForNonPagedPool
+  - RtlAddAccessAllowedAce
+  - PsCreateSystemThread
+  - MmMapLockedPagesSpecifyCache
+  - ZwQueryValueKey
+  - PsTerminateSystemThread
+  - ExDeleteNPagedLookasideList
+  - ZwSetInformationThread
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - ZwSetSecurityObject
+  - IoGetRequestorProcessId
+  - SeExports
+  - IoCreateSymbolicLink
+  - ObfDereferenceObject
+  - MmFreePagesFromMdl
+  - IoCreateDevice
+  - IoReleaseCancelSpinLock
+  - ObOpenObjectByPointer
+  - IoAllocateMdl
+  - RtlLengthSid
+  - RtlCreateSecurityDescriptor
+  - swprintf_s
+  - ExUuidCreate
+  - _stricmp
+  - ZwQuerySystemInformation
+  - KeBugCheckEx
+  - IoFreeMdl
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - KeReleaseSpinLock
+  - ExpInterlockedPushEntrySList
+  - ExInitializeNPagedLookasideList
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - ZwOpenKey
+  - ZwClose
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - FwpsFreeNetBufferList0
+  - NdisWaitEvent
+  - NdisAllocateNetBufferListPool
+  - NdisInitializeEvent
+  - NdisFreeGenericObject
+  - NdisFreeNetBufferListPool
+  - NdisGetDataBuffer
+  - NdisRetreatNetBufferDataStart
+  - NdisAdvanceNetBufferDataStart
+  - NdisAllocateGenericObject
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 6.36
+      Virtual Size: '0x1034f'
+    .rdata:
+      Entropy: 5.67
+      Virtual Size: '0xbc4'
+    .data:
+      Entropy: 1.82
+      Virtual Size: '0x7579'
+    .pdata:
+      Entropy: 4.85
+      Virtual Size: '0x798'
+    INIT:
+      Entropy: 5.32
+      Virtual Size: '0x8d6'
+    .rsrc:
+      Entropy: 3.29
+      Virtual Size: '0x2d0'
+    .reloc:
+      Entropy: 3.72
+      Virtual Size: '0x28a'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-10-02 03:41:24'
+  Imphash: 2ccbad8d475d8dbeb3912f266880f807
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=5553772, C=US, ST=Florida,
+        L=Aventura, O=Teramind Inc., CN=Teramind Inc.
+      ValidFrom: '2025-06-11 00:00:00'
+      ValidTo: '2026-07-06 23:59:59'
+      Signature: 357588ccc354ecbc6aec7cda3c7211dc26ac8d3dc41ba2e7c3870f120bfea2cbc086dcc0c7cfeb31c63321ee55ca2f9609f5ce4f5968fc28f979d26e5940b9e8eee6645aa5afb674ed51425fe765e78f74f79097725d4fd0caa2e9b1e3c61ca664379646500f4e5d5c68de2d0104f55a1d2f4fa53d77fc824cf2bc75eed6ec696fa4f04325ccc062f8904d8fd86fd506a172b9a58ab9add14daf94cec0e7e861b5ffa04ed181bfa3d9f873c3eea8f0ba49955c44fa37cb1e05952ade0a52ad3b955fd5f7a307c36970ef5ede24d0d6ebb2f30a893aa3d7b09c6ee005d40fb91b8a6a252f53a660286d4eb9f03dd40becb7eb19b84a27e9b136347193c39fb3287d30d0bb4cfb045c179177f74cb231205924fa543616578b451a7f4e257f065045854e8a2fb0d6cabd5ab31269212891bb113816a35682f8cabf537aa23880f741d8e7c4c91e05cb30b4e01abdb1a99596dfcb5b41f5136f8c38d3ecbec2a7b39beb8432393f04e9ece82df5a6ca581bafddd904cd7ba3d55961dc5060e4c1abbf8c0459b9d34728b20c83f6c8141533db1114e9a0a9a2949d447d4de82749dfd1c52e7977b25a3f53e682b3f2226ab776855754712a14c7f8ce12ad3aecd68d55ddbba950e463dd5913c5e36b1b946c41cab223afb59ab0cec3c914e5fa713a9554e4bfb461e315d61abfb33ec2670ca323c5a9fc9045730e4af90f73e3e17b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0968507036d0ea11185d8cb8b8b68458
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 0bf22fbf03d24d7525a246a7ae531c40
+        SHA1: 5632aefcc3118825dc9231c8647e031e1434b502
+        SHA256: 5dae7b7df8c8cf97507990dc3efbfa9cf291e0193ccd5f0b431fe814b98bd48a
+        SHA384: e90d2e46b6059a7291b5b23bf54f16dfe0058c016338a8d128cd5881bef7b752fafad774841c7ac3cd6479af7547c4c8
+    Signer:
+    - SerialNumber: 0968507036d0ea11185d8cb8b8b68458
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: tmfsdrv2.sys
+  MD5: d8d1c6cd663c9c5a457d8147e10c4e64
+  SHA1: fc5d815dde49b85efb51e89af45dd011c044f72a
+  SHA256: 2cea1a8d5d23a5ed2c2ac2a0c7c0d95da516aa355224cc707f86de8ade5880ef
+  Signature:
+  - Teramind Inc.
+  - DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+  - DigiCert Trusted Root G4
+  Date: '2025-10-02 03:42:05'
+  Publisher: Teramind Inc.
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: d559a066d166df693d6033e77edbe6fd
+    SHA1: 2328659804f256018d1668e359eec3b4b7250a92
+    SHA256: ba6a35ef49a3cc02aaf727700fe8182d8f6730c48eb69fc8d30e6e4263f8170d
+  RichPEHeaderHash:
+    MD5: 2249e5385a60013970a61ce0b9b7d0da
+    SHA1: 6e1614988315c4fc766e7abc5cc2fd0b74a953de
+    SHA256: bb6411f8c17124ca5767af235d81916cd740b9b72664b9d452ff3adc9b2c818b
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - FLTMGR.SYS
+  - WDFLDR.SYS
+  ImportedFunctions:
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - ExInitializeLookasideListEx
+  - ExDeleteLookasideListEx
+  - KeInitializeTimerEx
+  - KeCancelTimer
+  - KeSetTimerEx
+  - KeWaitForMultipleObjects
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ObReferenceObjectByHandle
+  - MmGetSystemRoutineAddress
+  - ZwOpenSymbolicLinkObject
+  - ZwQuerySymbolicLinkObject
+  - PsSetCreateProcessNotifyRoutineEx
+  - PsGetProcessCreateTimeQuadPart
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - KeInitializeMutex
+  - KeReleaseMutex
+  - ZwCreateKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - ExGetPreviousMode
+  - ZwOpenKey
+  - ExSystemTimeToLocalTime
+  - RtlEqualUnicodeString
+  - RtlDowncaseUnicodeString
+  - RtlIpv4StringToAddressW
+  - SeCaptureSubjectContext
+  - ExQueryDepthSList
+  - IoIs32bitProcess
+  - SeQuerySessionIdToken
+  - FsRtlIsNtstatusExpected
+  - wcsncmp
+  - _snwprintf
+  - KeInitializeSemaphore
+  - KeReleaseSemaphore
+  - MmUnmapLockedPages
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - IoCreateSynchronizationEvent
+  - ObfReferenceObject
+  - IoGetRequestorSessionId
+  - IoGetRequestorProcessId
+  - IoVolumeDeviceToDosName
+  - IoGetTopLevelIrp
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - IofCompleteRequest
+  - IofCallDriver
+  - IoBuildDeviceIoControlRequest
+  - ExReleaseFastMutex
+  - ExAcquireFastMutex
+  - KeQueryTimeIncrement
+  - KeWaitForSingleObject
+  - KeInitializeEvent
+  - vDbgPrintEx
+  - RtlAnsiStringToUnicodeString
+  - RtlInitAnsiString
+  - ObQueryNameString
+  - __C_specific_handler
+  - _vsnwprintf
+  - ZwClose
+  - IoCreateNotificationEvent
+  - KeClearEvent
+  - RtlIntegerToUnicodeString
+  - FsRtlGetFileSize
+  - RtlNumberGenericTableElements
+  - RtlEnumerateGenericTableWithoutSplaying
+  - MmMapLockedPagesSpecifyCache
+  - KeLeaveCriticalRegion
+  - KeEnterCriticalRegion
+  - KeSetEvent
+  - RtlCompareUnicodeString
+  - _snprintf
+  - PsGetCurrentThreadId
+  - PsGetCurrentProcessId
+  - RtlGetElementGenericTable
+  - RtlLookupElementGenericTable
+  - RtlDeleteElementGenericTable
+  - RtlInsertElementGenericTable
+  - RtlInitializeGenericTable
+  - ObfDereferenceObject
+  - RtlTimeToTimeFields
+  - DbgPrintEx
+  - _vsnprintf
+  - RtlCopyUnicodeString
+  - RtlInitUnicodeString
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - RtlFreeUnicodeString
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - SeReleaseSubjectContext
+  - strrchr
+  - KeQueryPerformanceCounter
+  - FltSetInstanceContext
+  - FltGetFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltIsDirectory
+  - FltGetStreamHandleContext
+  - FltSetStreamHandleContext
+  - FltGetRequestorProcessId
+  - FltCancelFileOpen
+  - FltSetInformationFile
+  - FltGetDestinationFileNameInformation
+  - FltParseFileNameInformation
+  - FltGetInstanceContext
+  - FltGetRequestorSessionId
+  - FltGetFileContext
+  - FltSetFileContext
+  - FltFreeSecurityDescriptor
+  - FltBuildDefaultSecurityDescriptor
+  - FltCloseClientPort
+  - FltCloseCommunicationPort
+  - FltCreateCommunicationPort
+  - FltGetVolumeGuidName
+  - FltGetVolumeProperties
+  - FltGetDiskDeviceObject
+  - FltReleaseContext
+  - FltDeleteStreamHandleContext
+  - FltCreateFileEx
+  - FltAllocateContext
+  - FltStartFiltering
+  - FltUnregisterFilter
+  - FltRegisterFilter
+  - FltCancellableWaitForSingleObject
+  - FltLockUserBuffer
+  - FltQueryInformationFile
+  - FltReadFile
+  - FltFreePoolAlignedWithTag
+  - FltAllocatePoolAlignedWithTag
+  - FltDoCompletionProcessingWhenSafe
+  - FltSetCallbackDataDirty
+  - FltReleasePushLockEx
+  - FltAcquirePushLockSharedEx
+  - FltAcquirePushLockExclusiveEx
+  - FltDeletePushLock
+  - FltInitializePushLock
+  - FltClose
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 6.44
+      Virtual Size: '0x4c3a4'
+    .rdata:
+      Entropy: 4.47
+      Virtual Size: '0x5710'
+    .data:
+      Entropy: 2.49
+      Virtual Size: '0x18d0'
+    .pdata:
+      Entropy: 5.64
+      Virtual Size: '0x1a4c'
+    PAGE:
+      Entropy: 6.23
+      Virtual Size: '0x1c8c'
+    INIT:
+      Entropy: 5.66
+      Virtual Size: '0x1904'
+    .reloc:
+      Entropy: 5.34
+      Virtual Size: '0x210'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-10-02 03:42:05'
+  Imphash: d65005590d47deb80879f60133ea0147
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=5553772, C=US, ST=Florida,
+        L=Aventura, O=Teramind Inc., CN=Teramind Inc.
+      ValidFrom: '2025-06-11 00:00:00'
+      ValidTo: '2026-07-06 23:59:59'
+      Signature: 357588ccc354ecbc6aec7cda3c7211dc26ac8d3dc41ba2e7c3870f120bfea2cbc086dcc0c7cfeb31c63321ee55ca2f9609f5ce4f5968fc28f979d26e5940b9e8eee6645aa5afb674ed51425fe765e78f74f79097725d4fd0caa2e9b1e3c61ca664379646500f4e5d5c68de2d0104f55a1d2f4fa53d77fc824cf2bc75eed6ec696fa4f04325ccc062f8904d8fd86fd506a172b9a58ab9add14daf94cec0e7e861b5ffa04ed181bfa3d9f873c3eea8f0ba49955c44fa37cb1e05952ade0a52ad3b955fd5f7a307c36970ef5ede24d0d6ebb2f30a893aa3d7b09c6ee005d40fb91b8a6a252f53a660286d4eb9f03dd40becb7eb19b84a27e9b136347193c39fb3287d30d0bb4cfb045c179177f74cb231205924fa543616578b451a7f4e257f065045854e8a2fb0d6cabd5ab31269212891bb113816a35682f8cabf537aa23880f741d8e7c4c91e05cb30b4e01abdb1a99596dfcb5b41f5136f8c38d3ecbec2a7b39beb8432393f04e9ece82df5a6ca581bafddd904cd7ba3d55961dc5060e4c1abbf8c0459b9d34728b20c83f6c8141533db1114e9a0a9a2949d447d4de82749dfd1c52e7977b25a3f53e682b3f2226ab776855754712a14c7f8ce12ad3aecd68d55ddbba950e463dd5913c5e36b1b946c41cab223afb59ab0cec3c914e5fa713a9554e4bfb461e315d61abfb33ec2670ca323c5a9fc9045730e4af90f73e3e17b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0968507036d0ea11185d8cb8b8b68458
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 0bf22fbf03d24d7525a246a7ae531c40
+        SHA1: 5632aefcc3118825dc9231c8647e031e1434b502
+        SHA256: 5dae7b7df8c8cf97507990dc3efbfa9cf291e0193ccd5f0b431fe814b98bd48a
+        SHA384: e90d2e46b6059a7291b5b23bf54f16dfe0058c016338a8d128cd5881bef7b752fafad774841c7ac3cd6479af7547c4c8
+    Signer:
+    - SerialNumber: 0968507036d0ea11185d8cb8b8b68458
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1

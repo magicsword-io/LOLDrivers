@@ -9,13 +9,21 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel
     && sc.exe start DBUtilDrv2.sys
-  Description: ''
+  Description: Dell DBUtilDrv2.sys versions 2.5, 2.6, and 2.7 all contain a write-what-where
+    condition allowing kernel memory read/write. Dell released v2.7 as a remediation for
+    CVE-2021-36276 but the fix was incomplete. Rapid7 confirmed v2.7 retains the kernel
+    memory primitive and published the dellicious PoC and a Metasploit module
+    (post/windows/manage/dell_memory_protect) that works against both v2.5 and v2.7.
+    Dell categorized the v2.7 issue as a weakness rather than a vulnerability, stating it
+    requires admin privileges.
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
 Resources:
 - https://github.com/jbaines-r7/dellicious
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+- https://www.bleepingcomputer.com/news/security/dell-driver-fix-still-allows-windows-kernel-level-attacks/
+- https://www.rapid7.com/db/modules/post/windows/manage/dell_memory_protect/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009.yara
