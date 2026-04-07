@@ -1,0 +1,227 @@
+Id: 08adabb3-7336-43de-a980-e23a55081f19
+Tags:
+- WDTKernel.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-07'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create WDTKernel binPath=C:\windows\temp\WDTKernel.sys type=kernel
+    && sc.exe start WDTKernel
+  Description: WDTKernel.sys is a Dell Watchdog Timer Kernel Driver that exposes 12
+    IOCTLs for arbitrary physical memory read/write via MmMapIoSpace with zero validation
+    on user-supplied physical addresses. It also provides 12 IOCTLs for unrestricted
+    I/O port access and 2 IOCTLs for PCI configuration space access. The driver was
+    WHQL attestation signed through Microsoft and is distributed via the Microsoft Update
+    Catalog. VMware Carbon Black TAU mentioned this driver in their October 2023 research
+    but classified it as not vulnerable in terms of access control because its INF sets
+    an SDDL restricting device access to Administrators and SYSTEM. The arbitrary physical
+    memory R/W via MmMapIoSpace was not analyzed or documented by TAU. Device path is
+    \\.\__WDT__. Suitable for BYOVD attacks where the attacker already has admin privileges
+    and needs kernel-level memory access to bypass EDR.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/290
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: WDTKernel.sys
+  MD5: 1055e17ed942357c832a7dfd68861e7d
+  SHA1: 25dad15b7ee7c7e81167f1ed64ac8c6a2204e96d
+  SHA256: 0e27bec347ca0050c455467bd8d774175c503b8aa1af3411e94966f7dc6b28b7
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: b7b4b0d5026541f631f83d01d63ac34d440d5c22
+    SHA256: 6a27a2af4b3123d2e0e0daa23bdda0a2f8cfbef495b257dc83cfe8b4faffd7d5
+  RichPEHeaderHash:
+    MD5: 2d3e14a4bbb442f31cecbce5b5bdf5c0
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.04
+      Virtual Size: '0x120a'
+    .rdata:
+      Entropy: 4.89
+      Virtual Size: '0x8a8'
+    .data:
+      Entropy: 0.73
+      Virtual Size: '0x394'
+    .pdata:
+      Entropy: 3.75
+      Virtual Size: '0x264'
+    PAGED_CO:
+      Entropy: 5.96
+      Virtual Size: '0x905'
+    PAGE:
+      Entropy: 5.62
+      Virtual Size: '0x5c8'
+    INIT:
+      Entropy: 5.38
+      Virtual Size: '0x298'
+    .rsrc:
+      Entropy: 3.26
+      Virtual Size: '0x318'
+    .reloc:
+      Entropy: 3.15
+      Virtual Size: '0x28'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2024-05-16 22:16:05'
+      ValidTo: '2025-05-14 22:16:05'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000110bbda1909b3f8389700000000011
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 3a7630b4eeaf580dd8212039061c044504cd2741
+        SHA256: c7cd78241a66b6992cbe11a2773e8df626ecc6443c09204075b1818d6409caf7
+        SHA384: ''
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac100000000009
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: ''
+    Signer:
+    - SerialNumber: 3300000110bbda1909b3f8389700000000011
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+- Filename: WDTKernel.sys
+  MD5: 3a00cd7cb37b2b4bfaa9e7715fdd13d5
+  SHA1: 7c210f7db23987c1eba20ec46a9f48b3fedfcc64
+  SHA256: 8b695b1a430336f49335162d8ca4137c2424640e27ee29511472fea4451462fe
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: 9a7b571f69526c24ce7624261ebc489d1ce7ebf6
+    SHA256: cfae2c01311fb5a6d5aa5be2a3822e01e825258fe4d860e6e8778cb6738b95f3
+  RichPEHeaderHash:
+    MD5: 2d3e14a4bbb442f31cecbce5b5bdf5c0
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.05
+      Virtual Size: '0x137a'
+    .rdata:
+      Entropy: 4.92
+      Virtual Size: '0x8e0'
+    .data:
+      Entropy: 0.73
+      Virtual Size: '0x394'
+    .pdata:
+      Entropy: 3.76
+      Virtual Size: '0x27c'
+    PAGED_CO:
+      Entropy: 5.99
+      Virtual Size: '0x938'
+    PAGE:
+      Entropy: 5.67
+      Virtual Size: '0x5f8'
+    INIT:
+      Entropy: 5.35
+      Virtual Size: '0x2d8'
+    .rsrc:
+      Entropy: 3.31
+      Virtual Size: '0x318'
+    .reloc:
+      Entropy: 3.15
+      Virtual Size: '0x28'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2022-06-07 18:08:07'
+      ValidTo: '2023-06-01 18:08:07'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000058e7c589c068dca27000000000058
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 6a784e02bf67f5791a85567716aa2d0fd701fcd0
+        SHA256: 00dab92fcb3753ac06147a6d8888b5731877d84979e3f178f572e3a1dff33fa8
+        SHA384: ''
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df000000000d
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: ''
+    Signer:
+    - SerialNumber: 33000000058e7c589c068dca27000000000058
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'

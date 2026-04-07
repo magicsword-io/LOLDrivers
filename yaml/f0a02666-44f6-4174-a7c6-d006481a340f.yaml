@@ -1,0 +1,128 @@
+Id: f0a02666-44f6-4174-a7c6-d006481a340f
+Tags:
+- TRIXX.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-07'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create TRIXX binPath=C:\windows\temp\TRIXX.sys type=kernel &&
+    sc.exe start TRIXX
+  Description: TRIXX.sys is a shared utility kernel driver distributed by TechPowerUp
+    LLC with Sapphire TRIXX and GPU-Z. The driver provides completely unrestricted
+    hardware access from usermode through 16+ IOCTLs with zero validation on hardware
+    parameters, including arbitrary port I/O read/write, arbitrary PCI configuration
+    space read/write via HalGetBusDataByOffset/HalSetBusDataByOffset, MMIO BAR mapping
+    via MmMapIoSpace, and MMIO read/write through mapped BARs. Physical memory read/write
+    is achievable by remapping a PCI device BAR to a target physical address then mapping
+    it via MmMapIoSpace. The driver creates its device dynamically based on the Windows
+    service name and has no hardware dependency, loading on any x64 Windows system.
+    TechPowerUp has a history of vulnerable kernel drivers including GPU-Z.sys (CVE-2019-7245,
+    CVE-2025-5324) and ThrottleStop.sys (CVE-2025-7771) which expose the same MmMapIoSpace
+    primitive. Fresh EV code signing certificate valid until April 2028 with zero AV
+    detections.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/291
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: TRIXX.sys
+  MD5: 132006f1712896a68dc5d4ef9f8891b2
+  SHA1: 56664f538773a01166f69790ecf72bd9021f5c1c
+  SHA256: 69fb21e4c8dbfcab838d53d98ec7357d35e30cbbe5fde9e26457d79242ddd78e
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: TechPowerUp LLC
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: b9f05fb25367edacde96f5f2feb8cbc3dde23ef3
+    SHA256: 10f4336d2e8f667e8da6dc127f444c1c304ab747e2dcf1f565ac15d1a2f73339
+  RichPEHeaderHash:
+    MD5: ac5a5d68c8c5ba9bc5d5964425553d7e
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.25
+      Virtual Size: '0x3de6'
+    .rdata:
+      Entropy: 4.26
+      Virtual Size: '0x149c'
+    .data:
+      Entropy: 1.25
+      Virtual Size: '0x5b08'
+    .pdata:
+      Entropy: 4.41
+      Virtual Size: '0x534'
+    PAGE:
+      Entropy: 6.22
+      Virtual Size: '0x1c53'
+    INIT:
+      Entropy: 5.07
+      Virtual Size: '0x8be'
+    .rsrc:
+      Entropy: 3.2
+      Virtual Size: '0x2b0'
+    .reloc:
+      Entropy: 4.08
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - HAL.dll
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Spokane, O=TechPowerUp LLC, serialNumber=604
+        057 982, CN=TechPowerUp LLC
+      ValidFrom: '2025-04-07 20:27:51'
+      ValidTo: '2028-04-01 17:23:05'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 58243aa26dea4bc0a378e983f7c06dc8
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 361fdf2151e2ec520dda28387fde0f69e6798556
+        SHA256: 4dc7597601d16853b79f679aade0309e8cfc67835fac7575e7637ca536064524
+        SHA384: ''
+    - Subject: C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing
+        Intermediate CA RSA R3
+      ValidFrom: '2019-03-26 17:44:23'
+      ValidTo: '2034-03-22 17:44:23'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 424b6a53cec766141c2a63b1a51c4104
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 9cb274c1f98981dbdbe1a7630a9071458784c80d
+        SHA256: 49b229a10f850de5b85110a0e0f59c48dd12b116c9ad236a3f16c5bdfbc968d5
+        SHA384: ''
+    Signer:
+    - SerialNumber: 58243aa26dea4bc0a378e983f7c06dc8
+      Issuer: C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate
+        CA RSA R3
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
