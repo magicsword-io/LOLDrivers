@@ -38,7 +38,7 @@ exec zsh
 2. Create and activate a project virtual environment:
 
 ```sh
-cd /Users/neo/code/Workspace/LOLDrivers
+cd /path/to/LOLDrivers
 pyenv install -s 3.13.5
 pyenv local 3.13.5
 python -m venv .venv
@@ -51,7 +51,7 @@ python -m pip install -r ./bin/yara-generator/requirements.txt
 Shell-agnostic alternative (no activation required):
 
 ```sh
-cd /Users/neo/code/Workspace/LOLDrivers
+cd /path/to/LOLDrivers
 python -m venv .venv
 ./.venv/bin/python -m pip install --upgrade pip
 ./.venv/bin/python -m pip install -r ./bin/yara-generator/requirements.txt
@@ -99,7 +99,7 @@ The generator skips YAML files that are invalid, do not parse to a top-level map
 ### Quick start (first run)
 
 ```sh
-cd /Users/neo/code/Workspace/LOLDrivers
+cd /path/to/LOLDrivers
 python3 -m venv .venv
 ./.venv/bin/python -m pip install -r ./bin/yara-generator/requirements.txt
 ./.venv/bin/python ./bin/yara-generator/yara-generator.py
@@ -193,13 +193,15 @@ Useful options:
 The script writes hit files and a JSON summary (default: `/tmp/yara-malicious-validation/summary.json`).
 It reports `intentionally skipped samples` separately (from `SKIP_DRIVERS`) and excludes them from `missing expected matches`.
 It also reports root-cause breakdown for missing matches (`no PE FileInfo`, `insufficient VersionInfo strings`, `no YAML for grouped representative`, `grouped into vulnerable rule`).
+When `--skip-generate` is used and no generator log exists yet, the script creates a temporary generator log under the output directory so missing matches can still be classified without rewriting the checked-in rule files.
+The script exits with status `2` if `missing_reason_counts.unknown` is greater than `0`, which makes it suitable for CI.
 
 Manual validation commands (equivalent workflow):
 
 Run these commands from the repository root to confirm malicious-driver rules match malicious samples tracked in `yaml/`.
 
 ```sh
-cd /Users/neo/code/Workspace/LOLDrivers
+cd /path/to/LOLDrivers
 ./.venv/bin/python ./bin/yara-generator/yara-generator.py
 ```
 
@@ -221,7 +223,7 @@ awk '{print $2}' /tmp/yara-mal-strict-hits.txt | sort -u | wc -l
 Get a full analytics summary (including missing/extra sets with hash-to-file mapping):
 
 ```sh
-./.venv/bin/python ./bin/yara-generator/validate-malicious-rules.py --skip-generate --json
+./.venv/bin/python ./bin/yara-generator/validate-malicious-rules.py --skip-generate --json-output
 ```
 
 ## Example Output

@@ -30,7 +30,6 @@ class ScanStats:
 def parse_args() -> argparse.Namespace:
     script_dir = Path(__file__).resolve().parent
     repo_root = script_dir.parent.parent
-    rules_dir = repo_root / "detections" / "yara"
 
     parser = argparse.ArgumentParser(
         description="Generate and validate malicious-driver YARA rules."
@@ -54,7 +53,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--skip-generate",
         action="store_true",
-        help="Skip rule generation and validate existing rule files.",
+        help="Validate existing committed rule files without regenerating them in place.",
     )
     parser.add_argument(
         "--output-dir",
@@ -69,14 +68,14 @@ def parse_args() -> argparse.Namespace:
         help="Max number of missing/extra items to print.",
     )
     parser.add_argument(
+        "--json-output",
         "--json",
+        dest="json_output",
         action="store_true",
         help="Print machine-readable JSON summary.",
     )
 
-    defaults = parser.parse_args()
-    defaults.rules_dir = rules_dir
-    return defaults
+    return parser.parse_args()
 
 
 def ensure_tool_exists(tool_name: str) -> None:
@@ -238,13 +237,17 @@ def parse_generator_log_reasons(log_path: Path) -> dict[str, set[str]]:
     return reasons
 
 
-def run_generator(args: argparse.Namespace, repo_root: Path, output_dir: Path) -> None:
+def run_generator(
+    args: argparse.Namespace,
+    repo_root: Path,
+    output_dir: Path,
+    rules_output_dir: Path,
+) -> None:
     script = repo_root / "bin" / "yara-generator" / "yara-generator.py"
     drivers_dir = repo_root / "drivers"
     yaml_dir = repo_root / "yaml"
-    rules_dir = repo_root / "detections" / "yara"
-    rules_other = rules_dir / "other"
-    rules_dir.mkdir(parents=True, exist_ok=True)
+    rules_other = rules_output_dir / "other"
+    rules_output_dir.mkdir(parents=True, exist_ok=True)
     rules_other.mkdir(parents=True, exist_ok=True)
     log_path = output_dir / "yara-generator-validation.log"
     cmd = [
@@ -255,7 +258,7 @@ def run_generator(args: argparse.Namespace, repo_root: Path, output_dir: Path) -
         "-y",
         str(yaml_dir),
         "-o",
-        str(rules_dir),
+        str(rules_output_dir),
         "-f",
         str(log_path),
     ]
@@ -269,11 +272,9 @@ def main() -> int:
     repo_root = args.repo_root.resolve()
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
+    log_path = output_dir / "yara-generator-validation.log"
 
     ensure_tool_exists(args.yara_bin)
-
-    if not args.skip_generate:
-        run_generator(args, repo_root, output_dir)
 
     drivers_dir = repo_root / "drivers"
     yaml_dir = repo_root / "yaml"
@@ -281,6 +282,13 @@ def main() -> int:
     rules_dir = repo_root / "detections" / "yara"
     mal_rule = rules_dir / "yara-rules_mal_drivers.yar"
     mal_strict_rule = rules_dir / "other" / "yara-rules_mal_drivers_strict.yar"
+
+    if args.skip_generate:
+        if not log_path.exists():
+            temp_rules_dir = output_dir / "generated-rules"
+            run_generator(args, repo_root, output_dir, temp_rules_dir)
+    else:
+        run_generator(args, repo_root, output_dir, rules_dir)
 
     for required in [drivers_dir, yaml_dir, generator_script, mal_rule, mal_strict_rule]:
         if not required.exists():
@@ -310,7 +318,6 @@ def main() -> int:
     extra = sorted(observed_union - expected_for_detection)
     total_driver_files = len([p for p in drivers_dir.rglob("*.bin") if p.is_file()])
 
-    log_path = output_dir / "yara-generator-validation.log"
     reason_sets = parse_generator_log_reasons(log_path)
     mal_rule_text = mal_rule.read_text(encoding="utf-8", errors="ignore")
     mal_strict_rule_text = mal_strict_rule.read_text(encoding="utf-8", errors="ignore")
@@ -376,13 +383,16 @@ def main() -> int:
             key: values[: args.list_limit] for key, values in missing_reasons.items()
         },
     }
+    exit_code = 2 if summary["missing_reason_counts"]["unknown"] > 0 else 0
+    summary["validation_status"] = "failed_unknown_missing_matches" if exit_code else "ok"
+    summary["validation_exit_code"] = exit_code
 
     summary_path = output_dir / "summary.json"
     summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-    if args.json:
+    if args.json_output:
         print(json.dumps(summary, indent=2))
-        return 0
+        return exit_code
 
     print("Malicious Rule Validation")
     print(f"repo_root: {repo_root}")
@@ -441,7 +451,10 @@ def main() -> int:
         print(f"Extra hit examples (first {args.list_limit}):")
         for item in extra[: args.list_limit]:
             print(item)
-    return 0
+    if exit_code:
+        print("")
+        print("Validation failed: unexplained missing expected matches remain.")
+    return exit_code
 
 
 if __name__ == "__main__":
