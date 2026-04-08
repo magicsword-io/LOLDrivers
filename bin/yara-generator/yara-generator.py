@@ -30,7 +30,7 @@ import pefile
 YARA_RULE_TEMPLATE = '''
 rule $$$RULENAME$$$ {
 	meta:
-		description = "Detects $$$TYPE$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - $$$FILENAMES$$$"
+		description = "$$$DESCRIPTION$$$"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "$$$HASH$$$"
@@ -225,14 +225,12 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
         rule_name = generate_rule_name(hi['version_info'], type_string, hi['sha256'][0])
         Log.info("Generating YARA rule for %s - rule name %s" % (hi['file_names'], rule_name))
         new_rule = new_rule.replace('$$$RULENAME$$$', rule_name)
+        description = generate_rule_description(type_desc, file_names, renamed)
+        new_rule = new_rule.replace('$$$DESCRIPTION$$$', description)
         new_rule = new_rule.replace('$$$HASH$$$', '"\n\t\thash = "'.join(hi['sha256']))
         new_rule = new_rule.replace('$$$DATE$$$', datetime.today().strftime('%Y-%m-%d'))
         new_rule = new_rule.replace('$$$FILENAMES$$$', ", ".join(file_names))
         new_rule = new_rule.replace('$$$SCORE$$$', str(type_score))
-        if renamed:
-            new_rule = new_rule.replace('$$$TYPE$$$', 'renamed %s' % type_desc)
-        else:
-            new_rule = new_rule.replace('$$$TYPE$$$', type_desc)
         string_values = generate_string_values(hi['version_info'])
         # if string values is empty or too small
         if len(string_values) < 3:
@@ -255,6 +253,19 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
         rules[rule_name] = new_rule
 
     return [rules[rule_name] for rule_name in sorted(rules)]
+
+
+def generate_rule_description(type_desc, file_names, renamed):
+	filenames = ", ".join(file_names)
+	if renamed:
+		return (
+			"Detects renamed %s driver mentioned in LOLDrivers project using VersionInfo values from the PE header - %s. "
+			"A match indicates an unexpected filename and should be treated as more suspicious, especially outside expected vendor or system driver paths."
+		) % (type_desc, filenames)
+	return (
+		"Detects %s driver mentioned in LOLDrivers project using VersionInfo values from the PE header - %s. "
+		"Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
+	) % (type_desc, filenames)
 
 
 

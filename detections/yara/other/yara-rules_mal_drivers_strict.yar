@@ -1,11 +1,11 @@
 
 rule MAL_Driver_773B {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "773b4a1efb9932dd5116c93d06681990759343dfe13c0858d09245bc610d5894"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c006500560065007200730069006f006e00[1-8]32002e0031002e0031002e003000 } /* FileVersion  */
@@ -18,13 +18,13 @@ rule MAL_Driver_773B {
 
 rule MAL_Driver_Basil_Windivertsys_Windivertdriver_2F43 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - windivert.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - windivert.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2f43f4251be4d72dd56c91bf6cce475d379eb9ba6c4dda2be3022ea633d5e807"
 		hash = "8248306bcc5fae20fd4f3d5c44f962c85cddbe020b34a1799350ce2034154b7d"
 		hash = "8da085332782708d8767bcace5327a6ec7283c17cfb85e40b03cd2323a90ddc2"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]5400680065002000570069006e00440069007600650072007400200032002e003200200064007200690076006500720020005b00550052004c003a002000680074007400700073003a002f002f0072006500710072007900700074002e006f00720067002f00770069006e006400690076006500720074002e00680074006d006c005d0020005b0042006900740063006f0069006e003a00200031004300350076005a0056005300620069007a00500065005a00380079006400540059006800550066006d0034004c004100320063004e007700420066006300590068005d00 } /* FileDescription TheWinDivertdriverURLhttpsreqryptorgwindiverthtmlBitcoinCvZVSbizPeZydTYhUfmLAcNwBfcYh */
@@ -42,11 +42,11 @@ rule MAL_Driver_Basil_Windivertsys_Windivertdriver_2F43 {
 
 rule MAL_Driver_Chingachgukdengerk_Vusbbussys_Virtualusbbusdriver_B4F3 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_b4f33ffe.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_b4f33ffe.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b4f33ffef069c18e8a8834eb448dd1f1dbdaae93b140cfff5a1db015eb3ada2f"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]5600690072007400750061006c00200055005300420020006200750073002000640072006900760065007200 } /* FileDescription VirtualUSBbusdriver */
@@ -64,7 +64,7 @@ rule MAL_Driver_Chingachgukdengerk_Vusbbussys_Virtualusbbusdriver_B4F3 {
 
 rule MAL_Driver_Crowdstrikeinc_Csagentsys_Crowdstrikefalconsensor_06EC {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - changsha"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - changsha. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06eccd102c9105957773b32538943531d9c39d0a504ceb3b9b155e97e3b0b134"
@@ -73,7 +73,7 @@ rule MAL_Driver_Crowdstrikeinc_Csagentsys_Crowdstrikefalconsensor_06EC {
 		hash = "94b87b1cdaf1d86c2bc4eacef45608d0f16fdd3b981b88cdddc16b6bc64fe25d"
 		hash = "b2ff9ef50ae037bb003d7157ea8da008a48f715a78c644b5f027b070bf5eb049"
 		hash = "efb642ad3fab4a2e6cb4de829b60e04dd0d9ae7c2b4cf544de28c38f978b4136"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]430072006f007700640053007400720069006b0065002000460061006c0063006f006e002000530065006e0073006f0072002000440072006900760065007200 } /* FileDescription CrowdStrikeFalconSensorDriver */
@@ -91,11 +91,11 @@ rule MAL_Driver_Crowdstrikeinc_Csagentsys_Crowdstrikefalconsensor_06EC {
 
 rule MAL_Driver_Dwadsafeloadsys_E112 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_e1123b59.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_e1123b59.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e1123b59a801e243a64270d0c6ab1277e5e3afba9c19023807409f53c1b0204b"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]a25b3762ef7aa0527d8f719aa852 } /* FileDescription  */
@@ -113,7 +113,7 @@ rule MAL_Driver_Dwadsafeloadsys_E112 {
 
 rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_008F {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "008fa89822b7a1f91e5843169083202ea580f7b06eb6d5cae091ba844d035f25"
@@ -139,7 +139,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_008F {
 		hash = "e8743094f002239a8a9d6d7852c7852e0bb63cd411b007bd8c194bcba159ef15"
 		hash = "ec96b15ce218f97ec1d8f07f13b052d274c4c8438f31daf246ccfaaee5e1bebd"
 		hash = "fefc070a5f6a9c0415e1c6f44512a33e8d163024174b30a61423d00d1e8f9bf2"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a002900 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -157,7 +157,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_008F {
 
 rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_06DD {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06ddf49ac8e06e6b83fccba1141c90ea01b65b7db592c54ffe8aa6d30a75c0b8"
@@ -174,7 +174,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_06DD {
 		hash = "bcca03ce1dd040e67eb71a7be0b75576316f0b6587b2058786fda8b6f0a5adfd"
 		hash = "dfc80e0d468a2c115a902aa332a97e3d279b1fc3d32083e8cf9a4aadf3f54ad1"
 		hash = "eab9b5b7e5fab1c2d7d44cd28f13ae8bb083d9362d2b930d43354a3dfd38e05a"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a002900 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -192,7 +192,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_06DD {
 
 rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_0740 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0740359baef32cbb0b14a9d1bd3499ea2e770ff9b1c85898cfac8fd9aca4fa39"
@@ -210,7 +210,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_0740 {
 		hash = "bcb774b6f6ff504d2db58096601bc5cb419c169bfbeaa3af852417e87d9b2aa0"
 		hash = "ddf427ce55b36db522f638ba38e34cd7b96a04cb3c47849b91e7554bfd09a69a"
 		hash = "e4b2c0aa28aac5e197312a061b05363e2e0387338b28b23272b5b6659d29b1d8"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a002900 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -228,7 +228,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_0740 {
 
 rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_07BE {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "07beac65e28ee124f1da354293a3d6ad7250ed1ce29b8342acfd22252548a5af"
@@ -247,7 +247,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_07BE {
 		hash = "b0a27ac1a8173413de13860d2b2e34cb6bc4d1149f94b62d319042e11d8b004c"
 		hash = "c4f041de66ec8cc5ab4a03bbc46f99e073157a4e915a9ab4069162de834ffc5c"
 		hash = "f6157e033a12520c73dcedf8e49cd42d103e5874c34d6527bb9de25a5d26e5ad"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a002900 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -265,7 +265,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_07BE {
 
 rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_082A {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "082a79311da64b6adc3655e79aa090a9262acaac3b917a363b9571f520a17f6a"
@@ -308,7 +308,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_082A {
 		hash = "efa56907b9d0ec4430a5d581f490b6b9052b1e979da4dab6a110ab92e17d4576"
 		hash = "f03f0fb3a26bb83e8f8fa426744cf06f2e6e29f5220663b1d64265952b8de1a1"
 		hash = "f9b01406864ab081aa77eef4ad15cb2dd2f830d1ef54f52622a59ff1aeb05ba5"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a002900 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -326,7 +326,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_082A {
 
 rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_0AAB {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0aab2deae90717a8876d46d257401d265cf90a5db4c57706e4003c19eee33550"
@@ -360,7 +360,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_0AAB {
 		hash = "c8ae217860f793fce3ad0239d7b357dba562824dd7177c9d723ca4d4a7f99a12"
 		hash = "d50cb5f4b28c6c26f17b9d44211e515c3c0cc2c0c4bf24cd8f9ed073238053ad"
 		hash = "f3ec3f22639d45b3c865bb1ed7622db32e04e1dbc456298be02bf1f3875c3aac"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a002900 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -378,13 +378,13 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_0AAB {
 
 rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_28F5 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "28f5aa194a384680a08c0467e94a8fc40f8b0f3f2ac5deb42e0f51a80d27b553"
 		hash = "2fd43a749b5040ebfafd7cdbd088e27ef44341d121f313515ebde460bf3aaa21"
 		hash = "7824931e55249a501074a258b4f65cd66157ee35672ba17d1c0209f5b0384a28"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a002900 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -402,12 +402,12 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_28F5 {
 
 rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_30E0 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30e083cd7616b1b969a92fd18cf03097735596cce7fcf3254b2ca344e526acc2"
 		hash = "a906251667a103a484a6888dca3e9c8c81f513b8f037b98dfc11440802b0d640"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a002900 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -425,12 +425,12 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_30E0 {
 
 rule MAL_Driver_Gmer_Gmersys_Gmer_0052 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gmer64.sys, superman.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gmer64.sys, superman.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0052aa88e42055a2eed5ddd17c3499c692360155e5e031a211edfcef577acce3"
 		hash = "18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]47004d00450052002000440072006900760065007200200068007400740070003a002f002f007700770077002e0067006d00650072002e006e0065007400 } /* FileDescription GMERDriverhttpwwwgmernet */
@@ -448,11 +448,11 @@ rule MAL_Driver_Gmer_Gmersys_Gmer_0052 {
 
 rule MAL_Driver_Legalcorp_Pciexpressvideocapture_FD22 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PcieCubed.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PcieCubed.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]5000430049006500200056006900640065006f0020004300610070007400750072006500 } /* FileDescription PCIeVideoCapture */
@@ -469,11 +469,11 @@ rule MAL_Driver_Legalcorp_Pciexpressvideocapture_FD22 {
 
 rule MAL_Driver_Microsoftcorporation_Ndislansys_Microsoftwindowsoperatingsystem_B0EB {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ndislan.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ndislan.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]4d00530020004c0041004e002000440072006900760065007200 } /* FileDescription MSLANDriver */
@@ -491,12 +491,12 @@ rule MAL_Driver_Microsoftcorporation_Ndislansys_Microsoftwindowsoperatingsystem_
 
 rule MAL_Driver_Microsoftcorporation_Ntbiosys_Microsoftrwindowsrntoperatingsystem_96BF {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ntbios.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ntbios.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc"
 		hash = "c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]6e007400620069006f0073002000640072006900760065007200 } /* FileDescription ntbiosdriver */
@@ -514,11 +514,11 @@ rule MAL_Driver_Microsoftcorporation_Ntbiosys_Microsoftrwindowsrntoperatingsyste
 
 rule MAL_Driver_Microsoftcorporation_Srvnetsys_Microsoftwindowsoperatingsystem_F6C3 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinTapix.sys, SRVNET2.SYS"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinTapix.sys, SRVNET2.SYS. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f6c316e2385f2694d47e936b0ac4bc9b55e279d530dd5e805f0d963cb47c3c0d"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]53006500720076006500720020004e006500740077006f0072006b002000640072006900760065007200 } /* FileDescription ServerNetworkdriver */
@@ -536,14 +536,14 @@ rule MAL_Driver_Microsoftcorporation_Srvnetsys_Microsoftwindowsoperatingsystem_F
 
 rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_06A0 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4"
 		hash = "8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce"
 		hash = "b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3"
 		hash = "e7af7bcb86bd6bab1835f610671c3921441965a839673ac34444cf0ce7b2164e"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]570041004e0020005400720061006e00730070006f00720074002000440072006900760065007200 } /* FileDescription WANTransportDriver */
@@ -561,11 +561,11 @@ rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_06
 
 rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_6908 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_2.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_2.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]570041004e0020005400720061006e00730070006f00720074002000440072006900760065007200 } /* FileDescription WANTransportDriver */
@@ -583,11 +583,11 @@ rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_69
 
 rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_81C7 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_3.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_3.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]570041004e0020005400720061006e00730070006f00720074002000440072006900760065007200 } /* FileDescription WANTransportDriver */
@@ -605,7 +605,7 @@ rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_81
 
 rule MAL_Driver_Microsoftcorporation_Windbgsys_Microsoftwindowsoperatingsystem_06C5 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - windbg.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - windbg.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06c5ebd0371342d18bc81a96f5e5ce28de64101e3c2fd0161d0b54d8368d2f1f"
@@ -625,7 +625,7 @@ rule MAL_Driver_Microsoftcorporation_Windbgsys_Microsoftwindowsoperatingsystem_0
 		hash = "f936ec4c8164cbd31add659b61c16cb3a717eac90e74d89c47afb96b60120280"
 		hash = "f9f2091fccb289bcf6a945f6b38676ec71dedb32f3674262928ccaf840ca131a"
 		hash = "fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]570069006e0064006f007700730020004700550049002000730079006d0062006f006c0069006300200064006500620075006700670065007200 } /* FileDescription WindowsGUIsymbolicdebugger */
@@ -643,12 +643,12 @@ rule MAL_Driver_Microsoftcorporation_Windbgsys_Microsoftwindowsoperatingsystem_0
 
 rule MAL_Driver_Microsoftcorporation_Wintapixsys_Microsoftwindowsoperatingsystem_1485 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinTapix.sys, SRVNET2.SYS"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinTapix.sys, SRVNET2.SYS. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1485c0ed3e875cbdfc6786a5bd26d18ea9d31727deb8df290a1c00c780419a4e"
 		hash = "8578bff36e3b02cc71495b647db88c67c3c5ca710b5a2bd539148550595d0330"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]570069006e0064006f007700730020004b00650072006e0065006c00200045007800650063007500740069007600650020004d006f00640075006c006500 } /* FileDescription WindowsKernelExecutiveModule */
@@ -666,11 +666,11 @@ rule MAL_Driver_Microsoftcorporation_Wintapixsys_Microsoftwindowsoperatingsystem
 
 rule MAL_Driver_Mimidrv_Mimidrvmimikatz_2FAF {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2faf95a3405578d0e613c8d88d534aa7233da0a6217ce8475890140ab8fb33c8"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 500072006f006400750063007400560065007200730069006f006e00[1-8]32002e0030002e0030002e003000 } /* ProductVersion  */
@@ -685,11 +685,11 @@ rule MAL_Driver_Mimidrv_Mimidrvmimikatz_2FAF {
 
 rule MAL_Driver_Pinchinstechnologycoltd_Rwtkrlsys_Ransomwareterminator_146B {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_146b8f4f.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_146b8f4f.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "146b8f4fc91a4915e8f6aa6e0d871f7161a809c46760ef602bab534836142436"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]5200570054004b0072006c00 } /* FileDescription RWTKrl */
@@ -707,11 +707,11 @@ rule MAL_Driver_Pinchinstechnologycoltd_Rwtkrlsys_Ransomwareterminator_146B {
 
 rule MAL_Driver_Pinchinstechnologycoltd_Rwtkrlsys_Ransomwareterminator_1A74 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_1a74c2bd.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_1a74c2bd.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1a74c2bde0c9a76486657ccb9c79ea87c9891a32cdd4aa15c7542f7c9487a539"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]5200570054004b0072006c00 } /* FileDescription RWTKrl */
@@ -729,11 +729,11 @@ rule MAL_Driver_Pinchinstechnologycoltd_Rwtkrlsys_Ransomwareterminator_1A74 {
 
 rule MAL_Driver_Pinchinstechnologycoltd_Rwtkrlsys_Ransomwareterminator_930D {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_930da474.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_930da474.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "930da474a6d1be97b54f2c81e883e14d62897aa58622e5b040e412bd36cee0a7"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]5200570054004b0072006c00 } /* FileDescription RWTKrl */
@@ -751,11 +751,11 @@ rule MAL_Driver_Pinchinstechnologycoltd_Rwtkrlsys_Ransomwareterminator_930D {
 
 rule MAL_Driver_Sensecorp_42B2 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "42b22faa489b5de936db33f12184f6233198bdf851a18264d31210207827ba25"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]530065006e007300650035002000440072006900760065007200 } /* FileDescription SenseDriver */
@@ -770,11 +770,11 @@ rule MAL_Driver_Sensecorp_42B2 {
 
 rule MAL_Driver_Sensecorp_7F45 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]530065006e007300650035002000440072006900760065007200 } /* FileDescription SenseDriver */
@@ -789,13 +789,13 @@ rule MAL_Driver_Sensecorp_7F45 {
 
 rule MAL_Driver_Tonecinc_Idmtdisys_Internetdownloadmanager_2C1B {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - idmtdi.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - idmtdi.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2c1b65c2988b337182f1ba57b404793454e30a7fd328d34bc2e79857dc437a4a"
 		hash = "44ebb0f534e7cdfec06d5234358d219798a313219b214d72aa23afc5a57d7ea9"
 		hash = "77225a99b2e0e2b4007fb2f5a96d356e13deab45b9ef54c175d5452de8a211a7"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]49006e007400650072006e0065007400200044006f0077006e006c006f006100640020004d0061006e00610067006500720020005400440049002000440072006900760065007200 } /* FileDescription InternetDownloadManagerTDIDriver */
@@ -813,11 +813,11 @@ rule MAL_Driver_Tonecinc_Idmtdisys_Internetdownloadmanager_2C1B {
 
 rule MAL_Driver_Windowsrwinddkprovider_Netfiltersys_Windowsrwinddkdriver_2060 {
 	meta:
-		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_206006a1.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_206006a1.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "206006a11f233b9ae876952308f6d60d7a75c80b4d530a3e6146a0b4d8cd3e4f"
-		date = "2026-03-12"
+		date = "2026-04-08"
 		score = 85
 	strings:
 		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]4e0065007400460069006c007400650072002000530044004b0020005700460050002000440072006900760065007200200028005700500050002900 } /* FileDescription NetFilterSDKWFPDriverWPP */
