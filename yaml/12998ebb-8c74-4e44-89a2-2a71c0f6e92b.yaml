@@ -1,0 +1,70 @@
+Id: 12998ebb-8c74-4e44-89a2-2a71c0f6e92b
+Tags:
+- TcIo.sys
+- TcRouter.sys
+Verified: 'FALSE'
+Author: Michael Haag
+Created: '2026-04-10'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create TcIo binPath=C:\windows\temp\TcIo.sys type=kernel && sc.exe
+    start TcIo
+  Description: TcIo.sys and TcRouter.sys are EV-signed kernel drivers from Beckhoff
+    Automation GmbH (TwinCAT 3 Industrial Automation Runtime). TcIo.sys exposes arbitrary
+    physical memory read/write via ZwOpenSection on Device\PhysicalMemory, arbitrary
+    MMIO mapping via MmMapIoSpace, PCI configuration space read/write via HalGetBusDataByOffset
+    and HalSetBusDataByOffset, and full PCI BAR probing and mapping. TcRouter.sys exposes
+    arbitrary port I/O via direct ring-0 in/out instructions. Both drivers use plain
+    IoCreateDevice with no DACL and have no caller validation on IRP_MJ_CREATE. All
+    IOCTLs use METHOD_NEITHER with FILE_ANY_ACCESS. No hardware gate -- drivers load
+    on any x64 Windows without Beckhoff hardware. CVE-2018-7502 was assigned for an
+    untrusted pointer dereference in IOCTL 0x222206 affecting 19 drivers in the TwinCAT
+    family (CISA advisory ICSA-18-081-02, Source Incite SRC-2018-0007). The physical
+    memory and port I/O primitives described here go beyond the scope of CVE-2018-7502.
+    18 related drivers share the same codebase and EV certificate.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/296
+- https://www.cisa.gov/news-events/ics-advisories/icsa-18-081-02
+- https://srcincite.io/advisories/src-2018-0007/
+- https://nvd.nist.gov/vuln/detail/CVE-2018-7502
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: TcIo.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: e0c58531501d6176ed0f632addca977616b0dab460f32f0a5909d21f828fc63b
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Beckhoff Automation GmbH & Co. KG
+  Description: TwinCAT 3 IO Server
+  Product: TwinCAT 3
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Sections: {}
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports: []
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures: []
+  LoadsDespiteHVCI: 'FALSE'
