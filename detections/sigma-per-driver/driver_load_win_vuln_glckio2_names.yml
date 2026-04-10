@@ -1,14 +1,14 @@
 title: Driver Load - GLCKIO2.sys
-id: 7f53fb2a-9f54-5735-9cda-ff363584b9f7
+id: c9da5c23-c5bb-56a2-ba57-12433008b624
 status: experimental
 description: |
     Detects loading of driver GLCKIO2.sys via name.
 references:
-    - https://www.loldrivers.io/drivers/868c6920-f6cb-4088-8277-095a1358abe1/
-    - https://github.com/namazso/physmem_drivers
-author: Michael Haag
-date: 2023/01/09
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/52ded752-2708-499e-8f37-98e4a9adc23c/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/10
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

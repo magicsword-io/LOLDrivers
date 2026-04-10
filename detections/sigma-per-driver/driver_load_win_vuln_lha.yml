@@ -1,15 +1,15 @@
 title: Driver Load - LHA.sys
-id: c9ffb987-f23d-50ef-b512-fb4307b74200
+id: f46fe8d9-f0d0-5f13-ae57-dcad5ecf7b76
 status: experimental
 description: |
     Detects loading of driver LHA.sys via hash.
     LHA
 references:
-    - https://www.loldrivers.io/drivers/eb07ef7e-0402-48eb-8e06-8fb76eda5b84/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/1c7631f0-f92f-4be5-8ba7-3eefb0601d45/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/10
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=1d768959aaa194d60e4524ce47708377'
-            - 'SHA1=3fd55927d5997d33f5449e9a355eb5c0452e0de3'
-            - 'SHA256=23ba19352b1e71a965260bf4d5120f0200709ee8657ed381043bec9a938a1ade'
-            - 'IMPHASH=1dd3b83f2b007f862a1d8de4a1d3303f'
+            - 'MD5=748cf64b95ca83abc35762ad2c25458f'
+            - 'SHA1=fcd615df88645d1f57ff5702bd6758b77efea6d0'
+            - 'SHA256=e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf'
+            - 'IMPHASH=c3fd2e688276a184b2528ee590054e5a'
     condition: selection_hashes
 falsepositives:
     - Unknown

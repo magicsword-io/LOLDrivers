@@ -1,15 +1,15 @@
 title: Driver Load - nvflash.sys
-id: a070b642-7d40-517c-a01f-d91868372897
+id: 7321e7d3-372f-5a14-bff6-0c54a4fd2239
 status: experimental
 description: |
     Detects loading of driver nvflash.sys via name.
-    NVIDIA Flash Driver, Version 1.8.0
+    Confirmed vulnerable driver from Microsoft Block List
 references:
-    - https://www.loldrivers.io/drivers/d55a5955-6220-4f38-ba7d-91339330fe98/
-    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+    - https://www.loldrivers.io/drivers/2a6a38ca-f2e6-456e-9ccf-db59d8c80c9e/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 author: Michael Haag
-date: 2023/01/09
-modified: 2026/04/06
+date: 2023/07/22
+modified: 2026/04/10
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
