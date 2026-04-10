@@ -5,9 +5,13 @@ import re
 import os
 import json
 import datetime
+import io
+import zipfile
+import xml.etree.ElementTree as ET
 import jinja2
 import csv
 import pandas as pd
+import requests
 
 
 def write_drivers_csv(drivers, output_dir, VERBOSE):
@@ -71,65 +75,164 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
     df.to_csv(output_file, quoting=1, index=False)
 
 
-def write_top_products(drivers, output_dir, top_n=5):
-    products_count = {}
+SIPOLICY_NS = '{urn:schemas-microsoft-com:sipolicy}'
+BLOCKLIST_URL = 'https://aka.ms/VulnerableDriverBlockList'
+
+
+def download_sipolicy(cache_dir, sipolicy_override=None):
+    """Download and extract SiPolicy_Enforced.xml from Microsoft's blocklist ZIP."""
+    if sipolicy_override and os.path.exists(sipolicy_override):
+        return sipolicy_override
+
+    cache_path = os.path.join(cache_dir, 'SiPolicy_Enforced.xml')
+    if os.path.exists(cache_path):
+        return cache_path
+
+    try:
+        print("Downloading Microsoft Vulnerable Driver Blocklist...")
+        resp = requests.get(BLOCKLIST_URL, timeout=30)
+        resp.raise_for_status()
+        with zipfile.ZipFile(io.BytesIO(resp.content)) as zf:
+            target = None
+            for name in zf.namelist():
+                if name.endswith('SiPolicy_Enforced.xml') and 'Server2016' not in name:
+                    target = name
+                    break
+            if not target:
+                print("WARNING: SiPolicy_Enforced.xml not found in ZIP")
+                return None
+            os.makedirs(cache_dir, exist_ok=True)
+            with open(cache_path, 'wb') as f:
+                f.write(zf.read(target))
+        print(f"  Saved to {cache_path}")
+        return cache_path
+    except Exception as e:
+        print(f"WARNING: Failed to download blocklist: {e}")
+        return None
+
+
+def parse_sipolicy_hashes(xml_path):
+    """Parse SiPolicy XML and extract deny hashes and signer counts."""
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+
+    auth_sha256s = set()
+    auth_sha1s = set()
+    hash_deny_count = 0
+    filename_deny_count = 0
+
+    for deny in root.iter(f'{SIPOLICY_NS}Deny'):
+        hash_val = deny.get('Hash', '')
+        friendly = deny.get('FriendlyName', '')
+        filename = deny.get('FileName', '')
+
+        if filename and not hash_val:
+            filename_deny_count += 1
+            continue
+        if not hash_val:
+            continue
+
+        hash_val = hash_val.lower().strip()
+        hash_deny_count += 1
+
+        if 'Hash Page' in friendly:
+            continue
+        elif 'Hash Sha256' in friendly:
+            auth_sha256s.add(hash_val)
+        elif 'Hash Sha1' in friendly:
+            auth_sha1s.add(hash_val)
+
+    signer_deny_count = 0
+    for scenario in root.iter(f'{SIPOLICY_NS}SigningScenario'):
+        for denied in scenario.iter(f'{SIPOLICY_NS}DeniedSigners'):
+            for _ in denied.iter(f'{SIPOLICY_NS}DeniedSigner'):
+                signer_deny_count += 1
+
+    return {
+        'auth_sha256s': auth_sha256s,
+        'auth_sha1s': auth_sha1s,
+        'hash_deny_count': hash_deny_count,
+        'filename_deny_count': filename_deny_count,
+        'signer_deny_count': signer_deny_count,
+    }
+
+
+def compute_metrics(drivers, sipolicy_data):
+    """Compute HVCI and blocklist comparison metrics from driver data."""
+    total_drivers = len(drivers)
+    total_samples = 0
+    hvci_true = 0
+    hvci_false = 0
+    matchable = 0
+    overlap = 0
+    no_authentihash = 0
 
     for driver in drivers:
-        for hash_info in driver['KnownVulnerableSamples']:
-            product_name = hash_info.get('Product') or None
+        for sample in driver.get('KnownVulnerableSamples', []):
+            total_samples += 1
+            hvci = str(sample.get('LoadsDespiteHVCI', '')).upper().strip()
+            if hvci == 'TRUE':
+                hvci_true += 1
+            elif hvci == 'FALSE':
+                hvci_false += 1
 
-            if not product_name:
-                continue
+            if sipolicy_data:
+                auth = sample.get('Authentihash', {}) or {}
+                auth_sha256 = (auth.get('SHA256') or '').lower().strip()
+                auth_sha1 = (auth.get('SHA1') or '').lower().strip()
 
-            product_name = product_name.strip().replace(',', '')
-
-            if product_name.lower() == 'n/a' or product_name.isspace():
-                continue
-
-            if product_name not in products_count:
-                products_count[product_name] = 0
-
-            products_count[product_name] += 1
-
-    sorted_products = sorted(products_count.items(), key=lambda x: x[1], reverse=True)[:top_n]
-
-    with open(f"{output_dir}/content/drivers_top_{top_n}_products.csv", "w") as f:
-        writer = csv.writer(f)
-
-        for product, count in sorted_products:
-            for _ in range(count):
-                writer.writerow([count, product])
-
-def write_top_publishers(drivers, output_dir, top_n=5):
-    publishers_count = {}
-
-    for driver in drivers:
-        for hash_info in driver['KnownVulnerableSamples']:
-            publisher_str = hash_info.get('Publisher')  # Use the `get()` method here
-
-            if not publisher_str:
-                continue
-
-            publishers = re.findall(r'\"(.*?)\"|([^,]+)', publisher_str)
-            for publisher_tuple in publishers:
-                publisher = next(filter(None, publisher_tuple)).strip()
-
-                if publisher.lower() == 'n/a' or publisher.isspace() or publisher.lower() == 'ltd.':
+                if not auth_sha256 and not auth_sha1:
+                    no_authentihash += 1
                     continue
 
-                if publisher not in publishers_count:
-                    publishers_count[publisher] = 0
+                matchable += 1
+                if ((auth_sha256 and auth_sha256 in sipolicy_data['auth_sha256s']) or
+                        (auth_sha1 and auth_sha1 in sipolicy_data['auth_sha1s'])):
+                    overlap += 1
 
-                publishers_count[publisher] += 1
+    exclusive = matchable - overlap if sipolicy_data else 0
 
-    sorted_publishers = sorted(publishers_count.items(), key=lambda x: x[1], reverse=True)[:top_n]
+    metrics = {
+        'total_drivers': total_drivers,
+        'total_samples': total_samples,
+        'hvci_bypass_count': hvci_true,
+        'hvci_blocked_count': hvci_false,
+        'hvci_bypass_pct': str(round(hvci_true / total_samples * 100, 1)) if total_samples else '0',
+        'generated_at': datetime.datetime.now().strftime('%Y-%m-%d'),
+    }
 
-    with open(f"{output_dir}/content/drivers_top_{top_n}_publishers.csv", "w") as f:
-        writer = csv.writer(f)
+    if sipolicy_data:
+        metrics.update({
+            'ms_blocklist_hash_count': len(sipolicy_data['auth_sha256s']),
+            'ms_blocklist_signer_count': sipolicy_data['signer_deny_count'],
+            'overlap_count': overlap,
+            'overlap_pct': str(round(overlap / matchable * 100, 1)) if matchable else '0',
+            'loldrivers_exclusive_count': exclusive,
+            'loldrivers_exclusive_pct': str(round(exclusive / matchable * 100, 1)) if matchable else '0',
+            'samples_without_authentihash': no_authentihash,
+        })
+    else:
+        metrics.update({
+            'ms_blocklist_hash_count': 'N/A',
+            'ms_blocklist_signer_count': 'N/A',
+            'overlap_count': 'N/A',
+            'overlap_pct': 'N/A',
+            'loldrivers_exclusive_count': 'N/A',
+            'loldrivers_exclusive_pct': 'N/A',
+            'samples_without_authentihash': 'N/A',
+        })
 
-        for publisher, count in sorted_publishers:
-            for _ in range(count):
-                writer.writerow([count, publisher])
+    return metrics
+
+
+def write_metrics_json(metrics, output_dir):
+    """Write metrics to a Hugo data file."""
+    data_dir = os.path.join(output_dir, 'data')
+    os.makedirs(data_dir, exist_ok=True)
+    output_file = os.path.join(data_dir, 'metrics.json')
+    with open(output_file, 'w') as f:
+        json.dump(metrics, f, indent=2)
+    return output_file
 
 
 def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE):
@@ -187,13 +290,9 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
             writer.writerow([link, sha256, driver['Category'].capitalize(), driver['Created']])
     messages.append("site_gen.py wrote drivers table to: {0}".format(OUTPUT_DIR + '/content/drivers_table.csv'))
 
-    # write top 5 publishers
-    write_top_publishers(drivers, OUTPUT_DIR)
-    messages.append("site_gen.py wrote drivers publishers to: {0}".format(OUTPUT_DIR + '/content/drivers_top_n_publishers.csv'))
-
-    # write top 5 products
-    write_top_products(drivers, OUTPUT_DIR)
-    messages.append("site_gen.py wrote drivers products to: {0}".format(OUTPUT_DIR + '/content/drivers_top_n_products.csv'))
+    # write top 5 publishers (kept for backward compatibility but no longer on landing page)
+    # write_top_publishers(drivers, OUTPUT_DIR)
+    # write_top_products(drivers, OUTPUT_DIR)
 
     return drivers, messages
 
@@ -206,6 +305,7 @@ if __name__ == "__main__":
     parser.add_argument("-p", "--path", required=False, default="yaml", help="path to loldriver yaml folder. Defaults to `yaml`")
     parser.add_argument("-o", "--output", required=False, default="loldrivers.io", help="path to the output directory for the site, defaults to `loldrivers.io`")
     parser.add_argument("-v", "--verbose", required=False, default=False, action='store_true', help="prints verbose output")
+    parser.add_argument("--sipolicy", required=False, default=None, help="path to pre-downloaded SiPolicy_Enforced.xml (otherwise downloads from Microsoft)")
 
     # parse them
     args = parser.parse_args()
@@ -239,6 +339,17 @@ if __name__ == "__main__":
 
     messages = []
     drivers, messages = generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE)
+
+    # compute and write blocklist/HVCI metrics
+    sipolicy_xml = download_sipolicy(OUTPUT_DIR, args.sipolicy)
+    if sipolicy_xml:
+        sipolicy_data = parse_sipolicy_hashes(sipolicy_xml)
+        print(f"  SiPolicy: {len(sipolicy_data['auth_sha256s'])} unique SHA256, {len(sipolicy_data['auth_sha1s'])} unique SHA1 authenticode hashes")
+    else:
+        sipolicy_data = None
+    metrics = compute_metrics(drivers, sipolicy_data)
+    metrics_file = write_metrics_json(metrics, OUTPUT_DIR)
+    messages.append(f"site_gen.py wrote metrics to: {metrics_file}")
 
     # print all the messages from generation
     for m in messages:
