@@ -1,0 +1,125 @@
+Id: a6dd3aef-d3a7-4c72-abcd-e633e0c0706c
+Tags:
+- kdhacker64_ev.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-13'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create KDHacker binPath=C:\windows\temp\kdhacker64_ev.sys type=kernel
+    && sc.exe start KDHacker
+  Description: kdhacker64_ev.sys is a kernel driver from Beijing Kingsoft Security
+    software bundled with Kingsoft AntiVirus and Liebao Browser. The driver exposes a
+    kernel heap buffer overflow via IOCTL 0x120140 with approximately 512 bytes of
+    overflow into adjacent kernel pool allocations. The root cause is a size validation
+    mismatch -- input is validated at 0x488 bytes per element but only 0x248 bytes are
+    allocated per element. RtlInitUnicodeString is called on user-controlled buffers
+    without null terminator bounds checking, producing oversized ANSI strings that
+    overflow 64-byte destination buffers. No authentication is required to access the
+    device. The driver also includes TDI hooks for TCP/UDP/RawIP interception, process
+    creation notification callbacks, filesystem filter attachments to NTFS/FAT/CDFS,
+    camera device monitoring, and HTTP header parsing. Other Kingsoft drivers (ksapi.sys,
+    mydrivers.sys) are already tracked in LOLDrivers.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/309
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: kdhacker64_ev.sys
+  MD5: ba3cd54ee9e5bde6f4155348e8c6e31a
+  SHA1: 881b7b87284ea81d88ac2f8c6c3c5a19b786b3ef
+  SHA256: 597eff2718073b11da3d4bcade9a03fb4684f9be57d184fce65ac70a2ef07246
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Beijing Kingsoft Security software Co., Ltd
+  Description: ''
+  Product: Kingsoft AntiVirus
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: 55954405254649b08814128e7f4b586396d5297a
+    SHA256: 9d49c2dbbfecf36aec181b93ff33956edd705a23a771401683293ff7e5d77ac0
+  RichPEHeaderHash:
+    MD5: 1db2ba481ce181c48c0e22256b40dc76
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 5.47
+      Virtual Size: '0x26a20'
+    .rdata:
+      Entropy: 4.63
+      Virtual Size: '0x1a68'
+    .data:
+      Entropy: 3.42
+      Virtual Size: '0x7cc'
+    .pdata:
+      Entropy: 5.15
+      Virtual Size: '0x1adc'
+    PAGE:
+      Entropy: 5.26
+      Virtual Size: '0xc32'
+    INIT:
+      Entropy: 5.46
+      Virtual Size: '0xf52'
+    .rsrc:
+      Entropy: 3.33
+      Virtual Size: '0x3d0'
+    .reloc:
+      Entropy: 2.15
+      Virtual Size: '0x28c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - TDI.SYS
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, ST=Beijing, L=Beijing, O=Beijing Kingsoft Security software Co.
+        Ltd, CN=Beijing Kingsoft Security software Co. Ltd
+      ValidFrom: '2017-02-17 00:00:00'
+      ValidTo: '2019-03-19 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 4c6d7b5ea289c2744264346e5b417aba
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 5d767ae1c6d051b4872bb020faed9b867b8b589c
+        SHA256: 79f52876b273ad0c7ee45c5d7298651797f9f5eb37d5916f7f79a9b404373e4e
+        SHA384: ''
+    - Subject: C=US, O=VeriSign Inc., CN=VeriSign Class 3 Code Signing 2010 CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: ''
+    Signer:
+    - SerialNumber: 4c6d7b5ea289c2744264346e5b417aba
+      Issuer: C=US, O=VeriSign Inc., CN=VeriSign Class 3 Code Signing 2010 CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'

@@ -1,0 +1,110 @@
+Id: 97e3077a-ca57-4f45-ba7c-f63dc9c4ea32
+Tags:
+- CardIo64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-13'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create CardIo binPath=C:\windows\temp\CardIo64.sys type=kernel &&
+    sc.exe start CardIo
+  Description: CardIo64.sys is a kernel driver from ICP DAS Co., LTD. (Taiwan),
+    an industrial automation and I/O board manufacturer. The driver exposes arbitrary
+    physical memory read/write via MmMapIoSpace, port I/O read/write (8/16/32-bit),
+    and PCI bus data read/write via HalGetBusDataByOffset and HalSetBusDataByOffset.
+    The driver is only 13KB and is also available in the
+    KeServiceDescriptorTable/vulnerable-drivers repository on GitHub.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/310
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: CardIo64.sys
+  MD5: 8dc4fc2f7b2ab7c22aab5a71c90c5f1b
+  SHA1: ec38aa86ce7f39fb8945002ec9839ad55c968b07
+  SHA256: 8a6265d23d30d6c4c7e159624686de6dbf2ccb86a421b0f45510005f7a40cd1a
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ICP DAS Co., LTD.
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: ec495d2d4e13564ad545e668e5e4c19696d79846
+    SHA256: d2210fe09378b142d1bfc6034cf9e37cbe389bbd55d866a037b936a3fb49cae6
+  RichPEHeaderHash:
+    MD5: 901ee14987c491747be88d58e98c92d7
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.13
+      Virtual Size: '0x74e'
+    .rdata:
+      Entropy: 4.39
+      Virtual Size: '0x140'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.18
+      Virtual Size: '0x78'
+    INIT:
+      Entropy: 4.22
+      Virtual Size: '0x18a'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=TW, ST=Taiwan, L=Hsinchu, O=ICP DAS Co. LTD., CN=ICP DAS Co. LTD.
+      ValidFrom: '2011-03-13 00:00:00'
+      ValidTo: '2013-03-18 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 56be3bc1fa8f122210bf87f271af68ec
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 5f827deb19291c5da9d01ff2303103e54cc20ce4
+        SHA256: 6e66dde82b85a4b26e34efae3b9ce6aa01c42792363b52ee033da889e1d0ca14
+        SHA384: ''
+    - Subject: C=US, O=VeriSign Inc., CN=VeriSign Class 3 Code Signing 2010 CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: ''
+    Signer:
+    - SerialNumber: 56be3bc1fa8f122210bf87f271af68ec
+      Issuer: C=US, O=VeriSign Inc., CN=VeriSign Class 3 Code Signing 2010 CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'

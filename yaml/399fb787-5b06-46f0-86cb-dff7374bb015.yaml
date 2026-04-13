@@ -1,0 +1,389 @@
+Id: 399fb787-5b06-46f0-86cb-dff7374bb015
+Tags:
+- DsArk64.sys
+- DsArk.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-13'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create DsArk binPath=C:\windows\temp\DsArk64.sys type=kernel &&
+    sc.exe start DsArk
+  Description: DsArk64.sys is a WHQL Microsoft-signed anti-rootkit kernel driver from
+    Qihoo 360 Total Security. It exposes kernel-level process termination via
+    ZwTerminateProcess from Ring 0 (kills PPL-protected processes), arbitrary kernel
+    memory read (512 bytes), and arbitrary kernel memory write (32 bytes). The driver
+    gates device access behind a custom Authenticode signing check that validates the
+    calling process PE signature against Qihoo root certificates. This check is fully
+    bypassed via process hollowing into any Qihoo-signed executable (freely downloadable
+    from 360.cn). The process kill IOCTL (0x80863008) requires no encryption or additional
+    auth beyond the device open -- just a raw 4-byte PID. The kernel R/W IOCTLs use
+    AES-128-CBC with a static key embedded in the binary. Initialization requires
+    setting registry key HKLM\SYSTEM\CCS\Services\360FsFlt\daboot to 1.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/308
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: DsArk64.sys
+  MD5: b4b6aaa2ee1cc344b7c6752778a279e5
+  SHA1: c55e4846c361f1481ec2588173414eb6f86b9b37
+  SHA256: cd3d1a2e119cbbb41ec0e7d7fb17bac106735d62b33ed3cde10087af1da89403
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Beijing Qihoo Technology Co. Ltd.
+  Description: 360 Anti-Rootkit
+  Product: 360 Total Security
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: 360ad7ef36a1d96e690d4db397b18eac419d3f08
+    SHA256: 6063b173d33ebb51db565e8cad66fcae2000b41955a2245c95aee31f68333268
+  RichPEHeaderHash:
+    MD5: 1d1a17392dac07bb9baf31acfa71f010
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.47
+      Virtual Size: '0x1cc41'
+    .rdata:
+      Entropy: 6.74
+      Virtual Size: '0x4a14'
+    .data:
+      Entropy: 4.58
+      Virtual Size: '0x2f24'
+    .pdata:
+      Entropy: 5.23
+      Virtual Size: '0xb34'
+    INIT:
+      Entropy: 5.26
+      Virtual Size: '0x1050'
+    .rsrc:
+      Entropy: 3.41
+      Virtual Size: '0x688'
+    .reloc:
+      Entropy: 1.51
+      Virtual Size: '0x1ec'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2023-09-14 19:14:22'
+      ValidTo: '2024-09-04 19:14:22'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000001-08e2337a567040c0d500000000010-8
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 84416ce46ef73c6ddbe7f62c4f7be863aa9ebab6
+        SHA256: ae330beac46c6b960ceab926994fb28f83af29a4a977284850d922d0726f2d9b
+        SHA384: ''
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac100000000009
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: ''
+    Signer:
+    - SerialNumber: 33000001-08e2337a567040c0d500000000010-8
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+- Filename: DsArk64_win10.sys
+  MD5: 5c586f9912585f5f3138b12b4f8d38e4
+  SHA1: 4eb56c2b721007edc9360ecca0749bbdeede9b1b
+  SHA256: 86127dbc92e2896319d1c9117b85e6db01ff001f3a85614d5ef9088d181b044a
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Beijing Qihoo Technology Co. Ltd.
+  Description: 360 Anti-Rootkit
+  Product: 360 Total Security
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: 694d4de8a85ac340eac3875de449f2ca5339d30a
+    SHA256: df537edc19e05fa4c711b71e02ee63898c6658921babf78eba7833fcb0f5ecb1
+  RichPEHeaderHash:
+    MD5: 1d1a17392dac07bb9baf31acfa71f010
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.47
+      Virtual Size: '0x1cd01'
+    .rdata:
+      Entropy: 6.74
+      Virtual Size: '0x4a14'
+    .data:
+      Entropy: 4.58
+      Virtual Size: '0x2f24'
+    .pdata:
+      Entropy: 5.23
+      Virtual Size: '0xb34'
+    INIT:
+      Entropy: 5.26
+      Virtual Size: '0x1050'
+    .rsrc:
+      Entropy: 3.41
+      Virtual Size: '0x688'
+    .reloc:
+      Entropy: 1.51
+      Virtual Size: '0x1ec'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2024-05-16 22:16:06'
+      ValidTo: '2025-05-14 22:16:06'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000111-2a0790aae5568529000000000111
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 553ed9bf72af4fce0ef52a7f0a2396245fc3d348
+        SHA256: 6910d4ed97543604c6ad630041532ff89e630311916332b6fda7b211aa29fa78
+        SHA384: ''
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac100000000009
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: ''
+    Signer:
+    - SerialNumber: 3300000111-2a0790aae5568529000000000111
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+- Filename: DsArk.sys
+  MD5: 98df4e7708fa2fd92a01c89ddd043d5e
+  SHA1: 0590c7f1c5a0807fa8259e13fb7ebae42d3e4b4d
+  SHA256: 35035495a36f8537e2a5f56031277cd884de557257b40b92bd39454877a264fb
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Beijing Qihu Technology Co., Ltd.
+  Description: 360 Anti-Rootkit
+  Product: 360 Total Security
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: I386
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: ec2d4d11f0a0387ff55569c8d7b59978386f1302
+    SHA256: 22285768c76fc7cf3e5439c9981ffa8312d7307f51f5e89259913816f195529b
+  RichPEHeaderHash:
+    MD5: 4d08d50cc02c2c456609bc1e65de986f
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.66
+      Virtual Size: '0x168df'
+    .rdata:
+      Entropy: 7.63
+      Virtual Size: '0x52a4'
+    .data:
+      Entropy: 3.9
+      Virtual Size: '0xf2c'
+    INIT:
+      Entropy: 5.74
+      Virtual Size: '0x109c'
+    .rsrc:
+      Entropy: 3.38
+      Virtual Size: '0x670'
+    .reloc:
+      Entropy: 6.25
+      Virtual Size: '0x1462'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - FLTMGR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, ST=Beijing, O=Beijing Qihu Technology Co., Ltd., CN=Beijing Qihu
+        Technology Co., Ltd.
+      ValidFrom: '2019-11-22 00:00:00'
+      ValidTo: '2023-02-04 12:00:00'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0a1f3a057a1dce4bf7d76d0c7adf837e
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 7f3e828fb51ea2e546451375fa6a8532f4ee852c
+        SHA256: 736350bd2c9bf967f6b6350b043d95cc41a8290fe55d953d2d81cb646b414096
+        SHA384: ''
+    - Subject: C=US, O=DigiCert Inc, CN=DigiCert Assured ID Code Signing CA-1
+      ValidFrom: '2011-02-11 12:00:00'
+      ValidTo: '2026-02-10 12:00:00'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
+        SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: ''
+    Signer:
+    - SerialNumber: 0a1f3a057a1dce4bf7d76d0c7adf837e
+      Issuer: C=US, O=DigiCert Inc, CN=DigiCert Assured ID Code Signing CA-1
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+- Filename: DsArk_win10.sys
+  MD5: 3d35317f967464aa670a52d3d632cd32
+  SHA1: a3f562399308be926071f745d13a321fa7278638
+  SHA256: a22358cb2fb1aa334272deaa24e2280425f9661862b46331cbdc786138ede8be
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Beijing Qihu Technology Co., Ltd.
+  Description: 360 Anti-Rootkit
+  Product: 360 Total Security
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: I386
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: e0ffaa56a8c566a9e3d9a0280bc3e3972a2fcbcf
+    SHA256: e778dc770a0a85df18e46c8251b92c0f3cc4718f22cf1812ddf8f45aa58b3657
+  RichPEHeaderHash:
+    MD5: 4d08d50cc02c2c456609bc1e65de986f
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.66
+      Virtual Size: '0x168ef'
+    .rdata:
+      Entropy: 7.63
+      Virtual Size: '0x52a4'
+    .data:
+      Entropy: 3.9
+      Virtual Size: '0xf2c'
+    INIT:
+      Entropy: 5.74
+      Virtual Size: '0x109c'
+    .rsrc:
+      Entropy: 3.38
+      Virtual Size: '0x670'
+    .reloc:
+      Entropy: 6.23
+      Virtual Size: '0x1462'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - FLTMGR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, ST=Beijing, O=Beijing Qihu Technology Co., Ltd., CN=Beijing Qihu
+        Technology Co., Ltd.
+      ValidFrom: '2019-11-22 00:00:00'
+      ValidTo: '2023-02-04 12:00:00'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0a1f3a057a1dce4bf7d76d0c7adf837e
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 7f3e828fb51ea2e546451375fa6a8532f4ee852c
+        SHA256: 736350bd2c9bf967f6b6350b043d95cc41a8290fe55d953d2d81cb646b414096
+        SHA384: ''
+    - Subject: C=US, O=DigiCert Inc, CN=DigiCert Assured ID Code Signing CA-1
+      ValidFrom: '2011-02-11 12:00:00'
+      ValidTo: '2026-02-10 12:00:00'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
+        SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: ''
+    Signer:
+    - SerialNumber: 0a1f3a057a1dce4bf7d76d0c7adf837e
+      Issuer: C=US, O=DigiCert Inc, CN=DigiCert Assured ID Code Signing CA-1
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
