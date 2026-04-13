@@ -1,0 +1,114 @@
+Id: e41d5471-c4b8-48da-bdb7-e462008c2e78
+Tags:
+- cpqsysio64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-13'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create cpqsysio binPath=C:\windows\temp\cpqsysio64.sys type=kernel
+    && sc.exe start cpqsysio
+  Description: cpqsysio64.sys is a Hewlett-Packard physical memory driver that ships
+    as part of the HP ProLiant Support Pack and HP firmware ROM update utilities. The
+    driver exposes physical memory read via MmMapIoSpace (IOCTL 0x152EF0) and physical
+    memory allocation and mapping to usermode via ZwOpenSection on Device\PhysicalMemory
+    combined with ZwMapViewOfSection (IOCTL 0x153E80). The Compaq heritage driver name
+    (cpq prefix) dates to the HP-Compaq acquisition. The driver is only 15KB and is
+    also available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/311
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: cpqsysio64.sys
+  MD5: cb7bc352e0a7531faec48de1dbd8a9a1
+  SHA1: e17fa2e3ca1d59e2dd8ddbc1020d77bb3b7156d0
+  SHA256: 4024b090cebcabaab884c84ec80ffb15622d12632f236383a9b0a470bff9fe33
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Hewlett-Packard Company
+  Description: Physical memory driver
+  Product: ''
+  ProductVersion: '4.5.0.0'
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: cpqsysio.sys
+  Authentihash:
+    MD5: ''
+    SHA1: 71d58e66eaabce2cdb592922afa6101106f4cb09
+    SHA256: 2b4eb3695b6f7c991019d9fe7469a99fd4e73242c42b675dc40741084b8e08d3
+  RichPEHeaderHash:
+    MD5: 7e44a404cacd5b4afe5d2e782c2408ea
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 5.89
+      Virtual Size: '0x98e'
+    .rdata:
+      Entropy: 2.93
+      Virtual Size: '0x160'
+    .data:
+      Entropy: 0.49
+      Virtual Size: '0x120'
+    .pdata:
+      Entropy: 3.15
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 5.11
+      Virtual Size: '0x292'
+    .rsrc:
+      Entropy: 3.26
+      Virtual Size: '0x368'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2013-10-17'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Massachusetts, L=Andover, O=Hewlett-Packard Company, CN=Hewlett-Packard
+        Company
+      ValidFrom: '2011-11-16 00:00:00'
+      ValidTo: '2014-11-15 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 44bc63ea9d7fb68cbcd9101f391ca145
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 5ab3007b75b20480c103ca45e26658ecfecd6e1e
+        SHA256: 4f2703371f9e2a7c6fb08a51089b6a1103cefe4412342171ccf8de8350af5742
+        SHA384: ''
+    - Subject: C=US, O=VeriSign Inc., CN=VeriSign Class 3 Code Signing 2010 CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: ''
+    Signer:
+    - SerialNumber: 44bc63ea9d7fb68cbcd9101f391ca145
+      Issuer: C=US, O=VeriSign Inc., CN=VeriSign Class 3 Code Signing 2010 CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
