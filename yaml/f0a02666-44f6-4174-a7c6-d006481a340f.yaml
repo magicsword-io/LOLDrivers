@@ -7,21 +7,21 @@ Created: '2026-04-07'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create TRIXX binPath=C:\windows\temp\TRIXX.sys type=kernel &&
-    sc.exe start TRIXX
+  Command: sc.exe create TRIXX binPath=C:\windows\temp\TRIXX.sys type=kernel && sc.exe
+    start TRIXX
   Description: TRIXX.sys is a shared utility kernel driver distributed by TechPowerUp
     LLC with Sapphire TRIXX and GPU-Z. The driver provides completely unrestricted
     hardware access from usermode through 16+ IOCTLs with zero validation on hardware
     parameters, including arbitrary port I/O read/write, arbitrary PCI configuration
     space read/write via HalGetBusDataByOffset/HalSetBusDataByOffset, MMIO BAR mapping
     via MmMapIoSpace, and MMIO read/write through mapped BARs. Physical memory read/write
-    is achievable by remapping a PCI device BAR to a target physical address then mapping
-    it via MmMapIoSpace. The driver creates its device dynamically based on the Windows
-    service name and has no hardware dependency, loading on any x64 Windows system.
-    TechPowerUp has a history of vulnerable kernel drivers including GPU-Z.sys (CVE-2019-7245,
-    CVE-2025-5324) and ThrottleStop.sys (CVE-2025-7771) which expose the same MmMapIoSpace
-    primitive. Fresh EV code signing certificate valid until April 2028 with zero AV
-    detections.
+    is achievable by remapping a PCI device BAR to a target physical address then
+    mapping it via MmMapIoSpace. The driver creates its device dynamically based on
+    the Windows service name and has no hardware dependency, loading on any x64 Windows
+    system. TechPowerUp has a history of vulnerable kernel drivers including GPU-Z.sys
+    (CVE-2019-7245, CVE-2025-5324) and ThrottleStop.sys (CVE-2025-7771) which expose
+    the same MmMapIoSpace primitive. Fresh EV code signing certificate valid until
+    April 2028 with zero AV detections.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -39,90 +39,216 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: TechPowerUp LLC
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: ''
+  Description: Low-Level Driver
+  Product: Low-Level Driver
+  ProductVersion: 7.2.0.0
+  FileVersion: 7.2.0.0
   MachineType: AMD64
   OriginalFilename: ''
   Authentihash:
-    MD5: ''
+    MD5: 44f4ac2673ab75c9f394502e769edf36
     SHA1: b9f05fb25367edacde96f5f2feb8cbc3dde23ef3
     SHA256: 10f4336d2e8f667e8da6dc127f444c1c304ab747e2dcf1f565ac15d1a2f73339
   RichPEHeaderHash:
-    MD5: ac5a5d68c8c5ba9bc5d5964425553d7e
-    SHA1: ''
-    SHA256: ''
+    MD5: 910cf550563e90cf64ed6efb76965bcb
+    SHA1: 0a080b81c28a7b7a45e5b43463705c93254ee874
+    SHA256: b587f20fd7e972ce5377614b345a2bb96c8011aa5538cc8e0937866188c45025
   Sections:
     .text:
-      Entropy: 6.25
+      Entropy: 6.249533351843214
       Virtual Size: '0x3de6'
     .rdata:
-      Entropy: 4.26
+      Entropy: 4.260814585107555
       Virtual Size: '0x149c'
     .data:
-      Entropy: 1.25
+      Entropy: 1.2469985439298796
       Virtual Size: '0x5b08'
     .pdata:
-      Entropy: 4.41
+      Entropy: 4.405248181030497
       Virtual Size: '0x534'
     PAGE:
-      Entropy: 6.22
+      Entropy: 6.216730531527119
       Virtual Size: '0x1c53'
     INIT:
-      Entropy: 5.07
+      Entropy: 5.074802317459462
       Virtual Size: '0x8be'
     .rsrc:
-      Entropy: 3.2
+      Entropy: 3.197957095924652
       Virtual Size: '0x2b0'
     .reloc:
-      Entropy: 4.08
+      Entropy: 4.0790989808517395
       Virtual Size: '0x3c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: ''
+  CreationTimestamp: '2025-12-21 02:12:08'
   InternalName: ''
-  Copyright: ''
+  Copyright: Copyright (c) 2004-2025. All rights reserved.
   Imports:
   - HAL.dll
   - ntoskrnl.exe
   ExportedFunctions: ''
-  ImportedFunctions: ''
+  ImportedFunctions:
+  - HalGetBusDataByOffset
+  - KeStallExecutionProcessor
+  - HalSetBusDataByOffset
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - RtlCompareMemory
+  - _vsnwprintf
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - RtlCopyUnicodeString
+  - IoDeleteSymbolicLink
+  - PsSetCreateProcessNotifyRoutineEx
+  - IoRegisterShutdownNotification
+  - IoUnregisterShutdownNotification
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - wcsrchr
+  - IoWriteErrorLogEntry
+  - IoAllocateErrorLogEntry
+  - __C_specific_handler
+  - ExReleaseFastMutex
+  - MmBuildMdlForNonPagedPool
+  - ObfDereferenceObject
+  - IoAllocateMdl
+  - IoGetCurrentProcess
+  - PsGetCurrentProcessId
+  - IoFreeMdl
+  - ObfReferenceObject
+  - ExAcquireFastMutex
+  - KeInitializeEvent
+  - MmUnmapLockedPages
+  - MmMapLockedPagesSpecifyCache
+  - IoEnumerateDeviceObjectList
+  - IoGetDeviceAttachmentBaseRef
+  - IoGetDeviceObjectPointer
+  - IoGetDeviceProperty
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - KeWaitForSingleObject
+  - MmGetSystemRoutineAddress
+  - RtlFreeUnicodeString
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - KeBugCheckEx
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
     - Subject: C=US, ST=Washington, L=Spokane, O=TechPowerUp LLC, serialNumber=604
-        057 982, CN=TechPowerUp LLC
+        057 982, CN=TechPowerUp LLC, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=Washington,
+        JURISDICTION_OF_INCORPORATION_C=US
       ValidFrom: '2025-04-07 20:27:51'
       ValidTo: '2028-04-01 17:23:05'
-      Signature: ''
+      Signature: 6baa8d982ca0a84aff4ce716f40ba3b025c0da38dd3dbe585e36dcf5f7a00f5d8c01be945bc6639f84431c5f12e408612e80fd96d645e180e5a859d3ecee8e89f861aefc3d3155f8ce645740f07d04d7ab4f8bdb2c1c6df03d4d912ae72e16c0fc157b25ad646bc488320fee16949ff029f264f71d513fb3701ca96061fc3f86fa7b7d104e8c8d09706d40dab966bc2a7a837e41b8ff77680df9d4bb7abdc751d34a010ab909ca9500dc15d47958d222da869fdf5d503e32e973925e2ea34608aa83337062aceab2bc3f16e0e4762c10036940003dd47d159cb54820b1f21c70ebf271aa75d4f6971cb39cb78adca582c668eb1a5b43c40216d4936b0db11736e1caeda618257047f255d35a1959845b4ef26118ed5f581173b2f3f5c25fa8b0c30c3a5d707e092b701b27998550163871f00a4b9795ee34acb99e2fc2053faeee6eb0e8b7cc4e1aeb352153d5cc02b9522b20829939614277a277c4ec771a2acb158c494154ad4e4491f070e9d031fe4cfe19721ab7984f9f25faa5f487dc3b2387d9c8e2195aa999187a33be29a1be00170b22cb6e12c63392cfd84dfc61cb18bd915b2c6282bd781f4c021debbc57198deb83cd0187b67c1f11a8b61ff6a893f62167a7b15b4ba40f5fbeeb3f2963792d412f9bdabd6411ff4c6fd1dda7c0bffdd68b78f3c630e9a9a57515fba39d813060b3162b098d0a3184034567116f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: false
       SerialNumber: 58243aa26dea4bc0a378e983f7c06dc8
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
-        MD5: ''
+        MD5: 323fdf85dae25368bd3077481ec99a5b
         SHA1: 361fdf2151e2ec520dda28387fde0f69e6798556
         SHA256: 4dc7597601d16853b79f679aade0309e8cfc67835fac7575e7637ca536064524
-        SHA384: ''
-    - Subject: C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing
-        Intermediate CA RSA R3
+        SHA384: d9f48ac5486f2351145280c2a77b552be46e9f494d43190ef68e9d9510bc95858de2bc1d558a11544aacfe37383fd893
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Time Stamping CA R36
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2036-03-21 23:59:59'
+      Signature: 12d77b20ad0e35580c9e811d2558fd4c2d6774afc7622621f6555469c6a14686765b685f8843b2404c671e4d6392fa4827300cc6611ce99bc8c872395243c26d72aca62a1831d6ce9c1590527ef7dea328a017c8821a51fe4954a8dc71ebf7c35ea6348525353929244a2bede75525989125508099601a1dcc3dccfd21637823f9f5a9f0c6cea1c23d667efcc6f9bd5ca181a7aac4b3db048aafe9c33be0dbf2a35c4db2594408926b3afb2b25091a8d5cf8c49c19f1b940757e6e9b3c057e4ecaff42b77e98e0897a6a34ea57689f8a4915b41dd1341520c2efe64a249489c7bf269feaf01324fe037cfb4acd204f90a94eb726854c08c3d8dbbe762e6112b11555a32a4956df3f377a90d5ce8589b6dc45a6e8ddacd991c21d58655201da0b80023110a05e361f4040ed6042b9e1d5303c95d5ee2733d2b802cecf55236f43c2c8d5645a4ee19215477dcbc17c8f0db60590ba989a01e3477b4a564861f6a295d960a606e0b6ee920ec7a4d8bf2aa261b9ed8a79a93aa87f40f02784381ec4a1bd197fe7d4f8209068bd1c26a9669f1f47083c45fb704b6d4b9fad5eb811b4c8e34cea7a03d9740fac5c299b719cbaa24c7f4a3c2cbac59122d140dc313c30e4597856fa066cc1b6a289ee5f77f5b6ca072da3bf170923df156bde50e499e52a8af79b413bc6931e611ae25a49543ec7ad3127f636f5106bf139bd5c9e7d02
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 7a23aeda5369960f91c83e5cf4c7e33f
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 755ba7f8d47fb9d82d06aca64d85a6b0
+        SHA1: aa31b174f9264f55abfe9c750555ba11e3558222
+        SHA256: a8ed8f8a0ffe4dfc35837080540e5d3f8924884ce714c71c8aa883b863efe9ac
+        SHA384: a9a2bf0749c796981278c7e8c4a80312048da6ce75adb20b9a114ee4b208683d0b41c141023ff5a7a18afc81f03e65ee
+    - Subject: C=GB, ST=West Yorkshire, O=Sectigo Limited, CN=Sectigo Public Time
+        Stamping Signer R36
+      ValidFrom: '2025-03-27 00:00:00'
+      ValidTo: '2036-03-21 23:59:59'
+      Signature: 02813ea486725121f965a92e3d528ae1e59bcc4b134493848db22eeabeef9b35d72e9271e05c8699caa7159a1ad5dcf1dc9ad40ab746e5bfff2df031386cbd3e1f49b6b6028496951ebbac0e1f4d818c221833a1cb2276cd1cb7fa476a870b5494b09d3631636a44d213e8640bd179b72d6ec4ea10d9991f23958ce165c0dd91dc347078578db38bb264de4b449e449d56257133aaddb975b48e69a2bbbd59a411590e1eca75e9ecf8f4173e032abf3a1d81024493168838de57442a01c40c16c22326dad84f0ee653cd6a7f8141738bb8b30a612de2913729fd0c3adddc720c27e0a976148710695e799e48efd60383707703f7e6558d8668c8a4d559be15a8c432fe3f10dda69877f8ce43ae85864dcd59b836b589798e1402b88b04e79560e0dd0351b116bd7271b71410695479c7384423e06324ace1dd3434dba2711e1af67ee274995ebc025b85afdaac860c12e52a4de4516d692127030a99bf7212fa6946e74acaed6dea5db5b08b8866a729547f282d60b11d2d0ba43445f58e238a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: false
+      SerialNumber: 00a4293b6e1eddd7a7340887ad7a4eb724
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 335413e187285d138a26eda3118b9e99
+        SHA1: 930faed9c5e55e113afabd29f61e7d832d4c6025
+        SHA256: f37011735ca11e3c05b6c0abf86e9e0fc4454a2ff77569a24d713cd8a65e1cd2
+        SHA384: e782b12019ba93c896be34fb8efc44ac6d1325addf058700ab57052d63a144c076004074adb528407000c7c10d6ab8fc
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Time Stamping Root R46
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2038-01-18 23:59:59'
+      Signature: 0ebe6541ed6844b8e5a1c5d41187e4b73b258ceb7edac81791edd8f143c4a28539cb7f6b00045a01d03151e897d64b4b277fa5831b682d0867e5c15bdc61764926515fca6d43a22fb83df0cff2cd1caa50e675fc863b032d186cc9e22226c9acf720169ef75839d10cab55bad4a13d265064076d1705e7ba25a5f1e14044adcf98ba849bd52c557fb9e436d5233df731b85b6b41d44c462fdf22757f0286c4f06c3ff3204c40a29a1ede5e89af326d3f18fc57dae87009cb3f60bc439c1755565c6f0e31e33b572ec1b3a99222461e62d75d535bb1d5d40b6c41aeaf5f2eb7def0806c038868a70b028fc853bb0297265493ad970f45549c70fe62f54dbc819ece333a091a5c59e77f3838a9b4af9ebc328f5362bab329e299805a347e3dbfd221db8f9e61736d237f1bcade6422f87ef1a5bcf164e1469bfc95424a68f9f7efe60761a7e86fd460ecbc93ad2629c99a019b0456484e16ea23e307bc098c9a47dbddf4f1992928a7699224bd58db1ffde794b6f46bb481224891cdf3df4bd4fe25eb3295b1dad4bb5157d53fee6d2aecc6b6090feddfdda2a0eb2c5d6ee828b74e98c065d78b2e5450666f3aede55e5c40f9f0b5ddd4393a52f68086f996617a222f3e0903980f05ccfb277d75b9a8710b078dc44fb1c71477913d162b3012a391bf3f20decfa34774850a05e1378c33ecd8009ce82909d528e2e0f296553d3f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 36c2b0bd7c1b3ae7a3b3dd36cbc97568
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: c06edb294c1f02cb85226fe5ef0bb876
+        SHA1: 349f753dffc4e1ef7a6aa00c64c5e1c1aaeb1586
+        SHA256: 2527985bdd90b23ebf85bdfec39de37b9d6a10a44a4116fca078e609adcdd95a
+        SHA384: 24919e38eafa7d09214d6cba68eb2c772ea0c02b7918c2657f6dbffb19356515c563eaee1136512c36cfe781b268afef
+    - Subject: C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate
+        CA RSA R3
       ValidFrom: '2019-03-26 17:44:23'
       ValidTo: '2034-03-22 17:44:23'
-      Signature: ''
+      Signature: 728ffa81488291e26083255b7b8f2f940f8358ce8824fa99424e2d4e3789f89fb11eae744079f9decbf7ff2c25105298408f5438ff5dd12aa95ae6b702bbc87fee2ad3ff7fcc363c5529435d364996265d70e7f22b0567474c99581908f6b1c64f60d2fc38be02ac25d1880da52ce1ddd37d57cf6ac31960d26daa5d7b44e85a5b83dbc81b360a7e0af50a523678e29afb1354cc9cc947bf624e35af3ee1ba0fc993eed520b796b7507652357a9da13b2664371fcebc037bc461815289cc7bfe5a051a47aee412ca8e54e35a9fb0c18af2f95f4668b9afc7d93e84d12b2512383dbb9a01eadfcc66a8b6c51f6a9347b0ce069284ad43836a86395c4ce2024b7873ae4b28e6a4f8616980ccff34e8b02f6402490d8d2e1f7deba186050fed5e7034e5180200eb63be75266da71c905707ae99a58e37d2a7c3586ca5f4e7522235a75bbb6eeb48db9a72deaa5a6249099e902b120fc83adbaf68739dd9e379ca98f9681deae6582ea9186ccd993a9acd267044e666989c251e196ac7d8f3e7ffa63577fbf57dbb8c82c76f7d5432bbea990b39e82051152f89e32ae1c520f37a784e3daf176292548d278c9037dce329e84293b6f83b2b0b9950b8e434069823eeeadfb554bbaedbf1eadd72f945edb1da433b80fc6f6cdfdc916db8a5d4ef75cd654c642c59df132e021b4bfa0493c0bb371d1fb220d34f33af16a11cc0aaa888
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: true
       SerialNumber: 424b6a53cec766141c2a63b1a51c4104
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
-        MD5: ''
+        MD5: db3494d2a0da480f9a2dc03978395f8a
         SHA1: 9cb274c1f98981dbdbe1a7630a9071458784c80d
         SHA256: 49b229a10f850de5b85110a0e0f59c48dd12b116c9ad236a3f16c5bdfbc968d5
-        SHA384: ''
+        SHA384: 2012fa0acaa171e7e953cfad3301af5dc2947a64428d9fdc7bcd47afe88ab85fa580e0ed6d0f61e9629d46accc3b48ec
     Signer:
     - SerialNumber: 58243aa26dea4bc0a378e983f7c06dc8
       Issuer: C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate
         CA RSA R3
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
+  Imphash: 0f0debec985c6fda5df59da70c63bf43
