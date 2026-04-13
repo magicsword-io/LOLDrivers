@@ -15,6 +15,7 @@ Commands:
   Usecase: Elevate privileges
 Resources:
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://github.com/magicsword-io/LOLDrivers/issues/302
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b.yara
@@ -170,4 +171,95 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2014
       Version: 1
   Imphash: f2c2ee1ff03c54f384f4eee8c2533107
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
+- Filename: CorsairLLAccess64.sys
+  MD5: 31c74ebdf17f3cc1743cc5bea8ac2969
+  SHA1: 97bb69b286007fbf7fc49b00550d8c35123167f0
+  SHA256: 01e024d3c76fb1b71851ab7761afbee23159d6e8cbf7f5f1d5052efca2f7756d
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Corsair Components, Inc.
+  Description: Corsair LL Access
+  Product: Corsair LL Access
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: 4b0ee799ab0c70d52d7f91b909b3af5e0b20baa9
+    SHA256: 254d4c61b2784ba2796fb0b5395d30ff9113e89ef1537f96a48ea50e2ba195c1
+  RichPEHeaderHash:
+    MD5: bc7eff49205aa778113cdc171b37fad0
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.22
+      Virtual Size: '0x104a'
+    .rdata:
+      Entropy: 3.94
+      Virtual Size: '0x614'
+    .data:
+      Entropy: 0.28
+      Virtual Size: '0x348'
+    .pdata:
+      Entropy: 3.6
+      Virtual Size: '0xfc'
+    INIT:
+      Entropy: 5.24
+      Virtual Size: '0x4aa'
+    .rsrc:
+      Entropy: 3.49
+      Virtual Size: '0x428'
+    .reloc:
+      Entropy: 2.76
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: Corsair LL Access
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2019-06-05 18:34:00'
+      ValidTo: '2020-06-03 18:34:00'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000319479a318f5522d06000000000031
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
+        SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
+        SHA384: ''
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df000000000d
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: ''
+    Signer:
+    - SerialNumber: 33000000319479a318f5522d06000000000031
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'

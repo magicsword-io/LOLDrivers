@@ -1,0 +1,117 @@
+Id: 658a906e-82d3-4c78-a63b-ddddeeb3f452
+Tags:
+- AdvCare.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-13'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create AdvCare binPath=C:\windows\temp\AdvCare.sys type=kernel &&
+    sc.exe start AdvCare
+  Description: AdvCare.sys is a legacy hardware health monitor driver from Advantech
+    Co., Ltd. for industrial PCs and embedded boards. The driver exposes arbitrary MSR
+    read/write (wrmsr/rdmsr with no validation), arbitrary physical memory read/write
+    via MmMapIoSpace, unrestricted port I/O across all 65536 ports, and PCI configuration
+    space read/write via HalGetBusDataByOffset/HalSetBusDataByOffset. The device is
+    created with IoCreateDevice (no DACL) and IRP_MJ_CREATE returns STATUS_SUCCESS
+    unconditionally with zero caller validation -- no admin check, no token check, no
+    integrity check. Any unprivileged local user can open the device and invoke every
+    primitive. The driver is also available in the KeServiceDescriptorTable/vulnerable-drivers
+    repository on GitHub.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/306
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: AdvCare.sys
+  MD5: 25b14ddbce32c0fd3ce53ac82145e257
+  SHA1: b08ca7e4a4aeb8a1f8049c1aa61255afe87987cd
+  SHA256: 697d3e6d215d1ed6dc2465334502db92e0ca77ad0b8392c945ac9e0f36509666
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Advantech Co., Ltd.
+  Description: AdvCare
+  Product: AdvCare
+  ProductVersion: ''
+  FileVersion: '2.00'
+  MachineType: AMD64
+  OriginalFilename: AdvCare.sys
+  Authentihash:
+    MD5: ''
+    SHA1: fde7a5f9fb44c260433b3118215d334cf280d8ad
+    SHA256: 591a22e88fbbfcae9d1a77cb62cb34e4f7a1b6d3263520dbf1157570af141b25
+  RichPEHeaderHash:
+    MD5: cda0f28b0be94937bca7b568d6a929d4
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.2
+      Virtual Size: '0x1c60'
+    .rdata:
+      Entropy: 4.21
+      Virtual Size: '0x410'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x120'
+    .pdata:
+      Entropy: 3.99
+      Virtual Size: '0x270'
+    INIT:
+      Entropy: 4.44
+      Virtual Size: '0x244'
+    .rsrc:
+      Entropy: 3.28
+      Virtual Size: '0x338'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2014-09-30'
+  InternalName: AdvCare
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=TW, O=Advantech Co., Ltd., CN=Advantech Co., Ltd.
+      ValidFrom: '2014-02-10 00:00:00'
+      ValidTo: '2017-02-26 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 15f48f98c57941006f4c9a639bf3c1cc
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 909766a4a8920dd66219b349f3d6214b315b1dbe
+        SHA256: 9d7f30aa44453f7e79ba1369bdbeffd223129129244b90387d482670088534ff
+        SHA384: ''
+    - Subject: C=US, O=VeriSign Inc., CN=VeriSign Class 3 Code Signing 2010 CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: ''
+    Signer:
+    - SerialNumber: 15f48f98c57941006f4c9a639bf3c1cc
+      Issuer: C=US, O=VeriSign Inc., CN=VeriSign Class 3 Code Signing 2010 CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'

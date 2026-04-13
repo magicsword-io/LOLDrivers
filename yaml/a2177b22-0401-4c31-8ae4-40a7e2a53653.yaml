@@ -1,0 +1,63 @@
+Id: a2177b22-0401-4c31-8ae4-40a7e2a53653
+Tags:
+- dtr_ec.sys
+Verified: 'FALSE'
+Author: Michael Haag
+Created: '2026-04-13'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create dtr_ec binPath=C:\windows\temp\dtr_ec.sys type=kernel &&
+    sc.exe start dtr_ec
+  Description: dtr_ec.sys is a Dell kernel driver that ships as part of the Dell
+    Feature Enhancement Pack (DFEP) on Dell laptops and desktops. The driver provides
+    unrestricted read/write access to Embedded Controller (EC) registers across 5 ACPI
+    address spaces from usermode with no validation on the register addresses or values.
+    The Embedded Controller manages critical hardware functions including thermal
+    management, battery charging, fan control, power states, and keyboard input.
+    Unrestricted EC register access allows manipulation of thermal thresholds to cause
+    hardware damage or forced shutdowns, modification of fan speed controls, interference
+    with battery charging logic, and alteration of power management behavior. Dell PSIRT
+    has confirmed the vulnerability and triaged it as P2 severity on Bugcrowd.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/293
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: dtr_ec.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: d6cc311cd7f8232549a5597512facac44e63d5c808878f54c0c1c12482cf270f
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Dell Technologies
+  Description: Dell Thermal Resource
+  Product: Dell Feature Enhancement Pack
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Sections: {}
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports: []
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures: []
+  LoadsDespiteHVCI: 'FALSE'

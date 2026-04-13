@@ -1,0 +1,141 @@
+Id: 5ff0ca63-fff8-4c2d-ac04-bb09fc84259f
+Tags:
+- nipalk.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-10'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create nipalk binPath=C:\windows\temp\nipalk.sys type=kernel &&
+    sc.exe start nipalk
+  Description: nipalk.sys is the NI-PAL (Platform Abstraction Layer) core kernel driver
+    that ships with every National Instruments product including NI-DAQmx, LabVIEW,
+    and NI-VISA. The driver uses a single IOCTL gateway (0xABCD03C4) dispatching to
+    a two-level service table. The device is created with IoCreateDevice (no DACL) and
+    IRP_MJ_CREATE returns STATUS_SUCCESS unconditionally with zero caller validation.
+    Exposes arbitrary physical memory read/write to usermode via ZwOpenSection on
+    Device\PhysicalMemory with SECTION_ALL_ACCESS and ZwMapViewOfSection with
+    PAGE_READWRITE, kernel pages mapped to usermode via MmBuildMdlForNonPagedPool and
+    MmMapLockedPagesSpecifyCache, VA-to-PA translation via MmGetPhysicalAddress,
+    contiguous DMA allocation via MmAllocateContiguousMemorySpecifyCache, full bus
+    read/write, and PCI configuration space access. CVE-2021-38304 covers a different
+    vulnerability class (improper input validation in versions prior to 20.0.1f0) but
+    the physical memory mapping primitives documented here go beyond that CVE scope.
+    EV code signing certificate valid until July 2027.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/303
+- https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/improper-input-validation-in-ni-pal.html
+- https://nvd.nist.gov/vuln/detail/CVE-2021-38304
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: nipalk.sys
+  MD5: a2aa28c34f463e231af56226f1aaea5d
+  SHA1: 75c86d280f6b3e1034668e065f30bffcc4e50d7d
+  SHA256: 1a6b4d5ad40c9ddf2599f6a44e94a1336aa3d28bf6a220b775f5c3305faecb2d
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: National Instruments Corporation
+  Description: NI-PAL
+  Product: NI-PAL
+  ProductVersion: '25.8.0'
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: e5d09ec32d7d3e4eb36c13ef9dafcdc9bc02f164
+    SHA256: d49d6e44d1333ebec32b024d57be1cfa6154bc1db880cd7b89214e754ea240fe
+  RichPEHeaderHash:
+    MD5: b7bf33b60508dd1107d21968f258eba1
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.33
+      Virtual Size: '0x8a481'
+    .rdata:
+      Entropy: 5.55
+      Virtual Size: '0x121dc'
+    .data:
+      Entropy: 3.31
+      Virtual Size: '0xd500'
+    .pdata:
+      Entropy: 5.93
+      Virtual Size: '0x993c'
+    .gfids:
+      Entropy: 2.41
+      Virtual Size: '0x8'
+    .CRT:
+      Entropy: 2.0
+      Virtual Size: '0x8'
+    PAGE:
+      Entropy: 5.7
+      Virtual Size: '0x1dc'
+    .edata:
+      Entropy: 5.88
+      Virtual Size: '0x13482'
+    INIT:
+      Entropy: 5.2
+      Virtual Size: '0xf88'
+    .rsrc:
+      Entropy: 3.36
+      Virtual Size: '0x478'
+    .reloc:
+      Entropy: 5.39
+      Virtual Size: '0x10a0'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.DLL
+  - TDI.SYS
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Texas, L=Austin, O=National Instruments Corporation, CN=National
+        Instruments Corporation
+      ValidFrom: '2024-08-05 00:00:00'
+      ValidTo: '2027-07-28 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 073c39b2553ffd10dae6fb443fdc2eb8
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 00058dc09b999e1272443e09e54d739cc74000f2
+        SHA256: edd0e077c4b9199515e4e691b87abf17b20c180f72ff02cdf4fe1800b861dedd
+        SHA384: ''
+    - Subject: C=US, O=DigiCert Inc, CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: ''
+    Signer:
+    - SerialNumber: 073c39b2553ffd10dae6fb443fdc2eb8
+      Issuer: C=US, O=DigiCert Inc, CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384
+        2021 CA1
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'

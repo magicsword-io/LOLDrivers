@@ -1,0 +1,119 @@
+Id: 5904f3a1-2e0c-4746-8078-8ada66a5cb08
+Tags:
+- Astra64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-10'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create Astra64 binPath=C:\windows\temp\Astra64.sys type=kernel
+    && sc.exe start Astra64
+  Description: ASTRA64.sys is the kernel driver for the ASTRA32 system information
+    tool by Sysinfo Lab (EnTech Taiwan). The driver exposes 31 IOCTLs with zero validation
+    on all parameters including arbitrary physical memory read/write via ZwOpenSection
+    and ZwMapViewOfSection on Device\PhysicalMemory with PAGE_READWRITE, arbitrary
+    port I/O via HalTranslateBusAddress, arbitrary MSR read via rdmsr (enables KASLR
+    bypass via IA32_LSTAR), PCI configuration space read via HalGetBusDataByOffset,
+    and MMIO physical memory mapping via MmMapIoSpace. No authentication gate, no DACL
+    restrictions (plain IoCreateDevice). Loads on any x64 Windows system. EnTech Taiwan
+    also produces TVicPort and softEngine drivers which share similar low-level hardware
+    access patterns. Listed in Eclypsium Screwed-Drivers research.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/294
+- https://eclypsium.com/research/screwed-drivers-signed-sealed-delivered/
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: Astra64.sys
+  MD5: 748b2514db1438fe16a2ddb56bfcf011
+  SHA1: 5e5223ade55520d7119d359fbf2dbc4ce51e9d8a
+  SHA256: 4a8b6b462c4271af4a32cf8705fa64913bfcdaefb6cf02d1e722c611d428cb16
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: EnTech Taiwan
+  Description: Astra Generic Device Driver
+  Product: ASTRA32
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: 3cde72fe67815c424d9e667c412f9d14023ece3d
+    SHA256: 8a295d17092c732e0e27e25a5677c1f8f554dd43ec1dd2143a1726ecda17a75a
+  RichPEHeaderHash:
+    MD5: 742439b5d7ae4ecf451f74e562ec7b2e
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.15
+      Virtual Size: '0x1f26'
+    .rdata:
+      Entropy: 4.28
+      Virtual Size: '0x38c'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x88'
+    .pdata:
+      Entropy: 3.88
+      Virtual Size: '0x1b0'
+    INIT:
+      Entropy: 4.74
+      Virtual Size: '0x4a2'
+    .rsrc:
+      Entropy: 3.39
+      Virtual Size: '0x4c8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=TW, O=EnTech Taiwan, CN=EnTech Taiwan, emailAddress=support@entechtaiwan.com
+      ValidFrom: '2006-09-25 13:13:42'
+      ValidTo: '2007-09-25 13:13:42'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 010000000001d0e51c0971
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 4b937982ab09b70f8676542f39a883a4294d3fca
+        SHA256: 6934f8f9093cbf62b6af5802405c022d546a33427b98b882522ce29190ae082f
+        SHA384: ''
+    - Subject: C=BE, O=GlobalSign nv-sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      ValidFrom: '2004-01-22 09:00:00'
+      ValidTo: '2014-01-27 10:00:00'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 040000000001089d612448
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
+        SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: ''
+    Signer:
+    - SerialNumber: 010000000001d0e51c0971
+      Issuer: C=BE, O=GlobalSign nv-sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
