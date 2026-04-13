@@ -21,6 +21,8 @@ lief.logging.disable()
 
 # Calculate Rich Header hash based on https://github.com/lief-project/LIEF/issues/587
 def get_rich_header_hash(pe):
+    if pe.rich_header is None:
+        return "", "", ""
     clear_rich = ""
     for entry in pe.rich_header.entries:
         rich_header_hex = f"{entry.build_id.to_bytes(2, byteorder='little').hex()}{entry.id.to_bytes(2, byteorder='little').hex()}"
@@ -91,8 +93,8 @@ def get_metadata(driver):
 
     imphash = lief.PE.get_imphash(pe, lief.PE.IMPHASH_MODE.PEFILE)
 
-    metadata["Filename"] = pe.name
-    metadata["Libraries"] = pe.libraries
+    metadata["Filename"] = os.path.basename(driver)
+    metadata["Libraries"] = [imp.name for imp in pe.imports]
 
     if pe.imported_functions:
         metadata['ImportedFunctions'] = [i.name for i in pe.imported_functions]
@@ -118,23 +120,36 @@ def get_metadata(driver):
     metadata['RichPEHeaderSHA1'] = rich_sha1
     metadata['RichPEHeaderSHA256'] = rich_sha256
 
-    metadata['AuthentihashMD5'] = pe.authentihash_md5.hex()
-    metadata['AuthentihashSHA1'] = pe.authentihash_sha1.hex()
-    metadata['AuthentihashSHA256'] = pe.authentihash_sha256.hex()
+    metadata['AuthentihashMD5'] = pe.authentihash(lief.PE.ALGORITHMS.MD5).hex()
+    metadata['AuthentihashSHA1'] = pe.authentihash(lief.PE.ALGORITHMS.SHA_1).hex()
+    metadata['AuthentihashSHA256'] = pe.authentihash(lief.PE.ALGORITHMS.SHA_256).hex()
 
     metadata['Sections'] = get_sections(pe)
 
     try:
-        version_info = pe.resources_manager.version.string_file_info.langcode_items[0].items
+        rm = pe.resources_manager
+        versions = rm.version  # returns a list in lief 0.17+
+        vi = {}
+        if versions:
+            v = versions[0] if isinstance(versions, list) else versions
+            sfi = v.string_file_info
+            if sfi:
+                for table in sfi.children:
+                    for key in ['CompanyName', 'FileDescription', 'InternalName',
+                                'OriginalFilename', 'FileVersion', 'ProductName',
+                                'ProductVersion', 'LegalCopyright']:
+                        val = table.get(key)
+                        if val:
+                            vi[key] = val
 
-        metadata['CompanyName'] = version_info.get('CompanyName', b'').decode("utf-8")
-        metadata['FileDescription'] = version_info.get('FileDescription', b'').decode("utf-8")
-        metadata['InternalName'] = version_info.get('InternalName', b'').decode("utf-8")
-        metadata['OriginalFilename'] = version_info.get('OriginalFilename', b'').decode("utf-8")
-        metadata['FileVersion'] = version_info.get('FileVersion', b'').decode("utf-8")
-        metadata['Product'] = version_info.get('ProductName', b'').decode("utf-8")
-        metadata['LegalCopyright'] = version_info.get('LegalCopyright', b'').decode("utf-8")
-        metadata['ProductVersion'] = version_info.get('ProductVersion', b'').decode("utf-8")
+        metadata['CompanyName'] = vi.get('CompanyName', '')
+        metadata['FileDescription'] = vi.get('FileDescription', '')
+        metadata['InternalName'] = vi.get('InternalName', '')
+        metadata['OriginalFilename'] = vi.get('OriginalFilename', '')
+        metadata['FileVersion'] = vi.get('FileVersion', '')
+        metadata['Product'] = vi.get('ProductName', '')
+        metadata['LegalCopyright'] = vi.get('LegalCopyright', '')
+        metadata['ProductVersion'] = vi.get('ProductVersion', '')
 
     except Exception as e:
         metadata['CompanyName'] = ""
@@ -157,7 +172,8 @@ def get_metadata(driver):
                 for cert in sig.certificates:
                     tmp_cert_dict = {}
                     # TODO: Add more info
-                    tmp_cert_dict['Subject'] = cert.subject.replace('\\', '').replace('-', ',') # We remove these special character for YAML
+                    subject_str = cert.subject if isinstance(cert.subject, str) else cert.subject.decode('utf-8', errors='replace')
+                    tmp_cert_dict['Subject'] = subject_str.replace('\\', '').replace('-', ',') # We remove these special character for YAML
                     # Note: This long python foo is just to convert the date from a list to a string
                     tmp_cert_dict['ValidFrom'] = str(datetime.fromisoformat("-".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_from[0:3]]) + " " + ":".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_from[3:]])))
                     tmp_cert_dict['ValidTo'] = str(datetime.fromisoformat("-".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_to[0:3]]) + " " + ":".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_to[3:]])))

@@ -11,16 +11,16 @@ Commands:
   Command: sc.exe create DsArk binPath=C:\windows\temp\DsArk64.sys type=kernel &&
     sc.exe start DsArk
   Description: DsArk64.sys is a WHQL Microsoft-signed anti-rootkit kernel driver from
-    Qihoo 360 Total Security. It exposes kernel-level process termination via
-    ZwTerminateProcess from Ring 0 (kills PPL-protected processes), arbitrary kernel
-    memory read (512 bytes), and arbitrary kernel memory write (32 bytes). The driver
-    gates device access behind a custom Authenticode signing check that validates the
-    calling process PE signature against Qihoo root certificates. This check is fully
-    bypassed via process hollowing into any Qihoo-signed executable (freely downloadable
-    from 360.cn). The process kill IOCTL (0x80863008) requires no encryption or additional
-    auth beyond the device open -- just a raw 4-byte PID. The kernel R/W IOCTLs use
-    AES-128-CBC with a static key embedded in the binary. Initialization requires
-    setting registry key HKLM\SYSTEM\CCS\Services\360FsFlt\daboot to 1.
+    Qihoo 360 Total Security. It exposes kernel-level process termination via ZwTerminateProcess
+    from Ring 0 (kills PPL-protected processes), arbitrary kernel memory read (512
+    bytes), and arbitrary kernel memory write (32 bytes). The driver gates device
+    access behind a custom Authenticode signing check that validates the calling process
+    PE signature against Qihoo root certificates. This check is fully bypassed via
+    process hollowing into any Qihoo-signed executable (freely downloadable from 360.cn).
+    The process kill IOCTL (0x80863008) requires no encryption or additional auth
+    beyond the device open -- just a raw 4-byte PID. The kernel R/W IOCTLs use AES-128-CBC
+    with a static key embedded in the binary. Initialization requires setting registry
+    key HKLM\SYSTEM\CCS\Services\360FsFlt\daboot to 1.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -38,52 +38,183 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Beijing Qihoo Technology Co. Ltd.
-  Description: 360 Anti-Rootkit
-  Product: 360 Total Security
-  ProductVersion: ''
-  FileVersion: ''
+  Company: 360.cn
+  Description: DsArk64.sys
+  Product: Qihoo360 Kernel Mode Driver
+  ProductVersion: 1.1.0.1231
+  FileVersion: 1.1.0.1231
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: DsArk64.sys
   Authentihash:
-    MD5: ''
+    MD5: 50aec6062e2b248a4be9d1a4e782ad4b
     SHA1: 360ad7ef36a1d96e690d4db397b18eac419d3f08
     SHA256: 6063b173d33ebb51db565e8cad66fcae2000b41955a2245c95aee31f68333268
   RichPEHeaderHash:
-    MD5: 1d1a17392dac07bb9baf31acfa71f010
-    SHA1: ''
-    SHA256: ''
+    MD5: e1fe04b3492d514276be6ae39b7ac977
+    SHA1: 782953c8907cf99f8bb8f1cc730ebe0d2db6e9f9
+    SHA256: 0bdb379a37b7e43eb4f258c1b143d7e0207ce7017b3c4ded24481158511968c1
   Sections:
     .text:
-      Entropy: 6.47
+      Entropy: 6.473718620299874
       Virtual Size: '0x1cc41'
     .rdata:
-      Entropy: 6.74
+      Entropy: 6.7415102476158175
       Virtual Size: '0x4a14'
     .data:
-      Entropy: 4.58
+      Entropy: 4.582016585231689
       Virtual Size: '0x2f24'
     .pdata:
-      Entropy: 5.23
+      Entropy: 5.228368744025801
       Virtual Size: '0xb34'
     INIT:
-      Entropy: 5.26
+      Entropy: 5.260131013448909
       Virtual Size: '0x1050'
     .rsrc:
-      Entropy: 3.41
+      Entropy: 3.4057602523526045
       Virtual Size: '0x688'
     .reloc:
-      Entropy: 1.51
+      Entropy: 1.508030947486213
       Virtual Size: '0x1ec'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: ''
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2024-01-10 03:08:49'
+  InternalName: DsArk64
+  Copyright: (C) 360.cn Inc. All Rights Reserved.
   Imports:
   - ntoskrnl.exe
   - FLTMGR.SYS
   ExportedFunctions: ''
-  ImportedFunctions: ''
+  ImportedFunctions:
+  - ZwQueryValueKey
+  - ZwEnumerateValueKey
+  - ZwClose
+  - ZwFlushKey
+  - ZwOpenProcess
+  - ZwQueryInformationProcess
+  - PsGetCurrentProcessId
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - ZwOpenKey
+  - PsProcessType
+  - ExAllocatePool
+  - IoGetCurrentProcess
+  - PsGetVersion
+  - ObOpenObjectByPointer
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseFastMutexUnsafe
+  - KeLeaveCriticalRegion
+  - KeEnterCriticalRegion
+  - ExAcquireFastMutexUnsafe
+  - ExReleaseResourceLite
+  - RtlAppendUnicodeStringToString
+  - RtlCompareMemory
+  - RtlCopyUnicodeString
+  - KeInitializeEvent
+  - RtlCompareUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - _strlwr
+  - strstr
+  - IoCreateFile
+  - RtlInitAnsiString
+  - IoFreeMdl
+  - ZwSetInformationFile
+  - RtlFreeUnicodeString
+  - ExAcquireResourceSharedLite
+  - RtlPrefixUnicodeString
+  - MmProbeAndLockPages
+  - ZwDeleteFile
+  - MmUnlockPages
+  - ZwQueryInformationFile
+  - IoAllocateMdl
+  - IoThreadToProcess
+  - ZwCreateEvent
+  - IoRegisterShutdownNotification
+  - RtlUpcaseUnicodeString
+  - PsIsSystemThread
+  - _wcsnicmp
+  - ZwReadFile
+  - IoDeleteDevice
+  - ExGetPreviousMode
+  - ZwSetValueKey
+  - IoQueryFileInformation
+  - KeReleaseSpinLock
+  - PsGetThreadId
+  - FsRtlIsNameInExpression
+  - ObQueryNameString
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwCreateFile
+  - IoRegisterBootDriverReinitialization
+  - IoUnregisterShutdownNotification
+  - ObReferenceObjectByHandle
+  - CmRegisterCallback
+  - ExDeleteResourceLite
+  - PsGetCurrentThreadId
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - ExInitializeResourceLite
+  - CmUnRegisterCallback
+  - RtlUpcaseUnicodeChar
+  - ZwWriteFile
+  - PsGetProcessId
+  - KeAcquireSpinLockRaiseToDpc
+  - ExQueueWorkItem
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - RtlImageNtHeader
+  - MmSystemRangeStart
+  - KeSetImportanceDpc
+  - KeSetTargetProcessorDpc
+  - IoBuildDeviceIoControlRequest
+  - ProbeForWrite
+  - KeInitializeDpc
+  - MmUserProbeAddress
+  - MmMapLockedPagesSpecifyCache
+  - IoGetDeviceObjectPointer
+  - _vsnwprintf
+  - KeInsertQueueDpc
+  - KeQueryTimeIncrement
+  - KeNumberProcessors
+  - IofCallDriver
+  - _wcsicmp
+  - SeTokenIsAdmin
+  - IoDeleteSymbolicLink
+  - PsSetLoadImageNotifyRoutine
+  - RtlGetVersion
+  - SeReleaseSubjectContext
+  - SeCaptureSubjectContext
+  - IofCompleteRequest
+  - PsRemoveLoadImageNotifyRoutine
+  - IoCreateSymbolicLink
+  - KeBugCheckEx
+  - ZwDeleteValueKey
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - NtBuildNumber
+  - ExFreePoolWithTag
+  - ZwCreateKey
+  - ExAllocatePoolWithTag
+  - RtlAppendUnicodeToString
+  - ZwQuerySymbolicLinkObject
+  - RtlUnicodeStringToAnsiString
+  - ZwOpenSymbolicLinkObject
+  - RtlTimeFieldsToTime
+  - _vsnprintf
+  - RtlFreeAnsiString
+  - ExLocalTimeToSystemTime
+  - ZwDeviceIoControlFile
+  - ZwOpenFile
+  - __C_specific_handler
+  - FltParseFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltGetFileNameInformation
+  - FltSetCallbackDataDirty
+  - FltGetDestinationFileNameInformation
+  - FltStartFiltering
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -92,36 +223,43 @@ KnownVulnerableSamples:
         Windows Hardware Compatibility Publisher
       ValidFrom: '2023-09-14 19:14:22'
       ValidTo: '2024-09-04 19:14:22'
-      Signature: ''
+      Signature: 67e94c6182be94066d2093372f8537a605ffc199d2361a8a108a9c783e028c2ec26c6fa3815f55c41989a76a53d337b864ff8eb65e081f7352564b9639ca57627b9347934d40afb53e8ee2d152787b5fdf6e8b4743d6ebdd789697af8dd6feec1d267bd66f685f47b9d66ac28062db0e19219345614f14a654b3bf1505766764485f42a06564547a5d9eaa5281e7fa86213cea3105d243847455033b9bafa59b5ff7696cfcb62eeef5908717e3ae92e4eefc4ec69d3b76cd673301834ea439da2c1056471eb80d3c479f28fbc80e8c0f52cf32ef8d0a9e41bc6765aa5004fca06d8d7d0c02a1604f3ddb9172d77ef950ad9da398ba14f2739c40c4aaaeab8b6c
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: false
-      SerialNumber: 33000001-08e2337a567040c0d500000000010-8
+      SerialNumber: 3300000108e2337a567040c0d5000000000108
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
-        MD5: ''
+        MD5: 12de589911e74df6386fd0e7efc1a30c
         SHA1: 84416ce46ef73c6ddbe7f62c4f7be863aa9ebab6
         SHA256: ae330beac46c6b960ceab926994fb28f83af29a4a977284850d922d0726f2d9b
-        SHA384: ''
+        SHA384: 739650b601e6df9da4f958b069c312ee715a22755db10431acf130398e9ff8ee9a34b53acf03502cf574184d635ddb0a
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
       ValidTo: '2027-04-18 23:58:38'
-      Signature: ''
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: true
-      SerialNumber: 610baac100000000009
+      SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
-        MD5: ''
+        MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
-        SHA384: ''
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
-    - SerialNumber: 33000001-08e2337a567040c0d500000000010-8
+    - SerialNumber: 3300000108e2337a567040c0d5000000000108
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
   LoadsDespiteHVCI: 'TRUE'
+  Imphash: bdc141a2e93e450a51e3c2845df14c4b
 - Filename: DsArk64_win10.sys
   MD5: 5c586f9912585f5f3138b12b4f8d38e4
   SHA1: 4eb56c2b721007edc9360ecca0749bbdeede9b1b
@@ -129,52 +267,183 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Beijing Qihoo Technology Co. Ltd.
-  Description: 360 Anti-Rootkit
-  Product: 360 Total Security
-  ProductVersion: ''
-  FileVersion: ''
+  Company: 360.cn
+  Description: DsArk64.sys
+  Product: Qihoo360 Kernel Mode Driver
+  ProductVersion: 1.1.0.1235
+  FileVersion: 1.1.0.1235
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: DsArk64.sys
   Authentihash:
-    MD5: ''
+    MD5: 822cb7807fa0e79b811e76e52864429f
     SHA1: 694d4de8a85ac340eac3875de449f2ca5339d30a
     SHA256: df537edc19e05fa4c711b71e02ee63898c6658921babf78eba7833fcb0f5ecb1
   RichPEHeaderHash:
-    MD5: 1d1a17392dac07bb9baf31acfa71f010
-    SHA1: ''
-    SHA256: ''
+    MD5: e1fe04b3492d514276be6ae39b7ac977
+    SHA1: 782953c8907cf99f8bb8f1cc730ebe0d2db6e9f9
+    SHA256: 0bdb379a37b7e43eb4f258c1b143d7e0207ce7017b3c4ded24481158511968c1
   Sections:
     .text:
-      Entropy: 6.47
+      Entropy: 6.47408148072003
       Virtual Size: '0x1cd01'
     .rdata:
-      Entropy: 6.74
+      Entropy: 6.74141154779001
       Virtual Size: '0x4a14'
     .data:
-      Entropy: 4.58
+      Entropy: 4.582016585231689
       Virtual Size: '0x2f24'
     .pdata:
-      Entropy: 5.23
+      Entropy: 5.225378601411916
       Virtual Size: '0xb34'
     INIT:
-      Entropy: 5.26
+      Entropy: 5.260013622405884
       Virtual Size: '0x1050'
     .rsrc:
-      Entropy: 3.41
+      Entropy: 3.4135236793809214
       Virtual Size: '0x688'
     .reloc:
-      Entropy: 1.51
+      Entropy: 1.508030947486213
       Virtual Size: '0x1ec'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: ''
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2024-10-27 21:48:43'
+  InternalName: DsArk64
+  Copyright: (C) 360.cn Inc. All Rights Reserved.
   Imports:
   - ntoskrnl.exe
   - FLTMGR.SYS
   ExportedFunctions: ''
-  ImportedFunctions: ''
+  ImportedFunctions:
+  - ZwQueryValueKey
+  - ZwEnumerateValueKey
+  - ZwClose
+  - ZwFlushKey
+  - ZwOpenProcess
+  - ZwQueryInformationProcess
+  - PsGetCurrentProcessId
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - ZwOpenKey
+  - PsProcessType
+  - ExAllocatePool
+  - IoGetCurrentProcess
+  - PsGetVersion
+  - ObOpenObjectByPointer
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseFastMutexUnsafe
+  - KeLeaveCriticalRegion
+  - KeEnterCriticalRegion
+  - ExAcquireFastMutexUnsafe
+  - ExReleaseResourceLite
+  - RtlAppendUnicodeStringToString
+  - RtlCompareMemory
+  - RtlCopyUnicodeString
+  - KeInitializeEvent
+  - RtlCompareUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - _strlwr
+  - strstr
+  - IoCreateFile
+  - RtlInitAnsiString
+  - IoFreeMdl
+  - ZwSetInformationFile
+  - RtlFreeUnicodeString
+  - ExAcquireResourceSharedLite
+  - RtlPrefixUnicodeString
+  - MmProbeAndLockPages
+  - ZwDeleteFile
+  - MmUnlockPages
+  - ZwQueryInformationFile
+  - IoAllocateMdl
+  - IoThreadToProcess
+  - ZwCreateEvent
+  - IoRegisterShutdownNotification
+  - RtlUpcaseUnicodeString
+  - PsIsSystemThread
+  - _wcsnicmp
+  - ZwReadFile
+  - IoDeleteDevice
+  - ExGetPreviousMode
+  - ZwSetValueKey
+  - IoQueryFileInformation
+  - KeReleaseSpinLock
+  - PsGetThreadId
+  - FsRtlIsNameInExpression
+  - ObQueryNameString
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwCreateFile
+  - IoRegisterBootDriverReinitialization
+  - IoUnregisterShutdownNotification
+  - ObReferenceObjectByHandle
+  - CmRegisterCallback
+  - ExDeleteResourceLite
+  - PsGetCurrentThreadId
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - ExInitializeResourceLite
+  - CmUnRegisterCallback
+  - RtlUpcaseUnicodeChar
+  - ZwWriteFile
+  - PsGetProcessId
+  - KeAcquireSpinLockRaiseToDpc
+  - ExQueueWorkItem
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - RtlImageNtHeader
+  - MmSystemRangeStart
+  - KeSetImportanceDpc
+  - KeSetTargetProcessorDpc
+  - IoBuildDeviceIoControlRequest
+  - ProbeForWrite
+  - KeInitializeDpc
+  - MmUserProbeAddress
+  - MmMapLockedPagesSpecifyCache
+  - IoGetDeviceObjectPointer
+  - _vsnwprintf
+  - KeInsertQueueDpc
+  - KeQueryTimeIncrement
+  - KeNumberProcessors
+  - IofCallDriver
+  - _wcsicmp
+  - SeTokenIsAdmin
+  - IoDeleteSymbolicLink
+  - PsSetLoadImageNotifyRoutine
+  - RtlGetVersion
+  - SeReleaseSubjectContext
+  - SeCaptureSubjectContext
+  - IofCompleteRequest
+  - PsRemoveLoadImageNotifyRoutine
+  - IoCreateSymbolicLink
+  - KeBugCheckEx
+  - ZwDeleteValueKey
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - NtBuildNumber
+  - ExFreePoolWithTag
+  - ZwCreateKey
+  - ExAllocatePoolWithTag
+  - RtlAppendUnicodeToString
+  - ZwQuerySymbolicLinkObject
+  - RtlUnicodeStringToAnsiString
+  - ZwOpenSymbolicLinkObject
+  - RtlTimeFieldsToTime
+  - _vsnprintf
+  - RtlFreeAnsiString
+  - ExLocalTimeToSystemTime
+  - ZwDeviceIoControlFile
+  - ZwOpenFile
+  - __C_specific_handler
+  - FltParseFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltGetFileNameInformation
+  - FltSetCallbackDataDirty
+  - FltGetDestinationFileNameInformation
+  - FltStartFiltering
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -183,36 +452,43 @@ KnownVulnerableSamples:
         Windows Hardware Compatibility Publisher
       ValidFrom: '2024-05-16 22:16:06'
       ValidTo: '2025-05-14 22:16:06'
-      Signature: ''
+      Signature: 47aa9e6ebb9bdffbdf6d8d99645f726af89374c6136a5f4b2d2f6fe82d8c103a41d186ec5e5ed63749401c724cb5aa6091e023f9125ecfee62f444fbde29edb037b58bd6118a66288ab639cace557ee4a888fe098088aaba592199b25725d664d21269f4aee0bc3682c4a6758c9446b50081d066fdf8cad7b5677c18d63d3404d0ce4ffab1215acc7345dc6ea61c65caee9f6950f957e87b146f7fa34abd5970c79a777436f8d80b6ee5b8876b698bc8d547b47c3d11788c8a730c8c25c7fc878b03243ce55e2c2b898edd1755cb95553578b588122b456ab70dbc084323dcb0487aa462d57b9863a5ecfaa85e5f5d5d3da96dc20ecbc7c2203900fb2f5e84c8
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: false
-      SerialNumber: 3300000111-2a0790aae5568529000000000111
+      SerialNumber: 33000001112a0790aae5568529000000000111
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
-        MD5: ''
+        MD5: 778c1775b427242a721643a7a90eae19
         SHA1: 553ed9bf72af4fce0ef52a7f0a2396245fc3d348
         SHA256: 6910d4ed97543604c6ad630041532ff89e630311916332b6fda7b211aa29fa78
-        SHA384: ''
+        SHA384: dccc0fe272475403fc9e0c1db6c456428798dfbe00fb20c962f57858256565a2cf361acb4eba8c771ec7611f2aa06bc1
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
       ValidTo: '2027-04-18 23:58:38'
-      Signature: ''
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: true
-      SerialNumber: 610baac100000000009
+      SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
-        MD5: ''
+        MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
-        SHA384: ''
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
-    - SerialNumber: 3300000111-2a0790aae5568529000000000111
+    - SerialNumber: 33000001112a0790aae5568529000000000111
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
   LoadsDespiteHVCI: 'TRUE'
+  Imphash: bdc141a2e93e450a51e3c2845df14c4b
 - Filename: DsArk.sys
   MD5: 98df4e7708fa2fd92a01c89ddd043d5e
   SHA1: 0590c7f1c5a0807fa8259e13fb7ebae42d3e4b4d
@@ -220,50 +496,205 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Beijing Qihu Technology Co., Ltd.
-  Description: 360 Anti-Rootkit
-  Product: 360 Total Security
-  ProductVersion: ''
-  FileVersion: ''
+  Company: 360.cn
+  Description: dsark.sys
+  Product: Qihoo360 Kernel Mode Driver
+  ProductVersion: 1.0.0.1219
+  FileVersion: 1.0.0.1219
   MachineType: I386
-  OriginalFilename: ''
+  OriginalFilename: dsark.sys
   Authentihash:
-    MD5: ''
+    MD5: 7e779c3e8eda4beb85b172019f5d14f3
     SHA1: ec2d4d11f0a0387ff55569c8d7b59978386f1302
     SHA256: 22285768c76fc7cf3e5439c9981ffa8312d7307f51f5e89259913816f195529b
   RichPEHeaderHash:
-    MD5: 4d08d50cc02c2c456609bc1e65de986f
-    SHA1: ''
-    SHA256: ''
+    MD5: b922e05d124dd0fd3b53de3966ccd492
+    SHA1: bca058860780704c0f058f8c0ad844770d34916b
+    SHA256: 86362edf873656f47cc7de87c362a37bc7ccba1eb065086be62498f654b2e268
   Sections:
     .text:
-      Entropy: 6.66
+      Entropy: 6.656913690360657
       Virtual Size: '0x168df'
     .rdata:
-      Entropy: 7.63
+      Entropy: 7.63474277498623
       Virtual Size: '0x52a4'
     .data:
-      Entropy: 3.9
+      Entropy: 3.9036913992939777
       Virtual Size: '0xf2c'
     INIT:
-      Entropy: 5.74
+      Entropy: 5.736156425031333
       Virtual Size: '0x109c'
     .rsrc:
-      Entropy: 3.38
+      Entropy: 3.381600275810675
       Virtual Size: '0x670'
     .reloc:
-      Entropy: 6.25
+      Entropy: 6.247652796732878
       Virtual Size: '0x1462'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: ''
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2022-04-24 04:44:25'
+  InternalName: dsark
+  Copyright: (C) 360.cn Inc. All Rights Reserved.
   Imports:
   - ntoskrnl.exe
   - HAL.dll
   - FLTMGR.SYS
   ExportedFunctions: ''
-  ImportedFunctions: ''
+  ImportedFunctions:
+  - _wcsicmp
+  - memcpy
+  - RtlAppendUnicodeStringToString
+  - RtlCopyUnicodeString
+  - PsSetLoadImageNotifyRoutine
+  - MmGetSystemRoutineAddress
+  - RtlCompareUnicodeString
+  - RtlInitAnsiString
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - IoDeleteDevice
+  - IoUnregisterShutdownNotification
+  - IoDeleteSymbolicLink
+  - ExDeleteResourceLite
+  - ZwCreateFile
+  - IoCreateFile
+  - ObReferenceObjectByHandle
+  - ZwOpenKey
+  - RtlGetVersion
+  - MmIsAddressValid
+  - MmSystemRangeStart
+  - IoRegisterShutdownNotification
+  - PsGetCurrentThreadId
+  - IoRegisterDriverReinitialization
+  - RtlFreeUnicodeString
+  - RtlEqualUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - IoFileObjectType
+  - ZwOpenFile
+  - IofCompleteRequest
+  - RtlCompareMemory
+  - PsGetCurrentProcessId
+  - ExInitializeResourceLite
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ZwReadFile
+  - ZwQueryInformationFile
+  - ZwQueryInformationProcess
+  - ObOpenObjectByPointer
+  - PsProcessType
+  - IoGetCurrentProcess
+  - PsGetVersion
+  - _stricmp
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - ZwMapViewOfSection
+  - ZwCreateSection
+  - ZwUnmapViewOfSection
+  - ProbeForRead
+  - MmUserProbeAddress
+  - MmHighestUserAddress
+  - ZwCreateKey
+  - ZwQueryKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - ZwEnumerateValueKey
+  - ZwDeleteKey
+  - ZwDeleteValueKey
+  - ExAcquireResourceSharedLite
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - SeCaptureSubjectContext
+  - KeGetCurrentThread
+  - IoFreeMdl
+  - MmUnlockPages
+  - MmProbeAndLockPages
+  - IoAllocateMdl
+  - ZwDeleteFile
+  - ZwSetInformationFile
+  - RtlPrefixUnicodeString
+  - _strlwr
+  - strstr
+  - ZwWaitForSingleObject
+  - ZwCreateEvent
+  - RtlFreeAnsiString
+  - RtlUnicodeStringToAnsiString
+  - ExReleaseFastMutexUnsafe
+  - ExAcquireFastMutexUnsafe
+  - ExAcquireResourceExclusiveLite
+  - KeWaitForSingleObject
+  - KeInsertQueueApc
+  - KeInitializeApc
+  - PsLookupProcessByProcessId
+  - PsIsThreadTerminating
+  - PsLookupThreadByThreadId
+  - ZwQuerySystemInformation
+  - ZwOpenProcess
+  - ZwTerminateProcess
+  - IoQueryFileInformation
+  - ObQueryNameString
+  - RtlVolumeDeviceToDosName
+  - ExAllocatePool
+  - ZwWriteFile
+  - RtlAppendUnicodeToString
+  - _wcsnicmp
+  - RtlUpcaseUnicodeChar
+  - ExGetPreviousMode
+  - FsRtlIsNameInExpression
+  - RtlUpcaseUnicodeString
+  - PsIsSystemThread
+  - PsGetThreadId
+  - PsGetProcessId
+  - IoThreadToProcess
+  - CmRegisterCallback
+  - IoRegisterBootDriverReinitialization
+  - KeSetEvent
+  - ExQueueWorkItem
+  - RtlImageNtHeader
+  - KeInsertQueueDpc
+  - KeSetTargetProcessorDpc
+  - KeSetImportanceDpc
+  - KeInitializeDpc
+  - KeNumberProcessors
+  - MmMapLockedPagesSpecifyCache
+  - KeQueryTimeIncrement
+  - KeTickCount
+  - _alldiv
+  - _allmul
+  - ProbeForWrite
+  - KeBugCheckEx
+  - RtlUnwind
+  - SeTokenIsAdmin
+  - SeReleaseSubjectContext
+  - RtlInitUnicodeString
+  - IoGetDeviceObjectPointer
+  - KeInitializeEvent
+  - IoBuildDeviceIoControlRequest
+  - ObfDereferenceObject
+  - ZwClose
+  - IofCallDriver
+  - ZwFlushKey
+  - ZwEnumerateKey
+  - ExFreePoolWithTag
+  - memset
+  - NtBuildNumber
+  - ExAllocatePoolWithTag
+  - _vsnwprintf
+  - ExReleaseResourceLite
+  - _vsnprintf
+  - KeGetCurrentIrql
+  - KfAcquireSpinLock
+  - KfReleaseSpinLock
+  - KfRaiseIrql
+  - KfLowerIrql
+  - KeAcquireQueuedSpinLock
+  - KeReleaseQueuedSpinLock
+  - KeRaiseIrqlToDpcLevel
+  - FltStartFiltering
+  - FltUnregisterFilter
+  - FltGetDestinationFileNameInformation
+  - FltGetFileNameInformation
+  - FltParseFileNameInformation
+  - FltSetCallbackDataDirty
+  - FltReleaseFileNameInformation
+  - FltRegisterFilter
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -272,34 +703,93 @@ KnownVulnerableSamples:
         Technology Co., Ltd.
       ValidFrom: '2019-11-22 00:00:00'
       ValidTo: '2023-02-04 12:00:00'
-      Signature: ''
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Signature: 8536cf3617ba1e4104b19decbfe00f5dd797ce48774fa632d78380d6c9ef821795753f427430f95f7395d637840e9c411ff95287abb0b2505655f77bb9097da431984868cd6575472900eadb0e16a2105db0b7e3a83d233d288032b89f3794ae3bb3abc092a92792ca037f45e5eb76ba421fda278d5d97b46320e249648d40448217b5fef4070ec4fc0fd6f30f6e2f9e7f9aa0ae140fb77d59fc2614a6acd2c669b6397c08d54aa1a7ff20f01eea9bf715a013895ab370cb53155ff4df79cdf5dbe1d62303ac1c31692ca18de03e07c1079261a582ac8c1217ec0a1b939c2fd3d0947df7e73d7b02beecdb59d9de2b89cc297c462bb98085406e29ae4635b449
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
       IsCertificateAuthority: false
       SerialNumber: 0a1f3a057a1dce4bf7d76d0c7adf837e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
-        MD5: ''
+        MD5: 97cc51f828de6600a0679e746cb44132
         SHA1: 7f3e828fb51ea2e546451375fa6a8532f4ee852c
         SHA256: 736350bd2c9bf967f6b6350b043d95cc41a8290fe55d953d2d81cb646b414096
-        SHA384: ''
-    - Subject: C=US, O=DigiCert Inc, CN=DigiCert Assured ID Code Signing CA-1
+        SHA384: a4c99f42ddf8782e09ba358cec543f6b83b5aacd00f0f057780ab8b016408d695bcfc2d81209665eca75ae47c14a0bd4
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
+        CA
+      ValidFrom: '2011-04-15 19:41:37'
+      ValidTo: '2021-04-15 19:51:37'
+      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611cb28a000000000026
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 983a0c315a50542362f2bd6a5d71c8d0
+        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
+        Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
       ValidTo: '2026-02-10 12:00:00'
-      Signature: ''
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Signature: 7b721d64ff88c83ac1b7e9e7a9c487bbdb9492d7905933fa2b87dea85b80253f138f9b831b7c43c4e68cdf393ec315ecb0da3b21257b24c1725db84791811346fa9c3f6a5138deb425cbf0abdfc528015479104624d1380f26a161904dbabd28e63ff1c4aa9bf6da35534fc9f23dd36cdc23edaaa04d6709f33a803d3cfb364c90e776a4ddf23abf56352fa24c65e8e0d4dad1c7c8916a2d234f373b199418d4d59c103cd5b11c19ff8fc86b9b9ef8ae9c999678d1cd9c51155b4226725a8d0a4a239240e886de22c2933ad49b68a6df297f06b93c0ebd9fc4869c82474271328609997209794b9d7169f541ff7f397764f1848dbe8b1eb27d68a3a590b10cff
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
-        MD5: ''
+        MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
-        SHA384: ''
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 , 2
+      ValidFrom: '2022-03-29 00:00:00'
+      ValidTo: '2033-03-14 23:59:59'
+      Signature: 0d2d2374a6d1f5f8ea4b993f01e4f60ce4af169dd9b38c9782299c436f012dab38b57011bf84198b3f5de5864fbe933ade2a395a394ed88459a5bc1b98aae86cefd1486919385bcf89391d7070d94edf23226cd5dff659cba1c2ea4c76caa1dca12b96b89b55a91a6b7dd1f502094f82d6a57388c49880dfee4995b7b3ccc5a7ee0ee1ef1e388a9fef11c9314a58b6df387ccbfa5cf7e453bf6e0a7c7ed7de98d52965890fa29cc065f4012265c7ea5e74a65b3592507cf417a687644f3e46891663206bcbf27bd035e34a7048a9b6e71d60bd04221525700672a9443b694711d3eee9c7a03e4f10b93036e4f3aa6909a88b7e64a2659411fb6e32f1f5bb38adcdc09311d532784a4b372a4cf35cdcb685c0bb70305578d698fe546d7f71a9481a78dd46772e1b7ac0338af84a288c12a873cf2df9d323f29e19e00d9428a0ebdb1a51a095828e286ba4ce9d76dea973aa486a5943ae5feaf80f06429ddf066896fe2aa0745b6366de6b2cb878aa4d706df02cf107157e35b4e6b50ca299a5d7156b350e85d6e02ccce00c24b87c520b1e997cefc8c8c58c5869afab3de1cfcc7d15ae14bf8a71dfca97b1d847ea1c85e0454e121c142958cc6fd37fcbbec10e4a6f209caed973325908e72d92a11a11fe3298a65d2b97e08bd39ccc6db50dae47633847175b6f13da6a106e1f49b7445bb4080a875a59047611a1a77702131c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0a7a4a889ec99942900663384d86979d
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: d49300b4e758e36a3832679763a83c58
+        SHA1: ec3075370fcea680e09497d44a4b246012f24160
+        SHA256: fa5e895ff2603de9e15939a00299836f73e5778058f22194f696d19e79a8b010
+        SHA384: 13ab2eedcd7e712f635ca1da3dc30cd8d8e22cedcf5a2c4994181509dddbf76867d07925b9a514d123bc1d5cab41fe9f
     Signer:
     - SerialNumber: 0a1f3a057a1dce4bf7d76d0c7adf837e
-      Issuer: C=US, O=DigiCert Inc, CN=DigiCert Assured ID Code Signing CA-1
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
+        Signing CA,1
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
+  Imphash: fda6594fee72857309a5cbcb7ad08e80
 - Filename: DsArk_win10.sys
   MD5: 3d35317f967464aa670a52d3d632cd32
   SHA1: a3f562399308be926071f745d13a321fa7278638
@@ -307,50 +797,205 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Beijing Qihu Technology Co., Ltd.
-  Description: 360 Anti-Rootkit
-  Product: 360 Total Security
-  ProductVersion: ''
-  FileVersion: ''
+  Company: 360.cn
+  Description: dsark.sys
+  Product: Qihoo360 Kernel Mode Driver
+  ProductVersion: 1.0.0.1221
+  FileVersion: 1.0.0.1221
   MachineType: I386
-  OriginalFilename: ''
+  OriginalFilename: dsark.sys
   Authentihash:
-    MD5: ''
+    MD5: 86274561f90aa6355b8bec845d72c855
     SHA1: e0ffaa56a8c566a9e3d9a0280bc3e3972a2fcbcf
     SHA256: e778dc770a0a85df18e46c8251b92c0f3cc4718f22cf1812ddf8f45aa58b3657
   RichPEHeaderHash:
-    MD5: 4d08d50cc02c2c456609bc1e65de986f
-    SHA1: ''
-    SHA256: ''
+    MD5: b922e05d124dd0fd3b53de3966ccd492
+    SHA1: bca058860780704c0f058f8c0ad844770d34916b
+    SHA256: 86362edf873656f47cc7de87c362a37bc7ccba1eb065086be62498f654b2e268
   Sections:
     .text:
-      Entropy: 6.66
+      Entropy: 6.657288889973367
       Virtual Size: '0x168ef'
     .rdata:
-      Entropy: 7.63
+      Entropy: 7.63476618946138
       Virtual Size: '0x52a4'
     .data:
-      Entropy: 3.9
+      Entropy: 3.9036913992939777
       Virtual Size: '0xf2c'
     INIT:
-      Entropy: 5.74
+      Entropy: 5.736156425031333
       Virtual Size: '0x109c'
     .rsrc:
-      Entropy: 3.38
+      Entropy: 3.378936222700503
       Virtual Size: '0x670'
     .reloc:
-      Entropy: 6.23
+      Entropy: 6.229497086338748
       Virtual Size: '0x1462'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: ''
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2022-10-10 20:56:56'
+  InternalName: dsark
+  Copyright: (C) 360.cn Inc. All Rights Reserved.
   Imports:
   - ntoskrnl.exe
   - HAL.dll
   - FLTMGR.SYS
   ExportedFunctions: ''
-  ImportedFunctions: ''
+  ImportedFunctions:
+  - _wcsicmp
+  - memcpy
+  - RtlAppendUnicodeStringToString
+  - RtlCopyUnicodeString
+  - PsSetLoadImageNotifyRoutine
+  - MmGetSystemRoutineAddress
+  - RtlCompareUnicodeString
+  - RtlInitAnsiString
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - IoDeleteDevice
+  - IoUnregisterShutdownNotification
+  - IoDeleteSymbolicLink
+  - ExDeleteResourceLite
+  - ZwCreateFile
+  - IoCreateFile
+  - ObReferenceObjectByHandle
+  - ZwOpenKey
+  - RtlGetVersion
+  - MmIsAddressValid
+  - MmSystemRangeStart
+  - IoRegisterShutdownNotification
+  - PsGetCurrentThreadId
+  - IoRegisterDriverReinitialization
+  - RtlFreeUnicodeString
+  - RtlEqualUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - IoFileObjectType
+  - ZwOpenFile
+  - IofCompleteRequest
+  - RtlCompareMemory
+  - PsGetCurrentProcessId
+  - ExInitializeResourceLite
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ZwReadFile
+  - ZwQueryInformationFile
+  - ZwQueryInformationProcess
+  - ObOpenObjectByPointer
+  - PsProcessType
+  - IoGetCurrentProcess
+  - PsGetVersion
+  - _stricmp
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - ZwMapViewOfSection
+  - ZwCreateSection
+  - ZwUnmapViewOfSection
+  - ProbeForRead
+  - MmUserProbeAddress
+  - MmHighestUserAddress
+  - ZwCreateKey
+  - ZwQueryKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - ZwEnumerateValueKey
+  - ZwDeleteKey
+  - ZwDeleteValueKey
+  - ExAcquireResourceSharedLite
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - SeCaptureSubjectContext
+  - KeGetCurrentThread
+  - IoFreeMdl
+  - MmUnlockPages
+  - MmProbeAndLockPages
+  - IoAllocateMdl
+  - ZwDeleteFile
+  - ZwSetInformationFile
+  - RtlPrefixUnicodeString
+  - _strlwr
+  - strstr
+  - ZwWaitForSingleObject
+  - ZwCreateEvent
+  - RtlFreeAnsiString
+  - RtlUnicodeStringToAnsiString
+  - ExReleaseFastMutexUnsafe
+  - ExAcquireFastMutexUnsafe
+  - ExAcquireResourceExclusiveLite
+  - KeWaitForSingleObject
+  - KeInsertQueueApc
+  - KeInitializeApc
+  - PsLookupProcessByProcessId
+  - PsIsThreadTerminating
+  - PsLookupThreadByThreadId
+  - ZwQuerySystemInformation
+  - ZwOpenProcess
+  - ZwTerminateProcess
+  - IoQueryFileInformation
+  - ObQueryNameString
+  - RtlVolumeDeviceToDosName
+  - ExAllocatePool
+  - ZwWriteFile
+  - RtlAppendUnicodeToString
+  - _wcsnicmp
+  - RtlUpcaseUnicodeChar
+  - ExGetPreviousMode
+  - FsRtlIsNameInExpression
+  - RtlUpcaseUnicodeString
+  - PsIsSystemThread
+  - PsGetThreadId
+  - PsGetProcessId
+  - IoThreadToProcess
+  - CmRegisterCallback
+  - IoRegisterBootDriverReinitialization
+  - KeSetEvent
+  - ExQueueWorkItem
+  - RtlImageNtHeader
+  - KeInsertQueueDpc
+  - KeSetTargetProcessorDpc
+  - KeSetImportanceDpc
+  - KeInitializeDpc
+  - KeNumberProcessors
+  - MmMapLockedPagesSpecifyCache
+  - KeQueryTimeIncrement
+  - KeTickCount
+  - _alldiv
+  - _allmul
+  - ProbeForWrite
+  - KeBugCheckEx
+  - RtlUnwind
+  - SeTokenIsAdmin
+  - SeReleaseSubjectContext
+  - RtlInitUnicodeString
+  - IoGetDeviceObjectPointer
+  - KeInitializeEvent
+  - IoBuildDeviceIoControlRequest
+  - ObfDereferenceObject
+  - ZwClose
+  - IofCallDriver
+  - ZwFlushKey
+  - ZwEnumerateKey
+  - ExFreePoolWithTag
+  - memset
+  - NtBuildNumber
+  - ExAllocatePoolWithTag
+  - _vsnwprintf
+  - ExReleaseResourceLite
+  - _vsnprintf
+  - KeGetCurrentIrql
+  - KfAcquireSpinLock
+  - KfReleaseSpinLock
+  - KfRaiseIrql
+  - KfLowerIrql
+  - KeAcquireQueuedSpinLock
+  - KeReleaseQueuedSpinLock
+  - KeRaiseIrqlToDpcLevel
+  - FltStartFiltering
+  - FltUnregisterFilter
+  - FltGetDestinationFileNameInformation
+  - FltGetFileNameInformation
+  - FltParseFileNameInformation
+  - FltSetCallbackDataDirty
+  - FltReleaseFileNameInformation
+  - FltRegisterFilter
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -359,31 +1004,107 @@ KnownVulnerableSamples:
         Technology Co., Ltd.
       ValidFrom: '2019-11-22 00:00:00'
       ValidTo: '2023-02-04 12:00:00'
-      Signature: ''
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Signature: 8536cf3617ba1e4104b19decbfe00f5dd797ce48774fa632d78380d6c9ef821795753f427430f95f7395d637840e9c411ff95287abb0b2505655f77bb9097da431984868cd6575472900eadb0e16a2105db0b7e3a83d233d288032b89f3794ae3bb3abc092a92792ca037f45e5eb76ba421fda278d5d97b46320e249648d40448217b5fef4070ec4fc0fd6f30f6e2f9e7f9aa0ae140fb77d59fc2614a6acd2c669b6397c08d54aa1a7ff20f01eea9bf715a013895ab370cb53155ff4df79cdf5dbe1d62303ac1c31692ca18de03e07c1079261a582ac8c1217ec0a1b939c2fd3d0947df7e73d7b02beecdb59d9de2b89cc297c462bb98085406e29ae4635b449
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
       IsCertificateAuthority: false
       SerialNumber: 0a1f3a057a1dce4bf7d76d0c7adf837e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
-        MD5: ''
+        MD5: 97cc51f828de6600a0679e746cb44132
         SHA1: 7f3e828fb51ea2e546451375fa6a8532f4ee852c
         SHA256: 736350bd2c9bf967f6b6350b043d95cc41a8290fe55d953d2d81cb646b414096
-        SHA384: ''
-    - Subject: C=US, O=DigiCert Inc, CN=DigiCert Assured ID Code Signing CA-1
+        SHA384: a4c99f42ddf8782e09ba358cec543f6b83b5aacd00f0f057780ab8b016408d695bcfc2d81209665eca75ae47c14a0bd4
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
+        CA
+      ValidFrom: '2011-04-15 19:41:37'
+      ValidTo: '2021-04-15 19:51:37'
+      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611cb28a000000000026
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 983a0c315a50542362f2bd6a5d71c8d0
+        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-08-01 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 70a0bf435c55e7385fa0a3741b3db616d7f7bf5707bd9aaca1872cec855ea91abb22f8871a695422eda488776dbd1a14f4134a7a2f2db738eff4ff80b9f8a1f7f272de24bc5203c84ed02adefa2d56cff9f4f7ac307a9a8bb25ed4cfd143449b4321eb9672a148b499cb9d4fa7060313772744d4e77fe859a8f0bf2f0ba6e9f2343cecf703c787a8d24c401935466a6954b0b8a1568eeca4d53de8b1dcfd1cd8f4775a5c548c6fefa1503dfc760968849f6fcadb208d35601c0203cb20b0ac58a00e4063c59822c1b259f5556bcf27ab6c76ce6f232df47e716a236b22ff12b8542d277ed83ad9f0b68796fd5bd15cac18c34d9f73b701a99f57aa5e28e2b994
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 21a266bd49f2778b24d13d95641ea6ac
+        SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
+        SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
+        SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
+        Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
       ValidTo: '2026-02-10 12:00:00'
-      Signature: ''
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Signature: 7b721d64ff88c83ac1b7e9e7a9c487bbdb9492d7905933fa2b87dea85b80253f138f9b831b7c43c4e68cdf393ec315ecb0da3b21257b24c1725db84791811346fa9c3f6a5138deb425cbf0abdfc528015479104624d1380f26a161904dbabd28e63ff1c4aa9bf6da35534fc9f23dd36cdc23edaaa04d6709f33a803d3cfb364c90e776a4ddf23abf56352fa24c65e8e0d4dad1c7c8916a2d234f373b199418d4d59c103cd5b11c19ff8fc86b9b9ef8ae9c999678d1cd9c51155b4226725a8d0a4a239240e886de22c2933ad49b68a6df297f06b93c0ebd9fc4869c82474271328609997209794b9d7169f541ff7f397764f1848dbe8b1eb27d68a3a590b10cff
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
-        MD5: ''
+        MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
-        SHA384: ''
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp 2022 , 2
+      ValidFrom: '2022-09-21 00:00:00'
+      ValidTo: '2033-11-21 23:59:59'
+      Signature: 55aa2a1af346f378573730fc75e34fd68523f1fcf995399b25e6f7728a98c377d464fc15fb36c249512c7888635509463900fc69d4ca9b29fba33fc0c9009b131db09889dc78f2cd7c85cd539daf62e26166a3142a45874a98422b50fc1bb59e083009fae42dd7098979f909e688ce7d1bb86aa29bc1536009e8a3b89dd7ad1f1cb8ec9841f0f60e80fbe4ffdf9d10a7eb00ba5f4a8f1a3a52b4eabf0949153536599a0f54d2b21b7f7e5e09ad76548a746dcad205672b76ebff98b226953819884414e50a59a26be7223e4421d23f1cc09bed7c48b2d8920c914f3c6694af5d0253eb9ee29ee4d31f8601649c00c2e95a74750d3de17988bf1c0197c9192380d7365a5f9616b1630cc646403bce5d35d4593e439a18aec3c9cbc3fb9b135f6ab5c7e0f305c359df27622bde41c953b9ff341067f62632987bfe5c42948194829dac0a8bc64b154ad3989045603380e023def803a4f64547e5ceb8034247e841367177adfda2e897744e2eda1e1d8c5ac81e9ad5c2f0c622a84f9bbdd81c9a51c42f9af65fa72797ba962e8557c060e778567f6aefc2959a4b1102c8829cc91a057cba71b54e7a996cf4e89ed45a98c89fbf8dbb185c43f5d02ae8e262ee7804dbbdd1fb5b0aa8707ef0978478e308035d472c63a825389701d23f3adae5e5f6e69bdc7e2cccff174c4d00a2d8d6010eb88beee6e07255892c271961f677018c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0c4d69724b94fa3c2a4a3d2907803d5a
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 812cb8ca0c79b318780ec5128ad13c1d
+        SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
+        SHA256: 0c0b121e6f807bc22d4e0f4945634c22eca7e4d5ca58a1526a40e918a35c1d79
+        SHA384: 86aab81948499b3c90833253a853e7b3fd82ccf7b65b35806831ab60814bfc6ad8848c990df262a1c89b6fc4267dad81
     Signer:
     - SerialNumber: 0a1f3a057a1dce4bf7d76d0c7adf837e
-      Issuer: C=US, O=DigiCert Inc, CN=DigiCert Assured ID Code Signing CA-1
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
+        Signing CA,1
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
+  Imphash: fda6594fee72857309a5cbcb7ad08e80
