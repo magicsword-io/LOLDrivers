@@ -1,0 +1,204 @@
+Id: 31439f28-4616-4ee1-a6b7-1cf742127909
+Tags:
+- SIVX64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-06'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create SIVDRIVER binPath=C:\windows\temp\SIVX64.sys type=kernel
+    && sc.exe start SIVDRIVER
+  Description: Ray Hinchliffe SIV (System Information Viewer) SIVX64.sys v5.85 dynamically
+    resolves MmMapIoSpace and MmMapIoSpaceEx via MmGetSystemRoutineAddress at runtime
+    (neither appears in the IAT), evading static import-based scanning. The driver
+    exposes multiple privileged IOCTL primitives via \\.\SIVDRIVER including arbitrary
+    physical memory mapped read/write (Cmd 0x14, critical), physical memory read via
+    scatter-gather (Cmd 0x10) and bulk MDL (Cmd 0x13), MSR read/write on a whitelisted
+    subset (Cmd 0x08/0x0C), unrestricted I/O port read/scan (Cmd 0x44/0x50), and
+    unrestricted PCI configuration space read (Cmd 0x48). WHQL signed by Microsoft
+    Windows Hardware Compatibility Publisher; loads despite HVCI.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/287
+- https://www.virustotal.com/gui/file/33903e8fa9f0a2acaa4784d645e309b0bd780693824b6c2c5fef257238c77478
+Detection: []
+Acknowledgement:
+  Person: weezerOSINT
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: SIVX64.sys
+  MD5: 81d040540015fe998a4cc4bf9a4e8598
+  SHA1: 5702d2ff261f0460a347e2a98752563633825842
+  SHA256: 33903e8fa9f0a2acaa4784d645e309b0bd780693824b6c2c5fef257238c77478
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  Date: '2025-07-16 20:48:20'
+  Publisher: Microsoft Windows Hardware Compatibility Publisher
+  Company: Ray Hinchliffe
+  Description: System Information Viewer X64 Driver
+  Product: SIVDRIVER
+  ProductVersion: V5.85
+  FileVersion: 'V5.85 (V5.85)'
+  MachineType: AMD64
+  OriginalFilename: SIVX64.sys
+  InternalName: SIVX64.sys
+  Copyright: "Copyright\xA9 Ray Hinchliffe 2001-2026"
+  Authentihash:
+    MD5: c2cb8aaa72a8c0a44e5f78e470f4640b
+    SHA1: 189a176afc0d7f52eb3c5e131e51adeaba107c53
+    SHA256: fee16e6386b2626f401714257afd6a2cd92bf0b00e6458240908fa5937fb2554
+  RichPEHeaderHash:
+    MD5: c86a198d64703793934534902549b4ea
+    SHA1: 59e235aea862c4171ec9870f07ff374c226d8e55
+    SHA256: b82173c8afd0a4ef912f882f9be3e39b8c6d47dcc7405875687fde8a1ea20320
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ImportedFunctions:
+  - ExFreePoolWithTag
+  - KeInitializeMutex
+  - RtlAnsiStringToUnicodeString
+  - ZwYieldExecution
+  - IoWMIQueryAllData
+  - IoBuildSynchronousFsdRequest
+  - ZwQuerySymbolicLinkObject
+  - strstr
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - ProbeForWrite
+  - strchr
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - RtlQueryRegistryValues
+  - RtlInitAnsiString
+  - IoIs32bitProcess
+  - KeInitializeDpc
+  - KeIpiGenericCall
+  - PsGetThreadId
+  - MmUnmapIoSpace
+  - ZwOpenSymbolicLinkObject
+  - IoWMIOpenBlock
+  - KeInitializeTimer
+  - KeSetTimerEx
+  - IoCreateSynchronizationEvent
+  - KeReleaseMutex
+  - IoCancelIrp
+  - KeDelayExecutionThread
+  - IoGetDeviceObjectPointer
+  - IoDeleteSymbolicLink
+  - ExAllocatePool
+  - KeQueryTimeIncrement
+  - ZwClose
+  - IofCompleteRequest
+  - IoGetDeviceAttachmentBaseRef
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - IoGetAttachedDeviceReference
+  - PsGetVersion
+  - IoGetDiskDeviceObject
+  - RtlCompareMemory
+  - ObfReferenceObject
+  - IoCreateSymbolicLink
+  - ObfDereferenceObject
+  - IoOpenDeviceRegistryKey
+  - ObReferenceObjectByName
+  - IoCreateDevice
+  - IoDeviceObjectType
+  - IoEnumerateDeviceObjectList
+  - KeCancelTimer
+  - KeNumberProcessors
+  - PsGetThreadProcessId
+  - IoGetDeviceProperty
+  - DbgPrintEx
+  - DbgPrint
+  - IofCallDriver
+  - ZwQueryKey
+  - KeBugCheckEx
+  - IoBuildDeviceIoControlRequest
+  - IoGetLowerDeviceObject
+  - SeSinglePrivilegeCheck
+  - ProbeForRead
+  - DbgBreakPoint
+  - _wcsicmp
+  - RtlUnwindEx
+  - RtlAnsiCharToUnicodeChar
+  - HalTranslateBusAddress
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - KeStallExecutionProcessor
+  - KeQueryPerformanceCounter
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 6.44
+      Virtual Size: '0x3b91'
+    .rdata:
+      Entropy: 4.07
+      Virtual Size: '0x9130'
+    .data:
+      Entropy: 0.74
+      Virtual Size: '0x15c'
+    .pdata:
+      Entropy: 5.14
+      Virtual Size: '0x870'
+    PAGE:
+      Entropy: 6.45
+      Virtual Size: '0x208f3'
+    INIT:
+      Entropy: 6.17
+      Virtual Size: '0x17b4'
+    .rsrc:
+      Entropy: 3.34
+      Virtual Size: '0x3f8'
+    .reloc:
+      Entropy: 5.05
+      Virtual Size: '0xa84'
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2025-07-16 20:48:20'
+      ValidTo: '2026-07-14 20:48:20'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000074ff3d4a9e7c401e86000000000074
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 846e2b51dbe3b3cdd48503e99cbce6a6
+        SHA1: 77940716d023ecae58709321c2b6a30df8e3d86d
+        SHA256: 1dc33c8d9456aa23f43eb0c09beeb7b3565770f7e05d12d7b88575a4c61fa31f
+        SHA384: 4aaab3a5d5e7ce0b6103d30108636aaf1ec645331e3d42f57002c2380b2ea34662245f7f84fe07e7837bf6115bbc0eb5
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 3300000074ff3d4a9e7c401e86000000000074
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+  Imphash: 7007297dbcb0b94310208fdc643e67ac
+  LoadsDespiteHVCI: 'TRUE'
