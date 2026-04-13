@@ -1,0 +1,350 @@
+Id: 741677e9-20d5-40e5-9cd2-3bf2beb76322
+Tags:
+- dpmemio.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-06'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create dpMemIO binPath=C:\windows\temp\dpmemio.sys type=kernel
+    && sc.exe start dpMemIO
+  Description: ET&T Technology Co., Ltd. dpmemio.sys (ClevoECView) is a 12KB driver
+    with only 9 imports that provides completely unrestricted arbitrary physical memory
+    read/write and I/O port access with no authentication, no ACL, no address validation,
+    and no size validation. MmUnmapIoSpace is not even imported, meaning every MmMapIoSpace
+    call permanently leaks a system PTE mapping. An additional bug exists where MOVSXD
+    sign-extension on a 32-bit UserBufferPtr provides a write-to-kernel-VA primitive.
+    IOCTLs exposed via \\.\dpMemIO include 0xC80A2420 (arbitrary physical memory READ
+    via MmMapIoSpace), 0xC80A2424 (arbitrary physical memory WRITE via MmMapIoSpace),
+    0xC80A2410/0xC80A2414 (I/O port read/write byte), 0xC80A2418/0xC80A241C (I/O
+    port read/write variable size), and 0xC80A2428 (version/ping). VeriSign signed
+    with a revoked certificate.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/288
+- https://www.virustotal.com/gui/file/7cf6881e43337c288b1883fafb234146a450ff94388aee395e05e36202c5afbb
+- https://www.virustotal.com/gui/file/cd631c54fe1375e4bdd2f63b58bd106066eeee267fc77b3161ceb023ab5fddda
+Detection: []
+Acknowledgement:
+  Person: weezerOSINT
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: dpmemio.sys
+  MD5: 1176d570c2c1af00f92feef45cea1614
+  SHA1: 6f6c0176e75b2aea004c54a963fc4cee0f67bc2e
+  SHA256: 7cf6881e43337c288b1883fafb234146a450ff94388aee395e05e36202c5afbb
+  Signature:
+  - ET&T Technology Co.,Ltd.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary Certification Authority
+  Date: '2007-02-06 00:00:00'
+  Publisher: ET&T Technology Co.,Ltd.
+  Company: ''
+  Description: Direct Physical Memory and Port access driver
+  Product: Direct Physical Memory and Port access driver
+  ProductVersion: 1.0.0.2
+  FileVersion: '1.0.0.2 built by: WinDDK'
+  MachineType: AMD64
+  OriginalFilename: dpmemio.sys
+  InternalName: dpmemio.sys
+  Copyright: Copyright (C) 2007
+  Authentihash:
+    MD5: 0def4c412000a7bef2a2cafd00f50126
+    SHA1: 46be73d4bca95080185b99576671b51de9edc847
+    SHA256: 9dd70d3c1262b36468cb79ad26580a9d8b90e557d148ea36034b9c1195af6815
+  RichPEHeaderHash:
+    MD5: 9f434cf4ef4cf02a1c04edd1db2f1b54
+    SHA1: a5e1939b262f610f3428ee71eaa4e6d3bddda4b3
+    SHA256: 7ddcfd965cd2cc3065b0b333db796e294a4e63fcdbb29a2cde54de053952e274
+  Imports:
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - IofCompleteRequest
+  - RtlCopyMemory
+  - MmMapIoSpace
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeBugCheckEx
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 5.68
+      Virtual Size: '0x5a0'
+    .rdata:
+      Entropy: 4.46
+      Virtual Size: '0x104'
+    .data:
+      Entropy: 0.52
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.01
+      Virtual Size: '0x48'
+    INIT:
+      Entropy: 4.76
+      Virtual Size: '0x1a8'
+    .rsrc:
+      Entropy: 3.3
+      Virtual Size: '0x3a8'
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2008-12-03 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
+        SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
+        SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
+        CA
+      ValidFrom: '2004-07-16 00:00:00'
+      ValidTo: '2014-07-15 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 4191a15a3978dfcf496566381d4c75c2
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 41011f8d0e7c7a6408334ca387914c61
+        SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
+        SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
+    - Subject: C=TW, ST=Taiwan, L=Taipei, O=ET&T Technology Co.,Ltd., OU=Digital ID
+        Class 3 , Microsoft Software Validation v2, OU=R&D, CN=ET&T Technology Co.,Ltd.
+      ValidFrom: '2007-02-06 00:00:00'
+      ValidTo: '2008-02-06 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 7817f8d95c5c37dd0a668e5aa1ba5743
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 47adac8510894e82c819d424e46f64bb
+        SHA1: fa98632eaca04b46b42ac3436570ffbd63607889
+        SHA256: c66eec79e3b771ad59d4a2498254282bd2f8ee5f61abc5bb66aa9fc6d3f5defc
+        SHA384: 03e7ec2bf67423c2398ddeac6e166c6f5cebf3b07d4b5953ed11674415cc0ffa2715b8d57b78e3e25fcb7dc73704851b
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      ValidFrom: '2006-05-23 17:01:29'
+      ValidTo: '2016-05-23 17:11:29'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610c120600000000001b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 53c41bc1164e09e0cd1617a5bf913efd
+        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+    Signer:
+    - SerialNumber: 7817f8d95c5c37dd0a668e5aa1ba5743
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
+        CA
+      Version: 1
+  Imphash: 7e7d5450f92a9c3098e242578b505e7d
+  LoadsDespiteHVCI: 'FALSE'
+- Filename: dpmemio.sys
+  MD5: 81317f20d85addb0407e5f5c15095a53
+  SHA1: 7bb3b01e5cdc6b5b98d75f64667d29e2c151f8cc
+  SHA256: cd631c54fe1375e4bdd2f63b58bd106066eeee267fc77b3161ceb023ab5fddda
+  Signature:
+  - ET&T Technology Co.,Ltd.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary Certification Authority
+  Date: '2007-02-06 00:00:00'
+  Publisher: ET&T Technology Co.,Ltd.
+  Company: Windows (R) Codename Longhorn DDK provider
+  Description: Direct Physical Memory and Port access driver
+  Product: Windows (R) Codename Longhorn DDK driver
+  ProductVersion: 6.0.6000.16386
+  FileVersion: '6.0.6000.16386 built by: WinDDK'
+  MachineType: I386
+  OriginalFilename: dpmemio.sys
+  InternalName: dpmemio.sys
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  Authentihash:
+    MD5: 2798e1bb95ee53e08c1088fbec65f35a
+    SHA1: bb6e9bc2437bee2d30f739beb054750cd6ca24cc
+    SHA256: c25c71ca670d6d27ced406b8cba8aa92a4b96898ec1506f59f4fef09c1f3bb11
+  RichPEHeaderHash:
+    MD5: 7a98db6636f7aef4106502e95d88556f
+    SHA1: acc2d551ac5a88713e421e45306f1a1b05067d3d
+    SHA256: 489ab5bcde963db4f2f820a17d16b7b1cdde7d3ebaaa9fc31ac68c9cfbc56399
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ImportedFunctions:
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - memcpy
+  - MmMapIoSpace
+  - KeTickCount
+  - IofCompleteRequest
+  - WRITE_PORT_USHORT
+  - READ_PORT_ULONG
+  - READ_PORT_USHORT
+  - READ_PORT_UCHAR
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_ULONG
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 5.92
+      Virtual Size: '0x412'
+    .rdata:
+      Entropy: 4.52
+      Virtual Size: '0xc0'
+    .data:
+      Entropy: 3.0
+      Virtual Size: '0x8'
+    INIT:
+      Entropy: 5.25
+      Virtual Size: '0x210'
+    .rsrc:
+      Entropy: 3.41
+      Virtual Size: '0x448'
+    .reloc:
+      Entropy: 3.9
+      Virtual Size: '0x7c'
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2008-12-03 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
+        SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
+        SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
+        CA
+      ValidFrom: '2004-07-16 00:00:00'
+      ValidTo: '2014-07-15 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 4191a15a3978dfcf496566381d4c75c2
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 41011f8d0e7c7a6408334ca387914c61
+        SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
+        SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
+    - Subject: C=TW, ST=Taiwan, L=Taipei, O=ET&T Technology Co.,Ltd., OU=Digital ID
+        Class 3 , Microsoft Software Validation v2, OU=R&D, CN=ET&T Technology Co.,Ltd.
+      ValidFrom: '2007-02-06 00:00:00'
+      ValidTo: '2008-02-06 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 7817f8d95c5c37dd0a668e5aa1ba5743
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 47adac8510894e82c819d424e46f64bb
+        SHA1: fa98632eaca04b46b42ac3436570ffbd63607889
+        SHA256: c66eec79e3b771ad59d4a2498254282bd2f8ee5f61abc5bb66aa9fc6d3f5defc
+        SHA384: 03e7ec2bf67423c2398ddeac6e166c6f5cebf3b07d4b5953ed11674415cc0ffa2715b8d57b78e3e25fcb7dc73704851b
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      ValidFrom: '2006-05-23 17:01:29'
+      ValidTo: '2016-05-23 17:11:29'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610c120600000000001b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 53c41bc1164e09e0cd1617a5bf913efd
+        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+    Signer:
+    - SerialNumber: 7817f8d95c5c37dd0a668e5aa1ba5743
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
+        CA
+      Version: 1
+  Imphash: 81283a76d19861eaf5f1837a53452762
+  LoadsDespiteHVCI: 'FALSE'

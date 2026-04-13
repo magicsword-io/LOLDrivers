@@ -1,15 +1,14 @@
 title: Driver Load - VBoxUSB.Sys
-id: bfa2b00f-c983-5d6d-b4d6-f6359bda74c5
+id: 60bb85fb-7117-5177-93a3-cbc6daa4b7b3
 status: experimental
 description: |
     Detects loading of driver VBoxUSB.Sys via name.
-    Confirmed vulnerable driver from Microsoft Block List
 references:
-    - https://www.loldrivers.io/drivers/70fa8606-c147-4c40-8b7a-980290075327/
-    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-author: Michael Haag
-date: 2023/07/22
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/5938df1d-9513-449f-8252-c442ddca0c2a/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/10
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
