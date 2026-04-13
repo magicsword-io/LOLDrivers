@@ -1,14 +1,14 @@
 title: Driver Load - WinFlash64.sys
-id: ef41f24b-84dc-5951-b78a-8e4f29d6e9f2
+id: 764190a9-8c5e-5d19-a6e5-d38c48fef546
 status: experimental
 description: |
     Detects loading of driver WinFlash64.sys via hash.
 references:
-    - https://www.loldrivers.io/drivers/7b893f79-b5b0-4373-9d29-c53a21fe6fc3/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/902249eb-87cb-4c01-8da7-17675d743cd7/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/10
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -20,17 +20,9 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=a216803d691d92acc44ac77d981aa767'
-            - 'MD5=bf2a954160cb155df0df433929e9102b'
-            - 'MD5=bc6ff00fb3a14437c94b37ac9a2101d4'
-            - 'SHA1=d5326fea00bcde2ef7155acf3285c245c9fb4ece'
-            - 'SHA1=7a1689cde189378e7db84456212b0e438f9bf90a'
-            - 'SHA1=48be0ec2e8cb90cac2be49ef71e44390a0f648ce'
-            - 'SHA256=8797d9afc7a6bb0933f100a8acbb5d0666ec691779d522ac66c66817155b1c0d'
-            - 'SHA256=316a27e2bdb86222bc7c8af4e5472166b02aec7f3f526901ce939094e5861f6d'
-            - 'SHA256=8bda0108de82ebeae82f43108046c5feb6f042e312fa0115475a9e32274fae59'
-            - 'IMPHASH=8c3af6c25ab40c4daefb4f836d12e1c8'
-            - 'IMPHASH=e4f1a9234e4ea105321909d4c0e597ae'
+            - 'MD5=a4fda97f452b8f8705695a729f5969f7'
+            - 'SHA1=8183a341ba6c3ce1948bf9be49ab5320e0ee324d'
+            - 'SHA256=677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf'
             - 'IMPHASH=7a4a0df0bde1f8da6547a580d5bee7c3'
     condition: selection_hashes
 falsepositives:

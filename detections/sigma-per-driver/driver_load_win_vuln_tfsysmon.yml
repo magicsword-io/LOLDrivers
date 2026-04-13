@@ -9,7 +9,7 @@ references:
     - https://github.com/BlackSnufkin/BYOVD/tree/main/TfSysMon-Killer
 author: rahulwt
 date: 2024/08/15
-modified: 2026/04/06
+modified: 2026/04/10
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,12 +21,12 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=761f2e2b759389a472bd3d94141742b9'
             - 'MD5=b4eaacce30f51eaf2a36cea680b45a66'
+            - 'MD5=761f2e2b759389a472bd3d94141742b9'
             - 'SHA1=c881f43c7fe94a6f056a84da8e9a32fe56d8dd9c'
             - 'SHA1=94493d7739c5ee7346da31d9523404d62682b195'
-            - 'SHA256=1c1a4ca2cbac9fe5954763a20aeb82da9b10d028824f42fff071503dcbe15856'
             - 'SHA256=15e84d040c2756b2d1b6c3f99d5a1079dc8854844d3c24d740fafd8c668e5fb9'
+            - 'SHA256=1c1a4ca2cbac9fe5954763a20aeb82da9b10d028824f42fff071503dcbe15856'
             - 'IMPHASH=9e7c36ff0dc8862002283773ace05f9e'
     condition: selection_hashes
 falsepositives:

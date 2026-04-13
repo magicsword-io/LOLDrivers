@@ -1,15 +1,15 @@
 title: Driver Load - ATSZIO.sys
-id: 9adaaa0a-9c4b-5742-a08d-b84b93bd1fc3
+id: 8b5ab330-1472-5e74-929e-b58bb36be95e
 status: experimental
 description: |
     Detects loading of driver ATSZIO.sys via hash.
     ATSZIO Driver
 references:
-    - https://www.loldrivers.io/drivers/6ec5ddda-f302-4008-a73e-12814c1d571f/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/23f11e19-0776-4dd4-9c9c-7f6b60f8553f/
+    - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/10
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,39 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=6682176866d6bd6b4ea3c8e398bd3aae'
-            - 'MD5=715ac0756234a203cb7ce8524b6ddc0d'
-            - 'MD5=4814205270caa80d35569eee8081838e'
-            - 'MD5=7ee0c884e7d282958c5b3a9e47f23e13'
-            - 'MD5=5a1ee9e6a177f305765f09b0ae6ac1c5'
-            - 'MD5=030c8432981e4d41b191624b3e07afe2'
-            - 'MD5=f84da507b3067f019c340b737cd68d32'
-            - 'MD5=17b97fbe2e8834d7ad30211635e1b271'
-            - 'MD5=dbf11f3fad1db3eb08e2ee24b5ebfb95'
-            - 'SHA1=86e893e59352fcb220768fb758fcc5bbd91dd39e'
-            - 'SHA1=d73dabcb3f55935b701542fd26875006217ebbbe'
-            - 'SHA1=cea540a2864ece0a868d841ab27680ff841fcbe6'
-            - 'SHA1=e88259de797573fa515603ad3354aed0bce572f1'
-            - 'SHA1=3f67a43ae174a715795e49f72bc350302de83323'
-            - 'SHA1=87d47340d1940eaeb788523606804855818569e3'
-            - 'SHA1=5e9538d76b75f87f94ca5409ae3ddc363e8aba7f'
-            - 'SHA1=d6de8983dbd9c4c83f514f4edf1ac7be7f68632f'
-            - 'SHA1=962e2ac84c28ed5e373d4d4ccb434eceee011974'
-            - 'SHA256=fb6b0d304433bf88cc7d57728683dbb4b9833459dc33528918ead09b3907ff22'
-            - 'SHA256=e32ab30d01dcff6418544d93f99ae812d2ce6396e809686620547bea05074f6f'
-            - 'SHA256=1a4f7d7926efc3e3488758ce318246ea78a061bde759ec6c906ff005dd8213e5'
-            - 'SHA256=673bcec3d53fab5efd6e3bac25ac9d6cc51f6bbdf8336e38aade2713dc1ae11b'
-            - 'SHA256=0da746e49fd662be910d0e366934a7e02898714eaaa577e261ab40eb44222b5c'
-            - 'SHA256=55a1535e173c998fbbc978009b02d36ca0c737340d84ac2a8da73dfc2f450ef9'
-            - 'SHA256=ecfc52a22e4a41bf53865b0e28309411c60af34a44e31a5c53cdc8c5733e8282'
-            - 'SHA256=31d8fc6f5fb837d5eb29db828d13ba8ee11867d86a90b2c2483a578e1d0ec43a'
-            - 'SHA256=c64d4ac416363c7a1aa828929544d1c1d78cf032b39769943b851cfc4c0faafc'
+            - 'MD5=b12d1630fd50b2a21fd91e45d522ba3a'
+            - 'SHA1=490109fa6739f114651f4199196c5121d1c6bdf2'
+            - 'SHA256=01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece'
             - 'IMPHASH=b19743993dc7f1d48b2a86fe9b9c91e3'
-            - 'IMPHASH=bb56f25a810b329868a0ff8e94080bad'
-            - 'IMPHASH=bb981f82c2bfc3c22471df92d9d0fb89'
-            - 'IMPHASH=e717a2158439123c6fca79b6b2c0ba49'
-            - 'IMPHASH=ff605557fd515d7ab30ff41dbd8bd24a'
-            - 'IMPHASH=2233472cee6457ad207017803048aaff'
     condition: selection_hashes
 falsepositives:
     - Unknown
