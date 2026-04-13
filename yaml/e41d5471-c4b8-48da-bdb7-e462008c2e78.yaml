@@ -75,7 +75,23 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
-  ImportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - MmFreeContiguousMemory
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ZwMapViewOfSection
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - ZwUnmapViewOfSection
+  - MmMapIoSpace
+  - ZwClose
+  - ZwOpenSection
+  - MmAllocateContiguousMemory
+  - KeBugCheckEx
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
