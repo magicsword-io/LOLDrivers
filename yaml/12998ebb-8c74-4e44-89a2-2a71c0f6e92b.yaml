@@ -2,7 +2,7 @@ Id: 12998ebb-8c74-4e44-89a2-2a71c0f6e92b
 Tags:
 - TcIo.sys
 - TcRouter.sys
-Verified: 'FALSE'
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-04-10'
 MitreID: T1068
@@ -10,19 +10,19 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create TcIo binPath=C:\windows\temp\TcIo.sys type=kernel && sc.exe
     start TcIo
-  Description: TcIo.sys and TcRouter.sys are EV-signed kernel drivers from Beckhoff
-    Automation GmbH (TwinCAT 3 Industrial Automation Runtime). TcIo.sys exposes arbitrary
-    physical memory read/write via ZwOpenSection on Device\PhysicalMemory, arbitrary
-    MMIO mapping via MmMapIoSpace, PCI configuration space read/write via HalGetBusDataByOffset
-    and HalSetBusDataByOffset, and full PCI BAR probing and mapping. TcRouter.sys exposes
-    arbitrary port I/O via direct ring-0 in/out instructions. Both drivers use plain
-    IoCreateDevice with no DACL and have no caller validation on IRP_MJ_CREATE. All
-    IOCTLs use METHOD_NEITHER with FILE_ANY_ACCESS. No hardware gate -- drivers load
-    on any x64 Windows without Beckhoff hardware. CVE-2018-7502 was assigned for an
-    untrusted pointer dereference in IOCTL 0x222206 affecting 19 drivers in the TwinCAT
-    family (CISA advisory ICSA-18-081-02, Source Incite SRC-2018-0007). The physical
-    memory and port I/O primitives described here go beyond the scope of CVE-2018-7502.
-    18 related drivers share the same codebase and EV certificate.
+  Description: TcIo.sys and TcRouter.sys are WHQL Microsoft-signed kernel drivers from
+    Beckhoff Automation GmbH (TwinCAT 3 Industrial Automation Runtime). TcIo.sys exposes
+    arbitrary physical memory read/write via ZwOpenSection on Device\PhysicalMemory,
+    arbitrary MMIO mapping via MmMapIoSpace, PCI configuration space read/write via
+    HalGetBusDataByOffset and HalSetBusDataByOffset, and full PCI BAR probing and mapping.
+    TcRouter.sys exposes arbitrary port I/O via direct ring-0 in/out instructions. Both
+    drivers use plain IoCreateDevice with no DACL and have no caller validation on
+    IRP_MJ_CREATE. All IOCTLs use METHOD_NEITHER with FILE_ANY_ACCESS. No hardware gate
+    -- drivers load on any x64 Windows without Beckhoff hardware. CVE-2018-7502 was
+    assigned for an untrusted pointer dereference in IOCTL 0x222206 affecting 19 drivers
+    in the TwinCAT family (CISA advisory ICSA-18-081-02, Source Incite SRC-2018-0007).
+    The physical memory and port I/O primitives described here go beyond the scope of
+    CVE-2018-7502. 18 related drivers share the same codebase and certificate.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -37,8 +37,8 @@ Acknowledgement:
   Handle: '@weezerOSINT'
 KnownVulnerableSamples:
 - Filename: TcIo.sys
-  MD5: ''
-  SHA1: ''
+  MD5: 508fce0a671bdd7f157c3f456bb7d33e
+  SHA1: 89edecb8860105b06b707af91d8831af2c5521ff
   SHA256: e0c58531501d6176ed0f632addca977616b0dab460f32f0a5909d21f828fc63b
   Signature: ''
   Date: ''
@@ -52,25 +52,84 @@ KnownVulnerableSamples:
   OriginalFilename: ''
   Authentihash:
     MD5: ''
-    SHA1: ''
-    SHA256: ''
+    SHA1: 5fd984796147df626f3edae056863bb46af277fe
+    SHA256: 6a7bd55c6706e69b134aabcf4a006b14efb98a26eb1a23cd6402ca17cfc3eef3
   RichPEHeaderHash:
-    MD5: ''
+    MD5: 28e04ca071296d333dc2c22d1cbdd0a8
     SHA1: ''
     SHA256: ''
-  Sections: {}
+  Sections:
+    .text:
+      Entropy: 6.19
+      Virtual Size: '0xb8f43'
+    INIT:
+      Entropy: 5.78
+      Virtual Size: '0x3d7'
+    .rdata:
+      Entropy: 4.94
+      Virtual Size: '0x2465e'
+    .data:
+      Entropy: 3.61
+      Virtual Size: '0x21618'
+    .pdata:
+      Entropy: 5.86
+      Virtual Size: '0xc9b4'
+    .rsrc:
+      Entropy: 4.31
+      Virtual Size: '0x4e8'
+    .reloc:
+      Entropy: 5.48
+      Virtual Size: '0x3588'
   MagicHeader: 50 45 0 0
   CreationTimestamp: ''
   InternalName: ''
   Copyright: ''
-  Imports: []
+  Imports:
+  - HAL.dll
+  - ntoskrnl.exe
   ExportedFunctions: ''
   ImportedFunctions: ''
-  Signatures: []
-  LoadsDespiteHVCI: 'FALSE'
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2025-07-16 20:48:20'
+      ValidTo: '2026-07-14 20:48:20'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 330000007-4ff3d4a9e7c401e860000000000074
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 77940716d023ecae58709321c2b6a30df8e3d86d
+        SHA256: 1dc33c8d9456aa23f43eb0c09beeb7b3565770f7e05d12d7b88575a4c61fa31f
+        SHA384: ''
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df000000000d
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: ''
+    Signer:
+    - SerialNumber: 330000007-4ff3d4a9e7c401e860000000000074
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: TcRouter.sys
-  MD5: ''
-  SHA1: ''
+  MD5: aae460e5be936aeb0e79317927d79ca0
+  SHA1: 9322d0a40abd3a25ac53006c483b8974edfb953a
   SHA256: d89938a469e8e4b429507522b5a52cb6f87c50f559f22f3042921631b768e59a
   Signature: ''
   Date: ''
@@ -84,19 +143,80 @@ KnownVulnerableSamples:
   OriginalFilename: ''
   Authentihash:
     MD5: ''
-    SHA1: ''
-    SHA256: ''
+    SHA1: 67596d0bf855b7cbdce5cf3fe99d1581ca0231fb
+    SHA256: 33bdf2ede15d5fed1f4f2fc4368419c72aec005e0d489b1cf074a8f74e53a055
   RichPEHeaderHash:
-    MD5: ''
+    MD5: 2442bb80af56daa5cb1ce2c323b328de
     SHA1: ''
     SHA256: ''
-  Sections: {}
+  Sections:
+    .text:
+      Entropy: 6.37
+      Virtual Size: '0x1b49f6'
+    INIT:
+      Entropy: 5.91
+      Virtual Size: '0x517'
+    .rdata:
+      Entropy: 5.87
+      Virtual Size: '0x58440'
+    .data:
+      Entropy: 4.7
+      Virtual Size: '0x4f940'
+    .pdata:
+      Entropy: 6.27
+      Virtual Size: '0x1be58'
+    .rsrc:
+      Entropy: 4.25
+      Virtual Size: '0x520'
+    .reloc:
+      Entropy: 5.45
+      Virtual Size: '0x4e74'
   MagicHeader: 50 45 0 0
   CreationTimestamp: ''
   InternalName: ''
   Copyright: ''
-  Imports: []
+  Imports:
+  - HAL.dll
+  - ntoskrnl.exe
+  - NETIO.SYS
+  - ksecdd.sys
   ExportedFunctions: ''
   ImportedFunctions: ''
-  Signatures: []
-  LoadsDespiteHVCI: 'FALSE'
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2025-07-16 20:48:20'
+      ValidTo: '2026-07-14 20:48:20'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 330000007-4ff3d4a9e7c401e860000000000074
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 77940716d023ecae58709321c2b6a30df8e3d86d
+        SHA256: 1dc33c8d9456aa23f43eb0c09beeb7b3565770f7e05d12d7b88575a4c61fa31f
+        SHA384: ''
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df000000000d
+      Version: 3
+      TBS:
+        MD5: ''
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: ''
+    Signer:
+    - SerialNumber: 330000007-4ff3d4a9e7c401e860000000000074
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
