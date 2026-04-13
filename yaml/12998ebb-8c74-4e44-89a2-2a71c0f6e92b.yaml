@@ -10,19 +10,20 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create TcIo binPath=C:\windows\temp\TcIo.sys type=kernel && sc.exe
     start TcIo
-  Description: TcIo.sys and TcRouter.sys are WHQL Microsoft-signed kernel drivers from
-    Beckhoff Automation GmbH (TwinCAT 3 Industrial Automation Runtime). TcIo.sys exposes
-    arbitrary physical memory read/write via ZwOpenSection on Device\PhysicalMemory,
+  Description: TcIo.sys and TcRouter.sys are WHQL Microsoft-signed kernel drivers
+    from Beckhoff Automation GmbH (TwinCAT 3 Industrial Automation Runtime). TcIo.sys
+    exposes arbitrary physical memory read/write via ZwOpenSection on Device\PhysicalMemory,
     arbitrary MMIO mapping via MmMapIoSpace, PCI configuration space read/write via
-    HalGetBusDataByOffset and HalSetBusDataByOffset, and full PCI BAR probing and mapping.
-    TcRouter.sys exposes arbitrary port I/O via direct ring-0 in/out instructions. Both
-    drivers use plain IoCreateDevice with no DACL and have no caller validation on
-    IRP_MJ_CREATE. All IOCTLs use METHOD_NEITHER with FILE_ANY_ACCESS. No hardware gate
-    -- drivers load on any x64 Windows without Beckhoff hardware. CVE-2018-7502 was
-    assigned for an untrusted pointer dereference in IOCTL 0x222206 affecting 19 drivers
-    in the TwinCAT family (CISA advisory ICSA-18-081-02, Source Incite SRC-2018-0007).
-    The physical memory and port I/O primitives described here go beyond the scope of
-    CVE-2018-7502. 18 related drivers share the same codebase and certificate.
+    HalGetBusDataByOffset and HalSetBusDataByOffset, and full PCI BAR probing and
+    mapping. TcRouter.sys exposes arbitrary port I/O via direct ring-0 in/out instructions.
+    Both drivers use plain IoCreateDevice with no DACL and have no caller validation
+    on IRP_MJ_CREATE. All IOCTLs use METHOD_NEITHER with FILE_ANY_ACCESS. No hardware
+    gate -- drivers load on any x64 Windows without Beckhoff hardware. CVE-2018-7502
+    was assigned for an untrusted pointer dereference in IOCTL 0x222206 affecting
+    19 drivers in the TwinCAT family (CISA advisory ICSA-18-081-02, Source Incite
+    SRC-2018-0007). The physical memory and port I/O primitives described here go
+    beyond the scope of CVE-2018-7502. 18 related drivers share the same codebase
+    and certificate.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -43,52 +44,158 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Beckhoff Automation GmbH & Co. KG
-  Description: TwinCAT 3 IO Server
-  Product: TwinCAT 3
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Beckhoff Automation GmbH
+  Description: TwinCAT IO Server
+  Product: Beckhoff TwinCAT
+  ProductVersion: 3.1.4024.74
+  FileVersion: 3.1.0.2104
   MachineType: AMD64
   OriginalFilename: ''
   Authentihash:
-    MD5: ''
+    MD5: f5e4cd493e9b8fecc74bcd5522b64556
     SHA1: 5fd984796147df626f3edae056863bb46af277fe
     SHA256: 6a7bd55c6706e69b134aabcf4a006b14efb98a26eb1a23cd6402ca17cfc3eef3
   RichPEHeaderHash:
-    MD5: 28e04ca071296d333dc2c22d1cbdd0a8
-    SHA1: ''
-    SHA256: ''
+    MD5: 200c7fcedd1d90e837d61b7be79616d9
+    SHA1: 2092d24826ad6e0e109623ae0aa25902e3979770
+    SHA256: 766c92901a41dc0e6cf2aafb1e9c96829add377233eb30b76d12ed29bcf04039
   Sections:
     .text:
-      Entropy: 6.19
+      Entropy: 6.193920229111714
       Virtual Size: '0xb8f43'
     INIT:
-      Entropy: 5.78
+      Entropy: 5.778950671651389
       Virtual Size: '0x3d7'
     .rdata:
-      Entropy: 4.94
+      Entropy: 4.9430131723572766
       Virtual Size: '0x2465e'
     .data:
-      Entropy: 3.61
+      Entropy: 3.612460567324219
       Virtual Size: '0x21618'
     .pdata:
-      Entropy: 5.86
+      Entropy: 5.857842876978119
       Virtual Size: '0xc9b4'
     .rsrc:
-      Entropy: 4.31
+      Entropy: 4.313378912252271
       Virtual Size: '0x4e8'
     .reloc:
-      Entropy: 5.48
+      Entropy: 5.477739856180325
       Virtual Size: '0x3588'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: ''
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2026-01-21 07:08:43'
+  InternalName: TcIo
+  Copyright: "Copyright \xA9 Beckhoff 1997 - 2022"
   Imports:
   - HAL.dll
   - ntoskrnl.exe
   ExportedFunctions: ''
-  ImportedFunctions: ''
+  ImportedFunctions:
+  - KeStallExecutionProcessor
+  - HalSetBusDataByOffset
+  - HalTranslateBusAddress
+  - HalGetBusDataByOffset
+  - KeQueryPerformanceCounter
+  - _purecall
+  - RtlInitUnicodeString
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - KeQueryActiveProcessors
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - ZwSetInformationThread
+  - KeAcquireSpinLockAtDpcLevel
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - KeReleaseSpinLockFromDpcLevel
+  - ExAllocatePool
+  - ExFreePoolWithTag
+  - MmMapLockedPagesSpecifyCache
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoRegisterShutdownNotification
+  - RtlGetVersion
+  - MmIsAddressValid
+  - IoReportResourceUsage
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlUnicodeStringToAnsiString
+  - RtlFreeAnsiString
+  - RtlUnicodeToUTF8N
+  - KeInitializeDpc
+  - KeClearEvent
+  - KeSetEvent
+  - KeInitializeMutex
+  - KeReleaseMutex
+  - KeDelayExecutionThread
+  - KeSetPriorityThread
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - KeSetTimerEx
+  - KeBugCheckEx
+  - ExAllocatePoolWithTag
+  - ExInitializeResourceLite
+  - ExAcquireResourceSharedLite
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ExDeleteResourceLite
+  - ExSetTimerResolution
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - IoAllocateIrp
+  - IoAllocateMdl
+  - IoCreateSynchronizationEvent
+  - IoFreeIrp
+  - IoFreeMdl
+  - IoGetAttachedDeviceReference
+  - IoGetDeviceProperty
+  - IoGetDeviceInterfaces
+  - ObReferenceObjectByHandle
+  - ObfReferenceObject
+  - ZwClose
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - ExUuidCreate
+  - MmGetPhysicalMemoryRanges
+  - MmGetPhysicalAddress
+  - PsGetCurrentThreadId
+  - PsGetVersion
+  - ZwQuerySystemInformation
+  - ObQueryNameString
+  - __C_specific_handler
+  - RtlQueryRegistryValues
+  - RtlWriteRegistryValue
+  - RtlCreateRegistryKey
+  - RtlCheckRegistryKey
+  - RtlIntegerToUnicodeString
+  - RtlCompareUnicodeString
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlUTF8ToUnicodeN
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - ZwEnumerateValueKey
+  - ZwFlushKey
+  - DbgPrint
+  - MmAllocateMappingAddress
+  - MmFreeMappingAddress
+  - MmMapLockedPagesWithReservedMapping
+  - MmUnmapReservedMapping
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - ExFreePool
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -97,36 +204,43 @@ KnownVulnerableSamples:
         Windows Hardware Compatibility Publisher
       ValidFrom: '2025-07-16 20:48:20'
       ValidTo: '2026-07-14 20:48:20'
-      Signature: ''
+      Signature: b9ad07972990d4f7f1d20dddce037fbf8c19c8fc17ec991a97b0f3d3ac6b792c100f660abcf1eea23ce0eafaae637cb21524c9eb170657b4e3b45bc07fcbe811227491344f510071ddf12fa883ac943d0c0ec3d7c91468dc65b4373d62b939e66fe0f26098912ed0add0c44ff71b32e58db5bc56235c16b533e0ab06e9794e41a38bab04dfa510dddad2291a5c74c28ae750c0937ebaa640452d4708109d08a4e8b9e80a670f54ab2e575158b4e3f491c8a483fe36abb5f5f604a38578fd9a77f817824b1979c1f7b3a5fcd3e14ec6901e9ecc60e58bc4ab39d8ba6aa819d04ec3871d211963d2d34785d75ea15648052847a8572c7d89db4253fa67838639b395263564a561d02e60a7cdc52e65f725166deed0c847c1105350918bd149e889f1dbe604f74aa0110ca1598906e3f1c5efaeda772e51d5f89992258f893aba1baa1c8a14dd59d8f57aa742ee2251b99ce6655f0bcd920760c5a452a5fe5e2f30652b5022d124348161ce86060652b6b84abc60043da659d3e91bb7ce18adbbbb94fa19130947a4a651af21a33d58cafcd5d920016858ddf2b5df3e7dc3bc8a1b66edf03cbca7c40048dae606f66e55692edcd698773d391be409c2895f71fddb7494d28fa3bd30aae628d7967204708b509e551c86cd3a1cbef68796c15e71e15e5dcfc5914352f9991fcd57c5112e03d8c2441cb643bc6bbdfb261bda63746f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: false
-      SerialNumber: 330000007-4ff3d4a9e7c401e860000000000074
+      SerialNumber: 3300000074ff3d4a9e7c401e86000000000074
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
-        MD5: ''
+        MD5: 846e2b51dbe3b3cdd48503e99cbce6a6
         SHA1: 77940716d023ecae58709321c2b6a30df8e3d86d
         SHA256: 1dc33c8d9456aa23f43eb0c09beeb7b3565770f7e05d12d7b88575a4c61fa31f
-        SHA384: ''
+        SHA384: 4aaab3a5d5e7ce0b6103d30108636aaf1ec645331e3d42f57002c2380b2ea34662245f7f84fe07e7837bf6115bbc0eb5
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
       ValidTo: '2029-10-15 20:41:27'
-      Signature: ''
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: true
-      SerialNumber: 330000000d690d5d7893d076df000000000d
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
-        MD5: ''
+        MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
-        SHA384: ''
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
-    - SerialNumber: 330000007-4ff3d4a9e7c401e860000000000074
+    - SerialNumber: 3300000074ff3d4a9e7c401e86000000000074
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
   LoadsDespiteHVCI: 'TRUE'
+  Imphash: 2296feba7970ee2c7866c1c500eb162c
 - Filename: TcRouter.sys
   MD5: aae460e5be936aeb0e79317927d79ca0
   SHA1: 9322d0a40abd3a25ac53006c483b8974edfb953a
@@ -135,53 +249,202 @@ KnownVulnerableSamples:
   Date: ''
   Publisher: ''
   Company: Beckhoff Automation GmbH & Co. KG
-  Description: TwinCAT 3 Router
-  Product: TwinCAT 3
-  ProductVersion: ''
-  FileVersion: ''
+  Description: TwinCAT Router Server
+  Product: Beckhoff TwinCAT
+  ProductVersion: 3.1.4026.0
+  FileVersion: 3.1.0.2355
   MachineType: AMD64
   OriginalFilename: ''
   Authentihash:
-    MD5: ''
+    MD5: 2eafd69d7d76b86abff25c3bb5e37498
     SHA1: 67596d0bf855b7cbdce5cf3fe99d1581ca0231fb
     SHA256: 33bdf2ede15d5fed1f4f2fc4368419c72aec005e0d489b1cf074a8f74e53a055
   RichPEHeaderHash:
-    MD5: 2442bb80af56daa5cb1ce2c323b328de
-    SHA1: ''
-    SHA256: ''
+    MD5: e3ad6f1bf2d3ca1b009f8cd09de50e42
+    SHA1: cf522b1c26507f380888289c2ab4fc854793c654
+    SHA256: 895d20759650b047b9e0cfb88b553317bab74bc75706bba953ec4449d20dbe10
   Sections:
     .text:
-      Entropy: 6.37
+      Entropy: 6.370947421760954
       Virtual Size: '0x1b49f6'
     INIT:
-      Entropy: 5.91
+      Entropy: 5.9111772871291794
       Virtual Size: '0x517'
     .rdata:
-      Entropy: 5.87
+      Entropy: 5.8653097139090455
       Virtual Size: '0x58440'
     .data:
-      Entropy: 4.7
+      Entropy: 4.703036900968916
       Virtual Size: '0x4f940'
     .pdata:
-      Entropy: 6.27
+      Entropy: 6.271740681367154
       Virtual Size: '0x1be58'
     .rsrc:
-      Entropy: 4.25
+      Entropy: 4.252512408108677
       Virtual Size: '0x520'
     .reloc:
-      Entropy: 5.45
+      Entropy: 5.454589958755151
       Virtual Size: '0x4e74'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: ''
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2025-12-02 02:19:46'
+  InternalName: TcRouter
+  Copyright: "Copyright \xA9 Beckhoff Automation GmbH & Co. KG"
   Imports:
   - HAL.dll
   - ntoskrnl.exe
   - NETIO.SYS
   - ksecdd.sys
-  ExportedFunctions: ''
-  ImportedFunctions: ''
+  ExportedFunctions:
+  - ?CalcCertificateDigest@@YAJPEBU_TcKeyCertificateDef@@_KAEAVSHA1@@@Z
+  - ?CalcSerializedCertificateLength@@YAKPEBU_TcKeyCertificateDef@@@Z
+  - ?CheckCertificate@@YAJPEBU_TcKeyCertificateDef@@_K_J@Z
+  - ?ExportCertificate@@YAJPEBU_TcKeyCertificateDef@@PEAE_KPEA_K@Z
+  - ?GenerateRandomBlock@@YAJPEAEK@Z
+  - ?GetRandomValue32@@YAIXZ
+  - ?ImportCertificate@@YAJPEAU_TcKeyCertificateDef@@_KPEBE1@Z
+  - ?SeedRandomBlock@@YAXPEBEK@Z
+  - ?VerifyCertificate@@YAJPEBEK0KK@Z
+  - ?VerifySignature@@YAJPEBEK0K0K@Z
+  - ?VerifySignaturePubkeyExponent@@YAJPEBEK0K0KK@Z
+  - GetRouterFuncTable
+  ImportedFunctions:
+  - KeQueryPerformanceCounter
+  - HalSetBusDataByOffset
+  - HalTranslateBusAddress
+  - HalGetBusDataByOffset
+  - KeStallExecutionProcessor
+  - IoReleaseCancelSpinLock
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlFreeUnicodeString
+  - ZwCreateFile
+  - ZwOpenFile
+  - ZwQueryInformationFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwClose
+  - DbgPrintEx
+  - KdRefreshDebuggerNotPresent
+  - ZwQuerySystemInformation
+  - KdDebuggerNotPresent
+  - KdDebuggerEnabled
+  - RtlUnicodeStringToAnsiString
+  - RtlFreeAnsiString
+  - RtlInitUnicodeString
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - KeQueryActiveProcessors
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - KeAcquireSpinLockAtDpcLevel
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - KeReleaseSpinLockFromDpcLevel
+  - ExAllocatePool
+  - ExFreePoolWithTag
+  - MmMapLockedPagesSpecifyCache
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoRegisterShutdownNotification
+  - RtlGetVersion
+  - MmIsAddressValid
+  - IoReportResourceUsage
+  - RtlLengthRequiredSid
+  - RtlInitializeSid
+  - RtlSubAuthoritySid
+  - RtlLengthSid
+  - RtlCreateAcl
+  - RtlAddAccessAllowedAce
+  - ObSetSecurityObjectByPointer
+  - RtlUnicodeToUTF8N
+  - KeInitializeDpc
+  - KeClearEvent
+  - KeSetEvent
+  - KeInitializeMutex
+  - KeReleaseMutex
+  - KeDelayExecutionThread
+  - KeSetPriorityThread
+  - IofCompleteRequest
+  - KeCancelTimer
+  - KeSetTimer
+  - KeSetTimerEx
+  - KeBugCheckEx
+  - ExAllocatePoolWithTag
+  - ExInitializeResourceLite
+  - ExAcquireResourceSharedLite
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ExDeleteResourceLite
+  - ExSetTimerResolution
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - IoAllocateIrp
+  - IoAllocateMdl
+  - IoCreateSynchronizationEvent
+  - IoFreeIrp
+  - IoFreeMdl
+  - IoGetAttachedDeviceReference
+  - IoGetDeviceProperty
+  - IoGetDeviceInterfaces
+  - ObReferenceObjectByHandle
+  - ObfReferenceObject
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - ExUuidCreate
+  - MmGetPhysicalMemoryRanges
+  - MmGetPhysicalAddress
+  - PsGetCurrentThreadId
+  - PsGetVersion
+  - ZwSetInformationThread
+  - ObQueryNameString
+  - KeWaitForMultipleObjects
+  - IoCancelIrp
+  - RtlQueryRegistryValues
+  - RtlWriteRegistryValue
+  - RtlCreateRegistryKey
+  - RtlCheckRegistryKey
+  - RtlIntegerToUnicodeString
+  - RtlCompareUnicodeString
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlUTF8ToUnicodeN
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - ZwEnumerateValueKey
+  - ZwFlushKey
+  - MmAllocateMappingAddress
+  - MmFreeMappingAddress
+  - MmMapLockedPagesWithReservedMapping
+  - MmUnmapReservedMapping
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - ExFreePool
+  - __C_specific_handler
+  - ExpInterlockedPushEntrySList
+  - ExpInterlockedPopEntrySList
+  - InitializeSListHead
+  - DbgPrint
+  - _purecall
+  - KeInitializeTimer
+  - WskRegister
+  - WskDeregister
+  - WskReleaseProviderNPI
+  - WskCaptureProviderNPI
+  - BCryptGenRandom
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -190,33 +453,40 @@ KnownVulnerableSamples:
         Windows Hardware Compatibility Publisher
       ValidFrom: '2025-07-16 20:48:20'
       ValidTo: '2026-07-14 20:48:20'
-      Signature: ''
+      Signature: b9ad07972990d4f7f1d20dddce037fbf8c19c8fc17ec991a97b0f3d3ac6b792c100f660abcf1eea23ce0eafaae637cb21524c9eb170657b4e3b45bc07fcbe811227491344f510071ddf12fa883ac943d0c0ec3d7c91468dc65b4373d62b939e66fe0f26098912ed0add0c44ff71b32e58db5bc56235c16b533e0ab06e9794e41a38bab04dfa510dddad2291a5c74c28ae750c0937ebaa640452d4708109d08a4e8b9e80a670f54ab2e575158b4e3f491c8a483fe36abb5f5f604a38578fd9a77f817824b1979c1f7b3a5fcd3e14ec6901e9ecc60e58bc4ab39d8ba6aa819d04ec3871d211963d2d34785d75ea15648052847a8572c7d89db4253fa67838639b395263564a561d02e60a7cdc52e65f725166deed0c847c1105350918bd149e889f1dbe604f74aa0110ca1598906e3f1c5efaeda772e51d5f89992258f893aba1baa1c8a14dd59d8f57aa742ee2251b99ce6655f0bcd920760c5a452a5fe5e2f30652b5022d124348161ce86060652b6b84abc60043da659d3e91bb7ce18adbbbb94fa19130947a4a651af21a33d58cafcd5d920016858ddf2b5df3e7dc3bc8a1b66edf03cbca7c40048dae606f66e55692edcd698773d391be409c2895f71fddb7494d28fa3bd30aae628d7967204708b509e551c86cd3a1cbef68796c15e71e15e5dcfc5914352f9991fcd57c5112e03d8c2441cb643bc6bbdfb261bda63746f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: false
-      SerialNumber: 330000007-4ff3d4a9e7c401e860000000000074
+      SerialNumber: 3300000074ff3d4a9e7c401e86000000000074
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
-        MD5: ''
+        MD5: 846e2b51dbe3b3cdd48503e99cbce6a6
         SHA1: 77940716d023ecae58709321c2b6a30df8e3d86d
         SHA256: 1dc33c8d9456aa23f43eb0c09beeb7b3565770f7e05d12d7b88575a4c61fa31f
-        SHA384: ''
+        SHA384: 4aaab3a5d5e7ce0b6103d30108636aaf1ec645331e3d42f57002c2380b2ea34662245f7f84fe07e7837bf6115bbc0eb5
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
       ValidTo: '2029-10-15 20:41:27'
-      Signature: ''
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
       IsCertificateAuthority: true
-      SerialNumber: 330000000d690d5d7893d076df000000000d
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
-        MD5: ''
+        MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
-        SHA384: ''
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
-    - SerialNumber: 330000007-4ff3d4a9e7c401e860000000000074
+    - SerialNumber: 3300000074ff3d4a9e7c401e86000000000074
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
   LoadsDespiteHVCI: 'TRUE'
+  Imphash: 872daab1baf534a62c538d0a37cab271
