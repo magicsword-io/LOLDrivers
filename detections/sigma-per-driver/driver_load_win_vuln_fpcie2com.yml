@@ -9,7 +9,7 @@ references:
     - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 author: Takahiro Haruyama
 date: 2023/11/02
-modified: 2026/04/10
+modified: 2026/04/13
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,26 +21,26 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=cafbf85b902f189ba35f3d7823aad195'
+            - 'MD5=05369fa594a033e48b7921018b3263fb'
             - 'MD5=ecccbf1e7c727f923c9d709707800e6c'
+            - 'MD5=cafbf85b902f189ba35f3d7823aad195'
             - 'MD5=c552dae8eaadd708a38704e8d62cf64d'
             - 'MD5=9fdcd543574a712a80d62da8bfd8331c'
-            - 'MD5=05369fa594a033e48b7921018b3263fb'
-            - 'SHA1=340ce5d8859f923222bea5917f40c4259cce1bbc'
-            - 'SHA1=cfcecf6207d16aeb0af29aac8a4a2f104483018e'
             - 'SHA1=f70eb454c0e9ea67a18c625faf7a666665801035'
-            - 'SHA1=59b0b8e3478f3d21213a8afda84181c4ed0a79a7'
             - 'SHA1=a0c7c913d7b5724a46581b6e00dd72c26c37794d'
+            - 'SHA1=cfcecf6207d16aeb0af29aac8a4a2f104483018e'
+            - 'SHA1=340ce5d8859f923222bea5917f40c4259cce1bbc'
+            - 'SHA1=59b0b8e3478f3d21213a8afda84181c4ed0a79a7'
             - 'SHA256=81fbc9d02ef9e05602ea9c0804d423043d0ea5a06393c7ece3be03459f76a41d'
-            - 'SHA256=17942865680bd3d6e6633c90cc4bd692ae0951a8589dbe103c1e293b3067344d'
-            - 'SHA256=b1920889466cd5054e3ab6433a618e76c6671c3e806af8b3084c77c0e7648cbe'
             - 'SHA256=ebf0e56a1941e3a6583aab4a735f1b04d4750228c18666925945ed9d7c9007e1'
+            - 'SHA256=b1920889466cd5054e3ab6433a618e76c6671c3e806af8b3084c77c0e7648cbe'
             - 'SHA256=32bd0edb9daa60175b1dc054f30e28e8dbfa293a32e6c86bfd06bc046eaa2f9e'
+            - 'SHA256=17942865680bd3d6e6633c90cc4bd692ae0951a8589dbe103c1e293b3067344d'
             - 'IMPHASH=3ca448454c33a5c72ad5e774de47930a'
+            - 'IMPHASH=799c9c020c6fcfd11a4172bc861f74af'
             - 'IMPHASH=8d616e68080def2200312de80392efa7'
             - 'IMPHASH=ecf8495ba751a7e38d6be4c5c80f2bef'
             - 'IMPHASH=c91146dfe120f6e8fbed2150d9e020ca'
-            - 'IMPHASH=799c9c020c6fcfd11a4172bc861f74af'
     condition: selection_hashes
 falsepositives:
     - Unknown

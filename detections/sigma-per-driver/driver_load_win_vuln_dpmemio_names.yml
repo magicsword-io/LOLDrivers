@@ -1,0 +1,30 @@
+title: Driver Load - dpmemio.sys
+id: 1cc7e714-e4af-58c3-9c7f-c40d6b9e7cd7
+status: experimental
+description: |
+    Detects loading of driver dpmemio.sys via name.
+    ET&T Technology Co., Ltd. dpmemio.sys (ClevoECView) is a 12KB driver with only 9 imports that provides completely unrestricted arbitrary physical memory read/write and I/O port access with no authentication, no ACL, no address validation, and no size validation. MmUnmapIoSpace is not even imported, meaning every MmMapIoSpace call permanently leaks a system PTE mapping. An additional bug exists where MOVSXD sign-extension on a 32-bit UserBufferPtr provides a write-to-kernel-VA primitive. IOCTLs exposed via \\.\dpMemIO include 0xC80A2420 (arbitrary physical memory READ via MmMapIoSpace), 0xC80A2424 (arbitrary physical memory WRITE via MmMapIoSpace), 0xC80A2410/0xC80A2414 (I/O port read/write byte), 0xC80A2418/0xC80A241C (I/O port read/write variable size), and 0xC80A2428 (version/ping). VeriSign signed with a revoked certificate.
+references:
+    - https://www.loldrivers.io/drivers/741677e9-20d5-40e5-9cd2-3bf2beb76322/
+    - https://github.com/magicsword-io/LOLDrivers/issues/288
+    - https://www.virustotal.com/gui/file/7cf6881e43337c288b1883fafb234146a450ff94388aee395e05e36202c5afbb
+    - https://www.virustotal.com/gui/file/cd631c54fe1375e4bdd2f63b58bd106066eeee267fc77b3161ceb023ab5fddda
+author: Michael Haag
+date: 2026/04/06
+modified: 2026/04/13
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dpmemio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

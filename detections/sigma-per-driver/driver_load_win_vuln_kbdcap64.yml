@@ -8,7 +8,7 @@ references:
     - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/04/10
+modified: 2026/04/13
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -20,8 +20,8 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=13bd61916343d94ebefc9a7911d7bf88'
             - 'MD5=91203acddac81511d17a68a030d063a8'
+            - 'MD5=13bd61916343d94ebefc9a7911d7bf88'
             - 'SHA1=44a3a00394a6d233a27189482852babf070ffebe'
             - 'SHA1=f5293ac70d75cdfe580ff6a9edcc83236012eaf1'
             - 'SHA256=97030f3c81906334429afebbf365a89b66804ed890cd74038815ca18823d626c'
