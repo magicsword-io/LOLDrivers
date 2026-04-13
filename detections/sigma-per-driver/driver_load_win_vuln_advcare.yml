@@ -1,0 +1,32 @@
+title: Driver Load - AdvCare.sys
+id: 912dfc7b-9f04-5a9e-bc18-65e11b4f2ad7
+status: experimental
+description: |
+    Detects loading of driver AdvCare.sys via hash.
+    AdvCare.sys is a legacy hardware health monitor driver from Advantech Co., Ltd. for industrial PCs and embedded boards. The driver exposes arbitrary MSR read/write (wrmsr/rdmsr with no validation), arbitrary physical memory read/write via MmMapIoSpace, unrestricted port I/O across all 65536 ports, and PCI configuration space read/write via HalGetBusDataByOffset/HalSetBusDataByOffset. The device is created with IoCreateDevice (no DACL) and IRP_MJ_CREATE returns STATUS_SUCCESS unconditionally with zero caller validation -- no admin check, no token check, no integrity check. Any unprivileged local user can open the device and invoke every primitive. The driver is also available in the KeServiceDescriptorTable/vulnerable-drivers repository on GitHub.
+references:
+    - https://www.loldrivers.io/drivers/658a906e-82d3-4c78-a63b-ddddeeb3f452/
+    - https://github.com/magicsword-io/LOLDrivers/issues/306
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/13
+modified: 2026/04/13
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=25b14ddbce32c0fd3ce53ac82145e257'
+            - 'SHA1=b08ca7e4a4aeb8a1f8049c1aa61255afe87987cd'
+            - 'SHA256=697d3e6d215d1ed6dc2465334502db92e0ca77ad0b8392c945ac9e0f36509666'
+            - 'IMPHASH=7c5012267ba1ab0751dd14c55b19c00b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

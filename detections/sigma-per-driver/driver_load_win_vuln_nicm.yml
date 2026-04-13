@@ -21,18 +21,18 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=3bf217f8ef018ca5ea20947bfdfc0a4d'
             - 'MD5=52b7cd123f6d1b9ed76b08f2ee7d9433'
             - 'MD5=f690bfc0799e51a626ba3931960c3173'
-            - 'MD5=3bf217f8ef018ca5ea20947bfdfc0a4d'
             - 'SHA1=26a8ab6ea80ab64d5736b9b72a39d90121156e76'
-            - 'SHA1=d3a6f86245212e1ef9e0e906818027ec14a239cb'
             - 'SHA1=4d6e532830058fadd861ff9eac16de8cfc6974ce'
-            - 'SHA256=904e0f7d485a98e8497d5ec6dd6e6e1cf0b8d8e067fb64a9e09790af3c8c9d5a'
+            - 'SHA1=d3a6f86245212e1ef9e0e906818027ec14a239cb'
             - 'SHA256=3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0'
             - 'SHA256=cf3180f5308af002ac5d6fd5b75d1340878c375f0aebc3157e3bcad6322b7190'
-            - 'IMPHASH=0e4f5481813eeec4e5dd96e36020135f'
-            - 'IMPHASH=f2dc136141066311fddef65f7f417c44'
+            - 'SHA256=904e0f7d485a98e8497d5ec6dd6e6e1cf0b8d8e067fb64a9e09790af3c8c9d5a'
             - 'IMPHASH=8ec78cf864273fd81203678b61c41f04'
+            - 'IMPHASH=f2dc136141066311fddef65f7f417c44'
+            - 'IMPHASH=0e4f5481813eeec4e5dd96e36020135f'
     condition: selection_hashes
 falsepositives:
     - Unknown

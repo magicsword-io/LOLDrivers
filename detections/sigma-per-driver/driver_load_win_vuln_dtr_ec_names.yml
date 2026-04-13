@@ -1,0 +1,28 @@
+title: Driver Load - dtr_ec.sys
+id: 0fd3ee14-e166-50cd-bba9-6b15cd8c1a9f
+status: experimental
+description: |
+    Detects loading of driver dtr_ec.sys via name.
+    dtr_ec.sys is a Dell kernel driver that ships as part of the Dell Feature Enhancement Pack (DFEP) on Dell laptops and desktops. The driver provides unrestricted read/write access to Embedded Controller (EC) registers across 5 ACPI address spaces from usermode with no validation on the register addresses or values. The Embedded Controller manages critical hardware functions including thermal management, battery charging, fan control, power states, and keyboard input. Unrestricted EC register access allows manipulation of thermal thresholds to cause hardware damage or forced shutdowns, modification of fan speed controls, interference with battery charging logic, and alteration of power management behavior. Dell PSIRT has confirmed the vulnerability and triaged it as P2 severity on Bugcrowd.
+references:
+    - https://www.loldrivers.io/drivers/a2177b22-0401-4c31-8ae4-40a7e2a53653/
+    - https://github.com/magicsword-io/LOLDrivers/issues/293
+author: Michael Haag
+date: 2026/04/13
+modified: 2026/04/13
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dtr_ec.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
