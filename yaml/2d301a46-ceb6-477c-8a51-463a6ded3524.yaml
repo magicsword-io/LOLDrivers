@@ -1,0 +1,243 @@
+Id: 2d301a46-ceb6-477c-8a51-463a6ded3524
+Tags:
+- BiosToolCommonDriver.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create BiosToolCommonDriver binPath=C:\windows\temp\BiosToolCommonDriver.sys
+    type=kernel && sc.exe start BiosToolCommonDriver
+  Description: BiosToolCommonDriver.sys is an AMD RPMC (Replay Protected Monotonic
+    Counter) field fusing utility driver that exposes 18 IOCTLs including arbitrary
+    physical memory read/write via MmMapIoSpace, unrestricted port I/O, PCI configuration
+    space read/write, MSR read/write (wrmsr/rdmsr), SPI flash read, CPUID execution,
+    virtual-to-physical address translation via MmGetPhysicalAddress, and contiguous
+    memory allocation. WHQL Microsoft-signed and also AMD Sectigo dual-signed. Ships
+    inside Razer Blade 16 BIOS update packages and ASUS firmware config bundles. PDB
+    path confirms AMD internal build origin.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/321
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: BiosToolCommonDriver.sys
+  MD5: 622cca8e67e9056955e0aeb55716a68f
+  SHA1: d4c584732fa9abd7d7eb83e169686764c500f2e0
+  SHA256: 177227f68cc28ee7726381b95f7d2215da35be3750157ebcb7e113201059026c
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Advanced Micro Devices
+  Description: the AMD driver to access CPU registers
+  Product: AMD Field Fusing
+  ProductVersion: 1.1.3.0
+  FileVersion: 1.1.3.0
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: be3cf8458143f2e2f47481043a18e6f5
+    SHA1: 129f2f059513ae62d0f63e3644cbfa7b671b938b
+    SHA256: 14deaf22605904971fe757778cec9e46a0fd59a1895491760740404843929481
+  RichPEHeaderHash:
+    MD5: b6de948480c7ea3b6ad83a0f8e3c3e89
+    SHA1: 62a6a791154f84d42c78bbc01181daa6c1faf27e
+    SHA256: 52fb8ab5dba36942fbb2d80b644aadd755f6ab2143a1471ce8e7dce41b539f59
+  Sections:
+    .text:
+      Entropy: 5.663196139144487
+      Virtual Size: '0x2ba9'
+    .rdata:
+      Entropy: 4.456837946896162
+      Virtual Size: '0x964'
+    .data:
+      Entropy: 2.0076655699548906
+      Virtual Size: '0x238'
+    .pdata:
+      Entropy: 4.2301068403747975
+      Virtual Size: '0x324'
+    PAGE:
+      Entropy: 6.246124236805516
+      Virtual Size: '0x1b94'
+    INIT:
+      Entropy: 5.150810900004228
+      Virtual Size: '0x632'
+    .rsrc:
+      Entropy: 3.270504549595088
+      Virtual Size: '0x320'
+    .reloc:
+      Entropy: 3.444998860709685
+      Virtual Size: '0x2c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-10-07 02:01:23'
+  InternalName: ''
+  Copyright: "Copyright \xA9 Advanced Micro Devices 2017"
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlVerifyVersionInfo
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - KeDelayExecutionThread
+  - VerSetConditionMask
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - MmGetPhysicalAddress
+  - __chkstk
+  - DbgPrintEx
+  - MmMapIoSpace
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - ExFreePoolWithTag
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - ExAllocatePoolWithTag
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
+        CN=Advanced Micro Devices Inc.
+      ValidFrom: '2021-05-11 00:00:00'
+      ValidTo: '2024-05-10 23:59:59'
+      Signature: 8444e268ff381c9148985f408e5cc1453a560c9dd94d2a6cfa01dd7f2adc8af633053d2c79027db4f185f477b0d5db8b362b37dbd0d258823831ace7058baf3feb80a9eb2de9dd886bcf390fae9b586fc833e63db5c6a07019f35a9fce6899502852737b32d25ea7832c3786df0642d21622e56c0b0171e96f9520d07f73950376ff555bcf9c8a55bf4f86c088b58e2cb625a0ef4680ed7281f09a40c7be9f69cba77a6967030e39b2cfa46692698ced9e5347dd7056b476545c3442f934cb2c30cb986afabd29a9a9e2eb28c5bd6ee47dabf5ef587f850ea49b124eb868aac68de949616d08f875192b93388549c7327a3ef085e287d5a743810c151b250c64
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 535091e6cab13af393b51ead0825f627
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: f2f60243e26dcdf4729d28b1beb55f01
+        SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
+        SHA256: 192ee517f8ae928808632422a6461613d65ee324fa58d2f099a27a3d0da9ca6b
+        SHA384: beb93a1ff1715564a418ecb07cee42465dbf9c76cc703e7088bdafb2099b003afa0c335bcd15d318dcb2bf8519c199da
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-08-01 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 70a0bf435c55e7385fa0a3741b3db616d7f7bf5707bd9aaca1872cec855ea91abb22f8871a695422eda488776dbd1a14f4134a7a2f2db738eff4ff80b9f8a1f7f272de24bc5203c84ed02adefa2d56cff9f4f7ac307a9a8bb25ed4cfd143449b4321eb9672a148b499cb9d4fa7060313772744d4e77fe859a8f0bf2f0ba6e9f2343cecf703c787a8d24c401935466a6954b0b8a1568eeca4d53de8b1dcfd1cd8f4775a5c548c6fefa1503dfc760968849f6fcadb208d35601c0203cb20b0ac58a00e4063c59822c1b259f5556bcf27ab6c76ce6f232df47e716a236b22ff12b8542d277ed83ad9f0b68796fd5bd15cac18c34d9f73b701a99f57aa5e28e2b994
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 21a266bd49f2778b24d13d95641ea6ac
+        SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
+        SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
+        SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 1da248306f9b2618d082e0967d33d36a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: c1eabfb5994258ad955adb7c2df165e6
+        SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
+        SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+        SHA384: 20adc5b59cb532e215f01ba09a9c745898c206555613512fea7c295ccfd17ced4fe2c5bc3274ca8a270fc68799b8343c
+    - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      ValidFrom: '2015-07-22 21:03:49'
+      ValidTo: '2025-07-22 21:03:49'
+      Signature: 6b22933c3d395471646b0ef2e43c3011c5204a4b860f92f1ff33793ad9e498a70e40a022807e61b2e0a719cf2695312a65d46a4f3186eac0c62ec5648c3d4859cd0b2f743d9426131042d49798275e3c76d278691d1a64e7057275e0eb6640439f8f0c46ff9760a6c867ad10089b62a6e9be3a8ad3074d9f729325bc0611e02c90383e671cfd19d79e90ce3dc2e0e761acc0e504f51e99540c910d01567137ae27d49e4322a5c927cd4de571123924a5415687ffbc55140f25ca89eec797e5d213ff3d7e1aa08f3fc82cd7a370d0c760c0fcd83e51e797c63e3bedcf78be8acae3c4f2a7a7ed9eae08028fa052db721ed53bc34d9f8efa9b70c7f8e3bf6c3f929be4373eec6a8c29f9c1a2bf8b3e1a6966fb1c634f2601c902c43ed2ffc343a81bfd99fad4bca5b9e2932f3b01c5d1f43a2f68c3e064b75a955e46cc078369bb3c05925673357345984e7cd812a5b742e9a263f642601870d13b6f31c087c7e671e1f34616e9f5b872b3e96d1f622649a3498bdd68c78b6856f7defcfa8724b80381178fe5f1676a1daed374f78ca55db30b8e422996ce49c4777e667c01171a6c1424c3b0177705d81a40b7866bd8e47b40ac7edf4e6f24f92080828c33e7e5fa29d89dda8b705d2bc91d824c0b67cb84419ee7067e1183442d8a19eef47f9add791c37191e9f3f8c29ba0d5c1086376c48cd455dcd70bcbcd14d5dd8c5b876
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000044b73ffcef5acfa27a000000000044
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
+        SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
+        SHA256: ad394b7e5cb9ccf6429762405f9840b648e38e8faf2de376f1aa375c6729abb7
+        SHA384: eda103bac2997f31d778637ce8d1fa1263485a9d6a77d6e381bad8312e6bbec020ce5036e16ca96087e50f6ab200944a
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2023
+      ValidFrom: '2023-07-14 00:00:00'
+      ValidTo: '2034-10-13 23:59:59'
+      Signature: 811ad6dea0a9b59817bc708d4f8a3c689cd825ffcb2ce4cdea5d2292ec8c2202a9b8cf80a8d9e7e3c5ed26828a712f18dd4eb6de6cd7e1609c2beded3d488eb86bba7c5dbdc26137684977a3eb90aa12d72785f38e1e92dac240389f5dc8a02e2578259d2a057a842998b657798fdb26562bb0f3a7bd370cd898764f56b952c2b69d38a981e76d415c8c69d1b92bc4c67bcf9cfa78e2931a76a26975d350e44412be200d9ea944d0f8e54977085a21c5b4cf98951a54bab9bcc16919bacf16f28337346eb04126ddde5a974f338dd48d777d7545a1a558266a0345ded950b5508caf56bd4cc5e146c528d3ade7430070decc989e198903ead49137ef4d52f3c96021c45647edda114b8c32c388e658e2b6db3ef95fb042d68fe31791d1aac055e386bfac272c41d09a334aa836d4b972967e977938485fcac2dc3d32df75d636675a89f8f6a7c7e54f353c00bdbe9c2a6c7901dcda44e63ade383b075e3958f47c733155a08011cb140c7eaebcfea4eb7965aa68d622ca3beb9a8235572816cb69f2329ab2d2d83ab8b146866bba17fdc4776c156caeabaf733ae84946b7d57fccb638c0d8ec1cf5b6a1b8432cdf4e4c7d1e6870c0770ad402e05c60bb28ff38e5525ad6ac1722234ef4ecd317fb506bff07771f71974441c9b846d36c327c582f674765e51b73b699f96b2c0646ef411ef0f05fe0dbd9ad908044af8010418a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0544aff3949d0839a6bfdb3f5fe56116
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 7630cbd02cc6732394e9fdfe99d0d8f8
+        SHA1: bc1890d694f9d392c4cbae6a174e35d70e7ec8b1
+        SHA256: 594a02de632b3a08ed6644c36994025e57f35bc8e7bd16cec5d347883390d1d8
+        SHA384: 31d9fb75262762d17046f31e5c54509f58a295d505e411019544000b64f607b44b3346b708fa50d48f199dba56f0c0b1
+    Signer:
+    - SerialNumber: 535091e6cab13af393b51ead0825f627
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: e3c915c62d33052b715b0a50dfa2d89d
