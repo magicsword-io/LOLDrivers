@@ -1,0 +1,148 @@
+Id: 24d8bef2-379c-4a27-bd2d-4f13136f3476
+Tags:
+- HardwareMon-x86.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create HardwareMon-x86 binPath=C:\windows\temp\HardwareMon-x86.sys
+    type=kernel && sc.exe start HardwareMon-x86
+  Description: HardwareMon-x86.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: HardwareMon-x86.sys
+  MD5: 99498c8990be78cc7f0fe0d08fee873d
+  SHA1: 1e293e3d795e3a19e54ab14f2f70d8c556907ca5
+  SHA256: 14807ce592bf8f12da8a338d7ef575ae60c2d513c5c7ecf1f276aef3b2aa627c
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Hubei Century Network Technology Co., Ltd.
+  Description: Win I/O Driver
+  Product: "\u6613\u4E50\u6E38\u7F51\u5A31\u5E73\u53F0"
+  ProductVersion: 1.0.0.0
+  FileVersion: 1.1.0.0
+  MachineType: AMD64
+  OriginalFilename: HardwareMon-x86.sys
+  Authentihash:
+    MD5: 859b80d95a55d0e7bd45a9298ae32f88
+    SHA1: b98ccf5b0b7d0d17750bc867ae999a627c66d080
+    SHA256: 6bfb88d3563e28e2fccaad764c14513dc70018519a5a360762cccc35ddc67c0b
+  RichPEHeaderHash:
+    MD5: e3277c67b71fdf1121e0f7d17296b0b8
+    SHA1: 079ffdaabf5a294a1bdfa47316b251b056633e42
+    SHA256: 244358f08d7fe010f8986222a03aa9321585c2d9eac8bbfe1c84c95072d5fe4c
+  Sections:
+    .text:
+      Entropy: 6.238609474327266
+      Virtual Size: '0xeb4'
+    .rdata:
+      Entropy: 4.349024354131262
+      Virtual Size: '0x1fc'
+    .data:
+      Entropy: 0.6097689737518377
+      Virtual Size: '0x128'
+    .pdata:
+      Entropy: 3.422503929414001
+      Virtual Size: '0xa8'
+    INIT:
+      Entropy: 5.064431077089415
+      Virtual Size: '0x27e'
+    .rsrc:
+      Entropy: 3.428641174183399
+      Virtual Size: '0x3f0'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-05-18 00:00:05'
+  InternalName: HardwareMon.sys
+  Copyright: Copyright (C) 2012 Hubei Century Network Technology Co., Ltd.
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - IofCompleteRequest
+  - ExFreePoolWithTag
+  - IoCreateDevice
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - IoCreateSymbolicLink
+  - ExAllocatePoolWithTag
+  - __C_specific_handler
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
+      ValidFrom: '2016-03-16 00:00:00'
+      ValidTo: '2024-03-16 00:00:00'
+      Signature: 3b41bbc84f561182b719e3d96dc185ae9e690ec84326234b8d44c8e87d5f070e5341d563444a890bb874ac7db578792f8426e2d7f7bad1ae2dfd69cffa7c64dc24162a4adac097a9bbd5dd88e7a1929a0aa5f6f7bace85d6e4e3d455deeddc3e211f1bc87788cffc65fb05b48f12a630d30d66982f6c2e6f85187c8ff5f6fbb1ab10e183270885b07321ba5d2cba8330b73984dd5db67fd28bb455534c42a2bc4a6c78395b631ca37827bfbe34836b6d7b1e60fbc29b0d88ac8c72546bdc3b88ba81525e689783b8ce7fa3cdf9ea2f2676facd0b06ac4344497bf64c9442b2abcfd542d51942696e618664c7b37d078bdbe5767b6e5f65a91690a2cee4ae6492
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47c30ffefc22bb280f96fea75251
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
+        SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
+        SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
+        SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
+    - Subject: "C=CN, ST=Hubei, L=Wuhan, O=\u6E56\u5317\u76DB\u5929\u7F51\u7EDC\u6280\
+        \u672F\u80A1\u4EFD\u6709\u9650\u516C\u53F8, OU=IT Dept, CN=\u6E56\u5317\u76DB\
+        \u5929\u7F51\u7EDC\u6280\u672F\u80A1\u4EFD\u6709\u9650\u516C\u53F8"
+      ValidFrom: '2019-10-22 04:09:34'
+      ValidTo: '2023-01-18 09:08:46'
+      Signature: 9416e0980cb29d17e961dbd62269ae4297ab42a5af477039e6020c9ed2d3246b0c940584c71f5a1ebae6919d4fc34d8829d6803e28a03854b9f622cddaeef0f93d605acf7fda3cd2bf49f6d3a6e0ed02d05e6faa49e905ea58dd2593e41e1f126ee5ce7ffbaa3eef917644878c311ac28a133bcf76e53411aec404c7f6698f8dd4a45aff2ca1192d12f60ae12fa967bb20e8a18761d0004095fd0d40f34dad0697bec7df071c095300f1ab41ccf935cc8ce9d7ad17857be864899e1e977b78c1f87ec2d5a9e70ebd0510333be8826b9211c2eca9a67d87dde71d70925c0a0232f873d61bfa53436fee3dfe8c4103dc49ba7defec279507583fde7fdcf51dff30
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 5ff658f618068ae50027294e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 5373aa0f14f051fe6685ed0f13d500a5
+        SHA1: cb50e1a0465f2b5cf62c2add228bceb50f8c9d9b
+        SHA256: fb4ab87962c93b90bf46c4044a42ac60b1b38b5e3f16baa7ba80bb580be92358
+        SHA384: 78b4200d654cd7b176e3fe017ed321e02e637a81dda98ea43962e560e9fcc29e9c884455d39d9590f8be738480349184
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 5ff658f618068ae50027294e
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 70ba87ed0810c07055c329c7899396de

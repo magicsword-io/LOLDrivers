@@ -1,0 +1,624 @@
+Id: 4e7563f0-0d77-43e9-b765-a509ba121818
+Tags:
+- DNDrv.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create DNDrv binPath=C:\windows\temp\DNDrv.sys type=kernel && sc.exe
+    start DNDrv
+  Description: DNDrv.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: DNDrv.sys
+  MD5: d31c9e4b1aa80d922bfb10b0c780fe2c
+  SHA1: 64c6c1203d0300175e7012505d1655354c84a978
+  SHA256: e786f64dab69f2ae1e399044f59dc4b8efc7c291f77ca7f5df4394fe00edf62b
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Oracle Corporation
+  Description: VirtualBox Support Driver
+  Product: Oracle VM VirtualBox
+  ProductVersion: 4.3.12.r93733
+  FileVersion: 4.3.12.93733
+  MachineType: AMD64
+  OriginalFilename: DNDrv.sys
+  Authentihash:
+    MD5: d423cb65c0e70be48c172f1926c52972
+    SHA1: 92435117ec51d530ce7e272601fc00c1b6acfc64
+    SHA256: fe72b01f65bf9e418d6c5020818878ee738163825f9d07bee79d371602edca97
+  RichPEHeaderHash:
+    MD5: 8f925c96ca50e02190ed082d7479d864
+    SHA1: 58603ac399b63c3761df4cbb1dd3b480fd64868d
+    SHA256: 48f08696cdf88e9e43da07b3e9029573244cfd13caae4dc7750088626e63919b
+  Sections:
+    .text:
+      Entropy: 6.388532564536763
+      Virtual Size: '0x230b6'
+    .rdata:
+      Entropy: 5.83492331319949
+      Virtual Size: '0xd840'
+    .data:
+      Entropy: 4.107664786586772
+      Virtual Size: '0x6c0c'
+    .pdata:
+      Entropy: 5.499165560504227
+      Virtual Size: '0x2a9c'
+    .edata:
+      Entropy: 5.860252932730301
+      Virtual Size: '0x2fdc'
+    INIT:
+      Entropy: 5.018684871575789
+      Virtual Size: '0x89c'
+    .rsrc:
+      Entropy: 3.328931218035759
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 5.073240551866169
+      Virtual Size: '0xdaa'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2016-08-29 22:12:01'
+  InternalName: DNDrv.sys
+  Copyright: Copyright (C) 2009-2016 Oracle Corporation
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions:
+  - ?RTThreadSleepCommon@@YAHI@Z
+  - ASMAtomicBitClear
+  - ASMAtomicXchgU16
+  - ASMAtomicXchgU8
+  - ASMGetCS
+  - ASMGetDS
+  - ASMGetES
+  - ASMGetFS
+  - ASMGetGS
+  - ASMGetSS
+  - ASMNopPause
+  - RTAssertAreQuiet
+  - RTAssertMayPanic
+  - RTAssertMsg1
+  - RTAssertMsg1Weak
+  - RTAssertMsg2
+  - RTAssertMsg2AddV
+  - RTAssertMsg2V
+  - RTAssertMsg2Weak
+  - RTAssertMsg2WeakV
+  - RTAssertSetMayPanic
+  - RTAssertSetQuiet
+  - RTAssertShouldPanic
+  - RTAvlPVDestroy
+  - RTAvlPVDoWithAll
+  - RTAvlPVGet
+  - RTAvlPVGetBestFit
+  - RTAvlPVInsert
+  - RTAvlPVRemove
+  - RTAvlPVRemoveBestFit
+  - RTCrc32
+  - RTCrc32Finish
+  - RTCrc32Process
+  - RTCrc32Start
+  - RTErrConvertFromErrno
+  - RTErrConvertFromNtStatus
+  - RTErrConvertToErrno
+  - RTErrVarsAreEqual
+  - RTErrVarsHaveChanged
+  - RTErrVarsRestore
+  - RTErrVarsSave
+  - RTHandleTableAllocWithCtx
+  - RTHandleTableCreate
+  - RTHandleTableCreateEx
+  - RTHandleTableDestroy
+  - RTHandleTableFreeWithCtx
+  - RTHandleTableLookupWithCtx
+  - RTLatin1CalcUtf8Len
+  - RTLatin1CalcUtf8LenEx
+  - RTLatin1ToUtf8ExTag
+  - RTLatin1ToUtf8Tag
+  - RTLogCloneRC
+  - RTLogComPrintf
+  - RTLogComPrintfV
+  - RTLogCreate
+  - RTLogCreateEx
+  - RTLogCreateExV
+  - RTLogDefaultInit
+  - RTLogDefaultInstance
+  - RTLogDestinations
+  - RTLogDestroy
+  - RTLogFlags
+  - RTLogFlush
+  - RTLogFlushRC
+  - RTLogFlushToLogger
+  - RTLogFormatV
+  - RTLogGetDefaultInstance
+  - RTLogGetDestinations
+  - RTLogGetFlags
+  - RTLogGetGroupSettings
+  - RTLogGroupSettings
+  - RTLogLoggerExV
+  - RTLogLoggerV
+  - RTLogPrintfV
+  - RTLogRelDefaultInstance
+  - RTLogRelLoggerV
+  - RTLogRelPrintfV
+  - RTLogRelSetBuffering
+  - RTLogRelSetDefaultInstance
+  - RTLogSetBuffering
+  - RTLogSetCustomPrefixCallback
+  - RTLogSetDefaultInstance
+  - RTLogSetDefaultInstanceThread
+  - RTLogWriteCom
+  - RTLogWriteDebugger
+  - RTLogWriteStdErr
+  - RTLogWriteStdOut
+  - RTLogWriteUser
+  - RTMemAllocExTag
+  - RTMemAllocTag
+  - RTMemAllocVarTag
+  - RTMemAllocZTag
+  - RTMemAllocZVarTag
+  - RTMemContAlloc
+  - RTMemContFree
+  - RTMemDupExTag
+  - RTMemDupTag
+  - RTMemExecAllocTag
+  - RTMemExecFree
+  - RTMemFree
+  - RTMemFreeEx
+  - RTMemReallocTag
+  - RTMemTmpAllocTag
+  - RTMemTmpAllocZTag
+  - RTMemTmpFree
+  - RTMpCpuId
+  - RTMpCpuIdFromSetIndex
+  - RTMpCpuIdToSetIndex
+  - RTMpGetArraySize
+  - RTMpGetCoreCount
+  - RTMpGetCount
+  - RTMpGetMaxCpuId
+  - RTMpGetOnlineCount
+  - RTMpGetOnlineSet
+  - RTMpGetPresentCoreCount
+  - RTMpGetPresentCount
+  - RTMpGetPresentSet
+  - RTMpGetSet
+  - RTMpIsCpuOnline
+  - RTMpIsCpuPossible
+  - RTMpIsCpuPresent
+  - RTMpIsCpuWorkPending
+  - RTMpNotificationDeregister
+  - RTMpNotificationRegister
+  - RTMpOnAll
+  - RTMpOnOthers
+  - RTMpOnSpecific
+  - RTMpPokeCpu
+  - RTNetIPv4AddDataChecksum
+  - RTNetIPv4AddTCPChecksum
+  - RTNetIPv4AddUDPChecksum
+  - RTNetIPv4FinalizeChecksum
+  - RTNetIPv4HdrChecksum
+  - RTNetIPv4IsDHCPValid
+  - RTNetIPv4IsHdrValid
+  - RTNetIPv4IsTCPSizeValid
+  - RTNetIPv4IsTCPValid
+  - RTNetIPv4IsUDPSizeValid
+  - RTNetIPv4IsUDPValid
+  - RTNetIPv4PseudoChecksum
+  - RTNetIPv4PseudoChecksumBits
+  - RTNetIPv4TCPChecksum
+  - RTNetIPv4UDPChecksum
+  - RTNetIPv6PseudoChecksum
+  - RTNetIPv6PseudoChecksumBits
+  - RTNetIPv6PseudoChecksumEx
+  - RTNetTCPChecksum
+  - RTNetUDPChecksum
+  - RTPowerNotificationDeregister
+  - RTPowerNotificationRegister
+  - RTPowerSignalEvent
+  - RTProcSelf
+  - RTR0AssertPanicSystem
+  - RTR0Init
+  - RTR0MemAreKrnlAndUsrDifferent
+  - RTR0MemKernelCopyFrom
+  - RTR0MemKernelCopyTo
+  - RTR0MemKernelIsValidAddr
+  - RTR0MemObjAddress
+  - RTR0MemObjAddressR3
+  - RTR0MemObjAllocContTag
+  - RTR0MemObjAllocLowTag
+  - RTR0MemObjAllocPageTag
+  - RTR0MemObjAllocPhysExTag
+  - RTR0MemObjAllocPhysNCTag
+  - RTR0MemObjAllocPhysTag
+  - RTR0MemObjEnterPhysTag
+  - RTR0MemObjFree
+  - RTR0MemObjGetPagePhysAddr
+  - RTR0MemObjIsMapping
+  - RTR0MemObjLockKernelTag
+  - RTR0MemObjLockUserTag
+  - RTR0MemObjMapKernelExTag
+  - RTR0MemObjMapKernelTag
+  - RTR0MemObjMapUserTag
+  - RTR0MemObjProtect
+  - RTR0MemObjReserveKernelTag
+  - RTR0MemObjReserveUserTag
+  - RTR0MemObjSize
+  - RTR0MemUserCopyFrom
+  - RTR0MemUserCopyTo
+  - RTR0MemUserIsValidAddr
+  - RTR0ProcHandleSelf
+  - RTR0Term
+  - RTR0TermForced
+  - RTSemEventCreate
+  - RTSemEventCreateEx
+  - RTSemEventDestroy
+  - RTSemEventGetResolution
+  - RTSemEventMultiCreate
+  - RTSemEventMultiCreateEx
+  - RTSemEventMultiDestroy
+  - RTSemEventMultiGetResolution
+  - RTSemEventMultiReset
+  - RTSemEventMultiSignal
+  - RTSemEventMultiWait
+  - RTSemEventMultiWaitEx
+  - RTSemEventMultiWaitExDebug
+  - RTSemEventMultiWaitNoResume
+  - RTSemEventSignal
+  - RTSemEventWait
+  - RTSemEventWaitEx
+  - RTSemEventWaitExDebug
+  - RTSemEventWaitNoResume
+  - RTSemFastMutexCreate
+  - RTSemFastMutexDestroy
+  - RTSemFastMutexRelease
+  - RTSemFastMutexRequest
+  - RTSemMutexCreate
+  - RTSemMutexCreateEx
+  - RTSemMutexDestroy
+  - RTSemMutexIsOwned
+  - RTSemMutexRelease
+  - RTSemMutexRequest
+  - RTSemMutexRequestDebug
+  - RTSemMutexRequestNoResume
+  - RTSemMutexRequestNoResumeDebug
+  - RTSemSpinMutexCreate
+  - RTSemSpinMutexDestroy
+  - RTSemSpinMutexRelease
+  - RTSemSpinMutexRequest
+  - RTSemSpinMutexTryRequest
+  - RTSpinlockAcquire
+  - RTSpinlockCreate
+  - RTSpinlockDestroy
+  - RTSpinlockRelease
+  - RTSpinlockReleaseNoInts
+  - RTStrAAppendNTag
+  - RTStrAAppendTag
+  - RTStrATruncateTag
+  - RTStrAllocExTag
+  - RTStrAllocTag
+  - RTStrCalcLatin1Len
+  - RTStrCalcLatin1LenEx
+  - RTStrCalcUtf16Len
+  - RTStrCalcUtf16LenEx
+  - RTStrConvertHexBytes
+  - RTStrCopy
+  - RTStrCopyP
+  - RTStrDupExTag
+  - RTStrDupNTag
+  - RTStrDupTag
+  - RTStrFormat
+  - RTStrFormatNumber
+  - RTStrFormatTypeDeregister
+  - RTStrFormatTypeRegister
+  - RTStrFormatTypeSetUser
+  - RTStrFormatV
+  - RTStrFree
+  - RTStrGetCpExInternal
+  - RTStrGetCpInternal
+  - RTStrGetCpNExInternal
+  - RTStrIsValidEncoding
+  - RTStrNCmp
+  - RTStrPrevCp
+  - RTStrPrintf
+  - RTStrPrintfEx
+  - RTStrPrintfExV
+  - RTStrPrintfV
+  - RTStrPurgeComplementSet
+  - RTStrPurgeEncoding
+  - RTStrPutCpInternal
+  - RTStrReallocTag
+  - RTStrToInt16
+  - RTStrToInt16Ex
+  - RTStrToInt16Full
+  - RTStrToInt32
+  - RTStrToInt32Ex
+  - RTStrToInt32Full
+  - RTStrToInt64
+  - RTStrToInt64Ex
+  - RTStrToInt64Full
+  - RTStrToInt8
+  - RTStrToInt8Ex
+  - RTStrToInt8Full
+  - RTStrToLatin1ExTag
+  - RTStrToLatin1Tag
+  - RTStrToUInt16
+  - RTStrToUInt16Ex
+  - RTStrToUInt16Full
+  - RTStrToUInt32
+  - RTStrToUInt32Ex
+  - RTStrToUInt32Full
+  - RTStrToUInt64
+  - RTStrToUInt64Ex
+  - RTStrToUInt64Full
+  - RTStrToUInt8
+  - RTStrToUInt8Ex
+  - RTStrToUInt8Full
+  - RTStrToUni
+  - RTStrToUniEx
+  - RTStrToUtf16ExTag
+  - RTStrToUtf16Tag
+  - RTStrUniLen
+  - RTStrUniLenEx
+  - RTStrValidateEncoding
+  - RTStrValidateEncodingEx
+  - RTThreadCreate
+  - RTThreadCreateF
+  - RTThreadCreateV
+  - RTThreadCtxHooksAreRegistered
+  - RTThreadCtxHooksCreate
+  - RTThreadCtxHooksDeregister
+  - RTThreadCtxHooksRegister
+  - RTThreadCtxHooksRelease
+  - RTThreadCtxHooksRetain
+  - RTThreadFromNative
+  - RTThreadGetName
+  - RTThreadGetNative
+  - RTThreadGetType
+  - RTThreadIsInInterrupt
+  - RTThreadIsInitialized
+  - RTThreadIsMain
+  - RTThreadIsSelfAlive
+  - RTThreadIsSelfKnown
+  - RTThreadNativeSelf
+  - RTThreadPreemptDisable
+  - RTThreadPreemptIsEnabled
+  - RTThreadPreemptIsPending
+  - RTThreadPreemptIsPendingTrusty
+  - RTThreadPreemptIsPossible
+  - RTThreadPreemptRestore
+  - RTThreadSelf
+  - RTThreadSelfName
+  - RTThreadSetName
+  - RTThreadSetType
+  - RTThreadSleep
+  - RTThreadUserReset
+  - RTThreadUserSignal
+  - RTThreadUserWait
+  - RTThreadUserWaitNoResume
+  - RTThreadWait
+  - RTThreadWaitNoResume
+  - RTThreadYield
+  - RTTimeExplode
+  - RTTimeFromString
+  - RTTimeImplode
+  - RTTimeIsLeapYear
+  - RTTimeMilliTS
+  - RTTimeNanoTS
+  - RTTimeNormalize
+  - RTTimeNow
+  - RTTimeSpecFromString
+  - RTTimeSpecToString
+  - RTTimeSystemMilliTS
+  - RTTimeSystemNanoTS
+  - RTTimeToString
+  - RTTimerCanDoHighResolution
+  - RTTimerChangeInterval
+  - RTTimerCreate
+  - RTTimerCreateEx
+  - RTTimerDestroy
+  - RTTimerGetSystemGranularity
+  - RTTimerReleaseSystemGranularity
+  - RTTimerRequestSystemGranularity
+  - RTTimerStart
+  - RTTimerStop
+  - RTUuidClear
+  - RTUuidCompare
+  - RTUuidCompare2Strs
+  - RTUuidCompareStr
+  - RTUuidFromStr
+  - RTUuidFromUtf16
+  - RTUuidIsNull
+  - RTUuidToStr
+  - RTUuidToUtf16
+  - SUPGetGIP
+  - SUPR0ComponentDeregisterFactory
+  - SUPR0ComponentQueryFactory
+  - SUPR0ComponentRegisterFactory
+  - SUPR0ContAlloc
+  - SUPR0ContFree
+  - SUPR0EnableVTx
+  - SUPR0GetPagingMode
+  - SUPR0GipMap
+  - SUPR0GipUnmap
+  - SUPR0LockMem
+  - SUPR0LowAlloc
+  - SUPR0LowFree
+  - SUPR0MemAlloc
+  - SUPR0MemFree
+  - SUPR0MemGetPhys
+  - SUPR0ObjAddRef
+  - SUPR0ObjAddRefEx
+  - SUPR0ObjRegister
+  - SUPR0ObjRelease
+  - SUPR0ObjVerifyAccess
+  - SUPR0PageAllocEx
+  - SUPR0PageFree
+  - SUPR0PageMapKernel
+  - SUPR0PageProtect
+  - SUPR0Printf
+  - SUPR0QueryVTCaps
+  - SUPR0ResumeVTxOnCpu
+  - SUPR0SuspendVTxOnCpu
+  - SUPR0TracerDeregisterDrv
+  - SUPR0TracerDeregisterImpl
+  - SUPR0TracerFireProbe
+  - SUPR0TracerRegisterDrv
+  - SUPR0TracerRegisterImpl
+  - SUPR0TracerRegisterModule
+  - SUPR0TracerUmodProbeFire
+  - SUPR0UnlockMem
+  - SUPSemEventClose
+  - SUPSemEventCreate
+  - SUPSemEventGetResolution
+  - SUPSemEventMultiClose
+  - SUPSemEventMultiCreate
+  - SUPSemEventMultiGetResolution
+  - SUPSemEventMultiReset
+  - SUPSemEventMultiSignal
+  - SUPSemEventMultiWait
+  - SUPSemEventMultiWaitNoResume
+  - SUPSemEventMultiWaitNsAbsIntr
+  - SUPSemEventMultiWaitNsRelIntr
+  - SUPSemEventSignal
+  - SUPSemEventWait
+  - SUPSemEventWaitNoResume
+  - SUPSemEventWaitNsAbsIntr
+  - SUPSemEventWaitNsRelIntr
+  - g_pSUPGlobalInfoPage
+  - g_pszRTAssertExpr
+  - g_pszRTAssertFile
+  - g_pszRTAssertFunction
+  - g_szRTAssertMsg1
+  - g_szRTAssertMsg2
+  - g_u32RTAssertLine
+  ImportedFunctions:
+  - memchr
+  - strncmp
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - RtlInitUnicodeString
+  - ObfDereferenceObject
+  - ExUnregisterCallback
+  - IofCompleteRequest
+  - IoIs32bitProcess
+  - ZwSetSystemInformation
+  - ExRegisterCallback
+  - ExCreateCallback
+  - DbgPrint
+  - KeInsertQueueDpc
+  - KeSetTimerEx
+  - KeRemoveQueueDpc
+  - KeCancelTimer
+  - KeSetTargetProcessorDpc
+  - KeSetImportanceDpc
+  - KeInitializeDpc
+  - KeInitializeTimerEx
+  - KeQueryTimeIncrement
+  - KeDelayExecutionThread
+  - ZwYieldExecution
+  - KeSetPriorityThread
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - PsCreateSystemThread
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - KeInitializeMutex
+  - KeWaitForSingleObject
+  - KeReleaseMutex
+  - KeReadStateMutex
+  - KeInitializeEvent
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - KeSetEvent
+  - KeResetEvent
+  - PsGetCurrentProcessId
+  - IoGetCurrentProcess
+  - __C_specific_handler
+  - ProbeForRead
+  - ProbeForWrite
+  - MmHighestUserAddress
+  - MmSystemRangeStart
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - KeQueryActiveProcessors
+  - strchr
+  - PsGetVersion
+  - MmIsAddressValid
+  - MmGetSystemRoutineAddress
+  - MmUnmapIoSpace
+  - MmUnlockPages
+  - MmFreeContiguousMemory
+  - IoFreeMdl
+  - MmFreePagesFromMdl
+  - MmUnsecureVirtualMemory
+  - MmUnmapLockedPages
+  - MmProtectMdlSystemAddress
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmAllocatePagesForMdl
+  - MmSecureVirtualMemory
+  - MmProbeAndLockPages
+  - MmMapIoSpace
+  - MmMapLockedPagesSpecifyCache
+  - MmGetPhysicalAddress
+  - MmAllocateContiguousMemory
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2016-02-12 00:59:41'
+      ValidTo: '2017-05-12 00:59:41'
+      Signature: 0210244a38e60788c490bbbaee58bc7e486218dbcb32a1e00bc7752d9cb4da02162f15554918a8e8653add910b574e60f976315e78531bf7982a3f6ca006a2b7b4f75a7dba52dc2cc0a58eee6e9cd98f5c3936e362601a2115898fded8cb69eefe27fd5da7bcb5d18e9d69b82e13560b4a74a859f3ebb29cb545ae37546819c9f024c886e9998ced25ffda2695c393d91415707e90153f38beb77e4e841f6b2b4371239e914fe2c995ec1bc3e95b1678ac39a07b844572a3645b0a0030fff64dc4d1fc5e20090a2d74107f805564857941a02867d5828abe94f1c7a86b9bdd8b9b62d69627dab20acd5da7fb82568a629cbfbed8014a6e3f0f5c081c302edf49b3308aa7572175fa66c825bcbb41a6a27f01ce6a6b82dba3b6f6b553b13642bf92bc74c21ca6c1e52f76632b1054b358dd68e4957cdbd581370e9aa17b4cd8d674cef62e1c1392cef1834871f264b116fdcd51199c51a988d3690995a2ea57157166b5229b89ffa2cc2c8288e4d7537fd30a9c81ca92151162b85d79028e9703d2d027c230162d5d1d6fc8b94aeddce4e90b8952857185e2b0cc670c807aa869f5f1c48a81dbe184c318906fb633e52ce35fc361d95551dc6efa48538ab6efda8e912cd3216c9d642c258a0fd0aa87f9774cdbf85e114435851c6950e75a0fdeb606b2ca4e0807f36f02fd671a75772dc53a7512b096854c33fd0ecf8df4ed1b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000012b05493eaddceeb4b000000000012
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 5d19b3cef5d0b1d4ea0524dcf9eb5d0c
+        SHA1: c381a636b19cbe03c2a94dc78bc4acf71635f04e
+        SHA256: 0dda3e69e8dcb1f7a11232bd13fc1c7445158aaca9688cd623dbcc1ccd139ab6
+        SHA384: 3840aa649cd90f78c039d5d638eafc5fd611afd9e3aee4c0bea8b350c5172acaea042a56336ce1755e3ee7398435ea67
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 3300000012b05493eaddceeb4b000000000012
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+  Imphash: 912cb4e9ebbc30aed14dc1984dc75d01
