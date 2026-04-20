@@ -1,0 +1,284 @@
+Id: a6340f12-b0ee-41c5-acf0-92be886d1296
+Tags:
+- KmWpsMs.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create KmWpsMs binPath=C:\windows\temp\KmWpsMs.sys type=kernel &&
+    sc.exe start KmWpsMs
+  Description: KmWpsMs.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: KmWpsMs.sys
+  MD5: 0c488b536a5df62166894d1e89b39c9a
+  SHA1: 1e711120242c556c4521e7859cd543ebc71c1c9d
+  SHA256: b045c00f3b921da2e9a5c7977e51c8beceff4a89ec9c4e365f3e4d41f8129e98
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: NComputing Co., Ltd
+  Description: NComputing Station MU driver
+  Product: vSpace
+  ProductVersion: 12.1.0.0
+  FileVersion: 12.1.0.0
+  MachineType: AMD64
+  OriginalFilename: KmWpsMs.sys
+  Authentihash:
+    MD5: b8fdb11c0d176457c5096d2a7f9ca744
+    SHA1: 00d640774fb95e636b86abf23211ee12bf53e8bf
+    SHA256: 8a7f6dbb674b86bc7c26642da1262fa54d4f5698b63cf01412aa917550aa8fa9
+  RichPEHeaderHash:
+    MD5: 8658d1804f0bc3781f41ad804b1ac195
+    SHA1: 44843e83c3a511d390e27778ba8f762e356687b3
+    SHA256: 862614253f0246688bdd37c541a1db7fe2d70c845602fb99c5d70ce341bcbfdb
+  Sections:
+    .text:
+      Entropy: 6.3190830466205865
+      Virtual Size: '0x18e5e'
+    .rdata:
+      Entropy: 4.860551274183764
+      Virtual Size: '0x2660'
+    .data:
+      Entropy: 2.852377883488072
+      Virtual Size: '0x47e4'
+    .pdata:
+      Entropy: 5.163350417278744
+      Virtual Size: '0x1068'
+    PAGE:
+      Entropy: 6.096475023782559
+      Virtual Size: '0x277'
+    INIT:
+      Entropy: 5.654429748167809
+      Virtual Size: '0x106c'
+    .rsrc:
+      Entropy: 3.3211884686033692
+      Virtual Size: '0x3d0'
+    .reloc:
+      Entropy: 4.732151849097593
+      Virtual Size: '0xac'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-06-27 01:24:27'
+  InternalName: KmWpsMs.sys
+  Copyright: "Copyright \xA9 2015-2019 NComputing Global, Inc."
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - RtlInitString
+  - RtlInitAnsiString
+  - RtlQueryRegistryValues
+  - RtlAnsiStringToUnicodeString
+  - RtlEqualUnicodeString
+  - RtlFreeUnicodeString
+  - KeClearEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - ExAllocatePoolWithTag
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetAttachedDeviceReference
+  - IoGetDeviceObjectPointer
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwCreateKey
+  - ZwSetValueKey
+  - RtlUpperChar
+  - MmGetPhysicalAddress
+  - MmGetVirtualForPhysical
+  - PsGetCurrentProcessId
+  - ObQueryNameString
+  - KeNumberProcessors
+  - wcsncpy
+  - DbgPrint
+  - IoAllocateErrorLogEntry
+  - IoWriteErrorLogEntry
+  - ZwCreateFile
+  - ZwQueryInformationFile
+  - vsprintf_s
+  - sprintf
+  - __C_specific_handler
+  - _stricmp
+  - wcsncmp
+  - ZwClose
+  - RtlCreateRegistryKey
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - KeInitializeEvent
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoDeleteDevice
+  - ZwDeleteKey
+  - RtlUpcaseUnicodeString
+  - PsSetCreateProcessNotifyRoutine
+  - PsSetLoadImageNotifyRoutine
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - RtlIntegerToUnicodeString
+  - RtlCompareMemory
+  - IoFreeIrp
+  - PsGetCurrentThreadId
+  - IoGetDeviceProperty
+  - IoGetDeviceInterfaces
+  - _wcsicmp
+  - _wcsnicmp
+  - KeDelayExecutionThread
+  - IoGetCurrentProcess
+  - IoOpenDeviceRegistryKey
+  - ObfReferenceObject
+  - ZwEnumerateKey
+  - MmGetSystemRoutineAddress
+  - RtlZeroMemory
+  - PsGetVersion
+  - RtlUnicodeStringToInteger
+  - IoCreateSymbolicLink
+  - ZwEnumerateValueKey
+  - _vswprintf
+  - KeReleaseMutex
+  - PsCreateSystemThread
+  - RtlPrefixUnicodeString
+  - MmIsAddressValid
+  - KeInitializeTimer
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ZwSetSystemInformation
+  - NtQuerySystemInformation
+  - MmSystemRangeStart
+  - ZwReadFile
+  - RtlStringFromGUID
+  - wcschr
+  - wcsrchr
+  - ExFreePool
+  - IoBuildSynchronousFsdRequest
+  - PsGetProcessWow64Process
+  - ExFreePoolWithTag
+  - ExAllocatePool
+  - RtlWriteRegistryValue
+  - RtlInitUnicodeString
+  - KeBugCheckEx
+  - ExAllocatePoolWithQuotaTag
+  - ZwQuerySystemInformation
+  - HalGetBusData
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee152d7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e140543fe3256027cfa79fc3c19c1776
+        SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
+        SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
+    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+        , G2
+      ValidFrom: '2016-05-24 00:00:00'
+      ValidTo: '2027-06-24 00:00:00'
+      Signature: 8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1121d699a764973ef1f8427ee919cc534114
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: acb5170547d76873f1e4ff18ed5de2eb
+        SHA1: bd6e261e75b807381bada7287de04d259258a5fa
+        SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=California,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=C3967495, C=US, ST=California,
+        L=San Mateo, O=NComputing Global, Inc., CN=NComputing Global, Inc.
+      ValidFrom: '2017-11-09 00:00:00'
+      ValidTo: '2019-12-31 12:00:00'
+      Signature: 02b252b75ab2488c8f035ba9c98f7c40032b9666b9124a9469cd7ab81c08c672afa066196557d1e614fb7c8c9d6af938fb949c6faafbbae48d81eef6e561f10a1a3cf1c13c358b1d4527a25c2298f639fc558037556d968d0c548fcfbd0cb99aaeb3acdbce3f16c004aebe8c509707f14f088324d5481bd792a3340bad6176e3f9cc824f8250a64ab089eb7c2686cc8562ff341d3fc9e18cc3e48c8dfcc93ace84efed7e3446fc4f3f80f085b238b4127e775f387350b1cb51e196a11e9a3f0b449d15cd3e4d9c850f130ec5bb1e3ffd3a144ebd122fd1eb9b019fe186480f26b0657e6b0615fde1a7fad1eb30213387394f431f921d0e02c980474e61f0952d
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0116ee4b99400c14c2c17a27333715fa
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 4c3ca5f3ec084c510dcd1b544a746fa3
+        SHA1: e2e7c2a9236acdabe4bbb8229d94e5c89e7ca39f
+        SHA256: cf85011e7056a3fb6de0b5a9edcd67aa26048d9a1cbf26c528c1ea7d25ca3506
+        SHA384: e893ee59c9a8c458771b7fb7f665c672899de78716e162d330d9d4759436ebdd7ef402726a1ec4441ca672ff2fa37b89
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0116ee4b99400c14c2c17a27333715fa
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 23f361e3c0f41a57dc3b5555e6b0ebc9

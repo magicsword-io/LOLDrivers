@@ -1,0 +1,171 @@
+Id: 0e94f1a2-beab-4adb-9687-eb2719a201c9
+Tags:
+- mst.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create mst binPath=C:\windows\temp\mst.sys type=kernel && sc.exe
+    start mst
+  Description: mst.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: mst.sys
+  MD5: 84c230b35f5c8e2a075362277c513a94
+  SHA1: 001136fe2a17280190a7adcf95586ebcffa4aac2
+  SHA256: bf8d3377fc0834828afcc94165172333b2e1b58fb37d45be91a07d8d2e54d431
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Mellanox Technologies Ltd.
+  Description: MST Driver
+  Product: MST (Mellanox Support Tools)
+  ProductVersion: 10.0.10011.16384
+  FileVersion: 0.1.0.0
+  MachineType: AMD64
+  OriginalFilename: mst.sys
+  Authentihash:
+    MD5: 3c15644a60cc2fd398a514bb60995226
+    SHA1: 2eb67b65e70b3de842b0c6b487a83481cbe5624d
+    SHA256: 1822e496ba402b26d4a736d4626334752d0be76b4a68cc2e799e7a9db4a69515
+  RichPEHeaderHash:
+    MD5: 9ea853a51ad34f4ef7136cb25a6a4cf9
+    SHA1: 74d84cab66e4a2a45496e7dc335bc0495077138e
+    SHA256: 29f7c6e8c9e2f82a41dc24d9b91bc6ddf207a25ae0b371d9a854cbddb4319d80
+  Sections:
+    .text:
+      Entropy: 6.482851786902089
+      Virtual Size: '0x9605'
+    .rdata:
+      Entropy: 4.667649121506625
+      Virtual Size: '0x10ac'
+    .data:
+      Entropy: 2.9604410044154026
+      Virtual Size: '0x4e60'
+    .pdata:
+      Entropy: 4.607078988743739
+      Virtual Size: '0x498'
+    PAGE:
+      Entropy: 6.332068054816651
+      Virtual Size: '0x1bbb'
+    INIT:
+      Entropy: 5.804097592188216
+      Virtual Size: '0xc6a'
+    .rsrc:
+      Entropy: 3.2957574935042957
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.5242616516270497
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-04-13 11:02:45'
+  InternalName: mst.sys
+  Copyright: "Copyright\xA9 2007 Mellanox Technologies"
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeWaitForSingleObject
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmUnmapIoSpace
+  - IoAllocateMdl
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - MmGetPhysicalAddress
+  - MmGetVirtualForPhysical
+  - __C_specific_handler
+  - KeReleaseMutex
+  - MmMapIoSpace
+  - RtlQueryRegistryValues
+  - DbgPrintEx
+  - RtlTimeToTimeFields
+  - KeGetCurrentProcessorNumberEx
+  - ExSystemTimeToLocalTime
+  - ZwWriteFile
+  - ZwClose
+  - PsGetCurrentProcessId
+  - PsGetCurrentThreadId
+  - sprintf_s
+  - _vsnprintf
+  - KeBugCheckEx
+  - KeInitializeMutex
+  - DbgPrint
+  - KeDelayExecutionThread
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - ExAllocatePoolWithQuotaTag
+  - ZwQuerySystemInformation
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - KeQueryPerformanceCounter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=MellanoxCert(Test)
+      ValidFrom: '2019-01-24 09:37:26'
+      ValidTo: '2039-12-31 23:59:59'
+      Signature: 0f41790d8339f582a943b24e9a1678a5890109ef2bf2cb2f8b89de3bfa80bba2ccc0149dd1f7742daf21e26d5ef0bcdc192a3360d8bd247c13e989fc25521c4bc947afc1db188dcff931e702718a6fb84e5a5dd0bda7c57eec5270fe2b92375ab364e23bf0f289066fe1c29a45cdd6600bdf567cfbebec184f60f5a1434716e1c36444eca03520cbd4fd0111f8932e96f5a36b8fb6ea71aa64c633f112a70b659c0108c4750e707e4daa9f7a2c989cf81f1ac80219bdead4d7ee12e7b5188826e3d2e96f20899f7c0e41541a9d080bec054758019956033ee4201925aef3a81cae321f7e3754535b6191c328f3fa6b6da24e347011a13577a6281e2e070bcb33
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 886b354fcf261fa6471bb123f32cde0c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 5e5b9537780aa13d3fb2d14d1b8bfef8
+        SHA1: ed748386784a1509dbfa0fde91dd186ba78eb477
+        SHA256: 5370eb20751c80998024d1bbb4fc8778f95b15a7ac81718144037f7194b4498c
+        SHA384: 57b2168c2326b65d79a067f33616801823c8a10966aabeca523a3ef7d351eb3593f2c0bc48799143aa3ca464ead7dd34
+    Signer:
+    - SerialNumber: 886b354fcf261fa6471bb123f32cde0c
+      Issuer: CN=MellanoxCert(Test)
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 4662aae0e89f6e51d339e12af74eb4df

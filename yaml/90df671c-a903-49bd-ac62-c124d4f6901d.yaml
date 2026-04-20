@@ -1,0 +1,135 @@
+Id: 90df671c-a903-49bd-ac62-c124d4f6901d
+Tags:
+- GlobalVistaVentures_v3.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create GlobalVistaVentures_v3 binPath=C:\windows\temp\GlobalVistaVentures_v3.sys
+    type=kernel && sc.exe start GlobalVistaVentures_v3
+  Description: GlobalVistaVentures_v3.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: GlobalVistaVentures_v3.sys
+  MD5: a3e41b5caaabf71f04d110b158fbf2e2
+  SHA1: 36175fd1dc300b86af6b6e9f890d07e8a603067e
+  SHA256: 7ccb02b9dc8bb46e5ea32fb8f4c93bac195bcbb0c2fc02d3af28f4208afe7c41
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 005fefb26c2f32153bda34215f9ef37d
+    SHA1: bf8197d2246cf01f455bb842f3c82dcfb3a9eba5
+    SHA256: 81b5ec019957fd1b214e4f73ddfc73d6dfd93d4ec7a5f29580b629ef63283b43
+  RichPEHeaderHash:
+    MD5: 2eb98651d3fc2f67b20a798bd8bd1d88
+    SHA1: 9d566d1386dc27db55e29a5709f5453dc8c09f30
+    SHA256: 68c71cc3f2bb0fa93ebe5c8e5bc5f70e54e881d9efabd1bfb01d013a5b5842c7
+  Sections:
+    .text:
+      Entropy: 6.526715779124252
+      Virtual Size: '0x3730'
+    .rdata:
+      Entropy: 5.349164536717139
+      Virtual Size: '0x7ac'
+    .data:
+      Entropy: 0.04256591576655208
+      Virtual Size: '0xd8'
+    .pdata:
+      Entropy: 4.081907354912228
+      Virtual Size: '0x1c8'
+    INIT:
+      Entropy: 4.860930898931167
+      Virtual Size: '0x4d8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-05-01 03:59:20'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitAnsiString
+  - RtlInitUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - RtlCompareUnicodeString
+  - RtlFreeUnicodeString
+  - DbgPrintEx
+  - RtlGetVersion
+  - ExAllocatePool
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoGetCurrentProcess
+  - ObfDereferenceObject
+  - KeAttachProcess
+  - KeDetachProcess
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - PsLookupProcessByProcessId
+  - ZwAllocateVirtualMemory
+  - ZwFreeVirtualMemory
+  - ZwQueryVirtualMemory
+  - PsGetProcessPeb
+  - MmCopyVirtualMemory
+  - ZwQuerySystemInformation
+  - PsInitialSystemProcess
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - MmProtectMdlSystemAddress
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmUnmapIoSpace
+  - MmMapIoSpaceEx
+  - IoFreeMdl
+  - MmCopyMemory
+  - MmGetVirtualForPhysical
+  - MmIsAddressValid
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert youss,133730752550224793
+      ValidFrom: '2024-10-10 23:07:35'
+      ValidTo: '2034-10-11 00:00:00'
+      Signature: 70023230b056964e058614ed2d83f7c540b2344815347295c2c8e9e619689dd6acef6036d0261a9fbfb838e454ba3a9723e2f56630c9d5095780a84294f6e408dc45ff3c7fcd2fc008f9db87d41cca0caf456c981a80399573b8cba2abbd04fa5b12cf2c35d230314c343f60bf5529665b504cb1ce05ddd2a5a63389ff86fd2a64ac85d51aace3ba58840be4ac7cdaceaa9d65bb6416c720759ea09bea027e8845c90ce00229e7eebb92dc6736335ed1f8ad9c17374b50735f38a3cdb1d725bbc659754b82891a746541cc6c23fe2a5b896ab621f4cc6f6d3acb57c286d3e7667bd01185b8e7beb622d2934b5300f670ea9b100ef8e6793cfda414047ef96cc2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 4c489abdb650d38741eef80e98f910e1
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: fd74b887e48405a254d311662c0432f7
+        SHA1: 094b9bf2e5b782f0af1f7e168c1a2cea67f7f723
+        SHA256: 009b1c19660abc872a00cbb8b498e03ff65dc34d788c4344bd0ece66162f6bde
+        SHA384: 33c2319981104cfab7efbd6fb4be7ecc66a7d8aa9ddddba70ee5775cd0e292a038595acb4329a1c6146d11e862ca0ab8
+    Signer:
+    - SerialNumber: 4c489abdb650d38741eef80e98f910e1
+      Issuer: CN=WDKTestCert youss,133730752550224793
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 224fd8efd6b1832a5c50de95bf5acc85

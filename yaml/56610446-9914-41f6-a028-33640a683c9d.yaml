@@ -1,0 +1,128 @@
+Id: 56610446-9914-41f6-a028-33640a683c9d
+Tags:
+- Kinkajou.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create Kinkajou binPath=C:\windows\temp\Kinkajou.sys type=kernel
+    && sc.exe start Kinkajou
+  Description: Kinkajou.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: Kinkajou.sys
+  MD5: eb59b40453b7d61b14559155c176e527
+  SHA1: 261e06eca5649465b6f18641841ee58f966693c3
+  SHA256: f5dd6db447868c2964c1d109e7d2cc31ebdace198b3d0a02cfba5b7ef7ae6964
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 7e2640d868eb4565598c90e4c2f0062d
+    SHA1: 851e088bb12ea2e77324329999694972673e21a7
+    SHA256: c48e5dbc0726c55d22c8682f54321cdeb79e383f78e75e246d1fc54d5c45da9f
+  RichPEHeaderHash:
+    MD5: 9c6d1a0c2143e467c327678c07d8fed9
+    SHA1: 4f5e5f8c45dbb9fe04f47443531c02c93f3e3b2f
+    SHA256: d2a5f38cb5831e84b2e3a7f999a239c30cacb3777eff05cfe4ba9889a5f4c786
+  Sections:
+    .text:
+      Entropy: 6.256171045369229
+      Virtual Size: '0x1ef3'
+    .rdata:
+      Entropy: 4.458321228525931
+      Virtual Size: '0x4e4'
+    .data:
+      Entropy: 0.10665088125913882
+      Virtual Size: '0x520'
+    .pdata:
+      Entropy: 3.9516986994651138
+      Virtual Size: '0x1a4'
+    INIT:
+      Entropy: 4.708538123656397
+      Virtual Size: '0x3d2'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-07-22 15:47:09'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - KeInvalidateAllCaches
+  - MmIsAddressValid
+  - KeAttachProcess
+  - KeDetachProcess
+  - ZwAllocateVirtualMemory
+  - ZwFreeVirtualMemory
+  - PsGetProcessPeb
+  - ZwLockVirtualMemory
+  - strlen
+  - DbgPrintEx
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlCompareUnicodeString
+  - RtlGetVersion
+  - ExAllocatePool
+  - MmUnmapIoSpace
+  - MmMapIoSpaceEx
+  - MmCopyMemory
+  - MmGetVirtualForPhysical
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - ZwQueryVirtualMemory
+  - ZwQuerySystemInformation
+  - KeFlushEntireTb
+  - wcslen
+  - PsInitialSystemProcess
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert yo,133912822835426319
+      ValidFrom: '2025-05-09 16:38:03'
+      ValidTo: '2035-05-09 00:00:00'
+      Signature: 0b94ec3e15d95958a2d1ac724a36e4fed1399bacf84520750f14e2ef02db1cfa21e6194a7cabc853916e9244cdab6007fa56ac8aae6a51cdf97a7d8e012a2ced24164f2eefb8c2a984d10ad396aa6ac18501f0f904bbf9429789cca00e94d3d7a2dc46f03fb9b92b7aec78f1de8a34503e1d71b59565c704a860f106de654d47b2ded338428238a7bbd40831058a03d80566d9518aec974806a0525760308a495a36da5ea7759360eee720991bd9239e22d3fd9fbb60e892a5effc99c18daaa888054bf83e892180e1ce608f4c1d6ff8066ffe66879ff965b5d40933f5e569fed82ad43043802d736c92d05f3e02b7caefefb634313561ed9db94ba8d9cea296
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 406a99baa9a804a045ee6c1eafccb7ea
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 474a38691ebb40a6f341094226e077d8
+        SHA1: b07eeddcd585caf30a87b24dfbecbb6591b13a10
+        SHA256: 9587bcedca7adaf508d6d87c0dd8c9561a3b6dbf0a6e94af1d25c80dc4a3c3f1
+        SHA384: c2d0141830e472ce80a4dacc67f3f948ba38492eb0119b946cda985d0734777ee31d45b56e573052be058b6392abd795
+    Signer:
+    - SerialNumber: 406a99baa9a804a045ee6c1eafccb7ea
+      Issuer: CN=WDKTestCert yo,133912822835426319
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 3be76d9d3a7d0bbcdfea3e19cd85f633

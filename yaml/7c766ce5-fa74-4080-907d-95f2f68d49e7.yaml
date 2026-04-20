@@ -1,0 +1,157 @@
+Id: 7c766ce5-fa74-4080-907d-95f2f68d49e7
+Tags:
+- mtxmem.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create mtxmem binPath=C:\windows\temp\mtxmem.sys type=kernel &&
+    sc.exe start mtxmem
+  Description: mtxmem.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: mtxmem.sys
+  MD5: 0b664978b24775689f8bc1afc86e05da
+  SHA1: 8c5fd6fb98bed0c040c6962bc2c3111c1bfcbc84
+  SHA256: bd434c90eba514f5448978edb8b9fcd424f2e5cf3c0df9040efe5c25ec692dbc
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Matrox Electronic Systems Ltd.
+  Description: Matrox Memory Manager (64-bit)
+  Product: "Matrox\xAE Imaging Library (MIL)"
+  ProductVersion: 10.50.0923.4242
+  FileVersion: 10.50.0923.4242
+  MachineType: AMD64
+  OriginalFilename: mtxmem.sys
+  Authentihash:
+    MD5: 6189512b3f79b36867b15a6717a3398c
+    SHA1: 9c7dca8a2802be34425838ef0d7664e976c34f91
+    SHA256: 2704a256d2f4c9177462a134f835c1abe206831e594011c69e7655d19c51d480
+  RichPEHeaderHash:
+    MD5: b3987580282f655be49fa2ea77dd3e91
+    SHA1: 7a1ef255435158ac0a27c3390e836af6e7f629f8
+    SHA256: 7cf46322e150b490d77149e12851052c9d0cabedade98203f8c6ae1a0f91b060
+  Sections:
+    .text:
+      Entropy: 6.134221855724071
+      Virtual Size: '0x6679'
+    .rdata:
+      Entropy: 4.886455913074579
+      Virtual Size: '0x137c'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x51d8'
+    .pdata:
+      Entropy: 4.4948148148847755
+      Virtual Size: '0x720'
+    INIT:
+      Entropy: 5.0066381745328865
+      Virtual Size: '0x4d2'
+    .rsrc:
+      Entropy: 3.4332328259350815
+      Virtual Size: '0x4f8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-04-24 19:52:45'
+  InternalName: MtxMemManager
+  Copyright: "\xA9 Matrox Electronic Systems Ltd., 1992-2022 All rights reserved"
+  Imports:
+  - HAL.dll
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeQueryPerformanceCounter
+  - RtlInitUnicodeString
+  - RtlEqualUnicodeString
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeToString
+  - RtlFreeUnicodeString
+  - DbgPrintEx
+  - RtlCompareMemory
+  - KeInitializeSemaphore
+  - KeReleaseSemaphore
+  - KeWaitForSingleObject
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - ObReferenceObjectByHandle
+  - ZwClose
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwDeleteValueKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - RtlUpcaseUnicodeString
+  - MmGetPhysicalMemoryRanges
+  - MmGetPhysicalAddress
+  - _vsnprintf
+  - _vsnwprintf
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    - Subject: C=CA, ST=Quebec, L=Dorval, O=MATROX ELECTRONIC SYSTEMS, LTD, CN=MATROX
+        ELECTRONIC SYSTEMS, LTD
+      ValidFrom: '2021-01-29 00:00:00'
+      ValidTo: '2024-02-01 23:59:59'
+      Signature: 7f82bebf8bd3bb7170a332685282e859a724cbad97e6e25149f143b699a8f27d7025a32c14bfb9ac8a439dbe39e926e2022f08850b8fbcd2dd5728a85a6b17bee08c7dc417d30c07392ec245547ac99b72562b4f8347e8d71ad46df778509576a0c15ab42764c0fdb45a52219a7aea91121bc9556dc0c8126747897d5367430f564bee0f0a1ebf1a7aeab6a66726622654ceb8c44e488770d75f526865a9690f037d2e5dd51816feb8ae22fcd89d8d8b787abb0dfa429f309f3aa70fb906a21a27cce4a3ca524a01799848b9643a1ff9e3a677ef341f8ca3c95ad2b5f8f1db56fcc71d59f0ac5c00f4a13689e8e0bed97fffb8af7ece0d299545ebf4980a3593
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0746ef9424d5e739d4dac11944eba622
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: d1ce90e75389a34755cc44884d2cd7ab
+        SHA1: 318cf743c7c1bda684c8c8f5844541f33c86da85
+        SHA256: 2028597811703e2a1558631c44bd5cdebe792d3da530a07cdb548e687e4175f5
+        SHA384: 5386fdd460b7bda42b1112ecd7099ac54e61d21e5273124ed404532ca91501b8223e2dc2811d63b71515f713747d6097
+    Signer:
+    - SerialNumber: 0746ef9424d5e739d4dac11944eba622
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 5af9afb68dc6b0ed8e7d30b2fac5b6e7
