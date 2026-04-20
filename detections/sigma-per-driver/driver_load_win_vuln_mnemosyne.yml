@@ -1,0 +1,32 @@
+title: Driver Load - Mnemosyne.sys
+id: a25d4440-baad-519f-ae78-a546e50028ea
+status: experimental
+description: |
+    Detects loading of driver Mnemosyne.sys via hash.
+    Mnemosyne.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/24cc4f8d-a88d-4b2d-a912-bc773d12a524/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=955dc6b491f3270f49a2b2e24970b30d'
+            - 'SHA1=fdb8e429f44e85d9d7a52fc459780d72c29305cb'
+            - 'SHA256=2ccd04383dc2f1f777b7712c6f8ee6d05afac98d22cad8e96f5172ba9c5c53b0'
+            - 'IMPHASH=3e12578d2b7ca27a9a11986fc68a64bd'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,32 @@
+title: Driver Load - FoxKeDriver64.sys
+id: 7dd40a10-6b7f-54ca-bf1c-798e636b8263
+status: experimental
+description: |
+    Detects loading of driver FoxKeDriver64.sys via hash.
+    FoxKeDriver64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/7f52f435-d217-4c13-98a4-4fdc6c8516c8/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0215d56bfbc9a947b095aff1c31b53ad'
+            - 'SHA1=ec06cb3a837d710f60ed8800c3be650317cb25ae'
+            - 'SHA256=eb81e127e7a46c80acdf8a3fc24a350381f24acb06f0fdf9fdcd34ce9b08d084'
+            - 'IMPHASH=7bc9165675650e353fceda2ace6ce93d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

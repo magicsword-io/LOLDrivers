@@ -1,0 +1,29 @@
+title: Driver Load - Lallamon.sys
+id: 87abb935-4e3a-577a-b9a1-9785c69e0d45
+status: experimental
+description: |
+    Detects loading of driver Lallamon.sys via name.
+    Lallamon.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/50de2fce-d9b5-4007-abef-22560e4e93b2/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\lallamon.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

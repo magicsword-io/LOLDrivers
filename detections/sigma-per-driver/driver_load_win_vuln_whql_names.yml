@@ -1,0 +1,29 @@
+title: Driver Load - whql.sys
+id: 701fd2f0-c2cc-5dc8-97a7-b88b781e5628
+status: experimental
+description: |
+    Detects loading of driver whql.sys via name.
+    whql.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/c366ee89-97ae-4523-b635-e05769384bd3/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\whql.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

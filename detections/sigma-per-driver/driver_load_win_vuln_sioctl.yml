@@ -1,0 +1,32 @@
+title: Driver Load - SIOCTL.sys
+id: 18e6a895-0008-5e32-8270-9fc0efe09060
+status: experimental
+description: |
+    Detects loading of driver SIOCTL.sys via hash.
+    SIOCTL.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/47e08b2f-7925-40c5-9bcf-0af348c07d33/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6ffd62ce4d143451a9ad3bb2af374b55'
+            - 'SHA1=5082d66a2c8a57e1a37dc6a026d9b73b12d63d97'
+            - 'SHA256=3a24b63cce5a4b7bd6188940af75b05a414b283c3c8eb528b5ba607ef720fc93'
+            - 'IMPHASH=dd93739efba0ca056d3f3afa731780d2'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

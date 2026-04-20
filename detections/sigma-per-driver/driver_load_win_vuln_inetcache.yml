@@ -1,0 +1,32 @@
+title: Driver Load - inetcache.sys
+id: b04ae0c4-12c6-5315-8867-7a7552efbe71
+status: experimental
+description: |
+    Detects loading of driver inetcache.sys via hash.
+    inetcache.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/45b0de20-b3cc-4604-a428-175ea092cd39/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=3c18a7e1d5d04e5d89770ffa0be0e32e'
+            - 'SHA1=46978d34d464b2e120b705098bdfefc7c4b5ef7c'
+            - 'SHA256=21996ff297cfd67e0f722b9b5b1f7b8252782ea777e6d3486cbee335e92f88c4'
+            - 'IMPHASH=89b9b0c26e9fec59328aeb062c03f6e6'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,32 @@
+title: Driver Load - Lallamon.sys
+id: 52c3f1e9-4096-5c1a-a667-fc1a311cfcde
+status: experimental
+description: |
+    Detects loading of driver Lallamon.sys via hash.
+    Lallamon.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/50de2fce-d9b5-4007-abef-22560e4e93b2/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0f5f7fbde32b64ae67dbd74d7524f12b'
+            - 'SHA1=d93b2a7e4533303b615d5f9627d631e37235ad3f'
+            - 'SHA256=d9dc2860ab791755a535786dcc559db186ba19ba99ea75266844f249a1e138a0'
+            - 'IMPHASH=de9cf1d3b5a2bcc1115188dbeecacdeb'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,32 @@
+title: Driver Load - KmWpsMs.sys
+id: 47d1c51c-289f-596d-a4b3-4380b0ebcd4d
+status: experimental
+description: |
+    Detects loading of driver KmWpsMs.sys via hash.
+    KmWpsMs.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/a6340f12-b0ee-41c5-acf0-92be886d1296/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0c488b536a5df62166894d1e89b39c9a'
+            - 'SHA1=1e711120242c556c4521e7859cd543ebc71c1c9d'
+            - 'SHA256=b045c00f3b921da2e9a5c7977e51c8beceff4a89ec9c4e365f3e4d41f8129e98'
+            - 'IMPHASH=23f361e3c0f41a57dc3b5555e6b0ebc9'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

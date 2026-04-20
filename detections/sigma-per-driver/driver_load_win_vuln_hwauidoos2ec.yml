@@ -1,0 +1,32 @@
+title: Driver Load - HWAuidoOs2Ec.sys
+id: a61a39ef-a08f-56eb-9a3c-417f51a094be
+status: experimental
+description: |
+    Detects loading of driver HWAuidoOs2Ec.sys via hash.
+    HWAuidoOs2Ec.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/2c7d54ff-7b49-4da8-ae77-00ac6fa2944f/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=79003b510f38ce1ab64e4bfb5e202ba4'
+            - 'SHA1=ed20f6f55560b34164d010cf32ce6f29dba2a27d'
+            - 'SHA256=90d2e9e994ed8e964845a26dce741ad43b29ff54cf5faa67271d62d4e24acbc8'
+            - 'IMPHASH=9cfa9662095195fc2607e952710e62ae'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

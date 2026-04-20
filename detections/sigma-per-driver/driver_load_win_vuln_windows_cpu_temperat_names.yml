@@ -1,0 +1,29 @@
+title: Driver Load - Windows_CPU_Temperature_Component.sys
+id: 9d4982a7-9d3e-5845-b78b-9c2943631d48
+status: experimental
+description: |
+    Detects loading of driver Windows_CPU_Temperature_Component.sys via name.
+    Windows_CPU_Temperature_Component.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/52955eb1-8cf4-41f3-b998-5e2e6d3aa258/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\windows_cpu_temperature_component.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

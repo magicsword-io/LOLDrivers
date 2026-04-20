@@ -1,0 +1,32 @@
+title: Driver Load - ditpio64.sys
+id: 38c24d49-440a-5fae-9d8a-f49f74f327e0
+status: experimental
+description: |
+    Detects loading of driver ditpio64.sys via hash.
+    ditpio64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/843a028a-e998-42cb-874c-4478680af397/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0928a0e981ebf188ccce402162ec8fb4'
+            - 'SHA1=af358b3b78ec40249cce93722f57a873b4fc2d92'
+            - 'SHA256=33f9f2aa566d0873777e841c8cd970298a93206d3be4dfd30fee726eb0d47585'
+            - 'IMPHASH=19a2e42a9bd77f622ae26a23c66416f3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

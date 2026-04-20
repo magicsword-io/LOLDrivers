@@ -1,0 +1,32 @@
+title: Driver Load - watabe.sys
+id: 192d23fe-e992-5f88-8eba-f58cbb3a1d96
+status: experimental
+description: |
+    Detects loading of driver watabe.sys via hash.
+    watabe.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/549d3563-74ce-4d84-844c-8d985886373c/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=3d47b72711f29447c0105e6617e849d9'
+            - 'SHA1=aa40f06968b60a9cca272ae604f469610b767a71'
+            - 'SHA256=42bbad0caff790db44833fc67a202850576d73d278ea85fb8095e3f93b0b4370'
+            - 'IMPHASH=19893acf1f4d216b6908eeb539a25e18'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,32 @@
+title: Driver Load - fjfwupgd.sys
+id: f3c78c91-0ff3-5c99-9ee5-cea22b7f1fe9
+status: experimental
+description: |
+    Detects loading of driver fjfwupgd.sys via hash.
+    fjfwupgd.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/2e47cd6a-30a2-4790-9f9c-9de7b0d7bf60/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=23c5262947eed835d8b8997e308c809d'
+            - 'SHA1=1c98e4699b2868fe09589c429a7866a723a446fe'
+            - 'SHA256=30ee861d6d34db31ed57273fe1b3e08c30260c46fbca2cc00725d08ffd1013f6'
+            - 'IMPHASH=8795438aa746402719d9402d98bea3f5'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,32 @@
+title: Driver Load - BS_RVSIO64.sys
+id: 621acf20-8627-5ddb-9461-34981b5a3bc8
+status: experimental
+description: |
+    Detects loading of driver BS_RVSIO64.sys via hash.
+    BS_RVSIO64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/5281b4b4-1b96-4261-8a1f-5fa22ba44d53/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=559e3b07626f694b64576c96599d6955'
+            - 'SHA1=2f4124d3d81898585d2ca5c09d5333636f64217a'
+            - 'SHA256=a8aae612727320db096b337a45bf3cd31b5f9702ef6c4747dd2aaa74ff6badb7'
+            - 'IMPHASH=095c0cdb9c0421da216371c1f4e8790e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

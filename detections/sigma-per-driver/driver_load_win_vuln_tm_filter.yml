@@ -25,10 +25,10 @@ detection:
             - 'MD5=3f9829071109fc051bd7f6b01a35ed46'
             - 'SHA1=fc5d815dde49b85efb51e89af45dd011c044f72a'
             - 'SHA1=b2c1222c96221e031e9e3b64cf3ae00de5cdcff6'
-            - 'SHA256=2cea1a8d5d23a5ed2c2ac2a0c7c0d95da516aa355224cc707f86de8ade5880ef'
             - 'SHA256=e9fda504c9bdbe785c55a279ebb27e31783155570ab0c242e1de5bf79fbca6ed'
-            - 'IMPHASH=d65005590d47deb80879f60133ea0147'
+            - 'SHA256=2cea1a8d5d23a5ed2c2ac2a0c7c0d95da516aa355224cc707f86de8ade5880ef'
             - 'IMPHASH=2ccbad8d475d8dbeb3912f266880f807'
+            - 'IMPHASH=d65005590d47deb80879f60133ea0147'
     condition: selection_hashes
 falsepositives:
     - Unknown

@@ -1,0 +1,32 @@
+title: Driver Load - SONiXDDRx64.sys
+id: 422d84aa-ccd0-56e4-b0a5-b1827732233a
+status: experimental
+description: |
+    Detects loading of driver SONiXDDRx64.sys via hash.
+    SONiXDDRx64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/9720d49d-c20f-479e-9284-2b3ad120fdf8/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5045d10b6d47f3b0d35f0489c05b9a02'
+            - 'SHA1=4e384a43e4f2af55e5a7859ea8122f488e0849ab'
+            - 'SHA256=85a4ce446d9ccd93c2f14d2e0f30ea673812ce740438abb199a8047510614a76'
+            - 'IMPHASH=b62e9f4f8363c29992802646a5b4fa4b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

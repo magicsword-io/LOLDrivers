@@ -1,0 +1,29 @@
+title: Driver Load - ControlCenter.sys
+id: 8bd7881b-e7fd-5f2b-b522-b313201eb969
+status: experimental
+description: |
+    Detects loading of driver ControlCenter.sys via name.
+    ControlCenter.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/b6873d69-affe-431b-9ba8-459391386603/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\controlcenter.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

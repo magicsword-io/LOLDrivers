@@ -1,0 +1,32 @@
+title: Driver Load - bin_intigua_driver64.sys
+id: d95958d7-8489-5b99-a63c-2ee163013fb1
+status: experimental
+description: |
+    Detects loading of driver bin_intigua_driver64.sys via hash.
+    bin_intigua_driver64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/68810b7a-06c5-498a-bbdf-28fb4d5d9201/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0146c74cb125b188dbac4f9fa8ab867e'
+            - 'SHA1=0af3c5d80119fc686e1002af14d2a21e8c5ff7e2'
+            - 'SHA256=e9a1c39600193c7fd546733284a575b2d5192e2fd3ff64ca1a33b00739f8d429'
+            - 'IMPHASH=7da647447adfee1e99d075c5c1ea41f8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

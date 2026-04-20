@@ -1,0 +1,32 @@
+title: Driver Load - Khwmon.sys
+id: adc9b0fa-9582-56a1-8eb9-6dfafbc26af2
+status: experimental
+description: |
+    Detects loading of driver Khwmon.sys via hash.
+    Khwmon.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/b98bc8f5-5dde-417f-a25c-41d95b867d75/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=005e49b1f201461f067b093ef0d8d500'
+            - 'SHA1=096b79450e308600400194cf8ec365be3d673332'
+            - 'SHA256=103ce48e8491684f383d9851e4710cbb5c739b5c7f332f2d11b88babc2c217b5'
+            - 'IMPHASH=2f6472f3fea81a83544554b1790c6d7b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

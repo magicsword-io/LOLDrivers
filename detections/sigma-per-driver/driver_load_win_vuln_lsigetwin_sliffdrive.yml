@@ -1,0 +1,32 @@
+title: Driver Load - lsigetwin_SliffDriver.sys
+id: a2fa9eee-dc11-5e13-a4fe-020baa302da3
+status: experimental
+description: |
+    Detects loading of driver lsigetwin_SliffDriver.sys via hash.
+    lsigetwin_SliffDriver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/430f94b4-69e8-4541-bea7-329be7d283b7/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=49886067cd4221b0b8640cff66157c94'
+            - 'SHA1=1bc8fdbd88b3539892c92561eb06c3bce37d1e59'
+            - 'SHA256=b811da59fbd212eb2c3bc0ed92e8ea2e46ef4df40c2d0991d911e72008bfc1fa'
+            - 'IMPHASH=4623044146fa71957232982a01652ffc'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

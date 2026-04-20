@@ -1,0 +1,29 @@
+title: Driver Load - srswdrv.sys
+id: 1d6c562a-837d-5d0f-a134-2e4bcb69b5c2
+status: experimental
+description: |
+    Detects loading of driver srswdrv.sys via name.
+    srswdrv.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/5c4142a6-b287-4817-864f-152be08f7c48/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\srswdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

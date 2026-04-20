@@ -1,0 +1,32 @@
+title: Driver Load - IoManager.sys
+id: ee67bceb-eff0-5360-b303-1ccee9e2141d
+status: experimental
+description: |
+    Detects loading of driver IoManager.sys via hash.
+    IoManager.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/2ad22816-46de-45b5-999b-864944635e0a/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e100351d149ad783e54fa99bb3391c1a'
+            - 'SHA1=ee71af9b7e0f72d8e6a79088d8a8375f1956ec90'
+            - 'SHA256=d7833a5d77ab264572458a51226000190857f1b5807c556e23e18c39bb950ca6'
+            - 'IMPHASH=acb4a7b1f0ca51362dbe3b879b7719db'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

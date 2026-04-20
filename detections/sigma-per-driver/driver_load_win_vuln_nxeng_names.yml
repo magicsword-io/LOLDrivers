@@ -1,0 +1,29 @@
+title: Driver Load - nxeng.sys
+id: 7980009c-d5da-5526-8e1d-7109994b8b86
+status: experimental
+description: |
+    Detects loading of driver nxeng.sys via name.
+    nxeng.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/6f1d7635-0778-4f17-9c97-b80deca32510/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nxeng.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

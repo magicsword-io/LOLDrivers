@@ -1,0 +1,32 @@
+title: Driver Load - hp64vision.sys
+id: 67db1ba2-2474-5d32-9ecb-618e8c3a7073
+status: experimental
+description: |
+    Detects loading of driver hp64vision.sys via hash.
+    hp64vision.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/da6709ab-3b7a-445d-9a47-e8b4141d4133/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4e6def72f97b0b8ee66637e41cdd1599'
+            - 'SHA1=eba70d4d113474e71e07dbc7a7d400bc47d52e41'
+            - 'SHA256=c1e11e2012216b54b2aad1be37b469d328f39b09352c66e8c74e6032ec858b96'
+            - 'IMPHASH=79e47c851d03688b3b2870953371ee51'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

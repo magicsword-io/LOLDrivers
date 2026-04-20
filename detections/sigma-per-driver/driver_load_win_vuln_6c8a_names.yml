@@ -1,0 +1,29 @@
+title: Driver Load - 6c8a.sys
+id: 33f0b4de-2da1-51df-a837-7eb4bbc8cac1
+status: experimental
+description: |
+    Detects loading of driver 6c8a.sys via name.
+    6c8a.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/54af50e5-c964-485a-9b15-d5411971a425/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\6c8a.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

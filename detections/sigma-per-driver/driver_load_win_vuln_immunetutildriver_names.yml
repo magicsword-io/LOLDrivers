@@ -1,0 +1,29 @@
+title: Driver Load - ImmunetUtilDriver.sys
+id: 53dca93f-2ddb-51d8-9a8f-7525bd2637fa
+status: experimental
+description: |
+    Detects loading of driver ImmunetUtilDriver.sys via name.
+    ImmunetUtilDriver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/79e1e3d4-36d0-4325-8d9c-c6e69b6084da/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\immunetutildriver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

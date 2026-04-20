@@ -22,19 +22,19 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=3d35317f967464aa670a52d3d632cd32'
-            - 'MD5=b4b6aaa2ee1cc344b7c6752778a279e5'
             - 'MD5=5c586f9912585f5f3138b12b4f8d38e4'
+            - 'MD5=b4b6aaa2ee1cc344b7c6752778a279e5'
             - 'MD5=98df4e7708fa2fd92a01c89ddd043d5e'
             - 'SHA1=a3f562399308be926071f745d13a321fa7278638'
-            - 'SHA1=c55e4846c361f1481ec2588173414eb6f86b9b37'
             - 'SHA1=0590c7f1c5a0807fa8259e13fb7ebae42d3e4b4d'
+            - 'SHA1=c55e4846c361f1481ec2588173414eb6f86b9b37'
             - 'SHA1=4eb56c2b721007edc9360ecca0749bbdeede9b1b'
-            - 'SHA256=a22358cb2fb1aa334272deaa24e2280425f9661862b46331cbdc786138ede8be'
-            - 'SHA256=35035495a36f8537e2a5f56031277cd884de557257b40b92bd39454877a264fb'
-            - 'SHA256=86127dbc92e2896319d1c9117b85e6db01ff001f3a85614d5ef9088d181b044a'
             - 'SHA256=cd3d1a2e119cbbb41ec0e7d7fb17bac106735d62b33ed3cde10087af1da89403'
-            - 'IMPHASH=fda6594fee72857309a5cbcb7ad08e80'
+            - 'SHA256=35035495a36f8537e2a5f56031277cd884de557257b40b92bd39454877a264fb'
+            - 'SHA256=a22358cb2fb1aa334272deaa24e2280425f9661862b46331cbdc786138ede8be'
+            - 'SHA256=86127dbc92e2896319d1c9117b85e6db01ff001f3a85614d5ef9088d181b044a'
             - 'IMPHASH=bdc141a2e93e450a51e3c2845df14c4b'
+            - 'IMPHASH=fda6594fee72857309a5cbcb7ad08e80'
     condition: selection_hashes
 falsepositives:
     - Unknown

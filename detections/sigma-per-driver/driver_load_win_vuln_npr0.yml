@@ -1,0 +1,32 @@
+title: Driver Load - NPR0.sys
+id: 9e526d91-8b2b-58df-a877-4e880088d854
+status: experimental
+description: |
+    Detects loading of driver NPR0.sys via hash.
+    NPR0.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/cf9ed92d-d39b-4562-a256-b36f6560ccfa/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=85e702c8d8de0d489f7cf61691f2ce42'
+            - 'SHA1=a79573bd65237874046f3eb8f4cdba66aaf8cd65'
+            - 'SHA256=3e73d22b534a4c5996121750e3fc0f6913d5ad4c6dbc630b590647201656d714'
+            - 'IMPHASH=b62e9f4f8363c29992802646a5b4fa4b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

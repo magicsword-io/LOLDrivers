@@ -1,0 +1,32 @@
+title: Driver Load - PMAD.sys
+id: cab08bd9-c6c6-5508-804b-b516e1df9b44
+status: experimental
+description: |
+    Detects loading of driver PMAD.sys via hash.
+    PMAD.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/ec5012bb-789a-436d-be22-b343c331f7c7/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=53974a34efe846f62c0a192f9673b1f9'
+            - 'SHA1=ba4465ae960baf8d86be7d6fc9eb431e38eb6c78'
+            - 'SHA256=37784d01f84aa4d60c8738f7a75dac1bf712941fc08ed9f32f3e89d044d9c71f'
+            - 'IMPHASH=1dfb4aa99d5e3cf0fa035bedef447fc8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

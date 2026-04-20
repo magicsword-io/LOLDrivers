@@ -1,0 +1,36 @@
+title: Driver Load - energydriver.sys
+id: eb0da2d1-514d-5bf9-bd45-e711f717fad1
+status: experimental
+description: |
+    Detects loading of driver energydriver.sys via hash.
+    EnergyDriver.sys is a kernel driver from Intel Corporation shipped with Intel Power Gadget 3.6 (deprecated December 2023). The driver exposes 5 IOCTLs including arbitrary wrmsr (any MSR index, any 64-bit value, no whitelist), arbitrary rdmsr (single CPU or all CPUs), and arbitrary physical memory read via MmMapIoSpace. wrmsr allows IA32_LSTAR hijack for direct syscall redirection. No privilege check, no MSR whitelist, default DACL. WHQL and Intel EV dual-signed.
+references:
+    - https://www.loldrivers.io/drivers/3dc0b91e-6afe-4938-ad9a-2cdf10c2c1e6/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/magicsword-io/LOLDrivers/issues/329
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=bbab3fcf45d59edf5f19cf70c5ef9562'
+            - 'MD5=c8c357be337ef4c99019aa8fe0a09a61'
+            - 'SHA1=87885dc9f3b2bb9ffce65944be63b4019471b0d1'
+            - 'SHA1=693afa90fd9479541835a0720b373a3411473d62'
+            - 'SHA256=6665b05e6fd430b729326a0b125cfcb70c387dbee46ef3f768f7dbdf0e0a6bab'
+            - 'SHA256=382cb4c37fdcb2e2ca9cbb4a5de39fa4e230d1d2e1b6f38e1c8249002525f1c7'
+            - 'IMPHASH=ef789722d45b4a5c8446ffc92ebf0fa1'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

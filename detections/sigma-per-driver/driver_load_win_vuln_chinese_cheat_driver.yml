@@ -1,0 +1,32 @@
+title: Driver Load - chinese_cheat_driver.sys
+id: d6504e9a-aaad-5921-acd0-180e742dba68
+status: experimental
+description: |
+    Detects loading of driver chinese_cheat_driver.sys via hash.
+    chinese_cheat_driver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/98b064c4-c9ff-4cac-a6b6-a24964b70923/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=3ee985c5fd1f5784e15a4d11b3ca70a1'
+            - 'SHA1=33148c93465908ddad71cf189e22091dc0058ac4'
+            - 'SHA256=4f412f9aa89994cda45422d23d6d961809225de9a4f5a8bfbfb9ac0e8725917e'
+            - 'IMPHASH=07386745331387b83012a6786eacb5ac'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

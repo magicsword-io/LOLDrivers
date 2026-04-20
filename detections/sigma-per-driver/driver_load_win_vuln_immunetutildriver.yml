@@ -1,0 +1,32 @@
+title: Driver Load - ImmunetUtilDriver.sys
+id: 4dce8186-8f30-544a-92d1-284f188559e0
+status: experimental
+description: |
+    Detects loading of driver ImmunetUtilDriver.sys via hash.
+    ImmunetUtilDriver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/79e1e3d4-36d0-4325-8d9c-c6e69b6084da/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=413184d2547bba85b13b943df8200a81'
+            - 'SHA1=1e3c0ca18950f8f0ad4f681753ae092d1916b4c1'
+            - 'SHA256=2e270063af92a4f37d3f828dbb444c9a6277ea0d15a5b808e66e3b66ca5f5a58'
+            - 'IMPHASH=a16e9870c5694171719f826d2e37a9a3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

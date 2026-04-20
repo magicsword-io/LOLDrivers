@@ -1,0 +1,32 @@
+title: Driver Load - signeddrv.sys
+id: 253e7549-ce32-5c36-95ea-1fc02e7eb228
+status: experimental
+description: |
+    Detects loading of driver signeddrv.sys via hash.
+    signeddrv.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/028aecb5-70d0-4423-87d7-f037a11ef1c9/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e052ac7d39d07f6657cf049aae0c5b60'
+            - 'SHA1=9582337fdd6165dca71c6ae1c8c0222c6a10de77'
+            - 'SHA256=4dc3a03a046c210a7c6cd37db8d6bd34bf3760a612232cc82acf941a9e508e0f'
+            - 'IMPHASH=86915b1ccd40702f0a8d238c992bf841'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

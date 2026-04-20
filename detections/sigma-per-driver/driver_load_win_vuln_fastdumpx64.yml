@@ -1,0 +1,32 @@
+title: Driver Load - fastdumpx64.sys
+id: 6fd553b4-20fe-52c7-99d0-467ddabfdfa3
+status: experimental
+description: |
+    Detects loading of driver fastdumpx64.sys via hash.
+    fastdumpx64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/619953be-2115-4da2-bb59-603fcf93a3d2/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=016c1d3cc193732736eeaeb3094154f2'
+            - 'SHA1=624fc5ef63f1c58ef6c0202080a08be12aa441df'
+            - 'SHA256=9cb90643674a941bca2ff0823618e4790a737b9bdcfe882b3af6926591b84d80'
+            - 'IMPHASH=c02969a03cdf95399c373efc0b2b9705'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

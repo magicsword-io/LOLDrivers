@@ -1,0 +1,32 @@
+title: Driver Load - IUForceDelete.sys
+id: b0d11f3c-ba41-56f4-8431-6380cf639845
+status: experimental
+description: |
+    Detects loading of driver IUForceDelete.sys via hash.
+    IUForceDelete.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/b898cc81-1736-45c7-ab41-c104ab17f05d/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=354454ae9d36c3fb06c8a0e2addcac74'
+            - 'SHA1=ad24e1429291967d356afc0324e3393a092e9aad'
+            - 'SHA256=30f5d03e37d22c7dece8bb8240edc8566f2be7fe76d3c7f97eeceb60d889ee06'
+            - 'IMPHASH=9b63a4ea8650c15909e5d7dd1c3ed64c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

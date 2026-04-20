@@ -1,0 +1,32 @@
+title: Driver Load - DNDrv.sys
+id: 034953bc-4a20-5f42-a0a2-5c983932f562
+status: experimental
+description: |
+    Detects loading of driver DNDrv.sys via hash.
+    DNDrv.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/4e7563f0-0d77-43e9-b765-a509ba121818/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d31c9e4b1aa80d922bfb10b0c780fe2c'
+            - 'SHA1=64c6c1203d0300175e7012505d1655354c84a978'
+            - 'SHA256=e786f64dab69f2ae1e399044f59dc4b8efc7c291f77ca7f5df4394fe00edf62b'
+            - 'IMPHASH=912cb4e9ebbc30aed14dc1984dc75d01'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

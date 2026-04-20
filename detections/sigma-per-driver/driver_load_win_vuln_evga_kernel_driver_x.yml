@@ -1,0 +1,32 @@
+title: Driver Load - evga_kernel_driver-x64.sys
+id: a9ed3d86-b370-5bb7-b31d-d72067ee3e6b
+status: experimental
+description: |
+    Detects loading of driver evga_kernel_driver-x64.sys via hash.
+    evga_kernel_driver-x64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/02bbc006-a4a4-438f-9b6c-4382303f6b45/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8dc9504fb5eda1a354971bacffe61ccc'
+            - 'SHA1=da66b66dca5ea8689db903ec23e98f2c881de6f8'
+            - 'SHA256=33da2ce240b4559cc6e847d56c5fbeaa3d644ec160841920ea0a098dcee28d0e'
+            - 'IMPHASH=71893549487f7704e76dc8929aa437a0'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,32 @@
+title: Driver Load - GlobalVistaVentures_v3.sys
+id: cdf94b91-6470-50ce-a3e2-f39e79f42018
+status: experimental
+description: |
+    Detects loading of driver GlobalVistaVentures_v3.sys via hash.
+    GlobalVistaVentures_v3.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/90df671c-a903-49bd-ac62-c124d4f6901d/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a3e41b5caaabf71f04d110b158fbf2e2'
+            - 'SHA1=36175fd1dc300b86af6b6e9f890d07e8a603067e'
+            - 'SHA256=7ccb02b9dc8bb46e5ea32fb8f4c93bac195bcbb0c2fc02d3af28f4208afe7c41'
+            - 'IMPHASH=224fd8efd6b1832a5c50de95bf5acc85'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

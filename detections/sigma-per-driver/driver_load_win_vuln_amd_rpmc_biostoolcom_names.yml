@@ -1,0 +1,29 @@
+title: Driver Load - Amd_RPMC_BiosToolCommonDriver.sys
+id: 7f607a4e-f650-54c5-b4b1-fc202e3fe0e4
+status: experimental
+description: |
+    Detects loading of driver Amd_RPMC_BiosToolCommonDriver.sys via name.
+    Amd_RPMC_BiosToolCommonDriver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/8dbd8d1c-aa4a-418c-9bbe-0730d37d9bb5/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\amd_rpmc_biostoolcommondriver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

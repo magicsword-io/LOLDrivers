@@ -1,0 +1,32 @@
+title: Driver Load - OAToolx64.sys
+id: 6204f7e7-9921-5411-9442-d885b6a5434d
+status: experimental
+description: |
+    Detects loading of driver OAToolx64.sys via hash.
+    OAToolx64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/3a56286a-d6e2-4782-bd43-1e04869da8cc/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=48342338a7d5a3a133bb2a565e2b15a2'
+            - 'SHA1=04d9cb48852fc7b5dce26f610dc589cb2ff3fbe2'
+            - 'SHA256=e8d2424037f63aa395085c546aeac0cd7a09567a4e304c509e087d1b3ce199da'
+            - 'IMPHASH=64be892635195c62ad5be44af59b50d3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,29 @@
+title: Driver Load - p2KGhmzsARY1.sys
+id: 36be720a-7fae-59a7-9fa2-9ff7a5373ffb
+status: experimental
+description: |
+    Detects loading of driver p2KGhmzsARY1.sys via name.
+    p2KGhmzsARY1.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/90239ca5-500d-422a-a3e6-6b771b55b3eb/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\p2kghmzsary1.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

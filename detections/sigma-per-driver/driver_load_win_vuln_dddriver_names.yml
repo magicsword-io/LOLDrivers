@@ -1,0 +1,29 @@
+title: Driver Load - DDDriver.sys
+id: e15af1ca-f558-517c-910b-885b43e2d3a1
+status: experimental
+description: |
+    Detects loading of driver DDDriver.sys via name.
+    DDDriver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/6f6aedb9-aeaf-4c13-9d6d-37f062728c38/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dddriver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

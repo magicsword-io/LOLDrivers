@@ -1,0 +1,32 @@
+title: Driver Load - ControlCenter.sys
+id: 31869893-4949-5df1-9830-8b9d8f32bae7
+status: experimental
+description: |
+    Detects loading of driver ControlCenter.sys via hash.
+    ControlCenter.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/b6873d69-affe-431b-9ba8-459391386603/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6a784b693da28eb0eb3e8c6e233c0bbd'
+            - 'SHA1=99d26b558c423ea4bedd0e1ec38b8e590dc3d98a'
+            - 'SHA256=0b12eb25db68d8714ba52583597ed20e5fab2f6e82dcd0bcb23161acb4a9a126'
+            - 'IMPHASH=459680ff15ecf7ddefb1cdb2bb097039'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

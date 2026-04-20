@@ -1,0 +1,32 @@
+title: Driver Load - Kinkajou.sys
+id: f2c35ff9-18a1-5f14-b492-df272b26b660
+status: experimental
+description: |
+    Detects loading of driver Kinkajou.sys via hash.
+    Kinkajou.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/56610446-9914-41f6-a028-33640a683c9d/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=eb59b40453b7d61b14559155c176e527'
+            - 'SHA1=261e06eca5649465b6f18641841ee58f966693c3'
+            - 'SHA256=f5dd6db447868c2964c1d109e7d2cc31ebdace198b3d0a02cfba5b7ef7ae6964'
+            - 'IMPHASH=3be76d9d3a7d0bbcdfea3e19cd85f633'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

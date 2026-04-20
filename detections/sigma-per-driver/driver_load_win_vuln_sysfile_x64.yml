@@ -1,0 +1,32 @@
+title: Driver Load - SysFile_X64.sys
+id: 37067811-69aa-5830-9a57-d20656662ed0
+status: experimental
+description: |
+    Detects loading of driver SysFile_X64.sys via hash.
+    SysFile_X64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/1ce0aa79-8719-447c-908b-75547f2ccc98/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9ddff9a4ec7e38e4e05fd16e2b1037ff'
+            - 'SHA1=b980dec0bdf7b0925240d002626e56876afeec72'
+            - 'SHA256=5b204e0a24b5ea67e79329a8c4eb0513cd52a0e7407b99530323fff4c5b59e34'
+            - 'IMPHASH=f7455c9aef32ded0c517c29637a75058'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

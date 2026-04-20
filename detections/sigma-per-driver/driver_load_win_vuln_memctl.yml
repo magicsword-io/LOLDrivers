@@ -1,0 +1,32 @@
+title: Driver Load - MemCtl.sys
+id: b1e87861-f03c-5fc1-98c7-1833e24dffb6
+status: experimental
+description: |
+    Detects loading of driver MemCtl.sys via hash.
+    MemCtl.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/ae2a6048-3896-4dd8-9eb1-a4a66104b0cf/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=bc19a1a76e61bd56544c0e82c8a99979'
+            - 'SHA1=50df08355fca51fd5d6a22f8220a2fc45f858f2b'
+            - 'SHA256=fe9323ede771de8ff389ba161ad8696cd6cd788dbf7dd382b6b79011544eed73'
+            - 'IMPHASH=340e874a1ca966e45fc2a314ef228cce'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
