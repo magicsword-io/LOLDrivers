@@ -1,0 +1,185 @@
+Id: 84f92ac1-1e72-420d-9cc0-65c838b90a4d
+Tags:
+- portwell.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create portwell binPath=C:\windows\temp\portwell.sys type=kernel
+    && sc.exe start portwell
+  Description: portwell.sys is a kernel driver from Portwell Inc. (Taiwan) that exposes
+    physical memory read/write via MmMapIoSpace. Portwell manufactures embedded computing
+    platforms and industrial PCs. The driver is available in the KeServiceDescriptorTable/vulnerable-drivers
+    repository.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/314
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: portwell.sys
+  MD5: a93b28348e04109cc186b985c9308295
+  SHA1: a7b72d8a1751a10643c1cc1c148175ca13bcbebe
+  SHA256: 2f0b16ed90b8c15bf52a7c32699dbe0dbcd38fc02ed2ddb4e1ba35487177b6c5
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Portwell Inc.
+  Description: kernel mode driver
+  Product: portwell driver
+  ProductVersion: 0.1.0.0
+  FileVersion: 0.1.0.0
+  MachineType: AMD64
+  OriginalFilename: portwell.sys
+  Authentihash:
+    MD5: 94b8f3169c7e3644e9f8d8a8aa8ac94f
+    SHA1: d7246621a438764a98f3d66ce0e393cfceb500d7
+    SHA256: 2c451270999882f56418f1dbe35fc833bb51a9b08ae590a7e407790883537647
+  RichPEHeaderHash:
+    MD5: 24a77833640f64294aed94183558d9b6
+    SHA1: 4bbea4d5a5d44c54e385de1cd61a314b81dca7ce
+    SHA256: 056a884d66338e9bd4c0e5deaa8562f0bc5482301e8bafa60f8ddd99d6df6a3f
+  Sections:
+    .text:
+      Entropy: 5.499964588959135
+      Virtual Size: '0x1275'
+    .rdata:
+      Entropy: 3.9676541818047224
+      Virtual Size: '0x1c0'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.522050329628502
+      Virtual Size: '0x144'
+    INIT:
+      Entropy: 5.01007564635598
+      Virtual Size: '0x26a'
+    .rsrc:
+      Entropy: 3.1894587294556045
+      Virtual Size: '0x3a8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2011-02-15 19:07:46'
+  InternalName: portwell.sys
+  Copyright: Copyright (C) 2010 Portwell All rights reserved.
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - RtlAssert
+  - DbgPrint
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - IoCreateDevice
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=PL, O=Unizeto Technologies S.A., OU=Certum Certification Authority,
+        CN=Certum Time,Stamping Authority
+      ValidFrom: '2009-03-03 12:58:15'
+      ValidTo: '2024-03-03 12:58:15'
+      Signature: aa8b1ba2ec8545eb388b0a4d78cf78895310da575a5b075b270cc9d9b9c40a2a67acbf07ab35c1b40e6f794c7bbf13bffa76d56eaecda114995ff2048114579104e78b9345ae87f2b9e35ae87a35917c3a560e59b7c70da6351bcd9cd0e6553afe1b3948c75f9a2196fd1cb27352c4fef163b352afe424e5bb6790674245b676ae13e722b707cb964601e8be3d0d0de7207e46401389962f54ca345313277fecef66c4b108f73222c214a97f56f931eed42fad79213d1133f7d3aee8cbbc5bcf16f68b684f0d9cf46cb82858e3489695d424925794703c6bda3ae8ce9bd23a2b13e0fd8200577f0ddc56d0a945bcd92b9217a7166d256ff3673da7bee7609f2a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 047a55
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: bf6920398aa3daa5672341db9f6a0325
+        SHA1: d3a5167a88dc5a1c6b32ae1ef06a89322e3848ed
+        SHA256: f0af053cfa33afd3cf0bfb01ec5e6e4c033205fbae439c0c4bcd2a6c5a1acc53
+        SHA384: e51925eb4526890b7b9bac7689af88ecc1f15cdf01852a15c589c7ec71fc1ec7c5442a6f1b733cdd3a85c3511d4ea3bb
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
+        Primary Object Publishing CA
+      ValidFrom: '1999-01-28 13:00:00'
+      ValidTo: '2017-01-27 12:00:00'
+      Signature: b578a6a27c04b77fc97f7d6abc71fa293060c2f4621efe7f431e9b6ee2b21f730b85765b7df54e49062fd4fab79140efed6f8d8e138354c52a023d0aa4dc990b7abd772fcc40c18ff3c48c4e72ba107ce6ff642bc7ce6ca7fcd79a7c8e468d01834d423bdb9c3f9f326157d717b0b33666f0b3fd446f8137b1944ea7562589f58ad66d116262795c42900218d39c23fc08e86445b92d7e805b4eafc38a299283781f914134af85c5fd07994e2c5cfec7fd17bb2525314d72b5b5294b489a376f13c7114e4a451e7e2f319cabe852afd6679734885f0e276a6652d15ac7ac302c2038dd2bff3aebce104582a27b1ba12073569b2a93e60451066c1bdc2f899493
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 040000000001239e0facb3
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5ccf05e4dec10d9d6fe15d8778325272
+        SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
+        SHA256: 33ea31b892ba274a4aefe545de45c42c218b6dff78146655cdea892545c2cccc
+        SHA384: 1350ebc11fd20f5f141bc545786506e6a154be054da7a6e603cb276a6d60a24f2a4016ecc2f5cabd1088e1905f60aabf
+    - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=Portwell Inc., OU=Portwell Inc.,
+        CN=Portwell Inc.
+      ValidFrom: '2011-02-15 06:43:38'
+      ValidTo: '2012-02-12 01:39:43'
+      Signature: 26acf616ec6e68d1cd186d1f8434ee0b3f513d4a9c7d2c9418e9699bb48a11a70cfe2673d4f73701605c33ea243099671c72b271c6921f95e4171ca97102ede2217eecc5f87f80bd2b2ed78cddc3fbe18db85d0be9d4d8e84e887cf62503dc72a0ecdd5e88b4f6d8b600bc7e1633dd94584f48c6b90f44fa6ecac5a31c6a3fbd4d3938202760a978123af87b06056b4465e6c4f2c3e3bbde5b0ea79b71f346f8ce78a87c744d312cdea45346183650d13e6acdc7abc576d8c017c19957c44b8d711f206ec736c2ccd4ae388fb270a9709fb3601b4dc44bf8c05b679fabb40d82e4abf72405285a81036b87b9491f9c6ad5a062b199363dec3487a633a653c2b1
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0100000000012e283e7105
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: a97e8ebbf78752b744864129f574b4b7
+        SHA1: 8da79a14692714778f59de099d7b4cd6b03102e2
+        SHA256: c579b2c527dbaa5be5415d20f4dd9919365e334470ac70a242ca853bdbb5ec55
+        SHA384: 4f9a78a7e15cc17cf1dfd72782d0dd2822be345f93d07e87505f09f623a89c13c9c1c370dfa0750dbc574abb03670a3d
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      ValidFrom: '2004-01-22 10:00:00'
+      ValidTo: '2017-01-27 10:00:00'
+      Signature: 1e6af36df48ea922fe7008652ea15dab3330dd6c78fa4beaadc58dec107a6ac55897396b92f391e20ca7281cd15d768e8b077c136fadc43643b3c1bc3159cf1838d8a33bceffca6758bfe0f1ac613ea23b1ebc025b41ac446bf526f3ed5ea865f6ca65a63fcaf577eba5862a582956f8be161040e9d2fc572c636137662539202e0703a036032594bd7ceb7ed3a3c2c57616753092b9ff7641352168d10e5e5c8ec30360e68040fcc05da2546e6e9267a7811287a2a32bdbb74dffe4d5c7e505e6d5f1aefccd661821f33e47c9e59542612c9d2680b20fa83d0ec9a778df6e748c2c46f672e93c646b2855c44b6433cb78541338f0d57106d43e0d0a350ee0b3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 040000000001239e0faf24
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 7dd2351a85d3665eeb6720a21f4f7dee
+        SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
+        SHA256: 846725f4b0193468c1079d6127e9e6e420fc6ed66019ed02d732ba644decad57
+        SHA384: aaa45fe704bc66bb1842a2123c6e45e016dfbc7ba2ce07d7d2ee0b5d488a39c68bc6db582cb45d51f5fa52e60be8efd6
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2006-05-23 17:00:51'
+      ValidTo: '2016-05-23 17:10:51'
+      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610b7f6b000000000019
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 4798d55be7663a75649cda4dedc686ef
+        SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
+        SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
+    Signer:
+    - SerialNumber: 0100000000012e283e7105
+      Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 3e7652a1d28db44c532a007ef80fa618
