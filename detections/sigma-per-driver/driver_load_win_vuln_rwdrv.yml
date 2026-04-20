@@ -11,7 +11,7 @@ references:
     - http://rweverything.com/
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/04/14
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -23,14 +23,14 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=257483d5d8b268d0d679956c7acdf02d'
             - 'MD5=f7a09ac4a91a6390f8d00bf09f53ae37'
-            - 'MD5=9650db2ef0a44984845841ab24972ced'
             - 'MD5=1276f735d22cf04676a719edc6b0df18'
-            - 'SHA1=108575d8f0b98fed29514a54052f7bf5a8cb3ff0'
-            - 'SHA1=fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2'
+            - 'MD5=9650db2ef0a44984845841ab24972ced'
+            - 'MD5=257483d5d8b268d0d679956c7acdf02d'
             - 'SHA1=9d191bee98f0af4969a26113098e3ea85483ae2d'
             - 'SHA1=8031ecbff95f299b53113ccd105582defad38d7b'
+            - 'SHA1=108575d8f0b98fed29514a54052f7bf5a8cb3ff0'
+            - 'SHA1=fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2'
             - 'SHA256=83fbf5d46cff38dd1c0f83686708b3bd6a3a73fddd7a2da2b5a3acccd1d9359c'
             - 'SHA256=ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3'
             - 'SHA256=d15a0bc7a39bbeff10019496c1ed217b7c1b26da37b2bdd46820b35161ddb3c4'

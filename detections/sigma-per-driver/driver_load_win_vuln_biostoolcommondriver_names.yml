@@ -1,0 +1,28 @@
+title: Driver Load - BiosToolCommonDriver.sys
+id: 134b5ce7-d6bd-5966-af19-86104a9e01d1
+status: experimental
+description: |
+    Detects loading of driver BiosToolCommonDriver.sys via name.
+    BiosToolCommonDriver.sys is an AMD RPMC (Replay Protected Monotonic Counter) field fusing utility driver that exposes 18 IOCTLs including arbitrary physical memory read/write via MmMapIoSpace, unrestricted port I/O, PCI configuration space read/write, MSR read/write (wrmsr/rdmsr), SPI flash read, CPUID execution, virtual-to-physical address translation via MmGetPhysicalAddress, and contiguous memory allocation. WHQL Microsoft-signed and also AMD Sectigo dual-signed. Ships inside Razer Blade 16 BIOS update packages and ASUS firmware config bundles. PDB path confirms AMD internal build origin.
+references:
+    - https://www.loldrivers.io/drivers/2d301a46-ceb6-477c-8a51-463a6ded3524/
+    - https://github.com/magicsword-io/LOLDrivers/issues/321
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\biostoolcommondriver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

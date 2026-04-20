@@ -1,0 +1,32 @@
+title: Driver Load - XLHA.sys
+id: ee736af9-c3d1-5815-9887-8d57f6c8e751
+status: experimental
+description: |
+    Detects loading of driver XLHA.sys via hash.
+    XLHA.sys is a kernel driver from LG Electronics Inc. that exposes physical memory read/write via MmMapIoSpace and MSR read. Two other LG LHA.sys variants are already tracked in LOLDrivers. The driver is available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/d0de6c54-2dd8-4e32-a2a7-c6c26dcd2a0f/
+    - https://github.com/magicsword-io/LOLDrivers/issues/324
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=ec7f14be325648533fc04aff9da8635f'
+            - 'SHA1=086e5aab557be8fc970cb11b17d948f8a11978d8'
+            - 'SHA256=11c9cbc39b6e028f2e8f9e7f83b47ae83ca73961ecfebb2f7213f9478f5446d5'
+            - 'IMPHASH=1dd3b83f2b007f862a1d8de4a1d3303f'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

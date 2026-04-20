@@ -1,0 +1,30 @@
+title: Driver Load - SparkIO.sys
+id: ccae1a70-17c5-547e-97cb-1e444a5407c3
+status: experimental
+description: |
+    Detects loading of driver SparkIO.sys via name.
+    SparkIO.sys is a WHQL-signed kernel driver from Clevo Co. (Taiwan ODM) that ships with Control Center 3.0 and Flexicharger utilities on Clevo-chassis laptops (XMG, Eluktronics, EVOO, Origin PC, System76, Sager, and others). CVE-2022-37415 (CVSS 7.8) documents an out-of-bounds write vulnerability. The driver exposes arbitrary physical memory read via MmMapIoSpace, unrestricted I/O port read/write, arbitrary PCI configuration space read/write, and SMBus/I2C read/write. The device is created with IoCreateDevice (no DACL) and IRP_MJ_CREATE returns STATUS_SUCCESS unconditionally with zero caller validation. A public PoC exists by alfarom256.
+references:
+    - https://www.loldrivers.io/drivers/2a9193cc-4e7e-4c8d-9cb4-040723e81841/
+    - https://github.com/magicsword-io/LOLDrivers/issues/322
+    - https://nvd.nist.gov/vuln/detail/CVE-2022-37415
+    - https://gist.github.com/alfarom256/220cb75816ca2b5556e7fc8d8d2803a0
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sparkio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

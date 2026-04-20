@@ -1,0 +1,29 @@
+title: Driver Load - AsrCDDrv.sys
+id: 74f405c2-37e2-5689-bb16-8284c8294cda
+status: experimental
+description: |
+    Detects loading of driver AsrCDDrv.sys via name.
+    AsrCDDrv.sys is a kernel driver from ASRock Incorporation that exposes control register read/write (cr0, cr2, cr3, cr4, cr8), arbitrary MSR read/write, arbitrary physical memory read/write via MmMapIoSpace, contiguous memory allocation/free via MmAllocateContiguousMemorySpecifyCache, and I/O port read/write (8/16/32-bit). The driver is available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/bd06e043-0f69-4212-be93-d069bf0de848/
+    - https://github.com/magicsword-io/LOLDrivers/issues/326
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrcddrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

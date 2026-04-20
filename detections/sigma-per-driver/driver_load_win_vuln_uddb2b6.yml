@@ -1,0 +1,32 @@
+title: Driver Load - UDDB2B6.sys
+id: 2b87e5e3-448f-5ef6-8091-0032a2472798
+status: experimental
+description: |
+    Detects loading of driver UDDB2B6.sys via hash.
+    UDDB2B6.sys is a TechPowerUp kernel driver (GPU-Z variant) that exposes I/O port read/write, MSR read/write, MmMapIoSpace map/unmap/read/write, and PCI configuration space read/write. TechPowerUp has a history of vulnerable kernel drivers including GPU-Z.sys (CVE-2019-7245, CVE-2025-5324) and ThrottleStop.sys (CVE-2025-7771). The driver is available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/886af494-4087-48c9-b48f-53e638d6f62e/
+    - https://github.com/magicsword-io/LOLDrivers/issues/323
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d4320487bf3021f2f2afcfc43d652a69'
+            - 'SHA1=f94503fea3fa7c526a70187444affd7f0e0e8926'
+            - 'SHA256=9af0b89c5c54eb66e5a660b61aee7c1a25b1c92e20a310d8b16552abcf90c0b5'
+            - 'IMPHASH=fbcbcd6272f1203182652eacc64bca75'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -12,7 +12,7 @@ references:
     - https://www.rapid7.com/db/modules/post/windows/manage/dell_memory_protect/
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/04/14
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -26,8 +26,8 @@ detection:
         Hashes|contains:
             - 'MD5=d104621c93213942b7b43d65b5d8d33e'
             - 'MD5=dacb62578b3ea191ea37486d15f4f83c'
-            - 'SHA1=90a76945fd2fa45fab2b7bcfdaf6563595f94891'
             - 'SHA1=b03b1996a40bfea72e4584b82f6b845c503a9748'
+            - 'SHA1=90a76945fd2fa45fab2b7bcfdaf6563595f94891'
             - 'SHA256=71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009'
             - 'SHA256=2e6b339597a89e875f175023ed952aaac64e9d20d457bbc07acf1586e7fe2df8'
             - 'IMPHASH=506a31d768aec26b297c45b50026c820'

@@ -12,7 +12,7 @@ references:
     - https://nvd.nist.gov/vuln/detail/CVE-2018-7502
 author: Michael Haag
 date: 2026/04/10
-modified: 2026/04/14
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -28,10 +28,10 @@ detection:
             - 'MD5=508fce0a671bdd7f157c3f456bb7d33e'
             - 'SHA1=89edecb8860105b06b707af91d8831af2c5521ff'
             - 'SHA1=9322d0a40abd3a25ac53006c483b8974edfb953a'
-            - 'SHA256=d89938a469e8e4b429507522b5a52cb6f87c50f559f22f3042921631b768e59a'
             - 'SHA256=e0c58531501d6176ed0f632addca977616b0dab460f32f0a5909d21f828fc63b'
-            - 'IMPHASH=2296feba7970ee2c7866c1c500eb162c'
+            - 'SHA256=d89938a469e8e4b429507522b5a52cb6f87c50f559f22f3042921631b768e59a'
             - 'IMPHASH=872daab1baf534a62c538d0a37cab271'
+            - 'IMPHASH=2296feba7970ee2c7866c1c500eb162c'
     condition: selection_hashes
 falsepositives:
     - Unknown

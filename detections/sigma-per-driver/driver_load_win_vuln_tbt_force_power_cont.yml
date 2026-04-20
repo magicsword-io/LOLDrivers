@@ -1,0 +1,32 @@
+title: Driver Load - TBT_Force_Power_Control_Access64.sys
+id: 986796cc-ed4f-54e7-aba7-780d60b31b1e
+status: experimental
+description: |
+    Detects loading of driver TBT_Force_Power_Control_Access64.sys via hash.
+    TBT_Force_Power_Control_Access64.sys is a Thunderbolt force power control driver from Wistron Corporation that exposes physical memory read/write via MmMapIoSpace. Wistron is a major Taiwan-based OEM/ODM. Another Wistron driver (WiRwaDrv.sys) is already tracked in LOLDrivers. The driver is available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/408964b3-1799-425b-92bf-465c72a272d1/
+    - https://github.com/magicsword-io/LOLDrivers/issues/316
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a4de3d1854ba9b8e77b2324c52887a2c'
+            - 'SHA1=8a7e3d57f841e2f70453de312ab3b3710c5f7255'
+            - 'SHA256=4c776f34c6042d943baec3c13d7154a245aae8dd95e1933211fd19352c770676'
+            - 'IMPHASH=08dd07f0f6dab7cc028ea9013f5f0884'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
