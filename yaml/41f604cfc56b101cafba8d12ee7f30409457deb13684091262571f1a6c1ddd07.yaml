@@ -1,0 +1,79 @@
+Id: 41f604cf-c56b-101c-afba-8d12ee7f3040
+Author: Aka Tor
+Created: '2026-04-22'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create bsitf binPath=C:\windows\temp\bsitf.sys type=kernel && sc.exe
+    start bsitf
+  Description: ASUS BIOS Flash Driver (bsitf.sys) persists on disk after WinFlash
+    BIOS update completes. The driver exposes physical memory read via MmMapIoSpace
+    (IOCTL 0x222804), physically contiguous kernel memory allocation mapped to user
+    mode via MDL (IOCTL 0x222808), arbitrary I/O port read/write (IOCTLs 0x222810,
+    0x222818), and BIOS flash write via MmMapIoSpace (IOCTL 0x22281c). Device SDDL
+    grants full access to Administrators group without additional authentication.
+  Usecase: Kernel memory access, physical memory read, BIOS flash write, EDR bypass
+  Privileges: Administrator
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://globthe.top
+Acknowledgement:
+  Person: Aka Tor
+  Handle: '@AkaTorich'
+Detection: []
+KnownVulnerableSamples:
+- Filename: bsitf.sys
+  MD5: 835dd954d9f306f09050fd1751e9e1d2
+  SHA1: d80b8c9dfd317c57cbd9c3c6dfacc5b787bac06d
+  SHA256: 41f604cfc56b101cafba8d12ee7f30409457deb13684091262571f1a6c1ddd07
+  Signature: ''
+  Date: '2025-07-10 05:10:34'
+  Publisher: ASUSTek Computer Inc.
+  Company: ASUSTek Computer Inc.
+  Description: ASUS BIOS Flash Driver
+  Product: ASUS BIOS Flash Driver
+  ProductVersion: 3.2.12.0
+  FileVersion: 3.2.12.0
+  MachineType: AMD64
+  OriginalFilename: bsitf.sys
+  Copyright: (C) ASUSTek Computer Inc. All rights reserved.
+  Imphash: ''
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Sections: {}
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - MmMapLockedPages
+  - MmUnmapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - MmGetPhysicalAddress
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ZwSetSecurityObject
+  - SeCaptureSecurityDescriptor
+  - SeExports
+  Signatures: []
+Tags:
+- bsitf.sys
+- asus
+- winflash
+- physical-memory
+- bios-flash
