@@ -9,19 +9,26 @@ Category: malicious
 Commands:
   Command: sc.exe create devhost binPath=C:\windows\temp\devhost.sys type=kernel &&
     sc.exe start devhost
-  Description: devhost.sys is a WHQL Microsoft-signed malicious kernel driver that
-    provides arbitrary memory read primitives to user-mode callers. The driver opens
-    as Device devhost with no ACL beyond a device handle. It exposes the kernel page-table
-    root at load time allowing user-mode page table walking, arbitrary physical memory
-    read via MmMapIoSpace, and arbitrary kernel virtual memory read via MmCopyMemory
-    (SEH-safe). The dangerous kernel APIs are resolved dynamically at runtime rather
-    than appearing in the static import table -- a deliberate evasion technique. These
-    primitives are tailor-made for credential stealers targeting LSASS memory dumps.
-    The driver was WHQL attestation signed through Microsoft with an active certificate
-    (valid November 2025 to November 2026). SpcSpOpusInfo identifies the submitter
-    as Shenzhen Aolian Information Security Technology Co Ltd (a Chinese entity).
-    Discovered by Nextron Research who published YARA rule MAL_WHQL_DEVHOST_Apr26.
-  Usecase: Elevate privileges
+  Description: devhost.sys is a purpose-built WHQL Microsoft-signed malicious kernel
+    driver designed for credential theft via LSASS memory dumping. The device object
+    at \\.\devhost has no ACL (DriverEntry clears DO_DEVICE_INITIALIZING with no
+    security descriptor). At load, the driver reads IA32_LSTAR MSR to locate ntoskrnl
+    base via backward MZ walk, then hash-resolves 22 dangerous APIs (including
+    MmMapIoSpace and MmCopyMemory) using a djb2-style algorithm (seed 0x7FC1A932,
+    multiplier 0x21) over the PE export directory. Only 11 benign imports are visible
+    statically. The system CR3 is leaked to user-mode at DriverEntry. Authentication
+    uses a hardcoded magic cookie 0x8BADF00DDEADBEEF via IOCTL 0x28E017. The primary
+    attack IOCTL 0x28E01B accepts a caller-supplied CR3 and target virtual address,
+    performs a manual 4-level x64 page-table walk (PML4-PDPT-PD-PT with PS-bit
+    large-page handling), and reads physical memory via MmMapIoSpace. This provides
+    arbitrary kernel virtual memory read without ReadProcessMemory, MiniDumpWriteDump,
+    or any Sysmon Event 10 telemetry. Additional IOCTLs expose NtBuildNumber,
+    PsLoadedModuleList, and per-CPU KPCR CurrentThread. Pool tag dvrF (0x64727646).
+    WHQL attestation signed with active cert (Nov 2025-Nov 2026). SpcSpOpusInfo
+    identifies the submitter as Shenzhen Aolian Information Security Technology Co
+    Ltd. Discovered by Nextron Research (YARA rule MAL_WHQL_DEVHOST_Apr26) and
+    independently confirmed via Ghidra MCP reverse engineering.
+  Usecase: LSASS credential dump via manual page-table walk and physical memory read
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
