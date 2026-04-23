@@ -1,0 +1,29 @@
+title: Driver Load - GGProtect64.sys
+id: bb65ab0b-25a5-58f5-bc4a-23ab20d71bfb
+status: experimental
+description: |
+    Detects loading of driver GGProtect64.sys via name.
+    GGProtect64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/13d67487-8c65-47bb-a3d3-d799b5f7533b/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ggprotect64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

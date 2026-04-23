@@ -1,0 +1,29 @@
+title: Driver Load - bsitf.sys
+id: cf3d397c-df74-5a14-ae94-a9fdbc86eeed
+status: experimental
+description: |
+    Detects loading of driver bsitf.sys via name.
+    bsitf.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/9905c737-83ad-4801-a573-8267f3aea924/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bsitf.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

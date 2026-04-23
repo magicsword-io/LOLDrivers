@@ -1,0 +1,32 @@
+title: Driver Load - mst.sys
+id: ab5ea891-f5a5-520b-8d53-46d809d0c132
+status: experimental
+description: |
+    Detects loading of driver mst.sys via hash.
+    mst.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/0e94f1a2-beab-4adb-9687-eb2719a201c9/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=84c230b35f5c8e2a075362277c513a94'
+            - 'SHA1=001136fe2a17280190a7adcf95586ebcffa4aac2'
+            - 'SHA256=bf8d3377fc0834828afcc94165172333b2e1b58fb37d45be91a07d8d2e54d431'
+            - 'IMPHASH=4662aae0e89f6e51d339e12af74eb4df'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

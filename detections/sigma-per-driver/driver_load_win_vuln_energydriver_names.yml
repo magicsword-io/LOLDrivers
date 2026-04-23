@@ -1,0 +1,30 @@
+title: Driver Load - energydriver.sys
+id: f83dca92-0f28-52ae-9f29-7adf45bcb235
+status: experimental
+description: |
+    Detects loading of driver energydriver.sys via name.
+    EnergyDriver.sys is a kernel driver from Intel Corporation shipped with Intel Power Gadget 3.6 (deprecated December 2023). The driver exposes 5 IOCTLs including arbitrary wrmsr (any MSR index, any 64-bit value, no whitelist), arbitrary rdmsr (single CPU or all CPUs), and arbitrary physical memory read via MmMapIoSpace. wrmsr allows IA32_LSTAR hijack for direct syscall redirection. No privilege check, no MSR whitelist, default DACL. WHQL and Intel EV dual-signed.
+references:
+    - https://www.loldrivers.io/drivers/3dc0b91e-6afe-4938-ad9a-2cdf10c2c1e6/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/magicsword-io/LOLDrivers/issues/329
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\energydriver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

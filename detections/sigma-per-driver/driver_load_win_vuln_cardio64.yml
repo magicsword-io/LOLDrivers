@@ -1,0 +1,32 @@
+title: Driver Load - CardIo64.sys
+id: 1e760ff6-8e3f-5205-96d6-1f5127afcc01
+status: experimental
+description: |
+    Detects loading of driver CardIo64.sys via hash.
+    CardIo64.sys is a kernel driver from ICP DAS Co., LTD. (Taiwan), an industrial automation and I/O board manufacturer. The driver exposes arbitrary physical memory read/write via MmMapIoSpace, port I/O read/write (8/16/32-bit), and PCI bus data read/write via HalGetBusDataByOffset and HalSetBusDataByOffset. The driver is only 13KB and is also available in the KeServiceDescriptorTable/vulnerable-drivers repository on GitHub.
+references:
+    - https://www.loldrivers.io/drivers/97e3077a-ca57-4f45-ba7c-f63dc9c4ea32/
+    - https://github.com/magicsword-io/LOLDrivers/issues/310
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/13
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8dc4fc2f7b2ab7c22aab5a71c90c5f1b'
+            - 'SHA1=ec38aa86ce7f39fb8945002ec9839ad55c968b07'
+            - 'SHA256=8a6265d23d30d6c4c7e159624686de6dbf2ccb86a421b0f45510005f7a40cd1a'
+            - 'IMPHASH=60a339aa0d778dc179bb8a51c983cd31'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

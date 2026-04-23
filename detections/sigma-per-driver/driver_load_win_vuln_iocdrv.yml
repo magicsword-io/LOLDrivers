@@ -1,0 +1,32 @@
+title: Driver Load - iOCdrv.sys
+id: f1d94986-a786-54de-9b1b-05455b52bb00
+status: experimental
+description: |
+    Detects loading of driver iOCdrv.sys via hash.
+    iOCdrv.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/9bf541fb-a68e-41a5-aab2-b939acc22bb1/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4b1d81db39537320eb823f5b4f2489e2'
+            - 'SHA1=8a76cad761b978934d45584d4af8eb5b67f6fed1'
+            - 'SHA256=b936c4ba80ccee3b0b3b67fc88c8caa103fcfc47888e976f6d5b6f113d22f41f'
+            - 'IMPHASH=f4b16a2aac3a765538ac99aa7c973d5d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

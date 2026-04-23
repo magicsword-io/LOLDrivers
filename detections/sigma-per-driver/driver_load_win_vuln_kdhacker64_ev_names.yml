@@ -1,0 +1,28 @@
+title: Driver Load - kdhacker64_ev.sys
+id: d71eda29-5f84-5884-86c9-b79d6605045d
+status: experimental
+description: |
+    Detects loading of driver kdhacker64_ev.sys via name.
+    kdhacker64_ev.sys is a kernel driver from Beijing Kingsoft Security software bundled with Kingsoft AntiVirus and Liebao Browser. The driver exposes a kernel heap buffer overflow via IOCTL 0x120140 with approximately 512 bytes of overflow into adjacent kernel pool allocations. The root cause is a size validation mismatch -- input is validated at 0x488 bytes per element but only 0x248 bytes are allocated per element. RtlInitUnicodeString is called on user-controlled buffers without null terminator bounds checking, producing oversized ANSI strings that overflow 64-byte destination buffers. No authentication is required to access the device. The driver also includes TDI hooks for TCP/UDP/RawIP interception, process creation notification callbacks, filesystem filter attachments to NTFS/FAT/CDFS, camera device monitoring, and HTTP header parsing. Other Kingsoft drivers (ksapi.sys, mydrivers.sys) are already tracked in LOLDrivers.
+references:
+    - https://www.loldrivers.io/drivers/a6dd3aef-d3a7-4c72-abcd-e633e0c0706c/
+    - https://github.com/magicsword-io/LOLDrivers/issues/309
+author: Michael Haag
+date: 2026/04/13
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kdhacker64_ev.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

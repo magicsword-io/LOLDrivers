@@ -7,9 +7,10 @@ description: |
 references:
     - https://www.loldrivers.io/drivers/ff74f03e-e4ce-4242-bfe3-60601056bb34/
     - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://github.com/magicsword-io/LOLDrivers/issues/302
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/04/06
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,9 +22,13 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=31c74ebdf17f3cc1743cc5bea8ac2969'
             - 'MD5=803a371a78d528a44ef8777f67443b16'
             - 'SHA1=5fb9421be8a8b08ec395d05e00fd45eb753b593a'
+            - 'SHA1=97bb69b286007fbf7fc49b00550d8c35123167f0'
+            - 'SHA256=01e024d3c76fb1b71851ab7761afbee23159d6e8cbf7f5f1d5052efca2f7756d'
             - 'SHA256=000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b'
+            - 'IMPHASH=b1de401efd9d1c08f251d13cbbdf568d'
             - 'IMPHASH=f2c2ee1ff03c54f384f4eee8c2533107'
     condition: selection_hashes
 falsepositives:

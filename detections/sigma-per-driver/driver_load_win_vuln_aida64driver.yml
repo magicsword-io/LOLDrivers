@@ -1,0 +1,32 @@
+title: Driver Load - AIDA64Driver.sys
+id: a3ae3e33-e9e7-56f2-82ac-365f6fda522f
+status: experimental
+description: |
+    Detects loading of driver AIDA64Driver.sys via hash.
+    AIDA64Driver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/deffeb8d-c7d9-46b9-a921-7d8d096460ef/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=3f053c140e788ae8c230be5b741dc260'
+            - 'SHA1=52626d3ebd1576c6475c45dc511098da37e9beea'
+            - 'SHA256=7790ab2136def33afc6c86d64da81c2e1bc25d34e33282c987961cdaa87e4330'
+            - 'IMPHASH=fd295cdeb4c0d5d8f45aaa5c66357108'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

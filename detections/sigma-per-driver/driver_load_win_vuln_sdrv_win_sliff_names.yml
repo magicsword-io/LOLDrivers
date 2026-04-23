@@ -1,0 +1,29 @@
+title: Driver Load - sdrv_win_sliff.sys
+id: e307c275-dab1-522d-8952-bbce4f96dc6b
+status: experimental
+description: |
+    Detects loading of driver sdrv_win_sliff.sys via name.
+    sdrv_win_sliff.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/f1dd9c41-2608-48e5-bb3e-191d56b34591/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sdrv_win_sliff.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

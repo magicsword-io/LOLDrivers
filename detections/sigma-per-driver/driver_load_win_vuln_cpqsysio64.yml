@@ -1,0 +1,32 @@
+title: Driver Load - cpqsysio64.sys
+id: a8acb01b-fa45-5628-97ff-33baad1c150d
+status: experimental
+description: |
+    Detects loading of driver cpqsysio64.sys via hash.
+    cpqsysio64.sys is a Hewlett-Packard physical memory driver that ships as part of the HP ProLiant Support Pack and HP firmware ROM update utilities. The driver exposes physical memory read via MmMapIoSpace (IOCTL 0x152EF0) and physical memory allocation and mapping to usermode via ZwOpenSection on Device\PhysicalMemory combined with ZwMapViewOfSection (IOCTL 0x153E80). The Compaq heritage driver name (cpq prefix) dates to the HP-Compaq acquisition. The driver is only 15KB and is also available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/e41d5471-c4b8-48da-bdb7-e462008c2e78/
+    - https://github.com/magicsword-io/LOLDrivers/issues/311
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/13
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=cb7bc352e0a7531faec48de1dbd8a9a1'
+            - 'SHA1=e17fa2e3ca1d59e2dd8ddbc1020d77bb3b7156d0'
+            - 'SHA256=4024b090cebcabaab884c84ec80ffb15622d12632f236383a9b0a470bff9fe33'
+            - 'IMPHASH=f1073c0b639c62ba91cae90672cb0e70'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

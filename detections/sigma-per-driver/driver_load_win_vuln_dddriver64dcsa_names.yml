@@ -1,0 +1,29 @@
+title: Driver Load - dddriver64Dcsa.sys
+id: 650e7800-1999-5a17-8f2e-2a8b667f0a6a
+status: experimental
+description: |
+    Detects loading of driver dddriver64Dcsa.sys via name.
+    dddriver64Dcsa.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/705330b3-5e2c-4c87-ab92-0f01b68b1b2d/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dddriver64dcsa.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -343,7 +343,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff.yaml)
 
-*last_updated:* 2026-04-06
+*last_updated:* 2026-04-20
 
 {{< /column >}}
 {{< /block >}}

@@ -1,14 +1,18 @@
 title: Driver Load - RTCore64.sys
-id: d3d017e7-c7f9-5b66-a347-e3460d668a05
+id: 1c100351-27df-5bcc-b8fa-45fbc2ff78a0
 status: experimental
 description: |
     Detects loading of driver RTCore64.sys via name.
+    The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCore32.sys) allows any authenticated user to read and write to arbitrary memory, I/O ports, and MSRs. This can be exploited for privilege escalation, code execution under high privileges, and information disclosure. These signed drivers can also be used to bypass the Microsoft driver-signing policy to deploy malicious code.
 references:
-    - https://www.loldrivers.io/drivers/275c80c5-a67c-4536-b29e-4e481242cb01/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/e32bc3da-4db1-4858-a62c-6fbe4db6afbd/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/RTCore64_MSI_Afterburner_v.4.6.4.16117
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

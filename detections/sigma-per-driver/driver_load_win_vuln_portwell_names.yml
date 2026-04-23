@@ -1,0 +1,29 @@
+title: Driver Load - portwell.sys
+id: b8a77d1b-09c0-570e-b6bc-7fc2696d8761
+status: experimental
+description: |
+    Detects loading of driver portwell.sys via name.
+    portwell.sys is a kernel driver from Portwell Inc. (Taiwan) that exposes physical memory read/write via MmMapIoSpace. Portwell manufactures embedded computing platforms and industrial PCs. The driver is available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/84f92ac1-1e72-420d-9cc0-65c838b90a4d/
+    - https://github.com/magicsword-io/LOLDrivers/issues/314
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\portwell.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

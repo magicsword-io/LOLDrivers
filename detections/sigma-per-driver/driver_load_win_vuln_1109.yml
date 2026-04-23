@@ -1,0 +1,32 @@
+title: Driver Load - 1109.sys
+id: c622e759-e15c-56fa-bbc2-7f30130d9c16
+status: experimental
+description: |
+    Detects loading of driver 1109.sys via hash.
+    1109.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/1adc79ba-d923-4e25-9175-77fa18e10cad/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=41c580714dd28bda7da36dc5dc660710'
+            - 'SHA1=9b4052df235ba8e17874c6b1c57130d619f87432'
+            - 'SHA256=f154167b4b92851f478b3c3f88423cd719e3139bac5da07f33dd7929796c96f5'
+            - 'IMPHASH=4967091397a11c6325fd38bc55575f63'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

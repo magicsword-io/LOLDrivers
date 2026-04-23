@@ -1,0 +1,29 @@
+title: Driver Load - SysInfoX64.sys
+id: 2887d40e-9aa0-508a-ab68-cdd8a1ff697b
+status: experimental
+description: |
+    Detects loading of driver SysInfoX64.sys via name.
+    SysInfoX64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/1dd9bcd1-0090-4561-bfc4-481c3d139c81/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sysinfox64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,15 +1,15 @@
 title: Driver Load - Chaos-Rootkit.sys
-id: 33d019fc-a190-590e-af9b-c53af646f8e1
+id: 16c20ae1-600a-59ba-bb76-50bd93780ff7
 status: experimental
 description: |
     Detects loading of driver Chaos-Rootkit.sys via hash.
-    Chaos-Rootkit is a x64 ring0 rootkit with process hiding, privilege escalation, and capabilities for protecting and unprotecting processes, work on the latest Windows versions.
+    Chaos-Rootkit is a x64 ring0 rootkit with process hiding, privilege escalation, and capabilities for protecting and unprotecting processes and ability to restrict access to files except for whitelisted process work seamlessly on the latest Windows versions.
 references:
-    - https://www.loldrivers.io/drivers/abcd2c10-1078-4cf9-b320-04ca38d22f98/
+    - https://www.loldrivers.io/drivers/de62baae-872d-4e9a-b6d9-b0ac99854c66/
     - https://github.com/ZeroMemoryEx/Chaos-Rootkit
-author: Michael Haag
-date: 2023/06/05
-modified: 2026/04/06
+author: goosvorbook
+date: 2024/06/20
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=9532893c1d358188d66b0d7b0784bb6b'
-            - 'SHA1=d022f5e3c1bba43871af254a16ab0e378ea66184'
-            - 'SHA256=0ae8d1dd56a8a000ced74a627052933d2e9bff31d251de185b3c0c5fc94a44db'
-            - 'IMPHASH=3415f704b3149ea9a3d3a54036b208dd'
+            - 'MD5=443e8d915c04c370b7c31bb5f11ebab7'
+            - 'SHA1=c3f8b7f0995073abb58c2aec1b6062f89fe838a0'
+            - 'SHA256=bdc73f752c1353d41e877d8bf42a1c53f0bba7d6f52348aaef60e06f4d3087d0'
+            - 'IMPHASH=0abe54d37cd1a70ed9041ab7d80318a9'
     condition: selection_hashes
 falsepositives:
     - Unknown

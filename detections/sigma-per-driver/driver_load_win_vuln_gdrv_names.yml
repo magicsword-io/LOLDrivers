@@ -1,15 +1,20 @@
 title: Driver Load - gdrv.sys
-id: 3cee4b0c-c6d3-5a54-a119-f6b17a7d97d5
+id: 1c3c1fe0-4c6c-5bc9-a6af-6b12c33c6c68
 status: experimental
 description: |
     Detects loading of driver gdrv.sys via name.
-    GIGA-BYTE NonPnP Driver
+    gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific Registers (MSRs). Affected versions: GIGABYTE APP Center v1.05.21 and previous, AORUS GRAPHICS ENGINE v1.33 and previous, XTREME GAMING ENGINE v1.25 and previous, OC GURU II v2.08
 references:
-    - https://www.loldrivers.io/drivers/613b8509-18c0-4720-b489-736776b6713e/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/2bea1bca-753c-4f09-bc9f-566ab0193f4a/
+    - https://github.com/hoangprod/DanSpecial
+    - https://github.com/namazso/physmem_drivers
+    - https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities
+    - https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b
+    - https://github.com/namazso/physmem_drivers
+    - https://github.com/hmnthabit/CVE-2018-19320-LPE
+author: Michael Haag, rasta-mouse, goosvorbook
+date: 2023/01/09
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

@@ -1,0 +1,29 @@
+title: Driver Load - AdvCare.sys
+id: 3dcde3a8-8df4-5b01-ad17-c2ec16faf065
+status: experimental
+description: |
+    Detects loading of driver AdvCare.sys via name.
+    AdvCare.sys is a legacy hardware health monitor driver from Advantech Co., Ltd. for industrial PCs and embedded boards. The driver exposes arbitrary MSR read/write (wrmsr/rdmsr with no validation), arbitrary physical memory read/write via MmMapIoSpace, unrestricted port I/O across all 65536 ports, and PCI configuration space read/write via HalGetBusDataByOffset/HalSetBusDataByOffset. The device is created with IoCreateDevice (no DACL) and IRP_MJ_CREATE returns STATUS_SUCCESS unconditionally with zero caller validation -- no admin check, no token check, no integrity check. Any unprivileged local user can open the device and invoke every primitive. The driver is also available in the KeServiceDescriptorTable/vulnerable-drivers repository on GitHub.
+references:
+    - https://www.loldrivers.io/drivers/658a906e-82d3-4c78-a63b-ddddeeb3f452/
+    - https://github.com/magicsword-io/LOLDrivers/issues/306
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/13
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\advcare.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

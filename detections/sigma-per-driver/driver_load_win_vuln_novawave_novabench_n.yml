@@ -1,0 +1,32 @@
+title: Driver Load - Novawave_Novabench_NovabenchDriverWin10.sys
+id: 2421132d-06d0-5776-a083-d749e446510d
+status: experimental
+description: |
+    Detects loading of driver Novawave_Novabench_NovabenchDriverWin10.sys via hash.
+    Novawave_Novabench_NovabenchDriverWin10.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/c7789f3c-b638-4f66-a890-7605682306e7/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=7e08e027983e7401d837d44ff7f4ddf4'
+            - 'SHA1=43e79b27217a6221d179522b3223fe7051e9b589'
+            - 'SHA256=b6a17c3a1ca599b9865889b3bc1780e566c6cd05c8c5c6a05d2a29fef7089880'
+            - 'IMPHASH=00a7616cbc7e704cb5076d971d6e2f84'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

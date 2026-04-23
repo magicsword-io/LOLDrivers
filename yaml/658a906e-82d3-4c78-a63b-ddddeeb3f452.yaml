@@ -1,0 +1,199 @@
+Id: 658a906e-82d3-4c78-a63b-ddddeeb3f452
+Tags:
+- AdvCare.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-13'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create AdvCare binPath=C:\windows\temp\AdvCare.sys type=kernel &&
+    sc.exe start AdvCare
+  Description: AdvCare.sys is a legacy hardware health monitor driver from Advantech
+    Co., Ltd. for industrial PCs and embedded boards. The driver exposes arbitrary
+    MSR read/write (wrmsr/rdmsr with no validation), arbitrary physical memory read/write
+    via MmMapIoSpace, unrestricted port I/O across all 65536 ports, and PCI configuration
+    space read/write via HalGetBusDataByOffset/HalSetBusDataByOffset. The device is
+    created with IoCreateDevice (no DACL) and IRP_MJ_CREATE returns STATUS_SUCCESS
+    unconditionally with zero caller validation -- no admin check, no token check,
+    no integrity check. Any unprivileged local user can open the device and invoke
+    every primitive. The driver is also available in the KeServiceDescriptorTable/vulnerable-drivers
+    repository on GitHub.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/306
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: Patrick Saif
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: AdvCare.sys
+  MD5: 25b14ddbce32c0fd3ce53ac82145e257
+  SHA1: b08ca7e4a4aeb8a1f8049c1aa61255afe87987cd
+  SHA256: 697d3e6d215d1ed6dc2465334502db92e0ca77ad0b8392c945ac9e0f36509666
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Advantech Co., Ltd.
+  Description: AdvCare Driver (x64)
+  Product: AdvCare
+  ProductVersion: '2.00'
+  FileVersion: '2.00'
+  MachineType: AMD64
+  OriginalFilename: AdvCare.sys
+  Authentihash:
+    MD5: f972992e50e7c7c0dfff0cc588d32c63
+    SHA1: fde7a5f9fb44c260433b3118215d334cf280d8ad
+    SHA256: 591a22e88fbbfcae9d1a77cb62cb34e4f7a1b6d3263520dbf1157570af141b25
+  RichPEHeaderHash:
+    MD5: 0ccdeba07e264a9de2e732fbe99c6021
+    SHA1: f516816bbcb8cffda14f79090a9a3dcac0ed5748
+    SHA256: be66c788d090753900ad6665266f01c54828c827c377611c240e09af0579d976
+  Sections:
+    .text:
+      Entropy: 6.201101889235639
+      Virtual Size: '0x1c60'
+    .rdata:
+      Entropy: 4.213247708868254
+      Virtual Size: '0x410'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x120'
+    .pdata:
+      Entropy: 3.9853466637134516
+      Virtual Size: '0x270'
+    INIT:
+      Entropy: 4.438068314797575
+      Virtual Size: '0x244'
+    .rsrc:
+      Entropy: 3.2778799359144863
+      Virtual Size: '0x338'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2014-09-29 20:55:06'
+  InternalName: AdvCare
+  Copyright: Advantech Copyright (C) 2014
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IofCompleteRequest
+  - IoIs32bitProcess
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - strncmp
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ExAllocatePool
+  - ExFreePoolWithTag
+  - RtlInitUnicodeString
+  - ObfDereferenceObject
+  - IoWMIQueryAllData
+  - IoWMIOpenBlock
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: "C=TW, ST=\u53F0\u5317\u5E02, L=\u53F0\u5317\u5E02, O=Advantech Co.,\
+        \ Ltd., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=Advantech\
+        \ Co., Ltd."
+      ValidFrom: '2014-02-10 00:00:00'
+      ValidTo: '2017-02-26 23:59:59'
+      Signature: c458ac826684ad2636c06299c34cfabf2260c6f8b70d5dcdfd074d66fd915e5d36ede2b2e7e11399e50ba58c7a78f1e36b0329ed09ccd16cd387e36ee85d635832e2ff9bbe5e0502fdda3d6f92ebcabff65b10b381cd9d331bf65ea54541e816a2ad2cc31b3bcbc5688943895cea9015793ce4ff6723f4e8d9799d367dc02478729a2d247f6441bb13cb931587ee4cce30ebdba04e6933ee47aa0bd6d2bccbd99a97afc5e60ba461017e76e21e422434b5ed3b4788c54c10ef94932151c4aeb7d618314c40c5c6f3efefc62568e56f481ca8677e0c797a272421779d8096e97449ddb5ace42af5602c51cec3aa0523141a125dd63c76911122616ada4bdc48ca
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 15f48f98c57941006f4c9a639bf3c1cc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 302886a66e605088ae85da3211bfff45
+        SHA1: 909766a4a8920dd66219b349f3d6214b315b1dbe
+        SHA256: 9d7f30aa44453f7e79ba1369bdbeffd223129129244b90387d482670088534ff
+        SHA384: 411fa40a0786bc4e98191e8b45381f58a0f42a374cf309f43c2a7585b403f12f00d753af2c711226074653880931b666
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 15f48f98c57941006f4c9a639bf3c1cc
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 7c5012267ba1ab0751dd14c55b19c00b

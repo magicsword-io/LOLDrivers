@@ -1,19 +1,15 @@
 title: Driver Load - MsIo64.sys
-id: 9f906905-0cb2-5806-960b-8c81ac16b424
+id: b0a06c51-c3e0-5015-b851-d1e29a55f10a
 status: experimental
 description: |
     Detects loading of driver MsIo64.sys via name.
-    The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x80102044, 0x80102050,and 0x80102054)
+    MICSYS IO driver
 references:
-    - https://www.loldrivers.io/drivers/6d21df78-d718-44df-b722-99eec654f5b2/
-    - https://www.matteomalvica.com/blog/2020/09/24/weaponizing-cve-2020-17382/
-    - https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html
-    - https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities
-    - https://github.com/Exploitables/CVE-2020-17382
-    - https://github.com/namazso/physmem_drivers
-author: Michael Haag
-date: 2023/01/09
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/214654eb-90c4-48c8-a183-0157e50bf07f/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

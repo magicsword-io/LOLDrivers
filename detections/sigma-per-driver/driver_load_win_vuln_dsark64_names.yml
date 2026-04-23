@@ -1,0 +1,28 @@
+title: Driver Load - DsArk64.sys
+id: 04350bc3-2b8d-5e93-acb7-8dd16cf27d1f
+status: experimental
+description: |
+    Detects loading of driver DsArk64.sys via name.
+    DsArk64.sys is a WHQL Microsoft-signed anti-rootkit kernel driver from Qihoo 360 Total Security. It exposes kernel-level process termination via ZwTerminateProcess from Ring 0 (kills PPL-protected processes), arbitrary kernel memory read (512 bytes), and arbitrary kernel memory write (32 bytes). The driver gates device access behind a custom Authenticode signing check that validates the calling process PE signature against Qihoo root certificates. This check is fully bypassed via process hollowing into any Qihoo-signed executable (freely downloadable from 360.cn). The process kill IOCTL (0x80863008) requires no encryption or additional auth beyond the device open -- just a raw 4-byte PID. The kernel R/W IOCTLs use AES-128-CBC with a static key embedded in the binary. Initialization requires setting registry key HKLM\SYSTEM\CCS\Services\360FsFlt\daboot to 1.
+references:
+    - https://www.loldrivers.io/drivers/399fb787-5b06-46f0-86cb-dff7374bb015/
+    - https://github.com/magicsword-io/LOLDrivers/issues/308
+author: Michael Haag
+date: 2026/04/13
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dsark64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

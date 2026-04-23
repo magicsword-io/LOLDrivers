@@ -1,0 +1,32 @@
+title: Driver Load - SysInfoX64.sys
+id: 3a9271ac-c849-5f18-9ea4-a027be953e12
+status: experimental
+description: |
+    Detects loading of driver SysInfoX64.sys via hash.
+    SysInfoX64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/1dd9bcd1-0090-4561-bfc4-481c3d139c81/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=44fa80e2e754e679bdefccc8eb3d7a21'
+            - 'SHA1=fd1db5794918d580e3ad0d71f4a559005de90f22'
+            - 'SHA256=52c5ffd62eae04b890e0f4c96b84a3305e9b6571975c4352131cfc3d1b73a024'
+            - 'IMPHASH=31590ca2264abb5df63ef59df282330a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

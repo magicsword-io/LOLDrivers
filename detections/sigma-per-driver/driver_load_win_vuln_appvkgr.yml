@@ -1,0 +1,32 @@
+title: Driver Load - AppVkgr.sys
+id: 5262f1a9-3d2e-509f-9450-972d64392cbf
+status: experimental
+description: |
+    Detects loading of driver AppVkgr.sys via hash.
+    AppVkgr.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/fbd12dbb-434e-4950-887a-382b681e8a5a/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d788954cd8f0aa8b45dc497a1653465e'
+            - 'SHA1=9d09495b4f0f4e67d2b0e9317e0dda549d56272e'
+            - 'SHA256=70b47bd596e76297ded3b096839082bc31f79ef58cdffeaac7308e8b9565a6d5'
+            - 'IMPHASH=9a763a78d71db4c69cfc550b2d5f9aad'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

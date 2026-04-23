@@ -1,0 +1,29 @@
+title: Driver Load - ArgusMonitor.sys
+id: 427ad0a2-f9d1-5e00-9489-5dcec8782227
+status: experimental
+description: |
+    Detects loading of driver ArgusMonitor.sys via name.
+    ArgusMonitor.sys is the kernel driver for the Argus Monitor hardware temperature monitoring and fan control application by Argotronic UG (Germany). The driver exposes 47 IOCTLs providing arbitrary physical memory read/write via MmMapIoSpace (32 map slots, up to 128KB) with a single-shot read primitive that bypasses the address restriction (busNum=0xFF), unrestricted port I/O (any port 0x0000-0xFFFF), PCI configuration space read/write via HalGetBusDataByOffset and HalSetBusDataByOffset, MSR read/write with a whitelist that blocks IA32_LSTAR but allows IA32_MISC_ENABLE write (can disable NX/XD system-wide), and I2C/SMBus access via MMIO bit-banging. The driver uses IoCreateDevice with no DACL and IRP_MJ_CREATE returns STATUS_SUCCESS immediately with no caller validation. A handshake IOCTL accepts a user-chosen 0x200-byte XOR keypad (sending all zeros effectively disables the XOR layer). WHQL attestation signed with an active Microsoft certificate. KASLR bypass confirmed via physical memory PE header scan. Loads on any x64 Windows without ArgusMonitor software.
+references:
+    - https://www.loldrivers.io/drivers/08fbd284-7ad2-466d-b55f-6d5a7d07aca5/
+    - https://github.com/magicsword-io/LOLDrivers/issues/297
+    - https://www.argusmonitor.com/
+author: Michael Haag
+date: 2026/04/10
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\argusmonitor.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

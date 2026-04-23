@@ -1,0 +1,31 @@
+title: Driver Load - TcIo.sys
+id: a8f54af1-e7f6-5f51-a44b-6829750e45b2
+status: experimental
+description: |
+    Detects loading of driver TcIo.sys via name.
+    TcIo.sys and TcRouter.sys are WHQL Microsoft-signed kernel drivers from Beckhoff Automation GmbH (TwinCAT 3 Industrial Automation Runtime). TcIo.sys exposes arbitrary physical memory read/write via ZwOpenSection on Device\PhysicalMemory, arbitrary MMIO mapping via MmMapIoSpace, PCI configuration space read/write via HalGetBusDataByOffset and HalSetBusDataByOffset, and full PCI BAR probing and mapping. TcRouter.sys exposes arbitrary port I/O via direct ring-0 in/out instructions. Both drivers use plain IoCreateDevice with no DACL and have no caller validation on IRP_MJ_CREATE. All IOCTLs use METHOD_NEITHER with FILE_ANY_ACCESS. No hardware gate -- drivers load on any x64 Windows without Beckhoff hardware. CVE-2018-7502 was assigned for an untrusted pointer dereference in IOCTL 0x222206 affecting 19 drivers in the TwinCAT family (CISA advisory ICSA-18-081-02, Source Incite SRC-2018-0007). The physical memory and port I/O primitives described here go beyond the scope of CVE-2018-7502. 18 related drivers share the same codebase and certificate.
+references:
+    - https://www.loldrivers.io/drivers/12998ebb-8c74-4e44-89a2-2a71c0f6e92b/
+    - https://github.com/magicsword-io/LOLDrivers/issues/296
+    - https://www.cisa.gov/news-events/ics-advisories/icsa-18-081-02
+    - https://srcincite.io/advisories/src-2018-0007/
+    - https://nvd.nist.gov/vuln/detail/CVE-2018-7502
+author: Michael Haag
+date: 2026/04/10
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\tcio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

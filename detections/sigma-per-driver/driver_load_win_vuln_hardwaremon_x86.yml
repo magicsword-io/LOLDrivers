@@ -1,0 +1,32 @@
+title: Driver Load - HardwareMon-x86.sys
+id: fad51f36-b59b-5af0-990c-20371cda196c
+status: experimental
+description: |
+    Detects loading of driver HardwareMon-x86.sys via hash.
+    HardwareMon-x86.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/24d8bef2-379c-4a27-bd2d-4f13136f3476/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=99498c8990be78cc7f0fe0d08fee873d'
+            - 'SHA1=1e293e3d795e3a19e54ab14f2f70d8c556907ca5'
+            - 'SHA256=14807ce592bf8f12da8a338d7ef575ae60c2d513c5c7ecf1f276aef3b2aa627c'
+            - 'IMPHASH=70ba87ed0810c07055c329c7899396de'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

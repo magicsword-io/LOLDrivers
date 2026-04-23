@@ -1,0 +1,32 @@
+title: Driver Load - nxeng.sys
+id: 896f7383-6a5c-56e3-bdda-b2f3abbcc338
+status: experimental
+description: |
+    Detects loading of driver nxeng.sys via hash.
+    nxeng.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/6f1d7635-0778-4f17-9c97-b80deca32510/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8886bdebbc33f3a8830f38065e7f7e40'
+            - 'SHA1=be4fa5c2854d4a33b686d952b97f36f8c29391d8'
+            - 'SHA256=68d698a978b8ea3bf467bdea2d75ef3099826c3a0d4a1ddb95b078f48f0ae7a1'
+            - 'IMPHASH=1859bc8c867407c8a87682eeaa9ec7b2'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

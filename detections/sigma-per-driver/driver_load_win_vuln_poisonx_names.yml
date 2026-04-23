@@ -1,0 +1,29 @@
+title: Driver Load - PoisonX.sys
+id: db746450-3bc2-5246-8521-7a59ff11c2f4
+status: experimental
+description: |
+    Detects loading of driver PoisonX.sys via name.
+    A Microsoft-signed vulnerable driver used in BYOVD attacks to terminate protected processes, including EDR solutions such as CrowdStrike Falcon. The driver exposes an IOCTL that allows arbitrary process termination from user mode by passing a PID.
+references:
+    - https://www.loldrivers.io/drivers/fc3467c3-6109-447d-b438-7a4276c3d8e5/
+    - https://medium.com/@jehadbudagga/reverse-engineering-a-0day-used-against-crowdstrike-edr-a5ea1fbe3fd4
+    - https://github.com/j3h4ck/PoisonKiller/
+author: Bilal Retiat
+date: 2026/04/10
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\poisonx.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

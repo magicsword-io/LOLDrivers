@@ -1,0 +1,30 @@
+title: Driver Load - nipalk.sys
+id: 4fcca21c-7184-5c96-aeaf-7e42534d4699
+status: experimental
+description: |
+    Detects loading of driver nipalk.sys via name.
+    nipalk.sys is the NI-PAL (Platform Abstraction Layer) core kernel driver that ships with every National Instruments product including NI-DAQmx, LabVIEW, and NI-VISA. The driver uses a single IOCTL gateway (0xABCD03C4) dispatching to a two-level service table. The device is created with IoCreateDevice (no DACL) and IRP_MJ_CREATE returns STATUS_SUCCESS unconditionally with zero caller validation. Exposes arbitrary physical memory read/write to usermode via ZwOpenSection on Device\PhysicalMemory with SECTION_ALL_ACCESS and ZwMapViewOfSection with PAGE_READWRITE, kernel pages mapped to usermode via MmBuildMdlForNonPagedPool and MmMapLockedPagesSpecifyCache, VA-to-PA translation via MmGetPhysicalAddress, contiguous DMA allocation via MmAllocateContiguousMemorySpecifyCache, full bus read/write, and PCI configuration space access. CVE-2021-38304 covers a different vulnerability class (improper input validation in versions prior to 20.0.1f0) but the physical memory mapping primitives documented here go beyond that CVE scope. EV code signing certificate valid until July 2027.
+references:
+    - https://www.loldrivers.io/drivers/5ff0ca63-fff8-4c2d-ac04-bb09fc84259f/
+    - https://github.com/magicsword-io/LOLDrivers/issues/303
+    - https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/improper-input-validation-in-ni-pal.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2021-38304
+author: Michael Haag
+date: 2026/04/10
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nipalk.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

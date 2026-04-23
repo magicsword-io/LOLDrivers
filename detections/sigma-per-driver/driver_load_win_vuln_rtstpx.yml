@@ -1,0 +1,32 @@
+title: Driver Load - RtsTpx.sys
+id: 199506d3-4353-5df7-a807-2c204bd40e23
+status: experimental
+description: |
+    Detects loading of driver RtsTpx.sys via hash.
+    RtsTpx.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/610617d5-2566-4f55-b636-29a4ea576654/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=57d874a13a40c58ade544c273543ecfb'
+            - 'SHA1=b709573815f7b5e016400b2c301dce562d02699b'
+            - 'SHA256=b19ec8330b026100f705c05b793030ca109e15cbec4ada13b452acf259cc29d5'
+            - 'IMPHASH=3dd15860eaae991718ae239bc20417c7'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

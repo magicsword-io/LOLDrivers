@@ -1,0 +1,32 @@
+title: Driver Load - wdisvhost.sys
+id: cabde2a4-1ae9-5bb2-b8fa-907f5cfd45e5
+status: experimental
+description: |
+    Detects loading of driver wdisvhost.sys via hash.
+    wdisvhost.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/894bd2db-1d93-4b3d-8e4d-7dac29382cb9/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9851c3d7aee98aa0d712c50e9ca20eb9'
+            - 'SHA1=513e8fc423ce2737843053852a0a672c43d2db9e'
+            - 'SHA256=988960e31a258ea71cf93a7791ae8c91c8cefb6ad8a50cdbd1b07f73b524aa61'
+            - 'IMPHASH=8e01c1742ba7ebcbb0d61dd1ca8a6e91'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

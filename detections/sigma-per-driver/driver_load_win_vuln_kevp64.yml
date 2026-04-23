@@ -9,7 +9,7 @@ references:
     - Internal Research
 author: Nasreddine Bencherchali
 date: 2023/05/06
-modified: 2026/04/06
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -23,10 +23,10 @@ detection:
         Hashes|contains:
             - 'MD5=7e7e3f5532b6af24dcc252ac4b240311'
             - 'MD5=4ff880566f22919ed94ffae215d39da5'
-            - 'SHA1=3ccf1f3ac636a5e21b39ede48ff49fa23e05413f'
             - 'SHA1=755349d56cdd668ca22eebc4fc89f0cccef47327'
-            - 'SHA256=09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184'
+            - 'SHA1=3ccf1f3ac636a5e21b39ede48ff49fa23e05413f'
             - 'SHA256=8e6363a6393eb4234667c6f614b2072e33512866b3204f8395bbe01530d63f2f'
+            - 'SHA256=09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184'
             - 'IMPHASH=f5030145594c486434040aa2636a5dde'
     condition: selection_hashes
 falsepositives:

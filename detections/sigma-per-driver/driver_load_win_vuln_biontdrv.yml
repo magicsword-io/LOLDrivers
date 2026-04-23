@@ -11,7 +11,7 @@ references:
     - https://paragon-software.zendesk.com/hc/en-us/articles/32993902732817-IMPORTANT-Paragon-Driver-Security-Patch-for-All-Products-of-Hard-Disk-Manager-Product-Line-Biontdrv-sys
 author: Swachchhanda Shrawan Poudel
 date: 2025/03/02
-modified: 2026/04/06
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -23,12 +23,12 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=ef32d203a12462403c205b39eb4eef5b'
             - 'MD5=525ef6014f0ef20e44fe47c1d9980b69'
+            - 'MD5=ef32d203a12462403c205b39eb4eef5b'
             - 'SHA1=cab45e9d03efa8a09595b99b275caadb8f250811'
             - 'SHA1=b31a85406ac9a6a69bfbee74d6dc67d9d7bddee6'
-            - 'SHA256=fb0dbc3b9c897b7571b94fb2203ffb1ac0facfe366b2cb1f91904ea5335018f0'
             - 'SHA256=174c8d771d31d70fc95448e961a395f5ceb7658f0cc381a718fb3b854cde4efe'
+            - 'SHA256=fb0dbc3b9c897b7571b94fb2203ffb1ac0facfe366b2cb1f91904ea5335018f0'
             - 'IMPHASH=1014dd148858e163ab9a4d27d0e3594a'
             - 'IMPHASH=f4f462bcde0472cb6202214475f889b1'
     condition: selection_hashes

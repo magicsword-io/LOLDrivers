@@ -1,0 +1,32 @@
+title: Driver Load - AsrCDDrv.sys
+id: e925eefc-c7b2-5501-85d4-9b61475b611b
+status: experimental
+description: |
+    Detects loading of driver AsrCDDrv.sys via hash.
+    AsrCDDrv.sys is a kernel driver from ASRock Incorporation that exposes control register read/write (cr0, cr2, cr3, cr4, cr8), arbitrary MSR read/write, arbitrary physical memory read/write via MmMapIoSpace, contiguous memory allocation/free via MmAllocateContiguousMemorySpecifyCache, and I/O port read/write (8/16/32-bit). The driver is available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/bd06e043-0f69-4212-be93-d069bf0de848/
+    - https://github.com/magicsword-io/LOLDrivers/issues/326
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=7ee002414a5fa3650d418ebde92e528d'
+            - 'SHA1=554c4784bafef107fc64c170c073af85b8e8b85a'
+            - 'SHA256=04cc7df4077e36199b04afa39204c8f568f7f66f045e73010fb9b7685324442f'
+            - 'IMPHASH=57c7a5afa78ef66662909df8a27a1455'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

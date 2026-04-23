@@ -1,0 +1,32 @@
+title: Driver Load - d591004.sys
+id: 7f9e7eae-5a2e-50ec-8c9e-46ec81f0b06a
+status: experimental
+description: |
+    Detects loading of driver d591004.sys via hash.
+    d591004.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/c22dd43e-cf1f-4338-a109-d662198ffbe9/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1ff3fade2ecd00882eefff12ebbb8783'
+            - 'SHA1=1cb772bb82658593e2bf28330f4ad5e49041fec2'
+            - 'SHA256=1da4f7f001d239a54fab50eb7c3cbc985db392a3d4405e19c3a5d2035d591004'
+            - 'IMPHASH=ff87cc76b7f8139549af27a98ea0587f'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

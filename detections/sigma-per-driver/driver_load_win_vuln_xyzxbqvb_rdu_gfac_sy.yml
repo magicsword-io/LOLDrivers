@@ -1,0 +1,32 @@
+title: Driver Load - _xyzxbqvb.rdu_GFAC_Sys_x64.sys
+id: af154c2e-abee-5d26-8bef-c41f471d3751
+status: experimental
+description: |
+    Detects loading of driver _xyzxbqvb.rdu_GFAC_Sys_x64.sys via hash.
+    _xyzxbqvb.rdu_GFAC_Sys_x64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/63535f5c-9535-4bb0-ae8c-4366d40055f9/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c6016d13579a954adb70e656d2711838'
+            - 'SHA1=127a34bc163a830e9bd4b9db6879bff81ca02699'
+            - 'SHA256=b6748d7da5759dee7d5f2f32b0326b4edb7b2135a0e4a6d5ff26aef1e139d8b2'
+            - 'IMPHASH=53d0750e054b7fb8b84c710a76fb0766'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

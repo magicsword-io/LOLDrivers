@@ -1,16 +1,15 @@
-title: Driver Load - nicm.sys
-id: 2680b7db-4589-52d0-9bc8-7c731e6bfb70
+title: Driver Load - NICM.SYS
+id: f20e9217-0354-5a50-b7b8-cba8172b5e47
 status: experimental
 description: |
-    Detects loading of driver nicm.sys via name.
-    nicm.sys is a vulnerable driver. CVE-2013-3956.
+    Detects loading of driver NICM.SYS via name.
+    Novell Client Portability Layer
 references:
-    - https://www.loldrivers.io/drivers/86cff0de-2536-4b8d-a846-a7312c569597/
-    - https://github.com/jbaines-r7/dellicious
-    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-author: Michael Haag
-date: 2023/01/09
-modified: 2026/04/06
+    - https://www.loldrivers.io/drivers/f4126206-564f-49f5-a942-2138a3131e0e/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

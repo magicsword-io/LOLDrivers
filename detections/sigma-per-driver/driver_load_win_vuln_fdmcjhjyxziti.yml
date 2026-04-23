@@ -1,0 +1,32 @@
+title: Driver Load - FDMCJHJYXZITI.sys
+id: a763d21b-8ccc-5cff-a634-c32491d04717
+status: experimental
+description: |
+    Detects loading of driver FDMCJHJYXZITI.sys via hash.
+    FDMCJHJYXZITI.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/f650dfc3-d3a1-4a9a-8b71-c599d1f9579c/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=622cca8e67e9056955e0aeb55716a68f'
+            - 'SHA1=d4c584732fa9abd7d7eb83e169686764c500f2e0'
+            - 'SHA256=177227f68cc28ee7726381b95f7d2215da35be3750157ebcb7e113201059026c'
+            - 'IMPHASH=e3c915c62d33052b715b0a50dfa2d89d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

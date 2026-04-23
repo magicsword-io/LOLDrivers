@@ -1,0 +1,32 @@
+title: Driver Load - mtxmem.sys
+id: 17017d3a-51f3-5130-a8d1-1d2fb0963841
+status: experimental
+description: |
+    Detects loading of driver mtxmem.sys via hash.
+    mtxmem.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/7c766ce5-fa74-4080-907d-95f2f68d49e7/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0b664978b24775689f8bc1afc86e05da'
+            - 'SHA1=8c5fd6fb98bed0c040c6962bc2c3111c1bfcbc84'
+            - 'SHA256=bd434c90eba514f5448978edb8b9fcd424f2e5cf3c0df9040efe5c25ec692dbc'
+            - 'IMPHASH=5af9afb68dc6b0ed8e7d30b2fac5b6e7'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

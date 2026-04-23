@@ -1,0 +1,32 @@
+title: Driver Load - gibepext.sys
+id: 23db8641-32d5-5e95-a9c2-66a23c8910ef
+status: experimental
+description: |
+    Detects loading of driver gibepext.sys via hash.
+    gibepext.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/1e69f91e-4ec5-4c6a-b4a4-2279808b6545/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=98b2adeb673ec8dfd390af389c32513f'
+            - 'SHA1=0e6f6c0ff3b3146e7c82615869327d0a8d29fab4'
+            - 'SHA256=912ee11b2ea9d30519f56735e8a4720101bcacd077c6634cf32eb228b2d96e13'
+            - 'IMPHASH=253b4102bf3b989b207f0c458f8a3abe'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

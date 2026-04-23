@@ -1,0 +1,51 @@
+{{ $m := .Site.Data.metrics }}
+{{ if $m }}
+<style>
+.lol-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 0;}
+.lol-metric-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 20px;position:relative;overflow:hidden;}
+.lol-metric-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px;}
+.lol-metric-card.mc-blue::before{background:#2563EB;}
+.lol-metric-card.mc-red::before{background:#EF4444;}
+.lol-metric-card.mc-green::before{background:#10B981;}
+.lol-metric-card.mc-purple::before{background:#7C3AED;}
+.lol-metric-num{font-size:2rem;font-weight:800;line-height:1.1;color:#111;margin:0 0 2px;}
+.lol-metric-label{font-size:0.82rem;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:0.04em;margin:0 0 4px;}
+.lol-metric-sub{font-size:0.78rem;color:#6b7280;margin:0;line-height:1.3;}
+.lol-metric-pct{font-size:0.85rem;font-weight:600;margin-left:4px;}
+.mc-red .lol-metric-pct{color:#EF4444;}
+.mc-green .lol-metric-pct{color:#10B981;}
+.mc-purple .lol-metric-pct{color:#7C3AED;}
+.lol-metrics-footer{margin-top:10px;font-size:0.72rem;color:#9ca3af;text-align:right;}
+[data-mode="dark"] .lol-metric-card{background:#08080A;border-color:rgba(255,255,255,0.06);}
+[data-mode="dark"] .lol-metric-num{color:#fff;}
+[data-mode="dark"] .lol-metric-label{color:rgba(255,255,255,0.7);}
+[data-mode="dark"] .lol-metric-sub{color:rgba(255,255,255,0.4);}
+[data-mode="dark"] .lol-metrics-footer{color:rgba(255,255,255,0.25);}
+@media(max-width:480px){.lol-metrics{grid-template-columns:1fr;}}
+</style>
+<div class="lol-metrics">
+  <div class="lol-metric-card mc-blue">
+    <p class="lol-metric-label">Drivers Tracked</p>
+    <p class="lol-metric-num">{{ $m.total_samples }}</p>
+    <p class="lol-metric-sub">{{ $m.total_drivers }} unique drivers</p>
+  </div>
+  <div class="lol-metric-card mc-red">
+    <p class="lol-metric-label">Load Despite HVCI</p>
+    <p class="lol-metric-num">{{ $m.hvci_bypass_count }}<span class="lol-metric-pct">{{ $m.hvci_bypass_pct }}%</span></p>
+    <p class="lol-metric-sub">{{ $m.hvci_bypass_count }} of {{ $m.total_samples }} samples bypass HVCI</p>
+  </div>
+  <div class="lol-metric-card mc-green">
+    <p class="lol-metric-label">In MS Blocklist</p>
+    <p class="lol-metric-num">{{ $m.overlap_count }}<span class="lol-metric-pct">{{ $m.overlap_pct }}%</span></p>
+    <p class="lol-metric-sub">{{ $m.overlap_count }} of {{ $m.total_samples }} samples in MS blocklist</p>
+  </div>
+  <div class="lol-metric-card mc-purple">
+    <p class="lol-metric-label">LOLDrivers Exclusive</p>
+    <p class="lol-metric-num">{{ $m.loldrivers_exclusive_count }}<span class="lol-metric-pct" style="color:#10B981">{{ $m.loldrivers_exclusive_pct }}%</span></p>
+    <p class="lol-metric-sub">{{ $m.loldrivers_exclusive_count }} samples not covered by Microsoft</p>
+  </div>
+</div>
+<div class="lol-metrics-footer">Updated {{ $m.generated_at }} &middot; <a href="https://aka.ms/VulnerableDriverBlockList" target="_blank" rel="noopener">MS Blocklist source</a></div>
+{{ else }}
+<p style="color:#6b7280;font-size:0.9rem;">Metrics unavailable — run <code>site.py</code> to generate.</p>
+{{ end }}

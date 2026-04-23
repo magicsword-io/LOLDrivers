@@ -1,0 +1,32 @@
+title: Driver Load - ppa_x64.sys
+id: c78276d7-52c2-526e-9200-15f37ff7411b
+status: experimental
+description: |
+    Detects loading of driver ppa_x64.sys via hash.
+    ppa_x64.sys is a kernel driver by Remko Weijnen that provides physical memory access via the PhysicalMemory section object. The device name PhyMem indicates this is part of the PhyMem driver family, of which several variants are already tracked in LOLDrivers (phymem64.sys, Phymemx64.sys, phymem_ext64.sys). The driver is available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/d6dc9b52-9918-442d-b03a-f1f614aa4cce/
+    - https://github.com/magicsword-io/LOLDrivers/issues/315
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9851c3d7aee98aa0d712c50e9ca20eb9'
+            - 'SHA1=513e8fc423ce2737843053852a0a672c43d2db9e'
+            - 'SHA256=988960e31a258ea71cf93a7791ae8c91c8cefb6ad8a50cdbd1b07f73b524aa61'
+            - 'IMPHASH=8e01c1742ba7ebcbb0d61dd1ca8a6e91'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,15 +1,15 @@
 title: Driver Load - nvflash.sys
-id: a75d1ffa-c5f6-5fe8-9fb7-202d731da1f7
+id: c15744c1-d8cf-590d-a6ab-7cb1ae910ee8
 status: experimental
 description: |
     Detects loading of driver nvflash.sys via hash.
-    NVIDIA Flash Driver, Version 1.8.0
+    Confirmed vulnerable driver from Microsoft Block List
 references:
-    - https://www.loldrivers.io/drivers/d55a5955-6220-4f38-ba7d-91339330fe98/
-    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+    - https://www.loldrivers.io/drivers/2a6a38ca-f2e6-456e-9ccf-db59d8c80c9e/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 author: Michael Haag
-date: 2023/01/09
-modified: 2026/04/06
+date: 2023/07/22
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,32 +21,9 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=84fb76ee319073e77fb364bbbbff5461'
-            - 'MD5=a5ff71e189b462d2b1f0e9e8c4668d79'
-            - 'MD5=cf1113723e3c1c71af80d228f040c198'
-            - 'MD5=5c5f1c2dc6c2479bafec7c010c41c6ec'
-            - 'MD5=1e1a3d43bd598b231207ff3e70f78454'
-            - 'MD5=6f7125540e5e90957ba5f8d755a8d570'
-            - 'MD5=7951fa3096c99295d681acb0742506bf'
-            - 'MD5=3482acba11c71e45026747dbe366a7d9'
-            - 'SHA1=bff4c3696d81002c56f473a8ab353ef0e45854c0'
-            - 'SHA1=a4b2c56c12799855162ca3b004b4b2078c6ecf77'
-            - 'SHA1=376d59d0b19905ebb9b89913a5bdfacde1bd5a1e'
-            - 'SHA1=fece30b9b862bf99ae6a41e49f524fe6f32e215e'
-            - 'SHA1=d0216ebc81618c22d9d51f2f702c739625f40037'
-            - 'SHA1=2bcb81f1b643071180e8ed8f7e42f49606669976'
-            - 'SHA1=6ed5c2313eecd97b78aa5dcdb442dd47345c9e43'
-            - 'SHA1=8275977e4b586e485e9025222d0a582fcb9e1e8f'
-            - 'SHA256=3b2ad08123e8ed2516548240cfcdf5eefd89293f31070a6cd3949ee1b66fed14'
-            - 'SHA256=f1fbec90c60ee4daba1b35932db9f3556633b2777b1039163841a91cf997938e'
-            - 'SHA256=4737750788c72d2fc9cf95681c622357263075d65b23e54c4dc3f31446cad37b'
-            - 'SHA256=159dcf37dc723d6db2bad46ed6a1b0e31d72390ec298a5413c7be318aef4a241'
-            - 'SHA256=0a89a6ab2fca486480b6e3dacf392d6ce0c59a5bdb4bcd18d672feb4ebb0543c'
-            - 'SHA256=afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508'
-            - 'SHA256=423d58265b22504f512a84faf787c1af17c44445ae68f7adcaa68b6f970e7bd5'
-            - 'SHA256=1e9ec6b3e83055ae90f3664a083c46885c506d33de5e2a49f5f1189e89fa9f0a'
-            - 'IMPHASH=96861132665e8d66c0a91e6c02cc6639'
-            - 'IMPHASH=95fe5e937e5acf9bea948fe0256e46ae'
+            - 'MD5=ba86e444ae837476e7ccdd06f8867795'
+            - 'SHA1=b9c3f4dcc7463cbec84b808d880194bbc304ccd0'
+            - 'SHA256=9368e51ec98e2ad20893a5fc21e6a8b20c5bee158d5c49ca58649cff84db9d68'
             - 'IMPHASH=528ac7a1e034801d1f20238971c6ec19'
     condition: selection_hashes
 falsepositives:

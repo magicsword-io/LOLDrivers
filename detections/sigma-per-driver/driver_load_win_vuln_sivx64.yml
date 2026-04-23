@@ -1,0 +1,32 @@
+title: Driver Load - SIVX64.sys
+id: f0a2c9c2-57cd-59c2-a737-11cd9a83a268
+status: experimental
+description: |
+    Detects loading of driver SIVX64.sys via hash.
+    Ray Hinchliffe SIV (System Information Viewer) SIVX64.sys v5.85 dynamically resolves MmMapIoSpace and MmMapIoSpaceEx via MmGetSystemRoutineAddress at runtime (neither appears in the IAT), evading static import-based scanning. The driver exposes multiple privileged IOCTL primitives via \\.\SIVDRIVER including arbitrary physical memory mapped read/write (Cmd 0x14, critical), physical memory read via scatter-gather (Cmd 0x10) and bulk MDL (Cmd 0x13), MSR read/write on a whitelisted subset (Cmd 0x08/0x0C), unrestricted I/O port read/scan (Cmd 0x44/0x50), and unrestricted PCI configuration space read (Cmd 0x48). WHQL signed by Microsoft Windows Hardware Compatibility Publisher; loads despite HVCI.
+references:
+    - https://www.loldrivers.io/drivers/31439f28-4616-4ee1-a6b7-1cf742127909/
+    - https://github.com/magicsword-io/LOLDrivers/issues/287
+    - https://www.virustotal.com/gui/file/33903e8fa9f0a2acaa4784d645e309b0bd780693824b6c2c5fef257238c77478
+author: Michael Haag
+date: 2026/04/06
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=81d040540015fe998a4cc4bf9a4e8598'
+            - 'SHA1=5702d2ff261f0460a347e2a98752563633825842'
+            - 'SHA256=33903e8fa9f0a2acaa4784d645e309b0bd780693824b6c2c5fef257238c77478'
+            - 'IMPHASH=7007297dbcb0b94310208fdc643e67ac'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

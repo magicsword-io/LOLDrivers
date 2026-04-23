@@ -1,0 +1,29 @@
+title: Driver Load - ipctype.sys
+id: 7a4b92c2-a159-5cbc-99c5-b827d16a0bd4
+status: experimental
+description: |
+    Detects loading of driver ipctype.sys via name.
+    ipctype.sys is a kernel driver from Digital Electronics Corporation that exposes physical memory read/write via MmMapIoSpace. The driver is available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+references:
+    - https://www.loldrivers.io/drivers/509edc55-1881-4fac-8640-b9c516396505/
+    - https://github.com/magicsword-io/LOLDrivers/issues/313
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ipctype.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

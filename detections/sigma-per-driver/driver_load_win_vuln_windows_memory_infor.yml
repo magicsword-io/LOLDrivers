@@ -1,0 +1,32 @@
+title: Driver Load - Windows-Memory-Informer.sys
+id: 19f5c87b-1f85-5acd-8415-ca38667b7b15
+status: experimental
+description: |
+    Detects loading of driver Windows-Memory-Informer.sys via hash.
+    Windows-Memory-Informer.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/e354b869-e817-4f9f-8027-a3d5bfb3689b/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6a978194ee4214b2410f70862663d977'
+            - 'SHA1=c281e8eda1234b58802b5f99bad4e70e579bc224'
+            - 'SHA256=4cdae25483cb73a7a75dadc2d22c0115dece7e1a3c0162ae810e229faace5a44'
+            - 'IMPHASH=9f60d3704674207759f2bbd8e68be113'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

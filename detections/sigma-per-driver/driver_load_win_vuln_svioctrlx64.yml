@@ -1,0 +1,32 @@
+title: Driver Load - SvIoCtrlx64.sys
+id: f129801f-ea8d-5b59-bbf9-68097bf5eca0
+status: experimental
+description: |
+    Detects loading of driver SvIoCtrlx64.sys via hash.
+    SvIoCtrlx64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/8d2f15a5-e71a-47ba-a391-55d1a1962368/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6fb3c8ef22bbf968965b2cf12d4e5542'
+            - 'SHA1=343bdef40edc07f4dffc18637ab3fad4058d0a96'
+            - 'SHA256=9ade632e54c3f5e8c75eaf636f2910bad3a8a07d6f078e48c9641d3af1fe811c'
+            - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

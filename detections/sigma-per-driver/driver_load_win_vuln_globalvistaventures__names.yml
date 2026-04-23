@@ -1,0 +1,29 @@
+title: Driver Load - GlobalVistaVentures_v3.sys
+id: 487b2ac4-0bb7-59d0-9f9f-8628d89e193f
+status: experimental
+description: |
+    Detects loading of driver GlobalVistaVentures_v3.sys via name.
+    GlobalVistaVentures_v3.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/90df671c-a903-49bd-ac62-c124d4f6901d/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\globalvistaventures_v3.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

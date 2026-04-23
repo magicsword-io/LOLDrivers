@@ -1,17 +1,15 @@
 title: Driver Load - windbg.sys
-id: e470a7f4-143c-5bf0-8e5a-b8cd469a7802
+id: e73b8a0f-e634-5eca-a2f2-c7c2e17f4a7d
 status: experimental
 description: |
     Detects loading of driver windbg.sys via name.
-    Kernel driver seen in a recent CopperStealer campaign.
+    These samples are related to CopperStealth campaign found by TrendMicro. CopperStealth’s infection chain involves dropping and loading a rootkit, which later injects its payload into explorer.exe and another system process. These payloads are responsible for downloading and running additional tasks. The rootkit also blocks access to blocklisted registry keys and prevents certain executables and drivers from running.
 references:
-    - https://www.loldrivers.io/drivers/9c3c6e89-3916-498f-81e5-da057ab3ed42/
-    - https://www.proofpoint.com/us/blog/threat-insight/now-you-see-it-now-you-dont-copperstealer-performs-widespread-theft
-    - https://twitter.com/jaydinbas/status/1642898531445886978?s=20
-    - https://twitter.com/jaydinbas/status/1646475092006785027?s=20
+    - https://www.loldrivers.io/drivers/da7314dc-6cf1-4d74-a0d1-796fc08944f8/
+    - https://www.trendmicro.com/en_us/research/23/e/water-orthrus-new-campaigns-deliver-rootkit-and-phishing-modules.html
 author: Michael Haag
-date: 2023/04/22
-modified: 2026/04/06
+date: 2023/05/20
+modified: 2026/04/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

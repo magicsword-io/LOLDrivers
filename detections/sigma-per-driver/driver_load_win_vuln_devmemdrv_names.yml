@@ -1,0 +1,29 @@
+title: Driver Load - devMemDrv.sys
+id: 1331f42d-584d-5643-ac81-9f695ec8146b
+status: experimental
+description: |
+    Detects loading of driver devMemDrv.sys via name.
+    devMemDrv.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/f375e53d-db7c-4149-beff-c8b9329f6f9b/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\devmemdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,32 @@
+title: Driver Load - dXIw8eZ9aYxQYzgm.sys
+id: e458a561-9b0d-5b16-b799-4f48d45e1e23
+status: experimental
+description: |
+    Detects loading of driver dXIw8eZ9aYxQYzgm.sys via hash.
+    dXIw8eZ9aYxQYzgm.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/847e6aa7-ce2d-4f4a-aa6c-a00c5f0ad728/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=ee831c7f623190a53ce3f7b9cc3083a7'
+            - 'SHA1=3dd0107a1226975496c767a655518bf761dde772'
+            - 'SHA256=c3ea9a13da6f137238b4b912b1f398b8ccfae41ba618993e6cc6c73eb24800db'
+            - 'IMPHASH=501a0cef5c1b58c54a3c564c7a5d2158'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

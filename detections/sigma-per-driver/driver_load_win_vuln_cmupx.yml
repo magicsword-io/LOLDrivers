@@ -1,0 +1,32 @@
+title: Driver Load - CmUpx.sys
+id: e570839e-0335-58e8-b294-724033dc3930
+status: experimental
+description: |
+    Detects loading of driver CmUpx.sys via hash.
+    CmUpx.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/64601d77-61ea-43b7-8178-9d45dfba6022/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0463f185ac41aa492bd35dceb5de2ffc'
+            - 'SHA1=0e03d54a6fb230f54127363013770468dd156ba4'
+            - 'SHA256=cdf38928a13dfe0e6de054f0229945b9f7db9f88eb7269ecefdceb4b5fab4bfa'
+            - 'IMPHASH=ab986ade8b3cc340f30c1f64554034d7'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,32 @@
+title: Driver Load - bsitf.sys
+id: 6a90c289-f152-5840-b686-cacf95d35eb4
+status: experimental
+description: |
+    Detects loading of driver bsitf.sys via hash.
+    bsitf.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/9905c737-83ad-4801-a573-8267f3aea924/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4d59cc4dd2c94cdb78e561f3a422e899'
+            - 'SHA1=e77af2651fb4a4ff0fe80bf838ebe0b76aa8edd4'
+            - 'SHA256=602bef923ddbf2ea7967cedf56866b9db10fb43f0e90a9681cd021f1cddc05c9'
+            - 'IMPHASH=28d244dd772cc099f1ccc617f46863fc'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

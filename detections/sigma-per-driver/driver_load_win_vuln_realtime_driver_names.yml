@@ -1,0 +1,29 @@
+title: Driver Load - Realtime Driver.sys
+id: c2b816d7-c353-5716-b5e7-112ef6aeb263
+status: experimental
+description: |
+    Detects loading of driver Realtime Driver.sys via name.
+    Realtime Driver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/6882f954-e69b-464a-b7cf-0cda802d3257/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\realtime driver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

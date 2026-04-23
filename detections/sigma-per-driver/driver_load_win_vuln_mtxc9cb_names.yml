@@ -1,0 +1,29 @@
+title: Driver Load - mtxC9CB.sys
+id: 4202016d-784c-50f6-a68b-ae100cda6313
+status: experimental
+description: |
+    Detects loading of driver mtxC9CB.sys via name.
+    mtxC9CB.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+references:
+    - https://www.loldrivers.io/drivers/b7bfe661-591a-45be-823d-ac6dae2edeed/
+    - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+author: Michael Haag
+date: 2026/04/17
+modified: 2026/04/20
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\mtxc9cb.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
