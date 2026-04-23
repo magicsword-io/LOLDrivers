@@ -1,14 +1,14 @@
 title: Driver Load - amsdk.sys
-id: f684e4bc-82c8-59f8-9967-1c4db1a97db1
+id: b5661944-d8fc-554b-9fbf-44f1d62ee77d
 status: experimental
 description: |
     Detects loading of driver amsdk.sys via hash.
-    Vulnerable WatchDog Antimalware driver used by Silver Fox APT group to load unsigned drivers and execute malicious code in kernel mode
+    Vulnerable driver found in https://github.com/hfiref0x/KDU.
 references:
-    - https://www.loldrivers.io/drivers/981210cb-8b84-4d37-b46e-b71059b8c438/
-    - https://research.checkpoint.com/2025/silver-fox-apt-vulnerable-drivers/
-author: The Haag
-date: 2025/08/28
+    - https://www.loldrivers.io/drivers/a285591e-ad3c-46a3-a648-c58589ff5efc/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+author: Michael Haag
+date: 2023/05/22
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation
@@ -21,10 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=47960eb7affa4987ebed6193b0a636b9'
-            - 'SHA1=5001b8cd2cfb80c8ef43ecb89e45fe687d891e78'
-            - 'SHA256=12b3d8bc5cc1ea6e2acd741d8a80f56cf2a0a7ebfa0998e3f0743fcf83fabb9e'
-            - 'IMPHASH=eed27f23ed1b96d3456a64d7611c40ba'
+            - 'MD5=eb525d99a31eb4fff09814e83593a494'
+            - 'SHA1=290d6376658cf0f8182de0fae40b503098fa09fd'
+            - 'SHA256=6f55c148bb27c14408cf0f16f344abcd63539174ac855e510a42d78cfaec451c'
+            - 'IMPHASH=ad0cdf3bab32983050527655bce40f96'
     condition: selection_hashes
 falsepositives:
     - Unknown

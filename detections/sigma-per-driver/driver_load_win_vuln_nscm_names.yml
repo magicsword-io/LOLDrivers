@@ -1,15 +1,14 @@
 title: Driver Load - nscm.sys
-id: 79a26d31-4221-56de-bfd9-677da56c17ba
+id: 422fc094-ae7f-56cf-afa6-2b0c5369a19c
 status: experimental
 description: |
     Detects loading of driver nscm.sys via name.
-    nscm.sys is a vulnerable driver. CVE-2013-3956.
+    Novell XTier Session Manager
 references:
-    - https://www.loldrivers.io/drivers/351ff5ca-f07b-4eb6-9300-d5d31514defb/
-    - https://github.com/jbaines-r7/dellicious
-    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-author: Michael Haag
-date: 2023/01/09
+    - https://www.loldrivers.io/drivers/90afa27c-0f67-46a6-b4a9-809f55157c71/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation

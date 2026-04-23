@@ -1,14 +1,15 @@
-title: Driver Load - SANDRA.sys
-id: 96469d36-d094-57b9-b6c2-689281c7c15b
+title: Driver Load - sandra.sys
+id: 97f91bdf-e918-5e60-b64a-41f25fa29ade
 status: experimental
 description: |
-    Detects loading of driver SANDRA.sys via hash.
+    Detects loading of driver sandra.sys via hash.
     Sandra Device Driver (Win64 x64)(Unicode)
 references:
-    - https://www.loldrivers.io/drivers/a7628504-9e35-4e42-91f7-0c0a512549f4/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
+    - https://www.loldrivers.io/drivers/bc5e020a-ecff-43c8-b57b-ee17b5f65b21/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation
@@ -21,22 +22,25 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=e36f6f7401ae11e11f69d744703914db'
-            - 'MD5=1610342659cb8eb4a0361dbc047a2221'
-            - 'MD5=c842827d4704a5ef53a809463254e1cc'
-            - 'MD5=84b17daba8715089542641990c1ea3c2'
-            - 'SHA1=3059bc49e027a79ff61f0147edbc5cd56ad5fc2d'
-            - 'SHA1=09c567b8dd7c7f93884c2e6b71a7149fc0a7a1b5'
-            - 'SHA1=dcdc9b2bc8e79d44846086d0d482cb7c589f09b8'
-            - 'SHA1=8d0f33d073720597164f7321603578cd13346d1f'
-            - 'SHA256=b019ebd77ac19cdd72bba3318032752649bd56a7576723a8ae1cccd70ee1e61a'
-            - 'SHA256=496f4a4021226fb0f1b5f71a7634c84114c29faa308746a12c2414adb6b2a40b'
-            - 'SHA256=881bca6dc2dafe1ae18aeb59216af939a3ac37248c13ed42ad0e1048a3855461'
-            - 'SHA256=3e274df646f191d2705c0beaa35eeea84808593c3b333809f13632782e27ad75'
-            - 'IMPHASH=84d45ee8df6f63b5af419d89003a97bc'
-            - 'IMPHASH=e2306e26abfd90a5ce4dad0e266b3905'
+            - 'MD5=d86269ba823c9ecf49a145540cd0b3df'
+            - 'MD5=9a237fa07ce3ed06ea924a9bed4a6b99'
+            - 'MD5=230fd3749904ca045ea5ec0aa14006e9'
+            - 'MD5=0be4a11bc261f3cd8b4dbfebee88c209'
+            - 'MD5=5efbbfcc6adac121c8e2fe76641ed329'
+            - 'SHA1=f9eb4c942a89b4ba39d2bdbfd23716937ccb9925'
+            - 'SHA1=d32408c3b79b1f007331d2a3c78b1a7e96f37f79'
+            - 'SHA1=82ba5513c33e056c3f54152c8555abf555f3e745'
+            - 'SHA1=22c08d67bf687bf7ddd57056e274cbbbdb647561'
+            - 'SHA1=2fe874274bac6842819c1e9fe9477e6d5240944d'
+            - 'SHA256=cbf74bed1a4d3d5819b7c50e9d91e5760db1562d8032122edac6f0970f427183'
+            - 'SHA256=d7c79238f862b471740aff4cc3982658d1339795e9ec884a8921efe2e547d7c3'
+            - 'SHA256=0eab16c7f54b61620277977f8c332737081a46bc6bbde50742b6904bdd54f502'
+            - 'SHA256=1284a1462a5270833ec7719f768cdb381e7d0a9c475041f9f3c74fa8eea83590'
+            - 'SHA256=1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b'
+            - 'IMPHASH=756adaea6a3f9f0cdaff73d1a49ca201'
             - 'IMPHASH=8e96d1a56746c6f6f30f1a0963ce2f26'
-            - 'IMPHASH=4433528b0f664177546dd3e229f0daa5'
+            - 'IMPHASH=296afaa5ea70bbd17135afcd04758148'
+            - 'IMPHASH=abbab73b191d90dc642cbbc1f31d750d'
     condition: selection_hashes
 falsepositives:
     - Unknown

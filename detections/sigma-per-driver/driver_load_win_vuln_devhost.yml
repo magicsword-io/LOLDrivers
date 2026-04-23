@@ -1,0 +1,31 @@
+title: Driver Load - devhost.sys
+id: 20dbe18a-17a9-5897-ba35-f972ca75cbab
+status: experimental
+description: |
+    Detects loading of driver devhost.sys via hash.
+    devhost.sys is a WHQL attestation-signed kernel driver that exposes arbitrary memory read primitives to usermode. The device object at \\.\devhost has no ACL beyond a device handle. At load, the driver reads IA32_LSTAR MSR to locate ntoskrnl base via backward MZ walk, then dynamically resolves APIs (including MmMapIoSpace and MmCopyMemory) using a djb2-style hash algorithm over the PE export directory. Only 11 benign imports are visible statically. The system CR3 is leaked to user-mode at DriverEntry. Authentication uses a hardcoded magic cookie via IOCTL 0x28E017. IOCTL 0x28E01B accepts a caller-supplied CR3 and target virtual address, performs a manual 4-level x64 page-table walk (PML4-PDPT-PD-PT), and reads physical memory via MmMapIoSpace. Additional IOCTLs expose NtBuildNumber, PsLoadedModuleList, and per-CPU KPCR CurrentThread. Nextron Research noted that these primitives are tailor-made for credential theft (e.g. LSASS memory dumping), though no confirmed malicious usage has been publicly documented. WHQL attestation signed with active cert (Nov 2025-Nov 2026). SpcSpOpusInfo identifies the submitter as Shenzhen Aolian Information Security Technology Co Ltd.
+references:
+    - https://www.loldrivers.io/drivers/d0cc79b2-a789-4cf3-9a88-25bdabb79416/
+    - https://x.com/nextaboratory/status/1914729845602783262
+author: Michael Haag
+date: 2026/04/22
+modified: 2026/04/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a8bafdb454162ba3776e551f6b552f8e'
+            - 'SHA1=ba349735882fef5e60d8b6f7791d6220bccebcb5'
+            - 'SHA256=ee8844ffd3879190fb389b0f613cb2dcdcd83375cf0a6994170a648c5ca8c479'
+            - 'IMPHASH=fb7c5ff17455f725aa59f998a0f324ca'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

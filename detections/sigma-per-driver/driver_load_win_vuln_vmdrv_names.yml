@@ -1,14 +1,14 @@
 title: Driver Load - vmdrv.sys
-id: 64154c95-370e-5cc8-ba49-bbc8206300d5
+id: f2d3a868-4e90-547b-83ec-bfbfbd7420e6
 status: experimental
 description: |
     Detects loading of driver vmdrv.sys via name.
     Voicemod Virtual Audio Device (WDM)
 references:
-    - https://www.loldrivers.io/drivers/fdf4f85b-47f4-4c98-a0d5-a6583463f565/
-    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-author: Michael Haag
-date: 2023/01/09
+    - https://www.loldrivers.io/drivers/2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation
