@@ -1,14 +1,14 @@
 title: Driver Load - vmdrv.sys
-id: 500d97fe-8420-506f-96fc-c82583fc3291
+id: c890030a-0f3f-5dfb-8e41-628a6e905d5c
 status: experimental
 description: |
     Detects loading of driver vmdrv.sys via hash.
     Voicemod Virtual Audio Device (WDM)
 references:
-    - https://www.loldrivers.io/drivers/fdf4f85b-47f4-4c98-a0d5-a6583463f565/
-    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-author: Michael Haag
-date: 2023/01/09
+    - https://www.loldrivers.io/drivers/2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation
@@ -21,9 +21,13 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=d5db81974ffda566fa821400419f59be'
-            - 'SHA1=4c18754dca481f107f0923fb8ef5e149d128525d'
-            - 'SHA256=32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351'
+            - 'MD5=6d67da13cf84f15f6797ed929dd8cf5d'
+            - 'MD5=0e625b7a7c3f75524e307b160f8db337'
+            - 'SHA1=5088c71a740ef7c4156dcaa31e543052fe226e1c'
+            - 'SHA1=1a17cc64e47d3db7085a4dc365049a2d4552dc8a'
+            - 'SHA256=5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921'
+            - 'SHA256=d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3'
+            - 'IMPHASH=02a27dc9a48b694b7df4b821eb65178c'
             - 'IMPHASH=7c24141cdcfc23f5eb0e2b6792d80740'
     condition: selection_hashes
 falsepositives:

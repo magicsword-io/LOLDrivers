@@ -1,14 +1,14 @@
-title: Driver Load - NICM.sys
-id: 4aa19fdf-cf6f-52e1-8f67-65ee7c6a8cfe
+title: Driver Load - NICM.SYS
+id: f20e9217-0354-5a50-b7b8-cba8172b5e47
 status: experimental
 description: |
-    Detects loading of driver NICM.sys via name.
-    Confirmed vulnerable driver from Microsoft Block List
+    Detects loading of driver NICM.SYS via name.
+    Novell Client Portability Layer
 references:
-    - https://www.loldrivers.io/drivers/0f8e317e-ad2b-4b02-9f96-603bb8d28604/
-    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-author: Michael Haag
-date: 2023/07/22
+    - https://www.loldrivers.io/drivers/f4126206-564f-49f5-a942-2138a3131e0e/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation

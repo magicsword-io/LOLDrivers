@@ -1,14 +1,14 @@
 title: Driver Load - kEvP64.sys
-id: 61c3f599-9d7b-51c5-991d-7ae3621fc3be
+id: 3282103b-a2f9-5c1f-a6a1-6913dcce7f9d
 status: experimental
 description: |
     Detects loading of driver kEvP64.sys via name.
     PowerTool
 references:
-    - https://www.loldrivers.io/drivers/fe2f68e1-e459-4802-9a9a-23bb3c2fd331/
-    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-author: Michael Haag
-date: 2023/01/09
+    - https://www.loldrivers.io/drivers/73196456-40ae-4b6d-8562-07cf99458a7d/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation

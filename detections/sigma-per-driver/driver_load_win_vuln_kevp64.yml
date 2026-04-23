@@ -1,14 +1,14 @@
 title: Driver Load - kEvP64.sys
-id: 91eee43e-c8c6-5761-999f-be9b24c636ad
+id: 6e82c8d8-0c2f-525f-af7b-aebf099bd93d
 status: experimental
 description: |
     Detects loading of driver kEvP64.sys via hash.
     PowerTool
 references:
-    - https://www.loldrivers.io/drivers/fe2f68e1-e459-4802-9a9a-23bb3c2fd331/
-    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-author: Michael Haag
-date: 2023/01/09
+    - https://www.loldrivers.io/drivers/73196456-40ae-4b6d-8562-07cf99458a7d/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation
@@ -21,31 +21,13 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=20125794b807116617d43f02b616e092'
-            - 'MD5=2c1045bb133b7c9f5115e7f2b20c267a'
-            - 'MD5=3ae11bde32cdbd8637124ada866a5a7e'
-            - 'MD5=23b807c09b9b6ea85ed5c508aab200b7'
-            - 'MD5=81b72492d45982cd7a4a138676329fd6'
-            - 'MD5=1c9001dcd34b4db414f0c54242fedf49'
-            - 'MD5=2a5ccd95292f03f0dd4899d18b55b428'
-            - 'SHA1=e5114fd50904c7fb75d8c86367b9a2dd4f79dfb1'
-            - 'SHA1=569f4605c65c2a217b28aefeb8570f9ea663e4b7'
-            - 'SHA1=f3db629cfe37a73144d5258e64d9dd8b38084cf4'
-            - 'SHA1=a380aeb3ffaecc53ca48bb1d4d622c46f1de7962'
-            - 'SHA1=4927d843577bada119a17b249ff4e7f5e9983a92'
-            - 'SHA1=56af49e030eb85528e82849d7d1b6147f3c4973e'
-            - 'SHA1=4a2e034d2702aba6bca5d9405ba533ed1274ff0c'
-            - 'SHA256=e61004335dfe7349f2b2252baa1e111fb47c0f2d6c78a060502b6fcc92f801e4'
-            - 'SHA256=d9500af86bf129d06b47bcfbc4b23fcc724cfbd2af58b03cdb13b26f8f50d65e'
-            - 'SHA256=7c0f77d103015fc29379ba75d133dc3450d557b0ba1f7495c6b43447abdae230'
-            - 'SHA256=7462b7ae48ae9469474222d4df2f0c4f72cdef7f3a69a524d4fccc5ed0fd343f'
-            - 'SHA256=1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c'
-            - 'SHA256=2a4f4400402cdc475d39389645ca825bb0e775c3ecb7c527e30c5be44e24af7d'
-            - 'SHA256=97363f377aaf3c01641ac04a15714acbec978afb1219ac8f22c7e5df7f2b2d56'
-            - 'IMPHASH=4fb27d2712ef4afdb67e0921d64a5f1e'
+            - 'MD5=7e7e3f5532b6af24dcc252ac4b240311'
+            - 'MD5=4ff880566f22919ed94ffae215d39da5'
+            - 'SHA1=3ccf1f3ac636a5e21b39ede48ff49fa23e05413f'
+            - 'SHA1=755349d56cdd668ca22eebc4fc89f0cccef47327'
+            - 'SHA256=8e6363a6393eb4234667c6f614b2072e33512866b3204f8395bbe01530d63f2f'
+            - 'SHA256=09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184'
             - 'IMPHASH=f5030145594c486434040aa2636a5dde'
-            - 'IMPHASH=021fd02a8adad420116496b6f2759960'
-            - 'IMPHASH=a1603fe7f02448c6b33687ddb9304c7f'
     condition: selection_hashes
 falsepositives:
     - Unknown

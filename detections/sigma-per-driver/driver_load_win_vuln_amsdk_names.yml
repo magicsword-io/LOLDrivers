@@ -1,14 +1,14 @@
 title: Driver Load - amsdk.sys
-id: 43d4f102-84f8-54cf-bf0f-be906272f5c6
+id: 319d4c2c-660a-54c7-9136-a2295de1cfb8
 status: experimental
 description: |
     Detects loading of driver amsdk.sys via name.
-    Vulnerable WatchDog Antimalware driver used by Silver Fox APT group to load unsigned drivers and execute malicious code in kernel mode
+    Vulnerable driver found in https://github.com/hfiref0x/KDU.
 references:
-    - https://www.loldrivers.io/drivers/981210cb-8b84-4d37-b46e-b71059b8c438/
-    - https://research.checkpoint.com/2025/silver-fox-apt-vulnerable-drivers/
-author: The Haag
-date: 2025/08/28
+    - https://www.loldrivers.io/drivers/a285591e-ad3c-46a3-a648-c58589ff5efc/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+author: Michael Haag
+date: 2023/05/22
 modified: 2026/04/23
 tags:
     - attack.privilege_escalation
