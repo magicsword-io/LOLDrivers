@@ -1,0 +1,40 @@
+title: Driver Load - TRIXX.sys
+id: c9a52bd4-0272-5eaa-95fc-ee2dd5a89aaa
+status: experimental
+description: |
+    Detects loading of driver TRIXX.sys via hash.
+    TRIXX.sys is a shared utility kernel driver distributed by TechPowerUp LLC with Sapphire TRIXX and GPU-Z. The driver provides completely unrestricted hardware access from usermode through 16+ IOCTLs with zero validation on hardware parameters, including arbitrary port I/O read/write, arbitrary PCI configuration space read/write via HalGetBusDataByOffset/HalSetBusDataByOffset, MMIO BAR mapping via MmMapIoSpace, and MMIO read/write through mapped BARs. Physical memory read/write is achievable by remapping a PCI device BAR to a target physical address then mapping it via MmMapIoSpace. The driver creates its device dynamically based on the Windows service name and has no hardware dependency, loading on any x64 Windows system. TechPowerUp has a history of vulnerable kernel drivers including GPU-Z.sys (CVE-2019-7245, CVE-2025-5324) and ThrottleStop.sys (CVE-2025-7771) which expose the same MmMapIoSpace primitive. Fresh EV code signing certificate valid until April 2028 with zero AV detections.
+references:
+    - https://www.loldrivers.io/drivers/f0a02666-44f6-4174-a7c6-d006481a340f/
+    - https://github.com/magicsword-io/LOLDrivers/issues/291
+    - https://github.com/magicsword-io/LOLDrivers/issues/320
+author: Michael Haag
+date: 2026/04/07
+modified: 2026/04/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=132006f1712896a68dc5d4ef9f8891b2'
+            - 'MD5=d2070f9c767ddb80bc8b61c15933de32'
+            - 'MD5=e0bbbff8573de4305a653aa83066068b'
+            - 'SHA1=ca6cc11d06497b84b3f80bd7adefbaf9ba93581a'
+            - 'SHA1=56664f538773a01166f69790ecf72bd9021f5c1c'
+            - 'SHA1=11e3227d35b3c2a06bdf1e3bdc3ba158e494ffa4'
+            - 'SHA256=7d39223e7eb902712aeac77c90b9fa00a6e5e56a68d4c542bcc88556a57ba735'
+            - 'SHA256=6e7b28216c1d7f1dab6e147823c70414df804836701fa43ec686fd7f4a6e573f'
+            - 'SHA256=69fb21e4c8dbfcab838d53d98ec7357d35e30cbbe5fde9e26457d79242ddd78e'
+            - 'IMPHASH=f5d9d876f905bcbf64aa8827443a2b10'
+            - 'IMPHASH=77ae59c87ead2b82a6d0b32d5624f9c5'
+            - 'IMPHASH=0f0debec985c6fda5df59da70c63bf43'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

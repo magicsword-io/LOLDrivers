@@ -1,15 +1,15 @@
 title: Driver Load - sfdrvx32.sys
-id: bcfc6d71-2421-58ef-97f8-9c7975d28aa4
+id: 6c079500-7323-56ec-bb0d-b64ffd93c367
 status: experimental
 description: |
     Detects loading of driver sfdrvx32.sys via name.
-    Speed Fan x32 Driver
+    Confirmed vulnerable driver from Microsoft Block List
 references:
-    - https://www.loldrivers.io/drivers/2ada18ae-2c52-49b6-b1a0-cf3b267f6dc7/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/20
+    - https://www.loldrivers.io/drivers/6c0c60f0-895d-428a-a8ae-e10390bceb12/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/04/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

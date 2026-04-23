@@ -456,7 +456,7 @@ sc.exe create KDHacker binPath=C:\windows\temp\kdhacker64_ev.sys type=kernel &am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/a6dd3aef-d3a7-4c72-abcd-e633e0c0706c.yaml)
 
-*last_updated:* 2026-04-20
+*last_updated:* 2026-04-23
 
 {{< /column >}}
 {{< /block >}}

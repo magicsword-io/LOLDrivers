@@ -10,7 +10,7 @@ references:
     - https://www.asus.com/content/asus-product-security-advisory/
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/04/20
+modified: 2026/04/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -28,8 +28,8 @@ detection:
             - 'SHA1=2fc6845047abcf2a918fce89ab99e4955d08e72c'
             - 'SHA256=e62d0c1353a3d913497e6016d0f48d7cf9ef99e4026b94ccd873d6c7a9a54565'
             - 'SHA256=ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41'
-            - 'IMPHASH=9928d53dbe860aba1b7c891831680629'
             - 'IMPHASH=892a0ac24a43307d5efc9e8365227577'
+            - 'IMPHASH=9928d53dbe860aba1b7c891831680629'
     condition: selection_hashes
 falsepositives:
     - Unknown
