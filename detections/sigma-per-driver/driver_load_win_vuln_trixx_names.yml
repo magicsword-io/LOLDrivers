@@ -1,0 +1,29 @@
+title: Driver Load - TRIXX.sys
+id: 5f9bf252-f998-52bb-8702-028323db5cf6
+status: experimental
+description: |
+    Detects loading of driver TRIXX.sys via name.
+    TRIXX.sys is a shared utility kernel driver distributed by TechPowerUp LLC with Sapphire TRIXX and GPU-Z. The driver provides completely unrestricted hardware access from usermode through 16+ IOCTLs with zero validation on hardware parameters, including arbitrary port I/O read/write, arbitrary PCI configuration space read/write via HalGetBusDataByOffset/HalSetBusDataByOffset, MMIO BAR mapping via MmMapIoSpace, and MMIO read/write through mapped BARs. Physical memory read/write is achievable by remapping a PCI device BAR to a target physical address then mapping it via MmMapIoSpace. The driver creates its device dynamically based on the Windows service name and has no hardware dependency, loading on any x64 Windows system. TechPowerUp has a history of vulnerable kernel drivers including GPU-Z.sys (CVE-2019-7245, CVE-2025-5324) and ThrottleStop.sys (CVE-2025-7771) which expose the same MmMapIoSpace primitive. Fresh EV code signing certificate valid until April 2028 with zero AV detections.
+references:
+    - https://www.loldrivers.io/drivers/f0a02666-44f6-4174-a7c6-d006481a340f/
+    - https://github.com/magicsword-io/LOLDrivers/issues/291
+    - https://github.com/magicsword-io/LOLDrivers/issues/320
+author: Michael Haag
+date: 2026/04/07
+modified: 2026/04/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\trixx.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -3,14 +3,15 @@ id: cf3d397c-df74-5a14-ae94-a9fdbc86eeed
 status: experimental
 description: |
     Detects loading of driver bsitf.sys via name.
-    bsitf.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+    bsitf.sys is the ASUS BIOS Flash Driver distributed with ASUS WinFlash BIOS update utility. The driver persists on disk after WinFlash completes and exposes physical memory read via MmMapIoSpace (IOCTL 0x222804), physically contiguous kernel memory allocation mapped to usermode via MDL (IOCTL 0x222808), arbitrary I/O port write (IOCTL 0x222810) and read (IOCTL 0x222818), PCI config space read with BAR mapping to usermode (IOCTL 0x222814), and BIOS flash write via MmMapIoSpace (IOCTL 0x22281c). WHQL attestation signed via Microsoft Windows Third Party Component CA 2014. Device SDDL grants full access to Administrators group.
 references:
     - https://www.loldrivers.io/drivers/9905c737-83ad-4801-a573-8267f3aea924/
     - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/magicsword-io/LOLDrivers/pull/332
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
 author: Michael Haag
 date: 2026/04/17
-modified: 2026/04/20
+modified: 2026/04/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

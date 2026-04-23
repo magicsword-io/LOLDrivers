@@ -1,15 +1,15 @@
 title: Driver Load - 2.sys
-id: 0e5fd358-b717-5ce8-a6dd-9683c2c33de0
+id: c8ef5364-53e4-563f-b962-5628f1646999
 status: experimental
 description: |
     Detects loading of driver 2.sys via name.
-    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+    Driver categorized as POORTRY by Mandiant.
 references:
-    - https://www.loldrivers.io/drivers/bb1f80f3-d2fd-463e-9403-57c919bd976b/
-    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+    - https://www.loldrivers.io/drivers/0c0198a3-5c63-4a9b-abe9-88a810602329/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 author: Michael Haag
-date: 2024/09/10
-modified: 2026/04/20
+date: 2023/03/04
+modified: 2026/04/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

@@ -3,14 +3,15 @@ id: 6a90c289-f152-5840-b686-cacf95d35eb4
 status: experimental
 description: |
     Detects loading of driver bsitf.sys via hash.
-    bsitf.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+    bsitf.sys is the ASUS BIOS Flash Driver distributed with ASUS WinFlash BIOS update utility. The driver persists on disk after WinFlash completes and exposes physical memory read via MmMapIoSpace (IOCTL 0x222804), physically contiguous kernel memory allocation mapped to usermode via MDL (IOCTL 0x222808), arbitrary I/O port write (IOCTL 0x222810) and read (IOCTL 0x222818), PCI config space read with BAR mapping to usermode (IOCTL 0x222814), and BIOS flash write via MmMapIoSpace (IOCTL 0x22281c). WHQL attestation signed via Microsoft Windows Third Party Component CA 2014. Device SDDL grants full access to Administrators group.
 references:
     - https://www.loldrivers.io/drivers/9905c737-83ad-4801-a573-8267f3aea924/
     - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/magicsword-io/LOLDrivers/pull/332
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
 author: Michael Haag
 date: 2026/04/17
-modified: 2026/04/20
+modified: 2026/04/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -23,7 +24,10 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=4d59cc4dd2c94cdb78e561f3a422e899'
+            - 'MD5=835dd954d9f306f09050fd1751e9e1d2'
             - 'SHA1=e77af2651fb4a4ff0fe80bf838ebe0b76aa8edd4'
+            - 'SHA1=d80b8c9dfd317c57cbd9c3c6dfacc5b787bac06d'
+            - 'SHA256=41f604cfc56b101cafba8d12ee7f30409457deb13684091262571f1a6c1ddd07'
             - 'SHA256=602bef923ddbf2ea7967cedf56866b9db10fb43f0e90a9681cd021f1cddc05c9'
             - 'IMPHASH=28d244dd772cc099f1ccc617f46863fc'
     condition: selection_hashes
