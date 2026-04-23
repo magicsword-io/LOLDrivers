@@ -1,0 +1,31 @@
+title: Driver Load - GoFly64.sys
+id: 0aa9134c-f078-5ab2-931b-5b69d01903a7
+status: experimental
+description: |
+    Detects loading of driver GoFly64.sys via hash.
+    GoFly64.sys is a WFP (Windows Filtering Platform) network filter driver signed by a Chinese software company (南京偲言睿网络科技有限公司 / Nanjing Siyanrui Network Technology) that exposes 20+ IOCTLs to usermode with no authentication. The most critical primitive is IOCTL 0x12227A which opens any process by PID via ZwOpenProcess and terminates it via ZwTerminateProcess, enabling kernel-level EDR/AV process killing. Additional capabilities include WFP-based network traffic interception and packet injection (FwpsInjectNetworkSendAsync, FwpsInjectNetworkReceiveAsync), IPv4 traffic redirection (IOCTL 0x122262 via RtlIpv4StringToAddressA), process creation monitoring (PsSetCreateProcessNotifyRoutineEx), image load monitoring (PsSetLoadImageNotifyRoutine), and kernel-mode file write operations. VT shows 88 malicious execution parents including malware droppers and PowerShell scripts, confirming heavy abuse in the wild for BYOVD attacks. Also distributed as PandaSpeed64.sys and drv_02581.sys.
+references:
+    - https://www.loldrivers.io/drivers/c2ed6a76-95ad-45fd-97d4-b55deefb3e32/
+    - https://github.com/magicsword-io/LOLDrivers/issues/299
+author: Michael Haag
+date: 2026/04/22
+modified: 2026/04/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=26b2da88cb95b98b46bb985f67f76154'
+            - 'SHA1=bc61ef6d7ad9ee878028f24d50e9dcf6d7d88bf2'
+            - 'SHA256=2fdfdd13a0c548bb68c9d5aa8599a9265d4659da3e237fe7a42ac6ac06b9a06a'
+            - 'IMPHASH=73466ab4aca361de1e85e223aa420e3a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
