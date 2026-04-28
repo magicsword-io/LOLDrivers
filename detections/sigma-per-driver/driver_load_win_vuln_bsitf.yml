@@ -11,7 +11,7 @@ references:
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
 author: Michael Haag
 date: 2026/04/17
-modified: 2026/04/23
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -23,12 +23,12 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=4d59cc4dd2c94cdb78e561f3a422e899'
             - 'MD5=835dd954d9f306f09050fd1751e9e1d2'
-            - 'SHA1=e77af2651fb4a4ff0fe80bf838ebe0b76aa8edd4'
+            - 'MD5=4d59cc4dd2c94cdb78e561f3a422e899'
             - 'SHA1=d80b8c9dfd317c57cbd9c3c6dfacc5b787bac06d'
-            - 'SHA256=41f604cfc56b101cafba8d12ee7f30409457deb13684091262571f1a6c1ddd07'
+            - 'SHA1=e77af2651fb4a4ff0fe80bf838ebe0b76aa8edd4'
             - 'SHA256=602bef923ddbf2ea7967cedf56866b9db10fb43f0e90a9681cd021f1cddc05c9'
+            - 'SHA256=41f604cfc56b101cafba8d12ee7f30409457deb13684091262571f1a6c1ddd07'
             - 'IMPHASH=28d244dd772cc099f1ccc617f46863fc'
     condition: selection_hashes
 falsepositives:

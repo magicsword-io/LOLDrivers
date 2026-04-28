@@ -1,15 +1,15 @@
 title: Driver Load - sfdrvx32.sys
-id: 6c06ac1d-3af9-5926-8a1c-a80aa71d38b0
+id: 22196dd3-44e8-54ed-ac08-816aa8cb1dcc
 status: experimental
 description: |
     Detects loading of driver sfdrvx32.sys via hash.
-    Speed Fan x32 Driver
+    Confirmed vulnerable driver from Microsoft Block List
 references:
-    - https://www.loldrivers.io/drivers/2ada18ae-2c52-49b6-b1a0-cf3b267f6dc7/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/23
+    - https://www.loldrivers.io/drivers/6c0c60f0-895d-428a-a8ae-e10390bceb12/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +21,13 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=9f70cd5edcc4efc48ae21e04fb03be9d'
-            - 'SHA1=42bb38b0b93d83b62fe2604b154ada9314c98df7'
-            - 'SHA256=ad23d77a38655acb71216824e363df8ac41a48a1a0080f35a0d23aa14b54460b'
-            - 'IMPHASH=c3c9e6c0c33bad17eb055ec795fc113e'
+            - 'MD5=3fa2e254bfbce52b3c6f1bf23aab6911'
+            - 'MD5=dc8d2952fb6ffbaec67bd1b93a34df11'
+            - 'SHA1=68f675b6ac401e9ec90c59a81e454705c7b138be'
+            - 'SHA1=a91730e65008b73d9264e8254792ae19208f5c69'
+            - 'SHA256=0bd1523a68900b80ed1bccb967643525cca55d4ff4622d0128913690e6bb619e'
+            - 'SHA256=1e94d4e6d903e98f60c240dc841dcace5f9e8bbb0802e6648a49ab80c23318cb'
+            - 'IMPHASH=79bd6aa7fc10b9dec95deb431c299ab0'
     condition: selection_hashes
 falsepositives:
     - Unknown

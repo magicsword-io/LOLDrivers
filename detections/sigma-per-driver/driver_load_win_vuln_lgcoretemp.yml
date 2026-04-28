@@ -9,7 +9,7 @@ references:
     - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS
 author: Nasreddine Bencherchali
 date: 2023/04/15
-modified: 2026/04/23
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,8 +21,8 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=b94ffce20e36b2930eb3ac72f72c00d6'
             - 'MD5=2d7f1c02b94d6f0f3e10107e5ea8e141'
+            - 'MD5=b94ffce20e36b2930eb3ac72f72c00d6'
             - 'SHA1=a7baff6666fc2d259c22f986b8a153c7b1d1d8be'
             - 'SHA1=471ca4b5bb5fe68543264dd52acb99fddd7b3c6d'
             - 'SHA256=e0cb07a0624ddfacaa882af49e3783ae02c9fbd0ab232541a05a95b4a8abd8ef'

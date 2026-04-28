@@ -11,7 +11,7 @@ references:
     - https://www.virustotal.com/gui/file/cd631c54fe1375e4bdd2f63b58bd106066eeee267fc77b3161ceb023ab5fddda
 author: Michael Haag
 date: 2026/04/06
-modified: 2026/04/23
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -25,8 +25,8 @@ detection:
         Hashes|contains:
             - 'MD5=1176d570c2c1af00f92feef45cea1614'
             - 'MD5=81317f20d85addb0407e5f5c15095a53'
-            - 'SHA1=6f6c0176e75b2aea004c54a963fc4cee0f67bc2e'
             - 'SHA1=7bb3b01e5cdc6b5b98d75f64667d29e2c151f8cc'
+            - 'SHA1=6f6c0176e75b2aea004c54a963fc4cee0f67bc2e'
             - 'SHA256=cd631c54fe1375e4bdd2f63b58bd106066eeee267fc77b3161ceb023ab5fddda'
             - 'SHA256=7cf6881e43337c288b1883fafb234146a450ff94388aee395e05e36202c5afbb'
             - 'IMPHASH=81283a76d19861eaf5f1837a53452762'

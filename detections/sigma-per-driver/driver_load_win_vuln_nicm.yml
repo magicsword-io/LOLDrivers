@@ -1,15 +1,15 @@
-title: Driver Load - NICM.SYS
-id: cf6e808b-5cbc-5762-93b3-62cdd541c724
+title: Driver Load - NICM.sys
+id: 56a5656d-8b63-5ef8-81a3-200a413137aa
 status: experimental
 description: |
-    Detects loading of driver NICM.SYS via hash.
-    Novell Client Portability Layer
+    Detects loading of driver NICM.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
 references:
-    - https://www.loldrivers.io/drivers/f4126206-564f-49f5-a942-2138a3131e0e/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/23
+    - https://www.loldrivers.io/drivers/0f8e317e-ad2b-4b02-9f96-603bb8d28604/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,18 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=52b7cd123f6d1b9ed76b08f2ee7d9433'
-            - 'MD5=f690bfc0799e51a626ba3931960c3173'
-            - 'MD5=3bf217f8ef018ca5ea20947bfdfc0a4d'
-            - 'SHA1=26a8ab6ea80ab64d5736b9b72a39d90121156e76'
-            - 'SHA1=4d6e532830058fadd861ff9eac16de8cfc6974ce'
-            - 'SHA1=d3a6f86245212e1ef9e0e906818027ec14a239cb'
-            - 'SHA256=cf3180f5308af002ac5d6fd5b75d1340878c375f0aebc3157e3bcad6322b7190'
-            - 'SHA256=904e0f7d485a98e8497d5ec6dd6e6e1cf0b8d8e067fb64a9e09790af3c8c9d5a'
-            - 'SHA256=3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0'
+            - 'MD5=c0e2a64ba0d23ab95258372457060143'
+            - 'SHA1=bf87ecd70eec427b2090a34781c49bbf5c7b3500'
+            - 'SHA256=dd4fedd5662122cbfe046a12e2137294ef1cb7822238d9e24eacc78f22f8e93d'
             - 'IMPHASH=f2dc136141066311fddef65f7f417c44'
-            - 'IMPHASH=8ec78cf864273fd81203678b61c41f04'
-            - 'IMPHASH=0e4f5481813eeec4e5dd96e36020135f'
     condition: selection_hashes
 falsepositives:
     - Unknown

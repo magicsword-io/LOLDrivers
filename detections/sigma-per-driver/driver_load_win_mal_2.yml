@@ -1,15 +1,15 @@
 title: Driver Load - 2.sys
-id: cfa1146f-6357-5526-b1aa-391ccb36b94b
+id: 0bc832f9-3404-5062-8d0f-0e2859ca8c46
 status: experimental
 description: |
     Detects loading of driver 2.sys via hash.
-    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+    Driver categorized as POORTRY by Mandiant.
 references:
-    - https://www.loldrivers.io/drivers/bb1f80f3-d2fd-463e-9403-57c919bd976b/
-    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+    - https://www.loldrivers.io/drivers/0c0198a3-5c63-4a9b-abe9-88a810602329/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 author: Michael Haag
-date: 2024/09/10
-modified: 2026/04/23
+date: 2023/03/04
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=c1ade0fc97f6a774fd036892c8056907'
-            - 'SHA1=e23dff8959176dc17a1e37356a99c3333e75e8d3'
-            - 'SHA256=df72cb33a23ae8f6f9dc64bb738fcfaea959368ce05cf399f3c7db5e90104bd7'
-            - 'IMPHASH=8d5129d39204fcf88ffca488305e4480'
+            - 'MD5=bd25be845c151370ff177509d95d5add'
+            - 'SHA1=10115219e3595b93204c70eec6db3e68a93f3144'
+            - 'SHA256=88076e98d45ed3adf0c5355411fe8ca793eb7cec1a1c61f5e1ec337eae267463'
+            - 'IMPHASH=3fd33d5b3b52e2db91983ac4b1d7a3c4'
     condition: selection_hashes
 falsepositives:
     - Unknown

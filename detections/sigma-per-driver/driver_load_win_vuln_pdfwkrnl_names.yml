@@ -1,15 +1,15 @@
 title: Driver Load - PDFWKRNL.sys
-id: 92b44d9a-e833-5c55-a5f7-e53f3862ff0d
+id: 107f0cd2-e4e5-5143-bf4b-dc4f62360ad0
 status: experimental
 description: |
     Detects loading of driver PDFWKRNL.sys via name.
-    AMD USB-C Power Delivery Firmware Update Kernel Library driver with arbitrary physical memory read/write capabilities. Identified in ESET EDR killers research (March 2026) as actively abused by threat actors to disable EDR products.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
 references:
-    - https://www.loldrivers.io/drivers/ed27c0b8-6177-4132-a7af-5c15bcb386f3/
-    - https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
-author: Michael Haag
-date: 2026/03/20
-modified: 2026/04/23
+    - https://www.loldrivers.io/drivers/fded7e63-0470-40fe-97ed-aa83fd027bad/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

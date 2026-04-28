@@ -1,15 +1,16 @@
 title: Driver Load - nscm.sys
-id: 9d92ef01-6fc3-5c2d-9dc4-cf738569c1ab
+id: 805fb94e-532c-54de-b66a-ac57f18c3603
 status: experimental
 description: |
     Detects loading of driver nscm.sys via hash.
-    Novell XTier Session Manager
+    nscm.sys is a vulnerable driver. CVE-2013-3956.
 references:
-    - https://www.loldrivers.io/drivers/90afa27c-0f67-46a6-b4a9-809f55157c71/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/04/23
+    - https://www.loldrivers.io/drivers/351ff5ca-f07b-4eb6-9300-d5d31514defb/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,29 +22,97 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=ba2c0fa201c74621cddd8638497b3c70'
-            - 'MD5=a1547e8b2ca0516d0d9191a55b8536c0'
-            - 'MD5=bd5d4d07ae09e9f418d6b4ac6d9f2ed5'
-            - 'MD5=4c76554d9a72653c6156ca0024d21a8e'
-            - 'MD5=f56f30ac68c35dd4680054cdfd8f3f00'
             - 'MD5=5f4a232d92480a1bebbe025ef64dc760'
-            - 'SHA1=6d3c760251d6e6ea7ff4f4fcac14876fac829cf9'
-            - 'SHA1=fce3a95b222c810c56e7ed5a3d7fb059eb693682'
-            - 'SHA1=0cb14c1049c0e81c8655ab7ee7d698c11758ea06'
-            - 'SHA1=8f540936f2484d020e270e41529624407b7e107e'
+            - 'MD5=2348508499406dec3b508f349949cb51'
+            - 'MD5=5bb840db439eb281927588dbce5f5418'
+            - 'MD5=353e5d424668d785f13c904fde3bac84'
+            - 'MD5=936729b8dc2282037bc1504c2680e3ad'
+            - 'MD5=71fffc05cff351a6f26f78441cfebe26'
+            - 'MD5=81df475ab8d37343f0ad2a55b1397a8f'
+            - 'MD5=1cb26adeca26aefb5a61065e990402da'
+            - 'MD5=a1547e8b2ca0516d0d9191a55b8536c0'
+            - 'MD5=ba2c0fa201c74621cddd8638497b3c70'
+            - 'MD5=4a23e0f2c6f926a41b28d574cbc6ac30'
+            - 'MD5=c8f88ca47b393da6acf87fa190e81333'
+            - 'MD5=4c76554d9a72653c6156ca0024d21a8e'
+            - 'MD5=ce65b7adcf954eb36df62ea3d4a628c7'
+            - 'MD5=dd38cc344d2a0da1c03e92eb4b89a193'
+            - 'MD5=270052c61f4de95ebfbf3a49fb39235f'
+            - 'MD5=eb61616a7bc58e3f5b8cf855d04808c3'
+            - 'MD5=750d1f07ea9d10b38a33636036c30cca'
+            - 'MD5=f56f30ac68c35dd4680054cdfd8f3f00'
+            - 'MD5=8291dcbcbccc2ce28195d04ac616a1b5'
+            - 'MD5=bd5d4d07ae09e9f418d6b4ac6d9f2ed5'
+            - 'MD5=d1440503d1528c55fdc569678a663667'
+            - 'MD5=ddf2655068467d981242ea96e3b88614'
+            - 'MD5=ba21bfa3d05661ba216873a9ef66a6e2'
+            - 'MD5=5c4df33951d20253a98aa7b5e78e571a'
+            - 'MD5=71858fa117e6f3309606d5cdb57e6e09'
             - 'SHA1=7cd4aea9c1f82111bf7f9d4934be95e9bb6f8ae0'
+            - 'SHA1=ad60e40a148accec0950d8d13bf7182c2bd5dfef'
+            - 'SHA1=085c0ea6980cb93a3afa076764b7866467ac987c'
+            - 'SHA1=6a60f5fa0dfc6c1fa55b24a29df7464ee01a9717'
+            - 'SHA1=7329bb4a7ca98556fa6b05bd4f9b236186e845d1'
+            - 'SHA1=08efd5e24b5ebfef63b5e488144dc9fb6524eaf1'
+            - 'SHA1=77a011b5d5d5aaf421a543fcee22cb7979807c60'
+            - 'SHA1=d7b20ac695002334f804ffc67705ce6ac5732f91'
+            - 'SHA1=c1fe7870e202733123715cacae9b02c29494d94d'
+            - 'SHA1=272ffcda920a8e2440eb0d31dcd05485e0d597ad'
+            - 'SHA1=d19d1d3aa30391922989f4c6e3f7dc4937dcefbf'
+            - 'SHA1=1568117f691b41f989f10562f354ee574a6abc2d'
+            - 'SHA1=fa60a89980aad30db3a358fb1c1536a4d31dff6c'
+            - 'SHA1=a5596d4d329add26b9ca9fa7005302148dfacfd8'
+            - 'SHA1=72f16e6a18ba87248dd72f52445c916ad2e4edc2'
+            - 'SHA1=6d3c760251d6e6ea7ff4f4fcac14876fac829cf9'
+            - 'SHA1=fb25e6886d98fe044d0eb7bd42d24a93286266e0'
+            - 'SHA1=fce3a95b222c810c56e7ed5a3d7fb059eb693682'
+            - 'SHA1=64e4ac8b9ea2f050933b7ec76a55dd04e97773b4'
+            - 'SHA1=82dbac75b73ff4b92bdcbf6977a6683e1dcfe995'
+            - 'SHA1=5b866f522bcdf80e6a9fda71b385f917317f6551'
+            - 'SHA1=0cb14c1049c0e81c8655ab7ee7d698c11758ea06'
+            - 'SHA1=32f27451c377c8b5ea66be5475c2f2733cffe306'
+            - 'SHA1=e067024ec42b556fb1e89ca52ef6719aa09cdf89'
+            - 'SHA1=8f540936f2484d020e270e41529624407b7e107e'
             - 'SHA1=d61acd857242185a56e101642d15b9b5f0558c26'
-            - 'SHA256=28999af32b55ddb7dcfc26376a244aa2fe297233ce7abe4919a1aef2f7e2cee7'
-            - 'SHA256=fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f'
+            - 'SHA256=f77fe6b1e0e913ac109335a8fa2ac4961d35cbbd50729936059aba8700690a9e'
+            - 'SHA256=003e61358878c7e49e18420ee0b4a37b51880be40929a76e529c7b3fb18e81b4'
+            - 'SHA256=202d9703a5b8d06c5f92d2c5218a93431aa55af389007826a9bfaaf900812213'
+            - 'SHA256=5a661e26cfe5d8dedf8c9644129039cfa40aebb448895187b96a8b7441d52aaa'
             - 'SHA256=ce23c2dae4cca4771ea50ec737093dfafac06c64db0f924a1ccbbf687e33f5a2'
+            - 'SHA256=49ef680510e3dac6979a20629d10f06822c78f45b9a62ec209b71827a526be94'
+            - 'SHA256=2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0'
+            - 'SHA256=76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22'
+            - 'SHA256=f62911334068c9edd44b9c3e8dee8155a0097aa331dd4566a61afa3549f35f65'
+            - 'SHA256=28999af32b55ddb7dcfc26376a244aa2fe297233ce7abe4919a1aef2f7e2cee7'
+            - 'SHA256=ca34f945117ec853a713183fa4e8cf85ea0c2c49ca26e73d869fee021f7b491d'
+            - 'SHA256=e7b79fe1377b3da749590c080d4d96e59e622b1013b2183b98c81baa8bf2fffe'
+            - 'SHA256=1675eedd4c7f2ec47002d623bb4ec689ca9683020e0fdb0729a9047c8fb953dd'
+            - 'SHA256=c6feb3f4932387df7598e29d4f5bdacec0b9ce98db3f51d96fc4ffdcc6eb10e1'
+            - 'SHA256=a855b6ec385b3369c547a3c54e88a013dd028865aba0f3f08be84cdcbaa9a0f6'
+            - 'SHA256=53810ca98e07a567bb082628d95d796f14c218762cbbaa79704740284dccda4b'
+            - 'SHA256=a495ffa623a5220179b0dd519935e255dd6910b7b7bc3d68906528496561ff53'
+            - 'SHA256=0cf91e8f64a7c98dbeab21597bd76723aee892ed8fa4ee44b09f9e75089308e2'
+            - 'SHA256=653f6a65e0e608cae217bea2f90f05d8125cf23f83ba01a60de0f5659cfa5d4d'
+            - 'SHA256=14938f68957ede6e2b742a550042119a8fbc9f14427fb89fa53fff12d243561c'
+            - 'SHA256=e4cf438838dc10b188b3d4a318fd9ba2479abb078458d7f97591c723e2d637ce'
+            - 'SHA256=fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f'
             - 'SHA256=5351c81b4ec5a0d79c39d24bac7600d10eac30c13546fde43d23636b3f421e7c'
             - 'SHA256=8e88cb80328c3dbaa2752591692e74a2fae7e146d7d8aabc9b9ac9a6fe561e6c'
-            - 'SHA256=2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0'
-            - 'IMPHASH=65181bc89a1c2b5854548236269846c1'
-            - 'IMPHASH=7d004bbe0f546a91c93562d324307fa7'
-            - 'IMPHASH=8b7e7c20da6ca9ac4bdb3927fe2b266a'
+            - 'SHA256=41eeeb0472c7e9c3a7146a2133341cd74dd3f8b5064c9dee2c70e5daa060954f'
+            - 'SHA256=b0b6a410c22cc36f478ff874d4a23d2e4b4e37c6e55f2a095fc4c3ef32bcb763'
             - 'IMPHASH=b8d0a36d2b14d79dfa08fb2e121f0920'
             - 'IMPHASH=01aa65221a48929f0a34a27c4e3011b1'
+            - 'IMPHASH=5899e93373114ca9e458e906675132b7'
+            - 'IMPHASH=0a8eeabf5981efb2116244785cb03900'
+            - 'IMPHASH=29a2e15ac1622a3daf7da5a78f0cef08'
+            - 'IMPHASH=9fc4a96d982ebfd6b9d87c0f3ebef681'
+            - 'IMPHASH=7d004bbe0f546a91c93562d324307fa7'
+            - 'IMPHASH=8b7e7c20da6ca9ac4bdb3927fe2b266a'
+            - 'IMPHASH=e1a5435877b427be967867a25b1d263e'
+            - 'IMPHASH=0707fe3c02c8d2a4d6219bd0596d76f3'
+            - 'IMPHASH=61b719638eacc2c5ca299805d4819e69'
+            - 'IMPHASH=052280a42374b8d779c10cd0d8118691'
+            - 'IMPHASH=65181bc89a1c2b5854548236269846c1'
     condition: selection_hashes
 falsepositives:
     - Unknown
