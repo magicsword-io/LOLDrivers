@@ -23,6 +23,7 @@ import string
 import yaml
 import traceback
 from datetime import datetime
+from dataclasses import dataclass
 
 import pefile
 
@@ -52,9 +53,200 @@ DEFAULT_DRIVER_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../drivers/"))
 DEFAULT_YAML_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../yaml/"))
 DEFAULT_OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../detections/yara/"))
 
+
+@dataclass
+class RuleBlock:
+	name: str
+	raw: str
+	date: str
+	detection_fingerprint: str
+
+
+def normalize_rule_lines(lines):
+	return "\n".join(line.rstrip() for line in lines).strip()
+
+
+def split_rule_blocks(rule_text):
+	rules = []
+	current_rule = []
+	for line in rule_text.splitlines():
+		if line.startswith("rule "):
+			if current_rule:
+				rules.append("\n".join(current_rule).strip())
+			current_rule = [line]
+			continue
+		if current_rule:
+			current_rule.append(line)
+			if line.strip() == "}":
+				rules.append("\n".join(current_rule).strip())
+				current_rule = []
+	if current_rule:
+		rules.append("\n".join(current_rule).strip())
+	return [rule for rule in rules if rule]
+
+
+def parse_rule_block(rule_text):
+	rule_text = rule_text.strip()
+	lines = rule_text.splitlines()
+	if not lines:
+		raise ValueError("Cannot parse empty rule block")
+	rule_match = re.match(r"^rule\s+([A-Za-z0-9_]+)\s*\{$", lines[0].strip())
+	if not rule_match:
+		raise ValueError("Unexpected rule header: %s" % lines[0])
+	rule_name = rule_match.group(1)
+	meta_index = None
+	strings_index = None
+	condition_index = None
+	for idx, line in enumerate(lines):
+		stripped = line.strip()
+		if stripped == "meta:":
+			meta_index = idx
+		elif stripped == "strings:":
+			strings_index = idx
+		elif stripped == "condition:":
+			condition_index = idx
+	if meta_index is None or strings_index is None or condition_index is None:
+		raise ValueError("Rule %s is missing one of meta/strings/condition sections" % rule_name)
+	meta_lines = lines[meta_index + 1:strings_index]
+	strings_lines = lines[strings_index + 1:condition_index]
+	condition_lines = lines[condition_index + 1:]
+	if condition_lines and condition_lines[-1].strip() == "}":
+		condition_lines = condition_lines[:-1]
+	date_value = ""
+	for meta_line in meta_lines:
+		meta_match = re.match(r'^\s*date\s*=\s*"([^"]+)"\s*$', meta_line)
+		if meta_match:
+			date_value = meta_match.group(1)
+			break
+	detection_fingerprint = "%s\n--\n%s" % (
+		normalize_rule_lines(strings_lines),
+		normalize_rule_lines(condition_lines),
+	)
+	return RuleBlock(
+		name=rule_name,
+		raw=rule_text,
+		date=date_value,
+		detection_fingerprint=detection_fingerprint,
+	)
+
+
+def load_existing_rules(rule_path):
+	if not os.path.exists(rule_path):
+		return {}
+	with open(rule_path, "r") as fh:
+		rule_text = fh.read()
+	existing_rules = {}
+	for rule_block in split_rule_blocks(rule_text):
+		parsed_rule = parse_rule_block(rule_block)
+		existing_rules[parsed_rule.name] = parsed_rule
+	return existing_rules
+
+
+def set_rule_metadata_value(rule_text, key, value):
+	lines = rule_text.strip().splitlines()
+	meta_index = None
+	strings_index = None
+	for idx, line in enumerate(lines):
+		stripped = line.strip()
+		if stripped == "meta:":
+			meta_index = idx
+		elif stripped == "strings:":
+			strings_index = idx
+			break
+	if meta_index is None or strings_index is None:
+		raise ValueError("Cannot update metadata for malformed rule")
+	new_meta_line = '\t\t%s = "%s"' % (key, value)
+	for idx in range(meta_index + 1, strings_index):
+		if re.match(r'^\s*%s\s*=' % re.escape(key), lines[idx]):
+			lines[idx] = new_meta_line
+			return "\n".join(lines).strip()
+	insert_at = strings_index
+	if key == "modified":
+		for idx in range(meta_index + 1, strings_index):
+			if re.match(r'^\s*date\s*=', lines[idx]):
+				insert_at = idx + 1
+				break
+	lines.insert(insert_at, new_meta_line)
+	return "\n".join(lines).strip()
+
+
+def build_updated_rule(existing_rule, generated_rule, current_date):
+	updated_rule = set_rule_metadata_value(generated_rule.raw, "date", existing_rule.date or current_date)
+	updated_rule = set_rule_metadata_value(updated_rule, "modified", current_date)
+	return RuleBlock(
+		name=generated_rule.name,
+		raw=updated_rule,
+		date=existing_rule.date or current_date,
+		detection_fingerprint=generated_rule.detection_fingerprint,
+	)
+
+
+def merge_rule_sets(existing_rules, generated_rules, current_date):
+	existing_by_fingerprint = {}
+	for existing_rule in existing_rules.values():
+		existing_by_fingerprint.setdefault(existing_rule.detection_fingerprint, []).append(existing_rule)
+
+	used_existing_rules = set()
+	merged_rules = []
+	rule_set_changed = len(existing_rules) == 0 and len(generated_rules) > 0
+	for generated_rule in generated_rules:
+		existing_rule = existing_rules.get(generated_rule.name)
+		if existing_rule is not None:
+			used_existing_rules.add(existing_rule.name)
+			if existing_rule.detection_fingerprint == generated_rule.detection_fingerprint:
+				merged_rules.append(existing_rule)
+			else:
+				rule_set_changed = True
+				merged_rules.append(build_updated_rule(existing_rule, generated_rule, current_date))
+			continue
+
+		same_detection_rules = [
+			rule for rule in existing_by_fingerprint.get(generated_rule.detection_fingerprint, [])
+			if rule.name not in used_existing_rules
+		]
+		if same_detection_rules:
+			existing_rule = same_detection_rules[0]
+			used_existing_rules.add(existing_rule.name)
+			Log.info(
+				"[+] Keeping existing rule %s unchanged because generated rule %s has identical detection logic"
+				% (existing_rule.name, generated_rule.name)
+			)
+			merged_rules.append(existing_rule)
+			continue
+
+		rule_set_changed = True
+		merged_rules.append(generated_rule)
+
+	for existing_rule in existing_rules.values():
+		if existing_rule.name not in used_existing_rules:
+			Log.info("[+] Preserving existing rule %s because no replacement was generated" % existing_rule.name)
+			merged_rules.append(existing_rule)
+
+	return [rule.raw for rule in sorted(merged_rules, key=lambda rule: rule.name)], rule_set_changed
+
+
+def write_rule_file(rule_path, generated_rule_texts, current_date):
+	existing_text = ""
+	if os.path.exists(rule_path):
+		with open(rule_path, "r") as fh:
+			existing_text = fh.read()
+	existing_rules = load_existing_rules(rule_path)
+	generated_rules = [parse_rule_block(rule_text) for rule_text in generated_rule_texts]
+	merged_rules, rule_set_changed = merge_rule_sets(existing_rules, generated_rules, current_date)
+	if existing_text and not rule_set_changed:
+		Log.info("[+] Keeping existing rule file unchanged: %s" % rule_path)
+		return len(existing_rules)
+	parent_dir = os.path.dirname(rule_path)
+	if parent_dir:
+		os.makedirs(parent_dir, exist_ok=True)
+	with open(rule_path, "w") as fh:
+		fh.write("\n\n".join(merged_rules))
+		if merged_rules:
+			fh.write("\n")
+	return len(merged_rules)
+
 def process_folders(input_folders, debug):
 	input_files = []
-	print(input_folders)
 	for d in input_folders:
 		if not os.path.exists(d):
 			Log.error("[E] Error: input directory '%s' doesn't exist" % d)
@@ -181,7 +373,7 @@ def process_files(input_files, debug):
 	return header_infos
 
 
-def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, renamed):
+def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, renamed, current_date):
     rules = dict()
 
     # Loop over the header infos
@@ -228,7 +420,7 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
         description = generate_rule_description(type_desc, file_names, renamed)
         new_rule = new_rule.replace('$$$DESCRIPTION$$$', description)
         new_rule = new_rule.replace('$$$HASH$$$', '"\n\t\thash = "'.join(hi['sha256']))
-        new_rule = new_rule.replace('$$$DATE$$$', datetime.today().strftime('%Y-%m-%d'))
+        new_rule = new_rule.replace('$$$DATE$$$', current_date)
         new_rule = new_rule.replace('$$$FILENAMES$$$', ", ".join(file_names))
         new_rule = new_rule.replace('$$$SCORE$$$', str(type_score))
         string_values = generate_string_values(hi['version_info'])
@@ -409,31 +601,27 @@ if __name__ == '__main__':
 
 	# Generate YARA rules and return them as list of their string representation
 	Log.info("[+] Generating YARA rules from %d header infos" % len(file_infos))
-	yara_rules_vulnerable_drivers = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=False, renamed=False)
-	yara_rules_malicious_drivers = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="malicious",  strict=False, renamed=False)
-	yara_rules_vulnerable_drivers_strict = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=False)
-	yara_rules_malicious_drivers_strict = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="malicious",  strict=True, renamed=False)
-	yara_rules_vulnerable_drivers_strict_renamed = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=True)
+	current_date = datetime.today().strftime('%Y-%m-%d')
+	yara_rules_vulnerable_drivers = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=False, renamed=False, current_date=current_date)
+	yara_rules_malicious_drivers = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="malicious",  strict=False, renamed=False, current_date=current_date)
+	yara_rules_vulnerable_drivers_strict = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=False, current_date=current_date)
+	yara_rules_malicious_drivers_strict = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="malicious",  strict=True, renamed=False, current_date=current_date)
+	yara_rules_vulnerable_drivers_strict_renamed = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=True, current_date=current_date)
 
 	# Write the output files
 	# we write the recommended files to the root folder and other sets to a sub folder named 'other'
 	output_file = os.path.join(args.o, 'other', 'yara-rules_vuln_drivers.yar')
-	with open(output_file, 'w') as fh:
-		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers), output_file))
-		fh.write("\n".join(yara_rules_vulnerable_drivers))
+	merged_count = write_rule_file(output_file, yara_rules_vulnerable_drivers, current_date)
+	Log.info("[+] Writing %d YARA rules to the output file %s" % (merged_count, output_file))
 	output_file = os.path.join(args.o, 'yara-rules_mal_drivers.yar')
-	with open(output_file, 'w') as fh:
-		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_malicious_drivers), output_file))
-		fh.write("\n".join(yara_rules_malicious_drivers))
+	merged_count = write_rule_file(output_file, yara_rules_malicious_drivers, current_date)
+	Log.info("[+] Writing %d YARA rules to the output file %s" % (merged_count, output_file))
 	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers_strict.yar')
-	with open(output_file, 'w') as fh:
-		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict), output_file))
-		fh.write("\n".join(yara_rules_vulnerable_drivers_strict))
+	merged_count = write_rule_file(output_file, yara_rules_vulnerable_drivers_strict, current_date)
+	Log.info("[+] Writing %d YARA rules to the output file %s" % (merged_count, output_file))
 	output_file = os.path.join(args.o, 'other', 'yara-rules_mal_drivers_strict.yar')
-	with open(output_file, 'w') as fh:
-		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_malicious_drivers_strict), output_file))
-		fh.write("\n".join(yara_rules_malicious_drivers_strict))
+	merged_count = write_rule_file(output_file, yara_rules_malicious_drivers_strict, current_date)
+	Log.info("[+] Writing %d YARA rules to the output file %s" % (merged_count, output_file))
 	output_file = os.path.join(args.o, 'other', 'yara-rules_vuln_drivers_strict_renamed.yar')
-	with open(output_file, 'w') as fh:
-		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict_renamed), output_file))
-		fh.write("\n".join(yara_rules_vulnerable_drivers_strict_renamed))
+	merged_count = write_rule_file(output_file, yara_rules_vulnerable_drivers_strict_renamed, current_date)
+	Log.info("[+] Writing %d YARA rules to the output file %s" % (merged_count, output_file))

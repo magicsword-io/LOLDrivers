@@ -94,6 +94,19 @@ This means running from the repository root or from the script directory works c
 
 The generator skips YAML files that are invalid, do not parse to a top-level mapping, or do not contain a `KnownVulnerableSamples` list. Skipped files are reported in the log output.
 
+### Existing rule files
+
+The generator now merges newly generated rules with the existing output files instead of blindly overwriting them.
+
+Rule update behavior:
+
+* If an existing rule has identical detection logic (`strings` and `condition`), the existing rule is kept unchanged. Its original `date` is preserved and no `modified` field is added or updated.
+* If an existing rule changes, the original `date` is preserved and a `modified` field is added or updated with the current date.
+* If a rule is new, it is added with `date` set to the current date.
+* If an older rule exists in the output file but no replacement rule is generated in the current run, the older rule is preserved as-is.
+
+The merge logic also avoids churn from regenerated rules that are semantically identical but would otherwise only differ by the freshly generated `date` value.
+
 ## Examples
 
 ### Quick start (first run)
