@@ -25,7 +25,12 @@ NS = '{urn:schemas-microsoft-com:sipolicy}'
 
 
 def parse_sipolicy(xml_path):
-    """Parse SiPolicy XML and extract deny hashes, signers, and filename rules."""
+    """Parse SiPolicy XML and extract deny hashes, file attribute rules, and signers.
+
+    Microsoft blocks most drivers via file-attribute + signer rules (OriginalFilename
+    / ProductName + version range), not just hashes. This parser extracts both so
+    overlap calculations account for all deny mechanisms.
+    """
     tree = ET.parse(xml_path)
     root = tree.getroot()
 
@@ -35,14 +40,18 @@ def parse_sipolicy(xml_path):
     filename_deny_count = 0
     driver_names = set()
 
+    denied_filenames = set()
+    fileattrib_filenames = set()
+    fileattrib_count = 0
+
     for deny in root.iter(f'{NS}Deny'):
         hash_val = deny.get('Hash', '')
         friendly = deny.get('FriendlyName', '')
         filename = deny.get('FileName', '')
 
-        # Filename/version-based rule (no hash)
         if filename and not hash_val:
             filename_deny_count += 1
+            denied_filenames.add(filename.lower().strip())
             continue
 
         if not hash_val:
@@ -51,7 +60,6 @@ def parse_sipolicy(xml_path):
         hash_val = hash_val.lower().strip()
         hash_deny_count += 1
 
-        # Extract driver name from FriendlyName
         if '\\' in friendly:
             name_part = friendly.split('\\')[0].strip()
             driver_names.add(name_part.lower())
@@ -60,16 +68,21 @@ def parse_sipolicy(xml_path):
             if name_part:
                 driver_names.add(name_part.lower())
 
-        # Categorize hash type from FriendlyName
         if 'Hash Page' in friendly:
-            # Page hashes — skip for matching (LOLDrivers doesn't track these)
             continue
         elif 'Hash Sha256' in friendly:
             auth_sha256s.add(hash_val)
         elif 'Hash Sha1' in friendly:
             auth_sha1s.add(hash_val)
 
-    # Count denied signers
+    for fa in root.iter(f'{NS}FileAttrib'):
+        filename = fa.get('FileName', '').strip()
+        if filename:
+            fileattrib_filenames.add(filename.lower())
+            fileattrib_count += 1
+
+    all_denied_filenames = denied_filenames | fileattrib_filenames
+
     signer_deny_count = 0
     for scenario in root.iter(f'{NS}SigningScenario'):
         for denied in scenario.iter(f'{NS}DeniedSigners'):
@@ -83,6 +96,10 @@ def parse_sipolicy(xml_path):
         'filename_deny_count': filename_deny_count,
         'signer_deny_count': signer_deny_count,
         'unique_driver_names': driver_names,
+        'denied_filenames': denied_filenames,
+        'fileattrib_filenames': fileattrib_filenames,
+        'all_denied_filenames': all_denied_filenames,
+        'fileattrib_count': fileattrib_count,
     }
 
 
@@ -113,12 +130,18 @@ def load_loldrivers(yaml_dir):
                 flat_sha256 = (sample.get('SHA256') or '').lower().strip()
                 hvci = str(sample.get('LoadsDespiteHVCI', '')).upper().strip()
                 filename = sample.get('Filename') or (tags[0] if tags else '')
+                original_filename = (sample.get('OriginalFilename') or '').strip()
+                product = (sample.get('Product') or '').strip()
+                internal_name = (sample.get('InternalName') or '').strip()
 
                 samples.append({
                     'driver_id': driver_id,
                     'tags': tags,
                     'category': category,
                     'filename': filename,
+                    'original_filename': original_filename,
+                    'product': product,
+                    'internal_name': internal_name,
                     'auth_sha256': auth_sha256,
                     'auth_sha1': auth_sha1,
                     'flat_sha256': flat_sha256,
@@ -138,25 +161,42 @@ def compute_metrics(samples, sipolicy):
     hvci_false = sum(1 for s in samples if s['hvci'] == 'FALSE')
     hvci_unknown = total_samples - hvci_true - hvci_false
 
-    # Blocklist comparison
+    # Blocklist comparison — hash match OR file attribute match
     matched_samples = []
     unmatched_samples = []
     no_authentihash = []
+    hash_matched = []
+    filename_matched = []
 
     if sipolicy:
+        denied_fns = sipolicy['all_denied_filenames']
+
         for s in samples:
-            if not s['has_authentihash']:
-                no_authentihash.append(s)
-                continue
+            match_type = None
 
-            in_blocklist = False
-            if s['auth_sha256'] and s['auth_sha256'] in sipolicy['auth_sha256s']:
-                in_blocklist = True
-            elif s['auth_sha1'] and s['auth_sha1'] in sipolicy['auth_sha1s']:
-                in_blocklist = True
+            if s['has_authentihash']:
+                if s['auth_sha256'] and s['auth_sha256'] in sipolicy['auth_sha256s']:
+                    match_type = 'hash'
+                elif s['auth_sha1'] and s['auth_sha1'] in sipolicy['auth_sha1s']:
+                    match_type = 'hash'
 
-            if in_blocklist:
+            if not match_type and denied_fns:
+                sample_names = set()
+                for field in ('original_filename', 'filename', 'internal_name'):
+                    val = s.get(field, '')
+                    if val:
+                        sample_names.add(val.lower().strip())
+                if sample_names & denied_fns:
+                    match_type = 'filename'
+
+            if match_type:
                 matched_samples.append(s)
+                if match_type == 'hash':
+                    hash_matched.append(s)
+                else:
+                    filename_matched.append(s)
+            elif not s['has_authentihash'] and not s.get('original_filename') and not s.get('filename'):
+                no_authentihash.append(s)
             else:
                 unmatched_samples.append(s)
 
@@ -169,7 +209,6 @@ def compute_metrics(samples, sipolicy):
     # Matched drivers (unique driver IDs that have at least one matched sample)
     matched_driver_ids = {s['driver_id'] for s in matched_samples} if sipolicy else set()
     unmatched_driver_ids = {s['driver_id'] for s in unmatched_samples} if sipolicy else set()
-    # Drivers with ALL samples unmatched (truly exclusive to LOLDrivers)
     exclusive_driver_ids = unmatched_driver_ids - matched_driver_ids
 
     # HVCI + blocklist cross-analysis
@@ -195,11 +234,15 @@ def compute_metrics(samples, sipolicy):
             'ms_auth_sha1_count': len(sipolicy['auth_sha1s']) if sipolicy else 0,
             'ms_hash_deny_rules': sipolicy['hash_deny_count'] if sipolicy else 0,
             'ms_filename_deny_rules': sipolicy['filename_deny_count'] if sipolicy else 0,
+            'ms_fileattrib_rules': sipolicy['fileattrib_count'] if sipolicy else 0,
+            'ms_denied_filenames': len(sipolicy['all_denied_filenames']) if sipolicy else 0,
             'ms_signer_deny_count': sipolicy['signer_deny_count'] if sipolicy else 0,
             'ms_unique_driver_names': len(sipolicy['unique_driver_names']) if sipolicy else 0,
             'matchable_samples': matchable,
-            'samples_without_authentihash': len(no_authentihash) if sipolicy else 0,
-            'overlap_samples': len(matched_samples) if sipolicy else 0,
+            'samples_without_any_matchable_field': len(no_authentihash) if sipolicy else 0,
+            'overlap_total': len(matched_samples) if sipolicy else 0,
+            'overlap_by_hash': len(hash_matched) if sipolicy else 0,
+            'overlap_by_filename': len(filename_matched) if sipolicy else 0,
             'overlap_pct': round(len(matched_samples) / matchable * 100, 1) if matchable else 0,
             'overlap_drivers': len(matched_driver_ids),
             'loldrivers_exclusive_samples': len(unmatched_samples) if sipolicy else 0,
@@ -236,27 +279,30 @@ def print_report(metrics, driver_count):
     if h['unknown_count']:
         print(f"  Unknown/untagged:                  {h['unknown_count']}")
 
-    if b['ms_auth_sha256_count']:
-        print(f"\n{'Microsoft Vulnerable Driver Blocklist':}")
-        print(f"  Unique Authenticode SHA256 hashes: {b['ms_auth_sha256_count']}")
-        print(f"  Unique Authenticode SHA1 hashes:   {b['ms_auth_sha1_count']}")
+    if b['ms_auth_sha256_count'] or b['ms_denied_filenames']:
+        print(f"\nMicrosoft Vulnerable Driver Blocklist")
         print(f"  Hash-based deny rules:             {b['ms_hash_deny_rules']}")
-        print(f"  Filename-based deny rules:         {b['ms_filename_deny_rules']}")
+        print(f"    Unique Authenticode SHA256:       {b['ms_auth_sha256_count']}")
+        print(f"    Unique Authenticode SHA1:         {b['ms_auth_sha1_count']}")
+        print(f"  Filename deny rules (<Deny>):      {b['ms_filename_deny_rules']}")
+        print(f"  FileAttrib rules (signer+attr):    {b['ms_fileattrib_rules']}")
+        print(f"  Unique denied filenames (combined): {b['ms_denied_filenames']}")
         print(f"  Certificate/signer denies:         {b['ms_signer_deny_count']}")
-        print(f"  Unique driver names referenced:    {b['ms_unique_driver_names']}")
 
-        print(f"\n{'Coverage Comparison (Authenticode hash matching)':}")
-        print(f"  LOLDrivers samples with Authentihash: {b['matchable_samples']}")
-        print(f"  Samples WITHOUT Authentihash:         {b['samples_without_authentihash']}")
+        print(f"\nCoverage Comparison (hash OR filename matching)")
+        print(f"  Matchable samples:                    {b['matchable_samples']}")
+        print(f"  Samples with no matchable fields:     {b['samples_without_any_matchable_field']}")
         print(f"  ---")
-        print(f"  Overlap (in BOTH):                    {b['overlap_samples']} samples across {b['overlap_drivers']} drivers  ({b['overlap_pct']}%)")
+        print(f"  Overlap TOTAL (in BOTH):              {b['overlap_total']} samples across {b['overlap_drivers']} drivers  ({b['overlap_pct']}%)")
+        print(f"    Matched by Authentihash:             {b['overlap_by_hash']}")
+        print(f"    Matched by OriginalFilename/Name:    {b['overlap_by_filename']}")
         print(f"  LOLDrivers exclusive (NOT in MS):     {b['loldrivers_exclusive_samples']} samples across {b['loldrivers_exclusive_drivers']} drivers  ({b['loldrivers_exclusive_pct']}%)")
         print(f"  MS blocklist exclusive SHA256:         {b['ms_exclusive_sha256']} hashes not in LOLDrivers")
         print(f"  MS blocklist exclusive SHA1:           {b['ms_exclusive_sha1']} hashes not in LOLDrivers")
 
-        print(f"\n{'HVCI + Blocklist Cross-Analysis':}")
+        print(f"\nHVCI + Blocklist Cross-Analysis")
         print(f"  HVCI bypass AND in MS blocklist:   {c['hvci_bypass_in_blocklist']}")
-        print(f"  HVCI bypass NOT in MS blocklist:   {c['hvci_bypass_not_in_blocklist']}  <-- gap: loads despite HVCI, MS doesn't block")
+        print(f"  HVCI bypass NOT in MS blocklist:   {c['hvci_bypass_not_in_blocklist']}  <-- gap")
 
     print("\n" + "=" * 70)
 

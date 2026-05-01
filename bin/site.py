@@ -112,7 +112,11 @@ def download_sipolicy(cache_dir, sipolicy_override=None):
 
 
 def parse_sipolicy_hashes(xml_path):
-    """Parse SiPolicy XML and extract deny hashes and signer counts."""
+    """Parse SiPolicy XML and extract deny hashes, file attribute rules, and signer counts.
+
+    Microsoft blocks most drivers via file-attribute + signer rules (OriginalFilename
+    / ProductName + version range), not just hashes.
+    """
     tree = ET.parse(xml_path)
     root = tree.getroot()
 
@@ -120,6 +124,8 @@ def parse_sipolicy_hashes(xml_path):
     auth_sha1s = set()
     hash_deny_count = 0
     filename_deny_count = 0
+    denied_filenames = set()
+    fileattrib_filenames = set()
 
     for deny in root.iter(f'{SIPOLICY_NS}Deny'):
         hash_val = deny.get('Hash', '')
@@ -128,6 +134,7 @@ def parse_sipolicy_hashes(xml_path):
 
         if filename and not hash_val:
             filename_deny_count += 1
+            denied_filenames.add(filename.lower().strip())
             continue
         if not hash_val:
             continue
@@ -142,6 +149,13 @@ def parse_sipolicy_hashes(xml_path):
         elif 'Hash Sha1' in friendly:
             auth_sha1s.add(hash_val)
 
+    for fa in root.iter(f'{SIPOLICY_NS}FileAttrib'):
+        filename = fa.get('FileName', '').strip()
+        if filename:
+            fileattrib_filenames.add(filename.lower())
+
+    all_denied_filenames = denied_filenames | fileattrib_filenames
+
     signer_deny_count = 0
     for scenario in root.iter(f'{SIPOLICY_NS}SigningScenario'):
         for denied in scenario.iter(f'{SIPOLICY_NS}DeniedSigners'):
@@ -154,6 +168,7 @@ def parse_sipolicy_hashes(xml_path):
         'hash_deny_count': hash_deny_count,
         'filename_deny_count': filename_deny_count,
         'signer_deny_count': signer_deny_count,
+        'all_denied_filenames': all_denied_filenames,
     }
 
 
@@ -165,7 +180,11 @@ def compute_metrics(drivers, sipolicy_data):
     hvci_false = 0
     matchable = 0
     overlap = 0
-    no_authentihash = 0
+    overlap_by_hash = 0
+    overlap_by_filename = 0
+    no_matchable_fields = 0
+
+    denied_fns = sipolicy_data.get('all_denied_filenames', set()) if sipolicy_data else set()
 
     for driver in drivers:
         for sample in driver.get('KnownVulnerableSamples', []):
@@ -180,14 +199,35 @@ def compute_metrics(drivers, sipolicy_data):
                 auth = sample.get('Authentihash', {}) or {}
                 auth_sha256 = (auth.get('SHA256') or '').lower().strip()
                 auth_sha1 = (auth.get('SHA1') or '').lower().strip()
+                orig_fn = (sample.get('OriginalFilename') or '').strip()
+                filename = (sample.get('Filename') or '').strip()
+                internal = (sample.get('InternalName') or '').strip()
 
-                if not auth_sha256 and not auth_sha1:
-                    no_authentihash += 1
+                has_hash = bool(auth_sha256 or auth_sha1)
+                has_name = bool(orig_fn or filename or internal)
+
+                if not has_hash and not has_name:
+                    no_matchable_fields += 1
                     continue
 
                 matchable += 1
-                if ((auth_sha256 and auth_sha256 in sipolicy_data['auth_sha256s']) or
+                matched = False
+
+                if has_hash and ((auth_sha256 and auth_sha256 in sipolicy_data['auth_sha256s']) or
                         (auth_sha1 and auth_sha1 in sipolicy_data['auth_sha1s'])):
+                    matched = True
+                    overlap_by_hash += 1
+
+                if not matched and denied_fns:
+                    sample_names = set()
+                    for val in (orig_fn, filename, internal):
+                        if val:
+                            sample_names.add(val.lower().strip())
+                    if sample_names & denied_fns:
+                        matched = True
+                        overlap_by_filename += 1
+
+                if matched:
                     overlap += 1
 
     exclusive = matchable - overlap if sipolicy_data else 0
@@ -204,22 +244,28 @@ def compute_metrics(drivers, sipolicy_data):
     if sipolicy_data:
         metrics.update({
             'ms_blocklist_hash_count': len(sipolicy_data['auth_sha256s']),
+            'ms_blocklist_filename_count': len(denied_fns),
             'ms_blocklist_signer_count': sipolicy_data['signer_deny_count'],
             'overlap_count': overlap,
+            'overlap_by_hash': overlap_by_hash,
+            'overlap_by_filename': overlap_by_filename,
             'overlap_pct': str(round(overlap / matchable * 100, 1)) if matchable else '0',
             'loldrivers_exclusive_count': exclusive,
             'loldrivers_exclusive_pct': str(round(exclusive / matchable * 100, 1)) if matchable else '0',
-            'samples_without_authentihash': no_authentihash,
+            'samples_without_matchable_fields': no_matchable_fields,
         })
     else:
         metrics.update({
             'ms_blocklist_hash_count': 'N/A',
+            'ms_blocklist_filename_count': 'N/A',
             'ms_blocklist_signer_count': 'N/A',
             'overlap_count': 'N/A',
+            'overlap_by_hash': 'N/A',
+            'overlap_by_filename': 'N/A',
             'overlap_pct': 'N/A',
             'loldrivers_exclusive_count': 'N/A',
             'loldrivers_exclusive_pct': 'N/A',
-            'samples_without_authentihash': 'N/A',
+            'samples_without_matchable_fields': 'N/A',
         })
 
     return metrics
