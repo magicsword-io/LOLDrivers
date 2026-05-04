@@ -1,17 +1,15 @@
 title: Driver Load - BdApiUtil.sys
-id: 9260db59-a1e8-52e6-a1b5-07418f224244
+id: ba089d92-c667-540e-8616-7bcae396f258
 status: experimental
 description: |
     Detects loading of driver BdApiUtil.sys via hash.
-    Driver can be used to load unsigned drivers. IOCTL code which takes a PID and terminates it (arbitrary process termination). Admin privileges required to install the driver, but if it's already installed, can be called by any user (non admin).
+    BdApiUtil.sys is a kernel driver from Baidu Antivirus that exposes dangerous primitives to usermode with no authentication. The driver provides process termination by PID via PsLookupProcessByProcessId and ZwTerminateProcess (IOCTL 0x800024B4), process suspension via dynamically-resolved NtSuspendProcess (IOCTL 0x800024B8), full kernel registry CRUD including ZwOpenKey (0x80002190), ZwCreateKey (0x80002194), ZwSetValueKey (0x80002198), ZwDeleteKey (0x8000219C), and ZwDeleteValueKey (0x800021A0), and kernel-mode file creation via ObInsertObject/ZwCreateFile (0x80002324). The process termination primitive is exploited by the GoodBaiii EDR killer tool. Registry callback monitoring via CmRegisterCallback and process creation monitoring via PsSetCreateProcessNotifyRoutine are also present.
 references:
-    - https://www.loldrivers.io/drivers/708650ed-c497-48be-97bc-9edd48cf2a1a/
-    - https://github.com/magicsword-io/LOLDrivers/issues/204
+    - https://www.loldrivers.io/drivers/83b78b88-3b43-41cc-a60f-cab1a7b96978/
     - https://github.com/magicsword-io/LOLDrivers/issues/231
     - https://github.com/RainbowDynamix/GoodBaiii
-    - https://blog.talosintelligence.com/byovd-loader-deadlock-ransomware/
-author: christopher-ellis-workday, plisskien, Julian Pena
-date: 2025/12/09
+author: Michael Haag
+date: 2026/04/22
 modified: 2026/05/04
 tags:
     - attack.privilege_escalation
@@ -24,10 +22,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=29e1264dd642b646fbef9bd347b1b860'
-            - 'SHA1=2d0a8394180e728755e8e13547d572c9e89b7262'
-            - 'SHA256=32198295d2a2700b9895fff999c2b233f9befb0bc175815ec4b71ee926b6edfc'
-            - 'IMPHASH=7f0cfc7ad79e21e810f2f8b940b85130'
+            - 'MD5=6d46f925df569b488e9b63778ab0d91e'
+            - 'SHA1=9837e4ce049cf164b7a484d91aad696d5e4f32c4'
+            - 'SHA256=d8ce0a5866178495a66d23c9587822164966111fcd34764011e907951c599711'
+            - 'IMPHASH=eef4fbab2b67736477155cf67676478f'
     condition: selection_hashes
 falsepositives:
     - Unknown

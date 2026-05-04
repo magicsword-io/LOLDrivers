@@ -1,17 +1,15 @@
 title: Driver Load - BdApiUtil.sys
-id: 5d5157a9-cea8-54da-9b9c-e19c976d7264
+id: 5d19ec88-f61b-5815-9b38-9ff3a8c71a5c
 status: experimental
 description: |
     Detects loading of driver BdApiUtil.sys via name.
-    Driver can be used to load unsigned drivers. IOCTL code which takes a PID and terminates it (arbitrary process termination). Admin privileges required to install the driver, but if it's already installed, can be called by any user (non admin).
+    BdApiUtil.sys is a kernel driver from Baidu Antivirus that exposes dangerous primitives to usermode with no authentication. The driver provides process termination by PID via PsLookupProcessByProcessId and ZwTerminateProcess (IOCTL 0x800024B4), process suspension via dynamically-resolved NtSuspendProcess (IOCTL 0x800024B8), full kernel registry CRUD including ZwOpenKey (0x80002190), ZwCreateKey (0x80002194), ZwSetValueKey (0x80002198), ZwDeleteKey (0x8000219C), and ZwDeleteValueKey (0x800021A0), and kernel-mode file creation via ObInsertObject/ZwCreateFile (0x80002324). The process termination primitive is exploited by the GoodBaiii EDR killer tool. Registry callback monitoring via CmRegisterCallback and process creation monitoring via PsSetCreateProcessNotifyRoutine are also present.
 references:
-    - https://www.loldrivers.io/drivers/708650ed-c497-48be-97bc-9edd48cf2a1a/
-    - https://github.com/magicsword-io/LOLDrivers/issues/204
+    - https://www.loldrivers.io/drivers/83b78b88-3b43-41cc-a60f-cab1a7b96978/
     - https://github.com/magicsword-io/LOLDrivers/issues/231
     - https://github.com/RainbowDynamix/GoodBaiii
-    - https://blog.talosintelligence.com/byovd-loader-deadlock-ransomware/
-author: christopher-ellis-workday, plisskien, Julian Pena
-date: 2025/12/09
+author: Michael Haag
+date: 2026/04/22
 modified: 2026/05/04
 tags:
     - attack.privilege_escalation
