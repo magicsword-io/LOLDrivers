@@ -387,7 +387,7 @@ sc.exe create mtxC9CB binPath=C:\windows\temp\mtxC9CB.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/b7bfe661-591a-45be-823d-ac6dae2edeed.yaml)
 
-*last_updated:* 2026-04-23
+*last_updated:* 2026-04-28
 
 {{< /column >}}
 {{< /block >}}

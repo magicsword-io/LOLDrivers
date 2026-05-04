@@ -1,15 +1,15 @@
-title: Driver Load - rtkiow8x64.sys 
+title: Driver Load - rtkiow8x64.sys
 id: 41ebb7c6-529e-5b1f-8912-cb3ac120980b
 status: experimental
 description: |
-    Detects loading of driver rtkiow8x64.sys  via hash.
+    Detects loading of driver rtkiow8x64.sys via hash.
     Confirmed vulnerable driver from Microsoft Block List
 references:
     - https://www.loldrivers.io/drivers/998ed67c-9c20-46ef-a6ba-abc606b540b9/
     - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 author: Michael Haag
 date: 2023/07/22
-modified: 2026/04/23
+modified: 2026/04/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
