@@ -1,15 +1,15 @@
-title: Driver Load - HW.sys
-id: 581cecfc-97d7-5780-be95-1b65f1db852e
+title: Driver Load - hw.sys
+id: ee114444-714c-5782-b175-b0057803eb45
 status: experimental
 description: |
-    Detects loading of driver HW.sys via hash.
-    HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI access
+    Detects loading of driver hw.sys via hash.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
 references:
-    - https://www.loldrivers.io/drivers/2d7c96d3-2d6c-44cd-a8a1-5239f571a24a/
-    - Internal Research
-author: Nasreddine Bencherchali
-date: 2023/05/06
-modified: 2026/05/04
+    - https://www.loldrivers.io/drivers/5076e737-6744-4266-bef7-bceda65050d6/
+    - https://northwave-cybersecurity.com/vulnerability-notice-hardware-access-driver-marvintest-solutions?hsLang=en
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/05/18
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=3cf7a55ec897cc938aebb8161cb8e74f'
-            - 'SHA1=22fc833e07dd163315095d32ebcd3b3e377c33a4'
-            - 'SHA256=fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c'
-            - 'IMPHASH=bd093a7d5ba5632ee52f3466a688ee55'
+            - 'MD5=9347fbeeaf917fc4a1d64a0b4d61187a'
+            - 'SHA1=01e74172e10d8b5f589e26ee8e3e4aec485edc6f'
+            - 'SHA256=0483b32f9544e9c3cc3f206e7bc983ea83f5a9ca44864f2af9b8fc10ff45949f'
+            - 'IMPHASH=a70bfdb391d295cb610248955a594dbd'
     condition: selection_hashes
 falsepositives:
     - Unknown
