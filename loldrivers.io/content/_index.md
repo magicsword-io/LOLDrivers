@@ -73,7 +73,7 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
   </div>
   <h3>Stop BYOVD attacks.<br><em>Free for up to 100 endpoints.</em></h3>
   <p>Turn this driver list into enforceable block policies with MagicSword, threat-driven application control.</p>
-  <a class="ms-cta-btn" href="https://www.magicsword.io/plan?utm_source=loldrivers&utm_medium=website&utm_campaign=free_prevention&utm_content=homepage_cta">
+  <a class="ms-cta-btn" href="https://www.magicsword.io/?utm_source=loldrivers&utm_medium=website&utm_campaign=free_prevention&utm_content=homepage_cta">
     Start Blocking for Free
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
   </a>
