@@ -1,0 +1,36 @@
+Name: KslD.sys
+Author: 'Noam Pomerantz'
+Created: '2026-03-26'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Description: >
+  KslD.sys is a legitimate Microsoft-signed Windows Defender support driver that can be abused as a Living off the Land (LotL) vector to achieve unrestricted kernel memory access. The driver provides extensive capabilities to read physical and virtual memory, defeat KASLR via DPC-based CPU register dumps, enumerate process tokens, and dump LSASS credentials by bypassing Protected Process Light (PPL) through a manual page table walk. It natively ships with Windows and requires local administrator privileges to hijack its weak process-name validation check by modifying the SharedState registry subkey. Because the driver is inherently trusted and pre-installed, it provides attackers with kernel-level capabilities to extract sensitive credentials and map the system state without dropping external binaries, loading third-party drivers, or triggering vulnerable driver blocklists.
+Commands:
+  Command: |
+    reg add "HKLM\SYSTEM\CurrentControlSet\Services\KslD\SharedState" /v AllowedProcessName /t REG_SZ /d "\Device\HarddiskVolumeX\Path\To\Exploit.exe" /f
+    sc start KslD
+  Description: Redirects the driver's process-name validation to a user-controlled executable to gain kernel read access.
+  Usecase: Post-Exploitation, Credential Dumping (PPL Bypass), KASLR Bypass
+Resources:
+  - https://github.com/magicsword-io/LOLDrivers
+  - https://github.com/Pumi96/DefenderDump
+  - https://github.com/S1lkys/KslKatz
+Acknowledgement:
+  Handle: '@S1lky_1337' '@CyberSkyDog'
+Detection:
+  - Sigma: ' '
+KnownVulnerableSamples:
+  - Filename: KslD.sys
+    Company: Microsoft Corporation
+    Description: Microsoft Malware Protection Kernel Support Driver
+    Product: Microsoft Malware Protection Platform
+    FileVersion: 4.18.26010.5
+    MachineType: x64
+    OriginalFilename: KslD.sys
+    SHA256: BD17231833AA369B3B2B6963899BF05DBEFD673DB270AEC15446F2FAB4A17B5A
+    SHA1: B6378E15A617B5EAB802493BFC470FB9A3ECFD72
+    MD5: FA5D2F0DFE198A70B07613342F76AFB3
+    Signature:
+      - Microsoft Windows
+      - Microsoft Corporation
