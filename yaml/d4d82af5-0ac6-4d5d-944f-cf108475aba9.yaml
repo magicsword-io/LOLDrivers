@@ -1,0 +1,56 @@
+Id: d4d82af5-0ac6-4d5d-944f-cf108475aba9
+Tags:
+- 360hvm64.sys
+Verified: 'TRUE'
+Author: '@cyb3rh0und, @reiterjr'
+Created: '2026-04-30'
+MitreID: T1562.001
+CVE: []
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create 360hvm64 binPath=C:\windows\temp\360hvm64.sys type=kernel
+    && sc.exe start 360hvm64
+  Description: 360hvm64.sys is the kernel-mode hypervisor enforcement driver
+    shipped with Qihoo 360 Total Security. IOCTL 0x22240c on \\.\360Hvm issues
+    a per-CPU DPC broadcast that executes VMXOFF/VMSKINIT on every logical
+    processor, disabling VT-x/AMD-V hypervisor protection across all CPUs;
+    the auth gate (sub_121f4) delegates to \Device\360SelfProtection and fails
+    open when that companion device is absent (BYOVD scenario).
+  Usecase: Disable 360 Total Security's VT-x/AMD-V hypervisor-based protection engine
+    on all CPUs to enable subsequent loading of rootkits or unsigned drivers without
+    VM-level detection
+  Privileges: kernel
+  OperatingSystem: Windows 7, Windows 8, Windows 10, Windows 11
+Resources:
+- Internal Research
+Acknowledgement:
+  Person: John Rodriguez, Jonathan Reiter
+  Handle: '@cyb3rh0und, @reiterjr'
+Detection: []
+KnownVulnerableSamples:
+- Filename: 360Hvm64.sys
+  MD5: 0b5c4cd701956b332e60ae85b8c3a7ea
+  SHA1: 97cbe12e2538aa8a382485e6a00be9337ed72b85
+  SHA256: f89d5d95b8a59e6d5e50a49217f83d080e4eaf4bb77b80d8f38cd915640ba124
+  Signature:
+    - Qihoo 360 Software Co., Ltd.
+  Date: ''
+  Publisher: 360.cn Inc.
+  Company: 360安全中心
+  Description: 360Hvm64
+  Product: ''
+  ProductVersion: 2.0.0.1207
+  FileVersion: 2.0.0.1207
+  MachineType: AMD64
+  OriginalFilename: 360Hvm64.sys
+  Authentihash:
+    MD5: 88cf1a06379e4fdacdb0bbfb9e662f8e
+    SHA1: 5ce3859ef77f4557cd87dfcce0797d1434b2bf51
+    SHA256: a22cbe36242c92676cf6f905ebe5575902989c412875a6bc022f538e1c2455de
+  InternalName: 360Hvm64.sys
+  Copyright: (C) 360.cn Inc. All Rights Reserved.
+  Imports:
+    - ntoskrnl.exe
+    - NETIO.SYS
+  ExportedFunctions: ''
+  PDBPath: ''
