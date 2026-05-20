@@ -1,0 +1,47 @@
+name: Validate Malicious YARA Rules
+
+on:
+  push:
+    branches:
+      - "*"
+    paths:
+      - "bin/yara-generator/**"
+      - "!bin/yara-generator/README.md"
+      - "yaml/**"
+      - "detections/yara/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "bin/yara-generator/**"
+      - "!bin/yara-generator/README.md"
+      - "yaml/**"
+      - "detections/yara/**"
+
+jobs:
+  validate-malicious-yara-rules:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+          submodules: true
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4.5.0
+        with:
+          python-version: "3.11"
+
+      - name: Install YARA
+        run: sudo apt-get update && sudo apt-get install -y yara
+
+      - name: Install validator dependencies
+        run: python -m pip install -r ./bin/yara-generator/requirements.txt
+
+      - name: Validate committed malicious YARA rules
+        run: >
+          python ./bin/yara-generator/validate-malicious-rules.py
+          --skip-generate
+          --json-output
+          --output-dir "${RUNNER_TEMP}/yara-malicious-validation"
