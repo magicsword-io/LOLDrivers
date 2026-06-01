@@ -1,0 +1,78 @@
+Id: 5b9a202c-0695-532e-9d92-662cedefee07
+Tags:
+- NGStar.sys
+Verified: 'TRUE'
+Author: '@BohraDJayesh'
+Created: '2026-06-01'
+MitreID: T1068
+CVE: []
+Category: vulnerable driver
+Commands:
+  Command: >-
+    pnputil /add-driver fdu11.cat &&
+    sc.exe create ngstar binPath=C:\windows\temp\NGStar.sys type=kernel &&
+    sc.exe start ngstar
+  Description: >-
+    NGStar.sys is the kernel-mode USB fingerprint sensor driver for NITGEN
+    Fingkey Hamster II/III devices. The driver creates \Device\gstar-0 exposed
+    as \\.\gstar-0 via IoCreateDevice with FILE_DEVICE_UNKNOWN and no
+    IoCreateDeviceSecure call, making all 28 IOCTL codes (0x00222004-0x00222070)
+    reachable by any unprivileged user-mode process (FILE_ANY_ACCESS on all
+    codes). IOCTLs 0x0022206C and 0x00222070 allocate a fixed 10-byte
+    NonPagedPool block via the deprecated ExAllocatePool API then pass it
+    directly as the receive buffer for an uncapped USB bulk transfer with no
+    post-transfer bounds check — kernel pool overflow leading to local privilege
+    escalation to SYSTEM. ExAllocatePool (non-tagged, removed from Windows 11
+    and Server 2022 kernel exports) causes a kernel bugcheck (BSOD) on any
+    IOCTL reaching the allocation path — confirmed local DoS. IOCTL 0x00222050
+    decrements a session reference counter at [rbp+0x40] via lock add without
+    an underflow guard; counter wraps to 0xFFFFFFFF from zero, corrupting the
+    device extension refcount and triggering premature cleanup leading to
+    use-after-free. Driver carries no embedded PE signature; trusted via catalog
+    fdu11.cat (VeriSign-signed, expired 2014, valid via timestamp
+    countersignature). VT detection: 0/77.
+  Usecase: >-
+    Local privilege escalation to SYSTEM via kernel pool overflow (IOCTLs
+    0x0022206C and 0x00222070 — fixed 10-byte NonPagedPool alloc passed as
+    uncapped USB bulk receive buffer); confirmed kernel DoS / BSOD via
+    deprecated ExAllocatePool on Windows 11 and Server 2022; device context
+    use-after-free via session counter underflow (IOCTL 0x00222050). All
+    primitives accessible from unprivileged user-mode after driver load.
+    BYOVD: catalog-signed (0/77 VT), FILE_ANY_ACCESS surface reachable from
+    any local process.
+  Privileges: kernel
+  OperatingSystem: Windows 7, Windows 8, Windows 10, Windows 11
+Resources:
+- Internal Research
+Acknowledgement:
+  Person: JayeshDuttBohra
+  Handle: '@BohraDJayesh'
+Detection: []
+KnownVulnerableSamples:
+- Filename: NGStar.sys
+  MD5: 297A9B187C6897749BC7BB92D02E95C0
+  SHA1: 3F102AB63F53869309443B5DE9C9416A5E001284
+  SHA256: 4542B20BE7ADCEB61FA5F538FED8C395951E775DBD7C4A2F7C6AEE477C4D924E
+  Signature:
+  - NITGEN&COMPANY Co., Ltd.
+  Date: '2012-07-04'
+  Publisher: NITGEN&COMPANY Co., Ltd.
+  Company: NITGEN&COMPANY Co., Ltd.
+  Description: NGStar Driver for Windows 2000/XP/Vista/7 (x64)
+  Product: NGStar.sys
+  ProductVersion: 2.0.0.4
+  FileVersion: 1.0.2.11
+  MachineType: AMD64
+  OriginalFilename: NGStar.sys
+  Authentihash:
+    MD5: ''
+    SHA1: 6EC95A0E99215E43742AEC5FC55F2FE0345B3DC1
+    SHA256: E2BC6987462F4CFE4DE4B53ADD75822CB2A197A6958B10CB9D85E16788703D18
+  InternalName: NGStar
+  Copyright: Copyright (C) 2000-2011 NITGEN&COMPANY Co., Ltd.
+  Imports:
+  - ntoskrnl.exe
+  - USBD.SYS
+  ExportedFunctions: ''
+  PDBPath: >-
+    e:\visualsourcesafe_new_2008\project\devicedriver\windows\fdu14\sys\ngstardrv\objfre_wlh_amd64\amd64\NGStar.pdb
