@@ -1,0 +1,165 @@
+Id: 70849f7e-6044-45b3-8bda-3582e05ddc45
+
+Tags:
+  - nfrd08c.sys
+
+Author: Jayesh Dutt Bohra
+Created: "2026-06-01"
+MitreID: "T1068"
+Category: vulnerable driver
+Verified: FALSE
+
+Commands:
+  Command: >
+    sc.exe create nfrd08cSvc type= kernel start= demand
+    binPath=C:\Windows\System32\drivers\nfrd08c.sys &&
+    sc.exe start nfrd08cSvc
+  Description: >
+    nfrd08c.sys is a kernel-mode USB driver for the NITGEN eNBioScan-C1 fingerprint
+    reader (FDU08), part of the NITGEN Biometric Device Driver package v3.12. The
+    driver creates its device object using IoCreateDevice() without IoCreateDeviceSecure()
+    and applies no security descriptor, exposing \\.\FDU08-0 to any local user process.
+    IOCTL dispatch codes use FILE_ANY_ACCESS throughout. Part of a three-driver package
+    where all share the same access control vulnerability class (see also NGStar.sys and
+    VenusDrv.sys). Binaries compiled November 2012 without ASLR, DEP/NX, or CFG.
+    Vulnerability confirmed via static binary analysis; runtime validation requires
+    physical NITGEN eNBioScan-C1 hardware.
+  Usecase: "Elevate privileges"
+  Privileges: "kernel"
+  OperatingSystem: "Windows XP, Vista, 7, 8, 10"
+
+Resources:
+  - "https://www.nitgen.com"
+
+Acknowledgement:
+  Person: 'Jayesh Dutt Bohra'
+  Handle: '@BohraDJayesh'
+
+Detection: []
+
+KnownVulnerableSamples:
+  - Authentihash:
+      MD5: 4a77e8a6050d42b6f3a4642e6f396d89
+      SHA1: de429222989f6871160889c9a422ee029caf32db
+      SHA256: a243cd910127d66a0c3fb98b7a97a8eef938359c53e190658a997f0fceaa036d
+    Company: NITGEN&COMPANY Co., Ltd.
+    Copyright: Copyright (C) 2012 NITGEN&COMPANY Co., Ltd.
+    CreationTimestamp: '2012-11-29 05:19:14'
+    Date: ''
+    Description: NITGEN USB Driver for Windows 2000/XP/Vista/7/2008 (x64)
+    ExportedFunctions: ''
+    FileVersion: 1, 0, 0, 2
+    Filename: nfrd08c.sys
+    ImportedFunctions:
+      - IofCompleteRequest
+      - IoBuildPartialMdl
+      - IoReleaseRemoveLockAndWaitEx
+      - KeWaitForSingleObject
+      - IoFreeIrp
+      - RtlFreeAnsiString
+      - RtlInitUnicodeString
+      - IoAttachDeviceToDeviceStack
+      - IoDeleteDevice
+      - PoCallDriver
+      - KeSetEvent
+      - IoAllocateIrp
+      - IoIsWdmVersionAvailable
+      - KeInitializeEvent
+      - RtlUnicodeStringToAnsiString
+      - IoCreateSymbolicLink
+      - IoReleaseRemoveLockEx
+      - PoStartNextPowerIrp
+      - IoCreateDevice
+      - IoDetachDevice
+      - IoFreeMdl
+      - PoRequestPowerIrp
+      - IoAllocateMdl
+      - IofCallDriver
+      - IoCancelIrp
+      - sprintf
+      - PoSetPowerState
+      - IoAcquireRemoveLockEx
+      - MmMapLockedPages
+      - KeBugCheckEx
+      - IoDeleteSymbolicLink
+      - ExFreePool
+      - IoBuildDeviceIoControlRequest
+      - IoInitializeRemoveLockEx
+      - ExAllocatePool
+      - USBD_ParseConfigurationDescriptor
+      - USBD_CreateConfigurationRequestEx
+    InternalName: nfrd08c
+    MD5: d1cafb959e3fd56d011326dba1d30075
+    MachineType: AMD64
+    OriginalFilename: nfrd08c.sys
+    Product: FDU08
+    ProductVersion: 1, 0, 0, 2
+    Publisher: ''
+    SHA1: 8db3be1b440dc6d40f3f16b1fbd0448de76fd621
+    SHA256: a1bc5bae4498589c24a8948f2909d3e9534e0b35da5a976720f365f2241daca7
+    Signature: ''
+
+  - Authentihash:
+      MD5: aa68ef03779a90e953082d0f08f12a40
+      SHA1: ed9c1686be6fdcc4c32899cf0a79bbcaa4b7be19
+      SHA256: 1f61ddd27e5eb4425b91f767703cf19ccf1cf64846f1fea67ada628c809b4cc2
+    Company: NITGEN&COMPANY Co., Ltd.
+    Copyright: Copyright (C) 2012 NITGEN&COMPANY Co., Ltd.
+    CreationTimestamp: '2012-11-29 05:18:14'
+    Date: ''
+    Description: NITGEN USB Driver for Windows 2000/XP/Vista/7/2008
+    ExportedFunctions: ''
+    FileVersion: 1, 0, 0, 2
+    Filename: nfrd08c.sys
+    ImportedFunctions:
+      - IofCompleteRequest
+      - IoDeleteDevice
+      - IoDetachDevice
+      - IoDeleteSymbolicLink
+      - RtlInitUnicodeString
+      - ExFreePool
+      - IoCancelIrp
+      - IoCreateSymbolicLink
+      - IoCreateDevice
+      - RtlFreeAnsiString
+      - RtlUnicodeStringToAnsiString
+      - InterlockedIncrement
+      - InterlockedDecrement
+      - sprintf
+      - IoFreeIrp
+      - IoBuildPartialMdl
+      - KeInitializeEvent
+      - IoAllocateIrp
+      - IoAllocateMdl
+      - ExAllocatePoolWithTag
+      - IoBuildDeviceIoControlRequest
+      - PoCallDriver
+      - PoStartNextPowerIrp
+      - IoIsWdmVersionAvailable
+      - IoReleaseRemoveLockEx
+      - IoAcquireRemoveLockEx
+      - KeWaitForSingleObject
+      - KeSetEvent
+      - InterlockedExchange
+      - IoReleaseRemoveLockAndWaitEx
+      - KeInitializeSpinLock
+      - PoSetPowerState
+      - IoInitializeRemoveLockEx
+      - IoAttachDeviceToDeviceStack
+      - IoFreeMdl
+      - PoRequestPowerIrp
+      - MmMapLockedPages
+      - IofCallDriver
+      - KeGetCurrentIrql
+      - USBD_CreateConfigurationRequestEx
+      - USBD_ParseConfigurationDescriptor
+    InternalName: nfrd08c
+    MD5: f9f852439bab6b750d3ab9f55757e412
+    MachineType: I386
+    OriginalFilename: nfrd08c.sys
+    Product: FDU08
+    ProductVersion: 1, 0, 0, 2
+    Publisher: ''
+    SHA1: 4734c266945401d2be322dc618ebada0e58e2c19
+    SHA256: d18a1c40d570b4914a16e0cfa5d36ae28b10616cca0dcd6970529ed5afbeb5f7
+    Signature: ''

@@ -1,0 +1,174 @@
+Id: e01faec7-256b-4886-bef0-4afbe960e89f
+
+Tags:
+  - NGStar.sys
+
+Author: Jayesh Dutt Bohra
+Created: "2026-06-01"
+MitreID: "T1068"
+Category: vulnerable driver
+Verified: FALSE
+
+Commands:
+  Command: >
+    sc.exe create NGStarSvc type= kernel start= demand
+    binPath=C:\Windows\System32\drivers\NGStar.sys &&
+    sc.exe start NGStarSvc
+  Description: >
+    NGStar.sys is a kernel-mode USB driver for NITGEN HamsterII/III biometric fingerprint
+    readers (FDU11/FDU14), shipped as part of the NITGEN Biometric Device Driver
+    package v3.12. The driver calls IoCreateDevice() without IoCreateDeviceSecure()
+    and sets no security descriptor on the resulting object. All IOCTL dispatch codes
+    are defined with FILE_ANY_ACCESS (access bits 0x0), so the Windows I/O Manager
+    performs no privilege pre-check before passing requests into Ring-0. Any local
+    unprivileged process can open \\.\GSTAR-0 and send arbitrary IOCTLs into the
+    kernel dispatch handler. Named codes FDU11_IOCTL_LOCK_DEVICE and
+    FDU11_IOCTL_UNLOCK_DEVICE are reachable without elevation, enabling biometric
+    authentication DoS. Additionally, sprintf() is imported from ntoskrnl.exe (not
+    sprintf_s) and USB descriptor fields from connected hardware are passed as format
+    string arguments in kernel stack buffers without bounds checking, creating a
+    secondary Ring-0 overflow path via malicious USB device (VID=0x0A86, PID=0x0600).
+    All binaries lack ASLR, DEP/NX, and CFG. Vulnerability confirmed via static
+    binary analysis; runtime validation requires physical NITGEN hardware.
+  Usecase: "Elevate privileges, disable biometric authentication (DoS)"
+  Privileges: "kernel"
+  OperatingSystem: "Windows XP, Vista, 7, 8, 10"
+
+Resources:
+  - "https://www.nitgen.com"
+
+Acknowledgement:
+  Person: 'Jayesh Dutt Bohra'
+  Handle: '@BohraDJayesh'
+
+Detection: []
+
+KnownVulnerableSamples:
+  - Authentihash:
+      MD5: 0d359e3c58c652219b8159cfd1e77bb4
+      SHA1: 1b34640a74c57a8a0ef6f0f5a6e5ff2f6f81da92
+      SHA256: 690b4eebacdcedf8d8f6d66275838e31b7922ffa97d7e4c166eb62145a55be0b
+    Company: NITGEN&COMPANY Co., Ltd.
+    Copyright: Copyright (C) 2000-2011 NITGEN&COMPANY Co., Ltd.
+    CreationTimestamp: '2011-01-20 08:16:57'
+    Date: ''
+    Description: NGStar Driver for Windows 2000/XP/Vista/7 (x64)
+    ExportedFunctions: ''
+    FileVersion: 1, 0, 2, 11
+    Filename: NGStar.sys
+    ImportedFunctions:
+      - IoReleaseRemoveLockEx
+      - IoDetachDevice
+      - DbgPrint
+      - IoAllocateMdl
+      - IoFreeMdl
+      - IofCallDriver
+      - PoRequestPowerIrp
+      - IoCancelIrp
+      - PoSetPowerState
+      - ExAllocatePool
+      - MmUnmapLockedPages
+      - sprintf
+      - ExFreePool
+      - PoStartNextPowerIrp
+      - IoAcquireRemoveLockEx
+      - IofCompleteRequest
+      - IoCreateDevice
+      - IoDeleteSymbolicLink
+      - IoReleaseRemoveLockAndWaitEx
+      - KeWaitForSingleObject
+      - IoBuildPartialMdl
+      - IoFreeIrp
+      - RtlFreeAnsiString
+      - IoAttachDeviceToDeviceStack
+      - PoCallDriver
+      - IoAllocateIrp
+      - RtlInitUnicodeString
+      - IoIsWdmVersionAvailable
+      - IoDeleteDevice
+      - KeSetEvent
+      - MmMapLockedPages
+      - KeBugCheckEx
+      - IoInitializeRemoveLockEx
+      - RtlUnicodeStringToAnsiString
+      - KeInitializeEvent
+      - IoBuildDeviceIoControlRequest
+      - IoCreateSymbolicLink
+      - USBD_CreateConfigurationRequestEx
+      - USBD_ParseConfigurationDescriptor
+    InternalName: NGStar
+    MD5: 297a9b187c6897749bc7bb92d02e95c0
+    MachineType: AMD64
+    OriginalFilename: NGStar.sys
+    Product: NGStar.sys
+    ProductVersion: 2, 0, 0, 4
+    Publisher: ''
+    SHA1: 3f102ab63f53869309443b5de9c9416a5e001284
+    SHA256: 4542b20be7adceb61fa5f538fed8c395951e775dbd7c4a2f7c6aee477c4d924e
+    Signature: ''
+
+  - Authentihash:
+      MD5: 8742598863537ae1d7420763a13f8b46
+      SHA1: 850a3a0c7696e9f18baa3f0c124050273ec31c62
+      SHA256: 7e6bbe2c12090896647b5e2071540b2bbd2948bb2e00d7bc81b362fc708e3bbf
+    Company: NITGEN&COMPANY Co., Ltd.
+    Copyright: Copyright (C) 2000-2011 NITGEN&COMPANY Co., Ltd.
+    CreationTimestamp: '2011-01-20 08:24:46'
+    Date: ''
+    Description: NGStar Driver for Windows 2000/XP/Vista/7
+    ExportedFunctions: ''
+    FileVersion: 1, 0, 2, 11
+    Filename: NGStar.sys
+    ImportedFunctions:
+      - KeWaitForSingleObject
+      - KeInitializeEvent
+      - IofCompleteRequest
+      - DbgPrint
+      - IoDeleteDevice
+      - IoDetachDevice
+      - IoDeleteSymbolicLink
+      - RtlInitUnicodeString
+      - ExFreePool
+      - IoCreateSymbolicLink
+      - IoCreateDevice
+      - RtlFreeAnsiString
+      - RtlUnicodeStringToAnsiString
+      - KeSetEvent
+      - IoBuildDeviceIoControlRequest
+      - InterlockedIncrement
+      - InterlockedDecrement
+      - ExAllocatePoolWithTag
+      - sprintf
+      - IoBuildPartialMdl
+      - MmUnmapLockedPages
+      - IoFreeMdl
+      - IoAllocateIrp
+      - IoAllocateMdl
+      - IoFreeIrp
+      - PoStartNextPowerIrp
+      - PoCallDriver
+      - PoSetPowerState
+      - IoCancelIrp
+      - IoIsWdmVersionAvailable
+      - IoReleaseRemoveLockEx
+      - IoAcquireRemoveLockEx
+      - IoReleaseRemoveLockAndWaitEx
+      - KeInitializeSpinLock
+      - IoInitializeRemoveLockEx
+      - IoAttachDeviceToDeviceStack
+      - PoRequestPowerIrp
+      - MmMapLockedPages
+      - IofCallDriver
+      - KeGetCurrentIrql
+      - USBD_ParseConfigurationDescriptor
+      - USBD_CreateConfigurationRequestEx
+    InternalName: NGStar
+    MD5: 78f36e27a3332d92241a4aac75799e27
+    MachineType: I386
+    OriginalFilename: NGStar.sys
+    Product: NGStar.sys
+    ProductVersion: 2, 0, 0, 4
+    Publisher: ''
+    SHA1: fd10cc5305c76080e17c77adb39effb8a27e6ab4
+    SHA256: 552f925efac9cfbba2dc398bf02e7769edb99db62052f09c5d1ae4829f3364a9
+    Signature: ''

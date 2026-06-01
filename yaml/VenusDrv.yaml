@@ -1,0 +1,176 @@
+Id: c81b3d94-2339-4171-a000-aeaa460d9834
+
+Tags:
+  - VenusDrv.sys
+
+Author: Jayesh Dutt Bohra
+Created: "2026-06-01"
+MitreID: "T1068"
+Category: vulnerable driver
+Verified: FALSE
+
+Commands:
+  Command: >
+    sc.exe create VenusSvc type= kernel start= demand
+    binPath=C:\Windows\System32\drivers\VenusDrv.sys &&
+    sc.exe start VenusSvc
+  Description: >
+    VenusDrv.sys is a kernel-mode USB driver for NITGEN HamsterMouse biometric
+    fingerprint readers (FDU01/03/04/06/13), part of the NITGEN Biometric Device
+    Driver package v3.12. Like NGStar.sys in the same package, the driver calls
+    IoCreateDevice() without IoCreateDeviceSecure() and applies no security descriptor
+    to the resulting device object. IOCTL dispatch uses FILE_ANY_ACCESS throughout,
+    so any local user can open \\.\VENUS-0 and send arbitrary IOCTLs directly into
+    Ring-0 code without any privilege requirement. sprintf() is imported from
+    ntoskrnl.exe without bounds checking and USB descriptor fields flow into kernel
+    format strings. All binaries ship without ASLR, DEP/NX, or CFG. Vulnerability
+    confirmed via static binary analysis; runtime validation requires physical
+    NITGEN HamsterMouse hardware.
+  Usecase: "Elevate privileges"
+  Privileges: "kernel"
+  OperatingSystem: "Windows XP, Vista, 7, 8, 10"
+
+Resources:
+  - "https://www.nitgen.com"
+
+Acknowledgement:
+  Person: 'Jayesh Dutt Bohra'
+  Handle: '@BohraDJayesh'
+
+Detection: []
+
+KnownVulnerableSamples:
+  - Authentihash:
+      MD5: 0181828f31669c7b36151961e2456a03
+      SHA1: 57b545da1235be1c0ee140a4d86858389668721e
+      SHA256: f896007db1605345ad198fa6eae6e869d3d69b90f6e4f701f0acc66fb266db04
+    Company: NITGEN&COMPANY Co., Ltd.
+    Copyright: Copyright (C) 2012 NITGEN&COMPANY Co., Ltd.
+    CreationTimestamp: '2012-08-20 07:50:46'
+    Date: ''
+    Description: VenusDrv Driver for Windows 2000/XP/Vista/7 (x64)
+    ExportedFunctions: ''
+    FileVersion: 2, 3, 0, 17
+    Filename: VenusDrv.sys
+    ImportedFunctions:
+      - IoInitializeRemoveLockEx
+      - IoCreateDevice
+      - IoDetachDevice
+      - IoFreeMdl
+      - PoRequestPowerIrp
+      - IoAllocateMdl
+      - IoCancelIrp
+      - IofCallDriver
+      - PoSetPowerState
+      - MmUnmapLockedPages
+      - sprintf
+      - MmMapLockedPagesSpecifyCache
+      - ExAllocatePool
+      - IoAcquireRemoveLockEx
+      - ExFreePool
+      - PoStartNextPowerIrp
+      - IoBuildDeviceIoControlRequest
+      - IoReleaseRemoveLockEx
+      - KeResetEvent
+      - IofCompleteRequest
+      - IoReleaseRemoveLockAndWaitEx
+      - IoBuildPartialMdl
+      - KeWaitForSingleObject
+      - IoFreeIrp
+      - RtlFreeAnsiString
+      - IoAttachDeviceToDeviceStack
+      - RtlInitUnicodeString
+      - PoCallDriver
+      - IoDeleteDevice
+      - IoAllocateIrp
+      - KeSetEvent
+      - IoIsWdmVersionAvailable
+      - MmMapLockedPages
+      - KeBugCheckEx
+      - IoCreateSymbolicLink
+      - RtlUnicodeStringToAnsiString
+      - IoDeleteSymbolicLink
+      - KeInitializeEvent
+      - USBD_ParseConfigurationDescriptorEx
+      - USBD_CreateConfigurationRequestEx
+      - USBD_GetUSBDIVersion
+      - USBD_ParseConfigurationDescriptor
+    InternalName: VenusDrv
+    MD5: faf6a9e9f7b65884ecaba71ebe3f5d3c
+    MachineType: AMD64
+    OriginalFilename: VenusDrv.sys
+    Product: FDU01/03/04/06/13
+    ProductVersion: 4, 0, 0, 9
+    Publisher: ''
+    SHA1: af5d97d1937e722013359c303b6cb9c0645aec75
+    SHA256: 947bb5edf166a84f5b9945101ade8c7c79b6d35efd0f621fc9250bb9437ec157
+    Signature: ''
+
+  - Authentihash:
+      MD5: cec7b9a7ad534a14294a8613fa9d3f28
+      SHA1: 3b6f73c9f04c4674b4be3ee7368c2e23a2918341
+      SHA256: bd807e55354f52419580391e7bbe4cf1118108059ef3bebc50a264c2f88b454a
+    Company: NITGEN&COMPANY Co., Ltd.
+    Copyright: Copyright (C) 2012 NITGEN&COMPANY Co., Ltd.
+    CreationTimestamp: '2012-08-20 07:49:47'
+    Date: ''
+    Description: VenusDrv Driver for Windows 2000/XP/Vista/7
+    ExportedFunctions: ''
+    FileVersion: 2, 3, 0, 17
+    Filename: VenusDrv.sys
+    ImportedFunctions:
+      - KeWaitForSingleObject
+      - KeInitializeEvent
+      - IofCompleteRequest
+      - IoDeleteDevice
+      - IoDetachDevice
+      - IoDeleteSymbolicLink
+      - RtlInitUnicodeString
+      - ExFreePool
+      - IoCancelIrp
+      - IoCreateSymbolicLink
+      - IoCreateDevice
+      - RtlFreeAnsiString
+      - RtlUnicodeStringToAnsiString
+      - IoBuildDeviceIoControlRequest
+      - MmMapLockedPagesSpecifyCache
+      - ExAllocatePoolWithTag
+      - InterlockedIncrement
+      - InterlockedDecrement
+      - KeSetEvent
+      - sprintf
+      - IoFreeIrp
+      - IoBuildPartialMdl
+      - MmUnmapLockedPages
+      - IoFreeMdl
+      - IoAllocateIrp
+      - IoAllocateMdl
+      - PoCallDriver
+      - PoStartNextPowerIrp
+      - IoIsWdmVersionAvailable
+      - IoReleaseRemoveLockEx
+      - IoAcquireRemoveLockEx
+      - IoReleaseRemoveLockAndWaitEx
+      - KeInitializeSpinLock
+      - PoSetPowerState
+      - IoInitializeRemoveLockEx
+      - IoAttachDeviceToDeviceStack
+      - KeResetEvent
+      - PoRequestPowerIrp
+      - MmMapLockedPages
+      - IofCallDriver
+      - KeGetCurrentIrql
+      - USBD_ParseConfigurationDescriptorEx
+      - USBD_GetUSBDIVersion
+      - USBD_ParseConfigurationDescriptor
+      - USBD_CreateConfigurationRequestEx
+    InternalName: VenusDrv
+    MD5: 2412705e49e6dec1a2e7bb53914e2f28
+    MachineType: I386
+    OriginalFilename: VenusDrv.sys
+    Product: FDU01/03/04/06/13
+    ProductVersion: 4, 0, 0, 9
+    Publisher: ''
+    SHA1: f6f68e71c77f8429ffcb137fc26643428ce34c85
+    SHA256: 268e6e095c2c6b7b158ce72e48f81b9d62c8ac9369ffd4cca8cb561d79e42692
+    Signature: ''
