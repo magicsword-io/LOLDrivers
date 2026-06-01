@@ -53,8 +53,7 @@ KnownVulnerableSamples:
   MD5: 297A9B187C6897749BC7BB92D02E95C0
   SHA1: 3F102AB63F53869309443B5DE9C9416A5E001284
   SHA256: 4542B20BE7ADCEB61FA5F538FED8C395951E775DBD7C4A2F7C6AEE477C4D924E
-  Signature:
-  - NITGEN&COMPANY Co., Ltd.
+  Signature: ''
   Date: '2012-07-04'
   Publisher: NITGEN&COMPANY Co., Ltd.
   Company: NITGEN&COMPANY Co., Ltd.
@@ -74,5 +73,43 @@ KnownVulnerableSamples:
   - ntoskrnl.exe
   - USBD.SYS
   ExportedFunctions: ''
-  PDBPath: >-
-    e:\visualsourcesafe_new_2008\project\devicedriver\windows\fdu14\sys\ngstardrv\objfre_wlh_amd64\amd64\NGStar.pdb
+  ImportedFunctions:
+    - IoReleaseRemoveLockEx
+    - IoDetachDevice
+    - DbgPrint
+    - IoAllocateMdl
+    - IoFreeMdl
+    - IofCallDriver
+    - PoRequestPowerIrp
+    - IoCancelIrp
+    - PoSetPowerState
+    - ExAllocatePool
+    - MmUnmapLockedPages
+    - sprintf
+    - ExFreePool
+    - PoStartNextPowerIrp
+    - IoAcquireRemoveLockEx
+    - IofCompleteRequest
+    - IoCreateDevice
+    - IoDeleteSymbolicLink
+    - IoReleaseRemoveLockAndWaitEx
+    - KeWaitForSingleObject
+    - IoBuildPartialMdl
+    - IoFreeIrp
+    - RtlFreeAnsiString
+    - IoAttachDeviceToDeviceStack
+    - PoCallDriver
+    - IoAllocateIrp
+    - RtlInitUnicodeString
+    - IoIsWdmVersionAvailable
+    - IoDeleteDevice
+    - KeSetEvent
+    - MmMapLockedPages
+    - KeBugCheckEx
+    - IoInitializeRemoveLockEx
+    - RtlUnicodeStringToAnsiString
+    - KeInitializeEvent
+    - IoBuildDeviceIoControlRequest
+    - IoCreateSymbolicLink
+    - USBD_CreateConfigurationRequestEx
+    - USBD_ParseConfigurationDescriptor
