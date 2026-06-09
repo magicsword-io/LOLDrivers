@@ -1,0 +1,104 @@
+Id: 5D658B45-81F0-442E-AC43-7C249CE1D54F
+Tags:
+    - ProcessCtr.sys
+Author: Element2023H
+Created: '2026-06-09' 
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+    Command:  'sc.exe create ProcessCtr.sys binPath=C:\windows\temp\ProcessCtr.sys type=kernel && sc.exe start ProcessCtr.sys'
+    Description:  The driver creates a device object at \\.\ProcessCtr with no DACL restrictions, so any local user can open a handle. The IRP_MJ_DEVICE_CONTROL
+    dispatcher accepts IOCTL 0x89DB202C with a 4-byte DWORD input (target PID) and chains
+    ZwOpenProcess -> ZwTerminateProcess against
+    the supplied PID, with no caller validation. Because the kernel-mode caller bypasses
+    user-mode access checks, the primitive can terminate any process on the system
+    including PPL-protected AV/EDR processes.
+    Usecase: Terminate arbitrary processes from kernel mode (including PPL-protected
+    AV/EDR processes) via an unauthenticated IOCTL handler.
+    Privileges: kernel
+    OperatingSystem: Windows 10
+Resources:
+    - https://github.com/The-Sword-of-Constantine/UsingBYOVD
+
+KnownVulnerableSamples:
+-   ProcessCtr: ProcessCtr.sys 
+    MD5: 5ee52684ee22f3ad730b6af7e327d82b
+    SHA1: 72ffc3e2afc384657bc1559eb69b4651e24d57d6
+    SHA256: d64eeb940daffdc8327fb18b160c20e539088cf8407813655f59efa9fdf0022e
+    Signature:
+        - 北京亿赛通科技发展有限责任公司
+        - Microsoft Windows Hardware Compatibility Publisher
+    CreationTimestamp: 2024-09-05 21:48:53
+    Publisher: 北京亿赛通科技发展有限责任公司
+    Company: 北京亿赛通科技发展有限责任公司
+    Description: 'Kernel driver'
+    Product: ProcessCtrl
+    ProductVersion: 1.0.1.2
+    FileVersion: 1.0.1.2
+    MachineType: AMD64
+    Authentihash:
+        SHA1: 981B6E6A1E0A7A67EE1420E7CA4BE96A6BFA9E7A
+        SHA256: D64EEB940DAFFDC8327FB18B160C20E539088CF8407813655F59EFA9FDF0022E
+        
+    Imports:
+        - ntoskrnl.exe
+    ExportedFunctions: 
+    ImportedFunctions:
+      - KeAcquireSpinLockRaiseToDpc
+      - KeReleaseSpinLock
+      - ZwReadFile
+      - ZwClose
+      - RtlCreateUnicodeString
+      - ExQueryDepthSList
+      - ExpInterlockedPopEntrySList
+      - ExpInterlockedPushEntrySList
+      - ExInitializeNPagedLookasideList
+      - wcsncmp
+      - ZwOpenSymbolicLinkObject
+      - ZwQuerySymbolicLinkObject
+      - IoGetCurrentProcess
+      - ZwOpenDirectoryObject
+      - _vsnwprintf
+      - ZwQueryDirectoryObject
+      - wcscmp
+      - KeDelayExecutionThread
+      - PsCreateSystemThread
+      - DbgPrint
+      - IoCreateDevice
+      - IoCreateSymbolicLink
+      - IoDeleteDevice
+      - ObfDereferenceObject
+      - ObReferenceObjectByHandle
+      - ZwOpenKey
+      - ZwSetValueKey
+      - ZwTerminateProcess
+      - ZwOpenProcess
+      - ExEventObjectType
+      - strncmp
+      - RtlCopyUnicodeString
+      - KeInitializeEvent
+      - KeSetEvent
+      - PsGetProcessImageFileName
+      - KeWaitForSingleObject
+      - MmBuildMdlForNonPagedPool
+      - MmGetSystemRoutineAddress
+      - MmMapLockedPagesSpecifyCache
+      - MmUnmapLockedPages
+      - IoAllocateMdl
+      - IoFreeMdl
+      - PsSetCreateProcessNotifyRoutine
+      - PsSetLoadImageNotifyRoutine
+      - PsLookupProcessByProcessId
+      - strcmp
+      - ObOpenObjectByPointer
+      - ZwAllocateVirtualMemory
+      - KeBugCheckEx
+      - IofCompleteRequest
+      - RtlInitUnicodeString
+      - strstr
+      - ExAllocatePoolWithTag
+      - ExFreePoolWithTag
+      - ZwCreateFile
+
+    PDBPath: D:\client_code\Driver\强制注入\Process\bin\ProcessCtrl64.pdb
