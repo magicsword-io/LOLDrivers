@@ -12,6 +12,8 @@ Living Off The Land Drivers is a community-driven project that provides a curate
 
 Living Off The Land Drivers is an open-source project that welcomes contributions from the security community. By sharing knowledge and expertise, we can help each other stay informed and better defend against emerging threats. Whether you're a researcher, incident responder, or system administrator, we hope that Living Off The Land Drivers will be a valuable resource in your fight against cyber attacks.
 
+For related Living Off The Land research, visit [LOLRMM](https://lolrmm.io/), which tracks remote monitoring and management tooling abused by adversaries.
+
 {{< button "/" "Drivers" >}}
 {{< /column >}}
 
@@ -32,4 +34,3 @@ Currently, Nasreddine Bencherchali is a Threat Researcher at Nextron Systems, wi
 Honorable mentions, [Florian](https://twitter.com/cyb3rops)  and [Patrick](https://twitter.com/bareiss_patrick) for all their help getting the idea and the project off the ground!
 {{< /column >}}
 {{< /block >}}
-
