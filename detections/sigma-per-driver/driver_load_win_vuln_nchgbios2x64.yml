@@ -9,7 +9,7 @@ references:
     - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/02/06
+modified: 2026/05/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,8 +21,8 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=6e2178dc5f9e37e6b4b6cbdaef1b12b1'
             - 'MD5=d9ce18960c23f38706ae9c6584d9ac90'
+            - 'MD5=6e2178dc5f9e37e6b4b6cbdaef1b12b1'
             - 'SHA1=d0d39e1061f30946141b6ecfa0957f8cc3ddeb63'
             - 'SHA1=091df975fa983e4ad44435ca092dbf84911f28a5'
             - 'SHA256=7d4ca5760b6ad2e4152080e115f040f9d42608d2c7d7f074a579f911d06c8cf8'

@@ -1,0 +1,121 @@
+Id: 96501e5b-e4f2-41a9-a8ee-d09e36d31a39
+Tags:
+- WinIo64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-22'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create WinIo64 binPath=C:\windows\temp\WinIo64.sys type=kernel &&
+    sc.exe start WinIo64
+  Description: WinIo64.sys is a hardware access driver based on the WinIo library
+    that provides direct physical memory access and I/O port operations from usermode.
+    The driver maps the \Device\PhysicalMemory section object to user space via ZwOpenSection
+    and ZwMapViewOfSection (IOCTL 0x80102040), with corresponding unmap (IOCTL 0x80102044),
+    and provides arbitrary I/O port read (IOCTL 0x80102050) and write (IOCTL 0x80102054)
+    in byte, word, and dword widths. Physical address translation via HalTranslateBusAddress
+    is also available. WHQL attestation signed via Microsoft Windows Third Party Component
+    CA 2014. Distributed by multiple OEM utilities and heavily abused in the wild
+    with 61 malicious execution parents on VT including malware droppers and BYOVD
+    tools. Used by KDU (Kernel Driver Utility) as a provider.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/222
+- https://github.com/hfiref0x/KDU
+Detection: []
+Acknowledgement:
+  Person: Will Dormann
+  Handle: '@wdormann'
+KnownVulnerableSamples:
+- Filename: WinIo64.sys
+  MD5: 66ab7f46db42bf52db06840ec3b4deb3
+  SHA1: 9745d77e3c27437bbccf39e074f7d57a99fe83b1
+  SHA256: eaaed21c1788baca09ee16b06e1a231cb11c8417b3949d7d90596d50305dc604
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 1e57dea8b5fd6d017784014b01b6194b
+    SHA1: 1419392fc1ec6ef497442fee3f7553a68b78a03d
+    SHA256: b12c8f36a9498df244c0659efae6f5f942068a1e0e9e0f1ba02baa4a378056be
+  RichPEHeaderHash:
+    MD5: b91c3947afb68deeeef5f332dddad745
+    SHA1: 26f7d3371d483be1c1cff52181be4a1d055dfb7d
+    SHA256: ef0915f4bb6788ffe57afdbbc5ca7f2b8144101e7bc0db67eb38f40933e89a68
+  Sections:
+    .text:
+      Entropy: 6.063602660322072
+      Virtual Size: '0x9be'
+    .rdata:
+      Entropy: 3.6577651954371384
+      Virtual Size: '0x40c'
+    .data:
+      Entropy: 3.75
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.1893687503109316
+      Virtual Size: '0x84'
+    INIT:
+      Entropy: 5.00013056158526
+      Virtual Size: '0x23e'
+    .reloc:
+      Entropy: 2.784183719779189
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-07-18 00:58:37'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IofCompleteRequest
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - ObReferenceObjectByHandle
+  - RtlInitUnicodeString
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert heavenluo,131620253795976757
+      ValidFrom: '2018-02-02 06:09:40'
+      ValidTo: '2028-02-02 00:00:00'
+      Signature: 16abb711854cdb85e055bfd2e70c684f102fd6a8bef366ac8a4f9366f345b9c904476c8e41fe7eb3c5bde66b10c5ca12640e69c9fd9166793a49760eca4338d45d36bd8fd7e6db8b87410d4caf916e191cec9091def57c6de19d588be69a5071b8f27bd775d84a09178cfd25008e1f473843b026182c813fcd69a4898c3e49631db649953dbbcfac97ed9ed8ea7f939f0e68b6f7630f5960094a8d8588be2b7c6b65ab146ee79afee5a77d698355da178d58a79fce619c0ef7ad6b93f05a48f4fd501d92b1cd0bd17c6e3abadd6cf02c624dd73baea780cecd9a76441ca6dc379aea846461375ecfdfd5c0a060a1cb0382117beae85b2b45beafceb734f8ec0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3929d40d67da14bc419f0a4e9a0e61b8
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 2a7bd7d7793c032a40a30203a939dd55
+        SHA1: 558c7400e13d0d84223be2f21d56d85e84f960eb
+        SHA256: 400f3627f818bfe6bcd601f020e1c845cb2e89f6440ffccb4ba852027bab20bc
+        SHA384: 459f736aa86a9e671483266beadfc4690f09fefcab4e40aad4c7f2a5ab78e0daf598088568ecc1a915d144656eb56492
+    Signer:
+    - SerialNumber: 3929d40d67da14bc419f0a4e9a0e61b8
+      Issuer: CN=WDKTestCert heavenluo,131620253795976757
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+  Imphash: 6e12984aefe0bde46dd36197366ec5c2

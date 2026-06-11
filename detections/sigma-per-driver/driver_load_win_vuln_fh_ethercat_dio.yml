@@ -9,7 +9,7 @@ references:
     - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 author: Takahiro Haruyama
 date: 2023/11/02
-modified: 2026/02/06
+modified: 2026/05/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,8 +21,8 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=5c55fcfe39336de769bfa258ab4c901d'
             - 'MD5=eb0a8eeb444033ebf9b4b304f114f2c8'
+            - 'MD5=5c55fcfe39336de769bfa258ab4c901d'
             - 'SHA1=b8d19cd28788ce4570623a5433b091a5fbd4c26d'
             - 'SHA1=170a50139f95ad1ec94d51fdd94c1966dbed0e47'
             - 'SHA256=ae71f40f06edda422efcd16f3a48f5b795b34dd6d9bb19c9c8f2e083f0850eb7'

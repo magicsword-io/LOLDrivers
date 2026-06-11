@@ -1,0 +1,181 @@
+Id: 886af494-4087-48c9-b48f-53e638d6f62e
+Tags:
+- UDDB2B6.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create UDDB2B6 binPath=C:\windows\temp\UDDB2B6.sys type=kernel &&
+    sc.exe start UDDB2B6
+  Description: UDDB2B6.sys is a TechPowerUp kernel driver (GPU-Z variant) that exposes
+    I/O port read/write, MSR read/write, MmMapIoSpace map/unmap/read/write, and PCI
+    configuration space read/write. TechPowerUp has a history of vulnerable kernel
+    drivers including GPU-Z.sys (CVE-2019-7245, CVE-2025-5324) and ThrottleStop.sys
+    (CVE-2025-7771). The driver is available in the KeServiceDescriptorTable/vulnerable-drivers
+    repository.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/323
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: UDDB2B6.sys
+  MD5: d4320487bf3021f2f2afcfc43d652a69
+  SHA1: f94503fea3fa7c526a70187444affd7f0e0e8926
+  SHA256: 9af0b89c5c54eb66e5a660b61aee7c1a25b1c92e20a310d8b16552abcf90c0b5
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: Low-Level Driver
+  Product: Low-Level Driver
+  ProductVersion: 5.0.0.0
+  FileVersion: 5.0.0.0
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 7871902bebb585e4618ba59e9c48bf71
+    SHA1: f36d42ef53bc86c5345ddc9d2a28093fd713822b
+    SHA256: 9786d12616feaf1302c308b816d3582969f4510208aedffac92225bbb78efc35
+  RichPEHeaderHash:
+    MD5: b37ad1d85b91c021ea12bff0b0376eee
+    SHA1: 3d6e11dd7d2b8086a4fac748992854a729c981f6
+    SHA256: 11c623eec508e3fa87222632ece31a0c0e6b4f8b0d21b22715ec9f265c56a44d
+  Sections:
+    .text:
+      Entropy: 6.20794196283954
+      Virtual Size: '0x12e9'
+    .rdata:
+      Entropy: 4.235911121601372
+      Virtual Size: '0xca4'
+    .data:
+      Entropy: 2.066104072827117
+      Virtual Size: '0x220'
+    .pdata:
+      Entropy: 4.135029038437317
+      Virtual Size: '0x294'
+    PAGE:
+      Entropy: 6.240571596154161
+      Virtual Size: '0x1987'
+    INIT:
+      Entropy: 4.9460502571462355
+      Virtual Size: '0x66c'
+    .rsrc:
+      Entropy: 3.166293837059211
+      Virtual Size: '0x2b0'
+    .reloc:
+      Entropy: 3.7563283859124614
+      Virtual Size: '0x30'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-02-12 02:47:29'
+  InternalName: ''
+  Copyright: Copyright 2004-2024 (c). All rights reserved.
+  Imports:
+  - HAL.dll
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - _vsnwprintf
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - RtlCopyUnicodeString
+  - IoDeleteSymbolicLink
+  - IoRegisterShutdownNotification
+  - ExAllocatePoolWithTag
+  - IoUnregisterShutdownNotification
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - wcsrchr
+  - __C_specific_handler
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - PsGetCurrentProcessId
+  - IoFreeMdl
+  - MmUnmapLockedPages
+  - MmMapLockedPagesSpecifyCache
+  - MmGetSystemRoutineAddress
+  - RtlFreeUnicodeString
+  - IoCreateDevice
+  - ZwClose
+  - ObOpenObjectByPointer
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - RtlAbsoluteToSelfRelativeSD
+  - IoIsWdmVersionAvailable
+  - SeExports
+  - wcschr
+  - _wcsnicmp
+  - RtlLengthSid
+  - RtlAddAccessAllowedAce
+  - RtlGetSaclSecurityDescriptor
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - ZwOpenKey
+  - ZwCreateKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - KeBugCheckEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Spokane, O=TechPowerUp LLC, serialNumber=604
+        057 982, CN=TechPowerUp LLC, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=Washington,
+        JURISDICTION_OF_INCORPORATION_C=US
+      ValidFrom: '2022-06-24 13:22:08'
+      ValidTo: '2025-04-14 20:06:58'
+      Signature: c59737c97e8486c0a7fc3d2a096b1d16734edb2e1ece05c9716478b6b8a4cd5976140e8efe19e8f790fa191e623f616945f68b8e147911fd94bc0a2c2a09e7e63fdd43680372d79d7e4970c0912d29a43f95dfc1e0b50cb1cf5e8e7d7f0648e38f2661c82fa02c8b74752ac12c97424fde8700a6fd8c8dfe501d029bb8a0cf4a063b0e0f733bec2d046e4966702acfe0d939b628723e0ceea458a6866aa4332dff03369ed46a1ace8fa40a32b77f66f0775dd61378077d3a83b3a95564f85194ec731b62990b844873ef30b2a0f9098b552f58431e9b39e08720b46114201f9535f33e78844202c553a2d79a06d60c0c98966623b0a78c3214ab7d04ba922580f6b50c72c2f251a2a36e0048b4b04b50493ce019a3696ad5750d73036ebe12704ecde47af92fc3ed1afee6dd1b02671991932c3289d194c66c2abe801675abb973a36abdb2ab5e97907a6e9ab16a0a3c5be5f935f7c380d0a3da42fd12cf1931a5954cf04e1b83ab4730507c774d55d9491014dc088a21350fd380cc2d84b2e5fc27d6f7855614be8772917dede4d724e64aabc2f3fe8d10d71f281b9a0ac5028219ecd92cdc77b31c946a282cd1039285c6dbcfa5f70681423194904d1888807009489125284d5c12f5f32ee0282607fef79e2ce39db5173c9a7165ec24020a6b4586d0003fce184dacfc2dbc61fd0d0f0e4d0da13bb381618b4540632ae5f1
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 115bbe9e1c286827af66e7a01390c206
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 60e408e2390af7c32b78b980eebef3dc
+        SHA1: ca42b365c64a60c58de315e23b522b3e69dfcf85
+        SHA256: 06990ff9bd8df35bf3deff4b89e9448895469ca675a68d726b02cc307d57eadd
+        SHA384: 25a302eef819bcc3db04b9dcff01ec2c38cb536a73f87a782f79df50178efaa0cb7ec579fe84a446f55f6c05e52ad987
+    - Subject: C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate
+        CA RSA R3
+      ValidFrom: '2019-03-26 17:44:23'
+      ValidTo: '2034-03-22 17:44:23'
+      Signature: 728ffa81488291e26083255b7b8f2f940f8358ce8824fa99424e2d4e3789f89fb11eae744079f9decbf7ff2c25105298408f5438ff5dd12aa95ae6b702bbc87fee2ad3ff7fcc363c5529435d364996265d70e7f22b0567474c99581908f6b1c64f60d2fc38be02ac25d1880da52ce1ddd37d57cf6ac31960d26daa5d7b44e85a5b83dbc81b360a7e0af50a523678e29afb1354cc9cc947bf624e35af3ee1ba0fc993eed520b796b7507652357a9da13b2664371fcebc037bc461815289cc7bfe5a051a47aee412ca8e54e35a9fb0c18af2f95f4668b9afc7d93e84d12b2512383dbb9a01eadfcc66a8b6c51f6a9347b0ce069284ad43836a86395c4ce2024b7873ae4b28e6a4f8616980ccff34e8b02f6402490d8d2e1f7deba186050fed5e7034e5180200eb63be75266da71c905707ae99a58e37d2a7c3586ca5f4e7522235a75bbb6eeb48db9a72deaa5a6249099e902b120fc83adbaf68739dd9e379ca98f9681deae6582ea9186ccd993a9acd267044e666989c251e196ac7d8f3e7ffa63577fbf57dbb8c82c76f7d5432bbea990b39e82051152f89e32ae1c520f37a784e3daf176292548d278c9037dce329e84293b6f83b2b0b9950b8e434069823eeeadfb554bbaedbf1eadd72f945edb1da433b80fc6f6cdfdc916db8a5d4ef75cd654c642c59df132e021b4bfa0493c0bb371d1fb220d34f33af16a11cc0aaa888
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 424b6a53cec766141c2a63b1a51c4104
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: db3494d2a0da480f9a2dc03978395f8a
+        SHA1: 9cb274c1f98981dbdbe1a7630a9071458784c80d
+        SHA256: 49b229a10f850de5b85110a0e0f59c48dd12b116c9ad236a3f16c5bdfbc968d5
+        SHA384: 2012fa0acaa171e7e953cfad3301af5dc2947a64428d9fdc7bcd47afe88ab85fa580e0ed6d0f61e9629d46accc3b48ec
+    Signer:
+    - SerialNumber: 115bbe9e1c286827af66e7a01390c206
+      Issuer: C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate
+        CA RSA R3
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: fbcbcd6272f1203182652eacc64bca75

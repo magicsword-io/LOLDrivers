@@ -1,0 +1,167 @@
+Id: 1adc79ba-d923-4e25-9175-77fa18e10cad
+Tags:
+- 1109.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create 1109 binPath=C:\windows\temp\1109.sys type=kernel && sc.exe
+    start 1109
+  Description: 1109.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: 1109.sys
+  MD5: 41c580714dd28bda7da36dc5dc660710
+  SHA1: 9b4052df235ba8e17874c6b1c57130d619f87432
+  SHA256: f154167b4b92851f478b3c3f88423cd719e3139bac5da07f33dd7929796c96f5
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 29d54ac52cd8ce43f8d54fd9e6bc894e
+    SHA1: 79192e06ccf4edb3928b063c978a751000e35d2a
+    SHA256: aca825f3eb50624c3ab6edc84166ba7e432b503baf438485002311feddce35ae
+  RichPEHeaderHash:
+    MD5: 1b5c37bb9e6c7ced04d513c8b1c1418b
+    SHA1: 4a2e76267995e58a4fe07002fc8bfc2241f24794
+    SHA256: e3155ab14901872cae7234674d0a5e4801659f44a8a78a9a312bb1ba976cd2bc
+  Sections:
+    .text:
+      Entropy: 5.309669447443381
+      Virtual Size: '0x10ca'
+    .rdata:
+      Entropy: 3.6328893113915868
+      Virtual Size: '0x4a4'
+    .data:
+      Entropy: 0.997584679824574
+      Virtual Size: '0x28'
+    .pdata:
+      Entropy: 3.5234248322285344
+      Virtual Size: '0xf0'
+    INIT:
+      Entropy: 4.52875267221751
+      Virtual Size: '0x20c'
+    .reloc:
+      Entropy: 3.3917024339144364
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-11-08 13:29:06'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ObfDereferenceObject
+  - PsLookupProcessByProcessId
+  - PsGetProcessSectionBaseAddress
+  - MmUnmapIoSpace
+  - MmMapIoSpaceEx
+  - MmCopyMemory
+  - MmGetPhysicalMemoryRanges
+  - MmGetVirtualForPhysical
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoCreateDriver
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Comodo CA Limited, CN=AAA
+        Certificate Services
+      ValidFrom: '2004-01-01 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 0856fc02f09be8ffa4fad67bc64480ce4fc4c5f60058cca6b6bc1449680476e8e6ee5dec020f60d68d50184f264e01e3e6b0a5eebfbc745441bffdfc12b8c74f5af48960057f60b7054af3f6f1c2bfc4b97486b62d7d6bccd2f346dd2fc6e06ac3c334032c7d96dd5ac20ea70a99c1058bab0c2ff35c3acf6c37550987de53406c58effcb6ab656e04f61bdc3ce05a15c69ed9f15948302165036cece92173ec9b03a1e037ada015188ffaba02cea72ca910132cd4e50826ab229760f8905e74d4a29a53bdf2a968e0a26ec2d76cb1a30f9ebfeb68e756f2aef2e32b383a0981b56b85d7be2ded3f1ab7b263e2f5622c82d46a004150f139839f95e93696986e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: '01'
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 93b601b98fc29a9e89a704048928b85f
+        SHA1: 3e8e6487f8fd27d322a269a71edaac5d57811286
+        SHA256: bedd4b1831f17c7ec1d507380f4c9836baa8ce20065a67db8b43acea14294ba4
+        SHA384: 5019d634bf6be7246128e117bfdf533f97aa574fae9080307b427fc77998fe9f280ba23b051cfbd6cf5d37c6e578d698
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing Root R46
+      ValidFrom: '2021-05-25 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 12bfa1ef8b749a9844b86946b5ab240a0ca48a67b83a81bf458a7d5207a88d1f4e218539a36b5e2d2086bf10b8ae793b53cdb4fbd844be06d95c6367d44016874486722ad63215f51283c2f9e15d114067f6422772c523e202381a4c20e2db01f7cd464f26a27c66c05136b6890254c7fc58fb6c00eefe98a62e95a10c53291f6fd819a64f9ef7ac09ea5d82c68baf80a7bd8148528431da32ec15e4a64c3d6c3973d40b853920e0851a68e1a74838a9d1362577c18d1916c5884c667d2f63ce98e869dfac3ca85d9dc91c5baed8f32f74cfb87ef6d7839d1196629aae4513da7fdc47fbdfc3529fe60655e99d8cf23a6251bcec240f29d4588084e4457b5ad8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 48fc93b46055948d36a7c98a89d69416
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 207045ce7b7ab131e78e459b13825902
+        SHA1: bcf7530a1ab309fb1926cb720f9fd58cff1cb88f
+        SHA256: 0f31a4237992e1ea623baf4c29480afb6d913e10f1fb1d56bb56f5b03fbff13b
+        SHA384: a229d2722bc6091d73b1d979b81088c977cb028a6f7cbf264bb81d5cc8f099f87d7c296e48bf09d7ebe275f5498661a4
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2036-03-21 23:59:59'
+      Signature: 5f36acfbf9f6725a14b7f00b1dded8fd9701d2fd01ee992d86e8f6b7f039ffd6814a5aa7424a0a2d159de694fdc5694ab2d74bf116124cf6be9066658b2d74d4ab08f76a110308777cbe69e1b0db9f248903d6de5ca4e0b2d6b4cfe338d5b96dcc27d6ce6411e8107276d3f9e0e92c89e949d3b39796060ae1f60ac8419a915d81d8367798ca804197a8f8913f639faacd54544b80eaf51766d39471fd9efd4731e3e91a861dd3be20d23fb1525fb293bd8c950998728f9501f49843a54afb1426aa9d36bf72b0fcdcbd840deced34a85e952b3816630575d9f6312e156be294b22ad27435b5989aa3fef82b2fb6174b276c5ae6b9765eda86ddab64d66aea8318881b3182f588b39425c0212f086902e34cbb4c2a1130eb817906e141952ad420f60b93e47c760c9d1d266b5f8401f62a99cdafdec7f0e418a24e9b2f2a0c66a6927526bed94035136faea6371a7ae8ad1c5163072a56066ced7e18f6e3ec6473a66d08368baf0f99ae756b172bc24d6ac351464156e98fc28dff13719bdaed9ed39fabe545a612c5145a524197a3060008c5e61cea27823c3bdbe646c4ef2d003513cd367d9de5aa270805cccec0360e4b194fd0639a6dbfc529533122db75507786d0f2f86aee6b061b3e85232b97c87e7a99410cdd587f0ea8c3123d3a359be09d2c8c17815444a87a1d989d967f5958a65465ff51420bf847ebcff8e5bf
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 33d708a891405319e2a5bbd339b9ad6e
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b81404c775a2621debdb7825b87b8316
+        SHA1: 47ae94067c3c59b13605192288705db7b52f3685
+        SHA256: 9893b35b3dcefe53d8d24b887569dfe21f9aef27bd57b61c06fcf7438b89c33a
+        SHA384: f55821c081b58e86eaa202923e715e1524c422c7be0469b13a9e7a319e50d70cb5b67e864273029a79250f9dc3203cbd
+    - Subject: "serialNumber=91500107MA5YTRH15X, JURISDICTION_OF_INCORPORATION_C=CN,\
+        \ BUSINESS_CATEGORY=Business Entity, C=CN, ST=\u91CD\u5E86\u5E02, O=\u91CD\
+        \u5E86\u8C94\u8D51\u8C85\u8F6F\u4EF6\u79D1\u6280\u5DE5\u4F5C\u5BA4 (\u738B\
+        \u771F), CN=\u91CD\u5E86\u8C94\u8D51\u8C85\u8F6F\u4EF6\u79D1\u6280\u5DE5\u4F5C\
+        \u5BA4 (\u738B\u771F)"
+      ValidFrom: '2025-03-20 00:00:00'
+      ValidTo: '2026-03-20 23:59:59'
+      Signature: 598a3af47512ffc69e22af0cb3abb0528485f94a7346a52dcee13c9aad1d68f5064149b06f8403b64d5b4ad507a0f436c1bfb55d56b5788c721bc75267d00b80e8aefd954c61925d0940dade5560c0424747013a937c60b47df36fd4de1d2dd6aa9ae4ef08894366bb55bc4cc31b08e417b2fe414cbf77b962fce77eddc24145e8311179c057ce40728cbe010581948111fdd2d71c3b3ae001c9d7c17241afd67c501ed5c7c09abb16a4862bf9a26b56ee59427bc53d0c645f60413014112cb4e9787c06a807d44c1f7d59e551fbe7b2bfa34ccef38fb473cc1d84d1b3084e04fa44567098f72e6c52078019d2dec51b9b513dd6d29d8360c969d6812ef8cb03450364d385b575a405073bc7ceeb5b3e10e73e01b3f7bedb8e1f08da05873f33abd33efd796b1350d2f55480ebd11e3e398f3782731db01bfb914e64b629cf6e156bea3c50eff578182f3aa9561dbe2f447ac475846796fd64bcc24e9ade1c8c432d9f5ec1de8c3fb9f1561ffa1c8f8be297e74a6e907f10236512bea6cf6fc2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 00c21d9e1a304b6af1b3be29d00b8313a4
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 455606593e48d86f74765866effc341f
+        SHA1: 3b7629d1128114fbceb20ffebae434495d72acb3
+        SHA256: fc287f7a29cf85c5ae3cf9f8cea95b97680cf776ce8a521d4c3dd2831809c31c
+        SHA384: 205ffb3b75846608ed771e262d51bceb1555cbf232d214968391cda962fdc57abb2c06121c0dd5879dbf4937d5f99ab5
+    Signer:
+    - SerialNumber: 00c21d9e1a304b6af1b3be29d00b8313a4
+      Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 4967091397a11c6325fd38bc55575f63

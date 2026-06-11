@@ -1,0 +1,256 @@
+Id: 3dc0b91e-6afe-4938-ad9a-2cdf10c2c1e6
+Tags:
+- energydriver.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create energydriver binPath=C:\windows\temp\energydriver.sys type=kernel
+    && sc.exe start energydriver
+  Description: EnergyDriver.sys is a kernel driver from Intel Corporation shipped
+    with Intel Power Gadget 3.6 (deprecated December 2023). The driver exposes 5 IOCTLs
+    including arbitrary wrmsr (any MSR index, any 64-bit value, no whitelist), arbitrary
+    rdmsr (single CPU or all CPUs), and arbitrary physical memory read via MmMapIoSpace.
+    wrmsr allows IA32_LSTAR hijack for direct syscall redirection. No privilege check,
+    no MSR whitelist, default DACL. WHQL and Intel EV dual-signed.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/magicsword-io/LOLDrivers/issues/329
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: energydriver.sys
+  MD5: bbab3fcf45d59edf5f19cf70c5ef9562
+  SHA1: 693afa90fd9479541835a0720b373a3411473d62
+  SHA256: 6665b05e6fd430b729326a0b125cfcb70c387dbee46ef3f768f7dbdf0e0a6bab
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: cb9026c96aa5a6b39c323db128097cce
+    SHA1: f3b7b15b0e8af0975540eb8087550a746e44a1a1
+    SHA256: ebe03e9a6e5db969762a1723f40294260f6196cb1224faf37993c9c8365007d5
+  RichPEHeaderHash:
+    MD5: d3a6a3560e3803365f8f81a1b808460a
+    SHA1: e16eb794f0b7136c8525997d56b414e4473ee703
+    SHA256: 5a702d53cbc7b1d07704da185043c85271f7831abdf314972ee59871759ec73e
+  Sections:
+    .text:
+      Entropy: 6.118890067286134
+      Virtual Size: '0xc13'
+    .rdata:
+      Entropy: 3.851849943955123
+      Virtual Size: '0x4e8'
+    .data:
+      Entropy: 3.75
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.6002243958368543
+      Virtual Size: '0xf0'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.152221315032215
+      Virtual Size: '0x2d4'
+    .reloc:
+      Entropy: 2.9031071683628116
+      Virtual Size: '0x18'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2017-07-27 12:10:34'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - DbgPrint
+  - KeRevertToUserAffinityThreadEx
+  - KeSetSystemGroupAffinityThread
+  - KeRevertToUserGroupAffinityThread
+  - KeSetSystemAffinityThreadEx
+  - KeQueryActiveProcessorCountEx
+  - KeGetProcessorNumberFromIndex
+  - MmMapLockedPagesSpecifyCache
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2017-02-15 20:47:25'
+      ValidTo: '2018-05-09 20:47:25'
+      Signature: 2f5f7417499a4579af21165946814d64b8712d3c4adc288792dc1e60fc32ae3100d9cb0776703cb883fb25832279ffacf94eef893940d8ff2e7ad82da371f3395293c2594bfa975240c8e0565477adeb017f26b805cf14f9b9862ba738a57bcdf19e3632643ce4a7474db88d50256365c602d188c712719057eaa7e3e86fb802ce620e5fd101f6ed034880fbd82e64ccb5a351e7a1cf2e62d0721efa83abe19e3bb80e06fb75c7c420a3e2d656caf664154e5995e4c6b1f214c3df4e5fef714ced214e0a7f3bc84559950796cd93a25d43f625c9fe2fd72f91b52868423c96f5690b3eeab27d578068f4f6ef6e359fd64c2d2f6618bafc4db31be615280d565f20797a75df33682199b3cee12a30ac037bfc5fd98c1f059356106e91bbbe780bae2c0c7cc0a1532198ca64de43d8015e453e077965278d42155d0ba5731115c82aad03b22cd599146723a11ec854dcb152f8e5acbddceeae2e6a2af6c077e7e7a92dba102b61b801ebeca22969a865a541edd1274935586c9c6060645e658eacf2e87dc8122df05d22bcc1144241599ebbfcf25d5ff2a15b5a0f4a07d06e8047fcb50f2e650bcd8cf66d152ec21a6217e2f2c8159a5fa5a8b5f9339a5172eb1b150aca88c063d95b83702487ed5e0136a82a6e32c9f3800670170ed406d273d3f8482a4ba99a41b3792e5578d64b23408d6de1a1530062f05d1a83e2c51f42fd
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000018a7c64eda383a9f79000000000018
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 38ddb1a080b829cf86e5f9f016e6535e
+        SHA1: 7c369f9fc58c82a22ae3fc5cee6d6413965fd138
+        SHA256: b623734ef388b128104b1e45b7bbd443f5d0b6148dcff3b78d992d504b028ad2
+        SHA384: f05b84f15945954c3cf792dbd60f4fc1677f17a021e6474d0cb3e511aed9a827e0de696a96b71c61b2bed754020ebf0f
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 3300000018a7c64eda383a9f79000000000018
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+  Imphash: ef789722d45b4a5c8446ffc92ebf0fa1
+- Filename: EnergyDriver.sys
+  MD5: c8c357be337ef4c99019aa8fe0a09a61
+  SHA1: 87885dc9f3b2bb9ffce65944be63b4019471b0d1
+  SHA256: 382cb4c37fdcb2e2ca9cbb4a5de39fa4e230d1d2e1b6f38e1c8249002525f1c7
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ec65210451f379a0e8ed618ef46aa8b4
+    SHA1: efe7ba87399b4210c76fe515e61c277cfee029a5
+    SHA256: 2b20a6459b6ad99e111e861c8b18727c76ce0425f8d34ef777ad1acc32702e58
+  RichPEHeaderHash:
+    MD5: 84a2778f6120e7b1781e9cb40bc71d00
+    SHA1: 1e4ba2c3c011176577499d8681164370b899c37b
+    SHA256: 6219c3e20bb863299ec92d21bfb8d3ed4a2b89ea4dec4bf29eb479569cce1a11
+  Sections:
+    .text:
+      Entropy: 6.104722067016408
+      Virtual Size: '0xb63'
+    .rdata:
+      Entropy: 3.8078120290990802
+      Virtual Size: '0x4ac'
+    .data:
+      Entropy: 3.75
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.498909169154576
+      Virtual Size: '0xc0'
+    INIT:
+      Entropy: 5.18525089745527
+      Virtual Size: '0x2d4'
+    .reloc:
+      Entropy: 2.784183719779189
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2020-12-07 00:18:54'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - DbgPrint
+  - KeRevertToUserAffinityThreadEx
+  - KeSetSystemGroupAffinityThread
+  - KeRevertToUserGroupAffinityThread
+  - KeSetSystemAffinityThreadEx
+  - KeQueryActiveProcessorCountEx
+  - KeGetProcessorNumberFromIndex
+  - MmMapLockedPagesSpecifyCache
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Extended Validation Code Signing CA
+      ValidFrom: '2014-12-03 00:00:00'
+      ValidTo: '2029-12-02 23:59:59'
+      Signature: 664eecb716776f11e81b5d6a4ed9f28b6cb15628408bc031c49948233df80ee88097ef6d200b1f13c486fb173415e18e54f7c2b8007315e028d9dabafa8254c2f7ebbfc336d0309fe5a11c94dfef7ce8f62c78a2accf266a15a11531d6313498bd534fc48483a3c4965c3dd8fed6f954ff67936df83e2b6b2ca2087c5648813218b26eac90c1dbe4de398b86e5c7184059a4df9647bab27fb1f8570f858074380e3a58621efe52e3e6ae530986fe8f9bdb5656cc07b089c104f1530b6c6f77ecb21fecf65b4043600f1bab1854b410048ef80ee9cb83b17af2344e6a544ce9832ae9b030251cce628e0eeb85e629feb14ae3f2ae3c91f54ca1bec8170e5cbb424de31a8a92cd3e207edde975b1ea1f745c9e54c29437b261dd0716597f968016e099b5d26eb0c9230615acd123f4338bce75f0c186d3ffe12efa904ffe46f9bbdb4fbbb7fed10d2b04f1d2d195852c8a2eb88556f2c38452a1e933b1eb50c8a1b09fe3c38b3a879ee755d3d36d3417300d68220bd5b9ed733572c3eda737cde343ae45cd34bf28ca8762ed43a4affacb31cb215861465eb6c67aa61e532aa8f85c511f3a5a100f28c0e4748b74c604aaf84b26280a3289db9d2a60716ac3964e16b963bf6195678c4b2ebbb04e83e94d31e58e2722f53c267b4491d3d45af0d37cf438be149a990e8bb15beae48b0f119d7742821c5c3ad4daab882f8d573054
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: e3898a5cae592360ce7bfdf5ff3fb13f
+        SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
+        SHA256: 3a9b4006a9e125b4458344389c86dfb4f6728848b9871654c615a138514d02ec
+        SHA384: fcd8dd15125f14b84fec55838806355ec3787407188bac83c2c0d6c841adf9ac76ee83eccc5c9463f1f88fc5295a31ee
+    - Subject: serialNumber=2189074, JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, C=US, postalCode=95054, ST=California,
+        L=Santa Clara, STREET_ADDRESS=RNB,5,125, STREET_ADDRESS=2200 Mission College
+        Blvd, O=Intel Corporation, OU=Intel Power Gadget Driver EV, CN=Intel Corporation
+      ValidFrom: '2020-12-03 00:00:00'
+      ValidTo: '2021-12-03 23:59:59'
+      Signature: 36126dcfb570c450112abc09367133b6ea3109befe5a943aa309ccf6807c9355fc6a60249d175280642193e1108e744664983f1ef5cb68397ac9675c26f7119006d8c0e0cbe275b6bedcb49f84f5075e85874768303a47fc1b8be239c10a8a50388207384b7c8dd6d495d9ec657e7e9a7276f8e78a655f631b558e70ac3ef8068fe1aab18a67d9616b4e283008069f29308e22d853e82ccd72c2b2bc546a98f5460838971a69054edb4fcd18b41ad4af828afda723722c2e0bef31b0d68d1e74c08b4cc90a7a9d939aba47304aaf43847301cb00cc6ae883c8140493d5bbfe8d6e83edc11b342322ae62b1ec16c1c57aef91d3b1b7fd76443134e7d74b8e50b6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0092445761f71ed39a8d7c952a24d3192f
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e0ccae85a47a360c4817a538f9072231
+        SHA1: a060c473c4842831c9e2c59b6ef74cac5b34d5c8
+        SHA256: 61162dee5e340f8212c18e9aa52abe8fe9d0f9f6db09dafa7ecce1a2db66debb
+        SHA384: 500cbca5a3ec19649919a1f0303f5ac943a9439a9b6296d566df96e6d8bcbfe164cc7030faa2fef70b25fb495314b3b7
+    Signer:
+    - SerialNumber: 0092445761f71ed39a8d7c952a24d3192f
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Extended Validation Code Signing CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: ef789722d45b4a5c8446ffc92ebf0fa1

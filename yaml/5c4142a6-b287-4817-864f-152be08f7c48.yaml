@@ -1,0 +1,128 @@
+Id: 5c4142a6-b287-4817-864f-152be08f7c48
+Tags:
+- srswdrv.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create srswdrv binPath=C:\windows\temp\srswdrv.sys type=kernel &&
+    sc.exe start srswdrv
+  Description: srswdrv.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: srswdrv.sys
+  MD5: 4aa226d5b771edc1109c469a76bd38b2
+  SHA1: 1b03900fe18aee01758379daef96cb5ad66d2690
+  SHA256: 57414e532a7a10ae7af7fa6294d1d95ad4d9d506882258c5e59d53b4e4f2c91a
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Lenovo
+  Description: SRSETUPWIN Driver
+  Product: SRSETUPWIN
+  ProductVersion: '5.03'
+  FileVersion: '5.03'
+  MachineType: AMD64
+  OriginalFilename: srswdrv.sys
+  Authentihash:
+    MD5: de13493d94dfb0940f0f7d52e87fe559
+    SHA1: 3f177d52830a62cdae02fc8bbe783cb8b4103d3c
+    SHA256: c6852ea86cb52934d04af2e042b32017191d5ba342e3cbcad89c719fa039e15b
+  RichPEHeaderHash:
+    MD5: ba16e5c11619fb4ba339fa89ed59f955
+    SHA1: 5ae1edd8e76b54d655cb4c6190ffcd6f3d030801
+    SHA256: 54220b2f52ca03d8f49b10c1ba8008802c4725543dd535a3cd2ab6f54b78362b
+  Sections:
+    .text:
+      Entropy: 6.238152408677396
+      Virtual Size: '0x11e6'
+    .rdata:
+      Entropy: 4.982324527728238
+      Virtual Size: '0xa74'
+    .data:
+      Entropy: 0.6075837375653794
+      Virtual Size: '0x2d8'
+    .pdata:
+      Entropy: 4.027982475326579
+      Virtual Size: '0x270'
+    PAGE:
+      Entropy: 6.382536320275805
+      Virtual Size: '0x3dc4'
+    INIT:
+      Entropy: 5.79165773947322
+      Virtual Size: '0x83c'
+    .rsrc:
+      Entropy: 3.5262933172971276
+      Virtual Size: '0x3a8'
+    .reloc:
+      Entropy: 3.583757158825949
+      Virtual Size: '0x30'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-03-01 22:42:37'
+  InternalName: srswdrv.sys
+  Copyright: Copyright (C) Lenovo 2022
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - MmMapIoSpace
+  - IoDeleteSymbolicLink
+  - IoInitializeRemoveLockEx
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - MmGetPhysicalAddress
+  - ExGetFirmwareEnvironmentVariable
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - MmGetSystemRoutineAddress
+  - IoDeleteDevice
+  - RtlInitUnicodeString
+  - WdfVersionUnbind
+  - WdfVersionBind
+  - WdfVersionUnbindClass
+  - WdfVersionBindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert ddhankecha,132886868762491660
+      ValidFrom: '2022-02-07 05:54:36'
+      ValidTo: '2032-02-07 00:00:00'
+      Signature: bffde1391745adfb6a5f74e23a482c38a284393aeed88c055b7726f4e5f83387dd834989cb4a483e1a4e5317038c33b1e66aec54d119dd40a8b5268749286e17982ec636fd4217266dab74f0886b90ff1bafd466b48086e14f4804377fb00441756d19fb5051abea35b382a09b9b636b9e6a26fdb27594929a85d8f81b8e967725080bb28343d668aef089a36959e87644bc3f36e66b8aa98e000103aa949a5bbb62002e7a3a613e96ed322aa2eb44aa4b1222327b3d4b26f99d6bf44b3af2730fdd03d684e3c86b0a4a0ac55a5d3b6f18e30ad576f56138ad78817e45e9d0d466a4c90ad9e7d35d240feaf52127a739ac6bb7144870385aab8557421a763a5e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 4f76f384daf2bfb94db49483e00e65d9
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ca366436a1a2cdecbb00e0480b7c4c46
+        SHA1: 9ff3200ff7c8bdf9fb0bac5e3cf45823bc014609
+        SHA256: ad4cfcf10b7c922aa06cd57a68055f898aa38ab3f176c143fbeb362f37d9f98b
+        SHA384: 56f12b3649ec67369804117c0164dd78dbf6063ae573c440359488a99e1711d6626ee0f845256383558f542732caf703
+    Signer:
+    - SerialNumber: 4f76f384daf2bfb94db49483e00e65d9
+      Issuer: CN=WDKTestCert ddhankecha,132886868762491660
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 582d4ea1add7abb8148deff8402d2e6b

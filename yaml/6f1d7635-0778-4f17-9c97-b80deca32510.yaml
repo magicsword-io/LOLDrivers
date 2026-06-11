@@ -1,0 +1,156 @@
+Id: 6f1d7635-0778-4f17-9c97-b80deca32510
+Tags:
+- nxeng.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create nxeng binPath=C:\windows\temp\nxeng.sys type=kernel && sc.exe
+    start nxeng
+  Description: nxeng.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: nxeng.sys
+  MD5: 8886bdebbc33f3a8830f38065e7f7e40
+  SHA1: be4fa5c2854d4a33b686d952b97f36f8c29391d8
+  SHA256: 68d698a978b8ea3bf467bdea2d75ef3099826c3a0d4a1ddb95b078f48f0ae7a1
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Beijing Huorong Network Technology Co., Ltd.
+  Description: nxeng
+  Product: Huorong eXtendible Stream Scan Engine
+  ProductVersion: 0, 0, 0, 0
+  FileVersion: 0, 0, 0, 0
+  MachineType: AMD64
+  OriginalFilename: nxeng.sys
+  Authentihash:
+    MD5: 0a75050eaf144feb1af5403ee3d25b3f
+    SHA1: b60cc1a57c492faa7d55b2490971c1102caa87fc
+    SHA256: 106ce1afeb0f1177c68f827821dffa6c78942fc896475fafd741501b3091a5c4
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 5.9682968746833795
+      Virtual Size: '0x4b08'
+    .data:
+      Entropy: 0.9255636700495734
+      Virtual Size: '0x20'
+    .rdata:
+      Entropy: 3.6383653973737857
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.848855375763606
+      Virtual Size: '0x234'
+    .xdata:
+      Entropy: 4.2207004482624315
+      Virtual Size: '0x22c'
+    .bss:
+      Entropy: 0.0
+      Virtual Size: '0x20'
+    .edata:
+      Entropy: 3.466231198602153
+      Virtual Size: '0x4b'
+    .idata:
+      Entropy: 4.112343217594103
+      Virtual Size: '0x430'
+    .rsrc:
+      Entropy: 3.2036940851834452
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 2.390319531114783
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-03-23 23:11:53'
+  InternalName: nxeng
+  Copyright: Huorong Security Lab.
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions:
+  - nxeng_init
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - ExFreePool
+  - ExFreePoolWithTag
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IofCompleteRequest
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmGetPhysicalAddress
+  - MmMapIoSpace
+  - MmMapLockedPagesSpecifyCache
+  - MmProbeAndLockPages
+  - MmProtectMdlSystemAddress
+  - MmUnlockPages
+  - MmUnmapIoSpace
+  - MmUnmapLockedPages
+  - PsGetVersion
+  - RtlGetVersion
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - memset
+  - wcscat
+  - wcscpy
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2023-01-12 19:14:51'
+      ValidTo: '2023-12-15 19:14:51'
+      Signature: 04d1261b735b38b551b427cf9a295d4eb18edd92de14079aa33a10511ee6d262938b29ae208f96be64a80e2967fb8d7aa5750613901a9da6a82935398175482096430c9acecb55ee2c5468d119f467378c18251a8fe01e9d7b79bce903ccb7afb227e2d0abee00bd9fd6bbbbd67c014888dc46f3efa912d4576f7ca9980957609cd21fbd51815cb11bee95fa780498d905e866bc1a604e407ee0d97a105bcc8e600200b19b9c3a56cb3918047f21ba9ee2228b46b8e5c8b456ba65e6f0c40d28294b654761660e9d14948866c3f0f65f028e47641059d3f195812e871362128bcefb901d5aeace862e3d683b291d65c138138ea1335fe3552f4c46a7f7b0c6e5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000f3158ea57d1c559f290000000000f3
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 8d4476692bcda36ed89244b94bd705f0
+        SHA1: ce72176d5cad611366e13a9a997ad7ecc7eb815f
+        SHA256: dd1db9c0e7e50040ac6c586c1b6fd479cef240c064473373f75fbeb3e04ff972
+        SHA384: 6f8e6245a2f817203781cc38a9463e5ac7a7db499aede35d3321b4848fc1389dd29831cdfc26984a691d5875c4eebf1a
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 33000000f3158ea57d1c559f290000000000f3
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+  Imphash: 1859bc8c867407c8a87682eeaa9ec7b2

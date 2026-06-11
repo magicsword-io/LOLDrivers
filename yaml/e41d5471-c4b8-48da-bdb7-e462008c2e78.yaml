@@ -1,0 +1,192 @@
+Id: e41d5471-c4b8-48da-bdb7-e462008c2e78
+Tags:
+- cpqsysio64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-13'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create cpqsysio binPath=C:\windows\temp\cpqsysio64.sys type=kernel
+    && sc.exe start cpqsysio
+  Description: cpqsysio64.sys is a Hewlett-Packard physical memory driver that ships
+    as part of the HP ProLiant Support Pack and HP firmware ROM update utilities.
+    The driver exposes physical memory read via MmMapIoSpace (IOCTL 0x152EF0) and
+    physical memory allocation and mapping to usermode via ZwOpenSection on Device\PhysicalMemory
+    combined with ZwMapViewOfSection (IOCTL 0x153E80). The Compaq heritage driver
+    name (cpq prefix) dates to the HP-Compaq acquisition. The driver is only 15KB
+    and is also available in the KeServiceDescriptorTable/vulnerable-drivers repository.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/311
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: cpqsysio64.sys
+  MD5: cb7bc352e0a7531faec48de1dbd8a9a1
+  SHA1: e17fa2e3ca1d59e2dd8ddbc1020d77bb3b7156d0
+  SHA256: 4024b090cebcabaab884c84ec80ffb15622d12632f236383a9b0a470bff9fe33
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Hewlett-Packard
+  Description: Physical memory driver
+  Product: Physical memory driver
+  ProductVersion: 4.5.0.0
+  FileVersion: 4.5.0.0
+  MachineType: AMD64
+  OriginalFilename: cpqsysio.sys
+  Authentihash:
+    MD5: 31367d4a4da21693461a6c44fdb2f7c9
+    SHA1: 71d58e66eaabce2cdb592922afa6101106f4cb09
+    SHA256: 2b4eb3695b6f7c991019d9fe7469a99fd4e73242c42b675dc40741084b8e08d3
+  RichPEHeaderHash:
+    MD5: 63136027937b29599ed491509c950516
+    SHA1: 79c972ae99b4b6d61024e4cc60cc01b496610bfe
+    SHA256: 362e2fd7c5b5a2af3f751346a650b829cc6ad2b1bd880a2b0b012c277266c214
+  Sections:
+    .text:
+      Entropy: 5.88972933045006
+      Virtual Size: '0x98e'
+    .rdata:
+      Entropy: 2.9273182678693668
+      Virtual Size: '0x160'
+    .data:
+      Entropy: 0.49172118383425784
+      Virtual Size: '0x120'
+    .pdata:
+      Entropy: 3.1483490395917193
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 5.108405194379862
+      Virtual Size: '0x292'
+    .rsrc:
+      Entropy: 3.2574281175012416
+      Virtual Size: '0x368'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2012-01-25 14:20:25'
+  InternalName: cpqsysio
+  Copyright: Copyright 2004-2009 by Hewlett-Packard Development Company, L.P.
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - MmFreeContiguousMemory
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ZwMapViewOfSection
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - ZwUnmapViewOfSection
+  - MmMapIoSpace
+  - ZwClose
+  - ZwOpenSection
+  - MmAllocateContiguousMemory
+  - KeBugCheckEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: OU=Timestamping CA, O=GlobalSign, CN=GlobalSign Timestamping CA
+      ValidFrom: '2009-03-18 11:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 5df6cb2b0d0140849f857a43706ae0c5e7aa0600d76713c9089131654f14a8a905dc389e6aa0300abd8dc78028ee4245ca94f3de5845a9803204f5595c6a70003927944df5b44634e81c5331b2b35416e9cc42abd5d959301cfb462725b88723b1e8758824831ec876377b01494548a4ede25dd27c9ca2dc2dba105a126265abae00c710343bcb72bd14240cdcc37627b4a7fee15829f20e169f91391d89a6e60f1c878ce258ac927e243eaaec14e73a33348bc63bac83ab0f14627aba1a2d4d4b1bc530f00b92797d3c78e0f8e6d215965999392b3061e8b8f8c0a1e9221411787dc4dc89bec0bb94e172aeebb540404fef171e585ed0a88996ac9228e9babf
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012019c19066
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 42023b9487cafe46c1b6a49c369a362e
+        SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
+        SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
+    - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
+      ValidFrom: '2009-12-21 09:32:56'
+      ValidTo: '2020-12-22 09:32:56'
+      Signature: bc89ecfee63655935c79d4117a86808f17b693b26d9b91a1561811c655eaf608edad9b9ef52b81c8bbdd607b1b47991e6d403e1d80c213d58e04052fdbe7ae529e688472a1e54a603cf89bd52f46d8c3b2b79353ac9b6c432424d1f1fce9562e3411581843eaefff34746ca0c06c7fad031969881e9560cabbbd0cbb76efc724b081c63831cf36ad0c38b89020849b2e8f28b99ff6ca9427cdac396157e0e3955a9c769230f5dea6973d721c2a6032a8334d8635338a5cf3a4fdf7062ce16b4b30f5cbd34362f841b9de7d20cb058c8e2cf65f35fd338d42896508362ca389f45a858bb0b97bdb6ccba1f8d20e1bbb977cd12779be9d7c3be6a75634d8c991a9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 01000000000125b0b4cc01
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e3369c8e5aec0504b3a50455f615d9f9
+        SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
+        SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=Massachusetts, L=Andover, O=Hewlett,Packard Company, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, OU=Product Development IT2,
+        CN=Hewlett,Packard Company
+      ValidFrom: '2011-11-16 00:00:00'
+      ValidTo: '2014-11-15 23:59:59'
+      Signature: e80c8debced6dad9da7cbdc73125a837f3240ff7ad9abc7674ba3401ba5eff9712a4b0790d456b01a304edd8aa31cc7d20c106884b66efe468dad7f9990cbbb6d06b6dc3b8e51f4c9d03815281b033b2d17e0a3678294a4f344d033da79243bf4a9ec426847cc8dc7d7bf7cf2bb3f1d5598c86930e411d0858ccb500958bb64a1a6bba2bb984cc360de1819515279badb51065b60a6d8bd98c5cfb8103caedda37bbc9407efef7afa98780367a68f1f0e9025e167dcaac65c25f0ed53223a14d35e45301667ea1a5b96024015a46f5289c178280c9bde6c41e3fd37dd84a57ea0390b7affeee917d45f1073926add306e8dc30f1477373143a265e22ef6f4067
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 44bc63ea9d7fb68cbcd9101f391ca145
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: a0f8c8cbd4fa8092c716b495ff085737
+        SHA1: 5ab3007b75b20480c103ca45e26658ecfecd6e1e
+        SHA256: 4f2703371f9e2a7c6fb08a51089b6a1103cefe4412342171ccf8de8350af5742
+        SHA384: f28f76ac93762daa95e7731b8401f010ef622974221bc227d6561e3dc3ea57e2680b96c39b4bde658d41c343583ff5c3
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 44bc63ea9d7fb68cbcd9101f391ca145
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: f1073c0b639c62ba91cae90672cb0e70

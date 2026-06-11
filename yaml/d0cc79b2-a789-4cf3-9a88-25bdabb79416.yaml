@@ -1,0 +1,145 @@
+Id: d0cc79b2-a789-4cf3-9a88-25bdabb79416
+Tags:
+- devhost.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-22'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create devhost binPath=C:\windows\temp\devhost.sys type=kernel &&
+    sc.exe start devhost
+  Description: devhost.sys is a WHQL attestation-signed kernel driver that exposes
+    arbitrary memory read primitives to usermode. The device object at \\.\devhost
+    has no ACL beyond a device handle. At load, the driver reads IA32_LSTAR MSR to
+    locate ntoskrnl base via backward MZ walk, then dynamically resolves APIs
+    (including MmMapIoSpace and MmCopyMemory) using a djb2-style hash algorithm
+    over the PE export directory. Only 11 benign imports are visible statically.
+    The system CR3 is leaked to user-mode at DriverEntry. Authentication uses a
+    hardcoded magic cookie via IOCTL 0x28E017. IOCTL 0x28E01B accepts a caller-supplied
+    CR3 and target virtual address, performs a manual 4-level x64 page-table walk
+    (PML4-PDPT-PD-PT), and reads physical memory via MmMapIoSpace. Additional IOCTLs
+    expose NtBuildNumber, PsLoadedModuleList, and per-CPU KPCR CurrentThread.
+    Nextron Research noted that these primitives are tailor-made for credential
+    theft (e.g. LSASS memory dumping), though no confirmed malicious usage has been
+    publicly documented. WHQL attestation signed with active cert (Nov 2025-Nov 2026).
+    SpcSpOpusInfo identifies the submitter as Shenzhen Aolian Information Security
+    Technology Co Ltd.
+  Usecase: Arbitrary kernel memory read via page-table walk and MmMapIoSpace
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://x.com/nextaboratory/status/1914729845602783262
+Detection: []
+Acknowledgement:
+  Person: Florian Roth
+  Handle: '@cyaboratory'
+KnownVulnerableSamples:
+- Filename: devhost.sys
+  MD5: a8bafdb454162ba3776e551f6b552f8e
+  SHA1: ba349735882fef5e60d8b6f7791d6220bccebcb5
+  SHA256: ee8844ffd3879190fb389b0f613cb2dcdcd83375cf0a6994170a648c5ca8c479
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 13090f2fc8ac6d7d78c581370eb3351e
+    SHA1: c1c1f350e55413ac335b1f25dbbb87ac1b9c8f9e
+    SHA256: c3ad079fc6516504775869a9667e154dc6710a8dc39771fe81b1f15f5c3bdf5d
+  RichPEHeaderHash:
+    MD5: 6d4f45050eba836593a9fddff29db793
+    SHA1: 5c6ce550d1acbe2162aa36b47383f10ff1576d27
+    SHA256: f34b4979e896de802a9df1dcf322125ed13da225806904a997ec687b0a1d4bbc
+  Sections:
+    .text:
+      Entropy: 6.321234942116965
+      Virtual Size: '0x1366'
+    .rdata:
+      Entropy: 4.1196352001351455
+      Virtual Size: '0x438'
+    .data:
+      Entropy: 0.13482326814887827
+      Virtual Size: '0x334'
+    .pdata:
+      Entropy: 3.5776706102207094
+      Virtual Size: '0x120'
+    PAGE:
+      Entropy: 6.002355573848357
+      Virtual Size: '0x66a'
+    INIT:
+      Entropy: 5.706732846806765
+      Virtual Size: '0x39a'
+    .reloc:
+      Entropy: 1.584962500721156
+      Virtual Size: '0xc'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2026-01-17 16:10:13'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeRevertToUserAffinityThread
+  - KeSetSystemAffinityThread
+  - KeQueryActiveProcessors
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - IoAllocateMdl
+  - IoFreeMdl
+  - __C_specific_handler
+  - MmSystemRangeStart
+  - MmUserProbeAddress
+  - NtBuildNumber
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2025-11-13 19:59:40'
+      ValidTo: '2026-11-10 19:59:40'
+      Signature: 86e91c9dd77bcbe24e9c811c4ec9c47116d9d554243f04666bef14828edbfeb665280fa10b643a59d05c4db8b5f2bae0657af9a75457236e455f956ed7ba65f7e8019355d00e322f681ab15f14718b34bff1e50d8cde1217dc158c31a875b17fa45f015b4b2a30c471d43345257c729d83c2287716b3d19c177ed341da95687f8af92cfebc42e1e4439eb4304762e17feb85a09316afe8153e4783a98153d91249d29da0bca831ea6ccd93bace88fc284e82987df65bcd8ab0263a2da5e178e710c26e8abec12fe398782d1f1bc669ec9c5cbf3010f8e2600133a59fb8269daba61e5b2facee4f96ba19f9cfaef3fdb21e933a65c3245f6de70cb08f28f2c818
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 330000013c4a61fb3578d2b6dd00000000013c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 93354b540685ae615b51e692ea0895de
+        SHA1: b38cd5d491c85bd55e9b111e98430171a01e9515
+        SHA256: 037c041a283132dc57d29bc339b4d0d006787e32ac0a60afd7206c41c9fbf61f
+        SHA384: bbef5ad51ba2a76ba3f0e39459837c9533a56420db0da55814511346155922c98ae905d6541df5a79895ce1a51d53491
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 330000013c4a61fb3578d2b6dd00000000013c
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+  Imphash: fb7c5ff17455f725aa59f998a0f324ca

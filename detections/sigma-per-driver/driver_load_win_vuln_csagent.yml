@@ -1,15 +1,22 @@
 title: Driver Load - CSAgent.sys
-id: 6b2e2784-7e3a-5d86-978a-e2384cbda9da
+id: dd66b3e3-573e-5129-bce3-9477c67775ec
 status: experimental
 description: |
     Detects loading of driver CSAgent.sys via hash.
-    ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon driver and provides extensive capabilities to terminate processes, remove security callbacks, manipulate files, and disable security tools. It uses stolen certificates from Chinese companies and requires a specific password for activation. The driver was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers with kernel-level capabilities to blind EDR products by removing notification callbacks, detaching mini-filter devices, and replacing driver major functions.
+    Sophos X-Ops (Aug 06, 2025)
+    documents a shared EDR-killer technique where a user-mode loader deploys a
+    malicious kernel driver signed with compromised/revoked certificates (e.g.,
+    Changsha Hengxiang Information Technology; Fuzhou Dingxin Trade). The
+    driver terminates processes/services of multiple security vendors and is
+    often delivered packed with HeartCrypt during ransomware intrusions
+    (RansomHub, INC, others). Sample-specific driver names (e.g., mraml.sys,
+    noedt.sys) are hard-coded in the payload.
 references:
-    - https://www.loldrivers.io/drivers/ca6455d1-b06e-496c-be33-f89c41b27540/
-    - https://www.elastic.co/security-labs/abyssworker
+    - https://www.loldrivers.io/drivers/8e673a36-4f16-4f4c-acf7-ca95bc586384/
+    - https://news.sophos.com/en-us/2025/08/06/shared-secret-edr-killer-in-the-kill-chain/
 author: Michael Haag
-date: 2025/03/26
-modified: 2026/02/06
+date: 2025/08/08
+modified: 2026/05/20
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,9 +28,9 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=84414d0f2ab10d509580dd84d24e6708'
-            - 'SHA1=db76d3e42e3785cb166a758ebe41d0c739440c70'
-            - 'SHA256=b2ff9ef50ae037bb003d7157ea8da008a48f715a78c644b5f027b070bf5eb049'
+            - 'MD5=6d6dfb7a684f7374656aea13ad764e90'
+            - 'SHA1=9ff1a5038a5484b0dba0c6647a1a6c7a5ae2a4d9'
+            - 'SHA256=efb642ad3fab4a2e6cb4de829b60e04dd0d9ae7c2b4cf544de28c38f978b4136'
             - 'IMPHASH=4e3c3df003b6a014459f47ae8cb021c7'
     condition: selection_hashes
 falsepositives:

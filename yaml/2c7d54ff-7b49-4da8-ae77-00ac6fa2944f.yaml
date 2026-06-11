@@ -1,0 +1,170 @@
+Id: 2c7d54ff-7b49-4da8-ae77-00ac6fa2944f
+Tags:
+- HWAuidoOs2Ec.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create HWAuidoOs2Ec binPath=C:\windows\temp\HWAuidoOs2Ec.sys type=kernel
+    && sc.exe start HWAuidoOs2Ec
+  Description: HWAuidoOs2Ec.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: HWAuidoOs2Ec.sys
+  MD5: 79003b510f38ce1ab64e4bfb5e202ba4
+  SHA1: ed20f6f55560b34164d010cf32ce6f29dba2a27d
+  SHA256: 90d2e9e994ed8e964845a26dce741ad43b29ff54cf5faa67271d62d4e24acbc8
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Huawei Device Co., Ltd.
+  Description: HWAuidoOs2Ec
+  Product: Huawei Audio Driver
+  ProductVersion: 1.0.0.0
+  FileVersion: 1.0.0.0
+  MachineType: AMD64
+  OriginalFilename: HWAuidoOs2Ec.sys
+  Authentihash:
+    MD5: ae7aa5584b9f8044b12e3d1627e50a7c
+    SHA1: 5d3b7d7adb28270f9ae7f7b97342cc4a0929e8f2
+    SHA256: 0539116b397996d77f961309cefae95af4af97fb8b5113acf4459c417cf39668
+  RichPEHeaderHash:
+    MD5: ec809457e9078dd8a4b7ee6c4d70d648
+    SHA1: b9d03997f9853069fe0e52239a90d412c0ce919b
+    SHA256: 35105f2d18adff486d78788b8e54b5c4a71c331252ba59ced6efad5c5ddf3693
+  Sections:
+    .text:
+      Entropy: 6.1696685102716895
+      Virtual Size: '0xf84'
+    .rdata:
+      Entropy: 4.267012173243852
+      Virtual Size: '0xc34'
+    .data:
+      Entropy: 1.5678688415266202
+      Virtual Size: '0x31c'
+    .pdata:
+      Entropy: 4.149136757164562
+      Virtual Size: '0x2dc'
+    PAGE:
+      Entropy: 6.273633864756592
+      Virtual Size: '0x2370'
+    INIT:
+      Entropy: 5.458490841678111
+      Virtual Size: '0x700'
+    .rsrc:
+      Entropy: 3.313302820377281
+      Virtual Size: '0x3a0'
+    .reloc:
+      Entropy: 3.4460865862747814
+      Virtual Size: '0x2c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-03-27 21:51:56'
+  InternalName: HWAuidoOs2Ec
+  Copyright: Copyright © Huawei Device Co., Ltd. All rights reserved.
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - DbgPrint
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - InitSafeBootMode
+  - MmGetSystemRoutineAddress
+  - RtlGetVersion
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ZwClose
+  - ZwTerminateProcess
+  - ZwOpenProcess
+  - __C_specific_handler
+  - RtlTimeToTimeFields
+  - KeInitializeEvent
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - ExSystemTimeToLocalTime
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwCreateKey
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - RtlFreeUnicodeString
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2021-06-17 17:55:59'
+      ValidTo: '2022-06-16 17:55:59'
+      Signature: 86c046c6aad742690ff7f844415b7f7cb799bf9032242efa060d27f5031ddee3a6f8ce8a04ea8760d8c80f3d7aecd8a34de975ec737b46c1691356c415471ec4a764886995244681633e929fb9ddbb7fc952a50cd5c23fa6691b732309a497f400c3a4d831f065d6e225c49abd94895990e6ab3cde4ef1a331791f737a3e8ee91f4f89b23988e85ba758c46540d9daeb24edfc2e80cd538878b0582e2a9346e17fe66cd5b45f80d8396c8b46d3d1674b6f288e98bcd6afc15b8a10d37163afb455badeca5a96bdc5cd655395208ecddc734d898980d5c3e5f50dceffabcefaa2b4470d2198e9b2b55537f941934f9eb952b7ddd601bfa7338316eee806b7db4e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000c45021ba6ed85a72ad0000000000c4
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e975b1260aeb42737a8a0bcba0d5c24e
+        SHA1: 6afd0dea6439a4fad5b95b6e38e665a46f712bb3
+        SHA256: 6fb4e5b945142cf1513333ceb747c86a52e2fd9e8a5547b05d66c21dfbb62574
+        SHA384: 29cf23d8694596226f5be6abfce3eb72d702dcb8f4557ef6c9a17b6cc8689b763ed21b885d57ccef2156f3ae16902629
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 33000000c45021ba6ed85a72ad0000000000c4
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+  Imphash: 9cfa9662095195fc2607e952710e62ae

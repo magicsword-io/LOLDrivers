@@ -1,0 +1,170 @@
+Id: 9720d49d-c20f-479e-9284-2b3ad120fdf8
+Tags:
+- SONiXDDRx64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create SONiXDDRx64 binPath=C:\windows\temp\SONiXDDRx64.sys type=kernel
+    && sc.exe start SONiXDDRx64
+  Description: SONiXDDRx64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: SONiXDDRx64.sys
+  MD5: 5045d10b6d47f3b0d35f0489c05b9a02
+  SHA1: 4e384a43e4f2af55e5a7859ea8122f488e0849ab
+  SHA256: 85a4ce446d9ccd93c2f14d2e0f30ea673812ce740438abb199a8047510614a76
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 2898890d13a996d740bf3c1059cdbb88
+    SHA1: dd2ca2668f7db90e206499c8e80c29d80bea5f45
+    SHA256: e7e162c487d9d3595fe6c7844eeb5668657a6f43fee78e9455d15770ab287432
+  RichPEHeaderHash:
+    MD5: 92884876c26be66e243a556e99b0107f
+    SHA1: ed4ea857b093b034f7aaa1acd64e301481a46831
+    SHA256: 6d9fd15b745a880e2882a7a7bb1ab805a4de60dd71e9b327b44f1dcb877d5aa7
+  Sections:
+    .text:
+      Entropy: 6.177857780921739
+      Virtual Size: '0x143a'
+    .rdata:
+      Entropy: 4.763488520295498
+      Virtual Size: '0x104c'
+    .data:
+      Entropy: 1.3859797370893234
+      Virtual Size: '0x4f8'
+    .pdata:
+      Entropy: 4.125910751714557
+      Virtual Size: '0x2d0'
+    PAGE:
+      Entropy: 6.216330294904204
+      Virtual Size: '0x1d0b'
+    INIT:
+      Entropy: 5.005903790307284
+      Virtual Size: '0x61e'
+    .reloc:
+      Entropy: 3.8898432644391243
+      Virtual Size: '0x44'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-11-05 19:56:04'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmGetSystemRoutineAddress
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - ExFreePoolWithTag
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - __C_specific_handler
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - ExAllocatePoolWithTag
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - SeExports
+  - RtlInitUnicodeString
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  - WdfVersionBindClass
+  - WdfVersionBind
+  - WdfLdrQueryInterface
+  - WdfVersionUnbind
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=97063584, C=TW, ST=Hsinchu County, O=SONIX TECHNOLOGY CO., LTD.,
+        CN=SONIX TECHNOLOGY CO., LTD.
+      ValidFrom: '2024-07-08 00:00:00'
+      ValidTo: '2027-07-07 23:59:59'
+      Signature: 66f3c2777dba2e32826d60a823b2d6224e2b353eaed8a13047d2d049864d3c47863703b8e84acdd80ed189a53ee3685978e9fc009775d5286aaab5e9a34631b90200bf24fda7f88a59daeca59138a5fb9c80dcc39a1da04eba2ea9d4166d62aaafc15a3876650ce186169f29c8dd9d57e6d850aeba669435dbbb13a79b48d55cdb41b57f7af4225520a95f216fc2648e0de3f8eade3564c6b259ed5896de24a8686754a9a4d7d46010ad532b06b400c1fd775cc5c308133996fdaceadbdff16fb7c710cac2f9bd76cabbb367782300eaee5cc2f3f865459eff23b24e1ca35d1e70619fc5920bf68fe4d397c47f7df9eebbadbf858615672110e12ad12f16648bc42b73923152a5526c2bf4baeab3aec0554560bc349817adae4bf7506e34b13e464521f2318d101fa8859c262975c551252f5d25bbf74833f52a2460d44b02fc3c613d1d83c6cd962bf6c32f5637fd5ee1a4c3901c5a9020d2bcf61740d387fcd53fdfd9e2204fd9437593568bdf2085e6cc7930ee4f83e5b6076ff28dd3e98ff61aa70fa2d6d014865e128dd00286835fdb3479014afea3a0aaa5a960623db01325ede085682cee1b366cf24210d7218135c5902f2f24977125b8e722880319539fd31f50b455a7f7af5d8074205ce30a51213463750df500351bef6e268ee4815f125b3b2d23bb89b89919d793770f24389fda3b84f7357ab5033bc74af2e2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0ac60c407343f67c7178ff6e426ecd8c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 2cadb54535cd1a1650359d564e132eb1
+        SHA1: 7709e7e514186788619577a634818550b3da664f
+        SHA256: d5f2ab05998ad016cb47ab054b6f25c0e90d8f4a17b86de31ad8b1e2e113f0c8
+        SHA384: 863b9047d042c18d1ab619af408248a0edc865ece2c3f7d1ebf1b991956542ddcd66b125aa5c929952d922ca3c29dc02
+    Signer:
+    - SerialNumber: 0ac60c407343f67c7178ff6e426ecd8c
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: b62e9f4f8363c29992802646a5b4fa4b

@@ -1,0 +1,123 @@
+Id: 47e08b2f-7925-40c5-9bcf-0af348c07d33
+Tags:
+- SIOCTL.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create SIOCTL binPath=C:\windows\temp\SIOCTL.sys type=kernel &&
+    sc.exe start SIOCTL
+  Description: SIOCTL.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: SIOCTL.sys
+  MD5: 6ffd62ce4d143451a9ad3bb2af374b55
+  SHA1: 5082d66a2c8a57e1a37dc6a026d9b73b12d63d97
+  SHA256: 3a24b63cce5a4b7bd6188940af75b05a414b283c3c8eb528b5ba607ef720fc93
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Windows (R) Win 7 DDK provider
+  Description: Sample IOCTL Driver
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  FileVersion: 10.0.10011.16384
+  MachineType: AMD64
+  OriginalFilename: SIOCTL.sys
+  Authentihash:
+    MD5: 1a614e1cc9eafc71e98eaeed634b78ea
+    SHA1: 3d462abc0af9cceca9b2099b5faea3845a32bf5c
+    SHA256: 2cb14666f3cf80eff612fdc33d50c150e2771a584ce5056ac5cf06f44ccb4ab6
+  RichPEHeaderHash:
+    MD5: 26ff825490b0c75737126c5555b43b79
+    SHA1: f7415ad0ddf9560009703c3518e66fe70cd60320
+    SHA256: 9342bf1dc2a67acdbf27918c1bdc615e5810f69b0bd8103f29ec705be9d5ac34
+  Sections:
+    .text:
+      Entropy: 6.1749450166648145
+      Virtual Size: '0x8aa'
+    .rdata:
+      Entropy: 3.734920590960148
+      Virtual Size: '0x4bc'
+    .data:
+      Entropy: 3.75
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.2843272567092474
+      Virtual Size: '0x78'
+    PAGE:
+      Entropy: 6.152751218687051
+      Virtual Size: '0xb0c'
+    INIT:
+      Entropy: 5.476450111488443
+      Virtual Size: '0x4ac'
+    .rsrc:
+      Entropy: 3.589221864516539
+      Virtual Size: '0x458'
+    .reloc:
+      Entropy: 2.6464393446710157
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-05-23 08:16:56'
+  InternalName: SIOCTL.sys
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - DbgPrint
+  - ProbeForRead
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - IoAllocateMdl
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - __C_specific_handler
+  - MmBuildMdlForNonPagedPool
+  - MmAllocateContiguousMemory
+  - MmGetPhysicalAddress
+  - MmIsAddressValid
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert Neil,131715585907434400
+      ValidFrom: '2018-05-23 14:16:31'
+      ValidTo: '2028-05-23 00:00:00'
+      Signature: 873bce53c55541181aa20feef4385f9bc8f98213127e199279b3bac2203305a688034ac3d8aae587e0b868085dcf700a3650b7c63403502f1d3f71e2d64dd778ef09079d475ddf3b4873165ef64cca4e27c063551e64873afa3eb8f4b27145dd0fe5b189ae1e22a16abae8637a18c4d2ecde232cf2ff7563e1a764ae896d2c142c11b7caffbba916a06a0ac0d64d9bfda3a6219003e0b62fef5d07ce7442b12580b3a2b5af0b4a894bf86ee6f425784b54510e0b067b5339d826db482baa420b9c8ee9ef63d315e0e17f2c6379301965665cbd8917045ff4fc6c08cb907ba620398d8b9539d6f5e161e037987538b4cf24ed243475cb30c7c5587219784b31f5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 33662f89c15f1cb44c940de647640e94
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 12d9be735c7f037382860bcb5e9cec09
+        SHA1: c99c3ccd074fe2ee4400fb95dda6eca514f44d53
+        SHA256: 1fe37fed34d2ca2531353779287bd0ff06a66d1366102dfda2a018785f999154
+        SHA384: 63aa2092f2e7664737cfc0b8a234f6ee95d3928a0b9b84a62c99577bc5b3469666b8d7f2f3df5ef62efbdf1a75fdd8bf
+    Signer:
+    - SerialNumber: 33662f89c15f1cb44c940de647640e94
+      Issuer: CN=WDKTestCert Neil,131715585907434400
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: dd93739efba0ca056d3f3afa731780d2

@@ -20,6 +20,7 @@ Commands:
   Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+- https://github.com/magicsword-io/LOLDrivers/issues/304
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar

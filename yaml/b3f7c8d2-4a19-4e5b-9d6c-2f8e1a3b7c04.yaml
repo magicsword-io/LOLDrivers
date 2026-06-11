@@ -1,0 +1,190 @@
+Id: b3f7c8d2-4a19-4e5b-9d6c-2f8e1a3b7c04
+Tags:
+- DriversCloud_amd64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-06'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create DriversCloud_amd64 binPath=C:\windows\temp\DriversCloud_amd64.sys
+    type=kernel && sc.exe start DriversCloud_amd64
+  Description: CYBELSOFT DriversCloud_amd64.sys exposes 7 IOCTLs with no access checks
+    and a zero security descriptor on the device object, meaning any user (including
+    low-integrity processes) can open a handle. Primitives include arbitrary physical
+    memory read via MmMapIoSpace (up to 2MB per call), arbitrary MSR read/write (including
+    IA32_LSTAR for instant kernel code execution), arbitrary I/O port read/write, and
+    arbitrary PCI configuration space read/write. A full LSTAR hijack PoC with crash-safe
+    ROP restore has been demonstrated. The developer acknowledged the issue and is working
+    on a rewritten driver.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/284
+- https://www.virustotal.com/gui/file/2bc72d11fa0beda25dc1dbc372967db49bd3c3a3903913f0877bff6792724dfe
+Detection: []
+Acknowledgement:
+  Person: weezerOSINT
+  Handle: '@weezerOSINT'
+KnownVulnerableSamples:
+- Filename: DriversCloud_amd64.sys
+  MD5: 49d1002443655bc63b8d49fef0b584fd
+  SHA1: 6397f7a838b541614a03379787033be9285053cb
+  SHA256: 2bc72d11fa0beda25dc1dbc372967db49bd3c3a3903913f0877bff6792724dfe
+  Signature:
+  - Cybelsoft
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign Class 3 Public Primary Certification Authority - G5
+  Date: ''
+  Publisher: ''
+  Company: CybelSoft
+  Description: Driver NT DriversCloud
+  Product: DriversCloud.com
+  ProductVersion: ''
+  FileVersion: 10.0.0.0
+  MachineType: AMD64
+  OriginalFilename: DriversCloud_amd64.sys
+  InternalName: DriversCloud_amd64.sys
+  Copyright: DriversCloud @2004  All rights reserved.
+  Authentihash:
+    MD5: 75eb4c5b4810d7255c86e67134d63b22
+    SHA1: b4f6bd67bbd4f89809959f40bd6066a101d080b6
+    SHA256: 52dd5cb7c2ed6c3b9416811fa9a26fe7a20e25c8ed8c950130c532b30c431dec
+  RichPEHeaderHash:
+    MD5: 6ada1f8444b65e75388b68056e76a6c4
+    SHA1: 27cc1e9f6a8de8990dc6c1aaa479b730c3d8baf6
+    SHA256: f62702f65b34e57b07de477fe7408d625599ede343fa964bb541366572ca2f44
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - MmMapIoSpace
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeBugCheckEx
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  ExportedFunctions: ''
+  Sections:
+    .text:
+      Entropy: 6.07
+      Virtual Size: '0xaa6'
+    .rdata:
+      Entropy: 4.5
+      Virtual Size: '0x1d4'
+    .data:
+      Entropy: 0.5
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.44
+      Virtual Size: '0x90'
+    INIT:
+      Entropy: 5.05
+      Virtual Size: '0x242'
+    .rsrc:
+      Entropy: 3.19
+      Virtual Size: '0x398'
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=FR, ST=Vienne, L=Saint Benoit, O=Cybelsoft, CN=Cybelsoft
+      ValidFrom: '2016-09-04 00:00:00'
+      ValidTo: '2017-04-24 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1ed4e373be2e790f645ce34dbea68e3e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 43ea2602f24c0aa2266a73e0e487baec
+        SHA1: 93da6736ddfa27b99f54b751b1039cbf6a7fec8f
+        SHA256: 0967480b9830e5525b56eab108fcb711d1245f9c1d9a7d0848354d39dae442bb
+        SHA384: d2810ae3da9dc3f3d7165ade6d365380cd8590467ea08a0995d206810128b39b724ef8ea7ff612cffcf2d1670037c3e5
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 1ed4e373be2e790f645ce34dbea68e3e
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010 CA
+      Version: 1
+  Imphash: 609a0efe14b66b1a341d1856df00b9fa
+  LoadsDespiteHVCI: 'TRUE'

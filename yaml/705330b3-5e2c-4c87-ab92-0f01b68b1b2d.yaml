@@ -1,0 +1,185 @@
+Id: 705330b3-5e2c-4c87-ab92-0f01b68b1b2d
+Tags:
+- dddriver64Dcsa.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create dddriver64Dcsa binPath=C:\windows\temp\dddriver64Dcsa.sys
+    type=kernel && sc.exe start dddriver64Dcsa
+  Description: dddriver64Dcsa.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: dddriver64Dcsa.sys
+  MD5: 85eca49a1b9d2787c13b2d32b0f693cb
+  SHA1: 558e247370affd7c3f72b98864c1a1a2069ad7b0
+  SHA256: 1f46f7a8f414bb1ac9f875799efa4b5f62bd18806c64b17d961007755accb5ab
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Dell Inc.
+  Description: Dell Diags Universal Device Driver
+  Product: Dell Diags Universal Device Driver
+  ProductVersion: 2.0.3.0
+  FileVersion: 2.0.3.0
+  MachineType: AMD64
+  OriginalFilename: dddriver64Dcsa.sys
+  Authentihash:
+    MD5: baa362cc2d52afa69db4b9a9f269c105
+    SHA1: 9d7588cd50dc3af4be8c3c534aa9204129aa0f03
+    SHA256: b6d717d2497448eefa8d0be3b7b03030da63296ca932c00bfc8fdd71503c6d52
+  RichPEHeaderHash:
+    MD5: 5805ea2ef9b9eeb53149440c2842065c
+    SHA1: a6c57063a5fe597e45d5b9e0d744668a07429c0d
+    SHA256: 5d8d5bcd0a7444b5338e31076501cab896d707f11c28fe302b1b2cd51838182a
+  Sections:
+    .text:
+      Entropy: 6.339132917674349
+      Virtual Size: '0x2429'
+    page:
+      Entropy: 5.617212756099729
+      Virtual Size: '0x94f'
+    .rdata:
+      Entropy: 5.154717908151193
+      Virtual Size: '0x1784'
+    .data:
+      Entropy: 1.9890127067876189
+      Virtual Size: '0x5e0'
+    .pdata:
+      Entropy: 4.031754793342168
+      Virtual Size: '0x270'
+    PAGE:
+      Entropy: 5.6942449661253836
+      Virtual Size: '0x168'
+    PAGED_CO:
+      Entropy: 5.592526196381991
+      Virtual Size: '0x1ae'
+    INIT:
+      Entropy: 5.816085555520727
+      Virtual Size: '0xb3e'
+    .rsrc:
+      Entropy: 3.207871116530876
+      Virtual Size: '0x390'
+    .reloc:
+      Entropy: 4.080954297279311
+      Virtual Size: '0x60'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-10-29 23:51:57'
+  InternalName: DDDriverU
+  Copyright: Copyright (c) 2019, Dell Inc.
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeQueryMaximumProcessorCountEx
+  - MmFreeNonCachedMemory
+  - RtlInitUnicodeString
+  - KeSetSystemGroupAffinityThread
+  - KeInitializeSpinLock
+  - IoDeleteDevice
+  - MmGetPhysicalAddress
+  - KeRevertToUserGroupAffinityThread
+  - MmAllocateNonCachedMemory
+  - IoDeleteSymbolicLink
+  - KeReleaseSpinLock
+  - KeSetTargetProcessorDpc
+  - IoCreateDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - __C_specific_handler
+  - IoRegisterDeviceInterface
+  - IoSetDeviceInterfaceState
+  - IoDetachDevice
+  - RtlFreeUnicodeString
+  - PoSetPowerState
+  - IoAttachDeviceToDeviceStack
+  - KeInitializeDpc
+  - IofCallDriver
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - KeSetPriorityThread
+  - PoCallDriver
+  - PoRequestPowerIrp
+  - PoStartNextPowerIrp
+  - KeInsertQueueDpc
+  - MmFreeContiguousMemory
+  - MmAllocateContiguousMemory
+  - ExFreePoolWithTag
+  - MmGetSystemRoutineAddress
+  - PsGetVersion
+  - ExAllocatePoolWithQuotaTag
+  - ZwQuerySystemInformation
+  - KeAcquireSpinLockRaiseToDpc
+  - KeSetImportanceDpc
+  - DbgPrint
+  - ExAllocatePoolWithTag
+  - ExFreePool
+  - RtlCopyUnicodeString
+  - RtlGetVersion
+  - MmUnmapIoSpace
+  - KeSetEvent
+  - MmMapIoSpace
+  - HalGetBusDataByOffset
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionUnbindClass
+  - WdfVersionBindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2019-06-05 18:06:32'
+      ValidTo: '2020-06-03 18:06:32'
+      Signature: 11f64665e99ee9a3212a8317075cf2122256a6cd5452564366da4b3e890c7a94b167d27a0cb1e962de146f371429f531349fc359cccece5f32fa84cd25231f892e44c4676b5ff4008ce6b3f3d9a2690a956a2a6a9e982ba8ebd4256971437156136a25b2e5184e11550aecb83f5ec8ae5467e866d6bbf44b9e8642c8bd5e316a4a494f676aa15eefad41893dd0a7187c881fa235b45f1a0696a8ad2d5c1531eed442d7281290b84f976f9ca241027378c241157a326739b2e8305adbfcef5005f5ccec402c1ab03d6e28c36987ae0d07cd12e41a348098d846f57c3225dbfed0c1b809ad311770854d368d150ee7767676c39a3d148f05cf7c2dcea5f1f7c6f2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000857f83dc2a6ca979b8000000000085
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 85e8c40624a19ac2076dd91f49d8fb53
+        SHA1: 621756d2a4e10231e34677a3c0f2a8d1fb0fb7ca
+        SHA256: 442ba2fb3fc8ab1b1b3c71a45f6ea08ce00cea7eae124ef915d4c17622eb336a
+        SHA384: 19b80fb83482cdb42c94c2eabac29e4db7777988905aab348bd7ed62e325d2ea1f4c80df0d7275abcb2b67585cfc7c36
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 33000000857f83dc2a6ca979b8000000000085
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'
+  Imphash: 67965c1ed4aaccae610f743ae2dfb65b

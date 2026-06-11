@@ -527,7 +527,7 @@ def _collect_driver_hashes(known_samples):
         list(filter(None, list(set(imphash_list)))),
     )
 
-def gen_sigma_rule_per_driver(file_path):
+def gen_sigma_rule_per_driver(file_path, directory=""):
     yaml_id = get_yaml_part(file_path=file_path, part_name="Id")
     category = get_yaml_part(file_path=file_path, part_name="Category") or "unknown"
     tags = get_yaml_part(file_path=file_path, part_name="Tags") or []
@@ -680,7 +680,7 @@ def gen_sigma_rules_per_driver():
             os.unlink(entry_path)
     generated = 0
     for file in yield_next_rule_file_path(path_to_yml):
-        if gen_sigma_rule_per_driver(file):
+        if gen_sigma_rule_per_driver(file, directory=output_dir):
             generated += 1
     print(f"[+] Generated {generated} per-driver Sigma rules.")
 

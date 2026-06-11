@@ -1,0 +1,205 @@
+Id: 619953be-2115-4da2-bb59-603fcf93a3d2
+Tags:
+- fastdumpx64.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-04-17'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create fastdumpx64 binPath=C:\windows\temp\fastdumpx64.sys type=kernel
+    && sc.exe start fastdumpx64
+  Description: fastdumpx64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
+    repository. The driver exposes dangerous kernel primitives to usermode.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: '@rainbowdynamix, @DbgPrint'
+KnownVulnerableSamples:
+- Filename: fastdumpx64.sys
+  MD5: 016c1d3cc193732736eeaeb3094154f2
+  SHA1: 624fc5ef63f1c58ef6c0202080a08be12aa441df
+  SHA256: 9cb90643674a941bca2ff0823618e4790a737b9bdcfe882b3af6926591b84d80
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: CounterTack
+  Description: fastdumpx64.sys (AMD64) Kernel Driver
+  Product: Fastdump
+  ProductVersion: 2.3.0.97
+  FileVersion: 2.3.0.97
+  MachineType: AMD64
+  OriginalFilename: fastdumpx64.sys
+  Authentihash:
+    MD5: 6f2eb3bb8a7c0f352e7eb07b7cbc9354
+    SHA1: be48eedeb189bc1a31232e700cbe2f2e49da9151
+    SHA256: 32157838040ddbd0f7b5ccaf597f6e338b9e00cdb2705e8719149d1ad8249a88
+  RichPEHeaderHash:
+    MD5: a6b0faf16c368e3c06229fa662289734
+    SHA1: 2b5b85dab8465e2d9f6c9605e35a7d204e532dd4
+    SHA256: 77506c37916a1642800ba5c639b40b5033de119ceb6019aba6b67f9e2e51fcd0
+  Sections:
+    .text:
+      Entropy: 6.325280575518145
+      Virtual Size: '0x34c5'
+    .rdata:
+      Entropy: 4.4446116560651046
+      Virtual Size: '0x998'
+    .data:
+      Entropy: 1.3416451831081924
+      Virtual Size: '0x91d8'
+    .pdata:
+      Entropy: 4.543314963695591
+      Virtual Size: '0x2c4'
+    PAGE:
+      Entropy: 6.212945546987161
+      Virtual Size: '0x19f7'
+    INIT:
+      Entropy: 5.832849375052034
+      Virtual Size: '0xb30'
+    .rsrc:
+      Entropy: 3.291391100959516
+      Virtual Size: '0x378'
+    .reloc:
+      Entropy: 1.1418807523988082
+      Virtual Size: '0x9c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-07-16 10:34:35'
+  InternalName: Fastdump
+  Copyright: Copyright (C) 2017 CounterTack, Inc.
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnmapLockedPages
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - MmBuildMdlForNonPagedPool
+  - IoFreeMdl
+  - MmMapLockedPagesSpecifyCache
+  - MmMapIoSpace
+  - ZwClose
+  - IofCompleteRequest
+  - ObReferenceObjectByHandle
+  - IoCreateSymbolicLink
+  - ObfDereferenceObject
+  - MmGetPhysicalMemoryRanges
+  - ZwOpenSection
+  - IoAllocateMdl
+  - MmGetSystemRoutineAddress
+  - PsGetVersion
+  - KeQueryActiveProcessors
+  - KeReleaseSpinLock
+  - MmFreeNonCachedMemory
+  - MmGetPhysicalAddress
+  - ZwWaitForSingleObject
+  - ZwCreateFile
+  - KeQueryTimeIncrement
+  - PsInitialSystemProcess
+  - MmAllocateNonCachedMemory
+  - ZwQueryInformationFile
+  - ZwWriteFile
+  - DbgPrint
+  - KeAcquireSpinLockRaiseToDpc
+  - KeRevertToUserAffinityThread
+  - KeSetSystemAffinityThread
+  - KeBugCheckEx
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - ExFreePoolWithTag
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - RtlAbsoluteToSelfRelativeSD
+  - IoIsWdmVersionAvailable
+  - SeExports
+  - wcschr
+  - _wcsnicmp
+  - ExAllocatePoolWithTag
+  - RtlLengthSid
+  - RtlAddAccessAllowedAce
+  - RtlGetSaclSecurityDescriptor
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - ZwCreateKey
+  - ZwSetValueKey
+  - RtlFreeUnicodeString
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Massachusetts, L=Waltham, O=CounterTack, Inc., CN=CounterTack,
+        Inc.
+      ValidFrom: '2019-03-14 00:00:00'
+      ValidTo: '2020-03-30 23:59:59'
+      Signature: 3445c2828d4f5d99ef788f1d531be96f90acd38dddbe24b3d80db70ab394513344cd57c4c46942c8a0b42c440819d986ce7fe4c65593f53f31e8233a15d12bf2e03842062f29dfad068ec0a650616ee85a67ee73fbf9d9108499e5f15dc4d7506a7c0ec9d7ac771e32fbbbc125044ce0dbac9a6ebcec1226c38b2287e05ac627d4daa17035c4cc8dba5327e4fd660504dfea2afe459733f7e098a0d8e651e29b41785a68c9ad671284cd09d6abf13d8fdc27b3a74d87c7567772e9ed57d964715c7764c25fefdbdd4a4260512c65a4d7902d87d45fbffffc46a1fbde983274e88fd563ad6154dced0898ca2b3c53560aa1ddf112ce98c95b1f2b993152567a37
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 28231a25aeec83ade5824031b4e28040
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 2311dce0f4469ee5101cdfe9805c120f
+        SHA1: 2f460655e055f3e9584968541b4eaa9c74e47507
+        SHA256: 6e6728c7caefc09d38fd4b7879910b3d0d4bb8a5c113649fe5c8a6fe93cf3fce
+        SHA384: 0447269ceadf731593b2a732fdbe118be68894cba88974a210201a9088c89bb089896415342b8786f7b0403a3af31ecb
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 28231a25aeec83ade5824031b4e28040
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: c02969a03cdf95399c373efc0b2b9705
