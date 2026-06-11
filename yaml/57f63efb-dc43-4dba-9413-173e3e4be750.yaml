@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: fc88782a34ab832abb9c04c63c76830b
     SHA1: a7bcabd8e465e5e1a0bad564d887a47f378dfdaa
     SHA256: f43d977a5fb1bdc10837e7c4ff03526d2b8fa9757da9dd8bd6514cd31748a858
-  Company: RW-Everything
-  Copyright: Copyright (C) 2008 RW-Everything
-  CreationTimestamp: '2012-02-07 10:19:34'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2012-02-07 07:19:34'
   Date: ''
-  Description: RW-Everything Read & Write Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '1.00.00.0000 built by: WinDDK'
+  FileVersion: ''
   Filename: AsrSmartConnectDrv.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -78,13 +78,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: RwDrv.sys
+  InternalName: ''
   MD5: 56a515173b211832e20fbc64e5a0447c
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: RwDrv.sys
-  Product: RW-Everything Read & Write Driver
-  ProductVersion: 1.00.00.0000
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ASROCK Incorporation
   RichPEHeaderHash:
     MD5: a84c01eca8a6ca8e5221dbca3000c16e
@@ -178,9 +178,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

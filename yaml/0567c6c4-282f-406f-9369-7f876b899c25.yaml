@@ -115,14 +115,14 @@ KnownVulnerableSamples:
     MD5: fe54aac5dfae8729c48361d2ea4f7271
     SHA1: 2a4e81a1d23e3b7d9c14b6fbc393ecfad5f34133
     SHA256: c5732937c3ab5e0fd244cc1b820eaa1fb7d97110c213cd6b9dadebafe3ea853d
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '16.32'
-  Product: Process Explorer
-  ProductVersion: '16.32'
-  Copyright: Copyright (C) Mark Russinovich 1996-2020
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -264,7 +264,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-04-27 03:35:06'
+  CreationTimestamp: '2020-04-27 00:35:06'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -275,14 +275,14 @@ KnownVulnerableSamples:
     MD5: fbc316e1e634e967c5413a200cde7ad6
     SHA1: a1dd17b946ade947b621e9fec4fe7ad0835f0ac9
     SHA256: 4533a11f4f190354b749f2842b57233e5e9e8b37fa4031bcb976118cff902101
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '16.42'
-  Product: Process Explorer
-  ProductVersion: '16.42'
-  Copyright: Copyright (C) Mark Russinovich 1996-2021
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: ARM64
   Imports:
   - HAL.dll
@@ -400,7 +400,7 @@ KnownVulnerableSamples:
       Entropy: 2.7841837197791888
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-01 10:24:35'
+  CreationTimestamp: '2021-06-01 07:24:35'
   Imphash: bfe13c695e41d3eee414d3929b1bd523
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -411,14 +411,14 @@ KnownVulnerableSamples:
     MD5: 750ecd21c673a6fda9199887013d3751
     SHA1: 82d3299c06b944895385fd2f3d9d18391273019d
     SHA256: 8e38148ad4ed9946e8600b37f63996bf17c0101e3f50123b3b8513c895a4b521
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '12.00'
-  Product: Process Explorer
-  ProductVersion: '12.00'
-  Copyright: Copyright (C) M. Russinovich 1996-2010
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -511,9 +511,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -549,7 +549,7 @@ KnownVulnerableSamples:
       Entropy: 5.426276217210761
       Virtual Size: '0x186'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-04-15 05:23:35'
+  CreationTimestamp: '2010-04-15 02:23:35'
   Imphash: 9376f1c4ab79240cc948b77bf9e8814b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -560,14 +560,14 @@ KnownVulnerableSamples:
     MD5: eb6ceb9aa0eaedee2d112b167908e871
     SHA1: 4d68ec346d13359525da958af0fada57bc9ff35a
     SHA256: 7a4e4ee169fe0f1f079e5f5c1da38ea70fe717e728faf054deb180f9e37fe574
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '11.30'
-  Product: Process Explorer
-  ProductVersion: '11.30'
-  Copyright: Copyright (C) M. Russinovich 1996-2008
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -655,9 +655,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -693,7 +693,7 @@ KnownVulnerableSamples:
       Entropy: 3.294153762600323
       Virtual Size: '0x380'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-11-03 16:19:45'
+  CreationTimestamp: '2008-11-03 13:19:45'
   Imphash: 0b40636205c64cacfd2e4f407518ad58
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -704,14 +704,14 @@ KnownVulnerableSamples:
     MD5: 8b8a646469bdd1bab7b402ac83dba4a5
     SHA1: 075998a905d4afda2e1727f6f31030c4d126dcc5
     SHA256: 083828dd2e4afe22f5d27b56bd7f5a60e43aea7ec8f8cb0a138be84ee639a09c
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -867,7 +867,7 @@ KnownVulnerableSamples:
       Entropy: 6.137423926314564
       Virtual Size: '0x25a0'
     .rdata:
-      Entropy: 4.315810674049461
+      Entropy: 4.3158106740494615
       Virtual Size: '0xf68'
     .data:
       Entropy: 2.0732868843388097
@@ -888,7 +888,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-13 09:35:39'
+  CreationTimestamp: '2019-06-13 06:35:39'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -899,14 +899,14 @@ KnownVulnerableSamples:
     MD5: acacde5c8a3a37b4fa43d9b651df85ea
     SHA1: f14e20cea5fac19bca02f5b067d12a459a393467
     SHA256: c286dfac5ca413efeb1936e876688b6bd46d25dc64206f86efb4f52ad83d1889
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) M. Russinovich 1996-2011
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1024,9 +1024,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1068,7 +1068,7 @@ KnownVulnerableSamples:
       Entropy: 1.1266429267004154
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-06-16 17:21:56'
+  CreationTimestamp: '2012-06-16 14:21:56'
   Imphash: 8a5edbe5251fe141ea0262d5d572178b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1079,14 +1079,14 @@ KnownVulnerableSamples:
     MD5: 455eb57840b64c8fe0d942ea5da23c6b
     SHA1: aa8756d00691d3d8959b68c3626ba896cc2709fb
     SHA256: 1a902521c5f82ad9acac815229a00e6ed9137b8d49106b64147b088ff89d0f01
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '11.40'
-  Product: Process Explorer
-  ProductVersion: '11.40'
-  Copyright: Copyright (C) M. Russinovich 1996-2010
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -1203,9 +1203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1244,7 +1244,7 @@ KnownVulnerableSamples:
       Entropy: 5.7007058924695935
       Virtual Size: '0x29e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-30 20:27:21'
+  CreationTimestamp: '2010-03-30 17:27:21'
   Imphash: ebf30b4cd57a4f4548a03eab0f6c418c
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1255,14 +1255,14 @@ KnownVulnerableSamples:
     MD5: 24263d0e152884eb7d180070164830c8
     SHA1: 929c28f99d550278415c7087b71511e44439a41c
     SHA256: b4f9272894f926d4f3b957fca673140a3a24dc896f1a49badaa1e04687b223cd
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) M. Russinovich 1996-2011
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1376,9 +1376,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1420,7 +1420,7 @@ KnownVulnerableSamples:
       Entropy: 1.2270124269441627
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-12-30 18:49:03'
+  CreationTimestamp: '2011-12-30 15:49:03'
   Imphash: f27327907e57c0c2c9fddc68eab2eb7b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1431,14 +1431,14 @@ KnownVulnerableSamples:
     MD5: 5d265a745ca048fb2ee0a59cc7ffc8aa
     SHA1: e5d5076fca6ed125d14d9f70fff802a1fa992ac6
     SHA256: 17bdeeb4447f0758c3720991d3ed43a405efb49fd2cdbb37f7b5feb349693acb
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '12.00'
-  Product: Process Explorer
-  ProductVersion: '12.00'
-  Copyright: Copyright (C) M. Russinovich 1996-2010
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1549,9 +1549,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1593,7 +1593,7 @@ KnownVulnerableSamples:
       Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-25 14:19:41'
+  CreationTimestamp: '2011-04-25 11:19:41'
   Imphash: 505e0a016962137ca6169bce64ba2f53
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1604,14 +1604,14 @@ KnownVulnerableSamples:
     MD5: 9e4c2a2e8832f10ecdd2be70eb6bc300
     SHA1: 2b15e90dc654ce779bd460787352639768cd8baa
     SHA256: 26536758c2247b6251a342d2e80de1753c006a0dce9b3b8a6a5b1d3110c8fc34
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1807,7 +1807,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-11 00:52:10'
+  CreationTimestamp: '2015-05-10 21:52:10'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1818,14 +1818,14 @@ KnownVulnerableSamples:
     MD5: 028b8d642c1c76b18b74f3e0f76b3522
     SHA1: 1aa871802d7278272172d9d7faabf8c8292996a3
     SHA256: 76adb3fa346058e95ba3fd549fd48a15adaf4920a3109391f52053ebf39e62cc
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) M. Russinovich 1996-2011
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1989,7 +1989,7 @@ KnownVulnerableSamples:
       Entropy: 1.1266429267004154
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-10-20 20:16:05'
+  CreationTimestamp: '2013-10-20 17:16:05'
   Imphash: 8a5edbe5251fe141ea0262d5d572178b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2000,14 +2000,14 @@ KnownVulnerableSamples:
     MD5: 8e66ec7a60a2b67386516a2e9a236d6b
     SHA1: 07dfb6fe9b3876c0e1b1cda010cb3cc24ff2ce25
     SHA256: 6b3316496ab1e2d1ef02be966d9caa171674856e8fb8ea78d6a3bcfe8e2013c1
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2184,7 +2184,7 @@ KnownVulnerableSamples:
       Entropy: 3.667481250360578
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-09 14:21:38'
+  CreationTimestamp: '2018-11-09 11:21:38'
   Imphash: b8a35d469bc164d86ac7c64e93b0037b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2195,14 +2195,14 @@ KnownVulnerableSamples:
     MD5: 3798eddcccab7da4682f64997533d27d
     SHA1: 0d753c1d21c4e6c6eb74d3436eb4c5f376cc7364
     SHA256: a4859c5456d03f799de89d2f8cbb36b4518259a6c7c0bc909b1fd16f48363d5a
-  Description: '                '
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: '                '
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2358,7 +2358,7 @@ KnownVulnerableSamples:
       Entropy: 6.137423926314564
       Virtual Size: '0x25a0'
     .rdata:
-      Entropy: 4.319500105806409
+      Entropy: 4.3195001058064095
       Virtual Size: '0xf68'
     .data:
       Entropy: 2.0732868843388097
@@ -2379,7 +2379,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-28 17:02:57'
+  CreationTimestamp: '2019-06-28 14:02:57'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2390,14 +2390,14 @@ KnownVulnerableSamples:
     MD5: 4eae8421b149baa7d0ce15a86470cde2
     SHA1: af5ff77f2106b31a8e433c3689b6a65628c2dfce
     SHA256: 19d579e5a08bcb524405bdcbd2ea7247548af9f23ce64582a5be5ae3f184ad23
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '16.41'
-  Product: Process Explorer
-  ProductVersion: '16.41'
-  Copyright: Copyright (C) Mark Russinovich 1996-2021
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2539,7 +2539,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-26 10:02:20'
+  CreationTimestamp: '2021-05-26 07:02:20'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2550,14 +2550,14 @@ KnownVulnerableSamples:
     MD5: 4b64921bd05ed4a30830f23facb43bde
     SHA1: 3d9be989fbb447bbf7e4b081d9ee4d9b025476c3
     SHA256: e2e351efd57c89bc0c7b9d4d440113304d0b8a4c88cdf0126442171aa50634d4
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '11.40'
-  Product: Process Explorer
-  ProductVersion: '11.40'
-  Copyright: Copyright (C) M. Russinovich 1996-2010
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: IA64
   Imports:
   - ntoskrnl.exe
@@ -2671,9 +2671,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2703,7 +2703,7 @@ KnownVulnerableSamples:
       Entropy: 1.5305882342388135
       Virtual Size: '0x4c'
     .sdata:
-      Entropy: 2.6750321646829582
+      Entropy: 2.675032164682958
       Virtual Size: '0x234'
     .data:
       Entropy: 1.8211654677412543
@@ -2721,7 +2721,7 @@ KnownVulnerableSamples:
       Entropy: 1.4379095220400315
       Virtual Size: '0x338'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-30 20:30:49'
+  CreationTimestamp: '2010-03-30 17:30:49'
   Imphash: 421730c2b3fa3a7d78c2eda3da1be6a8
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2732,14 +2732,14 @@ KnownVulnerableSamples:
     MD5: df8e20e6fb1d2a22135e155763bf9588
     SHA1: 1915e95974b6f75f4793e81b85e148ebdaa35515
     SHA256: 0c2d8e8487de5e7749f9899f6fefa6e7d40b394479449b5027a895392af23349
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2915,7 +2915,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-30 19:23:14'
+  CreationTimestamp: '2017-04-30 16:23:14'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2926,14 +2926,14 @@ KnownVulnerableSamples:
     MD5: c292f0024a454f42fba117b3505b12e9
     SHA1: d9ebe7ff8318eeece457fc72bec2b582d3350b61
     SHA256: f0fb06748758082263e252050904f2fd8a29a77ae71dfdb390346bd2046ebfd4
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -3129,7 +3129,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-07-08 02:28:27'
+  CreationTimestamp: '2014-07-07 23:28:27'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3140,14 +3140,14 @@ KnownVulnerableSamples:
     MD5: 26f48296b5ef64120e55008690060a6e
     SHA1: 8d59ed924e8c76b0ab8b7ee653510f43062eaa3e
     SHA256: cd1beb64cd67169d57ca4dbc602a94f74891962221bb49c09abf3339ce35bc90
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '16.42'
-  Product: Process Explorer
-  ProductVersion: '16.42'
-  Copyright: Copyright (C) Mark Russinovich 1996-2021
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -3289,7 +3289,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-01 10:24:37'
+  CreationTimestamp: '2021-06-01 07:24:37'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3300,14 +3300,14 @@ KnownVulnerableSamples:
     MD5: 0f461053add90ebe0bac9e8be9d9a8e5
     SHA1: 5b27248685b909d5ae4c8ec77e2d3dcb02d6cc4b
     SHA256: cddd341f267a6094f7bd7d1b56427ebc029ccb348e7f0714d9301c2c67fdd5df
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -3503,7 +3503,7 @@ KnownVulnerableSamples:
       Entropy: 6.4689942009857395
       Virtual Size: '0x360'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-05 16:43:50'
+  CreationTimestamp: '2015-12-05 13:43:50'
   Imphash: 3c9af2347198d96c8ab5b189b4e3db37
   LoadsDespiteHVCI: 'TRUE'
 - Filename: procexp.Sys
@@ -3514,14 +3514,14 @@ KnownVulnerableSamples:
     MD5: 82ece436a712985b767d42a178872ab3
     SHA1: e7bedb9528d3da5e7e161a14db260140a02facca
     SHA256: d28acafeb6a85294d2672fa894a2934599713aa9ce1b21184dc1ec34131af7bb
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '9.30'
-  Product: Process Explorer
-  ProductVersion: '9.30'
-  Copyright: Copyright (C) M. Russinovich 1996-2005
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -3589,9 +3589,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3626,7 +3626,7 @@ KnownVulnerableSamples:
     SHA256: 1379bea6cc6236eca70f97ba7fc73338ade1f24a85c4bf1c08992e573a48fad2
   Sections:
     .text:
-      Entropy: 6.100262415508947
+      Entropy: 6.100262415508949
       Virtual Size: '0xf68'
     INIT:
       Entropy: 5.190425299514774
@@ -3638,7 +3638,7 @@ KnownVulnerableSamples:
       Entropy: 4.850293456344704
       Virtual Size: '0x12e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-01-06 17:04:34'
+  CreationTimestamp: '2006-01-06 14:04:34'
   Imphash: 5bb79a6caa12076a6d140085cb53892e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3649,14 +3649,14 @@ KnownVulnerableSamples:
     MD5: 1694c87131cee15e63d71936859506b8
     SHA1: 5eb106f413ad1d8de4c04661a1c5162410164d50
     SHA256: 120f7983011211e6740d7a3a4cd2354507866ef7d36a48e2e3a9bd5b52c21c8a
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '11.01'
-  Product: Process Explorer
-  ProductVersion: '11.01'
-  Copyright: Copyright (C) M. Russinovich 1996-2007
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -3744,9 +3744,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3782,7 +3782,7 @@ KnownVulnerableSamples:
       Entropy: 3.2795326755401355
       Virtual Size: '0x380'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-07-21 16:42:49'
+  CreationTimestamp: '2008-07-21 13:42:49'
   Imphash: 0b40636205c64cacfd2e4f407518ad58
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3793,14 +3793,14 @@ KnownVulnerableSamples:
     MD5: c292f0024a454f42fba117b3505b12e9
     SHA1: d9ebe7ff8318eeece457fc72bec2b582d3350b61
     SHA256: f0fb06748758082263e252050904f2fd8a29a77ae71dfdb390346bd2046ebfd4
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -3996,7 +3996,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-07-08 02:28:27'
+  CreationTimestamp: '2014-07-07 23:28:27'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -4007,14 +4007,14 @@ KnownVulnerableSamples:
     MD5: bee5a87f72b42f3bb5958ba541f4caff
     SHA1: 9e0516a6ce73163e2ff5bf0740b57da46846228b
     SHA256: 74716032cc2f63c67b9df0882c6794b4bf66147d943329db5f233a04c2fd9b12
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '16.32'
-  Product: Process Explorer
-  ProductVersion: '16.32'
-  Copyright: Copyright (C) Mark Russinovich 1996-2020
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -4156,7 +4156,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-11 17:57:25'
+  CreationTimestamp: '2020-09-11 14:57:25'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -4167,14 +4167,14 @@ KnownVulnerableSamples:
     MD5: decbda17e27f012c72e5ff39c8c19089
     SHA1: ecdaa78f29e1f1a27d28b45a9de5f93af9f18f15
     SHA256: ee24071d9a0ef38dc98929cfb4d316f9fb010de107c110fad2403022cf1eebfc
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -4351,7 +4351,7 @@ KnownVulnerableSamples:
       Entropy: 3.667481250360578
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-16 18:15:17'
+  CreationTimestamp: '2018-11-16 15:15:17'
   Imphash: b8a35d469bc164d86ac7c64e93b0037b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -4362,14 +4362,14 @@ KnownVulnerableSamples:
     MD5: 92c56a03fbcd375d9569e1cf60bf78cd
     SHA1: be428ed7b322ad13b2207294b934b0a67aa8345d
     SHA256: fa959c48c055ec149d434a5adeb9f9938d1c260a65ee8a4ea1d67bfbdceab83f
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -4545,7 +4545,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-02-04 17:04:43'
+  CreationTimestamp: '2016-02-04 14:04:43'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'TRUE'
 - Filename: procexp.Sys
@@ -4556,14 +4556,14 @@ KnownVulnerableSamples:
     MD5: db32843b80c6e8c9173847c3faab2200
     SHA1: fffeec16afdeedd2bee22860f0942c846ba9ee1a
     SHA256: cee01c69cb0c06dd0d98ff05aeb2b0a34a4aa1a71d35a3033bf9c1a35b637c55
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -4719,7 +4719,7 @@ KnownVulnerableSamples:
       Entropy: 6.137423926314564
       Virtual Size: '0x25a0'
     .rdata:
-      Entropy: 4.319500105806409
+      Entropy: 4.3195001058064095
       Virtual Size: '0xf68'
     .data:
       Entropy: 2.0732868843388097
@@ -4740,7 +4740,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-28 17:02:57'
+  CreationTimestamp: '2019-06-28 14:02:57'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -4751,14 +4751,14 @@ KnownVulnerableSamples:
     MD5: dafa4bdbdbbd96532d03022cd6900fed
     SHA1: f2ff9b749f7c5f21043b42d97b8a386c702d4435
     SHA256: ab5324c992c7547020f85de3456516e0dba2c3c5aab10371723a96188354abaf
-  Description: Process Explorer
-  Company: Sysinternals - www.sysinternals.com
-  InternalName: procexp.sys
-  OriginalFilename: procexp.Sys
-  FileVersion: '15.00'
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -4935,7 +4935,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-13 10:03:46'
+  CreationTimestamp: '2019-06-13 07:03:46'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp152.sys
@@ -4945,19 +4945,19 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Sysinternals - www.sysinternals.com
-  Description: Process Explorer
-  Product: Process Explorer
-  ProductVersion: '15.00'
-  FileVersion: '15.00'
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: procexp.Sys
+  OriginalFilename: ''
   Authentihash:
     MD5: 9e4c2a2e8832f10ecdd2be70eb6bc300
     SHA1: 2b15e90dc654ce779bd460787352639768cd8baa
     SHA256: 26536758c2247b6251a342d2e80de1753c006a0dce9b3b8a6a5b1d3110c8fc34
-  InternalName: procexp.sys
-  Copyright: Copyright (C) Mark Russinovich 1996-2014
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -5152,7 +5152,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-11 00:52:10'
+  CreationTimestamp: '2015-05-10 21:52:10'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -5165,19 +5165,19 @@ KnownVulnerableSamples:
   - Microsoft Root Certificate Authority 2010
   Date: ''
   Publisher: ''
-  Company: Sysinternals - www.sysinternals.com
-  Description: Process Explorer
-  Product: Process Explorer
-  ProductVersion: '16.43'
-  FileVersion: '16.43'
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: procexp.Sys
+  OriginalFilename: ''
   Authentihash:
     MD5: 0a7106a04e6e3b13eb105b013f76e031
     SHA1: 0c74316dfb9c21b7ff2dc288c005f9474dc26589
     SHA256: c7fef94e329bd9b66b281539265f989313356cbd9c345df9e670e9c4b6e0edce
-  InternalName: procexp.sys
-  Copyright: Copyright (C) Mark Russinovich 1996-2021
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -5318,7 +5318,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-08-16 22:01:16'
+  CreationTimestamp: '2021-08-16 19:01:16'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.sys
@@ -5328,13 +5328,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Sysinternals - www.sysinternals.com
-  Description: Process Explorer
-  Product: Process Explorer
-  ProductVersion: '16.32'
-  FileVersion: '16.32'
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: procexp.Sys
+  OriginalFilename: ''
   Authentihash:
     MD5: bee5a87f72b42f3bb5958ba541f4caff
     SHA1: 9e0516a6ce73163e2ff5bf0740b57da46846228b
@@ -5369,9 +5369,9 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-11 17:57:25'
-  InternalName: procexp.sys
-  Copyright: Copyright (C) Mark Russinovich 1996-2020
+  CreationTimestamp: '2020-09-11 14:57:25'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -5491,19 +5491,19 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Sysinternals - www.sysinternals.com
-  Description: Process Explorer
-  Product: Process Explorer
-  ProductVersion: '16.27'
-  FileVersion: '16.27'
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: procexp.Sys
+  OriginalFilename: ''
   Authentihash:
     MD5: f57e986673aee44bf51e7e6bb3ed0113
     SHA1: edc10781eb6d1e3bdf9d15cfebddbe1a1fb804d9
     SHA256: decba65bbf2232ac55a698539304cab211b45eef0ed17c05dd7995bef2b98fc6
-  InternalName: procexp.sys
-  Copyright: Copyright (C) Mark Russinovich 1996-2019
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -5644,6 +5644,6 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-12-13 11:37:59'
+  CreationTimestamp: '2019-12-13 08:37:59'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'

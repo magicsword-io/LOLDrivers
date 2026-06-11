@@ -35,11 +35,11 @@ KnownVulnerableSamples:
     MD5: c9fff1bf9b2dd3c53150aa7fa931e7a9
     SHA1: 1824949e8cbe70954e2e5676c7559e32867eb7b4
     SHA256: c3fa8f5c8094a6c6936faff1d1faa02fd489482f21c288e6c700446ade5c20be
-  Company: innotek GmbH
-  Copyright: Copyright (C) 2004-2007 innotek GmbH
-  CreationTimestamp: '2007-10-18 03:49:33'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-10-18 00:49:33'
   Date: ''
-  Description: VirtualBox Guest Driver
+  Description: ''
   ExportedFunctions:
   - AssertMsg1
   - AssertMsg2
@@ -73,7 +73,7 @@ KnownVulnerableSamples:
   - RTStrFormat
   - RTStrFormatNumber
   - RTStrFormatV
-  FileVersion: 1.5.2
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IoCreateSymbolicLink
@@ -120,14 +120,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: vboxguest
+  InternalName: ''
   MD5: d04f5388e962cd21462bcc54180e84e0
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: vboxguest.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: VirtualBox Guest Additions
-  ProductVersion: 1.5.2
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6057ec1f7b3ca1fd52c465c5a75e98ed
@@ -257,9 +257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -276,11 +276,11 @@ KnownVulnerableSamples:
     MD5: 741b0c8a0a56340b62854cb121cb4930
     SHA1: 7618118dbe72c953e62e1bcac6b3c874ec43b72f
     SHA256: bfbc382decb986b6050268e53092eae5e981cb886ccfb116ca7a0b311cef3862
-  Company: innotek GmbH
-  Copyright: Copyright (C) 2004-2007 innotek GmbH
-  CreationTimestamp: '2008-02-19 11:09:00'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2008-02-19 08:09:00'
   Date: ''
-  Description: VirtualBox Guest Driver
+  Description: ''
   ExportedFunctions:
   - AssertMsg1
   - AssertMsg2
@@ -314,7 +314,7 @@ KnownVulnerableSamples:
   - RTStrFormat
   - RTStrFormatNumber
   - RTStrFormatV
-  FileVersion: 1.5.6.28241
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IoDeleteDevice
@@ -361,14 +361,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: vboxguest
+  InternalName: ''
   MD5: ff7cc8b6553ab57c53d5bc8afcf50f67
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: vboxguest.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: VirtualBox Guest Additions
-  ProductVersion: 1.5.6.28241
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5b7fb26b2a4fe53c9cb6b5941eaa8d54
@@ -399,7 +399,7 @@ KnownVulnerableSamples:
       Entropy: 3.336741265163333
       Virtual Size: '0x388'
     .reloc:
-      Entropy: 6.388840902014098
+      Entropy: 6.388840902014099
       Virtual Size: '0x3ca'
   Signature: ''
   Signatures:
@@ -497,9 +497,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

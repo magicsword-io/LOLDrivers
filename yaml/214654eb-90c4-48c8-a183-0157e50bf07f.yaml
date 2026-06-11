@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 404c94935da4ba9eb3d5eea83c68378c
     SHA1: 086e6e37abad257b753c26e8c9e3e181e46b10c3
     SHA256: d55dd56e24df201d1ad2204d565da5e8e6080d895c1ac2873a6afdcbb4c8b8c7
-  Description: MICSYS IO driver
-  Company: MICSYS Technology Co., LTd
-  InternalName: MsIo64.sys
-  OriginalFilename: MsIo64.sys
-  FileVersion: '1.3 x64 built by: WinDDK'
-  Product: MsIo64 Driver Version 1.3
-  ProductVersion: 1.3 x64
-  Copyright: Copyright (c) 2021 MICSYS
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -127,13 +127,13 @@ KnownVulnerableSamples:
       Entropy: 2.9485276044371007
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.7872869058901975
+      Entropy: 4.787286905890197
       Virtual Size: '0x262'
     .rsrc:
-      Entropy: 3.385724178395201
+      Entropy: 3.3857241783952006
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-09 03:43:50'
+  CreationTimestamp: '2022-06-09 00:43:50'
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'FALSE'
 - Filename: MsIo32.sys
@@ -205,9 +205,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=Taiwan, ??=New Taipei, ??=Private Organization, serialNumber=84948057,
-        C=TW, L=New Taipei, O=MICSYS Technology Co., Ltd., CN=MICSYS Technology Co.,
-        Ltd.
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=Taiwan,
+        JURISDICTION_OF_INCORPORATION_L=New Taipei, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=84948057, C=TW, L=New Taipei, O=MICSYS Technology Co., Ltd.,
+        CN=MICSYS Technology Co., Ltd.
       ValidFrom: '2019-05-21 00:00:00'
       ValidTo: '2022-05-20 23:59:59'
       Signature: 0a47cf1ef4f7db7a1839d16d6cf70ab0447bc7a47cc9cf2124024f5f1583c03d411fabd06dddd424db9702178172411dea6503e33b3f488a5d53b30fb4dd2b30456e3880dd32fd4dc39bbb240c450e930c282095d65a061fae6cfd46eb94cdf549d4813cdc468061bc739b76c7a10fe9e8b762727a3a8e440473a1e6b56ac3d92df16ca8331deaf39072ce2a09705bcec87bc508ecea9b274115fff278b15c0e6430ddce6f09311e5d64ca763e70e5cad8eb6127680d12279d78129214cb0857078ab6a1187e112c9b71d1f08fa60e570d9180a901de521222be67be4ad243a9ddbb4af1ef3a5bb1e58556753a8183ed400de32f846e0b49a74de1025d03b7d0
@@ -267,7 +268,7 @@ KnownVulnerableSamples:
       Entropy: 4.3106029983367184
       Virtual Size: '0xe8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-12 02:57:28'
+  CreationTimestamp: '2018-02-11 23:57:28'
   Imphash: 24b344cd341f8b20003ac85be08df979
   LoadsDespiteHVCI: 'FALSE'
 - Filename: MsIo64.sys
@@ -278,14 +279,14 @@ KnownVulnerableSamples:
     MD5: 3cdda257c661f3c1eb256b61dba8147d
     SHA1: 84a45f83a90b1a695ffeb915ea2a197b186857e6
     SHA256: 9f3e67f9454cb009716b89c0a296dcde73aa29145b7dcf776b81605932785b91
-  Description: MICSYS IO driver
-  Company: MICSYS Technology Co., LTd
-  InternalName: MsIo64.sys
-  OriginalFilename: MsIo64.sys
-  FileVersion: '1.3 x64 built by: WinDDK'
-  Product: MsIo64 Driver Version 1.3
-  ProductVersion: 1.3 x64
-  Copyright: Copyright (c) 2021 MICSYS
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -327,9 +328,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=Taiwan, ??=New Taipei, ??=Private Organization, serialNumber=84948057,
-        C=TW, L=New Taipei, O=MICSYS Technology Co., Ltd., CN=MICSYS Technology Co.,
-        Ltd.
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=Taiwan,
+        JURISDICTION_OF_INCORPORATION_L=New Taipei, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=84948057, C=TW, L=New Taipei, O=MICSYS Technology Co., Ltd.,
+        CN=MICSYS Technology Co., Ltd.
       ValidFrom: '2019-05-21 00:00:00'
       ValidTo: '2022-05-20 23:59:59'
       Signature: 0a47cf1ef4f7db7a1839d16d6cf70ab0447bc7a47cc9cf2124024f5f1583c03d411fabd06dddd424db9702178172411dea6503e33b3f488a5d53b30fb4dd2b30456e3880dd32fd4dc39bbb240c450e930c282095d65a061fae6cfd46eb94cdf549d4813cdc468061bc739b76c7a10fe9e8b762727a3a8e440473a1e6b56ac3d92df16ca8331deaf39072ce2a09705bcec87bc508ecea9b274115fff278b15c0e6430ddce6f09311e5d64ca763e70e5cad8eb6127680d12279d78129214cb0857078ab6a1187e112c9b71d1f08fa60e570d9180a901de521222be67be4ad243a9ddbb4af1ef3a5bb1e58556753a8183ed400de32f846e0b49a74de1025d03b7d0
@@ -368,13 +370,13 @@ KnownVulnerableSamples:
       Entropy: 3.087778287293878
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.784008217365608
+      Entropy: 4.784008217365607
       Virtual Size: '0x262'
     .rsrc:
-      Entropy: 3.388654065082743
+      Entropy: 3.3886540650827426
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-04-15 00:18:47'
+  CreationTimestamp: '2021-04-14 21:18:47'
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'TRUE'
 - Filename: MsIo64.sys
@@ -385,14 +387,14 @@ KnownVulnerableSamples:
     MD5: a108434c7016659eca85bc755687c9d1
     SHA1: 5b030639b3e83f945ea610eead115b213bb436f6
     SHA256: 555ebe7901706dbf801b5dbda6660002d3b36e5c669ec98ccfc6884a7481c56e
-  Description: MICSYS IO driver
-  Company: MICSYS Technology Co., LTd
-  InternalName: MsIo64.sys
-  OriginalFilename: MsIo64.sys
-  FileVersion: '1.2 x64 built by: WinDDK'
-  Product: MsIo64 Driver Version 1.2
-  ProductVersion: 1.2 x64
-  Copyright: Copyright (c) 2019 MICSYS
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -474,13 +476,13 @@ KnownVulnerableSamples:
       Entropy: 3.1449604398835636
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.784008217365608
+      Entropy: 4.784008217365607
       Virtual Size: '0x262'
     .rsrc:
       Entropy: 3.371121078414638
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-01-19 22:35:15'
+  CreationTimestamp: '2020-01-19 19:35:15'
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'FALSE'
 - Filename: MsIo64.sys
@@ -491,14 +493,14 @@ KnownVulnerableSamples:
     MD5: aedaf6ec0809d26c9dc2f41754095790
     SHA1: 2c7e97bafd3bc518778d78cfc5157d069714bc18
     SHA256: 5f39b84cb5132d4facff213c630b05ec97ef9d83b93579530152310d63945762
-  Description: MICSYS IO driver
-  Company: MICSYS Technology Co., LTd
-  InternalName: MsIo64.sys
-  OriginalFilename: MsIo64.sys
-  FileVersion: '1.3 x64 built by: WinDDK'
-  Product: MsIo64 Driver Version 1.3
-  ProductVersion: 1.3 x64
-  Copyright: Copyright (c) 2021 MICSYS
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -586,9 +588,9 @@ KnownVulnerableSamples:
       Entropy: 4.834422659066408
       Virtual Size: '0x2b2'
     .rsrc:
-      Entropy: 3.388654065082743
+      Entropy: 3.3886540650827426
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-04-05 21:54:11'
+  CreationTimestamp: '2023-04-05 18:54:11'
   Imphash: 12a08688ec92616a8b639d85cc13a3ed
   LoadsDespiteHVCI: 'FALSE'

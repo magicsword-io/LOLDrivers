@@ -48,15 +48,14 @@ KnownVulnerableSamples:
     MD5: 22db74f3f2e50ccdeb471c81e3a62532
     SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
     SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
-  Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  Company: Marvin Test Solutions, Inc.
-  InternalName: Hw.sys
-  OriginalFilename: HW.sys
-  FileVersion: 4.8.2.0
-  Product: HW
-  ProductVersion: 4.8.2.0
-  Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -222,6 +221,6 @@ KnownVulnerableSamples:
       Entropy: 3.6769129984563755
       Virtual Size: '0x49c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-06-24 19:52:05'
+  CreationTimestamp: '2015-06-24 16:52:05'
   Imphash: bd093a7d5ba5632ee52f3466a688ee55
   LoadsDespiteHVCI: 'FALSE'

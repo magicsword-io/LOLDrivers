@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 188d9708ba2de146c555d484668decee
     SHA1: bb209301f3785febdd7bdeb717cbd66340ad5c65
     SHA256: c4031eb0a40137c4ab6d2dbdd2755135c63ab137a0aeb74a7bbea6617b96f0a7
-  Company: TOSHIBA Corporation
-  Copyright: Copyright (C) 1999-2012 TOSHIBA Corporation. All Rights Reserved.
-  CreationTimestamp: '2013-01-14 20:59:36'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2013-01-14 17:59:36'
   Date: ''
-  Description: BIOS Update Driver For Windows x64 Edition
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '4.2.4.0 built by: WinDDK'
+  FileVersion: ''
   Filename: NCHGBIOS2x64.SYS
   ImportedFunctions:
   - MmFreeContiguousMemory
@@ -72,13 +72,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: NCHGBIOS2x64.SYS
+  InternalName: ''
   MD5: d9ce18960c23f38706ae9c6584d9ac90
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: NCHGBIOS2x64.SYS
-  Product: TOSHIBA BIOS Package
-  ProductVersion: 4.2.4.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 4f7e6e3302752393762ddd4d1a565b0c
@@ -94,7 +94,7 @@ KnownVulnerableSamples:
       Entropy: 4.711762585600857
       Virtual Size: '0x1a8'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.2580562234004296
@@ -173,9 +173,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -229,13 +229,13 @@ KnownVulnerableSamples:
     MD5: cedf27970826b662ee8b0de712b55804
     SHA1: a50d03e73f06b42e5d3b8eca737fca51af666e1e
     SHA256: 85686a6dec96776c2e8510fea7ca198b84429fb0b756a2d87ee1cc4570ac9b87
-  Company: TOSHIBA Corporation
-  Copyright: Copyright (C) 1999-2010 TOSHIBA Corporation. All Rights Reserved.
-  CreationTimestamp: '2010-12-16 08:08:35'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2010-12-16 05:08:35'
   Date: ''
-  Description: BIOS Update Driver For Windows x64 Edition
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '4.1.0.0 built by: WinDDK'
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IoIs32bitProcess
@@ -258,14 +258,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: NCHGBIOS2x64.SYS
+  InternalName: ''
   MD5: 6e2178dc5f9e37e6b4b6cbdaef1b12b1
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: NCHGBIOS2x64.SYS
+  OriginalFilename: ''
   PDBPath: ''
-  Product: TOSHIBA BIOS Package
-  ProductVersion: 4.1.0.0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 9273acec702ef7dbf3993013b2c001b4
@@ -281,7 +281,7 @@ KnownVulnerableSamples:
       Entropy: 4.606069325843521
       Virtual Size: '0x1b8'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.25805622340043
@@ -356,9 +356,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

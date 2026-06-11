@@ -35,13 +35,13 @@ KnownVulnerableSamples:
     MD5: 3c96154a55e5b0cb40f5c0500639b4a7
     SHA1: 4f812a2781379912292efed09e43292117753dbb
     SHA256: 548c44566d19ba0975c9a22e7b592fda45bfa8831e56f55c1c3e7241d84dd175
-  Company: REALiX(tm)
-  Copyright: "Copyright (c)1999-2012 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2012-05-10 09:05:22'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2012-05-10 06:05:22'
   Date: ''
-  Description: HWiNFO IA64 Kernel Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '8.72'
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IofCompleteRequest
@@ -89,14 +89,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: HWiNFO64I.SYS
+  InternalName: ''
   MD5: 31e8d7b070dcc6cd92cec9d6d2254afe
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: HWiNFO64I.SYS
+  OriginalFilename: ''
   PDBPath: ''
-  Product: HWiNFO IA64 Kernel Driver
-  ProductVersion: '8.72'
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: bd87ea0955778a277b3f9ae3a8975d88
@@ -228,9 +228,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

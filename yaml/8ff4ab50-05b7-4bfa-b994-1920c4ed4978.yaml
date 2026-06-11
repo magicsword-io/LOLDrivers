@@ -47,15 +47,15 @@ KnownVulnerableSamples:
     MD5: f3387f3cdaec9306dcc5205eebaf3faf
     SHA1: eecf71aa5767c90ead5f86f5438951f4c764b655
     SHA256: 7b68763c39b45534854ec382434fd5a9640942c1f7393857af642ee327d4c570
-  Company: Novell, Inc.
-  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-16 01:20:00'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2013-01-15 22:20:00'
   Date: ''
-  Description: Novell Client Portability Layer
+  Description: ''
   ExportedFunctions:
   - DllGetClassObject
   - XTCOM_Table
-  FileVersion: 3.1.11.0
+  FileVersion: ''
   Filename: ncpl.sys
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -134,9 +134,9 @@ KnownVulnerableSamples:
   MD5: a26e600652c33dd054731b4693bf5b01
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: NICM.SYS
-  Product: Novell XTier
-  ProductVersion: 3.1.11
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 69be7d6bc33a7ee9619315180123bd46
@@ -254,9 +254,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

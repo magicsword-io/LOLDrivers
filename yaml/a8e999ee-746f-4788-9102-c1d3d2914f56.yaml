@@ -36,7 +36,7 @@ KnownVulnerableSamples:
     SHA256: 3ba724dd78864cd527a99673fde1bf7f9f85f2415c91708e7380fbe5e2c085dd
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-07-21 03:22:27'
+  CreationTimestamp: '2021-07-21 00:22:27'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -195,7 +195,9 @@ KnownVulnerableSamples:
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
         SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
-    - Subject: C=CN, ST=, L=, O=, CN=
+    - Subject: "C=CN, ST=\u6E56\u5317\u7701, L=\u6B66\u6C49\u5E02, O=\u96F7\u795E\uFF08\
+        \u6B66\u6C49\uFF09\u4FE1\u606F\u6280\u672F\u6709\u9650\u516C\u53F8, CN=\u96F7\
+        \u795E\uFF08\u6B66\u6C49\uFF09\u4FE1\u606F\u6280\u672F\u6709\u9650\u516C\u53F8"
       ValidFrom: '2020-04-07 00:00:00'
       ValidTo: '2023-04-12 12:00:00'
       Signature: a4c49209083ca0c02d22e42e0f174eb979220983298f1fb3ce5f14777b955ebb967d6ab384bc924776ec4d86bab81b19775efbafb8a330efd441e89b696862ab135515ae53e585fe95f42a6029af2a7dc8b2467e7ada564c0de809404746327890d06f247b5ef420978893e616ffa622e3fbdcd37c3147d04b84ce4be2af9d7408e342e39ebf2e77b111b22d824ce50b57c8c3f6adcd11cefa69f9f5d381084fa76f6531fd8c8462d9292f4ad4c0cadb0c293e350b96e847cd5af3c4a9c4d3e22c45c7dc10908af3e41a0e9fadd5fa45ffa88d413a50bd7db8f165d67df655de0e88fe8ab2d7638ebd1eef0c514a18a3e73cd0e2a5f6a56f7c7288b4f30a6673
@@ -258,7 +260,7 @@ KnownVulnerableSamples:
     SHA256: 350e15bf24dcfdc052db117718329a03e930c17ac8c835e51d001e74bad784e4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-11-29 21:41:05'
+  CreationTimestamp: '2020-11-29 18:41:05'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -439,7 +441,9 @@ KnownVulnerableSamples:
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
         SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
-    - Subject: C=CN, ST=, L=, O=, CN=
+    - Subject: "C=CN, ST=\u6E56\u5317\u7701, L=\u6B66\u6C49\u5E02, O=\u96F7\u795E\uFF08\
+        \u6B66\u6C49\uFF09\u4FE1\u606F\u6280\u672F\u6709\u9650\u516C\u53F8, CN=\u96F7\
+        \u795E\uFF08\u6B66\u6C49\uFF09\u4FE1\u606F\u6280\u672F\u6709\u9650\u516C\u53F8"
       ValidFrom: '2020-04-07 00:00:00'
       ValidTo: '2023-04-12 12:00:00'
       Signature: 056b54cd71b6206297f5e781cbdd5fd3e1d00efd8902ba8fa5e88fa99f3e4de7f620d29685cd48f2e229845102cae6eeaf3dd16087873576b35af8bde8b369baf14d6956c881d4d55c730734db3029c84b83eabed46aeaf79daacc1821220e82886a9b499923225ac471a3df7389ab99693d7a950c07f7fcb4da549ed53c462676b259c867b31f317552cbdbeb331b537ec9b3ca4ab68c26a47aede38fd3a33253655442c4a6113cd16669660e55088a03650dc6c1c5fe52aabd613651e5f0a45096bfc3baeafc386bbe75b53909d4974cc360a491cb19090b681bca3dda039ee52b5bd5fdf1ff157625ad1f54db0e14b571e00d7119bfbd667df0cd517e77bd
@@ -515,13 +519,13 @@ KnownVulnerableSamples:
     MD5: e7902722f707f386ff95d67bfd989be0
     SHA1: 4604a20cae2dfe42320fe8f6aed000ec204efa7e
     SHA256: 13b82d81d6eac1a8b2e4655504dabecbd70673cdf45c244702a02f3397fdff9a
-  Company: NetFilterSDK.com
-  Copyright: Copyright ? NetFilterSDK.com
-  CreationTimestamp: '2020-09-24 22:14:24'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2020-09-24 19:14:24'
   Date: ''
-  Description: NetFilter SDK TDI Hook Driver (WPP)
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '1.4.9.8 built by: WinDDK'
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IoCreateSymbolicLink
@@ -584,14 +588,14 @@ KnownVulnerableSamples:
   - ntoskrnl.exe
   - HAL.dll
   - TDI.SYS
-  InternalName: LgDCatcher.sys
+  InternalName: ''
   MD5: ad6d5177656dfc5b43def5d13d32f9f6
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: LgDCatcher.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: NetFilter SDK
-  ProductVersion: 1.5.8.9
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: ad9744fc505f62a6698d77730997bfc6
@@ -640,7 +644,9 @@ KnownVulnerableSamples:
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
         SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
-    - Subject: C=CN, ST=, L=, O=, CN=
+    - Subject: "C=CN, ST=\u6E56\u5317\u7701, L=\u6B66\u6C49\u5E02, O=\u96F7\u795E\uFF08\
+        \u6B66\u6C49\uFF09\u4FE1\u606F\u6280\u672F\u6709\u9650\u516C\u53F8, CN=\u96F7\
+        \u795E\uFF08\u6B66\u6C49\uFF09\u4FE1\u606F\u6280\u672F\u6709\u9650\u516C\u53F8"
       ValidFrom: '2020-04-07 00:00:00'
       ValidTo: '2023-04-12 12:00:00'
       Signature: 056b54cd71b6206297f5e781cbdd5fd3e1d00efd8902ba8fa5e88fa99f3e4de7f620d29685cd48f2e229845102cae6eeaf3dd16087873576b35af8bde8b369baf14d6956c881d4d55c730734db3029c84b83eabed46aeaf79daacc1821220e82886a9b499923225ac471a3df7389ab99693d7a950c07f7fcb4da549ed53c462676b259c867b31f317552cbdbeb331b537ec9b3ca4ab68c26a47aede38fd3a33253655442c4a6113cd16669660e55088a03650dc6c1c5fe52aabd613651e5f0a45096bfc3baeafc386bbe75b53909d4974cc360a491cb19090b681bca3dda039ee52b5bd5fdf1ff157625ad1f54db0e14b571e00d7119bfbd667df0cd517e77bd

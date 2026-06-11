@@ -10,9 +10,10 @@ Commands:
   Command: sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
     && sc.exe start HwRwDrv.sys
   Description: Hardware read/write driver signed by a revoked Certum certificate (Open
-    Source Developer, Jun Liu). Provides arbitrary physical memory read/write and PCI
-    bus data access. Identified in ESET EDR killers research (March 2026) with 174
-    execution parents indicating widespread abuse by threat actors to disable EDR products.
+    Source Developer, Jun Liu). Provides arbitrary physical memory read/write and
+    PCI bus data access. Identified in ESET EDR killers research (March 2026) with
+    174 execution parents indicating widespread abuse by threat actors to disable
+    EDR products.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -34,13 +35,13 @@ KnownVulnerableSamples:
   - Certum Trusted Network CA
   Date: ''
   Publisher: ''
-  Company: "Windows\xAE winows 7 driver kits provider"
-  Description: Hardware read & write driver
-  Product: Hardware read & write driver
-  ProductVersion: 1.0.6.0
-  FileVersion: 1.0.6.0
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: HwRwDrv.sys
+  OriginalFilename: ''
   Authentihash:
     MD5: 212b7b4655e27c7ee3e3b20666067a69
     SHA1: 8c40a82df3d606a87df243c787283c26ce9b0458
@@ -49,8 +50,8 @@ KnownVulnerableSamples:
     MD5: 41ddd08b440611823bc5d8cb732c563d
     SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
     SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
-  InternalName: HwRwDrv.sys
-  Copyright: "Copyright\xA9 Microsoft Corporation. All rights reserved."
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -70,25 +71,25 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   Sections:
     .text:
-      Entropy: 6.04
+      Entropy: 6.038524086031619
       Virtual Size: '0x738'
     .rdata:
-      Entropy: 4.35
+      Entropy: 4.354251139813161
       Virtual Size: '0x1bc'
     .data:
-      Entropy: 0.51
+      Entropy: 0.5096713223407059
       Virtual Size: '0x114'
     .pdata:
-      Entropy: 3.24
+      Entropy: 3.2429587897527465
       Virtual Size: '0x78'
     INIT:
-      Entropy: 5.05
+      Entropy: 5.046663153942613
       Virtual Size: '0x242'
     .rsrc:
-      Entropy: 3.26
+      Entropy: 3.261974484039489
       Virtual Size: '0x458'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-06-03 19:28:11'
+  CreationTimestamp: '2018-06-03 18:28:11'
   Imphash: d6f977640d4810a784d152e4d3c63a6b
   Signatures:
   - CertificatesInfo: ''
@@ -144,8 +145,8 @@ KnownVulnerableSamples:
         SHA1: d8c3bffb3b839d2c3502355480cb7908e1d298cd
         SHA256: 894d91b0d64bd6f068585589cd49e489ac1f7f2eaef784e6098388ecf3def5ed
         SHA384: fe3e46caae9b3738657e194d23bec1433ce0f8c8c83136e6563c6ddee64f58865a267b30a81d5114f3cc6d23a301b03f
-    - Subject: C=CN, ST=Jiangsu, L=Huaian, O=Open Source Developer, CN=Open Source
-        Developer, Jun Liu
+    - Subject: "C=CN, ST=\u6C5F\u82CF\u7701, L=\u6DEE\u5B89\u5E02, O=Open Source Developer,\
+        \ CN=Open Source Developer, Jun Liu"
       ValidFrom: '2024-09-03 07:08:52'
       ValidTo: '2025-09-03 07:08:51'
       Signature: 7a7ed3e7b8a7c924b7c0349745c39228873ea8ad50025630c777ce0eae8ae681a931e68a439faf7eedf1cef9be7fdd1d3c971e856c77de853fa605b6da9de37b558671e73000c34a0eba9bdd0aa1280ac87a4e40ed120480abb261e709c935e94bdfc9519b3477e94e99b91a046ef229a3ee46aece5ade5e059305ff0841e424a94c05c10de2bc26ae88a93412406d0ebc4dc5f8331977043424c3cf8fb59845dc6f44d12a52c78f68350c35f2f1c98f6399b33c1787c8bd449ef7513c7359dd95d36fdcea46db75940457c303803050385cb67caffff12b97b9f58216e93cac19d1188ac7c584e416cbb50ae9aab568da13d5604396191b6bd52c4e56db1a8e0e517ca4cc66937b5ba97ab9b7b99fe4ffde1d2292776e94b3520bd841228d37f0ad3759cef0b3f1e827d41232ae40262c27d857d7cc363bcfa79643389fdad4c8f952b68491a607da51a5bf21f7c4e36d5ba08e5665d7df36f31c7e26fbb0a88eb5c5331a70e8cdd809e9ade4c1b81a7a66a7c7aebdaa99a1976327d041fc2f7d38a64c75bf5e3843c871a1700244c985ae30d6c1da54dfc656c7612f081676e6d2d9d3ff5e70d99bf516dc9490b31b55b4e0c4ebeb64b3283aeaf66793d6b2b01ba94189f03f542d22fd089a4febfbe317c9148a11239441ce8919fa54ca8d1fb8998181d97c870c679dd0ec16dbd4cb9671a86816ce9aa526dcda9ad2c23e

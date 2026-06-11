@@ -35,13 +35,13 @@ KnownVulnerableSamples:
     MD5: dbb48a1b8fa3673466b53c6f16f2eddf
     SHA1: af1f5823b678666b85c23a2e5280c1ce3924917c
     SHA256: 7afdb552a7fa25dd716fe3a55c988a59d120e78f9ee95067f31901f51987ab8d
-  Company: genitlkiwi (Benjamin XXXXX)
-  Copyright: Copyright (c) 2007 - 2017 genitlkiwi (Benjamin XXXXX)
-  CreationTimestamp: '2017-12-03 15:13:32'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2017-12-03 12:13:32'
   Date: ''
-  Description: titidrv for Windows (titicatz)
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 2.1.0.0
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeBugCheck
@@ -90,14 +90,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - FLTMGR.SYS
-  InternalName: titidrv
+  InternalName: ''
   MD5: 79e368a81e3a7ae8a5d2db97dd5138e2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: titidrv.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: titidrv (titicatz)
-  ProductVersion: 2.1.0.0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: d45d2640e1584c776a1d10e5f695d7ad
@@ -110,7 +110,7 @@ KnownVulnerableSamples:
       Entropy: 6.137944463935485
       Virtual Size: '0x319c'
     .rdata:
-      Entropy: 3.8514461681575236
+      Entropy: 3.851446168157524
       Virtual Size: '0x1340'
     .data:
       Entropy: 2.3461427985512437
@@ -175,9 +175,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

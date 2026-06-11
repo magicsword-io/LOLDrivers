@@ -124,7 +124,7 @@ KnownVulnerableSamples:
   Imphash: 21728cd772a10f8a18b2d9bfc8823b2e
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-09-26 14:15:56'
+  CreationTimestamp: '2008-09-26 01:45:56'
   RichPEHeaderMD5: e7d075a5133f3e510a76dfdb5d809384
   RichPEHeaderSHA1: 1163c5669247c0dde8a99960aa729935208a695a
   RichPEHeaderSHA256: ce4422d96dcc3230d613218aaafd5e3634a4cd684e30111eb3093c01fffd384f
@@ -158,12 +158,29 @@ KnownVulnerableSamples:
       Virtual Size: '0x2a9a'
   CompanyName: Motorola Inc.
   FileDescription: Motorola SM56 Modem WDM Driver
-  InternalName: SmSerl64.sys
-  OriginalFilename: SmSerl64.sys
-  FileVersion: 'SM56 Rel. 6.12.23 built by: WinDDK'
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: Motorola SM56 Modem
   LegalCopyright: Copyright Motorola, Inc. 1995-2008
-  ProductVersion: SM56 Rel. 6.12.23
+  ProductVersion: ''
   Signatures: {}
+  Authentihash:
+    MD5: 26c816418b290cd18299aaf23c1c340b
+    SHA1: b393c7504067827e5e5414a86342e7eadf4093e4
+    SHA256: c9b2be7c9a161967aa5028fa9ea400bb3bb8e70919bf69f6629c62dbe187d4c9
+  RichPEHeaderHash:
+    MD5: e7d075a5133f3e510a76dfdb5d809384
+    SHA1: 1163c5669247c0dde8a99960aa729935208a695a
+    SHA256: ce4422d96dcc3230d613218aaafd5e3634a4cd684e30111eb3093c01fffd384f
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WMILIB.SYS
 Tags:
 - SmSerl64.sys

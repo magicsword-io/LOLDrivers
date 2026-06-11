@@ -83,9 +83,10 @@ KnownVulnerableSamples:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: serialNumber=7155083, ??=US, ??=Delaware, ??=Private Organization,
-        C=US, postalCode=30093, ST=Georgia, L=Norcross, ??=5555 Oakbrook Parkway Suite
-        200, O=AMI US HOLDINGS INC, CN=AMI US HOLDINGS INC
+    - Subject: serialNumber=7155083, JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, C=US, postalCode=30093, ST=Georgia,
+        L=Norcross, STREET_ADDRESS=5555 Oakbrook Parkway Suite 200, O=AMI US HOLDINGS
+        INC, CN=AMI US HOLDINGS INC
       ValidFrom: '2020-09-21 00:00:00'
       ValidTo: '2023-09-21 23:59:59'
       Signature: 0aa1219fe537cf6f85a9144e7017472eed1f32156a449a50e02ed4cf73ebbf72698577f35aa306a2f80a3fe97215d89040d8ba197aa4c4fd3ae28a87b8728efc279f9685828da2d807bcdc83301fad324a131e79f26855abe6fd0e37604d5c34f27012c2d6ba21be1b268ca621fc1bd0b4bf08d7bf549653613f5b8ae6f1d2a4e34fae1a8e13cbb90f7b9e94ed50487e4d6645e29beb5fd5373e4e0ac8b48bb1566e2da8b0cf424c3ae93e4f75ab7887d8df5bb0b7cbaf623b092f69c58ea8936bbe008b66c1e1a08169893c8dee549bc847412ce9f789697109376b1cb8b7bc737f5fd522e9d330a7ecdbf9c1e4c0ac5a8368a6aa413a19084bc5bc1135ef60
@@ -167,6 +168,6 @@ KnownVulnerableSamples:
       Entropy: 3.003055907333275
       Virtual Size: '0x28'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-17 06:01:28'
+  CreationTimestamp: '2022-05-17 03:01:28'
   Imphash: 1f2627fc453dc35031a9502372bd3549
   LoadsDespiteHVCI: 'TRUE'

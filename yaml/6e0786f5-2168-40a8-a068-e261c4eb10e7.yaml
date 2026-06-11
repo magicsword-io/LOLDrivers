@@ -10,8 +10,8 @@ Commands:
   Command: sc.exe create throttlestop.sys binPath= C:\windows\temp\throttlestop.sys
     type=kernel && sc.exe start throttlestop.sys
   Description: ThrottleStop is developed by TechPowerUp and is designed to monitor
-    for and correct CPU throttling issues. However, Kaspersky researchers from the Global
-    Emergency Response Team (GERT) found out that it is being abused by attackers
+    for and correct CPU throttling issues. However, Kaspersky researchers from the
+    Global Emergency Response Team (GERT) found out that it is being abused by attackers
     to terminate defense mechanisms.
   OperatingSystem: Windows 10
   Privileges: kernel
@@ -36,14 +36,14 @@ Acknowledgement:
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
-  Description: Low-Level Driver
-  FileVersion: 3.0.0.0
+  Description: ''
+  FileVersion: ''
   Filename: throttlestop.sys
   MD5: 6bc8e3505d9f51368ddf323acb6abc49
   MachineType: AMD64
   OriginalFilename: ''
-  Product: Low-Level Driver
-  ProductVersion: 3.0.0.0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   SHA1: 82ed942a52cdcf120a8919730e00ba37619661a3
   SHA256: 16f83f056177c4ec24c7e99d01ca9d9d6713bd0497eeedb777a3ffefa99c97f0
@@ -59,10 +59,10 @@ KnownVulnerableSamples:
     SHA256: 7e09462f801fa1d5d414e57fc008d759e74dac1d65c145f2ddff762b9c56aff8
   Sections:
     .text:
-      Entropy: 6.181832983615429
+      Entropy: 6.18183298361543
       Virtual Size: '0x15b1'
     .rdata:
-      Entropy: 4.555050607629599
+      Entropy: 4.5550506076296
       Virtual Size: '0xf04'
     .data:
       Entropy: 2.0558597124797804
@@ -71,7 +71,7 @@ KnownVulnerableSamples:
       Entropy: 4.169987450740597
       Virtual Size: '0x2c4'
     PAGE:
-      Entropy: 6.252641383334581
+      Entropy: 6.25264138333458
       Virtual Size: '0x1987'
     INIT:
       Entropy: 4.940576220394392
@@ -83,9 +83,9 @@ KnownVulnerableSamples:
       Entropy: 3.7091479170272446
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-10-06 17:34:27'
+  CreationTimestamp: '2020-10-06 13:34:27'
   InternalName: ''
-  Copyright: Copyright 2004-2020 (c). All rights reserved.
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -157,13 +157,17 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=US, ??=Washington, ??=Private Organization, serialNumber=604 057
-        982, C=US, ST=Washington, L=Spokane, O=TechPowerUp LLC, CN=TechPowerUp LLC
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Washington,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=604 057 982, C=US, ST=Washington,
+        L=Spokane, O=TechPowerUp LLC, CN=TechPowerUp LLC
       ValidFrom: '2019-08-10 00:00:00'
       ValidTo: '2022-06-15 12:00:00'
       Signature: 4384432152977ded7405b677aeaccf0f77976f3fc5ef542e99175672e48ffbc43950444c565620bd8824b94637ecb900001c02525a1cc27bac59574988698e3594bff43723f956c56a484dd5ba6512f77082ac9ffd76f6e39e29c20a70e5d89933c1e06ad48616cff5fb283b180ac45fb2f2fc922cf07aced1b9f89f4e0ba33b9bc9d2384780fe0364b6abf0f756919ef0188da554d9c5e33c6064e16d14ea64de273f1278e802c769c630f5beee2fcd7708cad6a3b7505ba5f0de85828339362364ff0b2c50f223a883c18f02f3569698229bef4adb91ce6287a957dd0405d558c64a5af821a66652909537d01a48acf40221265e1d3bfbe87acc96c95ce87f
@@ -171,6 +175,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0afc69772ae1ea9a285731b6aa4523c6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8092ae05898c55302543adff23e8d5bf
         SHA1: 307e52adab5b03498fc63b5dbd4923a062a71166
@@ -184,6 +191,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -198,6 +208,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -211,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d

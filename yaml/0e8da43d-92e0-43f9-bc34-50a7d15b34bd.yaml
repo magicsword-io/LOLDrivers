@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: bcc13f939e945b7395681cc6299a45bb
     SHA1: 96faa975feb28588372a98a1e77d98af7fc90e41
     SHA256: c9532a354c24fd256c24534c554bca5a126414eb496dbd3223fe9486418df2ea
-  Description: ETDi Support Driver
-  Company: HP Development Company
-  InternalName: etdsupp.sys
-  OriginalFilename: etdsupp.sys
-  FileVersion: 18.0.0.0
-  Product: HP ETDi Driver DLL
-  ProductVersion: 18.0.0.0
-  Copyright: (C) Copyright 1991-2022 Hewlett-Packard Development Company, L.P.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -85,8 +85,9 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: ??=Private Organization, ??=US, ??=California, serialNumber=C2895304,
-        C=US, ST=California, L=Palo Alto, O=HP Inc., OU=HP Cybersecurity, CN=HP Inc.
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=US,
+        JURISDICTION_OF_INCORPORATION_SP=California, serialNumber=C2895304, C=US,
+        ST=California, L=Palo Alto, O=HP Inc., OU=HP Cybersecurity, CN=HP Inc.
       ValidFrom: '2022-01-19 00:00:00'
       ValidTo: '2024-01-19 23:59:59'
       Signature: 9500d1da5fadfef36a40966dce1ca0cee421500966b33f49f4c10f8acfea86f00dffde1f543367816b85f0ff09bc7f4767f7ca4533ea1b94c8eb026cd04936cd558ae73815b87a5e7a5b25a8b8aa9fb309f20a455067b17f1648d46a46f1f714b6f7c3df658545a43513e08b23828fa4e2180bf7356ab845318358cb4655b3c2c5efbf3ef01ebf6a172a271d714da3b844a184412a57d7e36e52480f8d3ced0fb1fa5c42257b05904820138acaea141a50294d827b92ef804d25d7cb36426edb915c90e97b8461df38f47ecb905b29b40ecf54dea2b060276444740357f2e8557a5fe064a03426c9408652e88a9b253f7bd37334199ce81b866b73b897217dcf019c8c7e5be66905b528a9eda563bca9b4922ea972df2e68c06d3396ac1bb76e4551f750ebd66d1c68edb6ecffdd8f9f492b7630e4a0591867edccec6d5cb6d58c35b89a8aebdc12c210b38289ecf419f8e82c1a03e2c8761b984bafafa502db482659a1ff256eee72175bc1a3d5dd5afa71fedbd7a8f4ad1cf6e569e382775ed6828dedeea6bf8689ee18dbe380140949cdc4a827622f23841731bb062941226d030e3873a425b078fe4926ef1985d8aecfce1140848b565dc0b5b722bf11fe129f6caee67af3e1c797562224849cfecbeda2f6c801d727f93a53e8b01cf475c541f3f4e26cf4c34e7b28cdb059f46880d92c6aab7d15eca050c395e4035fa5
@@ -134,6 +135,6 @@ KnownVulnerableSamples:
       Entropy: 3.046439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-11-07 18:38:44'
+  CreationTimestamp: '2022-11-07 15:38:44'
   Imphash: 3552d8a0022e7f3136b667e6d1e402f2
   LoadsDespiteHVCI: 'FALSE'

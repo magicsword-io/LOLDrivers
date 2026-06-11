@@ -35,13 +35,13 @@ KnownVulnerableSamples:
     MD5: 20a4f355e1fcd46af497d46edcd2c092
     SHA1: 99afa3bb2fc89de858bc705495ec51f0571bc767
     SHA256: 516f0bbbc1b47ec2d83cc51be104920899193e2784a45b835fe68f864af1733b
-  Company: 'Realtek                                            '
-  Copyright: 'Copyright (C) 2020 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2020-07-09 05:28:49'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2020-07-09 02:28:49'
   Date: ''
-  Description: Realtek IO Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1.009.0709.2020
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KfRaiseIrql
@@ -102,14 +102,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: 'rtkiow8x64.sys '
+  InternalName: ''
   MD5: 480f2ca1679056019dbc8abece3fa3cb
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: 'rtkiow8x64.sys '
+  OriginalFilename: ''
   PDBPath: ''
-  Product: 'Realtek IO Driver                      '
-  ProductVersion: 1.009.0709.2020
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: cd1e23f2655cfcbe9a7cc179aa127afe
@@ -164,8 +164,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=TW, ??=Private Organization, serialNumber=22671299, C=TW, L=HSINCHU,
-        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=22671299, C=TW, L=HSINCHU, O=Realtek Semiconductor Corp., CN=Realtek
+        Semiconductor Corp.
       ValidFrom: '2020-01-09 00:00:00'
       ValidTo: '2020-09-15 12:00:00'
       Signature: 622ab6660f0bb6b692dbbfe701f462a2f59e43a039ed1bf699a2e55c1871b0d24036819d02f456b8b5903628c5cf7094cd138332eed3e985232c30c7b3bb7c0640f06bb230d5c1eccd4e13d2377c168df20895c77a8c87b44c6200f6f06bc3bc40b285efa3f855f75c7ff3518dfb299c638b5d560fb94d3e97eea3a29a7524a0c1192311571fd06905346264c6d6c8336e08cb34d9ee7440677b92aa061981364db6bb67b4d3479041e85c7b4e31e009f3d315b75c6c50d8cefe6b63475ac598505235fe9c5f69bee61d70940d47ac10a760e3eac26e268f21508b5e567e6d92c5b1ba9b1de5ebc9da9ac472d6ca33dae12b01fca6113e6e8082bd00a3a33840

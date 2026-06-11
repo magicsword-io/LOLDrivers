@@ -45,12 +45,12 @@ KnownVulnerableSamples:
     SHA1: b978b3595a1a8cb5a345bce980178e8abf5e0bae
     SHA256: 15bc804877a607ba0d017df9f6ac951ac7ffbcca8069c5ba28e0cf505f7553b8
   Company: ''
-  Copyright: Copyright (C) BIOSTAR Corp. 2011
-  CreationTimestamp: '2012-04-14 02:29:52'
+  Copyright: ''
+  CreationTimestamp: '2012-04-13 23:29:52'
   Date: ''
-  Description: SMI Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1.0.0.3
+  FileVersion: ''
   Filename: BSMIx64.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -67,13 +67,13 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: BSMI.sys
+  InternalName: ''
   MD5: 444f538daa9f7b340cfd43974ed43690
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: BSMI.sys
+  OriginalFilename: ''
   Product: ''
-  ProductVersion: 1.0.0.3
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: ba346012eed73e59e9d5db50e3a6eac5
@@ -170,9 +170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

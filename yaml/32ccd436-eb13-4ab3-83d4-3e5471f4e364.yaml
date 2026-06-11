@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: bb59340eceecb279389290775536523a
     SHA1: b3410021ea5a46818d9ff05a96c2809a9abe8e4a
     SHA256: b6bf2460e023b1005cc60e107b14a3cfdf9284cc378a086d92e5dcdf6e432e2c
-  Company: ASRock Incorporation
-  Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2016-04-08 23:22:23'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2016-04-08 20:22:23'
   Date: ''
-  Description: ASRock IO Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '1.00.00.0000 built by: WinDDK'
+  FileVersion: ''
   Filename: AsrDrv103.sys
   ImportedFunctions:
   - RtlQueryRegistryValues
@@ -110,13 +110,13 @@ KnownVulnerableSamples:
   - ntoskrnl.exe
   - HAL.dll
   - cng.sys
-  InternalName: AsrDrv.sys
+  InternalName: ''
   MD5: 7c72a7e1d42b0790773efd8700e24952
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: AsrDrv.sys
-  Product: ASRock IO Driver
-  ProductVersion: 1.00.00.0000
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6540c04d181ea1395978a08c3d816451
@@ -217,9 +217,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

@@ -46,13 +46,13 @@ KnownVulnerableSamples:
     MD5: 1244664c7917f03f2b43b30e132f64b5
     SHA1: d6f015693e56a3ebba725a6591cc07443d0e1661
     SHA256: db68a9cbe22b22cba782592eef76e63e080ee8d30943be6da694701f44b6c33e
-  Company: OpenLibSys.org
-  Copyright: Copyright (C) 2007 OpenLibSys.org
-  CreationTimestamp: '2007-10-19 01:03:47'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-10-18 22:03:47'
   Date: ''
-  Description: OpenLibSys
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1.0.0.2
+  FileVersion: ''
   Filename: OpenLibSys.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -70,13 +70,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: OpenLibSys.sys
+  InternalName: ''
   MD5: ccf523b951afaa0147f22e2a7aae4976
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: OpenLibSys.sys
-  Product: OpenLibSys
-  ProductVersion: 1.0.0.2
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6c9272bb390e89b75934eea3b15a1858
@@ -203,9 +203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -222,13 +222,13 @@ KnownVulnerableSamples:
     MD5: bd94d3a0abc78f87147bf8ea41aad734
     SHA1: 7ecbd5098c4161b95dd7e674003dd53069374f3e
     SHA256: 6f3937451f0170a0aec3033cadceeb86ab30ee3c67add3926e116ccc20c0d9a7
-  Company: OpenLibSys.org
-  Copyright: Copyright (C) 2007 OpenLibSys.org
-  CreationTimestamp: '2007-10-23 10:03:27'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-10-23 07:03:27'
   Date: ''
-  Description: OpenLibSys
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1.0.1.3
+  FileVersion: ''
   Filename: OpenLibSys.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -246,13 +246,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: OpenLibSys.sys
+  InternalName: ''
   MD5: 96421b56dbda73e9b965f027a3bda7ba
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: OpenLibSys.sys
-  Product: OpenLibSys
-  ProductVersion: 1.0.1.3
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6c9272bb390e89b75934eea3b15a1858
@@ -379,9 +379,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

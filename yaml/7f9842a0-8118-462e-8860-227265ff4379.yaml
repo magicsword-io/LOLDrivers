@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: eed041909fbbbe05f6cc68006d541b0d
     SHA1: d3809c4439f7828a4a76aef68627eb1e6e703d43
     SHA256: c84806a49da944c20a01e7dba7721e88859a5f65ec338ddb5da3a0d6895e7268
-  Description: NTIOLib
-  Company: MSI
-  InternalName: NTIOLib.sys
-  OriginalFilename: NTIOLib.sys
-  FileVersion: 1.0.0.0
-  Product: NTIOLib
-  ProductVersion: 1.0.0.0
-  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -157,9 +157,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -193,7 +193,7 @@ KnownVulnerableSamples:
       Entropy: 4.2991771373904095
       Virtual Size: '0xea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-17 06:23:54'
+  CreationTimestamp: '2014-03-17 03:23:54'
   Imphash: a1d29a3af6402793ec9d23883512938a
   LoadsDespiteHVCI: 'FALSE'
 - Filename: NTIOLib.sys
@@ -204,14 +204,14 @@ KnownVulnerableSamples:
     MD5: dbca419735abe58370b336d8d3da5ad8
     SHA1: 2986d3251738a29bd73f2938545cd3ffc8e2aadc
     SHA256: c0fc1c1c1ff39ea9a695996482ab31cb65c74aaf9f20cba21e9ff34ef054a008
-  Description: NTIOLib
-  Company: MSI
-  InternalName: NTIOLib.sys
-  OriginalFilename: NTIOLib.sys
-  FileVersion: 1.0.0.0
-  Product: NTIOLib
-  ProductVersion: 1.0.0.0
-  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -322,9 +322,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -358,7 +358,7 @@ KnownVulnerableSamples:
       Entropy: 4.290630128843401
       Virtual Size: '0xea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-10-25 22:11:23'
+  CreationTimestamp: '2012-10-25 19:11:23'
   Imphash: a1d29a3af6402793ec9d23883512938a
   LoadsDespiteHVCI: 'FALSE'
 - Filename: NTIOLib.sys
@@ -369,14 +369,14 @@ KnownVulnerableSamples:
     MD5: 2f6cff8603866aad75277f79179ca16e
     SHA1: 55df6777d508865628b433631b8faaaa38dc0908
     SHA256: 2018ad5f3695295599f756caf556722291485cd67eb9c3f7ec701b206cca4e00
-  Description: NTIOLib
-  Company: MSI
-  InternalName: NTIOLib.sys
-  OriginalFilename: NTIOLib.sys
-  FileVersion: 1.0.0.0
-  Product: NTIOLib
-  ProductVersion: 1.0.0.0
-  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -474,9 +474,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -510,7 +510,7 @@ KnownVulnerableSamples:
       Entropy: 3.2498244109800973
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-13 22:30:19'
+  CreationTimestamp: '2012-02-13 19:30:19'
   Imphash: d6f977640d4810a784d152e4d3c63a6b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: NTIOLib.sys
@@ -521,14 +521,14 @@ KnownVulnerableSamples:
     MD5: 00f93b0c0de351b93a4c71c3595e968e
     SHA1: 02a53e837651d224f3c91aaf37a3067e81d2f6ac
     SHA256: ee15f36881b84a2da82fee37e8ad65e47f1224e64d1d6fe43f7a5ad2efe92f5d
-  Description: NTIOLib
-  Company: MSI
-  InternalName: NTIOLib.sys
-  OriginalFilename: NTIOLib.sys
-  FileVersion: 1.0.0.0
-  Product: NTIOLib
-  ProductVersion: 1.0.0.0
-  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -639,9 +639,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -675,7 +675,7 @@ KnownVulnerableSamples:
       Entropy: 4.284529245435381
       Virtual Size: '0xea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-10-25 03:57:06'
+  CreationTimestamp: '2012-10-25 00:57:06'
   Imphash: a1d29a3af6402793ec9d23883512938a
   LoadsDespiteHVCI: 'FALSE'
 - Filename: NTIOLib.sys
@@ -686,14 +686,14 @@ KnownVulnerableSamples:
     MD5: fc7eef91aa6574643560ad954e800138
     SHA1: cc9c3d9b69f4a4be1f2c3dc33ab7441f41e47a55
     SHA256: 1f5e9fc579028d5cae916743528891aa39a4eecb3f573ea522eeb8da97f95953
-  Description: NTIOLib
-  Company: MSI
-  InternalName: NTIOLib.sys
-  OriginalFilename: NTIOLib.sys
-  FileVersion: 1.0.0.0
-  Product: NTIOLib
-  ProductVersion: 1.0.0.0
-  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -805,9 +805,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -841,6 +841,6 @@ KnownVulnerableSamples:
       Entropy: 4.284529245435381
       Virtual Size: '0xea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-01-05 22:03:57'
+  CreationTimestamp: '2011-01-05 19:03:57'
   Imphash: a1d29a3af6402793ec9d23883512938a
   LoadsDespiteHVCI: 'FALSE'

@@ -35,16 +35,16 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
-- Company: Advanced Micro Devices
+- Company: ''
   Date: ''
-  Description: AMD OverDrive Service Driver
-  FileVersion: '4.2.0 built by: WinDDK'
+  Description: ''
+  FileVersion: ''
   Filename: ''
   MD5: 2faa725dd9bb22b2100e3010f8a72182
   MachineType: I386
-  OriginalFilename: AODDriver2.sys
-  Product: AMD OverDrive Service Driver
-  ProductVersion: 4.2.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   SHA1: 5ce273aa80ed3b0394e593a999059096682736ae
   SHA256: 070ff602cccaaef9e2b094e03983fd7f1bf0c0326612eb76593eabbf1bda9103
@@ -81,9 +81,9 @@ KnownVulnerableSamples:
       Entropy: 5.619199574410783
       Virtual Size: '0x80a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-21 02:46:49'
-  InternalName: AODDriver2.sys
-  Copyright: "Copyright \xA9 2012 AMD, Inc."
+  CreationTimestamp: '2012-11-20 23:46:49'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -213,9 +213,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -286,7 +286,7 @@ KnownVulnerableSamples:
       Entropy: 3.8816129331502913
       Virtual Size: '0xb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-10-11 03:52:30'
+  CreationTimestamp: '2007-10-11 00:52:30'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -319,16 +319,16 @@ KnownVulnerableSamples:
   - WRITE_PORT_ULONG
   Signatures: {}
   LoadsDespiteHVCI: 'TRUE'
-- Company: Advanced Micro Devices
+- Company: ''
   Date: ''
-  Description: AMD OverDrive Service Driver
-  FileVersion: '3.1.0 built by: WinDDK'
+  Description: ''
+  FileVersion: ''
   Filename: ''
   MD5: 43ed1d08c19626688db34f63e55114fb
   MachineType: AMD64
-  OriginalFilename: AODDriver.sys
-  Product: AMD OverDrive Service Driver
-  ProductVersion: 3.1.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   SHA1: 0f2fdfb249c260c892334e62ab77ac88fcb8b5e4
   SHA256: 3c11dec1571253594d64619d8efc8c0212897be84a75a8646c578e665f58bf5d
@@ -362,9 +362,9 @@ KnownVulnerableSamples:
       Entropy: 3.249834790290215
       Virtual Size: '0x3a8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-09-02 22:41:48'
-  InternalName: AODDriver.sys
-  Copyright: Copyright 2009 AMD, Inc.
+  CreationTimestamp: '2009-09-02 19:41:48'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -452,9 +452,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -525,7 +525,7 @@ KnownVulnerableSamples:
       Entropy: 4.910053868611627
       Virtual Size: '0x300'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-13 00:38:55'
+  CreationTimestamp: '2008-10-12 21:38:55'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -615,9 +615,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -688,7 +688,7 @@ KnownVulnerableSamples:
       Entropy: 4.499060646383309
       Virtual Size: '0xe8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-13 00:42:32'
+  CreationTimestamp: '2008-10-12 21:42:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -766,7 +766,7 @@ KnownVulnerableSamples:
       Entropy: 4.910053868611627
       Virtual Size: '0x300'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-13 00:38:55'
+  CreationTimestamp: '2008-10-12 21:38:55'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -856,9 +856,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -889,16 +889,16 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-- Company: Advanced Micro Devices
+- Company: ''
   Date: ''
-  Description: AMD OverDrive Service Driver
-  FileVersion: '3.1.0 built by: WinDDK'
+  Description: ''
+  FileVersion: ''
   Filename: ''
   MD5: b934322c68c30dceca96c0274a51f7b0
   MachineType: AMD64
-  OriginalFilename: AODDriver.sys
-  Product: AMD OverDrive Service Driver
-  ProductVersion: 3.1.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   SHA1: 18938e0d924ee7c0febdbf2676a099e828182c1c
   SHA256: 5a0b10a9e662a0b0eeb951ffd2a82cc71d30939a78daebd26b3f58bb24351ac9
@@ -917,7 +917,7 @@ KnownVulnerableSamples:
       Entropy: 5.979993977618507
       Virtual Size: '0x7243'
     .rdata:
-      Entropy: 4.440197935949107
+      Entropy: 4.440197935949108
       Virtual Size: '0x7b4'
     .data:
       Entropy: 1.6792243032035326
@@ -938,9 +938,9 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622462
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-04 05:58:24'
-  InternalName: AODDriver.sys
-  Copyright: Copyright 2009 AMD, Inc.
+  CreationTimestamp: '2010-03-04 02:58:24'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1058,9 +1058,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1131,7 +1131,7 @@ KnownVulnerableSamples:
       Entropy: 4.922009201916293
       Virtual Size: '0x300'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-18 03:59:35'
+  CreationTimestamp: '2009-03-18 00:59:35'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1221,9 +1221,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1254,16 +1254,16 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-- Company: Advanced Micro Devices
+- Company: ''
   Date: ''
-  Description: AMD OverDrive Service Driver
-  FileVersion: '3.1.0 built by: WinDDK'
+  Description: ''
+  FileVersion: ''
   Filename: ''
   MD5: 0ad87bba19f0b71ccb2d32239abd49ec
   MachineType: I386
-  OriginalFilename: AODDriver.sys
-  Product: AMD OverDrive Service Driver
-  ProductVersion: 3.1.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   SHA1: e0ee5ea6693c26f21b143ef9b133f53efe443b1e
   SHA256: 7a1105548bfc4b0a1b7b891cde0356d39b6633975cbcd0f2e2d8e31b3646d2ca
@@ -1297,9 +1297,9 @@ KnownVulnerableSamples:
       Entropy: 4.577010549473324
       Virtual Size: '0x102'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-08-31 02:17:54'
-  InternalName: AODDriver.sys
-  Copyright: Copyright 2009 AMD, Inc.
+  CreationTimestamp: '2009-08-30 23:17:54'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1335,16 +1335,16 @@ KnownVulnerableSamples:
   - WRITE_PORT_ULONG
   Signatures: {}
   LoadsDespiteHVCI: 'TRUE'
-- Company: Advanced Micro Devices
+- Company: ''
   Date: ''
-  Description: AMD OverDrive Service Driver
-  FileVersion: '3.2.0 built by: WinDDK'
+  Description: ''
+  FileVersion: ''
   Filename: ''
   MD5: 5bd30b502168013c9ea03a5c2f1c9776
   MachineType: I386
-  OriginalFilename: AODDriver.sys
-  Product: AMD OverDrive Service Driver
-  ProductVersion: 3.2.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   SHA1: 7b4c922415e13deaf54bb2771f2ae30814ee1d14
   SHA256: 81d54ebef1716e195955046ffded498a5a7e325bf83e7847893aa3b0b3776d05
@@ -1381,9 +1381,9 @@ KnownVulnerableSamples:
       Entropy: 5.4358651010980035
       Virtual Size: '0x724'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-04 05:41:36'
-  InternalName: AODDriver.sys
-  Copyright: Copyright 2010 AMD, Inc.
+  CreationTimestamp: '2010-03-04 02:41:36'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1476,7 +1476,7 @@ KnownVulnerableSamples:
     SHA256: 37813c3a77f50a0b9f4a252dada342da204ad6a12289a34afc261f71b0260e41
   Sections:
     .text:
-      Entropy: 6.349610588453567
+      Entropy: 6.349610588453566
       Virtual Size: '0x9ac'
     .rdata:
       Entropy: 4.061114097772852
@@ -1491,7 +1491,7 @@ KnownVulnerableSamples:
       Entropy: 4.917368719792384
       Virtual Size: '0x2a0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-10-11 02:26:50'
+  CreationTimestamp: '2007-10-10 23:26:50'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1558,7 +1558,7 @@ KnownVulnerableSamples:
       Entropy: 5.003048441234915
       Virtual Size: '0x12e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-08-25 05:01:19'
+  CreationTimestamp: '2008-08-25 02:01:19'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1597,16 +1597,16 @@ KnownVulnerableSamples:
   - READ_PORT_UCHAR
   Signatures: {}
   LoadsDespiteHVCI: 'TRUE'
-- Company: Advanced Micro Devices
+- Company: ''
   Date: ''
-  Description: AMD OverDrive Service Driver
-  FileVersion: '4.2.0 built by: WinDDK'
+  Description: ''
+  FileVersion: ''
   Filename: ''
   MD5: 5f44a01ccc530b34051b9d0ccb5bb842
   MachineType: AMD64
-  OriginalFilename: AODDriver2.sys
-  Product: AMD OverDrive Service Driver
-  ProductVersion: 4.2.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   SHA1: c520a368c472869c3dc356a7bcfa88046352e4d9
   SHA256: f4dc11b7922bf2674ca9673638e7fe4e26aceb0ebdc528e6d10c8676e555d7b2
@@ -1646,9 +1646,9 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622462
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-21 02:47:09'
-  InternalName: AODDriver2.sys
-  Copyright: "Copyright \xA9 2012 AMD, Inc."
+  CreationTimestamp: '2012-11-20 23:47:09'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1767,9 +1767,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

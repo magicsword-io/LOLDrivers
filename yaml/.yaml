@@ -1,0 +1,26 @@
+﻿Id: 
+Tags:
+  - KslD.sys
+Author: 'Noam Pomerantz'
+Created: '2026-03-26'
+MitreID: T1068
+Category: 'vulnerable driver'
+Verified: 'TRUE'
+Commands:
+  Command: 'reg add "HKLM\SYSTEM\CurrentControlSet\Services\KslD\SharedState" /v AllowedProcessName /t REG_SZ /d "\Device\HarddiskVolumeX\Path\To\Exploit.exe" /f && sc start KslD'
+  Description: 'KslD.sys is a legitimate Microsoft-signed Windows Defender support driver that can be abused as a Living off the Land (LotL) vector to achieve unrestricted kernel memory access. The driver provides extensive capabilities to read physical and virtual memory, defeat KASLR via DPC-based CPU register dumps, enumerate process tokens, and dump LSASS credentials by bypassing Protected Process Light (PPL) through a manual page table walk. It natively ships with Windows and requires local administrator privileges to hijack its weak process-name validation check by modifying the SharedState registry subkey. Because the driver is inherently trusted and pre-installed, it provides attackers with kernel-level capabilities to extract sensitive credentials and map the system state without dropping external binaries, loading third-party drivers, or triggering vulnerable driver blocklists.'
+  Usecase: 'Post-Exploitation, Credential Dumping (PPL Bypass), KASLR Bypass'
+  Privileges: 'kernel'
+  OperatingSystem: 'Windows 10'
+Resources:
+  - 'https://github.com/magicsword-io/LOLDrivers'
+  - 'https://github.com/Pumi96/DefenderDump'
+  - 'https://github.com/S1lkys/KslKatz'
+Acknowledgement:
+  Person: ''
+  Handle: '@S1lky_1337, @CyberSkyDog'
+Detection:
+  - type: 'Sigma'
+    value: ''
+KnownVulnerableSamples:
+  - Filename: KslD.sys

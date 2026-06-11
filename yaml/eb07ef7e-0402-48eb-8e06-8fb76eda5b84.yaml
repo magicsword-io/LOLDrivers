@@ -48,14 +48,14 @@ KnownVulnerableSamples:
     MD5: e8daeb4eae6a46b46de0e42fcfeece79
     SHA1: 87c155d933ca3513e29d235562d96b88d3913cde
     SHA256: dcd5404c83f74f0b7a8d0735174af78782aaa99d2b5b5b24f44c48b295a2ba31
-  Description: LHA
-  Company: LG Electronics Inc.
-  InternalName: LHA.sys
-  OriginalFilename: LHA.sys
-  FileVersion: '6.1.7600.16385 built by: WinDDK'
-  Product: "Microsoft\xAE Windows\xAE Operating System"
-  ProductVersion: 6.1.7600.16385
-  Copyright: ultrabios@hotmail.com
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -120,7 +120,8 @@ KnownVulnerableSamples:
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
         SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=KR, ST= , L= , O=LG Electronics Inc., CN=LG Electronics Inc.
+    - Subject: "C=KR, ST=\uACBD\uAE30\uB3C4 \uD3C9\uD0DD\uC2DC, L=\uACBD\uAE30\uB3C4\
+        \ \uD3C9\uD0DD\uC2DC, O=LG Electronics Inc., CN=LG Electronics Inc."
       ValidFrom: '2014-07-30 00:00:00'
       ValidTo: '2017-09-27 23:59:59'
       Signature: e5240868f932855b412fcfb55a2d2e6a117e180f2c1ace813e5d234bce408b042a504dbade9c7586a4d54149845acde53075e86e0d739e4a3d1c891834beb37785f0c08c043488dc70c3290e652f0a24836354692556ad87b4eceb24d91348a7becbb7854185e8fc135c01577c182b600d76865a11382f89ccc2ca73d56c4a15a6d43f57c2dcd007639aaab4902b1b0c06242ad6e138c7499a3fb6aa3483454aac67a5ba6cadb29cbeb453921b3f1f9d54dd7660305846e376c5811e0b9d129a0fe079a00cd0e20c90934042bf320b952a75a9e3080c1b35b2213a406e3f2255f45cf0d9933e16b78a222f7e62b554d1f210a520f1ca97680a5d8530573d2780
@@ -202,6 +203,6 @@ KnownVulnerableSamples:
       Entropy: 3.4159725787162216
       Virtual Size: '0x380'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-28 18:11:06'
+  CreationTimestamp: '2015-12-28 15:11:06'
   Imphash: 1dd3b83f2b007f862a1d8de4a1d3303f
   LoadsDespiteHVCI: 'FALSE'

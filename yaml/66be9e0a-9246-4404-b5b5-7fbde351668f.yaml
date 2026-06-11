@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 2e6a361506f00fc7de30642776c8d3be
     SHA1: 862fef3d6a6d7488ef4d6f7799ac296cd96256b7
     SHA256: 21af8e034ca42ab24a5d1623f70de9c66eeea63d72aeb0f1846b1e04dbdf4f51
-  Description: I/O Interface driver file
-  Company: BIOSTAR Group
-  InternalName: I/O driver
-  OriginalFilename: BS_I2cIo.sys
-  FileVersion: 1, 1, 0, 0
-  Product: BIOSTAR I/O driver fle
-  ProductVersion: 1, 1, 0, 0
-  Copyright: Copyright (c) 2002-2006 BIOSTAR Group
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -114,9 +114,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -176,6 +176,6 @@ KnownVulnerableSamples:
       Entropy: 3.593030469985413
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-12-11 02:48:39'
+  CreationTimestamp: '2006-12-10 23:48:39'
   Imphash: f939ef0b7f792672866386600f82aa04
   LoadsDespiteHVCI: 'FALSE'

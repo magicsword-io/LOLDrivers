@@ -47,13 +47,13 @@ KnownVulnerableSamples:
     MD5: af368f76c059d1e07aa884e86d29bbab
     SHA1: 9c08d169b0f59a411c5b51f481622bc78bdf9c84
     SHA256: 641490e28b2a1ee223238f5d969b5abf60a1089afe597c4251b285449e6b3b04
-  Company: Windows (R) Server 2003 DDK provider
-  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2006-09-24 09:26:48'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2006-09-24 06:26:48'
   Date: ''
-  Description: SpeedFan Device Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '5.2.3790.0 built by: WinDDK'
+  FileVersion: ''
   Filename: speedfan.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -69,13 +69,13 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: speedfan.sys
+  InternalName: ''
   MD5: 5f9785e7535f8f602cb294a54962c9e7
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: speedfan.sys
-  Product: Windows (R) Server 2003 DDK driver
-  ProductVersion: 5.2.3790.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: edbbdf5bb0479e4f4a4827203aebb406
@@ -185,9 +185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

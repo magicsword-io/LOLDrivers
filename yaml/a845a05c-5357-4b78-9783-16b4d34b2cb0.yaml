@@ -45,13 +45,13 @@ KnownVulnerableSamples:
     MD5: 14260121e1984480cf6e7ec1adead3a3
     SHA1: bce48d80831090b849b7f0d2f9dffd36ec44d894
     SHA256: a2b0b2e9e458016b22ebbf47411008f0a87efd9103b125870ce37246ab5bdff0
-  Company: AVAST Software
-  Copyright: Copyright (c) 2013 AVAST Software
-  CreationTimestamp: '2013-08-30 03:36:44'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2013-08-30 00:36:44'
   Date: ''
-  Description: avast! VM Monitor
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 8.0.1497.376
+  FileVersion: ''
   Filename: aswVmm.sys
   ImportedFunctions:
   - memcpy
@@ -184,13 +184,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: aswVmm.sys
+  InternalName: ''
   MD5: a5f637d61719d37a5b4868c385e363c0
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: aswVmm.sys
-  Product: avast! Antivirus
-  ProductVersion: 8.0.1497.376
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 32e18518c09e53f4f8e4f9522b0dae95
@@ -288,9 +288,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

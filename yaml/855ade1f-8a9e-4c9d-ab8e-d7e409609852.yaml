@@ -48,13 +48,13 @@ KnownVulnerableSamples:
     MD5: 1e7d48bdea295db001ff57b6d05d99a2
     SHA1: 95a797b14c5718495e847f1aa7a5b554d1855893
     SHA256: 45b7ec74cc78651975d01d88308f3231df4c96036d6c2273d79f53abdfc8888c
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2009 Elaborate Bytes AG
-  CreationTimestamp: '2009-01-29 17:57:56'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-01-29 14:57:56'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 2, 0
+  FileVersion: ''
   Filename: elbycdio.sys
   ImportedFunctions:
   - ZwWriteFile
@@ -102,13 +102,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: ae5eb2759305402821aeddc52ba9a6d6
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: eb06a2eb0c23a14191762653f6ae93bb
@@ -235,9 +235,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -254,12 +254,12 @@ KnownVulnerableSamples:
     MD5: 350ab25a105b2fee583f1b903d48788e
     SHA1: 23a6345ab41ff68e31cef025de23cc8c81c90725
     SHA256: 86236392bb2cc77100bd83d34a30e3fb60aa727d0b11c147a838d9a205bae80e
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2009 Elaborate Bytes AG
-  CreationTimestamp: '2009-02-17 12:11:23'
-  Description: ElbyCD Windows x64 I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-02-17 09:11:23'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 3, 2
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - KeAcquireSpinLockRaiseToDpc
@@ -305,13 +305,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 702d5606cf2199e0edea6f0e0d27cd10
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: 19c3041e63a42fad9800c3d4098a28a7
     SHA1: 083ef31132cacb2ead9d826d90646517ca732570
@@ -432,9 +432,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -451,12 +451,12 @@ KnownVulnerableSamples:
     MD5: 5560e048b895a592a481f9340852e3cd
     SHA1: 1e73dbe3d0bed9def62c1f76a0c58aa6c61e8f74
     SHA256: d378162a47648bed192270ab4ddd67c99b4ebe8093a267fa1fe1e092559504b0
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2007 Elaborate Bytes AG
-  CreationTimestamp: '2007-02-28 15:56:05'
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-02-28 12:56:05'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 2
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -495,13 +495,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 945ef111161bae49075107e5bc11a23f
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: c15e20cb179a835c6a295f891d4f43f6
     SHA1: fb716dec77e711df26bca8c29284c5c21c92a808
@@ -621,9 +621,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -640,12 +640,12 @@ KnownVulnerableSamples:
     MD5: 46eca1eab6ab83208b56787f55ed4117
     SHA1: 1b62759087cbe7f5f9a82477bc2f2b19bb51f41d
     SHA256: e35d09a903d76810830aff2fc87bb3071026d982a334b3ee4c68f66cba865109
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2008 Elaborate Bytes AG
-  CreationTimestamp: '2008-07-16 16:59:48'
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2008-07-16 13:59:48'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 1, 1
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - ZwWriteFile
@@ -700,13 +700,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 24fe18891c173a7c76426d08d2b0630e
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: 27082193599c13d88cd3571465c0869f
     SHA1: 0ca5abc904d8a25537355902fe3e897263b7c780
@@ -827,9 +827,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -846,12 +846,12 @@ KnownVulnerableSamples:
     MD5: efa9728ff65fc5bd690400a9a6252642
     SHA1: b827692fe57b0b51f7671d55c0a5dd6446342acd
     SHA256: 911541d26b605a97ba099563b9eb7e027c102f139dba5884a57df5a13cf3dcef
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2007 Elaborate Bytes AG
-  CreationTimestamp: '2007-08-07 15:48:32'
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-08-07 12:48:32'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 1, 0
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - ZwWriteFile
@@ -910,13 +910,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: aaa8999a169e39fb8b48ae49cd6ac30a
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: 2bd828d8b8ded8e0c78b284e2297acf9
     SHA1: 2ab50048d7b02cbbbffdf54058b0df8f317c21af
@@ -1037,9 +1037,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1056,12 +1056,12 @@ KnownVulnerableSamples:
     MD5: 2b8c47b3e15625119ef7576646fdefda
     SHA1: 5ad820b5cac4e44ded1534169631e7d3fc8547d1
     SHA256: 8907c476440abdd7f71feb068443a7c9736aa6bf625dfb8b6931c46341aa4abf
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2007 Elaborate Bytes AG
-  CreationTimestamp: '2007-08-01 17:38:24'
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-08-01 14:38:24'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 7
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - ZwWriteFile
@@ -1121,13 +1121,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: d21fba3d09e5b060bd08796916166218
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: 589450fa6c6213445bb9aa901c944d47
     SHA1: de49771e01d34ce6f4663a14eea50c9f509ab899
@@ -1139,7 +1139,7 @@ KnownVulnerableSamples:
       Entropy: 6.418688362028714
       Virtual Size: '0x2f68'
     .rdata:
-      Entropy: 7.152099793791149
+      Entropy: 7.15209979379115
       Virtual Size: '0x5e4'
     .data:
       Entropy: 2.0
@@ -1248,9 +1248,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1267,12 +1267,12 @@ KnownVulnerableSamples:
     MD5: fc16498ddf3716e03fdd527c456ea80b
     SHA1: 7436e16cf348558015593cbf5ab9c117d97738cc
     SHA256: a3cf1a6edd205e04653b4338c077072ee753cde0a692490ecaf7afde27df5f0b
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2006 Elaborate Bytes AG
-  CreationTimestamp: '2006-12-12 17:48:53'
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2006-12-12 14:48:53'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 1
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -1311,13 +1311,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: b5326548762bfaae7a42d5b0898dfeac
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: c15e20cb179a835c6a295f891d4f43f6
     SHA1: fb716dec77e711df26bca8c29284c5c21c92a808
@@ -1437,9 +1437,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1456,12 +1456,12 @@ KnownVulnerableSamples:
     MD5: b5cb05a635b6932ea1f7c0ee35592e37
     SHA1: e8dc3aa48d494fb2bc096523e11859afdd18b10a
     SHA256: e85d36ca271c4d65abc1cdfff0e629dc5d14edb5bf97669badbb40d2715c1d47
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2008 Elaborate Bytes AG
-  CreationTimestamp: '2008-07-16 16:59:51'
-  Description: ElbyCD Windows x64 I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2008-07-16 13:59:51'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 1, 1
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - KeAcquireSpinLockRaiseToDpc
@@ -1514,13 +1514,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: e9ccb6bac8715918a2ac35d8f0b4e1e6
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: add874dc7800e93a88bff903834a5d72
     SHA1: ed0bb5ae3434fbd499bdb7a1a42a5bae1a47966d
@@ -1541,7 +1541,7 @@ KnownVulnerableSamples:
       Entropy: 4.160152730018761
       Virtual Size: '0x2e8'
     INIT:
-      Entropy: 5.032885005168776
+      Entropy: 5.032885005168775
       Virtual Size: '0x610'
     .rsrc:
       Entropy: 3.3171665901498995
@@ -1641,9 +1641,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1660,12 +1660,12 @@ KnownVulnerableSamples:
     MD5: 47a02497d57e9ffa7ab2490d15a0bf90
     SHA1: da00f69b9d1e4a997094651f4af2c0faad653a10
     SHA256: c1bbe628f79528417ea741dfad2f589fc4e5c62152e632a89ed080da029d5384
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2008 Elaborate Bytes AG
-  CreationTimestamp: '2008-07-21 08:11:57'
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2008-07-21 05:11:57'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 1, 2
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - ZwWriteFile
@@ -1720,13 +1720,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 28cb0b64134ad62c2acf77db8501a619
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: 27082193599c13d88cd3571465c0869f
     SHA1: 0ca5abc904d8a25537355902fe3e897263b7c780
@@ -1847,9 +1847,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1866,12 +1866,12 @@ KnownVulnerableSamples:
     MD5: fc16498ddf3716e03fdd527c456ea80b
     SHA1: 7436e16cf348558015593cbf5ab9c117d97738cc
     SHA256: a3cf1a6edd205e04653b4338c077072ee753cde0a692490ecaf7afde27df5f0b
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2006 Elaborate Bytes AG
-  CreationTimestamp: '2006-12-12 17:48:53'
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2006-12-12 14:48:53'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 1
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -1910,13 +1910,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: f141db170bb4c6e088f30ddc58404ad3
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: c15e20cb179a835c6a295f891d4f43f6
     SHA1: fb716dec77e711df26bca8c29284c5c21c92a808
@@ -2036,9 +2036,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2055,12 +2055,12 @@ KnownVulnerableSamples:
     MD5: c18c29b48a4e04a3cd761dc733cfda55
     SHA1: f43590d096d3ed0bbcfd2b0e41a327ba365bd9ec
     SHA256: 262268f21c789c2bdaf1950b556456a9a5114ed5759d806200b0cec107bf76d7
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2007 Elaborate Bytes AG
-  CreationTimestamp: '2007-07-20 07:58:51'
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-07-20 04:58:51'
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 4
+  FileVersion: ''
   Filename: ElbyCDIO.sys
   ImportedFunctions:
   - ZwWriteFile
@@ -2120,13 +2120,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 0634299fc837b47b531e4762d946b2ae
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   RichPEHeaderHash:
     MD5: 589450fa6c6213445bb9aa901c944d47
     SHA1: de49771e01d34ce6f4663a14eea50c9f509ab899
@@ -2247,9 +2247,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2266,13 +2266,13 @@ KnownVulnerableSamples:
     MD5: 8fded3a6c81ca6901a7d7f618e79695c
     SHA1: f164f2b99d6d505009a431e7e7702a8c07ce6df8
     SHA256: 197896f4764d0c9e146cf532bbc531f93e6d61dbf28d25e3e96e2ba48d2b6c6a
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2009 Elaborate Bytes AG
-  CreationTimestamp: '2009-02-17 12:11:28'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-02-17 09:11:28'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 3, 2
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeReleaseMutex
@@ -2322,14 +2322,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 178cc9403816c082d22a1d47fa1f9c85
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 68c265960ba9dbbeb5339eeaeac86554
@@ -2452,9 +2452,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2471,13 +2471,13 @@ KnownVulnerableSamples:
     MD5: ffb66883d7aead2388847f28741500fe
     SHA1: bf589f9a1a1db11133f2c33285694e4e578bd3eb
     SHA256: fe50be756c689ef56976d96135486ee66192a4de0b82b0d52521978fc589f6fa
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2009 Elaborate Bytes AG
-  CreationTimestamp: '2009-01-14 16:42:52'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-01-14 13:42:52'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 1, 6
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeAcquireSpinLockRaiseToDpc
@@ -2526,14 +2526,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 05b4463677e2566414ad53434ad9e7e5
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5bc8b6cc9da34212119204d829ade385
@@ -2656,9 +2656,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2675,13 +2675,13 @@ KnownVulnerableSamples:
     MD5: f6ec1910d05b0270c47ce480c15bc7cd
     SHA1: 43632833ba3e81cc5a130e11f6feb5937c1c6f21
     SHA256: 253a549a1e13a5a7e242ac1b39d5bebc61dcec7794171a58093700ae760d4b71
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2008 Elaborate Bytes AG
-  CreationTimestamp: '2008-07-21 08:11:55'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2008-07-21 05:11:55'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 1, 2
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeAcquireSpinLockRaiseToDpc
@@ -2734,14 +2734,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 15814b675e9d08953f2c64e4e5ccb4f4
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: add874dc7800e93a88bff903834a5d72
@@ -2751,7 +2751,7 @@ KnownVulnerableSamples:
   SHA256: 033c4634ab1a43bc3247384864f3380401d3b4006a383312193799dded0de4c7
   Sections:
     .text:
-      Entropy: 6.208673584594836
+      Entropy: 6.208673584594837
       Virtual Size: '0x3c52'
     .rdata:
       Entropy: 6.180900411430657
@@ -2864,9 +2864,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2883,13 +2883,13 @@ KnownVulnerableSamples:
     MD5: fc16498ddf3716e03fdd527c456ea80b
     SHA1: 7436e16cf348558015593cbf5ab9c117d97738cc
     SHA256: a3cf1a6edd205e04653b4338c077072ee753cde0a692490ecaf7afde27df5f0b
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2006 Elaborate Bytes AG
-  CreationTimestamp: '2006-12-12 17:48:53'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2006-12-12 14:48:53'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 1
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -2928,14 +2928,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 94c80490b02cc655d2d80597c3aef08f
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: c15e20cb179a835c6a295f891d4f43f6
@@ -3057,9 +3057,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3076,13 +3076,13 @@ KnownVulnerableSamples:
     MD5: b1fd26613e70e4254f5aa6b399971f97
     SHA1: c97772d482a4a30a18fc44e6253e5cb30b9e5bfb
     SHA256: ad5418a4b5edf1c963da343b1bdba14fac9e8ee49489b2f35136c4aebc9540b8
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2006 Elaborate Bytes AG
-  CreationTimestamp: '2006-12-12 17:51:36'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2006-12-12 14:51:36'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 1
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IofCompleteRequest
@@ -3099,14 +3099,14 @@ KnownVulnerableSamples:
   - IoCreateDevice
   Imports:
   - ntoskrnl.exe
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 238769fd8379ec476c1114bd2bd28ca6
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 91713e95c3474f56518b75dc246d7251
@@ -3228,9 +3228,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3247,13 +3247,13 @@ KnownVulnerableSamples:
     MD5: b1fd26613e70e4254f5aa6b399971f97
     SHA1: c97772d482a4a30a18fc44e6253e5cb30b9e5bfb
     SHA256: ad5418a4b5edf1c963da343b1bdba14fac9e8ee49489b2f35136c4aebc9540b8
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2006 Elaborate Bytes AG
-  CreationTimestamp: '2006-12-12 17:51:36'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2006-12-12 14:51:36'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 1
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IofCompleteRequest
@@ -3270,14 +3270,14 @@ KnownVulnerableSamples:
   - IoCreateDevice
   Imports:
   - ntoskrnl.exe
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: ea2ff60fcce3b9ffe0bd77658b88512d
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 91713e95c3474f56518b75dc246d7251
@@ -3399,9 +3399,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3418,13 +3418,13 @@ KnownVulnerableSamples:
     MD5: 697316476aee4bef0d581e458007fedd
     SHA1: 83481f6760efd3c9c85a603afb3c3e4b73733da8
     SHA256: 32d6b047b0489421f7983da7d5d11f8deb2a56935d5ae0ae23cca1c0903ecad5
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2004 Elaborate Bytes AG
-  CreationTimestamp: '2004-07-21 17:45:25'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2004-07-21 14:45:25'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 4, 3, 1, 1
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -3465,14 +3465,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: e4788e5b3e5f0a0bbb318a9c426c2812
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 4, 3, 1, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 7d357a968c06de113fc7cd4ee41a5c30
@@ -3507,13 +3507,13 @@ KnownVulnerableSamples:
     MD5: 41a6b67cc46b4cfab21bdd50f4f04cbc
     SHA1: 442d1f5509d9653ea1f11acf77ac42e41ba61eee
     SHA256: c4fc8f04721363f4b570accf700f507fb0b0381a81d3a8ffb768ded65978ac50
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2005 Elaborate Bytes AG
-  CreationTimestamp: '2005-04-11 12:42:04'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2005-04-11 09:42:04'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 5, 0, 0, 0
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IofCompleteRequest
@@ -3534,14 +3534,14 @@ KnownVulnerableSamples:
   - KeTickCount
   Imports:
   - ntoskrnl.exe
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 4f5ca81806098204c4dea0927a8fec66
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 5, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: b6f6983c7ae00c0d9dd893e713fb9f95
@@ -3576,13 +3576,13 @@ KnownVulnerableSamples:
     MD5: b1fd26613e70e4254f5aa6b399971f97
     SHA1: c97772d482a4a30a18fc44e6253e5cb30b9e5bfb
     SHA256: ad5418a4b5edf1c963da343b1bdba14fac9e8ee49489b2f35136c4aebc9540b8
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2006 Elaborate Bytes AG
-  CreationTimestamp: '2006-12-12 17:51:36'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2006-12-12 14:51:36'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 1
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IofCompleteRequest
@@ -3599,14 +3599,14 @@ KnownVulnerableSamples:
   - IoCreateDevice
   Imports:
   - ntoskrnl.exe
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 5c5e3c7ca39d9472099ea81c329b7d75
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 91713e95c3474f56518b75dc246d7251
@@ -3728,9 +3728,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3747,13 +3747,13 @@ KnownVulnerableSamples:
     MD5: 56f8e517fb77f6ac31085b190051e447
     SHA1: 2817006c320dcad5d27737f8ffa76b3652dd8a1a
     SHA256: 633ae4822602acd252ff23e73ef4cc98130f3e3988ac459f7fda5102fcef5fce
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2009 Elaborate Bytes AG
-  CreationTimestamp: '2009-01-29 17:58:02'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-01-29 14:58:02'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 2, 0
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeAcquireSpinLockRaiseToDpc
@@ -3799,14 +3799,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 7db75077d53a63531ef2742d98ca6acc
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 19c3041e63a42fad9800c3d4098a28a7
@@ -3929,9 +3929,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3948,13 +3948,13 @@ KnownVulnerableSamples:
     MD5: 767303ab50712958a3fda9c2022590e0
     SHA1: 7f5f6d152aae4da8b062120f7deda031313e46f9
     SHA256: b7614d88ed04e2d3bf0798380e04b90e04d87a785fbd99f994206da8d9658fe5
-  Company: Elaborate Bytes
-  Copyright: Copyright (C) Elaborate Bytes 2000
-  CreationTimestamp: '2000-11-30 18:02:08'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2000-11-30 15:02:08'
   Date: ''
-  Description: ElbyCD Windows NT/2000 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1, 0, 1, 0
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - RtlInitAnsiString
@@ -3974,14 +3974,14 @@ KnownVulnerableSamples:
   - ZwClose
   Imports:
   - ntoskrnl.exe
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 520c18f50d3cb2ce162767c4c1998b86
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 3, 0, 0, 1
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 4572daeecc881e542f45787723a4437f
@@ -4010,13 +4010,13 @@ KnownVulnerableSamples:
     MD5: 38585151f074ca827f399c34778b18c9
     SHA1: 48d8d3e47c7963bda3400e91f436959492cd2ad9
     SHA256: 72876e44135f9b49932b547129e32acf9ce3df98a3f9c5c31355160f6d06ca3c
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2005 Elaborate Bytes AG
-  CreationTimestamp: '2005-04-21 07:40:36'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2005-04-21 04:40:36'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 5, 1, 0, 1
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -4058,14 +4058,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 084a13f18856d610d44d3109a9d2acde
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 5, 1, 0, 1
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6f0797841833cc65f106ddb0968c4775
@@ -4100,13 +4100,13 @@ KnownVulnerableSamples:
     MD5: 18fb56fabbd62de931ed334197e5989c
     SHA1: 83e3725839448a2324dc280ebb5aeb21cf1a41e8
     SHA256: 3bf4f8cb26ba38e54636864c744aac0839e7a1d6cb7b6cf13995e8ab19b9f7f8
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2003 Elaborate Bytes AG
-  CreationTimestamp: '2003-09-15 12:57:35'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2003-09-15 09:57:35'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 4, 3, 0, 3
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -4147,14 +4147,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 37c3a9fef349d13685ec9c2acaaeafce
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 4, 3, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 7d357a968c06de113fc7cd4ee41a5c30
@@ -4189,13 +4189,13 @@ KnownVulnerableSamples:
     MD5: 6322f5016d86ff1f4d4e5473881d1feb
     SHA1: 8cefaf430f293e4700861112a94f360ef6b57907
     SHA256: c155197986db77be55716c49262ac009aefce647dae68268a2b9c7a7fd97c7a0
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2007 Elaborate Bytes AG
-  CreationTimestamp: '2007-08-03 19:44:47'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-08-03 16:44:47'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 9
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeAcquireSpinLockRaiseToDpc
@@ -4252,14 +4252,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 239224202ccdea1f09813a70be8413ee
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8950d52e0c8fa95c85dc60914efa8fad
@@ -4281,7 +4281,7 @@ KnownVulnerableSamples:
       Entropy: 4.1596812588931975
       Virtual Size: '0x2f4'
     INIT:
-      Entropy: 5.027185950670429
+      Entropy: 5.027185950670428
       Virtual Size: '0x684'
     .rsrc:
       Entropy: 3.3124822609227964
@@ -4382,9 +4382,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4401,13 +4401,13 @@ KnownVulnerableSamples:
     MD5: da95f12b1f0747d1890aa9224b3753cd
     SHA1: 63ab2ebc7c24394a2273150f8cf416aa9a043ce9
     SHA256: 992eb531739029456311043f99fa48ac896a59e70edc48093facaf3479e0c3f0
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2008 Elaborate Bytes AG
-  CreationTimestamp: '2008-12-30 12:07:45'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2008-12-30 09:07:45'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 1, 3
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - ProbeForWrite
@@ -4464,14 +4464,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 384370c812acb7181f972d57dc77c324
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2217e43755e8c1e005309e82a43575ba
@@ -4594,9 +4594,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4613,13 +4613,13 @@ KnownVulnerableSamples:
     MD5: fc16498ddf3716e03fdd527c456ea80b
     SHA1: 7436e16cf348558015593cbf5ab9c117d97738cc
     SHA256: a3cf1a6edd205e04653b4338c077072ee753cde0a692490ecaf7afde27df5f0b
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2006 Elaborate Bytes AG
-  CreationTimestamp: '2006-12-12 17:48:53'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2006-12-12 14:48:53'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 1
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -4658,14 +4658,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: c9c7113f5e15f70fcc576e835c859d56
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: c15e20cb179a835c6a295f891d4f43f6
@@ -4787,9 +4787,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4806,13 +4806,13 @@ KnownVulnerableSamples:
     MD5: 4a5d604878c82238b9f54833b060875f
     SHA1: ea722332977ab97ffbd657efefdde903e8453455
     SHA256: 4c812acb46a9d4b224cc20c70aeca969b00521123008cff8b1eb0367fdb0fc6b
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2002 Elaborate Bytes AG
-  CreationTimestamp: '2002-11-29 06:38:16'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2002-11-29 03:38:16'
   Date: ''
-  Description: ElbyCD Windows NT/2000/XP I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 4, 2, 0, 0
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - IoCreateSymbolicLink
@@ -4858,14 +4858,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 389823db299b350f2ee830d47376eeac
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 4, 2, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 33aa6ad4da57c65cb3bc7804b52f9f85
@@ -4897,13 +4897,13 @@ KnownVulnerableSamples:
     MD5: 90d8ab45c4a785f983786f7c088ba9ea
     SHA1: cd9c30ba2ab80129eaa603a81ae3a7050add5894
     SHA256: 34d55c87feec5eeb4f826fc6301c22017cd3e83387529a06c5493c260597599b
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2007 Elaborate Bytes AG
-  CreationTimestamp: '2007-08-01 17:38:17'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-08-01 14:38:17'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 7
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeAcquireSpinLockRaiseToDpc
@@ -4961,14 +4961,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 07fc1e043654fdde56da98d93523635c
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 874dfd989f2b89a3c9dc3332aa89b783
@@ -5091,9 +5091,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5110,13 +5110,13 @@ KnownVulnerableSamples:
     MD5: bfecd7a883f6444f027149ef2376a842
     SHA1: cb615559ec0c50a379a473ca354ca62868af038c
     SHA256: 5504258361f72faa2b35b15e0fd9edbcbcc30a4d99ef68a7805898cf75d8c809
-  Company: Elaborate Bytes
-  Copyright: Copyright (C) Elaborate Bytes 2000
-  CreationTimestamp: '2001-03-27 09:38:46'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2001-03-27 07:38:46'
   Date: ''
-  Description: ElbyCD Windows NT/2000 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 3, 0, 0, 0
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - MmUnmapLockedPages
@@ -5150,14 +5150,14 @@ KnownVulnerableSamples:
   - RtlUnwind
   Imports:
   - ntoskrnl.exe
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: d1f9ffe5569642c8f8c10ed7ee5d9391
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 3, 0, 0, 5
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: ac89ec59ccd52561baecef043386db39
@@ -5186,13 +5186,13 @@ KnownVulnerableSamples:
     MD5: a3e446885ff8aeb08aebf648e0658e2f
     SHA1: 8644110e1460c97743ad9f632dde2e5122bfbb26
     SHA256: a233680b53bcdfba264005644e51bfa4ba9923f0a3544ed4596e28fb9f3fd682
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2007 Elaborate Bytes AG
-  CreationTimestamp: '2007-08-07 15:48:36'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-08-07 12:48:36'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 1, 0
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeAcquireSpinLockRaiseToDpc
@@ -5249,14 +5249,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 3836e2db9034543f63943cdbb52a691a
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8950d52e0c8fa95c85dc60914efa8fad
@@ -5379,9 +5379,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5398,13 +5398,13 @@ KnownVulnerableSamples:
     MD5: d00443b7b4e5529a942c4866001af949
     SHA1: 31913db2c43fa5b235b701dd0f79ef5f0110f322
     SHA256: 07e8a7f0fcc8be78167704c6679c70ea184961f5a5bd2066620a4b7eeb939885
-  Company: Elaborate Bytes AG
-  Copyright: Copyright (C) 2000 - 2007 Elaborate Bytes AG
-  CreationTimestamp: '2007-02-28 15:51:48'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-02-28 12:51:48'
   Date: ''
-  Description: ElbyCD Windows x64 I/O driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 6, 0, 0, 2
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -5442,14 +5442,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ElbyCDIO
+  InternalName: ''
   MD5: 978cd6d9666627842340ef774fd9e2ac
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ElbyCDIO.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: CDRTools
-  ProductVersion: 6, 0, 0, 0
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 759951b21f9ce1aa3225d912cd7ce0fd
@@ -5465,7 +5465,7 @@ KnownVulnerableSamples:
       Entropy: 4.344400543989659
       Virtual Size: '0x30c'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.6032604168924314
@@ -5571,9 +5571,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

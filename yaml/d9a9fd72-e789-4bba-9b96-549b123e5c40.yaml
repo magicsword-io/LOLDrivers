@@ -32,13 +32,13 @@ KnownVulnerableSamples:
   - DigiCert Assured ID Root CA
   Date: ''
   Publisher: ''
-  Company: Beijing Rising Network Security Technology Co., Ltd.
-  Description: rspot.sys
-  Product: rspot.sys
-  ProductVersion: 1, 0, 0, 16
-  FileVersion: 1, 0, 0, 16
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: rspot.sys
+  OriginalFilename: ''
   Authentihash:
     MD5: 76d32c7414a895472faa84ce1eb97b87
     SHA1: 5a7b5f578ec0919e82af48deedcd55bacafd1bd0
@@ -47,9 +47,8 @@ KnownVulnerableSamples:
     MD5: 13d6c9556aeb5f12cb4f0fbb1d6a47ca
     SHA1: c3317fb67fb9965a2eea5e30df217f210feee8aa
     SHA256: e7e43c74583206f9a59ce9936fb42afbd70c1a706c6737a8083a498097172f46
-  InternalName: Beijing Rising Network Security Technology Co., Ltd.
-  Copyright: Copyright(C) 2018-2019 Beijing Rising Network Security Technology Co.,
-    Ltd. All Rights Reserved.
+  InternalName: ''
+  Copyright: ''
   Imports:
   - rsndispot.sys
   - FLTMGR.SYS
@@ -174,31 +173,31 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   Sections:
     .text:
-      Entropy: 6.31
+      Entropy: 6.314062529966487
       Virtual Size: '0x9ac8'
     .rdata:
-      Entropy: 4.51
+      Entropy: 4.512879095473807
       Virtual Size: '0x12e8'
     .data:
-      Entropy: 4.42
+      Entropy: 4.424216905201346
       Virtual Size: '0x14f0'
     .pdata:
-      Entropy: 4.54
+      Entropy: 4.543773328926035
       Virtual Size: '0x678'
     .KRT:
       Entropy: -0.0
       Virtual Size: '0x10'
     INIT:
-      Entropy: 5.05
+      Entropy: 5.045046188435473
       Virtual Size: '0xed6'
     .rsrc:
-      Entropy: 3.38
+      Entropy: 3.3843411882800014
       Virtual Size: '0x4a0'
     .reloc:
-      Entropy: 4.46
+      Entropy: 4.464182046849655
       Virtual Size: '0x90'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-14 02:14:02'
+  CreationTimestamp: '2021-05-14 01:14:02'
   Imphash: 33df0c29b1e8562acd8168ef019b3f66
   Signatures:
   - CertificatesInfo: ''
@@ -254,8 +253,8 @@ KnownVulnerableSamples:
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
         SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
-    - Subject: C=CN, L=Beijing, O=Beijing Rising Network Security Technology Co.,
-        Ltd., CN=Beijing Rising Network Security Technology Co., Ltd.
+    - Subject: "C=CN, L=\u5317\u4EAC, O=Beijing Rising Network Security Technology\
+        \ Co., Ltd., CN=Beijing Rising Network Security Technology Co., Ltd."
       ValidFrom: '2019-07-19 00:00:00'
       ValidTo: '2022-07-22 12:00:00'
       Signature: 82d451a7e01dcb1b20cecbf0223335dae16995cd0926920761c8bd0498a8b8b0336a81f50e97899b690b3c00b3413a872f3a2b144944f6818b060c7f0f78f2096a00150ea48beaa67105555a36161603d1843fb679793a7527a283ef0c20c72ef7474207be80d284a9233385eb83e662b65496ba50af88ace34ad4c7b4e737b944cf9554d3db5e1ed0882ada1e24edace73da498cb1e2b7294ae3096f68485bc38e1540308e7aa9d3f8e3f7d34522d9b6aeb0149df558e3212e026fc8b8f63dbf236ce2eac81d621b410ee4c921e4dd806bcee70c1d32382a2fc262b66064d639456652e803d9e8fb9aec0ca85906221d26e52e4cd1dcbef638e9e2c023b6c6f

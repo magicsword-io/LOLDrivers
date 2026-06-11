@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 8804d6be09e294ab07e2691ca91e67a5
     SHA1: ffe0a81f1e2aee5cb4c5720da8d3ab2cdec52dc1
     SHA256: 6aa427e7230a2b077bfecade35ffff67b2f15c051cf92fd207a3412c747f83c3
-  Description: Novell XTCOM Services Driver
-  Company: Novell, Inc.
+  Description: ''
+  Company: ''
   InternalName: ''
-  OriginalFilename: libnicm.sys
-  FileVersion: 3.1.11.0
-  Product: Novell XTier
-  ProductVersion: 3.1.11
-  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -196,7 +196,7 @@ KnownVulnerableSamples:
       Entropy: 1.3741854163060885
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-16 01:19:18'
+  CreationTimestamp: '2013-01-15 22:19:18'
   Imphash: 262d8fbbf1f514399bb3f230cddc12af
   LoadsDespiteHVCI: 'TRUE'
 - Filename: libnicm.sys
@@ -207,14 +207,14 @@ KnownVulnerableSamples:
     MD5: e30ca4b88f80e5441aee1a7102dccf9a
     SHA1: 5e68ae28b2e80d0045c01affba7c76f649241fb6
     SHA256: c5647d315fb5ca1dcf4b063ea3f54003e2545739871519b8f2c98dc5baf66bac
-  Description: Novell XTCOM Services Driver
-  Company: Novell, Inc.
+  Description: ''
+  Company: ''
   InternalName: ''
-  OriginalFilename: libnicm.sys
-  FileVersion: 3.1.6.0
-  Product: Novell XTier
-  ProductVersion: 3.1.6
-  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -372,9 +372,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -416,7 +416,7 @@ KnownVulnerableSamples:
       Entropy: 1.3741854163060885
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 13:53:33'
+  CreationTimestamp: '2009-03-27 10:53:33'
   Imphash: 96f270be3f73ec3fc2f2237fe84efca0
   LoadsDespiteHVCI: 'FALSE'
 - Filename: libnicm.sys
@@ -427,14 +427,14 @@ KnownVulnerableSamples:
     MD5: 1fd61feb0c5b905441426742e69ec997
     SHA1: faab67dd8387e4ccb17e28f3637ccce4096bd10b
     SHA256: fcdf0eaf9c8effa2786c82e774974f1ef4098dcd376461bad37fd4168dcab52b
-  Description: Novell XTCOM Services Driver
-  Company: Novell, Inc.
+  Description: ''
+  Company: ''
   InternalName: ''
-  OriginalFilename: libnicm.sys
-  FileVersion: 3.1.6.0
-  Product: Novell XTier
-  ProductVersion: 3.1.6
-  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -594,9 +594,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -635,7 +635,7 @@ KnownVulnerableSamples:
       Entropy: 5.760669973768758
       Virtual Size: '0x3d2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 13:49:09'
+  CreationTimestamp: '2009-03-27 10:49:09'
   Imphash: 28d780857f0f6616f938aca3a38b5072
   LoadsDespiteHVCI: 'FALSE'
 - Filename: libnicm.sys
@@ -646,14 +646,14 @@ KnownVulnerableSamples:
     MD5: e960feebe973feb9fa4ceae648439f05
     SHA1: 85dd2e3e9e97e981542336ab7051035d5e611380
     SHA256: 14ec631a3cff171b86e2b0279c8db436cb88ec705c517bd82a964e2c59def92f
-  Description: Novell XTCOM Services Driver
-  Company: Novell, Inc.
+  Description: ''
+  Company: ''
   InternalName: ''
-  OriginalFilename: libnicm.sys
-  FileVersion: 3.1.11.0
-  Product: Novell XTier
-  ProductVersion: 3.1.11
-  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -804,7 +804,7 @@ KnownVulnerableSamples:
       Entropy: 3.5739348962840563
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-16 01:19:18'
+  CreationTimestamp: '2013-01-15 22:19:18'
   Imphash: 262d8fbbf1f514399bb3f230cddc12af
   LoadsDespiteHVCI: 'TRUE'
 - Filename: libnicm.sys
@@ -815,14 +815,14 @@ KnownVulnerableSamples:
     MD5: e960feebe973feb9fa4ceae648439f05
     SHA1: 85dd2e3e9e97e981542336ab7051035d5e611380
     SHA256: 14ec631a3cff171b86e2b0279c8db436cb88ec705c517bd82a964e2c59def92f
-  Description: Novell XTCOM Services Driver
-  Company: Novell, Inc.
+  Description: ''
+  Company: ''
   InternalName: ''
-  OriginalFilename: libnicm.sys
-  FileVersion: 3.1.11.0
-  Product: Novell XTier
-  ProductVersion: 3.1.11
-  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -973,6 +973,6 @@ KnownVulnerableSamples:
       Entropy: 3.5739348962840563
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-16 01:19:18'
+  CreationTimestamp: '2013-01-15 22:19:18'
   Imphash: 262d8fbbf1f514399bb3f230cddc12af
   LoadsDespiteHVCI: 'TRUE'

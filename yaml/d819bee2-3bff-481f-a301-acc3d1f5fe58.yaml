@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 46f46abcb9e3ba747c2a2904babe38c0
     SHA1: a4e8e3268569acc0a0b3f6eada713c0fa8825463
     SHA256: 04cfb452e1ac73fb2f3b8a80d9f27e19a344a6bf0f74c7f9cae3ae82d3770195
-  Company: EnTech Taiwan
-  Copyright: Copyright (c) EnTech Taiwan, 2004-2006.
-  CreationTimestamp: '2007-05-03 01:50:31'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-05-02 22:50:31'
   Date: ''
-  Description: EnTech softEngine x64 kernel-mode driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '1.1'
+  FileVersion: ''
   Filename: Se64a.sys
   ImportedFunctions:
   - ZwOpenSection
@@ -73,13 +73,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: se64a.sys
+  InternalName: ''
   MD5: 0a6a1c9a7f80a2a5dcced5c4c0473765
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: se64a.sys
-  Product: softEngine-x64
-  ProductVersion: '2.1'
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: d8769f69d7da8cd49f23e0c53b4f6691
@@ -205,9 +205,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

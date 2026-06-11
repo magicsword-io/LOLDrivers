@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: ed01170d94a5e21d04b6d7212b53c994
     SHA1: cbaa70aac878a389c8213a5bc0df830b1d5b4e04
     SHA256: 9994990c02c37472625cc7b2255044feef9b73c08ca3a70c06861b7d26b27a25
-  Company: Symantec Corporation
-  Copyright: "Copyright \xA9 2007-2008 Symantec Corporation. All rights reserved."
-  CreationTimestamp: '2012-06-28 06:53:46'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2012-06-28 03:53:46'
   Date: ''
-  Description: VProEventMonitor.Sys - Event Monitoring driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1.0.0.45708
+  FileVersion: ''
   Filename: VProEventMonitor.sys
   ImportedFunctions:
   - PsGetVersion
@@ -83,13 +83,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: VProEventMonitor.Sys
+  InternalName: ''
   MD5: cd9f0fcecf1664facb3671c0130dc8bb
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: VProEventMonitor.Sys
-  Product: Symantec Event Monitors Driver Development Edition
-  ProductVersion: 1.0.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: c492fc6302ba1d302ecd17b883170218
@@ -200,9 +200,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

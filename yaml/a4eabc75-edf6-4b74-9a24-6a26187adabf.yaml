@@ -27,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-03 00:14:51'
+  CreationTimestamp: '2009-11-02 21:14:51'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -169,9 +169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -191,7 +191,7 @@ KnownVulnerableSamples:
     SHA256: fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-03 00:14:51'
+  CreationTimestamp: '2009-11-02 21:14:51'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -333,9 +333,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -355,7 +355,7 @@ KnownVulnerableSamples:
     SHA256: 96ee751f7c38731e97773e07e0f13f4dd361af9aaa1d30b41652c2e6efc3fb3e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-03 00:17:17'
+  CreationTimestamp: '2009-11-02 21:17:17'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -501,9 +501,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -560,7 +560,7 @@ KnownVulnerableSamples:
       Entropy: 1.8484630171924943
       Virtual Size: '0x296'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-11-03 00:14:51'
+  CreationTimestamp: '2009-11-02 21:14:51'
   InternalName: ''
   Copyright: ''
   Imports: []

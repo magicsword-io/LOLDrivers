@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: f27b347b5124473a3a9a46986889e408
     SHA1: 69ca963ec00bdd2a92a9777e91d0174bbe97e29c
     SHA256: 410f02303292798ab2a8b3e7d253938b466e83071b15e7d3aaa25f4995b27187
-  Company: AsusTek Computer Inc.
-  Copyright: Copyright (C) AsusTek Computer. 1992-2004
-  CreationTimestamp: '2008-01-13 21:30:32'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2008-01-13 18:30:32'
   Date: ''
-  Description: Default BIOS Flash Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '1.24 built by: WinDDK'
+  FileVersion: ''
   Filename: Bs_Def.sys
   ImportedFunctions:
   - MmBuildMdlForNonPagedPool
@@ -87,13 +87,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: Bs_Def64.sys
+  InternalName: ''
   MD5: a9f220b1507a3c9a327a99995ff99c82
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: Bs_Def64.sys
-  Product: Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020.
-  ProductVersion: '1.24'
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: b9778f4f7aef605da31955e8c8dce73b
@@ -115,7 +115,7 @@ KnownVulnerableSamples:
       Entropy: 3.8139163392612154
       Virtual Size: '0x120'
     INIT:
-      Entropy: 4.72379419775939
+      Entropy: 4.723794197759391
       Virtual Size: '0x3ca'
     .rsrc:
       Entropy: 3.495555403797425
@@ -187,9 +187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

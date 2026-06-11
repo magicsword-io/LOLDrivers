@@ -65,7 +65,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 11:17:50'
+  CreationTimestamp: '2021-01-06 08:17:50'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -99,12 +99,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x28'
   CompanyName: Windows (R) Win 7 DDK provider
   FileDescription: DcProtect Driver
-  InternalName: DcProtect.sys
-  OriginalFilename: DcProtect.sys
-  FileVersion: 1.2.0.0
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: 'DcProtect (R) Win10x64 driver '
   LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
-  ProductVersion: 1.2.0.0
+  ProductVersion: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -159,9 +159,11 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
-        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
-        Eyun Network Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=\u5E7F\
+        \u4E1C, JURISDICTION_OF_INCORPORATION_L=\u6C5F\u95E8\u5E02\u84EC\u6C5F\u533A\
+        , BUSINESS_CATEGORY=Private Organization, serialNumber=91440703345542411W,\
+        \ C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen\
+        \ Eyun Network Co., Ltd."
       ValidFrom: '2019-04-24 00:00:00'
       ValidTo: '2021-04-28 12:00:00'
       Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
@@ -207,10 +209,10 @@ KnownVulnerableSamples:
     MD5: 4d8a663ae2f765ff317d5e042cf62899
     SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
     SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
-  Description: DcProtect Driver
-  Company: Windows (R) Win 7 DDK provider
-  Product: 'DcProtect (R) Win10x64 driver '
-  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - FLTMGR.SYS
@@ -259,7 +261,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 11:15:15'
+  CreationTimestamp: '2021-01-06 08:15:15'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -290,12 +292,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x114'
   CompanyName: Windows (R) Win 7 DDK provider
   FileDescription: DcProtect Driver
-  InternalName: DcProtect.sys
-  OriginalFilename: DcProtect.sys
-  FileVersion: 1.2.0.0
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: 'DcProtect (R) Win10x86 driver '
   LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
-  ProductVersion: 1.2.0.0
+  ProductVersion: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -350,9 +352,11 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
-        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
-        Eyun Network Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=\u5E7F\
+        \u4E1C, JURISDICTION_OF_INCORPORATION_L=\u6C5F\u95E8\u5E02\u84EC\u6C5F\u533A\
+        , BUSINESS_CATEGORY=Private Organization, serialNumber=91440703345542411W,\
+        \ C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen\
+        \ Eyun Network Co., Ltd."
       ValidFrom: '2019-04-24 00:00:00'
       ValidTo: '2021-04-28 12:00:00'
       Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
@@ -398,10 +402,10 @@ KnownVulnerableSamples:
     MD5: 555e8cb2ed5b1eea11f804a11c4aef99
     SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
     SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
-  Description: DcProtect Driver
-  Company: Windows (R) Win 7 DDK provider
-  Product: 'DcProtect (R) Win10x86 driver '
-  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - FLTMGR.SYS
@@ -448,7 +452,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 11:17:24'
+  CreationTimestamp: '2021-01-06 08:17:24'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -482,12 +486,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x28'
   CompanyName: Windows (R) Win 7 DDK provider
   FileDescription: DcProtect Driver
-  InternalName: DcProtect.sys
-  OriginalFilename: DcProtect.sys
-  FileVersion: 1.2.0.0
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: 'DcProtect (R) Win8.1x64 driver '
   LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
-  ProductVersion: 1.2.0.0
+  ProductVersion: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -542,9 +546,11 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
-        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
-        Eyun Network Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=\u5E7F\
+        \u4E1C, JURISDICTION_OF_INCORPORATION_L=\u6C5F\u95E8\u5E02\u84EC\u6C5F\u533A\
+        , BUSINESS_CATEGORY=Private Organization, serialNumber=91440703345542411W,\
+        \ C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen\
+        \ Eyun Network Co., Ltd."
       ValidFrom: '2019-04-24 00:00:00'
       ValidTo: '2021-04-28 12:00:00'
       Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
@@ -590,10 +596,10 @@ KnownVulnerableSamples:
     MD5: 4d8a663ae2f765ff317d5e042cf62899
     SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
     SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
-  Description: DcProtect Driver
-  Company: Windows (R) Win 7 DDK provider
-  Product: 'DcProtect (R) Win8.1x64 driver '
-  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - FLTMGR.SYS
@@ -642,7 +648,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 11:14:24'
+  CreationTimestamp: '2021-01-06 08:14:24'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -673,12 +679,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x114'
   CompanyName: Windows (R) Win 7 DDK provider
   FileDescription: DcProtect Driver
-  InternalName: DcProtect.sys
-  OriginalFilename: DcProtect.sys
-  FileVersion: 1.2.0.0
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: 'DcProtect (R) Win8.1x86 driver '
   LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
-  ProductVersion: 1.2.0.0
+  ProductVersion: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -733,9 +739,11 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
-        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
-        Eyun Network Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=\u5E7F\
+        \u4E1C, JURISDICTION_OF_INCORPORATION_L=\u6C5F\u95E8\u5E02\u84EC\u6C5F\u533A\
+        , BUSINESS_CATEGORY=Private Organization, serialNumber=91440703345542411W,\
+        \ C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen\
+        \ Eyun Network Co., Ltd."
       ValidFrom: '2019-04-24 00:00:00'
       ValidTo: '2021-04-28 12:00:00'
       Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
@@ -781,10 +789,10 @@ KnownVulnerableSamples:
     MD5: 555e8cb2ed5b1eea11f804a11c4aef99
     SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
     SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
-  Description: DcProtect Driver
-  Company: Windows (R) Win 7 DDK provider
-  Product: 'DcProtect (R) Win8.1x86 driver '
-  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - FLTMGR.SYS
@@ -831,7 +839,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 11:16:44'
+  CreationTimestamp: '2021-01-06 08:16:44'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -865,12 +873,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x28'
   CompanyName: Windows (R) Win 7 DDK provider
   FileDescription: DcProtect Driver
-  InternalName: DcProtect.sys
-  OriginalFilename: DcProtect.sys
-  FileVersion: 1.2.0.0
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: 'DcProtect (R) Win8x64 driver '
   LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
-  ProductVersion: 1.2.0.0
+  ProductVersion: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -925,9 +933,11 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
-        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
-        Eyun Network Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=\u5E7F\
+        \u4E1C, JURISDICTION_OF_INCORPORATION_L=\u6C5F\u95E8\u5E02\u84EC\u6C5F\u533A\
+        , BUSINESS_CATEGORY=Private Organization, serialNumber=91440703345542411W,\
+        \ C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen\
+        \ Eyun Network Co., Ltd."
       ValidFrom: '2019-04-24 00:00:00'
       ValidTo: '2021-04-28 12:00:00'
       Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
@@ -973,10 +983,10 @@ KnownVulnerableSamples:
     MD5: 4d8a663ae2f765ff317d5e042cf62899
     SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
     SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
-  Description: DcProtect Driver
-  Company: Windows (R) Win 7 DDK provider
-  Product: 'DcProtect (R) Win8x64 driver '
-  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - FLTMGR.SYS
@@ -1025,7 +1035,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 11:13:53'
+  CreationTimestamp: '2021-01-06 08:13:53'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -1056,12 +1066,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x114'
   CompanyName: Windows (R) Win 7 DDK provider
   FileDescription: DcProtect Driver
-  InternalName: DcProtect.sys
-  OriginalFilename: DcProtect.sys
-  FileVersion: 1.2.0.0
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: 'DcProtect (R) Win8x86 driver '
   LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
-  ProductVersion: 1.2.0.0
+  ProductVersion: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -1116,9 +1126,11 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
-        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
-        Eyun Network Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=\u5E7F\
+        \u4E1C, JURISDICTION_OF_INCORPORATION_L=\u6C5F\u95E8\u5E02\u84EC\u6C5F\u533A\
+        , BUSINESS_CATEGORY=Private Organization, serialNumber=91440703345542411W,\
+        \ C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen\
+        \ Eyun Network Co., Ltd."
       ValidFrom: '2019-04-24 00:00:00'
       ValidTo: '2021-04-28 12:00:00'
       Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
@@ -1164,10 +1176,10 @@ KnownVulnerableSamples:
     MD5: 555e8cb2ed5b1eea11f804a11c4aef99
     SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
     SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
-  Description: DcProtect Driver
-  Company: Windows (R) Win 7 DDK provider
-  Product: 'DcProtect (R) Win8x86 driver '
-  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - FLTMGR.SYS
@@ -1214,7 +1226,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 11:16:01'
+  CreationTimestamp: '2021-01-06 08:16:01'
   RichPEHeaderMD5: c4e7e7af2fdd10d405127dc885585e78
   RichPEHeaderSHA1: bb15c357ab3f88e7eb311098667c091cd5f129c3
   RichPEHeaderSHA256: 7f2615ebe7385406ee5a6aba05c2a4b97cfdf498617fa8dae127640c6b6d465d
@@ -1248,12 +1260,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x28'
   CompanyName: Windows (R) Win 7 DDK provider
   FileDescription: DcProtect Driver
-  InternalName: DcProtect.sys
-  OriginalFilename: DcProtect.sys
-  FileVersion: 1.2.0.0
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: 'DcProtect (R) Win7x64 driver '
   LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
-  ProductVersion: 1.2.0.0
+  ProductVersion: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -1308,9 +1320,11 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
-        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
-        Eyun Network Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=\u5E7F\
+        \u4E1C, JURISDICTION_OF_INCORPORATION_L=\u6C5F\u95E8\u5E02\u84EC\u6C5F\u533A\
+        , BUSINESS_CATEGORY=Private Organization, serialNumber=91440703345542411W,\
+        \ C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen\
+        \ Eyun Network Co., Ltd."
       ValidFrom: '2019-04-24 00:00:00'
       ValidTo: '2021-04-28 12:00:00'
       Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
@@ -1356,10 +1370,10 @@ KnownVulnerableSamples:
     MD5: c4e7e7af2fdd10d405127dc885585e78
     SHA1: bb15c357ab3f88e7eb311098667c091cd5f129c3
     SHA256: 7f2615ebe7385406ee5a6aba05c2a4b97cfdf498617fa8dae127640c6b6d465d
-  Description: DcProtect Driver
-  Company: Windows (R) Win 7 DDK provider
-  Product: 'DcProtect (R) Win7x64 driver '
-  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - FLTMGR.SYS
@@ -1408,7 +1422,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 11:13:00'
+  CreationTimestamp: '2021-01-06 08:13:00'
   RichPEHeaderMD5: 331d5fbc7084c96f08da4705084c4bc3
   RichPEHeaderSHA1: 6e6ddabbb0c5d4d90269650e65477ae67bf17947
   RichPEHeaderSHA256: 50cf67aa86ee44eeccc56f3ebc2f441c284470cd58f40766cfa05f534542983e
@@ -1439,12 +1453,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x11c'
   CompanyName: Windows (R) Win 7 DDK provider
   FileDescription: DcProtect Driver
-  InternalName: DcProtect.sys
-  OriginalFilename: DcProtect.sys
-  FileVersion: 1.2.0.0
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
   ProductName: 'DcProtect (R) Win7x86 driver '
   LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
-  ProductVersion: 1.2.0.0
+  ProductVersion: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -1499,9 +1513,11 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
-        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
-        Eyun Network Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=\u5E7F\
+        \u4E1C, JURISDICTION_OF_INCORPORATION_L=\u6C5F\u95E8\u5E02\u84EC\u6C5F\u533A\
+        , BUSINESS_CATEGORY=Private Organization, serialNumber=91440703345542411W,\
+        \ C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen\
+        \ Eyun Network Co., Ltd."
       ValidFrom: '2019-04-24 00:00:00'
       ValidTo: '2021-04-28 12:00:00'
       Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
@@ -1547,10 +1563,10 @@ KnownVulnerableSamples:
     MD5: 331d5fbc7084c96f08da4705084c4bc3
     SHA1: 6e6ddabbb0c5d4d90269650e65477ae67bf17947
     SHA256: 50cf67aa86ee44eeccc56f3ebc2f441c284470cd58f40766cfa05f534542983e
-  Description: DcProtect Driver
-  Company: Windows (R) Win 7 DDK provider
-  Product: 'DcProtect (R) Win7x86 driver '
-  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  Description: ''
+  Company: ''
+  Product: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - FLTMGR.SYS

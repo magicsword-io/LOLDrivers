@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 92a9fa0ebbb45b600397611e247710b1
     SHA1: ed3e97c7290768216c5b3abbd4a29dde856eb3c7
     SHA256: c54ffa9a32cd99972ca905dcf99e20f8429e3cfd45bc1ddf4f9af8b3ed688c88
-  Company: Logitech Inc.
-  Copyright: (c) 1996-2009 Logitech.  All rights reserved.
-  CreationTimestamp: '2009-04-30 18:43:07'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-04-30 15:43:07'
   Date: ''
-  Description: Logitech Video Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 12.00.1278.0
+  FileVersion: ''
   Filename: Lv561av.sys
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -178,13 +178,13 @@ KnownVulnerableSamples:
   - HAL.DLL
   - USBD.SYS
   - ks.sys
-  InternalName: Lv561av.sys
+  InternalName: ''
   MD5: b47dee29b5e6e1939567a926c7a3e6a4
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: Lv561av.sys
-  Product: Logitech Webcam Software
-  ProductVersion: 12.00.1278.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 336f1265144cabe54117b2a5a2feaa61
@@ -301,9 +301,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

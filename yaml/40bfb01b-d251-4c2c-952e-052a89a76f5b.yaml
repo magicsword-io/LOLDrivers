@@ -44,14 +44,13 @@ KnownVulnerableSamples:
     MD5: fb2c77030c99606abb5d78bd51d6637d
     SHA1: cc0f86949ee6261f8c3de046112b99595db14c00
     SHA256: 9544fbc011638cbc168f6ea4740cc6ed6fd331769e191fd64bdf9113eb64fde1
-  Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
-  Copyright: "Copyright (c) 2012-2014 Pan Yaz\u0131l\u0131m Bilisim Teknolojileri\
-    \ Tic. Ltd. Sti."
-  CreationTimestamp: '2014-05-13 06:15:50'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2014-05-13 03:15:50'
   Date: ''
-  Description: PanCafe Manager File Monitor
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1.0.0.0
+  FileVersion: ''
   Filename: PanMonFltX64.sys
   ImportedFunctions:
   - KeBugCheckEx
@@ -92,13 +91,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - FLTMGR.SYS
-  InternalName: PanMonFltX64.sys
+  InternalName: ''
   MD5: 0067c788e1cb174f008c325ebde56c22
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: PanMonFltX64.sys
-  Product: PanCafe Manager
-  ProductVersion: 1.0.0.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5d1f68f5e0a96a6328e19ddee6e5dec6
@@ -213,9 +212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

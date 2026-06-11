@@ -45,13 +45,13 @@ KnownVulnerableSamples:
     MD5: 69a92cb6ac87c99f10b24eefa13f0b10
     SHA1: b66bf2b1b07f8f2bab1418131ae66b0a55265f73
     SHA256: 0ff8bcc7f938ec71ee33fbe089d38e40a8190603558d4765c47b1b09e1dd764a
-  Company: ASUSTek Computer Inc.
-  Copyright: Copyright (C) 2012
-  CreationTimestamp: '2014-09-18 08:04:29'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2014-09-18 05:04:29'
   Date: ''
-  Description: ATSZIO Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 0.2.1.7
+  FileVersion: ''
   Filename: ATSZIO.sys
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -80,13 +80,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ATSZIO.sys
+  InternalName: ''
   MD5: b12d1630fd50b2a21fd91e45d522ba3a
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ATSZIO.sys
-  Product: ATSZIO Driver
-  ProductVersion: 0.2.1.7
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5633aed816ac7f25c13e7f4286ee4097
@@ -102,7 +102,7 @@ KnownVulnerableSamples:
       Entropy: 3.9257359466643256
       Virtual Size: '0x2ec'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.305451172213043
@@ -187,9 +187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

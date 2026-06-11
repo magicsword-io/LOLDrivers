@@ -90,9 +90,10 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=Private Organization, ??=TW, serialNumber=23826200, ??=2F, NO.108,2,
-        MIN CHUAN RD, postalCode=231, C=TW, ST=XINDIAN DIST, L=NEW TAIPEI CITY, O=Biostar
-        Microtech Int'l Corp, CN=Biostar Microtech Int'l Corp
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23826200, STREET_ADDRESS=2F, NO.108,2, MIN CHUAN RD, postalCode=231,
+        C=TW, ST=XINDIAN DIST, L=NEW TAIPEI CITY, O=Biostar Microtech Int'l Corp,
+        CN=Biostar Microtech Int'l Corp
       ValidFrom: '2017-03-03 00:00:00'
       ValidTo: '2018-11-21 12:00:00'
       Signature: 4bf4d2bdc69b9a5453f71bf6c52ac1fb1624d21a1bf7f195d72f2e45e91b57dcd3ad76e4acd2ca278673867cc2d3f9bfb19f0a02c28abe5972f81ac12928fe9e340a53a198a8b106f0925defe5d11f077380a467d7a529c0037d25f526e131d63cee3b64727330eacc9e2fe328912803f2449652840778c8b663102b01a6eacddd2364b85ede2696131189edeb65f2228345ff1d31b91de4763c4a91e8c643717ad09db26da7cda6b39559f5953c3172afc8c627eea22dd47b88d32f32640a4679ba84ac4434e5c53de60d802344fa066a7d7da0b109b241559013ec8c630400c2f8c631d09e49da7b025f4b91a1fae12c65682556570ca4faaca645f6d5ee69
@@ -151,6 +152,6 @@ KnownVulnerableSamples:
       Entropy: 5.347369827936226
       Virtual Size: '0x550'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-17 04:48:21'
+  CreationTimestamp: '2017-04-17 01:48:21'
   Imphash: 095c0cdb9c0421da216371c1f4e8790e
   LoadsDespiteHVCI: 'FALSE'

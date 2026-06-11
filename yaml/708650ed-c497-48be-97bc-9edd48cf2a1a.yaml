@@ -5,10 +5,12 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create BdApiUtil.sys
-    binPath=C:\windows\temp\BdApiUtil.sys
-    type=kernel && sc.exe start BdApiUtil.sys
-  Description: Driver can be used to load unsigned drivers. IOCTL code which takes a PID and terminates it (arbitrary process termination). Admin privileges required to install the driver, but if it's already installed, can be called by any user (non admin).
+  Command: sc.exe create BdApiUtil.sys binPath=C:\windows\temp\BdApiUtil.sys type=kernel
+    && sc.exe start BdApiUtil.sys
+  Description: Driver can be used to load unsigned drivers. IOCTL code which takes
+    a PID and terminates it (arbitrary process termination). Admin privileges required
+    to install the driver, but if it's already installed, can be called by any user
+    (non admin).
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -30,15 +32,15 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Baidu, Inc.
-  Description: Baidu Antivirus BdApi Driver
-  Product: Baidu Antivirus
-  ProductVersion: 5,2,3,116083
-  FileVersion: 5,2,3,116083
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
   OriginalFilename: ''
-  InternalName: Baidu Antivirus
-  Copyright: Copyright (C) 2014 Baidu, Inc. All rights reserved.
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - FLTMGR.SYS
@@ -164,12 +166,12 @@ KnownVulnerableSamples:
       Entropy: 4.776467402333935
       Virtual Size: '0xa48'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-03-18 20:58:13'
+  CreationTimestamp: '2015-03-18 19:58:13'
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: CN=GlobalSign Timestamping CA , G2,O=GlobalSign nv,sa,C=BE
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2028-01-28 12:00:00'
       Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
@@ -185,7 +187,8 @@ KnownVulnerableSamples:
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
         SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
-    - Subject: CN=GlobalSign TSA for MS Authenticode , G2,O=GMO GlobalSign Pte Ltd,C=SG
+    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+        , G2
       ValidFrom: '2015-02-03 00:00:00'
       ValidTo: '2026-03-03 00:00:00'
       Signature: 8032dc078d1ca09c9d3c2ae83d218b59a14d7ecc44ce03be7eaabcc4e67b73bb4bf188da904e7537283863b9d72b0f54a956ce7739973073cd9bd9d905451c8da4b8035d4fd91c2e98e0e988e6ecd7057e562a7bf7165ba3ad8f972512841bb25c634a0ad2ef10544782843569289c0ce41f141624fa75dc74726e4ecae36a43afcf7d3648d1bde906912c2fa6c871fdcfbdd89d2198fcafdbde228cafa7f377ef9ddca3704b441af078851ef2a58c39b5dc881c37edad14f5070b26bdbe6d025eb1b8b0586c853a0df6ff5a270cc5de53e7543c564cc94e4c30f6f25cfb1a8cc282bead5991f61b4d557bcf5b01dcfd7ad36f235c32479b01f3c15114468a9b
@@ -201,9 +204,9 @@ KnownVulnerableSamples:
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
         SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
-    - Subject: CN=VeriSign Class 3 Public Primary Certification Authority , G5,OU=(c)
-        2006 VeriSign, Inc. , For authorized use only,OU=VeriSign Trust Network,O=VeriSign,
-        Inc.,C=US
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
       ValidFrom: '2006-11-08 00:00:00'
       ValidTo: '2021-11-07 23:59:59'
       Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
@@ -219,7 +222,7 @@ KnownVulnerableSamples:
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
         SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
-    - Subject: OU=Class 3 Public Primary Certification Authority,O=VeriSign, Inc.,C=US
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
       Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
@@ -235,9 +238,9 @@ KnownVulnerableSamples:
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
         SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-    - Subject: CN=Baidu Online Network Technology (Beijing)Co., Ltd,OU=Digital ID
-        Class 3 , Microsoft Software Validation v2,O=Baidu Online Network Technology
-        (Beijing)Co., Ltd,L=Beijing,ST=Beijing,C=CN
+    - Subject: C=CN, ST=Beijing, L=Beijing, O=Baidu Online Network Technology (Beijing)Co.,
+        Ltd, OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=Baidu Online
+        Network Technology (Beijing)Co., Ltd
       ValidFrom: '2012-04-24 00:00:00'
       ValidTo: '2015-04-24 23:59:59'
       Signature: d4d31733c0a04a890eecbf1af9f227dc09186dcc6625ee8b059ae8e4fbd4e0fd22f86e9d993b3974a60e9fc5905d6322dbaf62759cb40f596c5805b8607ad52a825c4b4da405aa8b8c024d7117e573a36fbb576355d8449afae87238aae1a63a2271d85abae4387066d04a0362ca7ff482752f0f057bdfc36802dc2c1a9aff13d527340edfcfebe04ed920f9996410e23c6afce70d7387dca8fff985b336da6a63ebf48ccfe8b968ae35111dbab3047d929a54321b31869886932912bec609ab7715021211eb409857e25a3f6c4b573a81da6b666541429a87a702a0879153fe04ca809c819598c38cc0a7a32e4489174324828284329ee1b8a97c9609ca7899
@@ -253,8 +256,9 @@ KnownVulnerableSamples:
         SHA1: 6d36f4a52430aa26965512fc6ba47a6761e041a9
         SHA256: 8a741d00a587923919f7fef79b7922ecff7a584ba2551715c5187e399366e66e
         SHA384: d815eaf2f1988000cd6bebf1199c9ad957b044a5adb9966978eb3459f3ee564f441c37d4c03cd2529d10418bed2c90d9
-    - Subject: CN=VeriSign Class 3 Code Signing 2010 CA,OU=Terms of use at https://www.verisign.com/rpa
-        (c)10,OU=VeriSign Trust Network,O=VeriSign, Inc.,C=US
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
@@ -272,7 +276,9 @@ KnownVulnerableSamples:
         SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 3bdb1994b98bbb19ab55a42337fa4f5c
-      Issuer: CN=GlobalSign Root CA,OU=Root CA,O=GlobalSign nv,sa,C=BE
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
       Version: 1
 Tags:
 - BdApiUtil.sys

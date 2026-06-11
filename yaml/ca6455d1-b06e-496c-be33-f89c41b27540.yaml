@@ -32,13 +32,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: CrowdStrike, Inc.
-  Description: CrowdStrike Falcon Sensor Driver
-  Product: CrowdStrike Falcon Sensor
-  ProductVersion: 6.34.14806.0
-  FileVersion: 6.34.14806.0
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: CSAgent.sys
+  OriginalFilename: ''
   Imphash: 4e3c3df003b6a014459f47ae8cb021c7
   Authentihash:
     MD5: a681f7f65cb88f074869b93b732a3dd1
@@ -80,9 +80,9 @@ KnownVulnerableSamples:
       Entropy: 3.475425705649369
       Virtual Size: '0x68'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2024-11-09 09:33:54'
-  InternalName: CSAgent.sys
-  Copyright: (c) CrowdStrike, Inc. All rights reserved.
+  CreationTimestamp: '2024-11-09 06:33:54'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
@@ -111,7 +111,10 @@ KnownVulnerableSamples:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: C=CN, ST=, L=, O=, CN=
+    - Subject: "C=CN, ST=\u65B0\u7586\u7701, L=\u4E4C\u9C81\u6728\u9F50\u5E02, O=\u65B0\
+        \u7586\u4EBF\u4E8B\u8054\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\u53F8,\
+        \ CN=\u65B0\u7586\u4EBF\u4E8B\u8054\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\
+        \u53F8"
       ValidFrom: '2015-05-19 00:00:00'
       ValidTo: '2016-05-18 23:59:59'
       Signature: e7ebf4db99ad928536737f426d837909d944c15b7fe162c0e457af0330bc3f45d91b2cf98d0d9a0f89617e68f599f667bc2fda16b4f121ec003b5f805a2fccda25b63c07de81d0261eeeafad4bac1c98c20e8afc4a6b56111da74f7b0c14c5a659d7c8fb82693a7ea1e2b4317d21c509e5a53083400dfbac315c1574c188864ef9db83c8c9893bd94095704c3b9df65f47d04a06a697acd037280b84a4b5f6870ee7ecc5993343f872dfd4f42eecac77bdab18eddf67938c8dd7c3e966e1051d1d487f91291952daa54847a8b23de3ee8a1a0ebe5b9de9f32126a2ae1279f4ff3bf57c5b0108e329260f6a08cd0735176f590ade1ded61fd01f4fda23cb239f3

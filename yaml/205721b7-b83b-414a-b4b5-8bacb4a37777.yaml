@@ -49,14 +49,13 @@ KnownVulnerableSamples:
     MD5: 20f14b58e9548b6ea99b35006f631197
     SHA1: 174bd2e0965b996cff4a26ac511e551788fbc894
     SHA256: 98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430
-  Company: EldoS Corporation
-  Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  CreationTimestamp: '2011-12-28 11:51:24'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2011-12-28 08:51:24'
   Date: ''
-  Description: RawDisk Driver. Allows write access to files and raw disk sectors for
-    user mode applications in Windows 2000 and later.
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 2, 1, 27, 106
+  FileVersion: ''
   Filename: elrawdsk.sys
   ImportedFunctions:
   - MmUnlockPages
@@ -132,13 +131,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: elrawdsk.sys
+  InternalName: ''
   MD5: 1493d342e7a36553c56b2adea150949e
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: elrawdsk.sys
-  Product: RawDisk
-  ProductVersion: 2, 1, 27, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: d512dc1d3f0a51f472f64f6eb33ca3f5
@@ -267,9 +266,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -286,14 +285,13 @@ KnownVulnerableSamples:
     MD5: c1afcba807a13aa25a0b363a22c760d6
     SHA1: 8422fb53e48b27a42cc7595ca7c7ae0597168db6
     SHA256: 29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565
-  Company: EldoS Corporation
-  Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  CreationTimestamp: '2011-12-28 11:51:29'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2011-12-28 08:51:29'
   Date: ''
-  Description: RawDisk Driver. Allows write access to files and raw disk sectors for
-    user mode applications in Windows 2000 and later.
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 2, 1, 27, 106
+  FileVersion: ''
   Filename: elrawdsk.sys
   ImportedFunctions:
   - MmSystemRangeStart
@@ -358,13 +356,13 @@ KnownVulnerableSamples:
   - __C_specific_handler
   Imports:
   - ntoskrnl.exe
-  InternalName: elrawdsk.sys
+  InternalName: ''
   MD5: 76c643ab29d497317085e5db8c799960
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: elrawdsk.sys
-  Product: RawDisk
-  ProductVersion: 2, 1, 27, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: ebf1a803ddcd9f517aa01e0c06df63b4
@@ -496,9 +494,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

@@ -37,11 +37,11 @@ KnownVulnerableSamples:
     MD5: 368a4f14c62575191a0f1f3464513964
     SHA1: 3ce88266cfc41e8980d4c185235fd55999f5a67a
     SHA256: a5a2fe8ab935cf47f21e0c5e0de11a98271054109827dc930293b947d3b05079
-  Company: Sun Microsystems, Inc.
-  Copyright: Copyright (C) 2009 Sun Microsystems, Inc.
-  CreationTimestamp: '2009-04-07 14:30:47'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-04-07 11:30:47'
   Date: ''
-  Description: VirtualBox Support Driver
+  Description: ''
   ExportedFunctions:
   - AssertMsg1
   - AssertMsg2
@@ -236,7 +236,7 @@ KnownVulnerableSamples:
   - SUPR0UnlockMem
   - g_szRTAssertMsg1
   - g_szRTAssertMsg2
-  FileVersion: 2.2.0.r45846
+  FileVersion: ''
   Filename: vboxdrv.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -300,13 +300,13 @@ KnownVulnerableSamples:
   - MmMapLockedPagesSpecifyCache
   Imports:
   - ntoskrnl.exe
-  InternalName: VBoxDrv.sys
+  InternalName: ''
   MD5: bce7f34912ff59a3926216b206deb09f
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: VBoxDrv.sys
-  Product: Sun VirtualBox
-  ProductVersion: 2.2.0.r45846
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 778da7e612af67a3de121ab863ceed34
@@ -325,7 +325,7 @@ KnownVulnerableSamples:
       Entropy: 2.136306008585543
       Virtual Size: '0x35b4'
     .pdata:
-      Entropy: 5.201973567849435
+      Entropy: 5.201973567849434
       Virtual Size: '0x1f20'
     .edata:
       Entropy: 5.704943815176372
@@ -423,9 +423,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -445,7 +445,7 @@ KnownVulnerableSamples:
     SHA256: 597e7d5feb149d9087888926d1454dc06f1078ab18c948b44f090910da8645f8
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-05-30 22:18:53'
+  CreationTimestamp: '2008-05-30 19:18:53'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -618,13 +618,13 @@ KnownVulnerableSamples:
   SHA256: cf3a7d4285d65bf8688215407bce1b51d7c6b22497f09021f0fce31cbeb78986
   Sections:
     .text:
-      Entropy: 6.2039165195201695
+      Entropy: 6.203916519520169
       Virtual Size: '0x856e'
     .rdata:
       Entropy: 5.607114485004288
       Virtual Size: '0x2a58'
     .data:
-      Entropy: 1.9666645281474864
+      Entropy: 1.9666645281474866
       Virtual Size: '0x1d00'
     .pdata:
       Entropy: 4.674336635214751
@@ -738,9 +738,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -759,7 +759,7 @@ KnownVulnerableSamples:
     SHA256: 1d1bd2235d422954506b1bdb3070d9d8bada3fb7f9e4f658036031294b3a95df
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-05-30 22:18:53'
+  CreationTimestamp: '2008-05-30 19:18:53'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -933,13 +933,13 @@ KnownVulnerableSamples:
   SHA256: b50b11e2203942695380869c6072e15479290bc57da2ec5df3481a36b8a8561e
   Sections:
     .text:
-      Entropy: 6.2039165195201695
+      Entropy: 6.203916519520169
       Virtual Size: '0x856e'
     .rdata:
       Entropy: 5.607114485004288
       Virtual Size: '0x2a58'
     .data:
-      Entropy: 1.9666645281474864
+      Entropy: 1.9666645281474866
       Virtual Size: '0x1d00'
     .pdata:
       Entropy: 4.674336635214751
@@ -1049,9 +1049,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1070,7 +1070,7 @@ KnownVulnerableSamples:
     SHA256: 4ef8c776a6acd4fd360b22e7d053bba961d687c36ec4fcc0b3e2ff1ef7be967e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-05-30 19:34:52'
+  CreationTimestamp: '2008-05-30 16:34:52'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -1363,9 +1363,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1384,7 +1384,7 @@ KnownVulnerableSamples:
     SHA256: a2d9f91ede8aed51960ca67318ea337152bb311c03275c0650e4421e6af6b7ee
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-05-30 22:18:53'
+  CreationTimestamp: '2008-05-30 19:18:53'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -1558,13 +1558,13 @@ KnownVulnerableSamples:
   SHA256: 775000c4083c8e4dcfc879d83fcd27b40b46820c9834ae4662861386a4d81fe9
   Sections:
     .text:
-      Entropy: 6.2039165195201695
+      Entropy: 6.203916519520169
       Virtual Size: '0x856e'
     .rdata:
       Entropy: 5.607114485004288
       Virtual Size: '0x2a58'
     .data:
-      Entropy: 1.9666645281474864
+      Entropy: 1.9666645281474866
       Virtual Size: '0x1d00'
     .pdata:
       Entropy: 4.674336635214751
@@ -1674,9 +1674,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1695,7 +1695,7 @@ KnownVulnerableSamples:
     SHA256: 8561c82c5ae1ab2a5d9214adc620875d83ed7cb9a01253988f5e5aceffe7a901
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-05-30 22:18:53'
+  CreationTimestamp: '2008-05-30 19:18:53'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -1869,13 +1869,13 @@ KnownVulnerableSamples:
   SHA256: d44848d3e845f8293974e8b621b72a61ec00c8d3cf95fcf41698bbbd4bdf5565
   Sections:
     .text:
-      Entropy: 6.2039165195201695
+      Entropy: 6.203916519520169
       Virtual Size: '0x856e'
     .rdata:
       Entropy: 5.607114485004288
       Virtual Size: '0x2a58'
     .data:
-      Entropy: 1.9666645281474864
+      Entropy: 1.9666645281474866
       Virtual Size: '0x1d00'
     .pdata:
       Entropy: 4.672051855182832
@@ -1985,9 +1985,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2006,7 +2006,7 @@ KnownVulnerableSamples:
     SHA256: b5d0849fc567c169176c2002dd358240d75ca0aacfca92c79d252006c6e0444e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-04-30 16:07:13'
+  CreationTimestamp: '2008-04-30 13:07:13'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -2299,9 +2299,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: f4a434113ef1b0bfed60b8a5bcd4fa9c
     SHA1: bffa9edada9f48685c5178f247c416029b423834
     SHA256: 1bd6a40e294f4f74f9baf172f5a3e21dad3b7e31b5757d91bda309bd54a72fbe
-  Description: GIGA-BYTE NonPnP Driver
-  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: 1.0.1.1
-  Product: GIGA-BYTE Software driver
-  ProductVersion: 1.0.0.1
-  Copyright: Copyright (C) 2017
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -135,9 +135,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
-        C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
-        Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=\u65B0\
+        \u5317\u5E02, JURISDICTION_OF_INCORPORATION_L=NEW TAIPEI, BUSINESS_CATEGORY=Private\
+        \ Organization, serialNumber=22044755, C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology\
+        \ Co., Ltd., CN=GIGA,BYTE Technology Co., Ltd."
       ValidFrom: '2018-12-07 00:00:00'
       ValidTo: '2021-12-06 23:59:59'
       Signature: 502fd3341b71cab45e302c7b586f9beefdce61639b7ccbaf643eb13bb29fcc6d5e37ba8f8af0b2d775216237d659088cbf124514ebe1fc6a663f20cbbd920afd64fbec463254a4e845cdb452b5768fcb2fb74e13043899381b57ce63419679395729d52fc8efbe19e08c5a4c6337eb910e048d30c2888718355460150ae33f20c8ea3724251dbe28d45de130843b462e11ff1ca90fb98e097b5f372b0aa1c5b2791897b4cf79cdbc02c5aca5a935a3ccf67fb67ef28390ed7913ee32e708869acbba27f24d6c7fc45b795b5e90c7200551babe0bae400343fc6fd75d36da7b5def7fde3a7f97519796d3bd14755a3adaa7cafcbe2cc24eb9a1a046ea8e05376d
@@ -203,7 +204,7 @@ KnownVulnerableSamples:
       Entropy: 5.642936600253398
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-12 22:25:54'
+  CreationTimestamp: '2019-02-12 19:25:54'
   Imphash: 59b3f3fa2775e407721c2491ddb2890b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -214,14 +215,14 @@ KnownVulnerableSamples:
     MD5: 5029d92e78dd56446eae97c8acd56926
     SHA1: 00e5f35b31d5bfd2745bb04909f1faf26abfcec0
     SHA256: 12ae98c0f1d7209cffe3bc8be5b76aa1f4faba40af99a6dd299462cdd3820c94
-  Description: GIGA-BYTE NonPnP Driver
-  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: 1.0.1.1
-  Product: GIGA-BYTE Software driver
-  ProductVersion: 1.0.0.1
-  Copyright: Copyright (C) 2017
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -303,9 +304,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
-        C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
-        Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=\u65B0\
+        \u5317\u5E02, JURISDICTION_OF_INCORPORATION_L=NEW TAIPEI, BUSINESS_CATEGORY=Private\
+        \ Organization, serialNumber=22044755, C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology\
+        \ Co., Ltd., CN=GIGA,BYTE Technology Co., Ltd."
       ValidFrom: '2018-12-07 00:00:00'
       ValidTo: '2021-12-06 23:59:59'
       Signature: 502fd3341b71cab45e302c7b586f9beefdce61639b7ccbaf643eb13bb29fcc6d5e37ba8f8af0b2d775216237d659088cbf124514ebe1fc6a663f20cbbd920afd64fbec463254a4e845cdb452b5768fcb2fb74e13043899381b57ce63419679395729d52fc8efbe19e08c5a4c6337eb910e048d30c2888718355460150ae33f20c8ea3724251dbe28d45de130843b462e11ff1ca90fb98e097b5f372b0aa1c5b2791897b4cf79cdbc02c5aca5a935a3ccf67fb67ef28390ed7913ee32e708869acbba27f24d6c7fc45b795b5e90c7200551babe0bae400343fc6fd75d36da7b5def7fde3a7f97519796d3bd14755a3adaa7cafcbe2cc24eb9a1a046ea8e05376d
@@ -377,7 +379,7 @@ KnownVulnerableSamples:
       Entropy: 3.251870619839375
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-12 22:23:11'
+  CreationTimestamp: '2019-02-12 19:23:11'
   Imphash: f7d07bcaa23837d219dcb64e76290252
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -388,14 +390,14 @@ KnownVulnerableSamples:
     MD5: b661326f2405e4947bf879cc97f13438
     SHA1: c7e06ef18efee6d133c5014ef45d6657e1e36b90
     SHA256: c92d943a465e20f50bae8d46ea38b635d2da85ae4e34f0170fd6f451890c76d7
-  Description: GIGA-BYTE NonPnP Driver
-  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: 1.0.1.3
-  Product: GIGA-BYTE Software driver
-  ProductVersion: 1.0.0.1
-  Copyright: Copyright (C) 2017
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -483,9 +485,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
-        C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
-        Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=\u65B0\
+        \u5317\u5E02, JURISDICTION_OF_INCORPORATION_L=NEW TAIPEI, BUSINESS_CATEGORY=Private\
+        \ Organization, serialNumber=22044755, C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology\
+        \ Co., Ltd., CN=GIGA,BYTE Technology Co., Ltd."
       ValidFrom: '2018-12-07 00:00:00'
       ValidTo: '2021-12-06 23:59:59'
       Signature: 502fd3341b71cab45e302c7b586f9beefdce61639b7ccbaf643eb13bb29fcc6d5e37ba8f8af0b2d775216237d659088cbf124514ebe1fc6a663f20cbbd920afd64fbec463254a4e845cdb452b5768fcb2fb74e13043899381b57ce63419679395729d52fc8efbe19e08c5a4c6337eb910e048d30c2888718355460150ae33f20c8ea3724251dbe28d45de130843b462e11ff1ca90fb98e097b5f372b0aa1c5b2791897b4cf79cdbc02c5aca5a935a3ccf67fb67ef28390ed7913ee32e708869acbba27f24d6c7fc45b795b5e90c7200551babe0bae400343fc6fd75d36da7b5def7fde3a7f97519796d3bd14755a3adaa7cafcbe2cc24eb9a1a046ea8e05376d
@@ -557,7 +560,7 @@ KnownVulnerableSamples:
       Entropy: 3.3380209612256118
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-15 03:45:51'
+  CreationTimestamp: '2019-04-15 00:45:51'
   Imphash: d6dc99d60798b2647006ddba21671160
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -568,14 +571,14 @@ KnownVulnerableSamples:
     MD5: b4709bbd5e329d55130e0db781afc89c
     SHA1: b483cdd20bb24ed9a20f4168628b7053b04ebb93
     SHA256: bb0063e65c44da66d705d25121af09b641070219c174f5d83e288ba8fe59e46f
-  Description: GIGABYTE Tools
-  Company: Windows (R) Server 2003 DDK provider
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: '5.2.3790.1830 built by: WinDDK'
-  Product: Windows (R) Server 2003 DDK driver
-  ProductVersion: 5.2.3790.1830
-  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -666,9 +669,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -722,7 +725,7 @@ KnownVulnerableSamples:
       Entropy: 4.481086585534943
       Virtual Size: '0x65c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-12 23:22:29'
+  CreationTimestamp: '2009-03-12 20:22:29'
   Imphash: 6816dabcee7b7d027bfbb93a16297afa
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -733,14 +736,14 @@ KnownVulnerableSamples:
     MD5: 8e9f3d61eaa5d5df8ac92c3c89eb7347
     SHA1: c1b7be5e37f29ee8114b701f88d68748f196c530
     SHA256: b213524b22aadcc273142c4b8afc2a6219d6b8b7cab4b41adf9944efb8f46005
-  Description: GIGA-BYTE NonPnP Driver
-  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: 1.0.0.5
-  Product: GIGA-BYTE Software driver
-  ProductVersion: 1.0.0.1
-  Copyright: Copyright (C) 2017
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -846,9 +849,10 @@ KnownVulnerableSamples:
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
         SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    - Subject: ??=TW, ??=Private Organization, serialNumber=22044755, C=TW, ST=Taiwan,
-        L=New Taipei, O=GIGA,BYTE TECHNOLOGY CO., LTD., OU=Quality Validation Department
-        II, CN=GIGA,BYTE TECHNOLOGY CO., LTD.
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=22044755, C=TW, ST=Taiwan, L=New Taipei, O=GIGA,BYTE TECHNOLOGY
+        CO., LTD., OU=Quality Validation Department II, CN=GIGA,BYTE TECHNOLOGY CO.,
+        LTD.
       ValidFrom: '2015-11-25 00:00:00'
       ValidTo: '2018-11-24 23:59:59'
       Signature: 4b80390dbbac3854acdd732ced7a533a35cb04b57da3e63120d90c4111b9e11f0255d4264a960873efa865d8dd122d77d082d72b197f3fd2b1df36bc03dac88c0e193e023129b8e144e4e75f75ff24ad2843094442e85611c4c8a1a622fcd7cdc61984d07df686844320b6af005280432251809de912567b74cf92e07daa504060bf26ed15cfaa23b09096c79fab8607e6bfb848c62a0e9f8734e20837fa5b420374642dc972cb188a71714087a47114dbf41e2f339707c404189e288d6f26fb2c5c24ee3d9dc8c03201c03155ce1eabe56e125913c361fc425dda869335fbb8f8d19afb58d1a19dd65e4a85ffd75021946cfcb5b0170624616009ce5b2b0d2f
@@ -902,7 +906,7 @@ KnownVulnerableSamples:
       Entropy: 3.248587587731763
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-20 06:38:40'
+  CreationTimestamp: '2018-04-20 03:38:40'
   Imphash: d6dc99d60798b2647006ddba21671160
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -913,14 +917,14 @@ KnownVulnerableSamples:
     MD5: b18b1bff521337695d2d6a0768340252
     SHA1: 0f5034fcf5b34be22a72d2ecc29e348e93b6f00f
     SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
-  Description: GIGABYTE Tools
-  Company: Windows (R) Server 2003 DDK provider
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: '5.2.3790.1830 built by: WinDDK'
-  Product: Windows (R) Server 2003 DDK driver
-  ProductVersion: 5.2.3790.1830
-  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1007,7 +1011,9 @@ KnownVulnerableSamples:
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
         SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
-    - Subject: C=CN, ST=, L=, O=, CN=
+    - Subject: "C=CN, ST=\u4E0A\u6D77\u5E02, L=\u4E0A\u6D77\u5E02, O=\u4E0A\u6D77\u7B11\
+        \u8058\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\u53F8, CN=\u4E0A\u6D77\u7B11\
+        \u8058\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\u53F8"
       ValidFrom: '2020-01-02 07:05:30'
       ValidTo: '2021-01-02 03:42:16'
       Signature: 42c4e375f4ebd7d918dfa735bb07fdb9af9b462be297aa35cf580fc20f8033e6cc7f9188539e9955409465acef09c83073cfc95205e3fac3f134e7b9d6294998c88f01a2931463d3e61fc754fffd99444abf886172aeeb6a87f12d925aed520cfa07fa6f5c43c4548bb2d7f60e6a0e6b742d32da2edbfc4effe616ec5a94582419ffd89e0b741b8fad70b5a6ac110f270182eba9cda4f99f24a04712bf09301f4642e2a4b0df9fd3efbb9dd2a2b735deb4604aa2356b48502c4ac1d2492ad1461fb1e8d496da60d9d17ad123db61173e01f99d284d6d8a5dce80e7bf062424154a66fd03d987e4b70c6fa576a136c186347e3d467a18e4d0eba18ee1a313a4b5
@@ -1086,7 +1092,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682769
+      Entropy: 4.431694959682768
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -1101,7 +1107,7 @@ KnownVulnerableSamples:
       Entropy: 3.471909950512757
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-04 00:27:55'
+  CreationTimestamp: '2013-07-03 21:27:55'
   Imphash: cc81a908891587ccac8059435eda4c66
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -1112,14 +1118,14 @@ KnownVulnerableSamples:
     MD5: ce38d9daee9b1de9c5fbaac0e6932ed3
     SHA1: 025656c5696aa4834b4d32149a93176cf0322854
     SHA256: 35b1fdfa5cc9bb4a0d6e148140d59351447fa35c5c899e95da5f62a6b054af56
-  Description: GIGA-BYTE NonPnP Driver
-  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: 1.1.0.1
-  Product: GIGA-BYTE Software driver
-  ProductVersion: 1.0.0.1
-  Copyright: Copyright (C) 2017
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1206,9 +1212,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
-        C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
-        Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=\u65B0\
+        \u5317\u5E02, JURISDICTION_OF_INCORPORATION_L=NEW TAIPEI, BUSINESS_CATEGORY=Private\
+        \ Organization, serialNumber=22044755, C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology\
+        \ Co., Ltd., CN=GIGA,BYTE Technology Co., Ltd."
       ValidFrom: '2018-12-07 00:00:00'
       ValidTo: '2021-12-06 23:59:59'
       Signature: 502fd3341b71cab45e302c7b586f9beefdce61639b7ccbaf643eb13bb29fcc6d5e37ba8f8af0b2d775216237d659088cbf124514ebe1fc6a663f20cbbd920afd64fbec463254a4e845cdb452b5768fcb2fb74e13043899381b57ce63419679395729d52fc8efbe19e08c5a4c6337eb910e048d30c2888718355460150ae33f20c8ea3724251dbe28d45de130843b462e11ff1ca90fb98e097b5f372b0aa1c5b2791897b4cf79cdbc02c5aca5a935a3ccf67fb67ef28390ed7913ee32e708869acbba27f24d6c7fc45b795b5e90c7200551babe0bae400343fc6fd75d36da7b5def7fde3a7f97519796d3bd14755a3adaa7cafcbe2cc24eb9a1a046ea8e05376d
@@ -1277,7 +1284,7 @@ KnownVulnerableSamples:
       Entropy: 3.1867043459100257
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-25 02:05:25'
+  CreationTimestamp: '2021-01-24 23:05:25'
   Imphash: 81acb4bb89ef49c4e7f30513b4750e53
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -1288,14 +1295,14 @@ KnownVulnerableSamples:
     MD5: 9524a8cc0f1ce8a124e88f31c917c89d
     SHA1: 8d6286e5d3e1558f6870bf1c4343da8a1d77aef3
     SHA256: 3ede3c99d8a049232cd6baae9d44518a73c19d93230a1d320407a3fc2f506569
-  Description: GIGA-BYTE NonPnP Driver
-  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: 1.0.0.1
-  Product: GIGA-BYTE Software driver
-  ProductVersion: 1.0.0.1
-  Copyright: Copyright (C) 2017
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1377,9 +1384,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
-        C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
-        Co., Ltd.
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=\u65B0\
+        \u5317\u5E02, JURISDICTION_OF_INCORPORATION_L=NEW TAIPEI, BUSINESS_CATEGORY=Private\
+        \ Organization, serialNumber=22044755, C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology\
+        \ Co., Ltd., CN=GIGA,BYTE Technology Co., Ltd."
       ValidFrom: '2018-12-07 00:00:00'
       ValidTo: '2021-12-06 23:59:59'
       Signature: 502fd3341b71cab45e302c7b586f9beefdce61639b7ccbaf643eb13bb29fcc6d5e37ba8f8af0b2d775216237d659088cbf124514ebe1fc6a663f20cbbd920afd64fbec463254a4e845cdb452b5768fcb2fb74e13043899381b57ce63419679395729d52fc8efbe19e08c5a4c6337eb910e048d30c2888718355460150ae33f20c8ea3724251dbe28d45de130843b462e11ff1ca90fb98e097b5f372b0aa1c5b2791897b4cf79cdbc02c5aca5a935a3ccf67fb67ef28390ed7913ee32e708869acbba27f24d6c7fc45b795b5e90c7200551babe0bae400343fc6fd75d36da7b5def7fde3a7f97519796d3bd14755a3adaa7cafcbe2cc24eb9a1a046ea8e05376d
@@ -1451,7 +1459,7 @@ KnownVulnerableSamples:
       Entropy: 3.251870619839375
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-17 03:52:53'
+  CreationTimestamp: '2019-01-17 00:52:53'
   Imphash: f7d07bcaa23837d219dcb64e76290252
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -1462,14 +1470,14 @@ KnownVulnerableSamples:
     MD5: 1c0c9b05800e86e0e1d158e0b44d4b99
     SHA1: a2c4f33de0b2ebb8a505f97697d550ccb3f7b114
     SHA256: b5433ec27586bdd8d2ef606f9212d8ed75ae3ae2e201a1acaf325d9b12239df8
-  Description: GIGABYTE Tools
-  Company: Windows (R) 2000 DDK provider
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: 5.00.2195.1620
-  Product: Windows (R) 2000 DDK driver
-  ProductVersion: 5.00.2195.1620
-  Copyright: Copyright (C) Microsoft Corp. 1981-1999
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -1571,9 +1579,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1618,13 +1626,13 @@ KnownVulnerableSamples:
       Entropy: 5.25344296666572
       Virtual Size: '0x352'
     .rsrc:
-      Entropy: 3.446470809809315
+      Entropy: 3.4464708098093153
       Virtual Size: '0x3a0'
     .reloc:
       Entropy: 4.981256903616009
       Virtual Size: '0x12c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-04 00:27:29'
+  CreationTimestamp: '2013-07-03 21:27:29'
   Imphash: 45f8f347e3fb919f3164a4a3278f1c71
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -1635,14 +1643,14 @@ KnownVulnerableSamples:
     MD5: 906258ee90744ed1307ba969a1c8722e
     SHA1: 2b94ace70d946caa1fed6c8f97f2fafdb45d6c54
     SHA256: 1251eef40b877fd379c175c02bb83e230fa5acd30020e54acc0718ab326818b3
-  Description: GIGABYTE Tools
-  Company: Windows (R) 2000 DDK provider
-  InternalName: gdrv.sys
-  OriginalFilename: gdrv.sys
-  FileVersion: 5.00.2195.1620
-  Product: Windows (R) 2000 DDK driver
-  ProductVersion: 5.00.2195.1620
-  Copyright: Copyright (C) Microsoft Corp. 1981-1999
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -1736,9 +1744,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1789,6 +1797,6 @@ KnownVulnerableSamples:
       Entropy: 4.802440942775519
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-12 23:17:32'
+  CreationTimestamp: '2009-03-12 20:17:32'
   Imphash: b4c857bd3a7b1d8125c0f62aec45401e
   LoadsDespiteHVCI: 'FALSE'

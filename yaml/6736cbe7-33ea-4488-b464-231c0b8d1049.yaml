@@ -60,7 +60,7 @@ KnownVulnerableSamples:
       Entropy: 4.884811337685559
       Virtual Size: '0x284'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-07-10 08:58:31'
+  CreationTimestamp: '2008-07-10 05:58:31'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -147,9 +147,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

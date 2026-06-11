@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 835b8a268127c12be0ebcdd13eae3f16
     SHA1: 40082d350533c99578bdabfcaf03afe52c83d4a8
     SHA256: 5f353fc46843155b6b63e75994f5328b9d4344654d5759a5145cd6e64babe3de
-  Description: VirIT Agent System
-  Company: TG Soft S.a.s.
-  InternalName: viragt.sys
-  OriginalFilename: viragt64.sys
-  FileVersion: 1, 0, 0, 0
-  Product: VirIT Agent System
-  ProductVersion: 1, 0, 0, 0
-  Copyright: Copyright (C) TG Soft S.a.s. 2011, 2012 - www.tgsoft.it
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -181,9 +181,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -240,7 +240,7 @@ KnownVulnerableSamples:
       Entropy: 2.539629799045108
       Virtual Size: '0x124'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-23 03:57:10'
+  CreationTimestamp: '2012-08-23 00:57:10'
   Imphash: 22a9d7a42282b48c566b4423363d3a3e
   LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
@@ -251,14 +251,14 @@ KnownVulnerableSamples:
     MD5: 78428144608ab49b0508197849200ab0
     SHA1: eb528a7bc5b0d9efe5872e16f42420291c6df07f
     SHA256: 04f771d72a812fe9dd6bced402b36b081c80bd3397fdd66dbaa44906ac088159
-  Description: VirIT Agent System
-  Company: TG Soft S.a.s.
-  InternalName: viragt.sys
-  OriginalFilename: viragt.sys
-  FileVersion: 1.25.0.0
-  Product: VirIT Agent System
-  ProductVersion: 1.25.0.0
-  Copyright: Copyright (C) TG Soft S.a.s. 2006, 2010 - www.tgsoft.it
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -403,9 +403,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -459,7 +459,7 @@ KnownVulnerableSamples:
       Entropy: 6.064753530375784
       Virtual Size: '0xad0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-11-30 03:59:42'
+  CreationTimestamp: '2010-11-30 00:59:42'
   Imphash: f079f8637a1d4fe2fb93af2a267b68ef
   LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
@@ -470,14 +470,14 @@ KnownVulnerableSamples:
     MD5: fbbb02331ba15c59930554299f14b793
     SHA1: 2c300726f3806b6d077fe58ae8d2b257d654a700
     SHA256: f78e06f649bc0d88770c5465d7792abeb27631ec0ce9a0fa68698b94ebf2cf49
-  Description: VirIT Agent System
-  Company: TG Soft S.a.s.
-  InternalName: viragt.sys
-  OriginalFilename: viragt.sys
-  FileVersion: 1, 65, 0, 0
-  Product: VirIT Agent System
-  ProductVersion: 1, 65, 0, 0
-  Copyright: Copyright (C) TG Soft S.a.s. 2006, 2012 - www.tgsoft.it
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -652,9 +652,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -711,7 +711,7 @@ KnownVulnerableSamples:
       Entropy: 6.2771882804364765
       Virtual Size: '0xedc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-07-30 11:03:12'
+  CreationTimestamp: '2012-07-30 08:03:12'
   Imphash: 80ae2342fd6c7f5e1c642918e33dafb1
   LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
@@ -722,14 +722,14 @@ KnownVulnerableSamples:
     MD5: e39802ea77fa83f1939a50985f9036c0
     SHA1: 070c6795aa64c2bce7867e280016fb1d2af86dca
     SHA256: ac42c7b1d9feccd48c305698942186d580b7bfd047bb73dbf028f3fed7aa24ad
-  Description: VirIT Agent System
-  Company: TG Soft S.a.s.
-  InternalName: viragt.sys
-  OriginalFilename: viragt.sys
-  FileVersion: 1, 74, 0, 0
-  Product: VirIT Agent System
-  ProductVersion: 1, 74, 0, 0
-  Copyright: Copyright (C) TG Soft S.a.s. 2006, 2013 - www.tgsoft.it
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -907,9 +907,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -984,7 +984,7 @@ KnownVulnerableSamples:
       Entropy: 6.290375726968473
       Virtual Size: '0xfda'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-29 06:59:32'
+  CreationTimestamp: '2013-11-29 03:59:32'
   Imphash: 3815f9107b799b863cd905178e6e07d0
   LoadsDespiteHVCI: 'FALSE'
 - Filename: viragt64.sys
@@ -995,14 +995,14 @@ KnownVulnerableSamples:
     MD5: 2a499183392f0d3835f957bbe6b538ba
     SHA1: f8a9a8d7c704069d4fff9c26740115c1f4ba3499
     SHA256: 605e0efa14fc8443dc43c2068f17e6f175369909d5f7f1c3730fb5fe062528e6
-  Description: VirIT Agent System
-  Company: TG Soft S.a.s.
-  InternalName: viragt.sys
-  OriginalFilename: viragt64.sys
-  FileVersion: 1, 0, 0, 4
-  Product: VirIT Agent System
-  ProductVersion: 1, 0, 0, 4
-  Copyright: Copyright (C) TG Soft S.a.s. 2011, 2013 - www.tgsoft.it
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1140,9 +1140,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1217,7 +1217,7 @@ KnownVulnerableSamples:
       Entropy: 2.4653384645476275
       Virtual Size: '0x12e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-23 03:42:36'
+  CreationTimestamp: '2013-01-23 00:42:36'
   Imphash: 85fd19df117fbc21efbcb1d587063e12
   LoadsDespiteHVCI: 'FALSE'
 - Filename: viragt.sys
@@ -1228,14 +1228,14 @@ KnownVulnerableSamples:
     MD5: fca297e7088250ac73298a7d623e1137
     SHA1: d1d6535cd02ff50825941130fe992fcdc91c71cd
     SHA256: 401ed2d2768707b5c47556774c119f989986a9e2fa88e1e2626f14e22b85e66b
-  Description: VirIT Agent System
-  Company: TG Soft S.a.s.
-  InternalName: viragt.sys
-  OriginalFilename: viragt.sys
-  FileVersion: 1, 60, 0, 0
-  Product: VirIT Agent System
-  ProductVersion: 1, 60, 0, 0
-  Copyright: Copyright (C) TG Soft S.a.s. 2006, 2011 - www.tgsoft.it
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -1410,9 +1410,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1469,7 +1469,7 @@ KnownVulnerableSamples:
       Entropy: 6.247994097967221
       Virtual Size: '0xe18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-12-29 12:38:08'
+  CreationTimestamp: '2011-12-29 09:38:08'
   Imphash: 48e2ef3c2d32ecca62510d90e12b6632
   LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
@@ -1480,14 +1480,14 @@ KnownVulnerableSamples:
     MD5: bec44ba7f52a8c4700876db0c566d696
     SHA1: 3854d0364d7379bcb7d59311823cadc3e34d1612
     SHA256: 230fe99d425e870cc03383b195d5a8c0ef3d191baaa4104f6f4cdee4960c48fc
-  Description: VirIT Agent System
-  Company: TG Soft S.a.s.
-  InternalName: viragt.sys
-  OriginalFilename: viragt.sys
-  FileVersion: 1, 38, 0, 0
-  Product: VirIT Agent System
-  ProductVersion: 1, 38, 0, 0
-  Copyright: Copyright (C) TG Soft S.a.s. 2006, 2011 - www.tgsoft.it
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -1662,9 +1662,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1721,7 +1721,7 @@ KnownVulnerableSamples:
       Entropy: 6.239805134913373
       Virtual Size: '0xe14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-05-10 12:33:08'
+  CreationTimestamp: '2011-05-10 09:33:08'
   Imphash: 48e2ef3c2d32ecca62510d90e12b6632
   LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
@@ -1732,14 +1732,14 @@ KnownVulnerableSamples:
     MD5: d1d42d44e5fcfd9c0a148b0d85f911d0
     SHA1: eb2d192b58a979cdb127fb81049ff19b07dbe45e
     SHA256: b59ad4a1f71f8379c89fc3bc1d2827b0785bbb0192b43549034f24a133eea3a5
-  Description: VirIT Agent System
-  Company: TG Soft S.a.s.
-  InternalName: viragt.sys
-  OriginalFilename: viragt.sys
-  FileVersion: 1, 80, 0, 0
-  Product: VirIT Agent System
-  ProductVersion: 1, 80, 0, 0
-  Copyright: Copyright (C) TG Soft S.a.s. 2006, 2016 - www.tgsoft.it
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -1917,9 +1917,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1993,6 +1993,6 @@ KnownVulnerableSamples:
       Entropy: 6.404375411917709
       Virtual Size: '0x12a4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-07 04:16:07'
+  CreationTimestamp: '2016-09-07 01:16:07'
   Imphash: 3815f9107b799b863cd905178e6e07d0
   LoadsDespiteHVCI: 'FALSE'

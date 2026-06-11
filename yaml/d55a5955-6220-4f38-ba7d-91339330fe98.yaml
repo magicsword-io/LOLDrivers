@@ -34,13 +34,13 @@ KnownVulnerableSamples:
     MD5: aa2051841a882c7080ddf6b224f838da
     SHA1: ee9073dedb3f05797de41f79be5cc2e5e5028b61
     SHA256: 1c8cb72b9a011b60b1b9caea508b26fbbd95a1e3634af66082417381fe6544fb
-  Company: NVIDIA Corporation
-  Copyright: (C) 2017 NVIDIA Corporation. All rights reserved.
-  CreationTimestamp: '2019-02-01 03:06:05'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2019-02-01 00:06:05'
   Date: ''
-  Description: NVIDIA Flash Driver, Version 1.8.0
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1.8.0
+  FileVersion: ''
   Filename: nvflash.sys
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -90,13 +90,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: nvflash
+  InternalName: ''
   MD5: 84fb76ee319073e77fb364bbbbff5461
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: nvflash.sys
-  Product: NVIDIA Flash Driver
-  ProductVersion: 1.8.0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 1ef72b438a6f0585025fd9319f10ded0
@@ -238,7 +238,7 @@ KnownVulnerableSamples:
     SHA256: b62ecd7eccde402456eab582b49705cc77065d7015e7d92bbc06e0fcff097e58
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-04-05 19:22:50'
+  CreationTimestamp: '2011-04-05 16:22:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -287,7 +287,7 @@ KnownVulnerableSamples:
       Entropy: 4.165395519470088
       Virtual Size: '0x208'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.4299412084355048
@@ -359,9 +359,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -398,7 +398,7 @@ KnownVulnerableSamples:
     SHA256: dde12d20a00f7987f6e53eeeee3d5667482940f06d012a0003b80f217a105d74
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-13 12:55:59'
+  CreationTimestamp: '2016-09-13 09:55:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -562,7 +562,7 @@ KnownVulnerableSamples:
     SHA256: 4b38c075ba6523502dfd39ed10757db58234a1c84d4952b65e30b4a8679bfcca
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-06-14 18:02:51'
+  CreationTimestamp: '2016-06-14 15:02:51'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -611,7 +611,7 @@ KnownVulnerableSamples:
       Entropy: 4.5312340971202705
       Virtual Size: '0x240'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.531568402609688
@@ -724,7 +724,7 @@ KnownVulnerableSamples:
     SHA256: d9434a50e1a6252f23af362631a5576017cce3ef109d7fc93748de8bd46f9385
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2014-08-01 20:05:12'
+  CreationTimestamp: '2014-08-01 17:05:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -773,7 +773,7 @@ KnownVulnerableSamples:
       Entropy: 4.147925362595232
       Virtual Size: '0x208'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.4299412084355048
@@ -846,9 +846,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -903,7 +903,7 @@ KnownVulnerableSamples:
     SHA256: 91ee89520105ccbceca6ee0e34070f28c8dc5a3d73ec65f384da5da4f2a36dc0
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-13 12:56:02'
+  CreationTimestamp: '2016-09-13 09:56:02'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -952,7 +952,7 @@ KnownVulnerableSamples:
       Entropy: 4.531801445388662
       Virtual Size: '0x240'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.531568402609688
@@ -1065,7 +1065,7 @@ KnownVulnerableSamples:
     SHA256: d4288c055c6d68b4a45df501877443e544b31c193f8559c8c7eac927ae738e8a
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-06-04 12:13:54'
+  CreationTimestamp: '2009-06-04 09:13:54'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1108,13 +1108,13 @@ KnownVulnerableSamples:
   SHA256: 4737750788c72d2fc9cf95681c622357263075d65b23e54c4dc3f31446cad37b
   Sections:
     .text:
-      Entropy: 5.728576049671747
+      Entropy: 5.728576049671746
       Virtual Size: '0x930'
     .rdata:
       Entropy: 4.1487952976835825
       Virtual Size: '0x208'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.4299412084355048
@@ -1203,9 +1203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1225,7 +1225,7 @@ KnownVulnerableSamples:
     SHA256: d510b3424178f80cbe926217d74bbecbf682a88f1b6052ef27fd27d601fc14f7
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-27 05:31:22'
+  CreationTimestamp: '2013-03-27 02:31:22'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1274,7 +1274,7 @@ KnownVulnerableSamples:
       Entropy: 4.125911008701018
       Virtual Size: '0x208'
     .data:
-      Entropy: 0.5035334969292564
+      Entropy: 0.5035334969292565
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.4299412084355048
@@ -1347,9 +1347,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

@@ -30,13 +30,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: HTC VIVE
-  Description: VIVE Virtual Audio Driver
-  Product: VIVE Virtual Audio Driver
-  ProductVersion: 0,1,11,7
-  FileVersion: 0,1,11,7
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: ViveRRAudio.sys
+  OriginalFilename: ''
   Imphash: 78eb92e96f5e824801f3284b813750ab
   Authentihash:
     MD5: 590a32adaae270a9fe5c51f37c595f0d
@@ -72,9 +72,9 @@ KnownVulnerableSamples:
       Entropy: 5.415566703340568
       Virtual Size: '0xa6c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-04-20 02:50:27'
-  InternalName: ViveRRAudio.sys
-  Copyright: Copyright (C) HTC Corporation.2021
+  CreationTimestamp: '2022-04-19 23:50:27'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - portcls.sys
@@ -208,8 +208,9 @@ KnownVulnerableSamples:
         SHA1: ec3075370fcea680e09497d44a4b246012f24160
         SHA256: fa5e895ff2603de9e15939a00299836f73e5778058f22194f696d19e79a8b010
         SHA384: 13ab2eedcd7e712f635ca1da3dc30cd8d8e22cedcf5a2c4994181509dddbf76867d07925b9a514d123bc1d5cab41fe9f
-    - Subject: ??=Private Organization, ??=TW, serialNumber=16003518, C=TW, ST=New
-        Taipei City, O=HTC CORPORATION, CN=HTC CORPORATION
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=16003518, C=TW, ST=New Taipei City, O=HTC CORPORATION, CN=HTC
+        CORPORATION
       ValidFrom: '2021-07-22 00:00:00'
       ValidTo: '2024-07-25 23:59:59'
       Signature: 102beb128f071266a68b017cf64b35048c81fee8f813be89aaba4ce6281c8f070881cb784db3c397c1027bea2f9808692bb91511001e201fc0c363a7c3afec55379bcaa891bbcb16b0daba32af0a7025f758f1351d64e4764cfb5077e6a87d6e0349fedb863221a73449c96929d167de8696ac4ca34fa25addc420f3ab4c23bb9223dccc8b742c855bdb389375002bfb2a8eec132ce8162dde620e3a4b57bf75843d4b02372b14e674ff1a581de5d1d72db66a0d813f32e43cb5564697dbf45aaab0b7b5878c46cc2b440c6c5ce6c2a8098c7183f1e56da6731b5e60b6b470d68fdaa9bd5036f50bc7460ff44218d80eebfcae7dff288167923a0fe828fdaea24f857d49e9c8d86efebcf65c47b2048ab9e13854f0f591aeeb3168286095b4d69dff132df53a78cdf847b8233c229054f9dfb45100a0997f20d2d6e56b2c02779134a675371ca75eb4ac4406226c0b803949e63f3ca6b68220b84efb136507f7caef0607ff784674ea848936ba546647673c2fc91b3f869274a331019acfb0e4ba843d0029c2809a2dff082815da7b2d50b643c39c7611f62a7bede05cb1a7b2404afdfc78d3f56e9ab7d45104a120d47a261f67987bde51f662d1175b770a2822bca06e444e3e35decd4d50d4f0ccf0e96e8c24a8e784130f7c2cccfaddf3e93b9048ed7898e85dcc5215d141df7574b1d6d96c9c6a75dba92ac1e694900b82

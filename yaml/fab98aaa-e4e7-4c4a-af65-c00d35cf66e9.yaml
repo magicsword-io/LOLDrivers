@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 17b67e675e778c70d3c348d5088ab514
     SHA1: b38b98608e410c1555a7d73056e86e1db850bb2e
     SHA256: 33b88ac3151f2192eaf4c2be3c7ad00e49090c8b94ec51b754e19ac784b087aa
-  Company: CPUID
-  Copyright: Copyright(C) 2016 CPUID
-  CreationTimestamp: '2016-11-22 08:20:59'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2016-11-22 05:20:59'
   Date: ''
-  Description: CPUID Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: '6.1.7600.16385 built by: WinDDK'
+  FileVersion: ''
   Filename: cpuz141.sys
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -83,13 +83,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: cpuz.sys
+  InternalName: ''
   MD5: db72def618cbc3c5f9aa82f091b54250
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: cpuz.sys
-  Product: CPUID service
-  ProductVersion: 6.1.7600.16385
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: CPUID
   RichPEHeaderHash:
     MD5: c046d6f14ec39d2a0f67a417bda83c5e
@@ -150,9 +150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

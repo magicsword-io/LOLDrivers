@@ -48,13 +48,13 @@ KnownVulnerableSamples:
     MD5: e1c188570d8720f9c35e194e17a7fd36
     SHA1: ca6b0d932e5ac9dbe1242aca48ba93a14cf9d151
     SHA256: b2b37ef379ada79d2abe78375312bfcd4b518139bc525a522c2a6329ba097cc4
-  Company: FUJITSU LIMITED.
-  Copyright: Copyright(C) FUJITSU LIMITED 2005
-  CreationTimestamp: '2005-09-16 05:50:59'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2005-09-16 02:50:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
-  FileVersion: 2, 0, 0, 0
+  FileVersion: ''
   Filename: ADV64DRV.sys
   ImportedFunctions:
   - RtlAppendUnicodeToString
@@ -73,13 +73,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ADV64DRV.sys
+  InternalName: ''
   MD5: 778b7feea3c750d44745d3bf294bd4ce
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ADV64DRV.sys
-  Product: MicrosoftR WindowsR Operating System
-  ProductVersion: 2, 0, 0, 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: FUJITSU LIMITED
   RichPEHeaderHash:
     MD5: 1b19b7c8c29ee1a90f9c2b13eb7d131b
@@ -172,9 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

@@ -30,13 +30,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: Pinchins Technology Co.,Ltd.
-  Description: RWTKrl
-  Product: RansomwareTerminator
-  ProductVersion: '1.0'
-  FileVersion: 1.0.0.807
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: RWTKrl.sys
+  OriginalFilename: ''
   Imphash: 53ae9acf513f6b93672a362615da5fbb
   Authentihash:
     MD5: 7ca020674114f5f8aad94c9cc61dccb4
@@ -75,9 +75,9 @@ KnownVulnerableSamples:
       Entropy: 3.302600952040726
       Virtual Size: '0x3e4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-05-16 04:13:17'
-  InternalName: RWTKrl.sys
-  Copyright: Copyright (C) 2016 Pinchins Technology Co.,Ltd.
+  CreationTimestamp: '2017-05-16 01:13:17'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -214,10 +214,12 @@ KnownVulnerableSamples:
         SHA1: 99e402e691ee22e237b59c2c95ef07f396393a6b
         SHA256: e3f9ea7f77a3b7349399ae5c40ef533c06c7d6e551949e0c7898d298fb7463cf
         SHA384: 8d4c0779c89895a8a595b8823196d10eed2bdc9cc3c462490c51fdf1938778878b64c82f78e36f6f4c6a74b9366fbb11
-    - Subject: ??=CN, ??=Fujian, ??=Fuzhou, ??=Private Organization, serialNumber=91350105MA347X7Y7X,
-        C=CN, ST=Fujian, L=Fuzhou, postalCode=350015, ??=ZONE A,1240, 15/F, COMPLEX
-        BUILDING, FUZHOU BONDED AREA, O=Pinchins Technology Company Limited, emailAddress=support@pinchins.com,
-        CN=Pinchins Technology Company Limited
+    - Subject: JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=Fujian,
+        JURISDICTION_OF_INCORPORATION_L=Fuzhou, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=91350105MA347X7Y7X, C=CN, ST=Fujian, L=Fuzhou, postalCode=350015,
+        STREET_ADDRESS=ZONE A,1240, 15/F, COMPLEX BUILDING, FUZHOU BONDED AREA, O=Pinchins
+        Technology Company Limited, emailAddress=support@pinchins.com, CN=Pinchins
+        Technology Company Limited
       ValidFrom: '2016-09-05 03:15:38'
       ValidTo: '2018-11-05 03:15:38'
       Signature: aadcb357f69b98196e7420fc2b8766d399782fb1a043a1480017279de4787277faea0d6ea942ac10cb1cd367f51cf273ceb71e1c6df9210476fea1ddf3b9bea3f1328b5f5492af007c2f94e02c470dfd370edc643a56fafc286c02acb1c08057370641f2a15538db5b9c11fb3f25b6666a0a017aa1626e1052a388cb17957600ff8232f24a57f341571ac39de67a3b4c27514b05277984b3abf2de7b187f25ae42b7a439ee8be0382d0352ad5eaf1ec25c5d1f5644679a6f59ac9502016d026e95cc2348b415a477ad0512c6d50a1fe5d89ff8a132cf87470e21b13b7850acc1b5a594425a33859490232bea5dab93090a845ffd7d8ae89acee976c5a4dac7d1

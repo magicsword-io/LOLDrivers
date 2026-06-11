@@ -65,7 +65,7 @@ KnownVulnerableSamples:
       Entropy: 5.137238819476553
       Virtual Size: '0x4ac'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-02-26 02:40:56'
+  CreationTimestamp: '2013-02-25 23:40:56'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -168,9 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -259,7 +259,7 @@ KnownVulnerableSamples:
       Entropy: 5.150733446279817
       Virtual Size: '0x48a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-07-21 07:02:14'
+  CreationTimestamp: '2017-07-21 04:02:14'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -361,9 +361,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -454,7 +454,7 @@ KnownVulnerableSamples:
       Entropy: 2.5638651219508537
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-10-15 08:03:36'
+  CreationTimestamp: '2018-10-15 05:03:36'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -547,9 +547,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=US, ??=Delaware, ??=Campbell, ??=Private Organization, serialNumber=2106032,
-        C=US, ST=California, L=Campbell, O=Phoenix Technologies Ltd., CN=Phoenix Technologies
-        Ltd.
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        JURISDICTION_OF_INCORPORATION_L=Campbell, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=2106032, C=US, ST=California, L=Campbell, O=Phoenix Technologies
+        Ltd., CN=Phoenix Technologies Ltd.
       ValidFrom: '2018-03-09 00:00:00'
       ValidTo: '2021-03-08 23:59:59'
       Signature: 3bcdb9c165b3148a5fe97e79c78478ea9c723aeb006aea07153b60bf9989582ecc691d64dc320226d6713610b188ae5046dd2d9c8a921bc778c13f6e5483e2543456004c9beb0d89872c993db902579433690b6abdb27259063c5a04ad2659dd7081b5f57d0202bf9c3407787005eec2470328b43f2ca2814482c4bcbcc742090493fc6198d4eae9c8957f132a7c33104fce83e96e23a60046149b99bba10b3e17a1faf3edc2fbacdf2e9969667a3bb353511a8fbcc1461d491b42f1f1ef87bd2fac6d087e585551ae4925adb80d9e899e6be9e4b5131c12cf4b94fd390854671f7b0b4aeaef452c608ae7f80c5853beaa4ae9569b240d4c4e0489502500569c
@@ -632,7 +633,7 @@ KnownVulnerableSamples:
       Entropy: 2.7588718484453603
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-27 06:42:38'
+  CreationTimestamp: '2020-05-27 03:42:38'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -724,9 +725,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=US, ??=Delaware, ??=Campbell, ??=Private Organization, serialNumber=2106032,
-        C=US, ST=California, L=Campbell, O=Phoenix Technologies Ltd., CN=Phoenix Technologies
-        Ltd.
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        JURISDICTION_OF_INCORPORATION_L=Campbell, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=2106032, C=US, ST=California, L=Campbell, O=Phoenix Technologies
+        Ltd., CN=Phoenix Technologies Ltd.
       ValidFrom: '2018-03-09 00:00:00'
       ValidTo: '2021-03-08 23:59:59'
       Signature: 3bcdb9c165b3148a5fe97e79c78478ea9c723aeb006aea07153b60bf9989582ecc691d64dc320226d6713610b188ae5046dd2d9c8a921bc778c13f6e5483e2543456004c9beb0d89872c993db902579433690b6abdb27259063c5a04ad2659dd7081b5f57d0202bf9c3407787005eec2470328b43f2ca2814482c4bcbcc742090493fc6198d4eae9c8957f132a7c33104fce83e96e23a60046149b99bba10b3e17a1faf3edc2fbacdf2e9969667a3bb353511a8fbcc1461d491b42f1f1ef87bd2fac6d087e585551ae4925adb80d9e899e6be9e4b5131c12cf4b94fd390854671f7b0b4aeaef452c608ae7f80c5853beaa4ae9569b240d4c4e0489502500569c
@@ -812,7 +814,7 @@ KnownVulnerableSamples:
       Entropy: 2.7500000000000004
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-02 20:26:04'
+  CreationTimestamp: '2017-03-02 17:26:04'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -913,9 +915,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1003,7 +1005,7 @@ KnownVulnerableSamples:
       Entropy: 5.141506839882625
       Virtual Size: '0x46a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-11 22:37:28'
+  CreationTimestamp: '2013-07-11 19:37:28'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1104,9 +1106,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1198,7 +1200,7 @@ KnownVulnerableSamples:
       Entropy: 2.7588718484453603
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-15 01:48:36'
+  CreationTimestamp: '2022-02-14 22:48:36'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1272,9 +1274,9 @@ KnownVulnerableSamples:
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
         SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
-    - Subject: ??=US, ??=Delaware, ??=Private Organization, serialNumber=3966158,
-        C=US, ST=Oregon, L=Beaverton, O=Phoenix Technologies Inc, CN=Phoenix Technologies
-        Inc
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=3966158, C=US, ST=Oregon,
+        L=Beaverton, O=Phoenix Technologies Inc, CN=Phoenix Technologies Inc
       ValidFrom: '2021-02-18 00:00:00'
       ValidTo: '2024-04-09 23:59:59'
       Signature: 6e6816a7a16a5cddeb3e3ae55f7006571e82f0c6de89312a3c25079848bce77ded4339b83eb59e320c67fa5893f6490b39281a49e88d3217c6811d8f1754700660f46b10958431fd6ec9c5c13f9ee1c8709ac8544a160c04dfa2e399aaf66f1f90f6e1f802a2682edfd6070da89d6a3d588667fdb66769a0e032cfedd4980d87fa6643449d6e886c91f7c6ac3abae3d4b58c92959f13e46622d86cfd105a86f3f30e3c7cd00983d368b466d10e5401eb6b5a2f6eaab248573691bbd990f50766c02af12842e128dcbc2eca1c373063d9b3e55c13291099360db6cb89360d2d19ebf16c79488c80471ad6153ec1411a5d2fcea3c5d3f773f2247bc3ff55902eb9
@@ -1356,7 +1358,7 @@ KnownVulnerableSamples:
       Entropy: 2.314979820516481
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-05 00:55:39'
+  CreationTimestamp: '2018-02-04 21:55:39'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1449,9 +1451,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=US, ??=Delaware, ??=Campbell, ??=Private Organization, serialNumber=2106032,
-        C=US, ST=California, L=Campbell, O=Phoenix Technologies Ltd., CN=Phoenix Technologies
-        Ltd.
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        JURISDICTION_OF_INCORPORATION_L=Campbell, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=2106032, C=US, ST=California, L=Campbell, O=Phoenix Technologies
+        Ltd., CN=Phoenix Technologies Ltd.
       ValidFrom: '2018-03-09 00:00:00'
       ValidTo: '2021-03-08 23:59:59'
       Signature: 3bcdb9c165b3148a5fe97e79c78478ea9c723aeb006aea07153b60bf9989582ecc691d64dc320226d6713610b188ae5046dd2d9c8a921bc778c13f6e5483e2543456004c9beb0d89872c993db902579433690b6abdb27259063c5a04ad2659dd7081b5f57d0202bf9c3407787005eec2470328b43f2ca2814482c4bcbcc742090493fc6198d4eae9c8957f132a7c33104fce83e96e23a60046149b99bba10b3e17a1faf3edc2fbacdf2e9969667a3bb353511a8fbcc1461d491b42f1f1ef87bd2fac6d087e585551ae4925adb80d9e899e6be9e4b5131c12cf4b94fd390854671f7b0b4aeaef452c608ae7f80c5853beaa4ae9569b240d4c4e0489502500569c
@@ -1534,7 +1537,7 @@ KnownVulnerableSamples:
       Entropy: 2.7588718484453603
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-27 06:42:38'
+  CreationTimestamp: '2020-05-27 03:42:38'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1608,9 +1611,9 @@ KnownVulnerableSamples:
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
         SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
-    - Subject: ??=US, ??=Delaware, ??=Private Organization, serialNumber=3966158,
-        C=US, ST=Oregon, L=Beaverton, O=Phoenix Technologies Inc, CN=Phoenix Technologies
-        Inc
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=3966158, C=US, ST=Oregon,
+        L=Beaverton, O=Phoenix Technologies Inc, CN=Phoenix Technologies Inc
       ValidFrom: '2021-02-18 00:00:00'
       ValidTo: '2024-04-09 23:59:59'
       Signature: 6e6816a7a16a5cddeb3e3ae55f7006571e82f0c6de89312a3c25079848bce77ded4339b83eb59e320c67fa5893f6490b39281a49e88d3217c6811d8f1754700660f46b10958431fd6ec9c5c13f9ee1c8709ac8544a160c04dfa2e399aaf66f1f90f6e1f802a2682edfd6070da89d6a3d588667fdb66769a0e032cfedd4980d87fa6643449d6e886c91f7c6ac3abae3d4b58c92959f13e46622d86cfd105a86f3f30e3c7cd00983d368b466d10e5401eb6b5a2f6eaab248573691bbd990f50766c02af12842e128dcbc2eca1c373063d9b3e55c13291099360db6cb89360d2d19ebf16c79488c80471ad6153ec1411a5d2fcea3c5d3f773f2247bc3ff55902eb9
@@ -1689,7 +1692,7 @@ KnownVulnerableSamples:
       Entropy: 5.142000901499599
       Virtual Size: '0x44e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-28 04:56:32'
+  CreationTimestamp: '2011-10-28 01:56:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1788,9 +1791,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1879,7 +1882,7 @@ KnownVulnerableSamples:
       Entropy: 5.141506839882625
       Virtual Size: '0x46a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-11 22:37:28'
+  CreationTimestamp: '2013-07-11 19:37:28'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1980,9 +1983,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2071,7 +2074,7 @@ KnownVulnerableSamples:
       Entropy: 5.1736517365164225
       Virtual Size: '0x47c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-27 06:05:18'
+  CreationTimestamp: '2020-05-27 03:05:18'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2243,7 +2246,7 @@ KnownVulnerableSamples:
       Entropy: 5.142000901499599
       Virtual Size: '0x44e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-28 04:56:32'
+  CreationTimestamp: '2011-10-28 01:56:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2342,9 +2345,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2433,7 +2436,7 @@ KnownVulnerableSamples:
       Entropy: 5.142000901499599
       Virtual Size: '0x44e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-28 04:56:32'
+  CreationTimestamp: '2011-10-28 01:56:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2532,9 +2535,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2629,7 +2632,7 @@ KnownVulnerableSamples:
       Entropy: 3.5796532634600933
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-06-07 02:29:32'
+  CreationTimestamp: '2023-06-06 23:29:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2761,9 +2764,9 @@ KnownVulnerableSamples:
         SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
         SHA256: 0c0b121e6f807bc22d4e0f4945634c22eca7e4d5ca58a1526a40e918a35c1d79
         SHA384: 86aab81948499b3c90833253a853e7b3fd82ccf7b65b35806831ab60814bfc6ad8848c990df262a1c89b6fc4267dad81
-    - Subject: ??=US, ??=Delaware, ??=Private Organization, serialNumber=3966158,
-        C=US, ST=Oregon, L=Beaverton, O=Phoenix Technologies Inc, CN=Phoenix Technologies
-        Inc
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=3966158, C=US, ST=Oregon,
+        L=Beaverton, O=Phoenix Technologies Inc, CN=Phoenix Technologies Inc
       ValidFrom: '2023-06-07 00:00:00'
       ValidTo: '2026-06-07 23:59:59'
       Signature: 3963c30d14f5cc4ce4fb93e2f898cdf176ab313ce9aca03e7d629c647d175b958b2fd32f73319ac681758971877fe292d4c341e30bf9753e59d1ddfc0869960f4cd434b71c6890e4bcccd4ca7ccbb891998098f2d5477570fd03628d9548871ef646b97d1d6cad300529cbf4d5f58a4775ba05f2a9ab3de24bcaf5e086fd8fd07beec8c66eb4ca8da40771eff72213aae5956fa948ab1b69afd1bfeb3f65d8739b850aad6f59cd98f943098fc7f1e26872e350de66e31b8afff4935ee0a110759f3bfaf7d23270ba494db346ae5f105081bd63d17927364a9f967b1626fadc49ba766be4334b07f4887f88425c01bcd8def6d3d9d4cf5f46b10ef08d0c411ee0c5f914d981b2c4376db2bc5decad51c647927be9d41743b9424fca649331b347936e073408db66a9999585481fb19e4e730eb93115c1e3e54a9b1540c16e5cf83ad827edf19daad2e70ce44d0b6b7ca8178220dbffb1262ca94bb8a8c313b1ce468dc6ff7ee3b2f689a8048a1cfefa5f499b69f267eb423f9139e4bcc04a7b0b62bff860191ca2889fecdc99dd739098b415719e1cff9d0d96fb0eb0804fda582a75099e7338ed3005284c3dc300056e92d131178abbcf2122119557ede45cd886721ab7e3ecfff2c2ce88723aab320b55a384ebc8b43354e267feaad3aa1d113001ca690a896d32f5ee31dc11a5e6b0e42c8bb687b5bc977c873685b5638d65
@@ -2831,7 +2834,7 @@ KnownVulnerableSamples:
       Entropy: 2.4940954395801547
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-21 07:25:03'
+  CreationTimestamp: '2017-08-21 04:25:03'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2933,9 +2936,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3023,7 +3026,7 @@ KnownVulnerableSamples:
       Entropy: 5.141506839882625
       Virtual Size: '0x46a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-24 03:24:16'
+  CreationTimestamp: '2012-05-24 00:24:16'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -3123,9 +3126,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

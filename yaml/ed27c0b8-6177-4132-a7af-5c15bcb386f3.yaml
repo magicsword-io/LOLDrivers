@@ -32,13 +32,13 @@ KnownVulnerableSamples:
   - USERTrust RSA Certification Authority
   Date: ''
   Publisher: ''
-  Company: Advanced Micro Devices, Inc.
-  Description: USB-C Power Delivery Firmware Update Utility Driver
-  Product: USB-C Power Delivery Firmware Update Utility Driver
-  ProductVersion: '1.0'
-  FileVersion: '1.0'
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
   MachineType: AMD64
-  OriginalFilename: PDFWKRNL.sys
+  OriginalFilename: ''
   Authentihash:
     MD5: d255a6146ab4e75a6ac362cf07641180
     SHA1: 661a1a28950cec3f2c3d0e72ab2a05d4a173cf9a
@@ -47,8 +47,8 @@ KnownVulnerableSamples:
     MD5: eff2e20cff5d56c711ba91e03ead294d
     SHA1: 94f9b8467857dfe5b38ddaf5b260de7da65563ef
     SHA256: 8548170c0fc3ef601bbd115b2ad461be8dd8abcceb062617f2b02469de17f2c0
-  InternalName: PDFWKRNL.sys
-  Copyright: Copyright (C) 2021 Advanced Micro Devices, Inc.
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   ImportedFunctions:
@@ -72,35 +72,35 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   Sections:
     .text:
-      Entropy: 5.78
+      Entropy: 5.775171264269732
       Virtual Size: '0x96a'
     .rdata:
-      Entropy: 2.84
+      Entropy: 2.837849121032207
       Virtual Size: '0x504'
     .data:
-      Entropy: 1.46
+      Entropy: 1.457518749639422
       Virtual Size: '0x18'
     .pdata:
-      Entropy: 3.21
+      Entropy: 3.213363216579077
       Virtual Size: '0x84'
     INIT:
-      Entropy: 4.61
+      Entropy: 4.607889156155057
       Virtual Size: '0x23c'
     .rsrc:
-      Entropy: 3.33
+      Entropy: 3.3343295190199753
       Virtual Size: '0x408'
     .reloc:
-      Entropy: 3.52
+      Entropy: 3.5168756957665632
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-12-22 11:13:53'
+  CreationTimestamp: '2022-12-22 10:13:53'
   Imphash: 3f4c9025125027e307b7e52dd577303b
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc., CN=Advanced
-        Micro Devices Inc.
+    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
+        CN=Advanced Micro Devices Inc.
       ValidFrom: '2021-05-11 00:00:00'
       ValidTo: '2024-05-10 23:59:59'
       Signature: 8444e268ff381c9148985f408e5cc1453a560c9dd94d2a6cfa01dd7f2adc8af633053d2c79027db4f185f477b0d5db8b362b37dbd0d258823831ace7058baf3feb80a9eb2de9dd886bcf390fae9b586fc833e63db5c6a07019f35a9fce6899502852737b32d25ea7832c3786df0642d21622e56c0b0171e96f9520d07f73950376ff555bcf9c8a55bf4f86c088b58e2cb625a0ef4680ed7281f09a40c7be9f69cba77a6967030e39b2cfa46692698ced9e5347dd7056b476545c3442f934cb2c30cb986afabd29a9a9e2eb28c5bd6ee47dabf5ef587f850ea49b124eb868aac68de949616d08f875192b93388549c7327a3ef085e287d5a743810c151b250c64

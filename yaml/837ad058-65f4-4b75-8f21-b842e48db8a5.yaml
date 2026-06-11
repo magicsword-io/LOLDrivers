@@ -25,16 +25,16 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
-- Company: NVidia Corp.
+- Company: ''
   Date: ''
-  Description: NVidia System Utility Driver
-  FileVersion: 7.00.00
+  Description: ''
+  FileVersion: ''
   Filename: ''
   MD5: b2600502a5b962b8cdfac2ead24b17b4
   MachineType: AMD64
-  OriginalFilename: nvoclock.sys
-  Product: NVidia System Utility Driver
-  ProductVersion: 7.00.00
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   SHA1: bda102afbc60f3f3c5bcbd5390ffbbbb89170b9c
   SHA256: b0dcdbdc62949c981c4fc04ccea64be008676d23506fc05637d9686151a4b77f
@@ -74,9 +74,9 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-06-24 11:29:58'
-  InternalName: nvoclock.sys
-  Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
+  CreationTimestamp: '2010-06-24 08:29:58'
+  InternalName: ''
+  Copyright: ''
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -177,9 +177,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

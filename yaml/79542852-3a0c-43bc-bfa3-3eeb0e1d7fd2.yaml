@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 6837b5fe3a3a100c88c7cf4f0408f528
     SHA1: d679aadb2844462deaaf069d48e7d0fc76979741
     SHA256: 7dcd81140dc57d1d412c39940643ea923a1925815097f83788d840c1a7b57d25
-  Description: VirtualBox Support Driver
-  Company: Vektor T13 Security Service
-  InternalName: VBoxDrv
-  OriginalFilename: VBoxDrv.sys
-  FileVersion: 1.2.0.119230
-  Product: Antidetect 2018 Public by Vektor T13 (rev.05)
-  ProductVersion: 1.2.0.119230
-  Copyright: Copyright (C) 2009-2018 Oracle Corporation
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -679,7 +679,7 @@ KnownVulnerableSamples:
       Entropy: 4.07818833178508
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-06-22 07:17:13'
+  CreationTimestamp: '2018-06-22 04:17:13'
   Imphash: 9470f56376e665fb981a35b303436041
   LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
@@ -690,14 +690,14 @@ KnownVulnerableSamples:
     MD5: 49f3b147b53aa5ebce9ddce9a20fe9ff
     SHA1: 46064d1e248e2c9d24950d6a5dcf68a2c12aeb9d
     SHA256: 7e5abe4530eff3838d44516f95c15d8b3ec6cec44ca7b67998e50641c939d12a
-  Description: VirtualBox Support Driver
-  Company: Vektor T13 Security Service
-  InternalName: VBoxDrv
-  OriginalFilename: VBoxDrv.sys
-  FileVersion: 1.4.2.119230
-  Product: Antidetect 2019 Public
-  ProductVersion: 1.4.2.119230
-  Copyright: Copyright (C) 2009-2019 Oracle Corporation
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1331,7 +1331,7 @@ KnownVulnerableSamples:
       Entropy: 4.078099091032765
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-16 00:57:54'
+  CreationTimestamp: '2019-02-15 21:57:54'
   Imphash: 9470f56376e665fb981a35b303436041
   LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
@@ -1342,14 +1342,14 @@ KnownVulnerableSamples:
     MD5: 5491106d0dc46b737e07072122359638
     SHA1: 2fa597885c165e354736143e9645570e3637b57b
     SHA256: c62bf9d0cc1edfffc15f3f002cd7f51efe3372320ec89d9dc96011000915c186
-  Description: VirtualBox Support Driver
-  Company: Sun Microsystems, Inc.
-  InternalName: VBoxDrv.sys
-  OriginalFilename: VBoxDrv.sys
-  FileVersion: 3.0.0.r49315
-  Product: Sun VirtualBox
-  ProductVersion: 3.0.0.r49315
-  Copyright: Copyright (C) 2009 Sun Microsystems, Inc.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1739,9 +1739,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1783,7 +1783,7 @@ KnownVulnerableSamples:
       Entropy: 4.803419428597937
       Virtual Size: '0x6ea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-06-30 07:41:34'
+  CreationTimestamp: '2009-06-30 04:41:34'
   Imphash: fd133033a24971502ff0b2f189215c56
   LoadsDespiteHVCI: 'FALSE'
 - Filename: VBoxDrv.sys
@@ -1794,14 +1794,14 @@ KnownVulnerableSamples:
     MD5: d8e8d4c6d5dd6ba5ca58979f569cba95
     SHA1: c9027b3e1c731d0a16acd94c947f446df1a23318
     SHA256: 681de794238060ec929aa5cf6c4701069f113a8524d31fb2f411648968ca17de
-  Description: VirtualBox Support Driver
-  Company: Pinduoduo Ltd Corp
-  InternalName: VBoxDrv
-  OriginalFilename: VBoxDrv.sys
-  FileVersion: 1.2.0.137904
-  Product: Pinduoduo Secure VDI
-  ProductVersion: 1.2.0.137904
-  Copyright: Copyright (C) 2015-2021 Pinduoduo Corporation
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -3745,7 +3745,7 @@ KnownVulnerableSamples:
       Entropy: 3.995412021920204
       Virtual Size: '0x1e0a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-30 11:08:50'
+  CreationTimestamp: '2021-05-30 08:08:50'
   Imphash: 2a20cc9578bb34a4bb10b87b49b24982
   LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
@@ -3756,14 +3756,14 @@ KnownVulnerableSamples:
     MD5: eb532e54636f61b9af61f97d46ca8cae
     SHA1: 018d626382f2453ef584b732e1e03ceab51e84db
     SHA256: 6ab14c5c89759695dbb4b310b7cad68d9ec2007277e3b4f3abb883bd05ef557c
-  Description: VirtualBox Support Driver
-  Company: Sun Microsystems, Inc.
-  InternalName: VBoxDrv.sys
-  OriginalFilename: VBoxDrv.sys
-  FileVersion: 2.2.0.r45846
-  Product: Sun VirtualBox
-  ProductVersion: 2.2.0.r45846
-  Copyright: Copyright (C) 2009 Sun Microsystems, Inc.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -4079,7 +4079,7 @@ KnownVulnerableSamples:
       Entropy: 2.136306008585543
       Virtual Size: '0x35b4'
     .pdata:
-      Entropy: 5.201973567849435
+      Entropy: 5.201973567849434
       Virtual Size: '0x1f20'
     .edata:
       Entropy: 5.704943815176372
@@ -4094,7 +4094,7 @@ KnownVulnerableSamples:
       Entropy: 4.900332523869931
       Virtual Size: '0x672'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-04-07 14:30:47'
+  CreationTimestamp: '2009-04-07 11:30:47'
   Imphash: 6723b1d5bd0f1fc13216cb44541e619e
   LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
@@ -4105,14 +4105,14 @@ KnownVulnerableSamples:
     MD5: ed53ea124ed4c30df39c29a4f5b01182
     SHA1: 2903352a4e038c68c044a48edebd118af7e80098
     SHA256: 79e3b14b68f1fcf805ccfe7bc2dc81b98346d2e83a6335816b276970e2e2691a
-  Description: VirtualBox Support Driver
-  Company: Sun Microsystems, Inc.
-  InternalName: VBoxDrv.sys
-  OriginalFilename: VBoxDrv.sys
-  FileVersion: 2.2.4.r47978
-  Product: Sun VirtualBox
-  ProductVersion: 2.2.4.r47978
-  Copyright: Copyright (C) 2009 Sun Microsystems, Inc.
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -4450,9 +4450,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4479,7 +4479,7 @@ KnownVulnerableSamples:
       Entropy: 2.136306008585543
       Virtual Size: '0x35b4'
     .pdata:
-      Entropy: 5.201973567849435
+      Entropy: 5.201973567849434
       Virtual Size: '0x1f20'
     .edata:
       Entropy: 5.703304599123732
@@ -4494,7 +4494,7 @@ KnownVulnerableSamples:
       Entropy: 4.900332523869931
       Virtual Size: '0x672'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-05-29 13:54:09'
+  CreationTimestamp: '2009-05-29 10:54:09'
   Imphash: 6723b1d5bd0f1fc13216cb44541e619e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: VBoxDrv.sys
@@ -4505,14 +4505,14 @@ KnownVulnerableSamples:
     MD5: 71bbd7b5164d35bc41d5a7f61a2d81f0
     SHA1: eec7692de436743eed432729fb620c5da3d5318f
     SHA256: 1c9c86ba5ae540bb5729626cdaec89ca421f8129e4bbf6e1ea49c532b44ea0c9
-  Description: VirtualBox Support Driver
-  Company: Vektor T13 Security Service
-  InternalName: VBoxDrv
-  OriginalFilename: VBoxDrv.sys
-  FileVersion: 1.4.0.119230
-  Product: Antidetect 2019 Public
-  ProductVersion: 1.4.0.119230
-  Copyright: Copyright (C) 2009-2019 Oracle Corporation
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -5146,6 +5146,6 @@ KnownVulnerableSamples:
       Entropy: 4.078099091032765
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-04 17:27:31'
+  CreationTimestamp: '2019-02-04 14:27:31'
   Imphash: 9470f56376e665fb981a35b303436041
   LoadsDespiteHVCI: 'TRUE'

@@ -35,13 +35,13 @@ KnownVulnerableSamples:
     MD5: 0fbb326913f5473846836039def3d5bc
     SHA1: fbce0fae387aeb93049a0975839ec96be3e9e87b
     SHA256: f020137cb08f86c48810780209a3f4a1fac361ed089ade61c1b5d6c64ded7872
-  Company: innotek GmbH
-  Copyright: innotek GmbH & Others
-  CreationTimestamp: '2007-12-29 03:25:14'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2007-12-29 00:25:14'
   Date: ''
-  Description: VirtualBox Host Interface Networking Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 8/2
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - RtlFreeUnicodeString
@@ -88,14 +88,14 @@ KnownVulnerableSamples:
   - ntoskrnl.exe
   - HAL.dll
   - NDIS.SYS
-  InternalName: VBoxTAP.sys
+  InternalName: ''
   MD5: 298f30c20c6b2b5b56f9946fb4e6f85a
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: VBoxTAP.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: VirtualBox Host Interface Networking Driver
-  ProductVersion: 8/2
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 0185dad5be094ff48eb2b120716019b2
@@ -219,9 +219,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -238,13 +238,13 @@ KnownVulnerableSamples:
     MD5: 470e29597bd85eece73b1d7876ed4581
     SHA1: 653f0e8dce4363f65da265d03c5fb89ac1e40fca
     SHA256: 16c63f5ebd96caecae3581a91b949ccc803cf7c18482448d19f9433d6d40ebee
-  Company: Sun Microsystems, Inc.
-  Copyright: Sun Microsystems, Inc. & Others
-  CreationTimestamp: '2008-04-30 16:07:13'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2008-04-30 13:07:13'
   Date: ''
-  Description: VirtualBox Host Interface Networking Driver
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 8/2
+  FileVersion: ''
   Filename: ''
   ImportedFunctions:
   - RtlFreeUnicodeString
@@ -291,14 +291,14 @@ KnownVulnerableSamples:
   - ntoskrnl.exe
   - HAL.dll
   - NDIS.SYS
-  InternalName: VBoxTAP.sys
+  InternalName: ''
   MD5: 9b25ccf5765034119a61c9beb2ad1369
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: VBoxTAP.sys
+  OriginalFilename: ''
   PDBPath: ''
-  Product: VirtualBox Host Interface Networking Driver
-  ProductVersion: 8/2
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 0185dad5be094ff48eb2b120716019b2
@@ -421,9 +421,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

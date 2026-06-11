@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 20be6af18d3b97968b2a8d5a9513caaa
     SHA1: b6a4ef3babbd79479723b8586ea0e8c7a33d1661
     SHA256: ab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3
-  Company: Huawei
-  Copyright: Copyright (C) 2016
-  CreationTimestamp: '2018-03-23 02:56:31'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2018-03-22 23:56:31'
   Date: ''
-  Description: HwOs2Ec
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1.0.0.1
+  FileVersion: ''
   Filename: HwOs2Ec10x64.sys
   ImportedFunctions:
   - IoCreateDevice
@@ -139,13 +139,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: HwOs2Ec
+  InternalName: ''
   MD5: 37086ae5244442ba552803984a11d6cb
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: HwOs2Ec.sys
-  Product: Huawei MateBook
-  ProductVersion: 1.0.0.1
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: 1caef52202f244dd7b072a2cbf506293
@@ -273,9 +273,10 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=CN, ??=Guangdong, ??=Shenzhen, ??=Private Organization, serialNumber=914403001922038216,
-        C=CN, ST=guangdong, L=shenzhen, O=Huawei Technologies Co., Ltd., CN=Huawei
-        Technologies Co., Ltd.
+    - Subject: JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=Guangdong,
+        JURISDICTION_OF_INCORPORATION_L=Shenzhen, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=914403001922038216, C=CN, ST=guangdong, L=shenzhen, O=Huawei
+        Technologies Co., Ltd., CN=Huawei Technologies Co., Ltd.
       ValidFrom: '2017-12-14 00:00:00'
       ValidTo: '2019-12-14 23:59:59'
       Signature: 26d8d72aafae208ca75f86e2d634f131cd47c9531f57dd9d0506dd5f6e51df6baea828f02aa0ae534538921a9bc01af8ed084a8a06a5aa16e5def159a2ea17d84a134aa94467d2016797a2f8e49eb90d1de2e4213b6abd8147b4916f95c7b6c7b9c351cc969c00220c188e6a63806623eabd8fe9780141953a49197cfc1fbf5e39ea1c8f3afc3d792a46786202a7a02b9add0f36ed5125015fab8aded58cc2796b3c2d946b09084fe1547718ba315c53bdeb1d1330306113c6aa141494e11cf0ed3193dace62aef90bb5d6cb65aed548c00983eed016729498079e9ac5931bd33607aa1ee3156967b51963557d977fad2c755e34eb26fc4a249f5d24490d8884

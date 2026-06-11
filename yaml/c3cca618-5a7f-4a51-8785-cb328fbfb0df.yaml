@@ -46,13 +46,13 @@ KnownVulnerableSamples:
     MD5: 68a2f77cfa5aec4556b4276852be637f
     SHA1: 0188096c79f0cdde9233e52d4117c0f53e667e3d
     SHA256: 54e969dc477af9a3e5b53dc4edaebc41a7b73c87ecca13dc1fbb8dfc86c0fd78
-  Company: TG Soft S.a.s.
-  Copyright: Copyright (C) TG Soft S.a.s. 2011, 2016 - www.tgsoft.it
-  CreationTimestamp: '2016-09-07 04:36:15'
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2016-09-07 01:36:15'
   Date: ''
-  Description: VirIT Agent System
+  Description: ''
   ExportedFunctions: ''
-  FileVersion: 1, 0, 0, 11
+  FileVersion: ''
   Filename: viraglt64.sys
   ImportedFunctions:
   - mbstowcs
@@ -125,13 +125,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: viragt.sys
+  InternalName: ''
   MD5: 43830326cd5fae66f5508e27cbec39a0
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: viragt64.sys
-  Product: VirIT Agent System
-  ProductVersion: 1, 0, 0, 11
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
   RichPEHeaderHash:
     MD5: a93c261e407f22e8e9e11096ef7669a4
@@ -229,9 +229,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: Intermediate
+      CertificateType: CA
       IsCodeSigning: false
-      IsCA: false
+      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
