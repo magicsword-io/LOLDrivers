@@ -592,3 +592,21 @@ KnownVulnerableSamples:
   CreationTimestamp: '2023-04-05 21:54:11'
   Imphash: 12a08688ec92616a8b639d85cc13a3ed
   LoadsDespiteHVCI: 'FALSE'
+- Filename: MsIo64.sys
+  MD5: 8663ab852d5194d55f37dc68789c9f0b
+  SHA1: 1713e57ec78402e61b0bf43e9bbb1a6f0ce24678
+  SHA256: a7261f13f11c3b845c27cfeeb1cdc6a9400090cebd8e5adbf8c506c1fd9811de
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  Date: '07:36 AM 12/11/2023'
+  Publisher: Microsoft Windows Hardware Compatibility Publisher
+  Company: MICSYS
+  Description: MICSYS IO driver
+  Product: MsIo64 Driver Version 1.3
+  ProductVersion: 1.3 x64
+  FileVersion: '1.3 x64 built by: WinDDK'
+  MachineType: AMD64
+  OriginalFilename: MsIo64.sys
+  InternalName: MsIo64.sys
+  Copyright: Copyright (c) 2021 MICSYS
+  Imphash: 12a08688ec92616a8b639d85cc13a3ed

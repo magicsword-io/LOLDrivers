@@ -1,0 +1,77 @@
+Id: 2703d3dd-05f0-4ae2-83a2-2ad0939467d0
+Tags:
+- Cndom6.sys
+- XiaoH.sys
+- rwdriver.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-06-16'
+MitreID: T1068
+Category: malicious
+Commands:
+  Command: sc.exe create rwdriver binPath=C:\windows\temp\rwdriver.sys type=kernel && sc.exe start rwdriver
+  Description: Signed malicious drivers reported in Silver Fox activity; rwdriver.sys exposes a rootkit IOCTL primitive, while Cndom6.sys and XiaoH.sys are reported as watchdog/support drivers.
+  Usecase: Load malicious signed kernel drivers used for rootkit and watchdog activity
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/350
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: BoboZhang0522
+KnownVulnerableSamples:
+- Filename: Cndom6.sys
+  MD5: 7ddb60de73657cd3b2756965fd2e1269
+  SHA1: c01d742c730185cc5647b91608acc810b559a89e
+  SHA256: 8c12407a40eab287a8281be64665b1e72b0e91b2daf84030a1a15dc280e5dbf1
+  Signature:
+  - Beijing Tianshui Technology Co., Ltd.
+  Date: ''
+  Publisher: Beijing Tianshui Technology Co., Ltd.
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: Cndom6.sys
+  InternalName: Cndom6.sys
+  Copyright: ''
+  Imphash: 511d57e1f2f0c690b1a31e29574a9c15
+- Filename: XiaoH.sys
+  MD5: e059cf1f9169302a0ff91b0061da1c14
+  SHA1: 900377f5c3418e89ea73356ca2787ea7bdba392a
+  SHA256: 83c4f9abe074d426fc5b08b57058208e4c184bfbe481e7847b67aeb87b04cd4a
+  Signature:
+  - Shanghai Qisi Education Technology Service Co., Ltd.
+  Date: ''
+  Publisher: Shanghai Qisi Education Technology Service Co., Ltd.
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: XiaoH.sys
+  InternalName: XiaoH.sys
+  Copyright: ''
+  Imphash: d8084e2c7bca0dd08f92ed5439f8dc78
+- Filename: rwdriver.sys
+  MD5: 5231a08c5286803e300ac657e37272f8
+  SHA1: 0ec6faa266d38a8c42ff9ddf116bce4246857ab4
+  SHA256: 1c763af41b74c7502d70093763723939a8025199e0ac7e39c04b5cf992f9e273
+  Signature:
+  - ZTE Corporation
+  Date: ''
+  Publisher: ZTE Corporation
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: rwdriver.sys
+  InternalName: rwdriver.sys
+  Copyright: ''
+  Imphash: 507fe2094d62e61828e0e002093ff70d
