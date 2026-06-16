@@ -1,0 +1,135 @@
+Id: 5b9a202c-0695-532e-9d92-662cedefee07
+Tags:
+- NGStar.sys
+Verified: 'TRUE'
+Author: '@BohraDJayesh'
+Created: '2026-06-01'
+MitreID: T1068
+CVE: []
+Category: vulnerable driver
+Commands:
+  Command: pnputil /add-driver fdu11.cat && sc.exe create ngstar binPath=C:\windows\temp\NGStar.sys
+    type=kernel && sc.exe start ngstar
+  Description: "NGStar.sys is the kernel-mode USB fingerprint sensor driver for NITGEN\
+    \ Fingkey Hamster II/III devices. The driver creates \\Device\\gstar-0 exposed\
+    \ as \\\\.\\gstar-0 via IoCreateDevice with FILE_DEVICE_UNKNOWN and no IoCreateDeviceSecure\
+    \ call, making all 28 IOCTL codes (0x00222004-0x00222070) reachable by any unprivileged\
+    \ user-mode process (FILE_ANY_ACCESS on all codes). IOCTLs 0x0022206C and 0x00222070\
+    \ allocate a fixed 10-byte NonPagedPool block via the deprecated ExAllocatePool\
+    \ API then pass it directly as the receive buffer for an uncapped USB bulk transfer\
+    \ with no post-transfer bounds check \u2014 kernel pool overflow leading to local\
+    \ privilege escalation to SYSTEM. ExAllocatePool (non-tagged, removed from Windows\
+    \ 11 and Server 2022 kernel exports) causes a kernel bugcheck (BSOD) on any IOCTL\
+    \ reaching the allocation path \u2014 confirmed local DoS. IOCTL 0x00222050 decrements\
+    \ a session reference counter at [rbp+0x40] via lock add without an underflow\
+    \ guard; counter wraps to 0xFFFFFFFF from zero, corrupting the device extension\
+    \ refcount and triggering premature cleanup leading to use-after-free. Driver\
+    \ carries no embedded PE signature; trusted via catalog fdu11.cat (VeriSign-signed,\
+    \ expired 2014, valid via timestamp countersignature). VT detection: 0/77."
+  Usecase: "Local privilege escalation to SYSTEM via kernel pool overflow (IOCTLs\
+    \ 0x0022206C and 0x00222070 \u2014 fixed 10-byte NonPagedPool alloc passed as\
+    \ uncapped USB bulk receive buffer); confirmed kernel DoS / BSOD via deprecated\
+    \ ExAllocatePool on Windows 11 and Server 2022; device context use-after-free\
+    \ via session counter underflow (IOCTL 0x00222050). All primitives accessible\
+    \ from unprivileged user-mode after driver load. BYOVD: catalog-signed (0/77 VT),\
+    \ FILE_ANY_ACCESS surface reachable from any local process."
+  Privileges: kernel
+  OperatingSystem: Windows 7, Windows 8, Windows 10, Windows 11
+Resources:
+- Internal Research
+Acknowledgement:
+  Person: JayeshDuttBohra
+  Handle: '@BohraDJayesh'
+Detection: []
+KnownVulnerableSamples:
+- Filename: NGStar.sys
+  MD5: 297a9b187c6897749bc7bb92d02e95c0
+  SHA1: 3f102ab63f53869309443b5de9c9416a5e001284
+  SHA256: 4542b20be7adceb61fa5f538fed8c395951e775dbd7c4a2f7c6aee477c4d924e
+  Signature: ''
+  Date: '2012-07-04'
+  Publisher: NITGEN&COMPANY Co., Ltd.
+  Company: NITGEN&COMPANY Co., Ltd.
+  Description: NGStar Driver for Windows 2000/XP/Vista/7 (x64)
+  Product: NGStar.sys
+  ProductVersion: 2, 0, 0, 4
+  FileVersion: 1, 0, 2, 11
+  MachineType: AMD64
+  OriginalFilename: NGStar.sys
+  Authentihash:
+    MD5: b0f2bf18148addfad4ca53d4e00088b7
+    SHA1: 6ec95a0e99215e43742aec5fc55f2fe0345b3dc1
+    SHA256: e2bc6987462f4cfe4de4b53add75822cb2a197a6958b10cb9d85e16788703d18
+  InternalName: NGStar
+  Copyright: Copyright (C) 2000-2011 NITGEN&COMPANY Co., Ltd.
+  Imports:
+  - ntoskrnl.exe
+  - USBD.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoReleaseRemoveLockEx
+  - IoDetachDevice
+  - DbgPrint
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IofCallDriver
+  - PoRequestPowerIrp
+  - IoCancelIrp
+  - PoSetPowerState
+  - ExAllocatePool
+  - MmUnmapLockedPages
+  - sprintf
+  - ExFreePool
+  - PoStartNextPowerIrp
+  - IoAcquireRemoveLockEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoDeleteSymbolicLink
+  - IoReleaseRemoveLockAndWaitEx
+  - KeWaitForSingleObject
+  - IoBuildPartialMdl
+  - IoFreeIrp
+  - RtlFreeAnsiString
+  - IoAttachDeviceToDeviceStack
+  - PoCallDriver
+  - IoAllocateIrp
+  - RtlInitUnicodeString
+  - IoIsWdmVersionAvailable
+  - IoDeleteDevice
+  - KeSetEvent
+  - MmMapLockedPages
+  - KeBugCheckEx
+  - IoInitializeRemoveLockEx
+  - RtlUnicodeStringToAnsiString
+  - KeInitializeEvent
+  - IoBuildDeviceIoControlRequest
+  - IoCreateSymbolicLink
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptor
+  Imphash: f439f8c9fec466e01688b1d0833513a8
+  RichPEHeaderHash:
+    MD5: eb2cd0517f8714f7dbc4b0514950d3cd
+    SHA1: 313be86d1b51712b39b608d936897d5e74304ec5
+    SHA256: b08b03325f19080d245bd0d190404c9c92d693afded600766f828d96eb8d371b
+  Sections:
+    .text:
+      Entropy: 6.323037572424943
+      Virtual Size: '0x5378'
+    .rdata:
+      Entropy: 4.7329152592332004
+      Virtual Size: '0x41c'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 4.040981758720401
+      Virtual Size: '0x1e0'
+    INIT:
+      Entropy: 4.822569582967591
+      Virtual Size: '0x534'
+    .rsrc:
+      Entropy: 3.3987147831018927
+      Virtual Size: '0x490'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2011-01-20 01:16:57'
+  Signatures: {}
