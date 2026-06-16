@@ -9,18 +9,24 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create lsigetwin_SliffDriver binPath=C:\windows\temp\lsigetwin_SliffDriver.sys
     type=kernel && sc.exe start lsigetwin_SliffDriver
-  Description: lsigetwin_SliffDriver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
-    repository. The driver exposes dangerous kernel primitives to usermode.
+  Description: lsigetwin_SliffDriver.sys is a Microsoft-signed vulnerable kernel
+    driver that exposes a \\.\SliffDriver device. Public research documents IOCTL
+    0x80002004 for mapping caller-supplied physical memory into user mode, enabling
+    local privilege escalation when chained with kernel address discovery and
+    virtual-to-physical translation primitives.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/magicsword-io/LOLDrivers/issues/370
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+- https://github.com/Haider303/sliff-driv-exploit
+- https://medium.com/@haider303mustafa/applockerflter-sliffdriver-sys-full-kernel-exploit-chain-from-driver-recon-to-system-shell-b57d87738308
 Detection: []
 Acknowledgement:
   Person: ''
-  Handle: '@rainbowdynamix, @DbgPrint'
+  Handle: '@rainbowdynamix, @DbgPrint, @Haider303'
 KnownVulnerableSamples:
 - Filename: lsigetwin_SliffDriver.sys
   MD5: 49886067cd4221b0b8640cff66157c94
