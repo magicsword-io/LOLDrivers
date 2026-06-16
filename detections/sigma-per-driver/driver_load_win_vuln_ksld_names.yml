@@ -1,0 +1,33 @@
+title: Driver Load - KslD.sys
+id: 09c16340-0a61-568c-9a7b-a35333b749c8
+status: experimental
+description: |
+    Detects loading of driver KslD.sys via name.
+    KslD.sys is a Microsoft-signed Windows Defender support driver that can be abused for kernel memory access after its SharedState process-name check is redirected to an attacker-controlled process. Public research documents IOCTL 0x222044 as exposing physical and virtual memory read primitives that can support KASLR bypass, token discovery, and LSASS/PPL bypass workflows.
+references:
+    - https://www.loldrivers.io/drivers/57822c56-6531-4a2e-afbf-96f77dc5fcaf/
+    - https://fndsec.net/2025/04/20/uncovering-a-new-loldriver-kaslr-bypass-with-ksld-sys/
+    - https://github.com/Pumi96/DefenderDump
+    - https://github.com/vergamota/KslKatz
+    - https://github.com/andreisss/KslDump
+    - https://github.com/carved4/gokatz
+    - https://github.com/Muz1K1zuM/kslkatz_bof
+author: Noam Pomerantz
+date: 2026/03/26
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ksld.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
