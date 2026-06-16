@@ -9,18 +9,24 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create GGProtect64 binPath=C:\windows\temp\GGProtect64.sys type=kernel
     && sc.exe start GGProtect64
-  Description: GGProtect64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
-    repository. The driver exposes dangerous kernel primitives to usermode.
-  Usecase: Elevate privileges
+  Description: GGProtect64.sys is a Microsoft-signed anticheat kernel driver for
+    GG租号 that exposes a \\.\GGProtect64 device. Public research documents a
+    bypassable caller-registration flow through IOCTL 0x223C14 and a privileged
+    process termination path through IOCTL 0x223C04, allowing a local process to
+    terminate or suspend protected processes from kernel mode.
+  Usecase: Terminate or suspend protected processes
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/magicsword-io/LOLDrivers/issues/368
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+- https://github.com/Haider303/GGProtect-exploit
+- https://medium.com/@haider303mustafa/bypassing-weak-driver-authentication-to-kill-ppl-protected-processes-ggprotect64-sys-analysis-d8f44c5837b4
 Detection: []
 Acknowledgement:
   Person: ''
-  Handle: '@rainbowdynamix, @DbgPrint'
+  Handle: '@rainbowdynamix, @DbgPrint, @Haider303'
 KnownVulnerableSamples:
 - Filename: GGProtect64.sys
   MD5: b6a0d03122bd968b40ce97c145b491c7

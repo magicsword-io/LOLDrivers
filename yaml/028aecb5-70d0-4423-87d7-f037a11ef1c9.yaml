@@ -9,18 +9,27 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create signeddrv binPath=C:\windows\temp\signeddrv.sys type=kernel
     && sc.exe start signeddrv
-  Description: signeddrv.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
-    repository. The driver exposes dangerous kernel primitives to usermode.
+  Description: signeddrv.sys is a Microsoft-signed vulnerable kernel driver that
+    exposes an unrestricted \\.\WinNotify device. Public research documents IOCTL
+    0x22200C for kernel base disclosure, IOCTL 0x222040 for arbitrary kernel
+    read, and IOCTL 0x222044 for arbitrary kernel write, enabling local privilege
+    escalation.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/magicsword-io/LOLDrivers/issues/367
+- https://github.com/magicsword-io/LOLDrivers/issues/370
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+- https://github.com/Haider303/winnotify-exp
+- https://github.com/Haider303/sliff-driv-exploit
+- https://medium.com/@haider303mustafa/winnotify-signeddrv-sys-full-local-privilege-escalation-via-arbitrary-kernel-read-write-09e0c1ababf3
+- https://medium.com/@haider303mustafa/applockerflter-sliffdriver-sys-full-kernel-exploit-chain-from-driver-recon-to-system-shell-b57d87738308
 Detection: []
 Acknowledgement:
   Person: ''
-  Handle: '@rainbowdynamix, @DbgPrint'
+  Handle: '@rainbowdynamix, @DbgPrint, @Haider303'
 KnownVulnerableSamples:
 - Filename: signeddrv.sys
   MD5: e052ac7d39d07f6657cf049aae0c5b60
