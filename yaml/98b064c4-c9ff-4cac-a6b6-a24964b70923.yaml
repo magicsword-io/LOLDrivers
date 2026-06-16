@@ -10,13 +10,20 @@ Commands:
   Command: sc.exe create chinese_cheat_driver binPath=C:\windows\temp\chinese_cheat_driver.sys
     type=kernel && sc.exe start chinese_cheat_driver
   Description: chinese_cheat_driver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
-    repository. The driver exposes dangerous kernel primitives to usermode.
+    repository. The driver exposes dangerous kernel primitives to usermode. Public
+    exploit research documents IOCTL 0x222000 for arbitrary kernel virtual memory
+    reads, IOCTL 0x222018 for physical memory reads, and IOCTL 0x22201C for physical
+    memory writes, which can be chained for local privilege escalation from an administrator
+    context to NT AUTHORITY\SYSTEM.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/325
+- https://github.com/magicsword-io/LOLDrivers/issues/351
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+- https://github.com/Haider303/facebook-media-driver-exploit
+- https://medium.com/@haider303mustafa/exploiting-a-signed-vulnerable-kernel-driver-for-ring-0-privilege-escalation-678fe2054d6a
 Detection: []
 Acknowledgement:
   Person: ''
