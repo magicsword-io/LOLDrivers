@@ -1,0 +1,230 @@
+Id: 5d658b45-81f0-442e-ac43-7c249ce1d54f
+Tags:
+- ProcessCtr.sys
+Author: Element2023H
+Created: '2026-06-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create ProcessCtr binPath=C:\windows\temp\ProcessCtr.sys type=kernel
+    && sc.exe start ProcessCtr
+  Description: The driver creates a device object at \\.\ProcessCtr with no DACL restrictions,
+    so any local user can open a handle. The IRP_MJ_DEVICE_CONTROL dispatcher accepts
+    IOCTL 0x89DB202C with a 4-byte DWORD input (target PID) and chains ZwOpenProcess
+    -> ZwTerminateProcess against the supplied PID, with no caller validation. Because
+    the kernel-mode caller bypasses user-mode access checks, the primitive can terminate
+    any process on the system including PPL-protected AV/EDR processes.
+  Usecase: Terminate arbitrary processes from kernel mode, including protected security
+    processes, through an unauthenticated IOCTL handler.
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://github.com/The-Sword-of-Constantine/UsingBYOVD/blob/master/BYOVD/ProcessCtr.cpp
+KnownVulnerableSamples:
+- Filename: ProcessCtr.sys
+  MD5: 5ee52684ee22f3ad730b6af7e327d82b
+  SHA1: 72ffc3e2afc384657bc1559eb69b4651e24d57d6
+  SHA256: d64eeb940daffdc8327fb18b160c20e539088cf8407813655f59efa9fdf0022e
+  Signature:
+  - 北京亿赛通科技发展有限责任公司
+  - Microsoft Windows Hardware Compatibility Publisher
+  CreationTimestamp: '2024-09-05 21:48:53'
+  Publisher: 北京亿赛通科技发展有限责任公司
+  Company: EsafeNet
+  Description: EsafeNet ProcessCtrl
+  Product: ProcessCtrl
+  ProductVersion: 1.0.1.2
+  FileVersion: 1.0.1.2
+  MachineType: AMD64
+  Authentihash:
+    MD5: 94c40431fd22ca69b9456592881db927
+    SHA1: 981b6e6a1e0a7a67ee1420e7ca4be96a6bfa9e7a
+    SHA256: 03720e3f26c055778017b6dac3dbb68dda97d5ca730f8c354a829ac5cc4ec6c9
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - IoGetCurrentProcess
+  - ObfDereferenceObject
+  - PsGetProcessImageFileName
+  - strcmp
+  - strstr
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ZwCreateFile
+  - ZwReadFile
+  - ZwClose
+  - RtlCreateUnicodeString
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - ExInitializeNPagedLookasideList
+  - wcsncmp
+  - ZwOpenSymbolicLinkObject
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenDirectoryObject
+  - _vsnwprintf
+  - ZwQueryDirectoryObject
+  - wcscmp
+  - KeDelayExecutionThread
+  - PsCreateSystemThread
+  - DbgPrint
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - ObReferenceObjectByHandle
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwTerminateProcess
+  - ZwOpenProcess
+  - ExEventObjectType
+  - strncmp
+  - RtlCopyUnicodeString
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - MmBuildMdlForNonPagedPool
+  - MmGetSystemRoutineAddress
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - IoAllocateMdl
+  - IoFreeMdl
+  - PsSetCreateProcessNotifyRoutine
+  - PsSetLoadImageNotifyRoutine
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwAllocateVirtualMemory
+  - KeBugCheckEx
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - HalReturnToFirmware
+  PDBPath: D:\client_code\Driver\强制注入\Process\bin\ProcessCtrl64.pdb
+  Imphash: 54560b58b671978b0335b8f1671e3b38
+  RichPEHeaderHash:
+    MD5: 40706b211c45dcbcf8d53b2f5482a5df
+    SHA1: e10cb9936e5804e1203a50f738f4d0456c1e734c
+    SHA256: 2694d42f4e124f7e96ccf1234f38b0f25a8d269e689e8fa3bded0b87dfff8c91
+  Sections:
+    .text:
+      Entropy: 6.291657153169624
+      Virtual Size: '0x2a7b'
+    .rdata:
+      Entropy: 4.289783613143039
+      Virtual Size: '0x7f4'
+    .data:
+      Entropy: 0.28109187076190567
+      Virtual Size: '0x46be0'
+    .pdata:
+      Entropy: 4.065334228238477
+      Virtual Size: '0x258'
+    INIT:
+      Entropy: 5.406494003618746
+      Virtual Size: '0x76a'
+    .rsrc:
+      Entropy: 3.1813316109942025
+      Virtual Size: '0x338'
+    .reloc:
+      Entropy: 2.9464393446710155
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  InternalName: EsafeNet ProcessCtrl
+  OriginalFilename: ProcessCtrl
+  Copyright: Copyright (C) 2020
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
+      ValidFrom: '2018-09-19 00:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 2370e9cfe2bef559ae94426fc44333aacd3f3ab96417f262064b48f140880617a1feabd15f3cc633f2f38edd1f1d3ecc1a6099820bacc7fc7e9a872aa57d0fa657eeac3b6a85d6debd4063f8ada6c888b012fcf641df0f09971e38ea539fbe05f43eead39f501276be098bc20b487d1e2e51f68d53d3ab1f401b8a8eed7dfb4f7956705f0cd38e1bb3a7700d372b9795abdae0126b1c40cec5c77eedc26258ec77ed7322c28af5864388adea136efdd8fe422fb97d5ead18ef9490ca3d27ab26949975c7cbd37bf7ca4cd3af5121925b847d2b9f153f74cb51e89e830e166f1be746ce23bdf9e4a28bd2396baa791c912ce261242d8e2a487090c41ec5e8e070
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 01ee5f169dff97352b6465d66a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 51c3959a45cecf3d21a3effb05762573
+        SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
+        SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Code Signing Root R45
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2029-03-18 00:00:00'
+      Signature: acf7cc158b3079a81d0b28881909d71c7ffe86bd7b5a336e0d670e7b62d9e1185cb0bd135d1d23ae39507637aa44fd5f01235986564cccadbc64131430a420a8e03fe89c72dc7ef3d80c23baa82daa3cf6ec9f87310765f539a7518275e1f22f97f6d1e165968364fea11d51fbb5249bf5d27769bc852c5cfa5877d1aea7b10be2d677bba9b4344aa96f3df4f30d955de6f97a45b02517312edbf70f68e6831fa9f7e5d49d988cd3614b2fc3287e7ade930eb47da00a6d92c4b4663f7da758eeacf7ecc30801ab38fc0a1ca9c597b288c8090219f65c9a1af14d6c30d4b306ab0060480d78abcf17ad9293622077756cbdc832b4dc4debd9dfc1909629bdc17f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 7803184245708a41cf6f01b8eeb4a954
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: a33260428269bc902bc1cd280e4b1837
+        SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
+        SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
+        SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2030-07-28 00:00:00'
+      Signature: 2575a009c939bab7a139892f189fabd6eb1d4be8947c0d07689b1c9def71b6176a6b024fb33f864587cc659b4ce35806022266d56102c5638fd4a2f1b65e250b7796e9cd7140338829eceef3a26dbc4db53e064bc97333ca08142d3d4ce8b0ba75a6742da4583a6c1349f8a5150a149685b16a68342542af9656f410fa247df12b72c116e16bebe6a998c73e5af4d0189dfd74978677462a3d237d28738aaeef2b1b9abf6c53a7149e3c8771c05e8ec8fbd32a9233ea574d5e075ecac118ac812d1a21fa6ecf97617bdf717a3aca63f7d530443732febb4385dcbafca6ca33192b776ddbcb05f07e5f752ea2b6bf35aa3663c9ce64d9bdfcbc2cf3495600c8122bc627bb37af57efc4cf1e29c4f4e22dce2a61cf57edf50a40e2f518d61ee9902fcad3875f938a481a111de537859f2e66629a5e814e95ac555743dc538b257e3c610f8a0bbaf53fa6d78ef704565e21bb9fd76a7180bf96de7203d8d8222bf327164f38e851400cae92efbe3d7df780c64c36578495a7841548300e5227088d8ea2bd22c719c9a6ca0ea87a36db6aba615f112495a4e28e68ee19a949995ed0b434bdd6f940c710973152393529118724d3c4fba963cb7748d5fa62fc24e0047a4ed0e46edece9e385026f4217165d70925d4c907007ab8c7f377e8c5d4e255d0d31ef67f52e2498db911720c88442633660144dfe4330e21de62894807daf5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 65fd1dac1f115d9507f4e1840c8cb36a
+        SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
+        SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
+        SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
+    - Subject: BUSINESS_CATEGORY=Private Organization, serialNumber=91110108746729965F,
+        JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=Beijing,
+        C=CN, ST=北京, L=北京, STREET_ADDRESS=海淀区西二旗大街39号4层401, O=北京亿赛通科技发展有限责任公司, CN=北京亿赛通科技发展有限责任公司
+      ValidFrom: '2024-04-30 03:37:38'
+      ValidTo: '2027-05-01 03:37:38'
+      Signature: 4da0e421293888c0c13caaab07e537cffcbce3fc9ed6a0fe866a591971215f293156871d785efd2d3fc398f19160bd58c4a38ef4d81cc9c41ff014d9278c18bd80d063d61925229765f685008065c8686f3737caa84ceb1c3c35f3cd556df5f9d1db40900a14a9c1976f7b4f0735960667b10f115286665b07297aca7e3b23addca2b63323cd55a4ae57a597ece705d6b28a3b2762fde9d4e542496359a9ff8f75a402d3be1f49e7c2a2c9a75d0f1de0f04c6d24c8841316c7f5fbcfc9105aabda4870cef962e5532372de0bf0a526006c7b08280246346d12534b2d3e39e140bbec4b7a717328a8c412cf2cf2160f3fb253b4e9d575cc6abb52869f4abc749f7b76ad172ee96ded5251a95a027a72db57d70c811bd5fe2fe795063aaa1192ff71f7ffcda72e6b3d918a355037fba57096e2047c54e75569d8be858abbde80f1586ffd025df0f5189a63c3864d4dd091572786aca671dfe23a67b0958206044d39d69fe1d993d3af94cc13a7262a2d532116465ad8bab3a769a64e464f5d435e570cb0a9ce0abf4b56e97acefb1e2ad7f3af2240864f46b495be023144a3cef8b465a7dba5056f68266e0c001ab756f501f98d87a89d1d26fe43a780d8c9a672f5728ef30998e8be2a741cf8050a6ea5d4dd1eb4dc078dc097a83da2edb95fbeff824e319364e29bce9677a08f5a2ea92e5c1d35a8f627d8c1e8858ec2a00688
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 7dc7bfe0bdb73a0391f9690c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 784df10974d892234c9b140284a4091c
+        SHA1: 2a986d7448cda928940504de55a61633372cf5a9
+        SHA256: 3861a5f41f754e1b0d9d37fbcebc9764769798a4d0ab9357114557380d50275a
+        SHA384: b29cb6ed1f03d8acd439191c4cc7e73ff556c019ebb814bdf948148a0c0e50aa22dc841dbcc4a89e09b92cf054261c5b
+    Signer:
+    - SerialNumber: 7dc7bfe0bdb73a0391f9690c
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
+      Version: 1
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: Element2023H

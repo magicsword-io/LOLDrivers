@@ -1,0 +1,28 @@
+title: Driver Load - deresute64.sys
+id: 45457771-a763-54e7-8e98-93d533f243f6
+status: experimental
+description: |
+    Detects loading of driver deresute64.sys via name.
+    Create and start driver
+references:
+    - https://www.loldrivers.io/drivers/dbd78de7-f5ab-4fb7-a246-39cbcca4678c/
+    - https://x.com/nextronresearch/status/2051653303893680456
+author: Pierre-Henri Pezier
+date: 2026/05/05
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\deresute64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

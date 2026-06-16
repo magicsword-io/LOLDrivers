@@ -13,7 +13,7 @@ references:
     - https://blog.talosintelligence.com/undocumented-reddriver/
 author: Michael Haag
 date: 2023/07/11
-modified: 2026/05/20
+modified: 2026/06/16
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -25,10 +25,23 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=d2bb60cfb31189136924b0aebe711f63'
             - 'MD5=5aeab9427d85951def146b4c0a44fc63'
+            - 'MD5=f28bcd667324462216fdf4284eef1be6'
+            - 'MD5=d76cb1feb969a7ba9f1983b7e09d8307'
+            - 'MD5=cc4fda406772e91efe6230f691f19b0f'
+            - 'SHA1=84b0edbc188401400fffe0c1738354bcf42bc5c2'
             - 'SHA1=c9e9198d52d94771cb14711a5f6aaf8d82b602a2'
+            - 'SHA1=523789efbda40ce7510ed4afb81331110976d3d0'
+            - 'SHA1=24898ee6bd55c53240cf7d7daf19f3b1213562a3'
+            - 'SHA1=99dda8a76da4320d890411f8775fed5601e8bb54'
+            - 'SHA256=b3439b8478a642c4612cd05fd1dac2f4d622645c5b4387929b9a74c14963c304'
+            - 'SHA256=8d7286b8cfe287062074db12448a829934747e214892572bb858189cdc5f3d9d'
+            - 'SHA256=03a0a002c1442a0704d1ef623022bfa0e14c36b132e081ae9d9f1314bb3ad8c8'
             - 'SHA256=87565ff08a93a8ff41ea932bf55dec8e0c7e79aba036507ea45df9d81cb36105'
+            - 'SHA256=e39cba0582fa3d9bce412395dc6cef3f9daa6a9396ddce3ca7608120091b3f52'
             - 'IMPHASH=d51f0f6034eb5e45f0ed4e9b7bbc9c97'
+            - 'IMPHASH=273b95515aeaabe919e68397cbfaa1ff'
     condition: selection_hashes
 falsepositives:
     - Unknown

@@ -1,0 +1,31 @@
+title: Driver Load - 360hvm64.sys
+id: 8cd9d78e-26a8-52fa-b6c8-0ea43db12e29
+status: experimental
+description: |
+    Detects loading of driver 360hvm64.sys via hash.
+    360hvm64.sys is the kernel-mode hypervisor enforcement driver shipped with Qihoo 360 Total Security. IOCTL 0x22240c on \\.\360Hvm issues a per-CPU DPC broadcast that executes VMXOFF/VMSKINIT on every logical processor, disabling VT-x/AMD-V hypervisor protection across all CPUs; the auth gate (sub_121f4) delegates to \Device\360SelfProtection and fails open when that companion device is absent (BYOVD scenario).
+references:
+    - https://www.loldrivers.io/drivers/d4d82af5-0ac6-4d5d-944f-cf108475aba9/
+    - Internal Research
+author: @cyb3rh0und, @reiterjr
+date: 2026/04/30
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0b5c4cd701956b332e60ae85b8c3a7ea'
+            - 'SHA1=97cbe12e2538aa8a382485e6a00be9337ed72b85'
+            - 'SHA256=f89d5d95b8a59e6d5e50a49217f83d080e4eaf4bb77b80d8f38cd915640ba124'
+            - 'IMPHASH=1ea16ac7f83dccb38a51fdcb3a69cc78'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
