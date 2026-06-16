@@ -1,0 +1,273 @@
+Id: 8347c4af-8946-4135-b890-cde3ed35fc28
+Tags:
+- KObjExp.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-06-16'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create KObjExp binPath=C:\windows\temp\KObjExp.sys type=kernel &&
+    sc.exe start KObjExp
+  Description: KObjExp.sys is Pavel Yosifovich's Kernel Object Explorer driver and
+    is listed as a KDU-compatible provider. The staged samples include the KDU provider
+    hash and a separate JobExplorer build of the same driver family.
+  Usecase: Access kernel object and kernel-memory primitives through KDU/Explorer
+    driver builds.
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+- https://github.com/hsheric0210/SharpKernel/blob/main/provider-list.md
+- https://github.com/zodiacon/JobExplorer
+Detection: []
+Acknowledgement:
+  Person: KDU Project / SharpKernel / zodiacon
+  Handle: '@hfiref0x / @hsheric0210 / @zodiacon'
+KnownVulnerableSamples:
+- Filename: KObjExp.sys
+  SHA256: 88a9b030ab81082629253c581fe0670019c766f32acfc78a6cdc1080ad272fe4
+  MD5: 5f0b029db26afd7852e077ad02c4a031
+  SHA1: 3303ba52a334da58a4992c4f9fba7272e294b7af
+  Imphash: 4cc26fea341ef2b6f349339056a5dfb9
+  Authentihash:
+    MD5: d8ff02afd7dc24a864b4286b238786ef
+    SHA1: 43239d3355ced44fb56c4127bf96ef2ed1be2780
+    SHA256: c667c465ff3aa9d54a580ea19d01de869d0577fd589514f4c3deb844cbf9f89a
+  RichPEHeaderHash:
+    MD5: 6004b051e2501d0c9a65a9351a8f2199
+    SHA1: 7e8dcee276cf1062d2af499d73b7cc1188b9f22b
+    SHA256: b774bdff6bb8694ede1e519c6a23da2e73db1d3756673d803fa8c6a566c865f6
+  Sections:
+    .text:
+      Entropy: 6.066142372179259
+      Virtual Size: '0x888'
+    .rdata:
+      Entropy: 3.4360121708858555
+      Virtual Size: '0x45c'
+    .data:
+      Entropy: 3.75
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.164717013291905
+      Virtual Size: '0x84'
+    INIT:
+      Entropy: 5.257191710185927
+      Virtual Size: '0x36e'
+    .reloc:
+      Entropy: 2.908694969562842
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2020-12-09 23:32:30'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - wcsrchr
+  - _wcsicmp
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - ObReferenceObjectByHandle
+  - ObReferenceObjectByPointer
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenProcess
+  - ObOpenObjectByPointer
+  - ZwDuplicateObject
+  - ZwOpenThread
+  - ZwQueryInformationProcess
+  - ObOpenObjectByName
+  - ExEventObjectType
+  - ExSemaphoreObjectType
+  - PsProcessType
+  - PsJobType
+  - KeBugCheckEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=IL, L=Kefar Sava, O=Pavel Yosifovich, CN=Pavel Yosifovich
+      ValidFrom: '2020-10-01 00:00:00'
+      ValidTo: '2023-10-06 12:00:00'
+      Signature: 948ecd53b80e7aa733853dbd47145ca321eaac8e9d19376678412743f3d66e9f5e1122f21c2ada8c2f1504d125710ea7c454585709396be1fd2d1915fe1605fbd605a79818136e478e75ca820825da63058b10dfb2b48697e6ccc25cf2454bf63c8df58caa9065ae325cdc1d5002a33ad32805461dc9de5ff7ebec86d7bb6f604fb539c572a4501e3ebc1c47f0f13595a7138087e11f6fc6c933e39ccafa458d0c5e7e0440c1e967bdd60217c3e7744c05a618edb45e6b6f5fd1d3b7466b0ec88044782e80f99f0cc68c54fb73da7bfb8786200a8fed36cb848511772babcb830cc8f90ce03d0876ad3960135cdb4aa2b98f48ef7d919005018a83f501823788
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 010fb25b4de76443a40569857a384f24
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e8e116fcb3d9b3c61b102fe93742fd99
+        SHA1: 27c1a64f11108ae747e3d29549da0773b32c7c57
+        SHA256: 3151642f0c68e2030cb6e077c25bd9cf74d1fb2a72c125fbd8f26229fd72d1ae
+        SHA384: 0be70b5b5c1e40768551545cb6c44efdd4dfdfb0604216f36101c28fb1e8ecc36e8103c9a66a3e14ad217acb07dd2040
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
+        CA
+      ValidFrom: '2011-04-15 19:41:37'
+      ValidTo: '2021-04-15 19:51:37'
+      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611cb28a000000000026
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 983a0c315a50542362f2bd6a5d71c8d0
+        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+    Signer:
+    - SerialNumber: 010fb25b4de76443a40569857a384f24
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      Version: 1
+- Filename: KObjExp.sys
+  SHA256: d93d045bb73620055ad4158dbc2e1d3d4c7bfcefbbc90fdc6dfa3663c6cbdac1
+  MD5: af27a89e19e96a2a83a9908f75a12221
+  SHA1: 4844bff55efaa94a0d50b02e3444bb5a272bf1cb
+  Imphash: 56077d4efbf498f901e7098df0cdcf53
+  Authentihash:
+    MD5: 57db230b3c627a84e0bb386821d77cb7
+    SHA1: 89f5ce7b232f7fe5b4dcf698adc0620994abdfb1
+    SHA256: d313c49a56fbc0fc09e20af7b6e1dc82e4bcd0e2b8be42e6c6997dcc12f8268f
+  RichPEHeaderHash:
+    MD5: 089aec45dffb898ce75e8974af5e8ebe
+    SHA1: 6be03855c42f239b94a9e16663b1d5c45ca3275e
+    SHA256: 5dff830f2db7c6e08d34d65e2f51e01d9659a90a0e7ac780fc1105cb644466d6
+  Sections:
+    .text:
+      Entropy: 5.763468457550924
+      Virtual Size: '0x348'
+    .rdata:
+      Entropy: 3.422762468480361
+      Virtual Size: '0x39c'
+    .data:
+      Entropy: 3.75
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 2.8483939383272894
+      Virtual Size: '0x48'
+    INIT:
+      Entropy: 4.9370305019487555
+      Virtual Size: '0x1dc'
+    .reloc:
+      Entropy: 3.0464393446710156
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-09-01 07:58:18'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ObReferenceObjectByPointer
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenProcess
+  - ObOpenObjectByPointer
+  - ZwDuplicateObject
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert Pavel,132096310518400599
+      ValidFrom: '2019-08-07 05:57:32'
+      ValidTo: '2029-08-07 00:00:00'
+      Signature: 1843a8282a4f8f6e2e43614b99cc28f403846841847d19f712674a77d50a02f83eeb3cb8150a2dd0ab9bcd873d4670c3ac9cddd7d341118acaae33391636b5ad89b1a8aa5180f97fc249ce2ef1b64655ff150175188d25a4bf8105d73476eee438c2d797d338581dcc0ecb0a2153b138c8c7ac39dca5bdd2a54e36df9bf2a38c82f7a81f3af883d2b196364fc610412cfc2fb284c2290247b755c43683a9caaa508a3b93bc01098aa64af49f16c0e86ead1446ee211b7d68de8b0c83c2aa41f890118e88e54da86a01790358626a23c7300e38284aa4a2510aaf76ac35a04995bb68b2e1ffa4f837adcb9c79310c6efd44e61c74006488919e0a75eeca67cdc7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 1556175cace4f2b7489c83ba69d14f74
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 37a6d36db96afa265db152a80b14b7ae
+        SHA1: 93590421fbe085aec30c5c65f583c2a0e3787fee
+        SHA256: 8691610fd48616352ab641ab3b769c32836ce283f68682c23ed036be378d151a
+        SHA384: 98b8e8707dd90f8ac6bf9bafea05168f4676d44c014aa8f5c42400391a3d5c5eea3f67bd024680d4062a1f0cb905096e
+    Signer:
+    - SerialNumber: 1556175cace4f2b7489c83ba69d14f74
+      Issuer: CN=WDKTestCert Pavel,132096310518400599
+      Version: 1

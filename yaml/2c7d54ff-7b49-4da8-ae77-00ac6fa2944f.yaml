@@ -9,14 +9,16 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create HWAuidoOs2Ec binPath=C:\windows\temp\HWAuidoOs2Ec.sys type=kernel
     && sc.exe start HWAuidoOs2Ec
-  Description: HWAuidoOs2Ec.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers
-    repository. The driver exposes dangerous kernel primitives to usermode.
+  Description: Huawei HWAuidoOs2Ec.sys is a vulnerable kernel driver from public vulnerable-driver
+    research. Public DragonForce reporting also lists this driver in BYOVD tradecraft
+    used to disable endpoint security tooling.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/325
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+- https://www.security.com/threat-intelligence/dragonforce-msteams-backdoor
 Detection: []
 Acknowledgement:
   Person: ''
@@ -72,7 +74,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2022-03-27 21:51:56'
   InternalName: HWAuidoOs2Ec
-  Copyright: Copyright © Huawei Device Co., Ltd. All rights reserved.
+  Copyright: "Copyright \xA9 Huawei Device Co., Ltd. All rights reserved."
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''

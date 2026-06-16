@@ -9,28 +9,30 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create ProcessCtr binPath=C:\windows\temp\ProcessCtr.sys type=kernel
     && sc.exe start ProcessCtr
-  Description: The driver creates a device object at \\.\ProcessCtr with no DACL restrictions,
-    so any local user can open a handle. The IRP_MJ_DEVICE_CONTROL dispatcher accepts
-    IOCTL 0x89DB202C with a 4-byte DWORD input (target PID) and chains ZwOpenProcess
-    -> ZwTerminateProcess against the supplied PID, with no caller validation. Because
-    the kernel-mode caller bypasses user-mode access checks, the primitive can terminate
-    any process on the system including PPL-protected AV/EDR processes.
+  Description: EsafeNet ProcessCtr / ProcessCtrl64.sys creates a device object reachable
+    by local callers and exposes process-control IOCTL paths. Public research documents
+    a vulnerable process-termination path that can allow privileged process termination
+    or denial of service when user-supplied context/handle material is accepted without
+    adequate authorization checks.
   Usecase: Terminate arbitrary processes from kernel mode, including protected security
     processes, through an unauthenticated IOCTL handler.
   Privileges: kernel
   OperatingSystem: Windows 10, Windows 11
 Resources:
 - https://github.com/The-Sword-of-Constantine/UsingBYOVD/blob/master/BYOVD/ProcessCtr.cpp
+- https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/EsafeNet
 KnownVulnerableSamples:
 - Filename: ProcessCtr.sys
   MD5: 5ee52684ee22f3ad730b6af7e327d82b
   SHA1: 72ffc3e2afc384657bc1559eb69b4651e24d57d6
   SHA256: d64eeb940daffdc8327fb18b160c20e539088cf8407813655f59efa9fdf0022e
   Signature:
-  - 北京亿赛通科技发展有限责任公司
+  - "\u5317\u4EAC\u4EBF\u8D5B\u901A\u79D1\u6280\u53D1\u5C55\u6709\u9650\u8D23\u4EFB\
+    \u516C\u53F8"
   - Microsoft Windows Hardware Compatibility Publisher
-  CreationTimestamp: '2024-09-05 21:48:53'
-  Publisher: 北京亿赛通科技发展有限责任公司
+  CreationTimestamp: '2024-09-05 07:48:53'
+  Publisher: "\u5317\u4EAC\u4EBF\u8D5B\u901A\u79D1\u6280\u53D1\u5C55\u6709\u9650\u8D23\
+    \u4EFB\u516C\u53F8"
   Company: EsafeNet
   Description: EsafeNet ProcessCtrl
   Product: ProcessCtrl
@@ -102,7 +104,7 @@ KnownVulnerableSamples:
   - IofCompleteRequest
   - RtlInitUnicodeString
   - HalReturnToFirmware
-  PDBPath: D:\client_code\Driver\强制注入\Process\bin\ProcessCtrl64.pdb
+  PDBPath: "D:\\client_code\\Driver\\\u5F3A\u5236\u6CE8\u5165\\Process\\bin\\ProcessCtrl64.pdb"
   Imphash: 54560b58b671978b0335b8f1671e3b38
   RichPEHeaderHash:
     MD5: 40706b211c45dcbcf8d53b2f5482a5df
@@ -202,9 +204,13 @@ KnownVulnerableSamples:
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
         SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
         SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
-    - Subject: BUSINESS_CATEGORY=Private Organization, serialNumber=91110108746729965F,
-        JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=Beijing,
-        C=CN, ST=北京, L=北京, STREET_ADDRESS=海淀区西二旗大街39号4层401, O=北京亿赛通科技发展有限责任公司, CN=北京亿赛通科技发展有限责任公司
+    - Subject: "BUSINESS_CATEGORY=Private Organization, serialNumber=91110108746729965F,\
+        \ JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=Beijing,\
+        \ C=CN, ST=\u5317\u4EAC, L=\u5317\u4EAC, STREET_ADDRESS=\u6D77\u6DC0\u533A\
+        \u897F\u4E8C\u65D7\u5927\u885739\u53F74\u5C42401, O=\u5317\u4EAC\u4EBF\u8D5B\
+        \u901A\u79D1\u6280\u53D1\u5C55\u6709\u9650\u8D23\u4EFB\u516C\u53F8, CN=\u5317\
+        \u4EAC\u4EBF\u8D5B\u901A\u79D1\u6280\u53D1\u5C55\u6709\u9650\u8D23\u4EFB\u516C\
+        \u53F8"
       ValidFrom: '2024-04-30 03:37:38'
       ValidTo: '2027-05-01 03:37:38'
       Signature: 4da0e421293888c0c13caaab07e537cffcbce3fc9ed6a0fe866a591971215f293156871d785efd2d3fc398f19160bd58c4a38ef4d81cc9c41ff014d9278c18bd80d063d61925229765f685008065c8686f3737caa84ceb1c3c35f3cd556df5f9d1db40900a14a9c1976f7b4f0735960667b10f115286665b07297aca7e3b23addca2b63323cd55a4ae57a597ece705d6b28a3b2762fde9d4e542496359a9ff8f75a402d3be1f49e7c2a2c9a75d0f1de0f04c6d24c8841316c7f5fbcfc9105aabda4870cef962e5532372de0bf0a526006c7b08280246346d12534b2d3e39e140bbec4b7a717328a8c412cf2cf2160f3fb253b4e9d575cc6abb52869f4abc749f7b76ad172ee96ded5251a95a027a72db57d70c811bd5fe2fe795063aaa1192ff71f7ffcda72e6b3d918a355037fba57096e2047c54e75569d8be858abbde80f1586ffd025df0f5189a63c3864d4dd091572786aca671dfe23a67b0958206044d39d69fe1d993d3af94cc13a7262a2d532116465ad8bab3a769a64e464f5d435e570cb0a9ce0abf4b56e97acefb1e2ad7f3af2240864f46b495be023144a3cef8b465a7dba5056f68266e0c001ab756f501f98d87a89d1d26fe43a780d8c9a672f5728ef30998e8be2a741cf8050a6ea5d4dd1eb4dc078dc097a83da2edb95fbeff824e319364e29bce9677a08f5a2ea92e5c1d35a8f627d8c1e8858ec2a00688
