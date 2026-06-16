@@ -16,8 +16,8 @@ Commands:
 Resources:
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Acknowledgement:
-  Handle: ''
   Person: ''
+  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351.yara
@@ -39,18 +39,21 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 681bb8e9713477839a1ee8d87b498630
     SHA1: 68cdcd073e57f650c5d6173cd79af3a3526052f6
     SHA256: 99ddeba6bcdc79e52e3ff8afc63dbe4b299161cf0f5558a2d7630c2a18daf2c6
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2022-02-22 12:12:24'
+  Company: Windows (R) Win 7 DDK provider
+  Copyright: Copyright (C) Voicemod S.L.2010-2020
+  CreationTimestamp: '2022-02-22 15:12:24'
   Date: ''
-  Description: ''
+  Description: Voicemod Virtual Audio Device (WDM)
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 10.0.10011.16384
   Filename: vmdrv.sys
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -95,13 +98,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - portcls.sys
-  InternalName: ''
+  InternalName: vmdrv.sys
   MD5: d5db81974ffda566fa821400419f59be
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: vmdrv.sys
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
   Publisher: ''
   RichPEHeaderHash:
     MD5: f6ca8831520c235d28dbfa26ad735d55
@@ -117,7 +120,7 @@ KnownVulnerableSamples:
       Entropy: 4.71043452997573
       Virtual Size: '0x1440'
     .data:
-      Entropy: 1.961269937132157
+      Entropy: 1.9612699371321567
       Virtual Size: '0x72c'
     .pdata:
       Entropy: 4.38228852061058
@@ -159,9 +162,8 @@ KnownVulnerableSamples:
         SHA1: 891bf1b0a017f5aadbc0d997fe63eb0ec25a1655
         SHA256: 81d8278fe4857a2dfa510a0af74deeb0623ef79e25fcf171644808a3ec652305
         SHA384: 17653c0976e1370da584b5eaf4a6deb1d3b7cad97c2f12592e7b96c5302b88bde20b30fa5963ef0ac9f2063083b48e9e
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=ES,
-        JURISDICTION_OF_INCORPORATION_SP=Valencia, serialNumber=B98657844, C=ES, L=Valencia,
-        O=Voicemod Sociedad Limitada, CN=Voicemod Sociedad Limitada
+    - Subject: ??=Private Organization, ??=ES, ??=Valencia, serialNumber=B98657844,
+        C=ES, L=Valencia, O=Voicemod Sociedad Limitada, CN=Voicemod Sociedad Limitada
       ValidFrom: '2021-10-21 00:00:00'
       ValidTo: '2023-01-19 23:59:59'
       Signature: 3066023100fd8a9d376bf4399c7cb947c5fbb2e90bb3fdbcb37cab257ef47db016f1898e2d129241a757f039f8e7112b05a48632a60231009b75d4e2623fb9f54ce9ffc6ba7a661a5d2d54b096ddf6c510b2f6063981c15846e282779e9febffa39e5c9fad429646

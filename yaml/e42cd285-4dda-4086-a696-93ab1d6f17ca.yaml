@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 143dd36b65e3550323812614f6952d95
     SHA1: 925f076cef081c0c2f6dded10c1349b4e65f7dde
     SHA256: 8920dedd3c5488ecc1db2ace55b2000d4cebf899c5e591b429d3f7767eee2216
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2007-11-26 18:16:37'
+  Company: SafeNet, Inc.
+  Copyright: Copyright (C)  SafeNet, Inc.
+  CreationTimestamp: '2007-11-26 21:16:37'
   Date: ''
-  Description: ''
+  Description: Hostnt 64-bit driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 4, 0, 16, 0
   Filename: HOSTNT.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -69,13 +69,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: Hostnt
   MD5: e8ebba56ea799e1e62748c59e1a4c586
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: Hostnt.sys
+  Product: Hostnt
+  ProductVersion: 4, 0, 16, 0
   Publisher: '"SafeNet, Inc."'
   RichPEHeaderHash:
     MD5: 4024d9b5e71cd1761134c397f2cf292b
@@ -169,9 +169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

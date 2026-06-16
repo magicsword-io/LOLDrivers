@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: f1d41369bc171a32ece45fd99af06814
     SHA1: b3511e640bde63fcfbc22b2043a27d84824ad597
     SHA256: 8926be6aa6df3b5d20483e0e698ea14fa0fb760844468ed69143d7f503250349
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATSZIO Driver
+  Company: ASUSTek Computer Inc.
+  InternalName: ATSZIO.sys
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0.2.1.7
+  Product: ATSZIO Driver
+  ProductVersion: 0.2.1.7
+  Copyright: Copyright (C) 2012
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -149,9 +149,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -226,7 +226,7 @@ KnownVulnerableSamples:
       Entropy: 5.157296790524136
       Virtual Size: '0x1c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 05:05:53'
+  CreationTimestamp: '2014-09-18 08:05:53'
   Imphash: bb56f25a810b329868a0ff8e94080bad
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -237,14 +237,14 @@ KnownVulnerableSamples:
     MD5: 69a92cb6ac87c99f10b24eefa13f0b10
     SHA1: b66bf2b1b07f8f2bab1418131ae66b0a55265f73
     SHA256: 0ff8bcc7f938ec71ee33fbe089d38e40a8190603558d4765c47b1b09e1dd764a
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATSZIO Driver
+  Company: ASUSTek Computer Inc.
+  InternalName: ATSZIO.sys
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0.2.1.7
+  Product: ATSZIO Driver
+  ProductVersion: 0.2.1.7
+  Copyright: Copyright (C) 2012
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -329,7 +329,7 @@ KnownVulnerableSamples:
       Entropy: 3.9257359466643256
       Virtual Size: '0x2ec'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.305451172213043
@@ -347,7 +347,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 05:04:29'
+  CreationTimestamp: '2014-09-18 08:04:29'
   Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -358,14 +358,14 @@ KnownVulnerableSamples:
     MD5: f3a217e8c7a1c871d6588e7ef85ed660
     SHA1: b5407f564315cfd3eac7c7663fac575fd18f565d
     SHA256: 028aed97e90c5a231069a3fa0853c67ea5853c4bbfea6247c6f4b53509581d05
-  Description: ''
+  Description: ATSZIO Driver
   Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  InternalName: ATSZIO
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0, 2, 1, 2
+  Product: ATSZIO Driver
+  ProductVersion: 0, 2, 1, 2
+  Copyright: Copyright (C) 2010
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -456,9 +456,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -515,7 +515,7 @@ KnownVulnerableSamples:
       Entropy: 3.6129747487589423
       Virtual Size: '0x384'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-03-03 21:49:03'
+  CreationTimestamp: '2011-03-04 00:49:03'
   Imphash: 2233472cee6457ad207017803048aaff
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -526,14 +526,14 @@ KnownVulnerableSamples:
     MD5: 272a0dd6f4b32694511cadaba438aec8
     SHA1: 584b6a0e2dc45ce2d5ee5becf3ef09e7877a619b
     SHA256: 18bea05d56bcbc0e23663db9b6dc79d9db3a218e711415a1e420dea2e183cb5e
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATSZIO Driver
+  Company: ASUSTek Computer Inc.
+  InternalName: ATSZIO.sys
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0.2.1.6
+  Product: ATSZIO Driver
+  ProductVersion: 0.2.1.6
+  Copyright: Copyright (C) 2012
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -635,9 +635,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -712,7 +712,7 @@ KnownVulnerableSamples:
       Entropy: 4.460990027729786
       Virtual Size: '0x13c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-04-26 04:50:44'
+  CreationTimestamp: '2013-04-26 07:50:44'
   Imphash: ff605557fd515d7ab30ff41dbd8bd24a
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -723,14 +723,14 @@ KnownVulnerableSamples:
     MD5: aec83d758be98eb60b7463bc71eb1242
     SHA1: 1ce64a20f37b9a86bd55b2ae592a5b90e6e9ea40
     SHA256: 1631d124bd8b2917c37abfe0f7b3dfa9e309ec54f69bdab2e2b5de3929d523d7
-  Description: ''
+  Description: ATSZIO Driver
   Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  InternalName: ATSZIO
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0, 2, 1, 2
+  Product: ATSZIO Driver
+  ProductVersion: 0, 2, 1, 2
+  Copyright: Copyright (C) 2010
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -827,9 +827,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -886,7 +886,7 @@ KnownVulnerableSamples:
       Entropy: 5.356685436726801
       Virtual Size: '0x164'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-03-03 21:49:25'
+  CreationTimestamp: '2011-03-04 00:49:25'
   Imphash: e717a2158439123c6fca79b6b2c0ba49
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -897,14 +897,14 @@ KnownVulnerableSamples:
     MD5: 84fc06779f79be8a59caa24378db6eaf
     SHA1: 2905cbd9b37d55b657f952ec5b5804bd3b1f4263
     SHA256: e5e4dc1a918e201ec2cf02a036e4dd03dd04dfd179091c8adfbc6745eb830f2f
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATSZIO Driver
+  Company: ASUSTek Computer Inc.
+  InternalName: ATSZIO.sys
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0.2.1.6
+  Product: ATSZIO Driver
+  ProductVersion: 0.2.1.6
+  Copyright: Copyright (C) 2012
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -997,9 +997,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1077,7 +1077,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-04-26 04:50:14'
+  CreationTimestamp: '2013-04-26 07:50:14'
   Imphash: bb981f82c2bfc3c22471df92d9d0fb89
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -1088,14 +1088,14 @@ KnownVulnerableSamples:
     MD5: 2e9b394c4437948e1c27e2f39a966b6c
     SHA1: 0ddcc3e9e7d0790007fd6e12e4554f460d2c4d9b
     SHA256: 6e64c1bbaa6b5dba3f3795f5932511f8f8a49d68d420267896e2e4e51b9d46bc
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATSZIO Driver
+  Company: ASUSTek Computer Inc.
+  InternalName: ATSZIO.sys
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0.2.1.7
+  Product: ATSZIO Driver
+  ProductVersion: 0.2.1.7
+  Copyright: Copyright (C) 2012
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1129,9 +1129,8 @@ KnownVulnerableSamples:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
-        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, ST=Taipei
+        City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2020-10-30 00:00:00'
       ValidTo: '2023-11-02 23:59:59'
       Signature: 301a945778ef7ae17addaaa66604eba2c6dfdcb0b9db4200e8ac84b325dda0a55eec1d660fa8a409edb3f943e63b40cdb85bc2716c69a014161abc4f455a69a205f263833c8784c78592fcc004d3f99f7e81469ac6dd9e7306add663ea093ce5025330d97968167f535981948f68e02ba22f48fff4074fd8228d8ddfe3a8b363e83a8b606fba71eaac6c91b1bac39ffd8933f69d5177199519a39ba05b5e48e031a8e86bcdd2250c61192fe1ee0d9142e74c07791f25ba2f5830a7b5a892e059576b8844ce45460e7733aa2a3f5bed53a9e1d93e07f5b9eeb6b36faa4c7e2149da1326c6e5a9c9eb288989290f20d4e5b95a60cb537a098acd6dbc9b77f94878
@@ -1181,7 +1180,7 @@ KnownVulnerableSamples:
       Entropy: 3.885151031792537
       Virtual Size: '0x2c8'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.34177538214681
@@ -1199,7 +1198,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 05:04:14'
+  CreationTimestamp: '2014-09-18 08:04:14'
   Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
   LoadsDespiteHVCI: 'TRUE'
 - Filename: ATSZIO.sys
@@ -1210,14 +1209,14 @@ KnownVulnerableSamples:
     MD5: 2e9b394c4437948e1c27e2f39a966b6c
     SHA1: 0ddcc3e9e7d0790007fd6e12e4554f460d2c4d9b
     SHA256: 6e64c1bbaa6b5dba3f3795f5932511f8f8a49d68d420267896e2e4e51b9d46bc
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATSZIO Driver
+  Company: ASUSTek Computer Inc.
+  InternalName: ATSZIO.sys
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0.2.1.7
+  Product: ATSZIO Driver
+  ProductVersion: 0.2.1.7
+  Copyright: Copyright (C) 2012
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1311,9 +1310,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1373,7 +1372,7 @@ KnownVulnerableSamples:
       Entropy: 3.885151031792537
       Virtual Size: '0x2c8'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.34177538214681
@@ -1391,7 +1390,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 05:04:14'
+  CreationTimestamp: '2014-09-18 08:04:14'
   Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -1402,14 +1401,14 @@ KnownVulnerableSamples:
     MD5: 34057e393322867a580b2a72bc4b282b
     SHA1: 439a577db1e655d7f4fde8dea0391867b081b59a
     SHA256: 1d5ded14ba7821a1021815e70399801bf87dadf9b9eb17325e3c918d53971c8e
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATSZIO Driver
+  Company: ASUSTek Computer Inc.
+  InternalName: ATSZIO.sys
+  OriginalFilename: ATSZIO.sys
+  FileVersion: 0.2.2.3
+  Product: ATSZIO Driver
+  ProductVersion: 0.2.2.3
+  Copyright: Copyright (C) 2012
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1460,10 +1459,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=23638777, STREET_ADDRESS=Pei Tou District, STREET_ADDRESS=4F
-        No. 150, Li,te Rd, postalCode=11259, C=TW, ST=Taipei, L=Taipei City, O=ASUSTeK
-        Computer Inc., CN=ASUSTeK Computer Inc.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, ??=Pei Tou District,
+        ??=4F No. 150, Li,te Rd, postalCode=11259, C=TW, ST=Taipei, L=Taipei City,
+        O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2015-06-16 00:00:00'
       ValidTo: '2018-06-19 12:00:00'
       Signature: 62395f09957b06539614f157a39a1becf829e9b17f3620785bc445abedbf75d9018c75fdf7d2b5616f6f97ca685ed7c53b4b1e21456c94e9f6258ae51c535d69214696004d0d17d46123bfdcfadf1d03d83d70100dfa74516a74d0793ff5e2b9e5a99d172a94a521cb5902ebc205a1bf8c7f581a1a53b351460be4cb493afa23eb80020c4e9163f64112b474e454cceb4bf5d0ac7418394317a9ad3d6b7a13915309540c983f7172d19a787ce2733381cc1f32d9915a047bb3b53cae37b61870d5b3b17720bbc02c8b38538d9ab60de7b0319f3c541ac55c87df0fe344e8dd91cea16894c8a08509a3a77a817b7b6dd513079ec1b365b613d86d6fca5185dad9
@@ -1528,6 +1526,6 @@ KnownVulnerableSamples:
       Entropy: 3.273940943248981
       Virtual Size: '0x330'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-11 04:38:01'
+  CreationTimestamp: '2018-04-11 07:38:01'
   Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
   LoadsDespiteHVCI: 'TRUE'

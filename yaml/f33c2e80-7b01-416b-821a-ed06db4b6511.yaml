@@ -35,16 +35,16 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
-- Company: ''
+- Company: Intel Corporation
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: SelfTest Data Collector
+  FileVersion: 2.0.0.0
   Filename: ''
   MD5: d95c9a241e52b4f967fa4cdb7b99fc80
   MachineType: AMD64
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: stdcdrv64.sys
+  Product: SelfTest Data Collector
+  ProductVersion: 2.0.0.0
   Publisher: ''
   SHA1: 8ea50d7d13ff2d1306fed30a2d136dd6245eb3bc
   SHA256: 37022838c4327e2a5805e8479330d8ff6f8cd3495079905e867811906c98ea20
@@ -81,9 +81,9 @@ KnownVulnerableSamples:
       Entropy: 3.2855342446735882
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-01-26 11:37:43'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2022-01-26 14:37:43'
+  InternalName: stdcdrv64.sys
+  Copyright: Copyright (c) 2019 Intel Corporation
   Imports:
   - ntoskrnl.exe
   - WDFLDR.SYS

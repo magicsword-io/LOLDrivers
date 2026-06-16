@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 0ef111dc998659cbc37f0d9845cdd2df
     SHA1: 432b5809d84935d15574de8d64b22e06682ff715
     SHA256: 97cada65b735f3eece349c7b7021c4469d5a9fb3cf8b5e2ac187006469ffbc98
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-02-24 04:31:51'
+  Company: 3S-Smart Software Solutions GmbH
+  Copyright: "Copyright \xA9 2006-2014"
+  CreationTimestamp: '2016-02-24 07:31:51'
   Date: ''
-  Description: ''
+  Description: SysDrv3S
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 3,5,6,0
   Filename: SysDrv3S.sys
   ImportedFunctions:
   - HalSetBusDataByOffset
@@ -93,13 +93,13 @@ KnownVulnerableSamples:
   Imports:
   - HAL.dll
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: SysDrv3S
   MD5: 31eca8c0b32135850d5a50aee11fec87
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: SysDrv3S.sys
+  Product: SysDrv3S
+  ProductVersion: 3.5.6.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 4c4e61d23caf453cd98052bd346147af
@@ -186,11 +186,9 @@ KnownVulnerableSamples:
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
         SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-    - Subject: "BUSINESS_CATEGORY=Private Organization, serialNumber=HRB 6186, JURISDICTION_OF_INCORPORATION_C=DE,\
-        \ JURISDICTION_OF_INCORPORATION_SP=Bayern, JURISDICTION_OF_INCORPORATION_L=Kempten\
-        \ (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allg\xE4u), STREET_ADDRESS=Memminger\
-        \ Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions\
-        \ GmbH, emailAddress=info@codesys.com"
+    - Subject: ??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten
+        (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allgu), ??=Memminger Str. 151, O=3S,Smart
+        Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com
       ValidFrom: '2019-02-01 15:34:02'
       ValidTo: '2021-02-01 15:34:02'
       Signature: 80dad6d1dcb4d50486f485a5309cfafec484503d27a24a02d63b1343782a476cf76e64e32c7dfc9aca28cbdcc636c4ce4da1da4dd72f613fa54c68489ee8331b4fc66399ea933533a946e4f30f64f2ee09d592c06d1482c128e6d2c8cf0b5321a919bece3e8338c86717291eb589575bd3780e66a24111a1fa3975ffd0df0e779cf4a3ec9ecb06a7a6d89e6467d9104742fe3be7af25d1adf7e3583159a852d82e64b7b4c5f9134dbab58e4d736204e1bfdf0a66121fd9cb0a674ffac58e4de9019444329e5dd5d81770c24fc4529c52f527f473cd2ecb27b97e68b2486db25f8c2c4ced516f0c18cf1cb4b36d09109d88d20ba6b5259f4b6405c5d268718a97

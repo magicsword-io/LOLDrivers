@@ -35,16 +35,16 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
-- Company: ''
+- Company: Wistron Corporation
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Wistron RWA Driver
+  FileVersion: 1.0.0.1016
   Filename: ''
   MD5: 7be3a7a743f2013c3e90355219626c2c
   MachineType: AMD64
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: WiRwaDrv.sys
+  Product: Wistron RWA Driver
+  ProductVersion: 1.0.0.1016
   Publisher: ''
   SHA1: a951953e3c1bb08653ed7b0daec38be7b0169c27
   SHA256: d8fc8e3a1348393c5d7c3a84bcbae383d85a4721a751ad7afac5428e5e579b4e
@@ -81,9 +81,9 @@ KnownVulnerableSamples:
       Entropy: 2.684183719779189
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-18 01:40:37'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2019-10-18 04:40:37'
+  InternalName: WiRwaDrv.sys
+  Copyright: Copyright (C) 2019 Wistron Corporation
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -121,10 +121,8 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=Taipei
-        City, JURISDICTION_OF_INCORPORATION_L=Taipei City, BUSINESS_CATEGORY=Private
-        Organization, serialNumber=12868358, C=TW, L=Taipei City, O=Wistron Corporation,
-        CN=Wistron Corporation
+    - Subject: ??=TW, ??=Taipei City, ??=Taipei City, ??=Private Organization, serialNumber=12868358,
+        C=TW, L=Taipei City, O=Wistron Corporation, CN=Wistron Corporation
       ValidFrom: '2019-07-10 00:00:00'
       ValidTo: '2021-04-10 23:59:59'
       Signature: 26664b896d1e83b2fa44d95a88188d6a2afec9f4b0495a9b719dc107cbc8ed0efd4c65c8d6a36101ab32caba91f92d7d9402a6b6db782ecd9cea5849917e349b39d7d528045c701abb7072af2dfd526b4756733f4ed5f31e1c84ace251e39a0661493af6de24dba761a94915ced95b4d8421b5167bc9e85318021116959d9f2fe98b674d0d24f01929d50699b151b9cdb8464dfbdc578e725f6a7af29d0e8970f82531130b31fc5874650d637b359ac33a00b64b10bc8fae20adf2ade12764de5902023f8bb7782c8b5c72acf2bdced5727197f9e9d519fccaa7c397ae149da1702cda9d644f654f38044e04f637728f8228391bbe645f87977ca170f1e6cb4f

@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 9a0c8745f43136476aa78ea77af67a0a
     SHA1: dcfc27b5aac3e1911c0617d6c1823e65267c09a3
     SHA256: b78cb190a4968d06f2cdab65ea0106bc47eefdaffc871ba5dd2c2dccadb1e403
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2017-04-12 19:51:36'
+  Company: Huawei
+  Copyright: Copyright (C) 2016
+  CreationTimestamp: '2017-04-12 22:51:36'
   Date: ''
-  Description: ''
+  Description: HwOs2Ec
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.1
   Filename: HwOs2Ec7x64.sys
   ImportedFunctions:
   - DbgPrint
@@ -120,13 +120,13 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: HwOs2Ec
   MD5: bae1f127c4ff21d8fe45e2bbfc59c180
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: HwOs2Ec.sys
+  Product: Huawei MateBook
+  ProductVersion: 1.0.0.1
   Publisher: ''
   RichPEHeaderHash:
     MD5: b58df55aa41763ccb62987fd4956f59c
@@ -154,7 +154,7 @@ KnownVulnerableSamples:
       Entropy: 6.230170005876138
       Virtual Size: '0x18ea'
     INIT:
-      Entropy: 5.513789896059989
+      Entropy: 5.513789896059991
       Virtual Size: '0x92a'
     .rsrc:
       Entropy: 3.224013557904709

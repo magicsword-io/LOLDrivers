@@ -34,9 +34,9 @@ KnownVulnerableSamples:
   Signature: []
   LoadsDespiteHVCI: 'FALSE'
   Authentihash:
-    MD5: ''
-    SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
-    SHA256: 9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395
+      MD5: ''
+      SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
+      SHA256: 9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395
 - Company: ''
   Date: ''
   Description: ''
@@ -51,16 +51,16 @@ KnownVulnerableSamples:
   Signature: []
   LoadsDespiteHVCI: 'FALSE'
   Authentihash:
-    MD5: ''
-    SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
-    SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
+      MD5: ''
+      SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
+      SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
 - Authentihash:
     MD5: d490f971f9503765a947997d7c54a4c7
     SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
     SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-12-23 18:03:09'
+  CreationTimestamp: '2018-12-23 21:03:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -158,9 +158,7 @@ KnownVulnerableSamples:
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
         SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
-    - Subject: "C=CN, ST=\u5B89\u5FBD, L=\u4EB3\u5DDE, O=\u5B89\u5FBD\u7701\u5200\u950B\
-        \u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\u53F8, CN=\u5B89\u5FBD\u7701\u5200\
-        \u950B\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\u53F8"
+    - Subject: C=CN, ST=, L=, O=, CN=
       ValidFrom: '2017-12-08 05:01:50'
       ValidTo: '2021-01-01 08:01:33'
       Signature: 0ffa0e6fd50ae2d624724fcd237a21b0b7c6e198cfe7236ea203a1ea53ed23c306e8b6e23704583b50986a34b0cd0cb26d7a06fe5ca90f4f45320f2d59a2f88d1fe793c9baf7d328fd60317d21ae9242e85710a5c2184a7f93b82abbb8a8eb705722e17c0ce0eda8f2cdd44da7ba54ecf400584636802e7ec786354386807768df2a49f88330eb86e89b8db3894ccebc7db0ddbc48165f8b802469e9a5c0c95395b631328cf867519024b1d5229768f2b2b070e5529eb2186a694fa134c9494d82dc028c2428c6b72ba9289830e0222b27952d4abb3c639de8ecb47f5b37bc53df7c781e83850dcbb0a9c4c1d8ce917fac942af20e8bd4a58537a3b5a71ea679
@@ -204,7 +202,7 @@ KnownVulnerableSamples:
     SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-12-23 18:03:09'
+  CreationTimestamp: '2018-12-23 21:03:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -302,9 +300,7 @@ KnownVulnerableSamples:
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
         SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
-    - Subject: "C=CN, ST=\u5B89\u5FBD, L=\u4EB3\u5DDE, O=\u5B89\u5FBD\u7701\u5200\u950B\
-        \u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\u53F8, CN=\u5B89\u5FBD\u7701\u5200\
-        \u950B\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\u53F8"
+    - Subject: C=CN, ST=, L=, O=, CN=
       ValidFrom: '2019-03-25 08:28:21'
       ValidTo: '2021-01-01 08:01:33'
       Signature: 1bb1fdbb9443a09ed9116cefc42898629cc241933acd0732b579933b8658315d82b85c4e67f0f17bd8d0f0b01842e8d16ba5be8b1d6151e979df5509c2723be19dbf7678c670656aa3c59ec6649877610352f3f1940c5f015dc83bddccbd394929e14f8df29619c0c9a3a10280b520237150882c0bcaff759b1be9b80d44a6e9beb47e3f179f5b506099dc90097b484cd793a27b145e9dfa969fa1d6a62194d3674951db43a19ef821d15c2fdd0c11ad01a08892bb2b049dbe568ae5d48b32740b59d9c3513be87e533ab1fa99aa03b68911431b605fd7cc3bfe2af1cc15856dd5ce1ccb8c5e1000c14314153f6967157f69bc867f5436ee81061655e61dde0d

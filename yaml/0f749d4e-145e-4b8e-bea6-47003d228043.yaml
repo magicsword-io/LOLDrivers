@@ -25,16 +25,16 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
-- Company: ''
+- Company: Elitegroup Computer Systems
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: ECSIoDriver
+  FileVersion: 1.1.0.0
   Filename: ''
   MD5: 3a1ba5cd653a9ddce30c58e7c8ae28ae
   MachineType: AMD64
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: ECSIoDriver.sys
+  Product: ECSIoDriver
+  ProductVersion: 1.1.0.0
   Publisher: ''
   SHA1: 04967bfd248d30183992c6c9fd2d9e07ae8d68ad
   SHA256: 270547552060c6f4f5b2ebd57a636d5e71d5f8a9d4305c2b0fe5db0aa2f389cc
@@ -68,9 +68,9 @@ KnownVulnerableSamples:
       Entropy: 3.3031199977766366
       Virtual Size: '0x420'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-09-27 22:58:05'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2009-09-28 01:58:05'
+  InternalName: ECSIoDriver.sys
+  Copyright: Copyright (C) 2009-2010 Elitegroup Computer Systems. All rights reserved.
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -184,9 +184,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -241,7 +241,7 @@ KnownVulnerableSamples:
       Entropy: 1.9669171866886992
       Virtual Size: '0x10'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-05-27 23:59:16'
+  CreationTimestamp: '2014-05-28 02:59:16'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -340,9 +340,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

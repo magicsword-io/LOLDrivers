@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: e4c579f7ebcf89c4f5790a584eb5af4c
     SHA1: 6cec31c2fa78387a8d4d06934ac370033dd24ade
     SHA256: 959860cea7a720811a960e28e0318c470948d96ab3ba3312d20fea0f24bc0979
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Sandra Device Driver (Win64 x64)(Unicode)
+  Company: SiSoftware
+  InternalName: SANDRA
+  OriginalFilename: SANDRA
+  FileVersion: '10.7.1.1 built by: WinDDK'
+  Product: SiSoftware Sandra
+  ProductVersion: 10.7.1.1
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2007. All rights reserved."
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -150,9 +150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610bdc8f00000000001a
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
@@ -178,7 +178,7 @@ KnownVulnerableSamples:
       Entropy: 4.27904932893982
       Virtual Size: '0x2fc'
     .data:
-      Entropy: 0.38883003300175434
+      Entropy: 0.3888300330017545
       Virtual Size: '0x17c'
     .pdata:
       Entropy: 3.8505556961502627
@@ -190,7 +190,7 @@ KnownVulnerableSamples:
       Entropy: 3.409412010935478
       Virtual Size: '0x728'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-11-17 00:40:50'
+  CreationTimestamp: '2007-11-17 03:40:50'
   Imphash: 84d45ee8df6f63b5af419d89003a97bc
   LoadsDespiteHVCI: 'FALSE'
 - Filename: SANDRA
@@ -201,14 +201,14 @@ KnownVulnerableSamples:
     MD5: 22eb1c16aae2709fa26bb9da73ab3df8
     SHA1: deec6cefac2084349127f29ac7ccf26b24458d89
     SHA256: 18dfe852fade6625862cc963922c1f2389a296af96df11eb7b62bbeddd61e18a
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Sandra Device Driver (Win64 x64)(Unicode)
+  Company: SiSoftware
+  InternalName: SANDRA
+  OriginalFilename: SANDRA
+  FileVersion: '10.5.1.1 built by: WinDDK'
+  Product: SiSoftware Sandra
+  ProductVersion: 10.5.1.1
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2006. All rights reserved."
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -313,9 +313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610bdc8f00000000001a
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
@@ -341,7 +341,7 @@ KnownVulnerableSamples:
       Entropy: 4.285751893718157
       Virtual Size: '0x2fc'
     .data:
-      Entropy: 0.38883003300175434
+      Entropy: 0.3888300330017545
       Virtual Size: '0x17c'
     .pdata:
       Entropy: 3.8481788844096063
@@ -353,7 +353,7 @@ KnownVulnerableSamples:
       Entropy: 3.407283116541433
       Virtual Size: '0x728'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-04-03 04:04:51'
+  CreationTimestamp: '2007-04-03 07:04:51'
   Imphash: 4433528b0f664177546dd3e229f0daa5
   LoadsDespiteHVCI: 'FALSE'
 - Filename: SANDRA
@@ -364,14 +364,14 @@ KnownVulnerableSamples:
     MD5: 5ef46421c4cda0345e6d732ae4be93d5
     SHA1: c021fb8f391cdedb6f152a8eb839464c3770bf5d
     SHA256: 9ce44d1643bc4d87e5029a4927613035bbd96b4e45a2400aed987396115791f7
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Sandra Device Driver (Win64 x64)(Unicode)
+  Company: SiSoftware
+  InternalName: SANDRA
+  OriginalFilename: SANDRA
+  FileVersion: '10.3.1.1 built by: WinDDK'
+  Product: SiSoftware Sandra
+  ProductVersion: 10.3.1.1
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2005. All rights reserved."
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -513,7 +513,7 @@ KnownVulnerableSamples:
       Entropy: 3.4089999544386638
       Virtual Size: '0x728'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-12 17:05:15'
+  CreationTimestamp: '2005-08-12 20:05:15'
   Imphash: e2306e26abfd90a5ce4dad0e266b3905
   LoadsDespiteHVCI: 'FALSE'
 - Filename: SANDRA
@@ -524,14 +524,14 @@ KnownVulnerableSamples:
     MD5: 04ef6182073a4cbc8a606a4480093e0c
     SHA1: 3c722e2822e0af72d3f868fffb8e5b884e502254
     SHA256: 68dca726b16c56c70259c8f936ec20adb9ecb8c3cc73985083f41358c83935f4
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Sandra Device Driver (Win32 x86)(Unicode)
+  Company: SiSoftware
+  InternalName: SANDRA
+  OriginalFilename: SANDRA
+  FileVersion: '10.7.1.1 built by: WinDDK'
+  Product: SiSoftware Sandra
+  ProductVersion: 10.7.1.1
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2007. All rights reserved."
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -653,9 +653,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610bdc8f00000000001a
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
@@ -693,6 +693,6 @@ KnownVulnerableSamples:
       Entropy: 5.014225498795592
       Virtual Size: '0x24c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-11-17 00:40:29'
+  CreationTimestamp: '2007-11-17 03:40:29'
   Imphash: 8e96d1a56746c6f6f30f1a0963ce2f26
   LoadsDespiteHVCI: 'FALSE'

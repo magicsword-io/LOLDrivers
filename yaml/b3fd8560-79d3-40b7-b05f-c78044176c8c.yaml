@@ -29,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 25454028a4f56d3c58747811a86be43397a6290d1a053bc30d97b41bf3c58c6f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-04-19 20:19:37'
+  CreationTimestamp: '2020-04-19 23:19:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -196,9 +196,8 @@ KnownVulnerableSamples:
         SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
         SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
         SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
-    - Subject: C=DE, ST=Berlin, L=Berlin, postalCode=48273, STREET_ADDRESS=Rathas
-        G45, OU=Ownership, O=Sex Shop L45, emailAddress=administration@parsec.net,
-        CN=Sex Shop SRL
+    - Subject: C=DE, ST=Berlin, L=Berlin, postalCode=48273, ??=Rathas G45, OU=Ownership,
+        O=Sex Shop L45, emailAddress=administration@parsec.net, CN=Sex Shop SRL
       ValidFrom: '2022-06-03 00:00:01'
       ValidTo: '2024-07-04 23:59:59'
       Signature: 48c453934773519fb737a92159f039851b8140cc7ee24eb15465885099600c1d09644dfc7f15dc841a004b59f9e9b57f4ef33f7dceac01ff80f8a9fc9d51fe747addd7d08122fcf10812ebc1df26b7577365cd73d59956bf659c4a5c87477619a04c59987b47e768eb886ef45761fc6a0dc4e211b3da590ef0920c4b51445f7ab6cf95a8085174f4bdf17a5ce13e049f21892d6de70160f9be5efcbc9a8dc07ab20bb77b897157654e591da80e18c0cec859bf60b1570cc228762bdd394d1ef9f81db3bdb3c1cd07f63428db9fd7654f04f170435df6e27b744f41679bb8c45d321b5fb0bff8875ebf7ba083c73aed4513ec18190283007dadb3f3a1a8117a818cfc8b6d8028592ef283ecf90833a103f1533a6db0a4033967cbccb72dc07737d9bbc8b994e7e8f1b483c7bf10e9671e2b03445df506c2d406cca060f1edc949f4ff3e6e073fe6d4db1440d7d4abb9c8cd7c2ddff8a6e7c85b6c4269c05f76b88b0139120cf430d77dfb74a1d0032b6f17c487dd9c9bcb0fc05861e7c7e6e93b133f54577841dd9f35172fa6761fcb6e58cc716fe88dab5c337439c2359beb2fa5dc579e3ddfb8ab43ee7a4d11d65b48fe5ac51eb553712b19a2f66df90f6f8d88b84de58cc007df2440fa81b002abcd38f404c112fee3276296e7d65f4d47d6e37dab0ab10ca9a0432e72c249095673d4147cc093719230598b44ef3cf35114
@@ -249,9 +248,8 @@ KnownVulnerableSamples:
         SHA384: 86aab81948499b3c90833253a853e7b3fd82ccf7b65b35806831ab60814bfc6ad8848c990df262a1c89b6fc4267dad81
     Signer:
     - SerialNumber: 00e3214c81339540a3804fca656f5aea7d
-      Issuer: C=DE, ST=Berlin, L=Berlin, postalCode=48273, 2.5.4.9=#0C0A52617468617320473435,
-        OU=Ownership, O=Sex Shop L45, emailAddress=administration@parsec.net, CN=Sex
-        Shop SRL
+      Issuer: C=DE, ST=Berlin, L=Berlin, postalCode=48273, ??=Rathas G45, OU=Ownership,
+        O=Sex Shop L45, emailAddress=administration@parsec.net, CN=Sex Shop SRL
       Version: 1
   Imphash: 409d2ab916237fb129c57aacbb7cb4fe
   LoadsDespiteHVCI: 'FALSE'

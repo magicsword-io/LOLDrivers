@@ -29,13 +29,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Filseclab Corporation
+  Description: Filseclab Firewall
+  Product: Filseclab Firewall
+  ProductVersion: 1, 0, 0, 1216
+  FileVersion: 1, 0, 0, 1216
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: filwfp.sys
   Imphash: 6461061c996437e942bd925300b79263
   Authentihash:
     MD5: 5aa51bc81bb52456cfde02916ae46545
@@ -71,9 +71,9 @@ KnownVulnerableSamples:
       Entropy: 4.788951765805477
       Virtual Size: '0x2f0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-30 03:17:45'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2013-01-30 06:17:45'
+  InternalName: filwfp
+  Copyright: Copyright (C) Filseclab Corporation
   Imports:
   - ntoskrnl.exe
   - filnk.sys
@@ -156,9 +156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

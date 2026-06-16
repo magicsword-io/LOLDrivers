@@ -30,19 +30,19 @@ KnownVulnerableSamples:
   SHA256: 023d722cbbdd04e3db77de7e6e3cfeabcef21ba5b2f04c3f3a33691801dd45eb
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
+  Company: ITM SYSTEM
+  Description: ITM SYSTEM File Filter Driver
   Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  ProductVersion: 3.0.0.4
+  FileVersion: 3.0.0.4
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: probmon.sys
   Authentihash:
     MD5: 9740e9ac3b5e4cdbd1a35d5032b94e1c
     SHA1: c250f8111b95a0cfd72a1b83c0dd08d8727a1038
     SHA256: e8bdfab9d5b5c37f6f23ddf9dddba2feb74261b61a80dee0c6aebffbf39948fb
   InternalName: ''
-  Copyright: ''
+  Copyright: Copyright (C) ITM SYSTEM 2002-2010
   Imports:
   - ntoskrnl.exe
   - FLTMGR.SYS
@@ -75,7 +75,7 @@ KnownVulnerableSamples:
       Entropy: 1.0866680581149017
       Virtual Size: '0x6c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-11-18 23:35:45'
+  CreationTimestamp: '2011-11-19 02:35:45'
   ImportedFunctions:
   - RtlInitUnicodeString
   - KeInitializeEvent
@@ -215,9 +215,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

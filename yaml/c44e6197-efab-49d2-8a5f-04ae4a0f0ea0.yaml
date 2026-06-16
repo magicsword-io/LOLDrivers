@@ -31,13 +31,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Pulse Secure, LLC
+  Description: NetBIOS Redirector
+  Product: Secure Application Manager
+  ProductVersion: 8,3,3,1350
+  FileVersion: 8,3,3,1350
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: neofltr.sys
   Imphash: 0263ef6f9d53671b4c652941a4446af0
   Authentihash:
     MD5: ea34afe10c540f4acca9afaead35175b
@@ -73,9 +73,9 @@ KnownVulnerableSamples:
       Entropy: 2.307354922057604
       Virtual Size: '0x1c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-03-26 10:01:06'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2018-03-26 13:01:06'
+  InternalName: neofltr
+  Copyright: "\xA9 2014-2018 by Pulse Secure, LLC. All rights reserved"
   Imports:
   - ntoskrnl.exe
   - TDI.SYS
@@ -159,10 +159,8 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
-        JURISDICTION_OF_INCORPORATION_L=San Jose, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=5567277, C=US, ST=California, L=San Jose, O=Pulse Secure, LLC,
-        CN=Pulse Secure, LLC
+    - Subject: ??=US, ??=Delaware, ??=San Jose, ??=Private Organization, serialNumber=5567277,
+        C=US, ST=California, L=San Jose, O=Pulse Secure, LLC, CN=Pulse Secure, LLC
       ValidFrom: '2017-04-07 00:00:00'
       ValidTo: '2018-05-17 23:59:59'
       Signature: 20cac3370569f750bd4273b6886aa7b00e66be970814c161379a06eb1657f9a2fc1e0d9ceacc066f39c8cb4c20ea5ac29576aabf2d607cf9911aa6cc87c4d907533ec21939e13194414a78b668e837fd21f962c6980858b16aca7ce8f6d358f6149be27ccceae4eeb074c8db98d2a1d10042fa6d84de7cf75452c395b7f3e3c5ff88789a0d4c3cdf56a37757942b0dc092a3cdcb5f2d190da5aa12a84e88643a7502573ce0e2cbc421bef07b491f8132a40843e96719d4b943023d8380a9d0b1382a3adc6da099f2f1aa1feccff79cc8866787727579bf882768a91ea471b4e2a2e29d3af9bd048dee40f81fba9b89a3fef3ccc389c3f42e6e6d12a631f0674f

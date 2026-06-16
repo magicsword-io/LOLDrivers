@@ -56,13 +56,13 @@ KnownVulnerableSamples:
     MD5: b18b1bff521337695d2d6a0768340252
     SHA1: 0f5034fcf5b34be22a72d2ecc29e348e93b6f00f
     SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-07-03 21:27:55'
+  Company: Windows (R) Server 2003 DDK provider
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  CreationTimestamp: '2013-07-04 00:27:55'
   Date: ''
-  Description: ''
+  Description: GIGABYTE Tools
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '5.2.3790.1830 built by: WinDDK'
   Filename: gdrv.sys
   ImportedFunctions:
   - IoCreateDevice
@@ -96,13 +96,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: gdrv.sys
   MD5: 9ab9f3b75a2eb87fafb1b7361be9dfb3
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: gdrv.sys
+  Product: Windows (R) Server 2003 DDK driver
+  ProductVersion: 5.2.3790.1830
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2c77dbb41d635860b678106d8fa08bb9
@@ -115,7 +115,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682768
+      Entropy: 4.431694959682769
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -197,9 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -235,13 +235,13 @@ KnownVulnerableSamples:
     MD5: bf45a5d10968424666abede02113a509
     SHA1: 5c26f130f6a5ad8bdd2eed29140542dae0885b17
     SHA256: 34da66774ba09c4a8fc59349401ca1fefaaf4e66a9c620c7782c072a16089ba3
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2017-11-30 21:40:53'
+  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
+  Copyright: Copyright (C) 2017
+  CreationTimestamp: '2017-12-01 00:40:53'
   Date: 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC
-  Description: ''
+  Description: GIGA-BYTE NonPNP Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.1
   Filename: gdrv.sys
   ImportedFunctions:
   - KeAcquireInStackQueuedSpinLock
@@ -276,13 +276,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: gdrv.sys
   MD5: 1cff7b947f8c3dea1d34dc791fc78cdc
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: gdrv.sys
+  Product: gdrv64
+  ProductVersion: '17120101'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 70b1ee9be3128d3a3c5bf7c1f897432b
@@ -420,13 +420,13 @@ KnownVulnerableSamples:
     MD5: b18b1bff521337695d2d6a0768340252
     SHA1: 0f5034fcf5b34be22a72d2ecc29e348e93b6f00f
     SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-07-03 21:27:55'
+  Company: Windows (R) Server 2003 DDK provider
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  CreationTimestamp: '2013-07-04 00:27:55'
   Date: ''
-  Description: ''
+  Description: GIGABYTE Tools
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '5.2.3790.1830 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - IoCreateDevice
@@ -460,14 +460,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: gdrv.sys
   MD5: 95a95e28cf5ee4ece6ffbaf169358192
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: gdrv.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Windows (R) Server 2003 DDK driver
+  ProductVersion: 5.2.3790.1830
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2c77dbb41d635860b678106d8fa08bb9
@@ -480,7 +480,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682768
+      Entropy: 4.431694959682769
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -559,9 +559,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

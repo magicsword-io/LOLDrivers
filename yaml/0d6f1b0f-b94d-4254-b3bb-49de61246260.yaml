@@ -28,10 +28,10 @@ KnownVulnerableSamples:
   Date: ''
   Publisher: ''
   Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Description: Low-Level Driver
+  Product: Low-Level Driver
+  ProductVersion: 1.60.0.0
+  FileVersion: 1.60.0.0
   MachineType: AMD64
   OriginalFilename: ''
   Imphash: c1e4bebf7e4ee27e3e75f7289d6e0d7a
@@ -66,9 +66,9 @@ KnownVulnerableSamples:
       Entropy: 0.5739775248775807
       Virtual Size: '0x3c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-10-06 09:14:37'
+  CreationTimestamp: '2010-10-06 12:14:37'
   InternalName: ''
-  Copyright: ''
+  Copyright: Copyright 2004-2010 (c). All rights reserved.
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -194,9 +194,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

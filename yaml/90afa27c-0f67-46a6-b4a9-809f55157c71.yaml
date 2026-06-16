@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 3a5b83215c9ea17f8d3ad3812c30a340
     SHA1: 533e0690528ff3f0d59edeed9dd53b4f37c0a110
     SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
-  Description: ''
-  Company: ''
+  Description: Novell XTier Session Manager
+  Company: Novell, Inc.
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: nscm.sys
+  FileVersion: 3.1.6.0
+  Product: Novell XTier
+  ProductVersion: 3.1.6
+  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -151,9 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -195,7 +195,7 @@ KnownVulnerableSamples:
       Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 10:56:49'
+  CreationTimestamp: '2009-03-27 13:56:49'
   Imphash: 7d004bbe0f546a91c93562d324307fa7
   LoadsDespiteHVCI: 'FALSE'
 - Filename: nscm.sys
@@ -206,14 +206,14 @@ KnownVulnerableSamples:
     MD5: b546d6b223a9e1a42f8359dbf9d9737c
     SHA1: 41f6704252efa14de0d72eeaf7475886ba7f3bdc
     SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
-  Description: ''
-  Company: ''
+  Description: Novell XTier Session Manager
+  Company: Novell, Inc.
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: nscm.sys
+  FileVersion: 3.1.11.0
+  Product: Novell XTier
+  ProductVersion: 3.1.11
+  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -322,7 +322,7 @@ KnownVulnerableSamples:
       Entropy: 5.039009418592025
       Virtual Size: '0x48'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 22:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
   LoadsDespiteHVCI: 'TRUE'
 - Filename: nscm.sys
@@ -333,14 +333,14 @@ KnownVulnerableSamples:
     MD5: 5d62cae57be434a4d56924574498c4f2
     SHA1: 1a99d3141d75a3ef1998944b2d107089ce3ef6e4
     SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
-  Description: ''
-  Company: ''
+  Description: XTier Security Context Manager
+  Company: Micro Focus
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: nscm.sys
+  FileVersion: 3.1.12.0
+  Product: Micro Focus XTier
+  ProductVersion: 3.1.12
+  Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -450,7 +450,7 @@ KnownVulnerableSamples:
       Entropy: 1.2355823247516717
       Virtual Size: '0x48'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-03-03 02:52:58'
+  CreationTimestamp: '2022-03-03 05:52:58'
   Imphash: 01aa65221a48929f0a34a27c4e3011b1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: nscm.sys
@@ -461,14 +461,14 @@ KnownVulnerableSamples:
     MD5: 3050ced748b80cc81892435fd0868bfc
     SHA1: 579e23f2b6ce2221ba435abc20801e98ab91a360
     SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
-  Description: ''
-  Company: ''
+  Description: Novell XTier Session Manager
+  Company: Novell, Inc.
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: nscm.sys
+  FileVersion: 3.1.6.0
+  Product: Novell XTier
+  ProductVersion: 3.1.6
+  Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -574,9 +574,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -618,7 +618,7 @@ KnownVulnerableSamples:
       Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-01 18:18:14'
+  CreationTimestamp: '2011-04-01 21:18:14'
   Imphash: b8d0a36d2b14d79dfa08fb2e121f0920
   LoadsDespiteHVCI: 'FALSE'
 - Filename: nscm.sys
@@ -629,14 +629,14 @@ KnownVulnerableSamples:
     MD5: 7e245f8b1d1bddfd217d1cd060b91657
     SHA1: 8c89db8dd4d7947cb5eb13c7a12907564576cb91
     SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
-  Description: ''
-  Company: ''
+  Description: Novell XTier Session Manager
+  Company: Novell, Inc.
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: nscm.sys
+  FileVersion: 3.1.6.0
+  Product: Novell XTier
+  ProductVersion: 3.1.6
+  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -742,9 +742,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -780,10 +780,10 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 6.2209835227622525
+      Entropy: 6.220983522762253
       Virtual Size: '0x4f2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 10:52:17'
+  CreationTimestamp: '2009-03-27 13:52:17'
   Imphash: 65181bc89a1c2b5854548236269846c1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: nscm.sys
@@ -794,14 +794,14 @@ KnownVulnerableSamples:
     MD5: 32265ccdfe3d7f66269cbee0d5555e5b
     SHA1: 72e5f5f6f266410d827fef10dc82c7ec8541e036
     SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
-  Description: ''
-  Company: ''
+  Description: Novell XTier Session Manager
+  Company: Novell, Inc.
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: nscm.sys
+  FileVersion: 3.1.11.0
+  Product: Novell XTier
+  ProductVersion: 3.1.11
+  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -910,6 +910,6 @@ KnownVulnerableSamples:
       Entropy: 1.2355823247516717
       Virtual Size: '0x48'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 22:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
   LoadsDespiteHVCI: 'TRUE'

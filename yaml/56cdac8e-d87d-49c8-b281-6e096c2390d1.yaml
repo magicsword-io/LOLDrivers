@@ -128,7 +128,7 @@ KnownVulnerableSamples:
       Entropy: 3.0890191852411095
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-12-06 01:42:17'
+  CreationTimestamp: '2019-12-06 04:42:17'
   Imphash: ad374977f06fefefbb9c77155f7a0733
   LoadsDespiteHVCI: 'FALSE'
 - Filename: GVCIDrv64.sys
@@ -227,10 +227,9 @@ KnownVulnerableSamples:
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
         SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: "JURISDICTION_OF_INCORPORATION_C=TW, JURISDICTION_OF_INCORPORATION_SP=\u65B0\
-        \u5317\u5E02, JURISDICTION_OF_INCORPORATION_L=NEW TAIPEI, BUSINESS_CATEGORY=Private\
-        \ Organization, serialNumber=22044755, C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology\
-        \ Co., Ltd., CN=GIGA,BYTE Technology Co., Ltd."
+    - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
+        C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
+        Co., Ltd.
       ValidFrom: '2018-12-07 00:00:00'
       ValidTo: '2021-12-06 23:59:59'
       Signature: 502fd3341b71cab45e302c7b586f9beefdce61639b7ccbaf643eb13bb29fcc6d5e37ba8f8af0b2d775216237d659088cbf124514ebe1fc6a663f20cbbd920afd64fbec463254a4e845cdb452b5768fcb2fb74e13043899381b57ce63419679395729d52fc8efbe19e08c5a4c6337eb910e048d30c2888718355460150ae33f20c8ea3724251dbe28d45de130843b462e11ff1ca90fb98e097b5f372b0aa1c5b2791897b4cf79cdbc02c5aca5a935a3ccf67fb67ef28390ed7913ee32e708869acbba27f24d6c7fc45b795b5e90c7200551babe0bae400343fc6fd75d36da7b5def7fde3a7f97519796d3bd14755a3adaa7cafcbe2cc24eb9a1a046ea8e05376d
@@ -275,6 +274,6 @@ KnownVulnerableSamples:
       Entropy: 3.0890191852411095
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-12-06 01:42:17'
+  CreationTimestamp: '2019-12-06 04:42:17'
   Imphash: ad374977f06fefefbb9c77155f7a0733
   LoadsDespiteHVCI: 'TRUE'

@@ -121,9 +121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -195,7 +195,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-09 23:36:29'
+  CreationTimestamp: '2014-09-10 02:36:29'
   Imphash: b3204707f6e489cd5a2484881eaf78ca
   LoadsDespiteHVCI: 'TRUE'
 - Filename: EneIo64.sys
@@ -321,9 +321,8 @@ KnownVulnerableSamples:
         SHA1: ec3075370fcea680e09497d44a4b246012f24160
         SHA256: fa5e895ff2603de9e15939a00299836f73e5778058f22194f696d19e79a8b010
         SHA384: 13ab2eedcd7e712f635ca1da3dc30cd8d8e22cedcf5a2c4994181509dddbf76867d07925b9a514d123bc1d5cab41fe9f
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=16505809, C=TW, L=HSINCHU CITY, O=ENE TECHNOLOGY INC., CN=ENE
-        TECHNOLOGY INC.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=16505809, C=TW, L=HSINCHU
+        CITY, O=ENE TECHNOLOGY INC., CN=ENE TECHNOLOGY INC.
       ValidFrom: '2021-07-06 00:00:00'
       ValidTo: '2024-08-29 23:59:59'
       Signature: 1c799045dbfc1da5f1dfdadef58c38978109600b513226a29abbc20ec9b30e03e9a0c7679f1b7d388009015a1edc77a4bbd817838d7b17c62493514bf6c095ff9d6d1ae40f761678be2b04ced07db70e5f6a58be33016c1de06f7bf2008b1040c2f8677a62667b4b110e5fe57816934686086bdf2941c980fc79945950338e2e9dbe37e24e8cb745f6f54a0f6b26feca8b6894545afd98da94e45ab6574b16043ad7458e750834b853a57c0ece0114268a0a099f9178ef3939b8871218f6376f0b870a49e29d0c83bae3fcf4444e04b7eda9453813e65de04312e0e6311616bc9b9d90f4bc784b9a5fc1a4ede394a5c742564ba9ed93f0a517bc4888e08a0a37cb74e40c86de9cc01de3dcd5dd30d6f76773f933812fa246c439380cf61a4d31d390da3c6b067b7b8628f9059a1160cc72c47d1bf593cde1ddfabcea0ddec96bc2953e0354765744be490ec3223488075bbbabb4a800016b076e26319da7901e01083c46dd90fc51aa08d7038600801043b46db5d5e992a7bb8682f7cf4b2598740159e69e83e8c47f9998316abc1c02385ed99c16bb9dbd11789023c7c16ffe832fa802142b8c4c34856a60062802e24a230cd118c1926be1dcc155cd06dd75f6eabd6be9be0eeddf3efe9bd342d2cc4687d4e9527120e4843ddd295647d8a2a0c88327dac8df1a0ccd94eaef279629eecedf87a23c60cd2355deabb77b8b06
@@ -368,6 +367,6 @@ KnownVulnerableSamples:
       Entropy: 2.684183719779189
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-07 23:07:19'
+  CreationTimestamp: '2020-05-08 02:07:19'
   Imphash: baa420e9d4e3baf0d65d4fc2bf497708
   LoadsDespiteHVCI: 'TRUE'

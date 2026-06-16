@@ -35,14 +35,14 @@ KnownVulnerableSamples:
     MD5: e22b3c91868ed22db04212ba9a5264b6
     SHA1: 5967c7199681ed30f3cb7c37c0129420a68b4701
     SHA256: 62a17c9ec21461badecd1c25744a42bf5c9c0ed39b979fb07ca817f30c862a35
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2007-12-29 00:25:17'
+  Company: innotek GmbH
+  Copyright: innotek GmbH
+  CreationTimestamp: '2007-12-29 03:25:17'
   Date: ''
-  Description: ''
+  Description: VirtualBox USB driver
   ExportedFunctions:
   - AssertMsg1
-  FileVersion: ''
+  FileVersion: '1.01'
   Filename: ''
   ImportedFunctions:
   - IoDeleteDevice
@@ -107,14 +107,14 @@ KnownVulnerableSamples:
   - ntoskrnl.exe
   - HAL.dll
   - USBD.SYS
-  InternalName: ''
+  InternalName: VBoxUSB.Sys
   MD5: f142e613d2ebc11c6bec22baf9392337
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: VBoxUSB.Sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: VirtualBox USB driver
+  ProductVersion: '1.01'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 3c6327762d0a0553cc2ee0bc584483e0
@@ -241,9 +241,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -260,14 +260,14 @@ KnownVulnerableSamples:
     MD5: f5bd837b7d2161050fbd98f598eefe23
     SHA1: 0b1bd6933058aa655f03244b6ba228301700dfa5
     SHA256: c2557b448d71c6873bf71f5ab41cc618d12d5c91717bf8738b6b5dce187326c2
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2008-04-30 13:07:14'
+  Company: Sun Microsystems, Inc.
+  Copyright: Sun Microsystems, Inc.
+  CreationTimestamp: '2008-04-30 16:07:14'
   Date: ''
-  Description: ''
+  Description: VirtualBox USB driver
   ExportedFunctions:
   - AssertMsg1
-  FileVersion: ''
+  FileVersion: '1.01'
   Filename: ''
   ImportedFunctions:
   - IoDeleteDevice
@@ -332,14 +332,14 @@ KnownVulnerableSamples:
   - ntoskrnl.exe
   - HAL.dll
   - USBD.SYS
-  InternalName: ''
+  InternalName: VBoxUSB.Sys
   MD5: 667843470a9f0e910c65cb41a749d104
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: VBoxUSB.Sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: VirtualBox USB driver
+  ProductVersion: '1.01'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 3c6327762d0a0553cc2ee0bc584483e0
@@ -465,9 +465,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

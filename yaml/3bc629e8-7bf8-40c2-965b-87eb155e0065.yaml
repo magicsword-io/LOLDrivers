@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: c467ed521f199f0d5c1c3705dabf2896
     SHA1: 8533994513c4f65feb48806b36f42ec9fe21a4c3
     SHA256: da8945bd5c693c0593c9d0e3bda49bb1c6007cb25643c95708c6b10bef7c136a
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-08-06 02:55:21'
+  Company: MiTAC Technology Corporation
+  Copyright: Copyright (C) 2007 MiTAC Technology Corporation
+  CreationTimestamp: '2009-08-06 05:55:21'
   Date: ''
-  Description: ''
+  Description: MiTAC System Service Provider
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 21, 1, 4, 0
   Filename: mtcBSv64.sys
   ImportedFunctions:
   - ExAllocatePoolWithTag
@@ -90,13 +90,13 @@ KnownVulnerableSamples:
   - RtlUnicodeToMultiByteN
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: mtcBSv64.sys
   MD5: 9dfd73dadb2f1c7e9c9d2542981aaa63
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: mtcBSv64.sys
+  Product: MiTAC System Service Provider
+  ProductVersion: 21, 1, 4, 0
   Publisher: ''
   RichPEHeaderHash:
     MD5: daaf4821d19b88fb6db2599ec300fd8e
@@ -213,9 +213,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

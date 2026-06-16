@@ -101,9 +101,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Georgia,
-        BUSINESS_CATEGORY=Private Organization, serialNumber=J912954, C=US, ST=Georgia,
-        L=Norcross, O=American Megatrends, Inc., CN=American Megatrends, Inc.
+    - Subject: ??=US, ??=Georgia, ??=Private Organization, serialNumber=J912954, C=US,
+        ST=Georgia, L=Norcross, O=American Megatrends, Inc., CN=American Megatrends,
+        Inc.
       ValidFrom: '2017-08-30 00:00:00'
       ValidTo: '2020-09-24 12:00:00'
       Signature: 5a00ce1b66cc04a3be37c0926957fc54b1f2904c69a3555d90a15e3c7b7133e76583a0fe5c13c21cdddda40e6f0ba958964796abcfbb7fbe4de15a009f80e653556e29cac9d208645b8154f52f6045fa268f6e6b57536f21833f2cc92c5e9a51636cfeaa74f0b8ab80a8649d68c7c46f51a534c0697a426aa37337c7956268f4cdc8d88adbd1aa0cb620abeb7166172e914016c84e00824751b4f7142b54c56b74d578fd97aadda3e8e777ec22c34460a8dc7e0392a9adab018b16699d9ddd7551fd5c5924f3d1ccb9e6ef67ca0ab2107d1abf158add6d42ba18dee5ec35e3445627df4744d71f73ee3a199aaa42993ebaaa7f91f8b6d1b623350744853c1b38
@@ -194,7 +194,7 @@ KnownVulnerableSamples:
       Entropy: 5.112552923478557
       Virtual Size: '0x38e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-24 01:57:32'
+  CreationTimestamp: '2020-08-24 04:57:32'
   Imphash: 4fbdc03e4487f98fb59360ea5b3e640d
   LoadsDespiteHVCI: 'TRUE'
 - Filename: amifldrv64.sys
@@ -267,8 +267,7 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=US,
-        JURISDICTION_OF_INCORPORATION_SP=Georgia, serialNumber=780491, STREET_ADDRESS=5555
+    - Subject: ??=Private Organization, ??=US, ??=Georgia, serialNumber=780491, ??=5555
         Oakbrook Parkway Suite 200, postalCode=30093, C=US, ST=Georgia, L=Norcross,
         O=American Megatrends, Inc., CN=American Megatrends, Inc.
       ValidFrom: '2014-06-24 00:00:00'
@@ -361,7 +360,7 @@ KnownVulnerableSamples:
       Entropy: 5.080431277889913
       Virtual Size: '0x3f2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-15 04:47:37'
+  CreationTimestamp: '2017-03-15 07:47:37'
   Imphash: 363922cc73591e60f2af113182414230
   LoadsDespiteHVCI: 'FALSE'
 - Filename: amifldrv64.sys
@@ -430,9 +429,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Georgia,
-        BUSINESS_CATEGORY=Private Organization, serialNumber=J912954, C=US, ST=Georgia,
-        L=Norcross, O=American Megatrends, Inc., CN=American Megatrends, Inc.
+    - Subject: ??=US, ??=Georgia, ??=Private Organization, serialNumber=J912954, C=US,
+        ST=Georgia, L=Norcross, O=American Megatrends, Inc., CN=American Megatrends,
+        Inc.
       ValidFrom: '2017-08-30 00:00:00'
       ValidTo: '2020-09-24 12:00:00'
       Signature: 5a00ce1b66cc04a3be37c0926957fc54b1f2904c69a3555d90a15e3c7b7133e76583a0fe5c13c21cdddda40e6f0ba958964796abcfbb7fbe4de15a009f80e653556e29cac9d208645b8154f52f6045fa268f6e6b57536f21833f2cc92c5e9a51636cfeaa74f0b8ab80a8649d68c7c46f51a534c0697a426aa37337c7956268f4cdc8d88adbd1aa0cb620abeb7166172e914016c84e00824751b4f7142b54c56b74d578fd97aadda3e8e777ec22c34460a8dc7e0392a9adab018b16699d9ddd7551fd5c5924f3d1ccb9e6ef67ca0ab2107d1abf158add6d42ba18dee5ec35e3445627df4744d71f73ee3a199aaa42993ebaaa7f91f8b6d1b623350744853c1b38
@@ -523,7 +522,7 @@ KnownVulnerableSamples:
       Entropy: 5.113382470184231
       Virtual Size: '0x38e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-31 00:38:06'
+  CreationTimestamp: '2019-10-31 03:38:06'
   Imphash: 4fbdc03e4487f98fb59360ea5b3e640d
   LoadsDespiteHVCI: 'TRUE'
 - Filename: amifldrv64.sys
@@ -596,8 +595,7 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=US,
-        JURISDICTION_OF_INCORPORATION_SP=Georgia, serialNumber=780491, STREET_ADDRESS=5555
+    - Subject: ??=Private Organization, ??=US, ??=Georgia, serialNumber=780491, ??=5555
         Oakbrook Parkway Suite 200, postalCode=30093, C=US, ST=Georgia, L=Norcross,
         O=American Megatrends, Inc., CN=American Megatrends, Inc.
       ValidFrom: '2014-06-24 00:00:00'
@@ -690,7 +688,7 @@ KnownVulnerableSamples:
       Entropy: 5.080431277889913
       Virtual Size: '0x3f2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-15 04:47:37'
+  CreationTimestamp: '2017-03-15 07:47:37'
   Imphash: 363922cc73591e60f2af113182414230
   LoadsDespiteHVCI: 'TRUE'
 - Filename: amifldrv.sys
@@ -701,14 +699,14 @@ KnownVulnerableSamples:
     MD5: 973ff01a8901563e12119ca09b427e8e
     SHA1: 9f8870ec272933ee6f4e1eda975a6d5db5f9fbde
     SHA256: 4f35cf1f2e0fb87a2728303091ee505a0bc546cf63dcd38178adf48477ec0f91
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: AMI Generic Utility Driver
+  Company: Windows (R) Win 7 DDK provider
+  InternalName: amifldrv.sys
+  OriginalFilename: amifldrv.sys
+  FileVersion: 10.0.10011.16384
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -766,9 +764,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Georgia,
-        BUSINESS_CATEGORY=Private Organization, serialNumber=J912954, C=US, ST=Georgia,
-        L=Norcross, O=American Megatrends, Inc., CN=American Megatrends, Inc.
+    - Subject: ??=US, ??=Georgia, ??=Private Organization, serialNumber=J912954, C=US,
+        ST=Georgia, L=Norcross, O=American Megatrends, Inc., CN=American Megatrends,
+        Inc.
       ValidFrom: '2017-08-30 00:00:00'
       ValidTo: '2020-09-24 12:00:00'
       Signature: 5a00ce1b66cc04a3be37c0926957fc54b1f2904c69a3555d90a15e3c7b7133e76583a0fe5c13c21cdddda40e6f0ba958964796abcfbb7fbe4de15a009f80e653556e29cac9d208645b8154f52f6045fa268f6e6b57536f21833f2cc92c5e9a51636cfeaa74f0b8ab80a8649d68c7c46f51a534c0697a426aa37337c7956268f4cdc8d88adbd1aa0cb620abeb7166172e914016c84e00824751b4f7142b54c56b74d578fd97aadda3e8e777ec22c34460a8dc7e0392a9adab018b16699d9ddd7551fd5c5924f3d1ccb9e6ef67ca0ab2107d1abf158add6d42ba18dee5ec35e3445627df4744d71f73ee3a199aaa42993ebaaa7f91f8b6d1b623350744853c1b38
@@ -868,7 +866,7 @@ KnownVulnerableSamples:
       Entropy: 2.6981203125901447
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-07-28 01:31:47'
+  CreationTimestamp: '2020-07-28 04:31:47'
   Imphash: f9141c3df8f7ec7b3f2d46265a3b5528
   LoadsDespiteHVCI: 'TRUE'
 - Filename: amifldrv64.sys
@@ -983,9 +981,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1033,7 +1031,7 @@ KnownVulnerableSamples:
       Entropy: 4.645780413972533
       Virtual Size: '0x362'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-10-07 09:50:32'
+  CreationTimestamp: '2009-10-07 12:50:32'
   Imphash: 4199ed50502e00f57d9b66e9305450f5
   LoadsDespiteHVCI: 'FALSE'
 - Filename: amifldrv64.sys
@@ -1144,9 +1142,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1197,7 +1195,7 @@ KnownVulnerableSamples:
       Entropy: 4.891266027306224
       Virtual Size: '0x36e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-12 23:30:53'
+  CreationTimestamp: '2011-09-13 02:30:53'
   Imphash: 4c304943af1b07b15a5efa80f17d9b89
   LoadsDespiteHVCI: 'TRUE'
 - Filename: amifldrv64.sys
@@ -1268,9 +1266,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Georgia,
-        BUSINESS_CATEGORY=Private Organization, serialNumber=J912954, C=US, ST=Georgia,
-        L=Norcross, O=American Megatrends, Inc., CN=American Megatrends, Inc.
+    - Subject: ??=US, ??=Georgia, ??=Private Organization, serialNumber=J912954, C=US,
+        ST=Georgia, L=Norcross, O=American Megatrends, Inc., CN=American Megatrends,
+        Inc.
       ValidFrom: '2017-08-30 00:00:00'
       ValidTo: '2020-09-24 12:00:00'
       Signature: 5a00ce1b66cc04a3be37c0926957fc54b1f2904c69a3555d90a15e3c7b7133e76583a0fe5c13c21cdddda40e6f0ba958964796abcfbb7fbe4de15a009f80e653556e29cac9d208645b8154f52f6045fa268f6e6b57536f21833f2cc92c5e9a51636cfeaa74f0b8ab80a8649d68c7c46f51a534c0697a426aa37337c7956268f4cdc8d88adbd1aa0cb620abeb7166172e914016c84e00824751b4f7142b54c56b74d578fd97aadda3e8e777ec22c34460a8dc7e0392a9adab018b16699d9ddd7551fd5c5924f3d1ccb9e6ef67ca0ab2107d1abf158add6d42ba18dee5ec35e3445627df4744d71f73ee3a199aaa42993ebaaa7f91f8b6d1b623350744853c1b38
@@ -1361,7 +1359,7 @@ KnownVulnerableSamples:
       Entropy: 5.080449314433511
       Virtual Size: '0x3ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-07-23 01:00:28'
+  CreationTimestamp: '2019-07-23 04:00:28'
   Imphash: b05ee5c816a30bc52378c759486af0b9
   LoadsDespiteHVCI: 'FALSE'
 - Filename: amifldrv64.sys
@@ -1433,8 +1431,7 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=US,
-        JURISDICTION_OF_INCORPORATION_SP=Georgia, serialNumber=780491, STREET_ADDRESS=5555
+    - Subject: ??=Private Organization, ??=US, ??=Georgia, serialNumber=780491, ??=5555
         Oakbrook Parkway Suite 200, postalCode=30093, C=US, ST=Georgia, L=Norcross,
         O=American Megatrends, Inc., CN=American Megatrends, Inc.
       ValidFrom: '2014-06-24 00:00:00'
@@ -1527,7 +1524,7 @@ KnownVulnerableSamples:
       Entropy: 5.097766085646503
       Virtual Size: '0x3de'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-03 19:29:59'
+  CreationTimestamp: '2017-01-03 22:29:59'
   Imphash: bd607d71fdc1444aa96dc431591c5c44
   LoadsDespiteHVCI: 'FALSE'
 - Filename: amifldrv64.sys
@@ -1638,9 +1635,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1691,7 +1688,7 @@ KnownVulnerableSamples:
       Entropy: 4.8944037123884145
       Virtual Size: '0x36e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-02-09 19:39:06'
+  CreationTimestamp: '2009-02-09 22:39:06'
   Imphash: 4c304943af1b07b15a5efa80f17d9b89
   LoadsDespiteHVCI: 'FALSE'
 - Filename: amifldrv64.sys
@@ -1802,9 +1799,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1855,7 +1852,7 @@ KnownVulnerableSamples:
       Entropy: 4.8944037123884145
       Virtual Size: '0x36e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-06-21 19:54:13'
+  CreationTimestamp: '2011-06-21 22:54:13'
   Imphash: 4c304943af1b07b15a5efa80f17d9b89
   LoadsDespiteHVCI: 'FALSE'
 - Filename: amifldrv64.sys
@@ -1926,9 +1923,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Georgia,
-        BUSINESS_CATEGORY=Private Organization, serialNumber=J912954, C=US, ST=Georgia,
-        L=Norcross, O=American Megatrends, Inc., CN=American Megatrends, Inc.
+    - Subject: ??=US, ??=Georgia, ??=Private Organization, serialNumber=J912954, C=US,
+        ST=Georgia, L=Norcross, O=American Megatrends, Inc., CN=American Megatrends,
+        Inc.
       ValidFrom: '2017-08-30 00:00:00'
       ValidTo: '2020-09-24 12:00:00'
       Signature: 5a00ce1b66cc04a3be37c0926957fc54b1f2904c69a3555d90a15e3c7b7133e76583a0fe5c13c21cdddda40e6f0ba958964796abcfbb7fbe4de15a009f80e653556e29cac9d208645b8154f52f6045fa268f6e6b57536f21833f2cc92c5e9a51636cfeaa74f0b8ab80a8649d68c7c46f51a534c0697a426aa37337c7956268f4cdc8d88adbd1aa0cb620abeb7166172e914016c84e00824751b4f7142b54c56b74d578fd97aadda3e8e777ec22c34460a8dc7e0392a9adab018b16699d9ddd7551fd5c5924f3d1ccb9e6ef67ca0ab2107d1abf158add6d42ba18dee5ec35e3445627df4744d71f73ee3a199aaa42993ebaaa7f91f8b6d1b623350744853c1b38
@@ -2019,7 +2016,7 @@ KnownVulnerableSamples:
       Entropy: 5.0855381540270885
       Virtual Size: '0x3ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-04 22:20:44'
+  CreationTimestamp: '2018-11-05 01:20:44'
   Imphash: b05ee5c816a30bc52378c759486af0b9
   LoadsDespiteHVCI: 'FALSE'
 - Filename: amifldrv64.sys
@@ -2088,9 +2085,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Georgia,
-        BUSINESS_CATEGORY=Private Organization, serialNumber=J912954, C=US, ST=Georgia,
-        L=Norcross, O=American Megatrends, Inc., CN=American Megatrends, Inc.
+    - Subject: ??=US, ??=Georgia, ??=Private Organization, serialNumber=J912954, C=US,
+        ST=Georgia, L=Norcross, O=American Megatrends, Inc., CN=American Megatrends,
+        Inc.
       ValidFrom: '2017-08-30 00:00:00'
       ValidTo: '2020-09-24 12:00:00'
       Signature: 5a00ce1b66cc04a3be37c0926957fc54b1f2904c69a3555d90a15e3c7b7133e76583a0fe5c13c21cdddda40e6f0ba958964796abcfbb7fbe4de15a009f80e653556e29cac9d208645b8154f52f6045fa268f6e6b57536f21833f2cc92c5e9a51636cfeaa74f0b8ab80a8649d68c7c46f51a534c0697a426aa37337c7956268f4cdc8d88adbd1aa0cb620abeb7166172e914016c84e00824751b4f7142b54c56b74d578fd97aadda3e8e777ec22c34460a8dc7e0392a9adab018b16699d9ddd7551fd5c5924f3d1ccb9e6ef67ca0ab2107d1abf158add6d42ba18dee5ec35e3445627df4744d71f73ee3a199aaa42993ebaaa7f91f8b6d1b623350744853c1b38
@@ -2181,7 +2178,7 @@ KnownVulnerableSamples:
       Entropy: 5.1116136344980365
       Virtual Size: '0x38e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-10 19:51:41'
+  CreationTimestamp: '2020-09-10 22:51:41'
   Imphash: 4fbdc03e4487f98fb59360ea5b3e640d
   LoadsDespiteHVCI: 'TRUE'
 - Filename: amifldrv64.sys
@@ -2292,9 +2289,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2345,7 +2342,7 @@ KnownVulnerableSamples:
       Entropy: 4.891266027306224
       Virtual Size: '0x36e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-08-20 03:07:22'
+  CreationTimestamp: '2009-08-20 06:07:22'
   Imphash: 4c304943af1b07b15a5efa80f17d9b89
   LoadsDespiteHVCI: 'FALSE'
 - Filename: amifldrv.sys
@@ -2356,14 +2353,14 @@ KnownVulnerableSamples:
     MD5: 08cac606d72411c22b1400d755a2b6e3
     SHA1: 6055dbc453c111e57c85ec8cfad9e6e11421c8d4
     SHA256: 5167b33a95b4db0a1244cb3b95d4024587d9a5a95222babb033210e6b111d2fb
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: AMI Generic Utility Driver
+  Company: Windows (R) Win 7 DDK provider
+  InternalName: amifldrv.sys
+  OriginalFilename: amifldrv.sys
+  FileVersion: 10.0.10011.16384
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2421,9 +2418,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Georgia,
-        BUSINESS_CATEGORY=Private Organization, serialNumber=J912954, C=US, ST=Georgia,
-        L=Norcross, O=American Megatrends, Inc., CN=American Megatrends, Inc.
+    - Subject: ??=US, ??=Georgia, ??=Private Organization, serialNumber=J912954, C=US,
+        ST=Georgia, L=Norcross, O=American Megatrends, Inc., CN=American Megatrends,
+        Inc.
       ValidFrom: '2017-08-30 00:00:00'
       ValidTo: '2020-09-24 12:00:00'
       Signature: 5a00ce1b66cc04a3be37c0926957fc54b1f2904c69a3555d90a15e3c7b7133e76583a0fe5c13c21cdddda40e6f0ba958964796abcfbb7fbe4de15a009f80e653556e29cac9d208645b8154f52f6045fa268f6e6b57536f21833f2cc92c5e9a51636cfeaa74f0b8ab80a8649d68c7c46f51a534c0697a426aa37337c7956268f4cdc8d88adbd1aa0cb620abeb7166172e914016c84e00824751b4f7142b54c56b74d578fd97aadda3e8e777ec22c34460a8dc7e0392a9adab018b16699d9ddd7551fd5c5924f3d1ccb9e6ef67ca0ab2107d1abf158add6d42ba18dee5ec35e3445627df4744d71f73ee3a199aaa42993ebaaa7f91f8b6d1b623350744853c1b38
@@ -2526,7 +2523,7 @@ KnownVulnerableSamples:
       Entropy: 2.9176286494293437
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-17 23:26:30'
+  CreationTimestamp: '2020-09-18 02:26:30'
   Imphash: 07a42e80559d960b176c0fc8fd309bfe
   LoadsDespiteHVCI: 'TRUE'
 - Filename: amifldrv64.sys
@@ -2701,7 +2698,7 @@ KnownVulnerableSamples:
       Entropy: 4.923446652280529
       Virtual Size: '0x3ae'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-12-03 22:04:12'
+  CreationTimestamp: '2014-12-04 01:04:12'
   Imphash: 4c0161f638d5acafe23fcee3c5e86f15
   LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
@@ -2710,7 +2707,7 @@ KnownVulnerableSamples:
     SHA256: 038f39558035292f1d794b7cf49f8e751e8633daec31454fe85cccbea83ba3fb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-08-20 03:07:22'
+  CreationTimestamp: '2009-08-20 06:07:22'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2779,8 +2776,8 @@ KnownVulnerableSamples:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: "C=DE, postalCode=81673, ST=Bayern, L=M\xFCnchen, STREET_ADDRESS=Tomannweg\
-        \ 6, O=NOVENTI Health SE, CN=NOVENTI Health SE"
+    - Subject: C=DE, postalCode=81673, ST=Bayern, L=Mnchen, ??=Tomannweg 6, O=NOVENTI
+        Health SE, CN=NOVENTI Health SE
       ValidFrom: '2021-03-25 00:00:00'
       ValidTo: '2024-03-24 23:59:59'
       Signature: 519d68e4d16da2927761a469f3e722556dc89310e1cc9b215e8992da99d01a265aba54680568e7addbc248e894045a18190d3e05ac35109fbc8518bdf7e68a28e853bff1b2291d84ec03550569a0fa8331c5de89c4c9c47911c902a40cd4772b2086b541a8c57d3a30c05858d717dec7f859c66895ee1bea0b5a9c871a297efed221348320c85aebcda9a210e7f7b3ac88325041ea330fa5ca0cba6ecf07861e3e665c8095df135706b033b38d9567fd9b2c745e3afab8048e7aa41a4b7b0ef7ef39315a98026983b9fa9fe775c15452d18b124890fb9b52db063cbd3dc0d58b3eeb894262c74bd791efe66bf49f071ee4796aa7b3c983b29b05a53c3a0bd507
@@ -2843,7 +2840,7 @@ KnownVulnerableSamples:
     SHA256: df4566edea7c02e29d7dc56ff3f7da6c1ef846e1063b2805a5180bb0d6db37e8
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-03-06 01:32:52'
+  CreationTimestamp: '2018-03-06 04:32:52'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2933,9 +2930,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Georgia,
-        BUSINESS_CATEGORY=Private Organization, serialNumber=J912954, C=US, ST=Georgia,
-        L=Norcross, O=American Megatrends, Inc., CN=American Megatrends, Inc.
+    - Subject: ??=US, ??=Georgia, ??=Private Organization, serialNumber=J912954, C=US,
+        ST=Georgia, L=Norcross, O=American Megatrends, Inc., CN=American Megatrends,
+        Inc.
       ValidFrom: '2017-08-30 00:00:00'
       ValidTo: '2020-09-24 12:00:00'
       Signature: 5a00ce1b66cc04a3be37c0926957fc54b1f2904c69a3555d90a15e3c7b7133e76583a0fe5c13c21cdddda40e6f0ba958964796abcfbb7fbe4de15a009f80e653556e29cac9d208645b8154f52f6045fa268f6e6b57536f21833f2cc92c5e9a51636cfeaa74f0b8ab80a8649d68c7c46f51a534c0697a426aa37337c7956268f4cdc8d88adbd1aa0cb620abeb7166172e914016c84e00824751b4f7142b54c56b74d578fd97aadda3e8e777ec22c34460a8dc7e0392a9adab018b16699d9ddd7551fd5c5924f3d1ccb9e6ef67ca0ab2107d1abf158add6d42ba18dee5ec35e3445627df4744d71f73ee3a199aaa42993ebaaa7f91f8b6d1b623350744853c1b38
@@ -3013,7 +3010,7 @@ KnownVulnerableSamples:
     SHA256: 2ee914c20b3e4a321bcd2ea2f0f437cda6da09dc0819cd6f06960c0567f4cb19
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-06-13 01:41:57'
+  CreationTimestamp: '2011-06-13 04:41:57'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3141,9 +3138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3181,7 +3178,7 @@ KnownVulnerableSamples:
     SHA256: 8b4cbd2bc16071a1868597ec86857dba1140f981e3e943b0857341daffff4e69
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-07-23 00:53:08'
+  CreationTimestamp: '2012-07-23 03:53:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3352,7 +3349,7 @@ KnownVulnerableSamples:
     SHA256: 9022cdd52aa3420757d5c16fe61a4fd4d538fe74981ddf3f29de00eb7a3be849
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-07-14 23:02:29'
+  CreationTimestamp: '2011-07-15 02:02:29'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3480,9 +3477,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3520,7 +3517,7 @@ KnownVulnerableSamples:
     SHA256: 7ccc32e11372896cc01d7780e1176ed6fedd17f846001bc3bf78699e4448105f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-05-23 00:59:34'
+  CreationTimestamp: '2008-05-23 03:59:34'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3648,9 +3645,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3688,7 +3685,7 @@ KnownVulnerableSamples:
     SHA256: 8b4cbd2bc16071a1868597ec86857dba1140f981e3e943b0857341daffff4e69
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-07-23 00:53:08'
+  CreationTimestamp: '2012-07-23 03:53:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3763,7 +3760,7 @@ KnownVulnerableSamples:
     SHA256: 038f39558035292f1d794b7cf49f8e751e8633daec31454fe85cccbea83ba3fb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-08-20 03:07:22'
+  CreationTimestamp: '2009-08-20 06:07:22'
   Date: ''
   Description: ''
   ExportedFunctions: ''

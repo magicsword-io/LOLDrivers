@@ -54,13 +54,13 @@ KnownVulnerableSamples:
     MD5: 758090532f58b19865d76a41389c2d58
     SHA1: 6aa5070d7346f164d618915d32ddb9cfe1c1fecc
     SHA256: a7047cee090ddbd150d7337a9357e03ccea56f004a2d29ddb7b8a0636a396240
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2022-03-29 10:25:42'
+  Company: Rivet Networks, LLC.
+  Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
+  CreationTimestamp: '2022-03-29 13:25:42'
   Date: ''
-  Description: ''
+  Description: Killer Traffic Control Callout Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 9.8.4.59
   Filename: KfeCo11X64.sys
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -174,13 +174,13 @@ KnownVulnerableSamples:
   - NDIS.SYS
   - fwpkclnt.sys
   - WDFLDR.SYS
-  InternalName: ''
+  InternalName: KfeCoDrv.sys
   MD5: c901887f28bbb55a10eb934755b47227
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: KfeCoDrv.sys
+  Product: Killer Traffic Control
+  ProductVersion: 9.8.4.59
   Publisher: ''
   RichPEHeaderHash:
     MD5: c02c92737cc75210cbdb22db9985bd7c

@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 68dbbf7551556cc1f85b2bb03549cc7a
     SHA1: 21dcf78975dc9df6628e8624a56408ac66dd5218
     SHA256: 539aa921b5352ab385430e1608ac5c0ae36f35e678d471b7a5994ec7c02eadea
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2007-07-13 06:25:20'
+  Company: Windows (R) Server 2003 DDK provider
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  CreationTimestamp: '2007-07-13 09:25:20'
   Date: ''
-  Description: ''
+  Description: CPUID Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '5.2.3790.0 built by: WinDDK'
   Filename: cpuz_x64.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -68,13 +68,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: cpuz.sys
   MD5: 7d46d0ddaf8c7e1776a70c220bf47524
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: cpuz.sys
+  Product: Windows (R) Server 2003 DDK driver
+  ProductVersion: 5.2.3790.0
   Publisher: CPUID
   RichPEHeaderHash:
     MD5: 29339b41fb0fed00ae9eb44e9e39db59
@@ -185,9 +185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

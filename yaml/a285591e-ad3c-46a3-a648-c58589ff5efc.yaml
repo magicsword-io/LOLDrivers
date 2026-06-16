@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 89627ebd29f4ae929d7f40fd4dabead3
     SHA1: 084553447bdbc056bbe49bad8acfaf25eb83462a
     SHA256: 60571dbcaec96d9517e0d116d066e70ae747aa4396d7857b2eea0f4c1a5a70b4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2019-04-23 02:04:57'
+  Company: Copyright 2018.
+  Copyright: Copyright 2018. All rights reserved.
+  CreationTimestamp: '2019-04-23 05:04:57'
   Date: ''
-  Description: ''
+  Description: Advanced Malware Protection
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 3.0.0.000
   Filename: amsdk.sys
   ImportedFunctions:
   - FltRegisterFilter
@@ -215,9 +215,9 @@ KnownVulnerableSamples:
   MD5: eb525d99a31eb4fff09814e83593a494
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: ZAM.exe
+  Product: Advanced Malware Protection
+  ProductVersion: 3.0.0.000
   Publisher: ''
   RichPEHeaderHash:
     MD5: 538cd5afb8509a14342d4a050452744b
@@ -290,10 +290,9 @@ KnownVulnerableSamples:
         SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
         SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
         SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
-    - Subject: BUSINESS_CATEGORY=Private Organization, serialNumber=460726, JURISDICTION_OF_INCORPORATION_C=US,
-        JURISDICTION_OF_INCORPORATION_SP=Idaho, C=US, ST=Idaho, L=Boise, STREET_ADDRESS=702
-        W Idaho Street Suite 1100, O=WATCHDOGDEVELOPMENT.COM, LLC, CN=WATCHDOGDEVELOPMENT.COM,
-        LLC
+    - Subject: ??=Private Organization, serialNumber=460726, ??=US, ??=Idaho, C=US,
+        ST=Idaho, L=Boise, ??=702 W Idaho Street Suite 1100, O=WATCHDOGDEVELOPMENT.COM,
+        LLC, CN=WATCHDOGDEVELOPMENT.COM, LLC
       ValidFrom: '2021-04-21 14:24:27'
       ValidTo: '2022-03-25 19:57:48'
       Signature: 9ba0d9eef89f4e9a41f5cf68ac4fe0f024dac877c639b288bae6c89bdbcb5ea6c81f1b8bd62f53be6a880bcd072c82ac2dc99f32f56bc6b02946d0bba3ebefe29dcf49e118dcfd966b4fa9ca56a4845e61910c077fe7fbbbf56daa73a82be2ceff3a9e84b397fe97dfb407c7d9160dd92a371fb76a2d35c8ba04c94e5028b2e3354fb09dc8974298b654f7a2ec4b703cf36aa5dada972d076a5685b5e292e2521c0d1b6ead53911bbe887e49916dca7913ee57cb16da99537f2addeb1cef02465db1b72b4ed09dc275230eec1aba61848a07d34b4d271619a5a6230b73fe406cf6aae6c2d20cbf2ff7d18eb662804680c96b8d390713c22d80e6e84b3933bd519d9ecc0af19282a5ab7d4886da8e0ca6947135691bd2f891258e8ef8f913de42229d87985c96da4b58de561afacaa99800ffcaa2d386fc88d8f6f82e7442cbd51ba9f3f4e8e9d2d1752d467e1d95a06cafd4438ad8648dc3d552126a589b205269b05be5b181c93fedf0a20caab8a185663f56be9e86287db166eb49493a5789e4e95f455d4f032274a63b6e8ad8bf8534aef7a8ab80c73ff24cf42db5d4293f6d5f5c6b7262c211e767e87cbe196ec28ec820eb1e5b138c3604329ed5d0139cc8f2e049c7d416fb7a0c5a55dcd0cc5fcf8e566d644b5583e557f24244296762139a4ee1fd70be0b15402c7193996b25223dd05e9206e0290aa6e1f52f3097b3

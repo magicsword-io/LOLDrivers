@@ -34,13 +34,13 @@ KnownVulnerableSamples:
     MD5: 70f41d3749f4608b64902dd2c1f1e14f
     SHA1: c6609cad7208669e4c34f71f682af1a6bcddc11f
     SHA256: 9c4ffe4815b5755d2609be21ba53c9157e8f71137f06fe35044406b968b80320
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-04-08 23:40:14'
+  Company: Super Micro Computer, Inc.
+  Copyright: Copyright(c) 1993-2015 Super Micro Computer, Inc.
+  CreationTimestamp: '2015-04-09 02:40:14'
   Date: ''
-  Description: ''
+  Description: superbmc
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 2.0.0.0
   Filename: superbmc.sys
   ImportedFunctions:
   - KeClearEvent
@@ -85,13 +85,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: superbmc
   MD5: 3473faea65fba5d4fbe54c0898a3c044
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: superbmc.sys
+  Product: superbmc
+  ProductVersion: 2.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 4533edb4231f85470030cc48560fbf4e
@@ -116,7 +116,7 @@ KnownVulnerableSamples:
       Entropy: 5.018419400835308
       Virtual Size: '0x57e'
     .rsrc:
-      Entropy: 3.220243520534021
+      Entropy: 3.2202435205340207
       Virtual Size: '0x3a0'
     .reloc:
       Entropy: 1.2775827704053433
@@ -189,9 +189,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -247,7 +247,7 @@ KnownVulnerableSamples:
     SHA256: 2645298d84585fa987450aa11687b73739cbbc26abaa8125099cae5889beb211
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-12-12 19:06:10'
+  CreationTimestamp: '2012-12-12 22:06:10'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -397,9 +397,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -455,7 +455,7 @@ KnownVulnerableSamples:
     SHA256: 85c5e66f38152d17d5b580126b3348579263bbc8fd22e5417c0090fd75a330ac
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-10-10 23:46:02'
+  CreationTimestamp: '2013-10-11 02:46:02'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -605,9 +605,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -663,7 +663,7 @@ KnownVulnerableSamples:
     SHA256: 22afee6f0ec783d59ef4f5d6c189b78fa26302f0ed09670b7bbc9bae26bdb0e5
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-05-15 18:55:26'
+  CreationTimestamp: '2008-05-15 21:55:26'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -812,9 +812,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -852,7 +852,7 @@ KnownVulnerableSamples:
     SHA256: 8cef918675dfaeb50cacd36b9c06871fd05e9ffea7addf98a396fae131abe30a
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2014-05-29 01:37:08'
+  CreationTimestamp: '2014-05-29 04:37:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1005,9 +1005,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1063,7 +1063,7 @@ KnownVulnerableSamples:
     SHA256: 5147b0f2ca9d0bde1f9fceb382c05f7fa9c333709d7bf081d6c00a4132d914af
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2015-03-05 00:19:45'
+  CreationTimestamp: '2015-03-05 03:19:45'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1213,9 +1213,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

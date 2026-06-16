@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: cd820a2aee5e475a92f3860b20a3fc1a
     SHA1: db97af81d295f3f7f7777d3805635ab8cc40ab44
     SHA256: 98636f857235fb66122296db147cd29440de681a29bbd631fc94373da31f99fa
-  Description: ''
-  Company: ''
+  Description: Novell Client Portability Layer
+  Company: Novell, Inc.
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: NICM.SYS
+  FileVersion: 3.1.11.0
+  Product: Novell XTier
+  ProductVersion: 3.1.11
+  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -196,7 +196,7 @@ KnownVulnerableSamples:
       Entropy: 3.6567400216610486
       Virtual Size: '0x160'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 22:20:00'
+  CreationTimestamp: '2013-01-16 01:20:00'
   Imphash: 8ec78cf864273fd81203678b61c41f04
   LoadsDespiteHVCI: 'TRUE'
 - Filename: NICM.SYS
@@ -207,14 +207,14 @@ KnownVulnerableSamples:
     MD5: 2e72873429bed4886fe76aeba274283e
     SHA1: ab636e8ba41f37d2bcd5291ddf30024be7f3ce2f
     SHA256: 7419b05e74733d2b7ce4c860ab74043b816a7f66a1ff7eec81fe3b35730e3bbb
-  Description: ''
-  Company: ''
+  Description: Novell Client Portability Layer
+  Company: Novell, Inc.
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: NICM.SYS
+  FileVersion: 3.1.6.0
+  Product: Novell XTier
+  ProductVersion: 3.1.6
+  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -382,9 +382,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -423,7 +423,7 @@ KnownVulnerableSamples:
       Entropy: 6.153392798668095
       Virtual Size: '0x600'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 10:49:27'
+  CreationTimestamp: '2009-03-27 13:49:27'
   Imphash: 0e4f5481813eeec4e5dd96e36020135f
   LoadsDespiteHVCI: 'FALSE'
 - Filename: NICM.SYS
@@ -434,14 +434,14 @@ KnownVulnerableSamples:
     MD5: 1b164cdc9dadc9944f2d3c0063cfcaa9
     SHA1: a13e2a1ea1c6427bc2006b1512047cc9779e480e
     SHA256: ea80b4a2314e44061f33a7403e0740437aa34326082e97816bb6e7693866478b
-  Description: ''
-  Company: ''
+  Description: Novell Client Portability Layer
+  Company: Novell, Inc.
   InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  OriginalFilename: NICM.SYS
+  FileVersion: 3.1.6.0
+  Product: Novell XTier
+  ProductVersion: 3.1.6
+  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -600,9 +600,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -626,7 +626,7 @@ KnownVulnerableSamples:
       Entropy: 4.7168552248845295
       Virtual Size: '0x7c8'
     .data:
-      Entropy: 2.354080818221328
+      Entropy: 2.3540808182213286
       Virtual Size: '0x8c8'
     .pdata:
       Entropy: 4.31228440148608
@@ -644,6 +644,6 @@ KnownVulnerableSamples:
       Entropy: 3.6567400216610486
       Virtual Size: '0x160'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 10:53:53'
+  CreationTimestamp: '2009-03-27 13:53:53'
   Imphash: f2dc136141066311fddef65f7f417c44
   LoadsDespiteHVCI: 'FALSE'

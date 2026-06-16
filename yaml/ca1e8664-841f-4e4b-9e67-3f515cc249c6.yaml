@@ -46,13 +46,13 @@ KnownVulnerableSamples:
     MD5: 8bddebd3670d9f154318afd62195a2b8
     SHA1: 7f57424f2ce7186e3a1951f3710f28d7ce9c8a96
     SHA256: 9345c3af554c06aa949492f1642a7a03404956d2952cca8a68658b62dccb0825
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-10-12 09:49:03'
+  Company: Microsoft Corporation
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  CreationTimestamp: '2012-10-12 12:49:03'
   Date: ''
-  Description: ''
+  Description: MS LAN Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 6.1.7600.1421
   Filename: ndislan.sys
   ImportedFunctions:
   - MmUnmapLockedPages
@@ -88,13 +88,13 @@ KnownVulnerableSamples:
   - __C_specific_handler
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: ndislan.sys
   MD5: 47e6ac52431ca47da17248d80bf71389
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: ndislan.sys
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 6.1.7600.1421
   Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
   RichPEHeaderHash:
     MD5: f72e2aff64758e755d064be58687c63a

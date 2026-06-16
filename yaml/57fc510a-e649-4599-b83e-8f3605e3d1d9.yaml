@@ -52,13 +52,13 @@ KnownVulnerableSamples:
     MD5: 66d55dcf5fe5e1b60f32880d48207105
     SHA1: b8b5e5951f1c4148537e9850f2b577a453e4c045
     SHA256: c0c131bc8d6c8b5a2be32474474b1221bce1289c174c87e743ed4a512f5571d4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2021-02-01 01:08:43'
+  Company: AVAST Software
+  Copyright: Copyright (c) 2021 AVAST Software
+  CreationTimestamp: '2021-02-01 04:08:43'
   Date: ''
-  Description: ''
+  Description: Avast Anti Rootkit
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 21.1.187.0
   Filename: aswArPot.sys
   ImportedFunctions:
   - __C_specific_handler
@@ -229,13 +229,13 @@ KnownVulnerableSamples:
   - strcmp
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: aswArPot
   MD5: a179c4093d05a3e1ee73f6ff07f994aa
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: aswArPot.sys
+  Product: 'Avast Antivirus '
+  ProductVersion: 21.1.187.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: edc05997bbdab8acd04f275b386ffdab

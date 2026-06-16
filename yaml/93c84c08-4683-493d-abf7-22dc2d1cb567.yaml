@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 7bd56fcd55d1fd188e5200b7db5cd7be
     SHA1: 519926b0b385e27141d88c5576aa9f86d8d3bb0d
     SHA256: 13aa698c09a31d642d3e2a9dd03be2363b11b4024689fb6c97234719446dbbd7
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-04-17 02:14:26'
+  Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
+  Copyright: Copyright (c) 2012-2014 Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
+  CreationTimestamp: '2014-04-17 05:14:26'
   Date: ''
-  Description: ''
+  Description: Temperature and system information driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: PanIOx64.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -68,13 +68,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: PanIOx64.sys
   MD5: 0d6fef14f8e1ce5753424bd22c46b1ce
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: PanIOx64.sys
+  Product: PanIO Library
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -183,9 +183,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

@@ -35,16 +35,16 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
-- Company: ''
+- Company: MiTAC Technology Corporation
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: MiTAC System Service Provider
+  FileVersion: 21, 1, 1, 0
   Filename: ''
   MD5: 4353b713487a2945b823423bbbf709bd
   MachineType: AMD64
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: VdBSv64.sys
+  Product: MiTAC System Service Provider
+  ProductVersion: 21, 1, 1, 0
   Publisher: ''
   SHA1: 4ffa89f8dbdade28813e12db035cf9bd8665ef72
   SHA256: 91afa3de4b70ee26a4be68587d58b154c7b32b50b504ff0dc0babc4eb56578f4
@@ -84,9 +84,9 @@ KnownVulnerableSamples:
       Entropy: 3.6294909850169517
       Virtual Size: '0x102'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-07-23 00:42:31'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2009-07-23 03:42:31'
+  InternalName: VdBSv64.sys
+  Copyright: Copyright (C) 2007 MiTAC Technology Corporation
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -190,9 +190,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

@@ -33,13 +33,13 @@ KnownVulnerableSamples:
   - DigiCert Assured ID Root CA
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: TEC Solutions Limited.
+  Description: THelper Driver
+  Product: OCular THelper
+  ProductVersion: 4, 71, 408, 0
+  FileVersion: 4, 71, 408, 0
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: thelper.sys
   Authentihash:
     MD5: fff1ff5603c26272f633b8899888fbad
     SHA1: 33f90e874ba571db4ba40e173c4dfbdb6da28378
@@ -48,8 +48,8 @@ KnownVulnerableSamples:
     MD5: 49c26caa0212b4a672c661b58ca1f195
     SHA1: 8a7c2c1c5ef248146cb4a323cd445fc6cd6e5cad
     SHA256: 30c2392b69b02c86111888650d3a4683c833fdb0d6bdd6a31991b7d69658f487
-  InternalName: ''
-  Copyright: ''
+  InternalName: thelper.sys
+  Copyright: Copyright 2001-2014, TEC Solutions Limited.
   Imports:
   - ntoskrnl.exe
   ImportedFunctions:
@@ -110,28 +110,28 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   Sections:
     .text:
-      Entropy: 6.345837816630038
+      Entropy: 6.35
       Virtual Size: '0x7604'
     .rdata:
-      Entropy: 4.409757284426157
+      Entropy: 4.41
       Virtual Size: '0x934'
     .data:
-      Entropy: 1.6483597247046924
+      Entropy: 1.65
       Virtual Size: '0x2100'
     .pdata:
-      Entropy: 4.101745949802254
+      Entropy: 4.1
       Virtual Size: '0x240'
     INIT:
-      Entropy: 5.194242460289332
+      Entropy: 5.19
       Virtual Size: '0x6a0'
     .rsrc:
-      Entropy: 3.353884890107685
+      Entropy: 3.35
       Virtual Size: '0x458'
     .reloc:
-      Entropy: 2.556897255606078
+      Entropy: 2.56
       Virtual Size: '0xf6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-04-07 23:02:10'
+  CreationTimestamp: '2022-04-08 00:02:10'
   Imphash: 9823fa9dc48fb8be6f585ea4c49bdb7e
   Signatures:
   - CertificatesInfo: ''

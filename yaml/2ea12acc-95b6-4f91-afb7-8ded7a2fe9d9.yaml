@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 9ee5190f4bd124445626451cc09d49ce
     SHA1: b73a1aae1e15b9a7e2cc0d486449e132671aebec
     SHA256: fabe94809d90ade89dad012b22243e3fb755a131800140f8f8b30c989c371301
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Voicemod Virtual Audio Device (WDM)
+  Company: Windows (R) Win 7 DDK provider
+  InternalName: vmdrv.sys
+  OriginalFilename: vmdrv.sys
+  FileVersion: 10.0.10011.16384
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  Copyright: Copyright (C) Voicemod S.L.2010-2020
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -112,9 +112,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=ES, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=B98657844, C=ES, L=Valencia, O=Voicemod Sociedad Limitada, CN=Voicemod
-        Sociedad Limitada
+    - Subject: ??=ES, ??=Private Organization, serialNumber=B98657844, C=ES, L=Valencia,
+        O=Voicemod Sociedad Limitada, CN=Voicemod Sociedad Limitada
       ValidFrom: '2019-12-13 00:00:00'
       ValidTo: '2020-12-17 12:00:00'
       Signature: 3d61f91d3417ea68406f8f16faa42f704866212beb1e47ede42931cefc8e5a240a6320d9cdc2eb1911c5a72db5514cdfa4a40e554c2874d9da134ef850077c6859f540b5d89f3e2168a0ad1b26ffa730588d98ec52b386174b06e96f6254c86315cb6c982c1f6c3748ec1f28b779cfee301ab12ce5fc1b817b018637dd93ac6419957f3d3dd4e362b8f34b41664444e4743c12309e9c14996430719db60684117206890b140b5e87f708838b3b53b5395a1e1a562840c2939c64e2e5f50c40d148830fdeb425077e74fbabfde856bf8ccb0036fbec5d49e58056200cdb24eba2382fc9a1b60ba342759097634855dfd66520763cf7c04c2b85abebd5b5057052
@@ -182,7 +181,7 @@ KnownVulnerableSamples:
       Entropy: 5.080566974333831
       Virtual Size: '0x19c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-15 14:19:53'
+  CreationTimestamp: '2020-05-15 17:19:53'
   Imphash: 02a27dc9a48b694b7df4b821eb65178c
   LoadsDespiteHVCI: 'FALSE'
 - Filename: vmdrv.sys
@@ -193,14 +192,14 @@ KnownVulnerableSamples:
     MD5: b402effbea875040846c88d9b8b08b36
     SHA1: 08e1ee43f0e00155730448f017a4616efa2afdf0
     SHA256: 57ae8d2d962cdde554831415725583fcf4ae5fc844c19983a7c37e31b12109a3
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Voicemod Virtual Audio Device (WDM)
+  Company: Windows (R) Win 7 DDK provider
+  InternalName: vmdrv.sys
+  OriginalFilename: vmdrv.sys
+  FileVersion: 10.0.10011.16384
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  Copyright: Copyright (C) Voicemod S.L.2010-2020
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -250,9 +249,8 @@ KnownVulnerableSamples:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: JURISDICTION_OF_INCORPORATION_C=ES, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=B98657844, C=ES, L=Valencia, O=Voicemod Sociedad Limitada, CN=Voicemod
-        Sociedad Limitada
+    - Subject: ??=ES, ??=Private Organization, serialNumber=B98657844, C=ES, L=Valencia,
+        O=Voicemod Sociedad Limitada, CN=Voicemod Sociedad Limitada
       ValidFrom: '2019-12-13 00:00:00'
       ValidTo: '2020-12-17 12:00:00'
       Signature: 3d61f91d3417ea68406f8f16faa42f704866212beb1e47ede42931cefc8e5a240a6320d9cdc2eb1911c5a72db5514cdfa4a40e554c2874d9da134ef850077c6859f540b5d89f3e2168a0ad1b26ffa730588d98ec52b386174b06e96f6254c86315cb6c982c1f6c3748ec1f28b779cfee301ab12ce5fc1b817b018637dd93ac6419957f3d3dd4e362b8f34b41664444e4743c12309e9c14996430719db60684117206890b140b5e87f708838b3b53b5395a1e1a562840c2939c64e2e5f50c40d148830fdeb425077e74fbabfde856bf8ccb0036fbec5d49e58056200cdb24eba2382fc9a1b60ba342759097634855dfd66520763cf7c04c2b85abebd5b5057052
@@ -320,6 +318,6 @@ KnownVulnerableSamples:
       Entropy: 4.9921117821079095
       Virtual Size: '0x17c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-25 06:11:31'
+  CreationTimestamp: '2020-09-25 09:11:31'
   Imphash: 7c24141cdcfc23f5eb0e2b6792d80740
   LoadsDespiteHVCI: 'FALSE'

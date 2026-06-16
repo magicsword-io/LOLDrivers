@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: e3a0cecf1427722f291347941edc9b81
     SHA1: 2e6d61fa32e12fe4abf7b7d87aa6824f5f528000
     SHA256: c767a5895119154467ac3fce8e82c20e6538a4e54f6c109001c61f8abd58f9f8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-07-23 07:59:20'
+  Company: ASRock Incorporation
+  Copyright: Copyright (C) 2012 ASRock Incorporation
+  CreationTimestamp: '2012-07-23 10:59:20'
   Date: ''
-  Description: ''
+  Description: ASRock IO Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
   Filename: AsrDrv10.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -78,13 +78,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: AsrDrv.sys
   MD5: 9b91a44a488e4d539f2e55476b216024
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: AsrDrv.sys
+  Product: ASRock IO Driver
+  ProductVersion: 1.00.00.0000
   Publisher: ASROCK Incorporation
   RichPEHeaderHash:
     MD5: a84c01eca8a6ca8e5221dbca3000c16e
@@ -178,9 +178,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

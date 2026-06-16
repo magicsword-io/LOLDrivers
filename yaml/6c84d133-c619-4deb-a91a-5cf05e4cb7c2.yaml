@@ -35,13 +35,13 @@ KnownVulnerableSamples:
   - thawte Primary Root CA
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: CrowdStrike, Inc.
+  Description: CrowdStrike Falcon Sensor Driver
+  Product: CrowdStrike Falcon Sensor
+  ProductVersion: 6.34.14806.0
+  FileVersion: 6.34.14806.0
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: CSAgent.sys
   Authentihash:
     MD5: 33d19e00fba657d4a4d881b0d3f24bb9
     SHA1: 4aabec112c06c86bcc97429af1d9f5d6966be78b
@@ -50,8 +50,8 @@ KnownVulnerableSamples:
     MD5: 2ca09312be60012aa066d643a69d72ff
     SHA1: 0e71795703c824fa2e5e0d0b761d50775c3db9de
     SHA256: 1cc4772448093afbb41aad527bb4f2b3a771db71d74db8b9d939a41e5187320f
-  InternalName: ''
-  Copyright: ''
+  InternalName: CSAgent.sys
+  Copyright: (c) CrowdStrike, Inc. All rights reserved.
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
@@ -165,31 +165,31 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   Sections:
     .text:
-      Entropy: 5.7368831388207635
+      Entropy: 5.74
       Virtual Size: '0xf622'
     .rdata:
-      Entropy: 4.119395033999882
+      Entropy: 4.12
       Virtual Size: '0xd08'
     .data:
-      Entropy: 1.5043168116243584
+      Entropy: 1.5
       Virtual Size: '0x308'
     .pdata:
-      Entropy: 4.800486198767932
+      Entropy: 4.8
       Virtual Size: '0x540'
     INIT:
-      Entropy: 5.288125471251384
+      Entropy: 5.29
       Virtual Size: '0xd20'
     .reloc:
-      Entropy: 3.115748962019488
+      Entropy: 3.12
       Virtual Size: '0x18'
     .rsrc:
-      Entropy: 3.3880974453724475
+      Entropy: 3.39
       Virtual Size: '0x3a8'
     .vlizer:
-      Entropy: 7.999875636603401
+      Entropy: 8.0
       Virtual Size: '0x63d000'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2024-11-09 06:33:54'
+  CreationTimestamp: '2024-11-09 07:33:54'
   Imphash: 97066db6d02bb0811e5e120968f3d28f
   Signatures:
   - CertificatesInfo: ''

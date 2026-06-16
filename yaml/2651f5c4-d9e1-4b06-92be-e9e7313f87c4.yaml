@@ -117,7 +117,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268312
+      Entropy: 4.313686441268313
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -129,7 +129,7 @@ KnownVulnerableSamples:
       Entropy: 4.548019208277369
       Virtual Size: '0x24a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-22 02:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
   Imphash: d7de998e454f947f62d4a6b66490563b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: AsIO32.sys
@@ -247,7 +247,7 @@ KnownVulnerableSamples:
       Entropy: 3.6862767817925604
       Virtual Size: '0xc6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-22 02:54:43'
+  CreationTimestamp: '2012-08-22 05:54:43'
   Imphash: 2699b7ae36fcadd71425ebafd231d0d1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: AsIO3.sys
@@ -354,9 +354,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -418,7 +417,7 @@ KnownVulnerableSamples:
       Entropy: 2.9464393446710155
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-09-29 03:05:28'
+  CreationTimestamp: '2021-09-29 06:05:28'
   Imphash: f5ebade1d3a6d3bde264b0c7f9f639e7
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO3.sys
@@ -498,9 +497,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
-        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
+        City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
       ValidTo: '2024-10-22 23:59:59'
       Signature: 1a8b6fd4e11cec34a3dfea314f0d59c6f41c56f76e1ac51f68e0285f1abdbda9e22628939dbd7acdf890d8ff3c7c4fff180c624b8434c6536bb61f1ff459d48a14c001d9d40ff1587cf64ce82edee2a24da8d80cd240e2af6d0e1c61aab24ce95f9c8ef50eeb0e153a343c1279fe6a003c44f3bd3ffa75ffbe314fc13bb36a9bbb3cea6026f5cb582992b016059074e4fcd8c16d4c5e8750bc9a196f94525317febcddb2d0121a235bb95136a0e4fc25611cd2915f4b488b66888168b90824e171d3214480c99fadb7b6c89cafc500eee468cb7faa9c1c1526d224ff389de012480480ced98831c324b129f2df3d3493d002ec8d4725e00eda33994f82493505861f61035c625d1c9ce2c7363799d3f1df9b17712b43cbf4c2027b54c796cbaca6b1523d028291e07774168a976ee3c879c850c1aaf65b1cec5c6dcb445487ab11b3967b8dd7726fe0dc529f7d624346a996adfd9dc6aab808edd9836a93e229ddbba4e8bb1c59719b6ebdcfc74d73f57ed946e936b5659783c199395bd2595458958edde6674bf08b3b650a8aeaa5507053b3f6ee7aedf16f55b849111535ca68ea11a5827551cba28023e230db7a209c763743ea22be0948ecf03d98ed447f66ecb97c0a525eb3b469779f2417f2082c4244b50936a9cb215745c71f3c27c98220f76395ba22a2f921a87655237977febd8b9a1564333af0cdf8e749bce0dd
@@ -545,7 +543,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-18 19:51:01'
+  CreationTimestamp: '2022-05-18 22:51:01'
   Imphash: b3e26c5e0de2d01597dca208ef27cc38
   LoadsDespiteHVCI: 'TRUE'
 - Filename: asio.sys
@@ -662,9 +660,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -733,7 +731,7 @@ KnownVulnerableSamples:
       Entropy: 3.6862767817925604
       Virtual Size: '0xc6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-22 02:54:43'
+  CreationTimestamp: '2012-08-22 05:54:43'
   Imphash: 2699b7ae36fcadd71425ebafd231d0d1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: asio.sys
@@ -843,7 +841,7 @@ KnownVulnerableSamples:
     SHA256: 4dbce3e8c08dd544b78f87323f6d794fb990bb10cb6d239fe367da87a803f23c
   Sections:
     .text:
-      Entropy: 6.108859458208726
+      Entropy: 6.108859458208728
       Virtual Size: '0xd86'
     .rdata:
       Entropy: 4.337980114178664
@@ -858,7 +856,7 @@ KnownVulnerableSamples:
       Entropy: 4.571215641554434
       Virtual Size: '0x24a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-06-27 22:19:38'
+  CreationTimestamp: '2010-06-28 01:19:38'
   Imphash: b4b90c1b054ebe273bff4b2fd6927990
   LoadsDespiteHVCI: 'FALSE'
 - Filename: AsIO2.sys
@@ -966,9 +964,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -1030,7 +1027,7 @@ KnownVulnerableSamples:
       Entropy: 2.9464393446710155
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-09 02:59:16'
+  CreationTimestamp: '2019-04-09 05:59:16'
   Imphash: 81e2eb25e24938b90806de865630a2b2
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO3.sys
@@ -1137,9 +1134,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -1201,7 +1197,7 @@ KnownVulnerableSamples:
       Entropy: 2.9464393446710155
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-31 18:44:39'
+  CreationTimestamp: '2021-05-31 21:44:39'
   Imphash: f5ebade1d3a6d3bde264b0c7f9f639e7
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO2.sys
@@ -1276,9 +1272,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -1372,7 +1367,7 @@ KnownVulnerableSamples:
       Entropy: 2.939353872167201
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-20 01:47:26'
+  CreationTimestamp: '2020-05-20 04:47:26'
   Imphash: f74aa24adc713dbb957ccb18f3c16a71
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO3_64.sys
@@ -1452,9 +1447,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
-        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
+        City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
       ValidTo: '2024-10-22 23:59:59'
       Signature: 1a8b6fd4e11cec34a3dfea314f0d59c6f41c56f76e1ac51f68e0285f1abdbda9e22628939dbd7acdf890d8ff3c7c4fff180c624b8434c6536bb61f1ff459d48a14c001d9d40ff1587cf64ce82edee2a24da8d80cd240e2af6d0e1c61aab24ce95f9c8ef50eeb0e153a343c1279fe6a003c44f3bd3ffa75ffbe314fc13bb36a9bbb3cea6026f5cb582992b016059074e4fcd8c16d4c5e8750bc9a196f94525317febcddb2d0121a235bb95136a0e4fc25611cd2915f4b488b66888168b90824e171d3214480c99fadb7b6c89cafc500eee468cb7faa9c1c1526d224ff389de012480480ced98831c324b129f2df3d3493d002ec8d4725e00eda33994f82493505861f61035c625d1c9ce2c7363799d3f1df9b17712b43cbf4c2027b54c796cbaca6b1523d028291e07774168a976ee3c879c850c1aaf65b1cec5c6dcb445487ab11b3967b8dd7726fe0dc529f7d624346a996adfd9dc6aab808edd9836a93e229ddbba4e8bb1c59719b6ebdcfc74d73f57ed946e936b5659783c199395bd2595458958edde6674bf08b3b650a8aeaa5507053b3f6ee7aedf16f55b849111535ca68ea11a5827551cba28023e230db7a209c763743ea22be0948ecf03d98ed447f66ecb97c0a525eb3b469779f2417f2082c4244b50936a9cb215745c71f3c27c98220f76395ba22a2f921a87655237977febd8b9a1564333af0cdf8e749bce0dd
@@ -1499,7 +1493,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-07-28 01:33:11'
+  CreationTimestamp: '2022-07-28 04:33:11'
   Imphash: b3e26c5e0de2d01597dca208ef27cc38
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO3.sys
@@ -1579,9 +1573,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
-        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
+        City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
       ValidTo: '2024-10-22 23:59:59'
       Signature: 1a8b6fd4e11cec34a3dfea314f0d59c6f41c56f76e1ac51f68e0285f1abdbda9e22628939dbd7acdf890d8ff3c7c4fff180c624b8434c6536bb61f1ff459d48a14c001d9d40ff1587cf64ce82edee2a24da8d80cd240e2af6d0e1c61aab24ce95f9c8ef50eeb0e153a343c1279fe6a003c44f3bd3ffa75ffbe314fc13bb36a9bbb3cea6026f5cb582992b016059074e4fcd8c16d4c5e8750bc9a196f94525317febcddb2d0121a235bb95136a0e4fc25611cd2915f4b488b66888168b90824e171d3214480c99fadb7b6c89cafc500eee468cb7faa9c1c1526d224ff389de012480480ced98831c324b129f2df3d3493d002ec8d4725e00eda33994f82493505861f61035c625d1c9ce2c7363799d3f1df9b17712b43cbf4c2027b54c796cbaca6b1523d028291e07774168a976ee3c879c850c1aaf65b1cec5c6dcb445487ab11b3967b8dd7726fe0dc529f7d624346a996adfd9dc6aab808edd9836a93e229ddbba4e8bb1c59719b6ebdcfc74d73f57ed946e936b5659783c199395bd2595458958edde6674bf08b3b650a8aeaa5507053b3f6ee7aedf16f55b849111535ca68ea11a5827551cba28023e230db7a209c763743ea22be0948ecf03d98ed447f66ecb97c0a525eb3b469779f2417f2082c4244b50936a9cb215745c71f3c27c98220f76395ba22a2f921a87655237977febd8b9a1564333af0cdf8e749bce0dd
@@ -1626,7 +1619,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-18 19:51:01'
+  CreationTimestamp: '2022-05-18 22:51:01'
   Imphash: b3e26c5e0de2d01597dca208ef27cc38
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO3.sys
@@ -1733,9 +1726,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -1797,7 +1789,7 @@ KnownVulnerableSamples:
       Entropy: 2.9464393446710155
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-09-15 19:17:14'
+  CreationTimestamp: '2021-09-15 22:17:14'
   Imphash: f5ebade1d3a6d3bde264b0c7f9f639e7
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO64.sys
@@ -1899,9 +1891,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1952,7 +1944,7 @@ KnownVulnerableSamples:
       Entropy: 4.4509406095000665
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2004-10-14 02:53:21'
+  CreationTimestamp: '2004-10-14 05:53:21'
   Imphash: ccdeab2a83fbf2fef2e418cccd133ec1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: AsIO3_64.sys
@@ -2059,9 +2051,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -2123,7 +2114,7 @@ KnownVulnerableSamples:
       Entropy: 2.9464393446710155
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-31 18:44:39'
+  CreationTimestamp: '2021-05-31 21:44:39'
   Imphash: f5ebade1d3a6d3bde264b0c7f9f639e7
   LoadsDespiteHVCI: 'TRUE'
 - Filename: asio.sys
@@ -2238,9 +2229,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2291,7 +2282,7 @@ KnownVulnerableSamples:
       Entropy: 4.595102637134157
       Virtual Size: '0xcc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-12-17 01:10:20'
+  CreationTimestamp: '2007-12-17 04:10:20'
   Imphash: f4c5b0399665885a7dd34f7cdbbc586f
   LoadsDespiteHVCI: 'FALSE'
 - Filename: AsIO2.sys
@@ -2399,9 +2390,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -2463,7 +2453,7 @@ KnownVulnerableSamples:
       Entropy: 2.939353872167201
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-31 18:42:16'
+  CreationTimestamp: '2021-05-31 21:42:16'
   Imphash: d6d76f43ccc3872b879b0df583364c78
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO3.sys
@@ -2543,9 +2533,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
-        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
+        City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
       ValidTo: '2024-10-22 23:59:59'
       Signature: 1a8b6fd4e11cec34a3dfea314f0d59c6f41c56f76e1ac51f68e0285f1abdbda9e22628939dbd7acdf890d8ff3c7c4fff180c624b8434c6536bb61f1ff459d48a14c001d9d40ff1587cf64ce82edee2a24da8d80cd240e2af6d0e1c61aab24ce95f9c8ef50eeb0e153a343c1279fe6a003c44f3bd3ffa75ffbe314fc13bb36a9bbb3cea6026f5cb582992b016059074e4fcd8c16d4c5e8750bc9a196f94525317febcddb2d0121a235bb95136a0e4fc25611cd2915f4b488b66888168b90824e171d3214480c99fadb7b6c89cafc500eee468cb7faa9c1c1526d224ff389de012480480ced98831c324b129f2df3d3493d002ec8d4725e00eda33994f82493505861f61035c625d1c9ce2c7363799d3f1df9b17712b43cbf4c2027b54c796cbaca6b1523d028291e07774168a976ee3c879c850c1aaf65b1cec5c6dcb445487ab11b3967b8dd7726fe0dc529f7d624346a996adfd9dc6aab808edd9836a93e229ddbba4e8bb1c59719b6ebdcfc74d73f57ed946e936b5659783c199395bd2595458958edde6674bf08b3b650a8aeaa5507053b3f6ee7aedf16f55b849111535ca68ea11a5827551cba28023e230db7a209c763743ea22be0948ecf03d98ed447f66ecb97c0a525eb3b469779f2417f2082c4244b50936a9cb215745c71f3c27c98220f76395ba22a2f921a87655237977febd8b9a1564333af0cdf8e749bce0dd
@@ -2590,7 +2579,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-18 19:51:01'
+  CreationTimestamp: '2022-05-18 22:51:01'
   Imphash: b3e26c5e0de2d01597dca208ef27cc38
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsIO3.sys
@@ -2664,9 +2653,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -2760,7 +2748,7 @@ KnownVulnerableSamples:
       Entropy: 2.9464393446710155
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-12-15 00:10:32'
+  CreationTimestamp: '2020-12-15 03:10:32'
   Imphash: f0cd7cce1d03cf9df1b8266701f92b46
   LoadsDespiteHVCI: 'TRUE'
 - Filename: asio.sys
@@ -2862,9 +2850,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2915,7 +2903,7 @@ KnownVulnerableSamples:
       Entropy: 4.455848230056508
       Virtual Size: '0x204'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-04-06 00:21:08'
+  CreationTimestamp: '2009-04-06 03:21:08'
   Imphash: 12befc0a82dcb0585359d335ed47af19
   LoadsDespiteHVCI: 'FALSE'
 - Filename: AsIO3_64.sys
@@ -2995,9 +2983,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
-        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
+        City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
       ValidTo: '2024-10-22 23:59:59'
       Signature: 1a8b6fd4e11cec34a3dfea314f0d59c6f41c56f76e1ac51f68e0285f1abdbda9e22628939dbd7acdf890d8ff3c7c4fff180c624b8434c6536bb61f1ff459d48a14c001d9d40ff1587cf64ce82edee2a24da8d80cd240e2af6d0e1c61aab24ce95f9c8ef50eeb0e153a343c1279fe6a003c44f3bd3ffa75ffbe314fc13bb36a9bbb3cea6026f5cb582992b016059074e4fcd8c16d4c5e8750bc9a196f94525317febcddb2d0121a235bb95136a0e4fc25611cd2915f4b488b66888168b90824e171d3214480c99fadb7b6c89cafc500eee468cb7faa9c1c1526d224ff389de012480480ced98831c324b129f2df3d3493d002ec8d4725e00eda33994f82493505861f61035c625d1c9ce2c7363799d3f1df9b17712b43cbf4c2027b54c796cbaca6b1523d028291e07774168a976ee3c879c850c1aaf65b1cec5c6dcb445487ab11b3967b8dd7726fe0dc529f7d624346a996adfd9dc6aab808edd9836a93e229ddbba4e8bb1c59719b6ebdcfc74d73f57ed946e936b5659783c199395bd2595458958edde6674bf08b3b650a8aeaa5507053b3f6ee7aedf16f55b849111535ca68ea11a5827551cba28023e230db7a209c763743ea22be0948ecf03d98ed447f66ecb97c0a525eb3b469779f2417f2082c4244b50936a9cb215745c71f3c27c98220f76395ba22a2f921a87655237977febd8b9a1564333af0cdf8e749bce0dd
@@ -3042,7 +3029,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-17 04:12:10'
+  CreationTimestamp: '2022-02-17 07:12:10'
   Imphash: b3e26c5e0de2d01597dca208ef27cc38
   LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
@@ -3051,7 +3038,7 @@ KnownVulnerableSamples:
     SHA256: c3e3719ca592ba65a67f594ec1a08d0d7ad724b088be77d48cb33627c56f4614
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-06-27 22:19:38'
+  CreationTimestamp: '2010-06-28 01:19:38'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3093,7 +3080,7 @@ KnownVulnerableSamples:
   SHA256: 2da330a2088409efc351118445a824f11edbe51cf3d653b298053785097fe40e
   Sections:
     .text:
-      Entropy: 6.108859458208726
+      Entropy: 6.108859458208728
       Virtual Size: '0xd86'
     .rdata:
       Entropy: 4.337980114178664
@@ -3174,9 +3161,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3214,7 +3201,7 @@ KnownVulnerableSamples:
     SHA256: 9dcfd796e244d0687cc35eac9538f209f76c6df12de166f19dbc7d2c47fb16b3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 02:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3259,7 +3246,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268312
+      Entropy: 4.313686441268313
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -3337,9 +3324,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3395,7 +3382,7 @@ KnownVulnerableSamples:
     SHA256: 7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-08-02 19:47:59'
+  CreationTimestamp: '2010-08-02 22:47:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3518,9 +3505,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3558,7 +3545,7 @@ KnownVulnerableSamples:
     SHA256: 191689c53195dbe828f406b206cb167dcd4671ecdab32b80e01c885f706a6baf
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-08-23 18:53:02'
+  CreationTimestamp: '2010-08-23 21:53:02'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3681,9 +3668,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3721,7 +3708,7 @@ KnownVulnerableSamples:
     SHA256: 19c74ea0e0baf04820e5642bd2fa224158801ed966be1041539e3c55bd65c471
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-04-06 00:21:08'
+  CreationTimestamp: '2009-04-06 03:21:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3786,7 +3773,7 @@ KnownVulnerableSamples:
     SHA256: 9dcfd796e244d0687cc35eac9538f209f76c6df12de166f19dbc7d2c47fb16b3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 02:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3832,7 +3819,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268312
+      Entropy: 4.313686441268313
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -3895,7 +3882,7 @@ KnownVulnerableSamples:
     SHA256: c1b41d6b91448e2409bb2f4fbf4aeb952adf373d0decc9d052277b89ba401407
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-08-03 00:02:32'
+  CreationTimestamp: '2009-08-03 03:02:32'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4026,9 +4013,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4066,7 +4053,7 @@ KnownVulnerableSamples:
     SHA256: 80599708ce61ec5d6dcfc5977208a2a0be2252820a88d9ba260d8cdf5dc7fbe4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-12-21 00:55:21'
+  CreationTimestamp: '2005-12-21 03:55:21'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4197,9 +4184,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4237,7 +4224,7 @@ KnownVulnerableSamples:
     SHA256: 739c11fdb8673ab5b78f1a874daf5ba3faddb7910a6d4e0cc49abd8b8537333f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-08-03 00:03:16'
+  CreationTimestamp: '2009-08-03 03:03:16'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4356,9 +4343,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4396,7 +4383,7 @@ KnownVulnerableSamples:
     SHA256: 9dcfd796e244d0687cc35eac9538f209f76c6df12de166f19dbc7d2c47fb16b3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 02:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4442,7 +4429,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268312
+      Entropy: 4.313686441268313
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -4458,9 +4445,8 @@ KnownVulnerableSamples:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-01-08 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 084206939546981ffc713f3c3e53c49e5336fc644a0afef36e591fd0aa4ad0ae00b4d3b3939a7a19fbfaa95947c169841788886a96482e731770a4f932c19b90ec34bb3fcaf883ca940c960043e8ff31fefb05791bf1be967b527c147f8b834b0bed7c6ded0877736ffffdc8a9f17f34e7f9cbb64f08cb20c98f56c617a31ec6f02a7aa632d6161ff02a62cc491fc8577442352a03f15a03a10408f9247f5ca176f2c928226a1b3cc9ae2a474ed46e26b38d8b57b740b1e9e1420c9a978d1469ae9710186a2d94558b493617806688c5418c386d09552da2a9757fd75f16640c53331595c49077ad2a7e46662c9ce77f612faa06b8968887d9e27c6679898bdf
@@ -4521,7 +4507,7 @@ KnownVulnerableSamples:
     SHA256: 92edd48dfac025d4069eb6491b9730d9d131b77cceaa480af9b3c32bc8c5e3a9
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 02:54:43'
+  CreationTimestamp: '2012-08-22 05:54:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4643,7 +4629,7 @@ KnownVulnerableSamples:
     SHA256: 9dcfd796e244d0687cc35eac9538f209f76c6df12de166f19dbc7d2c47fb16b3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 02:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4689,7 +4675,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268312
+      Entropy: 4.313686441268313
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -4752,7 +4738,7 @@ KnownVulnerableSamples:
     SHA256: 906d8412b357379db9512e3f584fcda1f788acc1337e5b4d4eff5e6fa59324a6
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2007-12-17 01:11:49'
+  CreationTimestamp: '2007-12-17 04:11:49'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4874,9 +4860,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

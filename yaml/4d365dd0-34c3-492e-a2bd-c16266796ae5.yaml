@@ -51,13 +51,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Arthur Liberman
+  Description: ALSysIO64
+  Product: ALSysIO64
+  ProductVersion: 2.1.0.0
+  FileVersion: 2.1.0.0
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: ALSysIO64.sys
   Imphash: 3a277d9c3f9238195ba009d38793f1c9
   Authentihash:
     MD5: 6d94a4291a06775ebb473f592e3fb55a
@@ -75,7 +75,7 @@ KnownVulnerableSamples:
       Entropy: 4.7880748949972505
       Virtual Size: '0x93c'
     .data:
-      Entropy: 1.948988784866942
+      Entropy: 1.9489887848669418
       Virtual Size: '0x51c'
     .pdata:
       Entropy: 4.3395956370100155
@@ -93,9 +93,9 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-10-18 07:38:31'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2022-10-18 10:38:31'
+  InternalName: ALSysIO64.sys
+  Copyright: Copyright (C) 2003-2022 Arthur Liberman
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -182,13 +182,13 @@ KnownVulnerableSamples:
     MD5: 86be5dbedcfcd517b9b602436cd985eb
     SHA1: 7a9981f1bca18e2f624fe806c753a14dfd970c4e
     SHA256: ca829178d01990c8d1d6a681dee074a53f0dd873fd8eef6f6161c682449ec8c5
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-03-05 13:50:34'
+  Company: Arthur Liberman
+  Copyright: Copyright (C) 2003-2009 Arthur Liberman
+  CreationTimestamp: '2013-03-05 16:50:34'
   Date: ''
-  Description: ''
+  Description: ALSysIO
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 2.0.8.0
   Filename: ALSysIO64.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -221,13 +221,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: ALSysIO.sys
   MD5: 13dda15ef67eb265869fc371c72d6ef0
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: ALSysIO.sys
+  Product: ALSysIO
+  ProductVersion: 2.0.8.0
   Publisher: Artur Liberman
   RichPEHeaderHash:
     MD5: fa032a9e33f5f3a4125cfa9c178850f9
@@ -352,13 +352,13 @@ KnownVulnerableSamples:
     MD5: 966e1c16e1aa07044b733c5589f40fd7
     SHA1: 7027b399daf84a7c24dd010c2806bf6048a230bd
     SHA256: ac22a7cce3795e58c974056a86a06444e831d52185f9f37db88c65e14cd5bb75
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-02-19 14:24:23'
+  Company: Arthur Liberman
+  Copyright: Copyright (C) 2003-2009 Arthur Liberman
+  CreationTimestamp: '2016-02-19 17:24:23'
   Date: ''
-  Description: ''
+  Description: ALSysIO
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 2.0.9.0
   Filename: ALSysIO64.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -391,13 +391,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: ALSysIO.sys
   MD5: ba5f0f6347780c2ed911bbf888e75bef
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: ALSysIO.sys
+  Product: ALSysIO
+  ProductVersion: 2.0.9.0
   Publisher: Artur Liberman
   RichPEHeaderHash:
     MD5: fa032a9e33f5f3a4125cfa9c178850f9
@@ -523,13 +523,13 @@ KnownVulnerableSamples:
     MD5: 7b9763c297936ce055a04790362cc75f
     SHA1: 530dd2863a09dc57801d62551c48eb9e48476fe8
     SHA256: 1c55b6620216c195ce24ef21e6ab7e181146fccf17c06606c4cd419fe3e45bd7
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2019-02-01 09:48:41'
+  Company: Arthur Liberman
+  Copyright: Copyright (C) 2003-2019 Arthur Liberman
+  CreationTimestamp: '2019-02-01 12:48:41'
   Date: ''
-  Description: ''
+  Description: ALSysIO64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 2.0.11.0
   Filename: ALSysIO64.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -567,13 +567,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: ALSysIO64.sys
   MD5: afc2448b4080f695e76e059a96958cab
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: ALSysIO64.sys
+  Product: ALSysIO64
+  ProductVersion: 2.0.11.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: b5b5bc6c59d1c8f098299b0c74a28bcd
@@ -601,7 +601,7 @@ KnownVulnerableSamples:
       Entropy: 5.16258604036066
       Virtual Size: '0x49c'
     .rsrc:
-      Entropy: 3.326854943752281
+      Entropy: 3.3268549437522807
       Virtual Size: '0x3a0'
     .reloc:
       Entropy: 1.584962500721156
@@ -628,9 +628,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=IL, BUSINESS_CATEGORY=Business Entity,
-        serialNumber=307609677, C=IL, L=Ramat Gan, O=ALCPU (Arthur Liberman), CN=ALCPU
-        (Arthur Liberman)
+    - Subject: ??=IL, ??=Business Entity, serialNumber=307609677, C=IL, L=Ramat Gan,
+        O=ALCPU (Arthur Liberman), CN=ALCPU (Arthur Liberman)
       ValidFrom: '2017-06-23 00:00:00'
       ValidTo: '2019-12-31 12:00:00'
       Signature: 56c962d4f516afe5fef5e2e0cc61d68e55253304491c860d686c4efb87705d2bffe8a76f5eac43cd653b71e33ea5ea4b271ba172274bc9dd56b2f4080b5ccdd5e9fabb0aafc281ff8eff90238fe3ac8c1ad0dade04b1fdba18c56f692db61d9c62111866bd91d9212548622002faf0858452e484e272798446ba1afe0667846a532734e12b891a69d27f1e46e241093893f3eb132af927f2c01dc2f420061e29485a84deec9aca85d2b7bd469343764ccd2e70b76bb3845017d600ab5724e2ddf6963ce1e4d94dc19f40aa8f1ee96c2ad17a7c315b9cf7c636436ae3b91524266d3aa917b590cd4ee8e8967e82cbafebb31b5c6f7905c5a21752ef1e6b453ed6

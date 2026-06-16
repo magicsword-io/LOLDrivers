@@ -92,9 +92,8 @@ KnownVulnerableSamples:
         SHA1: e35ef08d884f0a0ade2f75e96301ce6230f213a8
         SHA256: 64a6db64ed2570d76acbc8c25fdee1539be8c3e9494b75b6d7d3faf344703dad
         SHA384: 6e5541ae9113bc5935faaac2e2433b565fdaf40cd9ce97af7273f883811b0d8e1ca760218bff3816ab612f85870962cb
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -188,7 +187,7 @@ KnownVulnerableSamples:
       Entropy: 2.9464393446710155
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-05-13 05:36:36'
+  CreationTimestamp: '2019-05-13 08:36:36'
   Imphash: e0813a780309a0af84b605d95bd194e4
   LoadsDespiteHVCI: 'TRUE'
 - Filename: AsUpIO.sys
@@ -261,9 +260,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=23638777, C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK
-        Computer Inc.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
       ValidTo: '2022-01-11 12:00:00'
       Signature: 646eaa59a80117077ed7d80227a6c3be77f3d9acdc0927d1299369e5636dbb773b61e91390d181178f88e5b92c7cc0c1b851541ee781380f7ac0425fea8a292a9cf93c7f851701db11dd13c8c0e97fd254839b81fdfd7e0a9a520c43186f4c834daa920b8a8e7ddd0048a55a5b7034675394a914b91258751c59b6d9d60ce1d17565fbdcd99311bcbe7e386807ecc186248ddbbb4bae2e4192a0509d661cd307c28a79c6b914854728463b7b39515869858c4975e0fbdd74188afa81c729682705f73bf80e839897b1d61d8deeabb53744e938b4b918fced39ca7dff3076c7f2dca4ddda8621a81fc493480456966901e29041821b116294bc98b445ebb05c33
@@ -357,7 +355,7 @@ KnownVulnerableSamples:
       Entropy: 3.0464393446710156
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-12 23:15:00'
+  CreationTimestamp: '2019-06-13 02:15:00'
   Imphash: 51780bba04121d6be13f69de08721445
   LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
@@ -366,7 +364,7 @@ KnownVulnerableSamples:
     SHA256: 70870e20f563899e4f05be2d0049cb495552b409ca7f4729a335bcbfffc3f47c
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-10-20 00:35:13'
+  CreationTimestamp: '2011-10-20 03:35:13'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -489,9 +487,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -529,7 +527,7 @@ KnownVulnerableSamples:
     SHA256: 7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-08-02 19:47:59'
+  CreationTimestamp: '2010-08-02 22:47:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -652,9 +650,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

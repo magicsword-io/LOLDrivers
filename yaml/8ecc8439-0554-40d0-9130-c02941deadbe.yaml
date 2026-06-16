@@ -35,16 +35,16 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
-- Company: ''
+- Company: Windows (R) 2003 DDK 3790 provider
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Generic Port I/O for Win32
+  FileVersion: 5.0.2195.1711
   Filename: ''
   MD5: 41ce6b172542a9a227e34a45881e1d2a
   MachineType: I386
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2003 DDK 3790 provider
+  ProductVersion: 5.0.2195.1711
   Publisher: ''
   SHA1: dd2b90c9796237036ac7136a172d96274dea14c8
   SHA256: 3c0a36990f7eef89b2d5f454b6452b6df1304609903f31f475502e4050241dd8
@@ -78,9 +78,9 @@ KnownVulnerableSamples:
       Entropy: 4.33595482765136
       Virtual Size: '0xea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-01 02:36:49'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2005-08-01 05:36:49'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 2005
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -173,9 +173,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -206,16 +206,16 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-- Company: ''
+- Company: Windows (R) 2000 DDK provider
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Generic Port I/O
+  FileVersion: 5.00.2195.1620
   Filename: ''
   MD5: 782f165b1d2db23f78e82fee0127cc14
   MachineType: I386
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2000 DDK driver
+  ProductVersion: 5.00.2195.1620
   Publisher: ''
   SHA1: 717669a1e2380cb61cc4e34618e118cc9cabbcd0
   SHA256: 6f806a9de79ac2886613c20758546f7e9597db5a20744f7dd82d310b7d6457d0
@@ -237,7 +237,7 @@ KnownVulnerableSamples:
       Entropy: 2.339209208802996
       Virtual Size: '0xa4'
     .data:
-      Entropy: 0.0
+      Entropy: -0.0
       Virtual Size: '0x1'
     INIT:
       Entropy: 4.911897101597002
@@ -249,9 +249,9 @@ KnownVulnerableSamples:
       Entropy: 3.686715655862542
       Virtual Size: '0x62'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2002-04-22 09:54:09'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2002-04-22 12:54:09'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 1981-1999
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -274,16 +274,16 @@ KnownVulnerableSamples:
   - WRITE_PORT_USHORT
   Signatures: {}
   LoadsDespiteHVCI: 'TRUE'
-- Company: ''
+- Company: Windows (R) 2003 DDK 3790 provider
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Generic Port I/O for Win64
+  FileVersion: 5.0.2195.1711
   Filename: ''
   MD5: 4ca0dba9e224473d664c25e411f5a3bd
   MachineType: AMD64
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2003 DDK 3790 provider
+  ProductVersion: 5.0.2195.1711
   Publisher: ''
   SHA1: c22dc62e10378191840285814838fe9ed1af55d7
   SHA256: 71423a66165782efb4db7be6ce48ddb463d9f65fd0f266d333a6558791d158e5
@@ -317,9 +317,9 @@ KnownVulnerableSamples:
       Entropy: 3.419986029858509
       Virtual Size: '0x450'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-01 02:36:00'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2005-08-01 05:36:00'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 2005
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -398,9 +398,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -431,16 +431,16 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-- Company: ''
+- Company: Windows (R) 2003 DDK 3790 provider
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Generic Port I/O for Win64
+  FileVersion: 5.0.2195.1711
   Filename: ''
   MD5: 49832b4f726cdff825257bee33ad8451
   MachineType: AMD64
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2003 DDK 3790 provider
+  ProductVersion: 5.0.2195.1711
   Publisher: ''
   SHA1: 1bd4ae9a406bf010e34cdd38e823f732972b18e3
   SHA256: 8fe429c46fedbab8f06e5396056adabbb84a31efef7f9523eb745fc60144db65
@@ -474,9 +474,9 @@ KnownVulnerableSamples:
       Entropy: 3.419986029858509
       Virtual Size: '0x450'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-01 02:36:00'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2005-08-01 05:36:00'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 2005
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -496,34 +496,17 @@ KnownVulnerableSamples:
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-      ValidFrom: '2003-12-04 00:00:00'
-      ValidTo: '2013-12-03 23:59:59'
-      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-      Version: 3
-      CertificateType: CA
-      IsCodeSigning: false
-      IsCA: true
-      TBS:
-        MD5: 518d2ea8a21e879c942d504824ac211c
-        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
   LoadsDespiteHVCI: 'FALSE'
-- Company: ''
+- Company: Windows (R) 2000 DDK provider
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Generic Port I/O
+  FileVersion: 5.00.2195.1
   Filename: ''
   MD5: ab81264493c218a0e875a0d50104ac9f
   MachineType: I386
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2000 DDK driver
+  ProductVersion: 5.00.2195.1
   Publisher: ''
   SHA1: f70989f8b17971f13d45ee537e4ce98e93acbbaf
   SHA256: a29093d4d708185ba8be35709113fb42e402bbfbf2960d3e00fd7c759ef0b94e
@@ -545,21 +528,21 @@ KnownVulnerableSamples:
       Entropy: 2.4380962642117003
       Virtual Size: '0xa4'
     .data:
-      Entropy: 0.0
+      Entropy: -0.0
       Virtual Size: '0x1'
     INIT:
       Entropy: 4.911897101597002
       Virtual Size: '0x1be'
     .rsrc:
-      Entropy: 3.3870288743384833
+      Entropy: 3.387028874338483
       Virtual Size: '0x3a0'
     .reloc:
       Entropy: 3.708569833924545
       Virtual Size: '0x62'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2000-05-26 00:03:37'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2000-05-26 03:03:37'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 1981-1999
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -582,16 +565,16 @@ KnownVulnerableSamples:
   - WRITE_PORT_ULONG
   Signatures: {}
   LoadsDespiteHVCI: 'TRUE'
-- Company: ''
+- Company: Windows (R) 2000 DDK provider
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Generic Port I/O
+  FileVersion: 5.00.2195.1
   Filename: ''
   MD5: bc71da7c055e3172226090ba5d8e2248
   MachineType: I386
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2000 DDK driver
+  ProductVersion: 5.00.2195.1
   Publisher: ''
   SHA1: bfff0073c936b9a7e2ad6848deb6f9bf03205488
   SHA256: c490d6c0844f59fdb4aa850a06e283fbf5e5b6ac20ff42ead03d549d8ae1c01b
@@ -613,21 +596,21 @@ KnownVulnerableSamples:
       Entropy: 2.4380962642117003
       Virtual Size: '0xa4'
     .data:
-      Entropy: 0.0
+      Entropy: -0.0
       Virtual Size: '0x1'
     INIT:
       Entropy: 4.911897101597002
       Virtual Size: '0x1be'
     .rsrc:
-      Entropy: 3.3870288743384833
+      Entropy: 3.387028874338483
       Virtual Size: '0x3a0'
     .reloc:
       Entropy: 3.708569833924545
       Virtual Size: '0x62'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2000-05-26 00:03:37'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2000-05-26 03:03:37'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 1981-1999
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -650,16 +633,16 @@ KnownVulnerableSamples:
   - WRITE_PORT_ULONG
   Signatures: {}
   LoadsDespiteHVCI: 'TRUE'
-- Company: ''
+- Company: Windows (R) 2000 DDK provider
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Generic Port I/O
+  FileVersion: 5.00.2195.1
   Filename: ''
   MD5: 843e39865b29bb3df825bd273f195a98
   MachineType: I386
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: rtport.sys
+  Product: Windows (R) 2000 DDK driver
+  ProductVersion: 5.00.2195.1
   Publisher: ''
   SHA1: 3fd5cd30085450a509eaa6367af26f6c4b9741b6
   SHA256: e3dbafce5ad2bf17446d0f853aeedf58cc25aa1080ab97e22375a1022d6acb16
@@ -681,21 +664,21 @@ KnownVulnerableSamples:
       Entropy: 2.4380962642117003
       Virtual Size: '0xa4'
     .data:
-      Entropy: 0.0
+      Entropy: -0.0
       Virtual Size: '0x1'
     INIT:
       Entropy: 4.911897101597002
       Virtual Size: '0x1be'
     .rsrc:
-      Entropy: 3.3870288743384833
+      Entropy: 3.387028874338483
       Virtual Size: '0x3a0'
     .reloc:
       Entropy: 3.708569833924545
       Virtual Size: '0x62'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2000-05-26 00:03:37'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2000-05-26 03:03:37'
+  InternalName: rtport.sys
+  Copyright: Copyright (C) Microsoft Corp. 1981-1999
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -718,16 +701,16 @@ KnownVulnerableSamples:
   - WRITE_PORT_ULONG
   Signatures: {}
   LoadsDespiteHVCI: 'TRUE'
-- Company: ''
+- Company: REALTEK Semiconductor Corp.
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: REALTEK Port I/O
+  FileVersion: 1.0.01.0000
   Filename: ''
   MD5: 3c9f9c1b802f66cf03cbe82dec2bd454
   MachineType: I386
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: RTPORT.SYS
+  Product: REALTEK Port I/O
+  ProductVersion: 1.0.01.0000
   Publisher: ''
   SHA1: 8b037d7a7cb612eabd8e20a9ce93afd92a6db2c2
   SHA256: ff322cd0cc30976f9dbdb7a3681529aeab0de7b7f5c5763362b02c15da9657a1
@@ -749,7 +732,7 @@ KnownVulnerableSamples:
       Entropy: 2.4380962642117003
       Virtual Size: '0xa4'
     .data:
-      Entropy: 0.0
+      Entropy: -0.0
       Virtual Size: '0x1'
     INIT:
       Entropy: 4.911897101597002
@@ -761,9 +744,9 @@ KnownVulnerableSamples:
       Entropy: 3.732353824331908
       Virtual Size: '0x64'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2001-03-08 17:15:23'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2001-03-08 20:15:23'
+  InternalName: RTPORT.SYS
+  Copyright: Copyright (c) 1999-2001 REALTEK Semiconductor Corp.
   Imports:
   - ntoskrnl.exe
   - HAL.dll

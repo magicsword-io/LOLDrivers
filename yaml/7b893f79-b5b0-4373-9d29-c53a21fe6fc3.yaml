@@ -118,9 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -171,7 +171,7 @@ KnownVulnerableSamples:
       Entropy: 4.880215733396521
       Virtual Size: '0x262'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-11-09 01:11:41'
+  CreationTimestamp: '2006-11-09 04:11:41'
   Imphash: 7a4a0df0bde1f8da6547a580d5bee7c3
   LoadsDespiteHVCI: 'FALSE'
 - Filename: WinFlash64.sys
@@ -271,9 +271,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -324,7 +324,7 @@ KnownVulnerableSamples:
       Entropy: 4.456575761689918
       Virtual Size: '0x1da'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-11-22 17:14:16'
+  CreationTimestamp: '2005-11-22 20:14:16'
   Imphash: e4f1a9234e4ea105321909d4c0e597ae
   LoadsDespiteHVCI: 'FALSE'
 - Filename: WinFlash64.sys
@@ -430,9 +430,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -483,6 +483,6 @@ KnownVulnerableSamples:
       Entropy: 4.9483973408107955
       Virtual Size: '0x304'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-06-23 23:53:27'
+  CreationTimestamp: '2009-06-24 02:53:27'
   Imphash: 8c3af6c25ab40c4daefb4f836d12e1c8
   LoadsDespiteHVCI: 'FALSE'

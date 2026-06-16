@@ -37,13 +37,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: LogMeIn, Inc.
+  Description: LogMeIn Kernel Information Provider
+  Product: LogMeIn
+  ProductVersion: 11.1.0.3220
+  FileVersion: 11.1.0.3220
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: LMIinfo.sys
   Imphash: 8f52e36711c80bb9d7e30995e0092e83
   Authentihash:
     MD5: 99b6f355ca0fb587ccb303e88bd73785
@@ -76,9 +76,9 @@ KnownVulnerableSamples:
       Entropy: 2.3438548967005404
       Virtual Size: '0x20'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-10 08:30:08'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2017-01-10 11:30:08'
+  InternalName: LMIinfo.sys
+  Copyright: "Copyright \xA9 2003-2017 LogMeIn, Inc. Patented and patents pending."
   Imports:
   - ntoskrnl.exe
   - WDFLDR.SYS
@@ -133,10 +133,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=US,
-        JURISDICTION_OF_INCORPORATION_SP=Delaware, serialNumber=3830661, STREET_ADDRESS=320
-        Summer Street, postalCode=02210, C=US, ST=Massachusetts, L=Boston, O=LogMeIn,
-        Inc., CN=LogMeIn, Inc.
+    - Subject: ??=Private Organization, ??=US, ??=Delaware, serialNumber=3830661,
+        ??=320 Summer Street, postalCode=02210, C=US, ST=Massachusetts, L=Boston,
+        O=LogMeIn, Inc., CN=LogMeIn, Inc.
       ValidFrom: '2015-06-18 00:00:00'
       ValidTo: '2018-06-22 12:00:00'
       Signature: 6a0e23b60625614e2b9d63745730ab1055883fd2e09d3ed78bb7723882c8f7d67be6deb473463ebbdf4996afae195462426a3f57f9d37b9d8182499f3416a24f2fd9f6da7e3cef9215dfe3c889f47cce584eaf5dd2116da627b91d4de5705951c8c9807fc21f899c05f9ed97a655ccc0ae9b311f85715ae8510c213cb05139929690950e9155386da88d1b1158ae20699db1116a988a6b0bdc98b246767e71b1ec40df7a5f2d7e3b17bb4cb4de8da18d77c58b938f4db8f197bd9d1313cf5711f222a16add8a5cb7c576bd26ec4abcff8701766a32f9bd8d89b9a9f875908cfc34a0d3d216729ebb5fee7e73b1b036caae620a80e6bd921425cc59dc3e692fc4
@@ -215,14 +214,14 @@ KnownVulnerableSamples:
     MD5: 99b6f355ca0fb587ccb303e88bd73785
     SHA1: 0ae6274d4f95b64415c6a5aefe3b5d6be8d1e4a4
     SHA256: e466e2bf4e190edd8717f6e8466b77a66b3304f5ae1458ca4400025a869fdfd1
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: LogMeIn Kernel Information Provider
+  Company: LogMeIn, Inc.
+  InternalName: LMIinfo.sys
+  OriginalFilename: LMIinfo.sys
+  FileVersion: 11.1.0.3220
+  Product: LogMeIn
+  ProductVersion: 11.1.0.3220
+  Copyright: "Copyright \xA9 2003-2017 LogMeIn, Inc. Patented and patents pending."
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -278,10 +277,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=US,
-        JURISDICTION_OF_INCORPORATION_SP=Delaware, serialNumber=3830661, STREET_ADDRESS=320
-        Summer Street, postalCode=02210, C=US, ST=Massachusetts, L=Boston, O=LogMeIn,
-        Inc., CN=LogMeIn, Inc.
+    - Subject: ??=Private Organization, ??=US, ??=Delaware, serialNumber=3830661,
+        ??=320 Summer Street, postalCode=02210, C=US, ST=Massachusetts, L=Boston,
+        O=LogMeIn, Inc., CN=LogMeIn, Inc.
       ValidFrom: '2015-06-18 00:00:00'
       ValidTo: '2018-06-22 12:00:00'
       Signature: 6a0e23b60625614e2b9d63745730ab1055883fd2e09d3ed78bb7723882c8f7d67be6deb473463ebbdf4996afae195462426a3f57f9d37b9d8182499f3416a24f2fd9f6da7e3cef9215dfe3c889f47cce584eaf5dd2116da627b91d4de5705951c8c9807fc21f899c05f9ed97a655ccc0ae9b311f85715ae8510c213cb05139929690950e9155386da88d1b1158ae20699db1116a988a6b0bdc98b246767e71b1ec40df7a5f2d7e3b17bb4cb4de8da18d77c58b938f4db8f197bd9d1313cf5711f222a16add8a5cb7c576bd26ec4abcff8701766a32f9bd8d89b9a9f875908cfc34a0d3d216729ebb5fee7e73b1b036caae620a80e6bd921425cc59dc3e692fc4
@@ -378,6 +376,6 @@ KnownVulnerableSamples:
       Entropy: 2.3438548967005404
       Virtual Size: '0x20'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-10 08:30:08'
+  CreationTimestamp: '2017-01-10 11:30:08'
   Imphash: 8f52e36711c80bb9d7e30995e0092e83
   LoadsDespiteHVCI: 'TRUE'

@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 99efb8e481f1832bba9f4c16a09722b0
     SHA1: 74747434945444864206dad33d5d5cb80c21d142
     SHA256: af7b9e3dca8fd4f9eb548bd06cf9f14dbce9f947fc375064aa90b47e7ee8940c
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: PowerTool
+  Company: PowerTool
+  InternalName: kEvP64.sys
+  OriginalFilename: kEvP64.sys
+  FileVersion: '1.0.1.0 built by: WinDDK'
+  Product: PowerTool
+  ProductVersion: 1.0.1.0
+  Copyright: PowerTool
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -194,9 +194,7 @@ KnownVulnerableSamples:
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
         SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: "C=CN, ST=Beijing, L=Beijing, O=\u5317\u4EAC\u534E\u6797\u4FDD\u8F6F\
-        \u4EF6\u6280\u672F\u6709\u9650\u516C\u53F8, OU=RD, CN=\u5317\u4EAC\u534E\u6797\
-        \u4FDD\u8F6F\u4EF6\u6280\u672F\u6709\u9650\u516C\u53F8"
+    - Subject: C=CN, ST=Beijing, L=Beijing, O=, OU=RD, CN=
       ValidFrom: '2015-07-27 00:00:00'
       ValidTo: '2016-08-25 23:59:59'
       Signature: cb382c80e762f190213e6d4d24123b8e2851f2775f1df964e29655c927f1395c81bd01aa4106ceba3895b1db2744a41d4b0bc9b4305f7f5826764c038808d14dd7d3429ffbf6cbac8462d86c176c36ca145a8b9298eed05a55f84731eff3f5e98f6d4d0d7bda39e2a1e8854362dff3bd1b9be33f4f34f97e1e74354f5afd2689260230c61481f8cc6bbba9659f47dd114e9991e9c0d9cb91453001dd604edd328454ecb389c37ebbfb4ed2477a9abbca65723363ffd0814ddff8248ff33129df16bcd5a47c4140d1ff4d245c2b3f2cbf39ca68fcba6377cfb455d3a564ebe8af38855b4482176763e1d9a63777a1112972edf7f0b7ebaecde68653b23acd229d
@@ -284,7 +282,7 @@ KnownVulnerableSamples:
       Entropy: 1.3741854163060885
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-20 23:56:08'
+  CreationTimestamp: '2015-12-21 02:56:08'
   Imphash: f5030145594c486434040aa2636a5dde
   LoadsDespiteHVCI: 'FALSE'
 - Filename: kEvP64.sys
@@ -295,14 +293,14 @@ KnownVulnerableSamples:
     MD5: c1e7d7652812e872d65dae145650a273
     SHA1: 80377b08aee1125170652757852eaacae5c2a62a
     SHA256: 23ab90e1990b4c5250f7bacbc7ff90e989583a2ccacf4ba333255f1d385d0ad8
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: PowerTool
+  Company: PowerTool
+  InternalName: kEvP64.sys
+  OriginalFilename: kEvP64.sys
+  FileVersion: '1.0.1.0 built by: WinDDK'
+  Product: PowerTool
+  ProductVersion: 1.0.1.0
+  Copyright: PowerTool
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -451,9 +449,7 @@ KnownVulnerableSamples:
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
         SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: "C=CN, ST=Beijing, L=Beijing, O=\u5317\u4EAC\u534E\u6797\u4FDD\u8F6F\
-        \u4EF6\u6280\u672F\u6709\u9650\u516C\u53F8, OU=RD, CN=\u5317\u4EAC\u534E\u6797\
-        \u4FDD\u8F6F\u4EF6\u6280\u672F\u6709\u9650\u516C\u53F8"
+    - Subject: C=CN, ST=Beijing, L=Beijing, O=, OU=RD, CN=
       ValidFrom: '2015-07-27 00:00:00'
       ValidTo: '2016-08-25 23:59:59'
       Signature: cb382c80e762f190213e6d4d24123b8e2851f2775f1df964e29655c927f1395c81bd01aa4106ceba3895b1db2744a41d4b0bc9b4305f7f5826764c038808d14dd7d3429ffbf6cbac8462d86c176c36ca145a8b9298eed05a55f84731eff3f5e98f6d4d0d7bda39e2a1e8854362dff3bd1b9be33f4f34f97e1e74354f5afd2689260230c61481f8cc6bbba9659f47dd114e9991e9c0d9cb91453001dd604edd328454ecb389c37ebbfb4ed2477a9abbca65723363ffd0814ddff8248ff33129df16bcd5a47c4140d1ff4d245c2b3f2cbf39ca68fcba6377cfb455d3a564ebe8af38855b4482176763e1d9a63777a1112972edf7f0b7ebaecde68653b23acd229d
@@ -541,6 +537,6 @@ KnownVulnerableSamples:
       Entropy: 1.3741854163060885
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-08 18:11:57'
+  CreationTimestamp: '2015-12-08 21:11:57'
   Imphash: f5030145594c486434040aa2636a5dde
   LoadsDespiteHVCI: 'FALSE'

@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 8df54f216312cc14d959dcb858702b01
     SHA1: 7f921e6701f0cc33c6852ab7f79455b9ad9c8eac
     SHA256: c10c70be4e36fa9c98a4796c2b03db86398e2b07018550b7f0d58edabc553ad2
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-05-11 00:36:47'
+  Company: WiseCleaner.com
+  Copyright: "Copyright \xA9 2015"
+  CreationTimestamp: '2015-05-11 03:36:47'
   Date: ''
-  Description: ''
+  Description: WiseUnlo
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.1.12
   Filename: ''
   ImportedFunctions:
   - IoDeleteDevice
@@ -75,14 +75,14 @@ KnownVulnerableSamples:
   - IoCreateDevice
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: WiseUnlo.sys
   MD5: 33b3842172f21ba22982bfb6bffbda27
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: WiseUnlo.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: WiseUnlo
+  ProductVersion: 1.0.1.12
   Publisher: ''
   RichPEHeaderHash:
     MD5: c35062e4107cf5b1678dc60ad794c5bb
@@ -179,13 +179,13 @@ KnownVulnerableSamples:
     MD5: 4e4d97955557f085f4e1fe4cbba82321
     SHA1: 131a7703dbaf36bcf7034e8690a7046e9eb52d2b
     SHA256: 8a844a8d993db0ee1159b096aee959e32bb9155edd9167b1e6aad2e4019202dd
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2017-06-29 00:22:02'
+  Company: WiseCleaner.com
+  Copyright: "Copyright \xA9 2015"
+  CreationTimestamp: '2017-06-29 03:22:02'
   Date: ''
-  Description: ''
+  Description: WiseUnlo
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.2.13
   Filename: ''
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -212,14 +212,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: WiseUnlo.sys
   MD5: e626956c883c7ff3aeb0414570135a58
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: WiseUnlo.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: WiseUnlo
+  ProductVersion: 1.0.2.13
   Publisher: ''
   RichPEHeaderHash:
     MD5: 90cb984cab66f2e7b36cce65ed28b399
@@ -282,11 +282,10 @@ KnownVulnerableSamples:
         SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
         SHA256: 04bc415adcb4ef7df32b9dfe199d92a4078cbd132fd5173961211e7f75385491
         SHA384: a6c44d9022b3fb3e679acfa266bd26c0bf6a20bb244ef486c04b55539b10ddaa4894c4e0420dfdd025850c5094bb23d1
-    - Subject: serialNumber=91110101593898951F, JURISDICTION_OF_INCORPORATION_C=CN,
-        BUSINESS_CATEGORY=Private Organization, C=CN, postalCode=100028, ST=Beijing
-        Shi, L=Beijing, STREET_ADDRESS=Chaoyang District, STREET_ADDRESS=Room 1610,
-        Haocheng Building, No.9 Building, No.6 Courtyard, Zuojiazhuang Middle Street,
-        O=Lespeed Technology Co., Ltd, CN=Lespeed Technology Co., Ltd
+    - Subject: serialNumber=91110101593898951F, ??=CN, ??=Private Organization, C=CN,
+        postalCode=100028, ST=Beijing Shi, L=Beijing, ??=Chaoyang District, ??=Room
+        1610, Haocheng Building, No.9 Building, No.6 Courtyard, Zuojiazhuang Middle
+        Street, O=Lespeed Technology Co., Ltd, CN=Lespeed Technology Co., Ltd
       ValidFrom: '2020-07-09 00:00:00'
       ValidTo: '2023-07-09 23:59:59'
       Signature: 0813de16aad5aae2206ec189ee90af05a8a8b9d096e6812c419f8a6320ea5936e3089eb2abf2022a5e946464d9a3cb09d0b041ce8dd90c37d791f5e3fdafa755ad2fd7fbd7da760fa4bbaeba655509ad015c5f37df20229360fb596ebb7a91b644f7a86ef28c4f8d16debe8666f4d6ebefd7d4a4d5d8c3b96d36c54ebc0386ae680dd469dc252893eca2fba6929f4e589974cf6cb1d33fa8270b67d606dc4118ee320a1cb2894a7ea655dbf42f9ef9c2e204a736a62e326ef85afad054c8f38506b050580120383f3136b33f8f6160bddabbe9cdc3c9d130d2915a5987951d7237bb2480172bb326256efa866a88f4e4432b844a69892ea38c560dde939f18d7
@@ -313,13 +312,13 @@ KnownVulnerableSamples:
     MD5: 6d1e6e5682f9a5e8a64dc8d2ec6ddfac
     SHA1: 49fb554b77c8d533e4a1ff30bbc60ef7f80b7055
     SHA256: c36ace67f4e25f391e8709776348397e4fd3930e641b32c1b0da398e59199ca7
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2017-06-29 00:21:54'
+  Company: WiseCleaner.com
+  Copyright: "Copyright \xA9 2015"
+  CreationTimestamp: '2017-06-29 03:21:54'
   Date: ''
-  Description: ''
+  Description: WiseUnlo
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.2.13
   Filename: ''
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -343,14 +342,14 @@ KnownVulnerableSamples:
   - IofCallDriver
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: WiseUnlo.sys
   MD5: 9e0af1fe4d6dd2ca4721810ed1c930d6
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: WiseUnlo.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: WiseUnlo
+  ProductVersion: 1.0.2.13
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8d3c5247eb754073fa6215b4e6b75923
@@ -363,7 +362,7 @@ KnownVulnerableSamples:
       Entropy: 5.471623893145366
       Virtual Size: '0x502'
     .rdata:
-      Entropy: 4.507897741341233
+      Entropy: 4.507897741341232
       Virtual Size: '0x254'
     .pdata:
       Entropy: 3.110203256200424
@@ -396,12 +395,10 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=CN,
-        JURISDICTION_OF_INCORPORATION_L=Beijing, serialNumber=91110101593898951F,
-        STREET_ADDRESS=Chaoyang District, STREET_ADDRESS=103, Unit C, Building 8,
-        Yard 6, Zuojiazhuang Street, postalCode=100028, C=CN, ST=Beijing, L=Beijing,
-        O=Beijing Lang Xingda Network Technology Co., Ltd, CN=Beijing Lang Xingda
-        Network Technology Co., Ltd
+    - Subject: ??=Private Organization, ??=CN, ??=Beijing, serialNumber=91110101593898951F,
+        ??=Chaoyang District, ??=103, Unit C, Building 8, Yard 6, Zuojiazhuang Street,
+        postalCode=100028, C=CN, ST=Beijing, L=Beijing, O=Beijing Lang Xingda Network
+        Technology Co., Ltd, CN=Beijing Lang Xingda Network Technology Co., Ltd
       ValidFrom: '2017-06-16 00:00:00'
       ValidTo: '2019-12-31 12:00:00'
       Signature: 036aa0d600d0e810dc9b7b5b6cb97acc0b21792e351c21236bd4f67a88c232ecde9e6fcd99c2933c5d4f24cb8ad45e6e39547a8a9df084ac43a89cb017cccda9430d89b932c5a8c8c3d1e7ebf997408739bd63d23d52b24bbd72bf3a4ad05363bb5515795ffc9d6328309273587abe0d5c4b60edb85e8ce73ba5caa6b0a1bf597e9691910cc996344537234eee6c64af497f1b29c4432e38d978d7f45822ef88ecd5462752beb2619ba4cbf88eb4be5b8ac2ba19eed2265ee342980ad7fb4f9767487867ce1d6f7f6d6ad0ce642879781ee23ef8e932fae775e511c2e4f07c5e60cf9d8362362cba51c61ff59f352cf8368c000ee3aa8c7a57dc7f3c7dd5a10a
@@ -477,13 +474,13 @@ KnownVulnerableSamples:
     MD5: 4e4d97955557f085f4e1fe4cbba82321
     SHA1: 131a7703dbaf36bcf7034e8690a7046e9eb52d2b
     SHA256: 8a844a8d993db0ee1159b096aee959e32bb9155edd9167b1e6aad2e4019202dd
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2017-06-29 00:22:02'
+  Company: WiseCleaner.com
+  Copyright: "Copyright \xA9 2015"
+  CreationTimestamp: '2017-06-29 03:22:02'
   Date: ''
-  Description: ''
+  Description: WiseUnlo
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.2.13
   Filename: ''
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -510,14 +507,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: WiseUnlo.sys
   MD5: da8437200af5f3f790e301b9958993d2
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: WiseUnlo.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: WiseUnlo
+  ProductVersion: 1.0.2.13
   Publisher: ''
   RichPEHeaderHash:
     MD5: 90cb984cab66f2e7b36cce65ed28b399
@@ -563,12 +560,10 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=CN,
-        JURISDICTION_OF_INCORPORATION_L=Beijing, serialNumber=91110101593898951F,
-        STREET_ADDRESS=Chaoyang District, STREET_ADDRESS=103, Unit C, Building 8,
-        Yard 6, Zuojiazhuang Street, postalCode=100028, C=CN, ST=Beijing, L=Beijing,
-        O=Beijing Lang Xingda Network Technology Co., Ltd, CN=Beijing Lang Xingda
-        Network Technology Co., Ltd
+    - Subject: ??=Private Organization, ??=CN, ??=Beijing, serialNumber=91110101593898951F,
+        ??=Chaoyang District, ??=103, Unit C, Building 8, Yard 6, Zuojiazhuang Street,
+        postalCode=100028, C=CN, ST=Beijing, L=Beijing, O=Beijing Lang Xingda Network
+        Technology Co., Ltd, CN=Beijing Lang Xingda Network Technology Co., Ltd
       ValidFrom: '2017-06-16 00:00:00'
       ValidTo: '2019-12-31 12:00:00'
       Signature: 036aa0d600d0e810dc9b7b5b6cb97acc0b21792e351c21236bd4f67a88c232ecde9e6fcd99c2933c5d4f24cb8ad45e6e39547a8a9df084ac43a89cb017cccda9430d89b932c5a8c8c3d1e7ebf997408739bd63d23d52b24bbd72bf3a4ad05363bb5515795ffc9d6328309273587abe0d5c4b60edb85e8ce73ba5caa6b0a1bf597e9691910cc996344537234eee6c64af497f1b29c4432e38d978d7f45822ef88ecd5462752beb2619ba4cbf88eb4be5b8ac2ba19eed2265ee342980ad7fb4f9767487867ce1d6f7f6d6ad0ce642879781ee23ef8e932fae775e511c2e4f07c5e60cf9d8362362cba51c61ff59f352cf8368c000ee3aa8c7a57dc7f3c7dd5a10a
@@ -644,13 +639,13 @@ KnownVulnerableSamples:
     MD5: 42d1a185325fed53f39a49a1cbf5ef51
     SHA1: 0d258e0459c2a6754b7dfb69e12a2c44805ca8d8
     SHA256: 36861bb32abd5ba7955aa69269d27772f75d0306485d10ed045125816422c423
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-05-11 00:36:54'
+  Company: WiseCleaner.com
+  Copyright: "Copyright \xA9 2015"
+  CreationTimestamp: '2015-05-11 03:36:54'
   Date: ''
-  Description: ''
+  Description: WiseUnlo
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.1.12
   Filename: ''
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -678,14 +673,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: WiseUnlo.sys
   MD5: 4cee9945f9a3e8f2433f5aa8c58671fb
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: WiseUnlo.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: WiseUnlo
+  ProductVersion: 1.0.1.12
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2c93997fbfc6e8e1338e69bb9a988272
@@ -782,13 +777,13 @@ KnownVulnerableSamples:
     MD5: 6d1e6e5682f9a5e8a64dc8d2ec6ddfac
     SHA1: 49fb554b77c8d533e4a1ff30bbc60ef7f80b7055
     SHA256: c36ace67f4e25f391e8709776348397e4fd3930e641b32c1b0da398e59199ca7
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2017-06-29 00:21:54'
+  Company: WiseCleaner.com
+  Copyright: "Copyright \xA9 2015"
+  CreationTimestamp: '2017-06-29 03:21:54'
   Date: ''
-  Description: ''
+  Description: WiseUnlo
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.2.13
   Filename: ''
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -812,14 +807,14 @@ KnownVulnerableSamples:
   - IofCallDriver
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: WiseUnlo.sys
   MD5: 1762105b28eb90d19e9ab3acde16ead6
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: WiseUnlo.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: WiseUnlo
+  ProductVersion: 1.0.2.13
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8d3c5247eb754073fa6215b4e6b75923
@@ -832,7 +827,7 @@ KnownVulnerableSamples:
       Entropy: 5.471623893145366
       Virtual Size: '0x502'
     .rdata:
-      Entropy: 4.507897741341233
+      Entropy: 4.507897741341232
       Virtual Size: '0x254'
     .pdata:
       Entropy: 3.110203256200424
@@ -882,11 +877,10 @@ KnownVulnerableSamples:
         SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
         SHA256: 04bc415adcb4ef7df32b9dfe199d92a4078cbd132fd5173961211e7f75385491
         SHA384: a6c44d9022b3fb3e679acfa266bd26c0bf6a20bb244ef486c04b55539b10ddaa4894c4e0420dfdd025850c5094bb23d1
-    - Subject: serialNumber=91110101593898951F, JURISDICTION_OF_INCORPORATION_C=CN,
-        BUSINESS_CATEGORY=Private Organization, C=CN, postalCode=100028, ST=Beijing
-        Shi, L=Beijing, STREET_ADDRESS=Chaoyang District, STREET_ADDRESS=Room 1610,
-        Haocheng Building, No.9 Building, No.6 Courtyard, Zuojiazhuang Middle Street,
-        O=Lespeed Technology Co., Ltd, CN=Lespeed Technology Co., Ltd
+    - Subject: serialNumber=91110101593898951F, ??=CN, ??=Private Organization, C=CN,
+        postalCode=100028, ST=Beijing Shi, L=Beijing, ??=Chaoyang District, ??=Room
+        1610, Haocheng Building, No.9 Building, No.6 Courtyard, Zuojiazhuang Middle
+        Street, O=Lespeed Technology Co., Ltd, CN=Lespeed Technology Co., Ltd
       ValidFrom: '2020-07-09 00:00:00'
       ValidTo: '2023-07-09 23:59:59'
       Signature: 0813de16aad5aae2206ec189ee90af05a8a8b9d096e6812c419f8a6320ea5936e3089eb2abf2022a5e946464d9a3cb09d0b041ce8dd90c37d791f5e3fdafa755ad2fd7fbd7da760fa4bbaeba655509ad015c5f37df20229360fb596ebb7a91b644f7a86ef28c4f8d16debe8666f4d6ebefd7d4a4d5d8c3b96d36c54ebc0386ae680dd469dc252893eca2fba6929f4e589974cf6cb1d33fa8270b67d606dc4118ee320a1cb2894a7ea655dbf42f9ef9c2e204a736a62e326ef85afad054c8f38506b050580120383f3136b33f8f6160bddabbe9cdc3c9d130d2915a5987951d7237bb2480172bb326256efa866a88f4e4432b844a69892ea38c560dde939f18d7
@@ -913,13 +907,13 @@ KnownVulnerableSamples:
     MD5: 6d1e6e5682f9a5e8a64dc8d2ec6ddfac
     SHA1: 49fb554b77c8d533e4a1ff30bbc60ef7f80b7055
     SHA256: c36ace67f4e25f391e8709776348397e4fd3930e641b32c1b0da398e59199ca7
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2017-06-29 00:21:54'
+  Company: WiseCleaner.com
+  Copyright: "Copyright \xA9 2015"
+  CreationTimestamp: '2017-06-29 03:21:54'
   Date: ''
-  Description: ''
+  Description: WiseUnlo
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.2.13
   Filename: WiseUnlo.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -943,13 +937,13 @@ KnownVulnerableSamples:
   - IofCallDriver
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: WiseUnlo.sys
   MD5: 356bda2bf0f6899a2c08b2da3ec69f13
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: WiseUnlo.sys
+  Product: WiseUnlo
+  ProductVersion: 1.0.2.13
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8d3c5247eb754073fa6215b4e6b75923
@@ -962,7 +956,7 @@ KnownVulnerableSamples:
       Entropy: 5.471623893145366
       Virtual Size: '0x502'
     .rdata:
-      Entropy: 4.507897741341233
+      Entropy: 4.507897741341232
       Virtual Size: '0x254'
     .pdata:
       Entropy: 3.110203256200424
@@ -1015,11 +1009,10 @@ KnownVulnerableSamples:
         SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
         SHA256: 04bc415adcb4ef7df32b9dfe199d92a4078cbd132fd5173961211e7f75385491
         SHA384: a6c44d9022b3fb3e679acfa266bd26c0bf6a20bb244ef486c04b55539b10ddaa4894c4e0420dfdd025850c5094bb23d1
-    - Subject: serialNumber=91110101593898951F, JURISDICTION_OF_INCORPORATION_C=CN,
-        BUSINESS_CATEGORY=Private Organization, C=CN, postalCode=100028, ST=Beijing
-        Shi, L=Beijing, STREET_ADDRESS=Chaoyang District, STREET_ADDRESS=Room 1610,
-        Haocheng Building, No.9 Building, No.6 Courtyard, Zuojiazhuang Middle Street,
-        O=Lespeed Technology Co., Ltd, CN=Lespeed Technology Co., Ltd
+    - Subject: serialNumber=91110101593898951F, ??=CN, ??=Private Organization, C=CN,
+        postalCode=100028, ST=Beijing Shi, L=Beijing, ??=Chaoyang District, ??=Room
+        1610, Haocheng Building, No.9 Building, No.6 Courtyard, Zuojiazhuang Middle
+        Street, O=Lespeed Technology Co., Ltd, CN=Lespeed Technology Co., Ltd
       ValidFrom: '2020-07-09 00:00:00'
       ValidTo: '2023-07-09 23:59:59'
       Signature: 0813de16aad5aae2206ec189ee90af05a8a8b9d096e6812c419f8a6320ea5936e3089eb2abf2022a5e946464d9a3cb09d0b041ce8dd90c37d791f5e3fdafa755ad2fd7fbd7da760fa4bbaeba655509ad015c5f37df20229360fb596ebb7a91b644f7a86ef28c4f8d16debe8666f4d6ebefd7d4a4d5d8c3b96d36c54ebc0386ae680dd469dc252893eca2fba6929f4e589974cf6cb1d33fa8270b67d606dc4118ee320a1cb2894a7ea655dbf42f9ef9c2e204a736a62e326ef85afad054c8f38506b050580120383f3136b33f8f6160bddabbe9cdc3c9d130d2915a5987951d7237bb2480172bb326256efa866a88f4e4432b844a69892ea38c560dde939f18d7

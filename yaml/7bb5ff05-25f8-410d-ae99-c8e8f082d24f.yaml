@@ -51,13 +51,13 @@ KnownVulnerableSamples:
     MD5: 650fa4b522e8d06d0cdfa4bf278e85f1
     SHA1: dfe2533a4398d67dfc722eb8d9f8ffa3a823a721
     SHA256: 7188af66fe23bd8cf27f003ad6c7550cdb6faa5c948fe7c3b1435c9246345eb3
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2007-12-15 00:04:52'
+  Company: OpenLibSys.org
+  Copyright: Copyright (C) 2007 OpenLibSys.org. All rights reserved.
+  CreationTimestamp: '2007-12-15 03:04:52'
   Date: ''
-  Description: ''
+  Description: WinRing0
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.1.2
   Filename: WinRing0.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -75,13 +75,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: WinRing0.sys
   MD5: 828bb9cb1dd449cd65a29b18ec46055f
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: 1.0.1.2
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6c9272bb390e89b75934eea3b15a1858
@@ -197,13 +197,13 @@ KnownVulnerableSamples:
     MD5: 650fa4b522e8d06d0cdfa4bf278e85f1
     SHA1: dfe2533a4398d67dfc722eb8d9f8ffa3a823a721
     SHA256: 7188af66fe23bd8cf27f003ad6c7550cdb6faa5c948fe7c3b1435c9246345eb3
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2007-12-15 00:04:52'
+  Company: OpenLibSys.org
+  Copyright: Copyright (C) 2007 OpenLibSys.org. All rights reserved.
+  CreationTimestamp: '2007-12-15 03:04:52'
   Date: ''
-  Description: ''
+  Description: WinRing0
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.1.2
   Filename: WinRing0.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -221,13 +221,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: WinRing0.sys
   MD5: 12cecc3c14160f32b21279c1a36b8338
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: 1.0.1.2
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6c9272bb390e89b75934eea3b15a1858
@@ -354,9 +354,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -373,13 +373,13 @@ KnownVulnerableSamples:
     MD5: c4355451eccb590e5e6d817760d2d2ef
     SHA1: 7aed8186977fcf7ee219da493baecdb95ec8040d
     SHA256: 9305f0834e67aa16fb252bd30927e5f835639ef4b868f20d232260edffefd6f0
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-05-01 19:19:47'
+  Company: OpenLibSys.org
+  Copyright: Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.
+  CreationTimestamp: '2013-05-01 22:19:47'
   Date: ''
-  Description: ''
+  Description: WinRing0
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.2.0.5
   Filename: WinRing0.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -397,13 +397,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: WinRing0.sys
   MD5: 27bcbeec8a466178a6057b64bef66512
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: 1.2.0.5
   Publisher: ''
   RichPEHeaderHash:
     MD5: bc02c8d775721faba8edc4cde3e2f975
@@ -537,13 +537,13 @@ KnownVulnerableSamples:
     MD5: 2bab314d894a026ac6073efe43c14a3d
     SHA1: 266821a39174d29f6f8791cf9f44f1a1f3439dda
     SHA256: 1b845e5e43ce9e9b645ac198549e81f45c08197aad69708d96cdb9a719eb0e29
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2008-07-26 06:29:37'
+  Company: OpenLibSys.org
+  Copyright: Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.
+  CreationTimestamp: '2008-07-26 09:29:37'
   Date: ''
-  Description: ''
+  Description: WinRing0
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.2.0.5
   Filename: WinRing0x64.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -561,13 +561,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: WinRing0.sys
   MD5: 0c0195c48b6b8582fa6f6373032118da
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: 1.2.0.5
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6c9272bb390e89b75934eea3b15a1858
@@ -694,9 +694,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

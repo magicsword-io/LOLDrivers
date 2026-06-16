@@ -45,13 +45,13 @@ KnownVulnerableSamples:
     MD5: bcc1ae726001fdbabb8159e3b333f3fd
     SHA1: 7885fb33d8800fa3c036252af70e0a8391ab367d
     SHA256: 85ac17aec836d5125db7407d2dc3af8e5b01241fea781b2fd55aae796b3912b4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2008-06-15 23:45:18'
+  Company: BIOSTAR Group
+  Copyright: Copyright (c) 2002-2006 BIOSTAR Group
+  CreationTimestamp: '2008-06-16 02:45:18'
   Date: ''
-  Description: ''
+  Description: I/O Interface driver file
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1, 1, 0, 0
   Filename: BS_I2c64.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -73,13 +73,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: I/O driver
   MD5: 83601bbe5563d92c1fdb4e960d84dc77
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: BS_I2cIo.sys
+  Product: BIOSTAR I/O driver fle
+  ProductVersion: 1, 1, 0, 0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 195c2f6f9da1c18b845a8235fb390cd2
@@ -95,7 +95,7 @@ KnownVulnerableSamples:
       Entropy: 4.457181754135786
       Virtual Size: '0x1c8'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.26210477374917
@@ -176,9 +176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

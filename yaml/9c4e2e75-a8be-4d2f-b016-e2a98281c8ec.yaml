@@ -29,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 7ea9b2420483183cf7b25d6577848f2dfe2ae064a61d931d6b8b65b31a1b2685
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-12-01 23:35:34'
+  CreationTimestamp: '2010-12-02 02:35:34'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -77,7 +77,7 @@ KnownVulnerableSamples:
       Entropy: 3.929371440317254
       Virtual Size: '0x12c'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.094619127901513
@@ -152,9 +152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

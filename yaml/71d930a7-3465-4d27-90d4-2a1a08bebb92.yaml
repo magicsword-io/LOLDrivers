@@ -39,13 +39,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Realsil Semiconductor Corporation
+  Description: RTS USB READER Driver
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  FileVersion: 10.0.22000.31272
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: RTSUER.SYS
   Imphash: 8a0175a5dcdc5c7e8ff577e9ac4e4ab1
   Authentihash:
     MD5: 63485bea17db891ce3c16c2b24e947b5
@@ -81,9 +81,9 @@ KnownVulnerableSamples:
       Entropy: 5.273216802688426
       Virtual Size: '0x2e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-12-17 01:20:30'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2021-12-17 04:20:30'
+  InternalName: RTS_USB10.0.22000.31272 (Windows 8 x64)
+  Copyright: "Copyright \xA9 Realtek Semiconductor Corporation 2013"
   Imports:
   - USBD.SYS
   - ntoskrnl.exe
@@ -210,9 +210,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=22671299, C=TW, L=HSINCHU, O=Realtek Semiconductor Corp., CN=Realtek
-        Semiconductor Corp.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, C=TW, L=HSINCHU,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2021-07-15 00:00:00'
       ValidTo: '2022-01-13 23:59:59'
       Signature: 151048dc9ff0e31ea762d2448203360d71a4b8c54f7718b1e812acb6afef4975711bdbdc87425479d93554c9d8267c73511dd87d333c913c1236c1c757fdb3295f5d7c0c6170e3aceee359a99671d587b0b771966eec4f190ffe58941812dc269054705a599efcbdad02e1bbd3ba80f1e63008317dab04fc8acf431120e96a55de3fb7860e2aa49520abf426488f69754048b7bcdcf638b5a1d1c1f4cda2076c3068aefb40deec5ead04e57f1037b6d89ce205adeb4f3741dcb936ec195ffdcd9f8c95d2158784b2757b19ec6146d2f54e4d9dbe2e88df94d310413659b15e0a884c88371ff4f2c6378299994d2c081bfb49cb50fc36773f42d0808ba0aebd9f7f4d9b17e68f70bd30c8116c6f76cfabd23770abbe60a9b9d1d315f9f4f34f2636f73bd9451af7929621e36145fac35091d2653901cf5e578cd8a0295ef6ce25a6f7bc975a9b800712f75eef729ce0ab5ebe86668b5c80ea76ee9c74ce0ce1dc4f840d3a1299718ffc24077baa260298221fa9492fd8dbdf01ebd18e9cd7a44d0818bb38432624e6ce766334e5a6898352b096fb067a943df3f1921656bc33bbd91335e6419f5beb3e36afb826b3e76219554b819ae3f546e1da129f9aafa6ec3573594879a606f11be7bb739989c6ea797baebe7a39e9579404bdf1cb05ab93fefd0fde80057aefeaabe932e2cedfa14b9076f79027d4be8f863b4eae9713a4

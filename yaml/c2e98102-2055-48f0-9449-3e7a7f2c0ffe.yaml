@@ -30,13 +30,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Tonec Inc.
+  Description: Internet Download Manager TDI Driver
+  Product: Internet Download Manager
+  ProductVersion: 6.32.3.1
+  FileVersion: 6.32.3.80
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: idmtdi.sys
   Imphash: ce10082e1aa4c1c2bd953b4a7208e56a
   Authentihash:
     MD5: f706fa9c39f2ac707988e849963c5195
@@ -78,9 +78,9 @@ KnownVulnerableSamples:
       Entropy: 3.3345177023205093
       Virtual Size: '0x384'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-06-23 10:18:09'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2023-06-23 13:18:09'
+  InternalName: idmtdi.sys
+  Copyright: "Copyright \xA9 1999 - 2018 Tonec Inc."
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -211,7 +211,7 @@ KnownVulnerableSamples:
       Entropy: 2.684771938731434
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2024-08-09 06:59:20'
+  CreationTimestamp: '2024-08-09 09:59:20'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -481,13 +481,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: CrowdStrike, Inc.
+  Description: CrowdStrike Falcon Sensor Driver
+  Product: CrowdStrike Falcon Sensor
+  ProductVersion: 6.34.14806.0
+  FileVersion: 6.34.14806.0
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: CSAgent.sys
   Imphash: 7d86ef6f47b0f5c432d168eae5b4dfcf
   Authentihash:
     MD5: 458a279f1f8d6f5d687e2a2a9e31bad2
@@ -529,9 +529,9 @@ KnownVulnerableSamples:
       Entropy: 3.3886541399211785
       Virtual Size: '0x3a8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-01-06 10:22:51'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2011-01-06 13:22:51'
+  InternalName: CSAgent.sys
+  Copyright: (c) CrowdStrike, Inc. All rights reserved.
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -662,7 +662,7 @@ KnownVulnerableSamples:
       Entropy: 2.7652465283787406
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2024-04-08 23:59:14'
+  CreationTimestamp: '2024-04-09 02:59:14'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -966,7 +966,7 @@ KnownVulnerableSamples:
       Entropy: 2.749389675512395
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2024-04-08 23:59:14'
+  CreationTimestamp: '2024-04-09 02:59:14'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1228,13 +1228,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Tonec Inc.
+  Description: Internet Download Manager TDI Driver
+  Product: Internet Download Manager
+  ProductVersion: 6.32.3.1
+  FileVersion: 6.32.3.80
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: idmtdi.sys
   Imphash: ce10082e1aa4c1c2bd953b4a7208e56a
   Authentihash:
     MD5: 754246fcf3f7184f331bbaf89ceab696
@@ -1276,9 +1276,9 @@ KnownVulnerableSamples:
       Entropy: 3.3389621467649535
       Virtual Size: '0x384'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-06-23 10:18:09'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2023-06-23 13:18:09'
+  InternalName: idmtdi.sys
+  Copyright: "Copyright \xA9 1999 - 2018 Tonec Inc."
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1403,7 +1403,7 @@ KnownVulnerableSamples:
       Entropy: 0.0
       Virtual Size: '0x13ac67'
     .xpk:
-      Entropy: 2.656560422826009
+      Entropy: 2.6565604228260096
       Virtual Size: '0x378'
     .hCC:
       Entropy: 7.664196982459506
@@ -1412,7 +1412,7 @@ KnownVulnerableSamples:
       Entropy: 3.956589378212568
       Virtual Size: '0xd0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-12-19 23:26:03'
+  CreationTimestamp: '2023-12-20 02:26:03'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1573,13 +1573,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Palo Alto Networks, Inc.
+  Description: Cortex XDR LPC Driver
+  Product: "Cortex XDR\u2122 Advanced Endpoint Protection"
+  ProductVersion: 8.2.2.49708
+  FileVersion: 8.2.2.49708
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: cyvrlpc.sys
   Imphash: ce10082e1aa4c1c2bd953b4a7208e56a
   Authentihash:
     MD5: ce05ebdd0c7be7429cb4fb2e963f9181
@@ -1621,9 +1621,9 @@ KnownVulnerableSamples:
       Entropy: 3.3873560211793814
       Virtual Size: '0x4d8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-06-23 10:18:09'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2023-06-23 13:18:09'
+  InternalName: cyvrlpc.sys
+  Copyright: "\xA9 Palo Alto Networks, Inc. All rights reserved"
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1754,7 +1754,7 @@ KnownVulnerableSamples:
       Entropy: 3.1667823920407914
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2024-08-09 06:59:20'
+  CreationTimestamp: '2024-08-09 09:59:20'
   InternalName: ''
   Copyright: ''
   Imports:

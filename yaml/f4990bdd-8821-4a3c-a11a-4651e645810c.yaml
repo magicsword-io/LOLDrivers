@@ -47,13 +47,13 @@ KnownVulnerableSamples:
     MD5: 3d840e2458fef30b0871bf1c13b060ff
     SHA1: 63b773c3c8308ddfa783b318d0ea67724fa1dc2f
     SHA256: 34b3acdeac5002880071f73b70aa3abd3a6facb9e281b5c93cc82a7a8a6d5cc1
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-02-04 17:55:34'
+  Company: ASUSTeK Computer Inc.
+  Copyright: Copyright 2010 ASUSTeK Computer Inc.
+  CreationTimestamp: '2010-02-04 20:55:34'
   Date: ''
-  Description: ''
+  Description: 'ASUS Kernel Mode Driver for NT '
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.00'
   Filename: IOMap64.sys
   ImportedFunctions:
   - KeInitializeMutex
@@ -78,13 +78,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: IOMap.sys
   MD5: a01c412699b6f21645b2885c2bae4454
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: IOMap.sys
+  Product: 'ASUS Kernel Mode Driver for NT '
+  ProductVersion: '1.00'
   Publisher: ''
   RichPEHeaderHash:
     MD5: fbccc3a104df27d5cfc3732e79242335
@@ -178,9 +178,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

@@ -177,9 +177,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -215,7 +215,7 @@ KnownVulnerableSamples:
       Entropy: 5.537217390905003
       Virtual Size: '0x282'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-29 18:37:59'
+  CreationTimestamp: '2012-05-29 21:37:59'
   Imphash: e2c63196ed5368f03dabed73b1ff3409
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo32.sys
@@ -372,9 +372,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -410,7 +410,7 @@ KnownVulnerableSamples:
       Entropy: 5.422595746439076
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-07 22:45:54'
+  CreationTimestamp: '2012-05-08 01:45:54'
   Imphash: 68b717fa2ab9431cd176776363359d48
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo32.sys
@@ -621,7 +621,7 @@ KnownVulnerableSamples:
       Entropy: 5.684854112325549
       Virtual Size: '0x352'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-02-17 14:48:32'
+  CreationTimestamp: '2015-02-17 17:48:32'
   Imphash: eade2a2576f329e4971bf5044ab24ac7
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo32.sys
@@ -778,9 +778,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -816,7 +816,7 @@ KnownVulnerableSamples:
       Entropy: 5.4555025563265716
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-14 09:58:59'
+  CreationTimestamp: '2012-05-14 12:58:59'
   Imphash: 68b717fa2ab9431cd176776363359d48
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo32.sys
@@ -976,9 +976,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -996,7 +996,7 @@ KnownVulnerableSamples:
     SHA256: beaf06a61f68e85f98275b59edc329b4d58f310175f1ba8f610c42f76c83fa78
   Sections:
     .text:
-      Entropy: 6.094411959893322
+      Entropy: 6.094411959893321
       Virtual Size: '0x27cb'
     .rdata:
       Entropy: 4.0771638057775
@@ -1014,7 +1014,7 @@ KnownVulnerableSamples:
       Entropy: 5.535152929801922
       Virtual Size: '0x280'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-12 21:30:17'
+  CreationTimestamp: '2012-08-13 00:30:17'
   Imphash: 427cd9c70cca88ca1db61a5ddc3b8450
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo32.sys
@@ -1225,7 +1225,7 @@ KnownVulnerableSamples:
       Entropy: 5.653025095053076
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-10 09:45:24'
+  CreationTimestamp: '2014-03-10 12:45:24'
   Imphash: a7f2c2e8e9d6c90e28819d1a3ab84bc8
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo32.sys
@@ -1386,9 +1386,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1406,7 +1406,7 @@ KnownVulnerableSamples:
     SHA256: 698ac0c9fdb4ab4afde156a75e859fcb43f91ebfc29d93e1efd9bd9a5d971fea
   Sections:
     .text:
-      Entropy: 6.071623655142025
+      Entropy: 6.071623655142026
       Virtual Size: '0x2717'
     .rdata:
       Entropy: 4.121756234287931
@@ -1424,7 +1424,7 @@ KnownVulnerableSamples:
       Entropy: 5.542859163741398
       Virtual Size: '0x27e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-07-30 18:02:19'
+  CreationTimestamp: '2012-07-30 21:02:19'
   Imphash: 32204eaf2afa5b348ab17de07362885c
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo32.sys
@@ -1585,9 +1585,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1623,6 +1623,6 @@ KnownVulnerableSamples:
       Entropy: 5.529407432639037
       Virtual Size: '0x27e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-22 19:49:09'
+  CreationTimestamp: '2012-02-22 22:49:09'
   Imphash: 32204eaf2afa5b348ab17de07362885c
   LoadsDespiteHVCI: 'FALSE'

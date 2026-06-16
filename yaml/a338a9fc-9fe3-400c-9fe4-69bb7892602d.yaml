@@ -26,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: f9c290ffc007e94fb61aecff42d267c1e626ec7939025b1a7d7285441d1c490d
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2008-04-22 04:01:50'
+  CreationTimestamp: '2008-04-22 07:01:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -151,9 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

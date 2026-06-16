@@ -5,10 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create vsdatant binPath=C:\Windows\Temp\vsdatant.sys type=kernel
-    && sc.exe start vsdatant
-  Description: Check Point ZoneAlarm driver (vsdatant.sys) abused in BYOVD attacks
-    to gain kernel privileges and bypass protections such as Memory Integrity.
+  Command: sc.exe create vsdatant binPath=C:\Windows\Temp\vsdatant.sys type=kernel && sc.exe start vsdatant
+  Description: Check Point ZoneAlarm driver (vsdatant.sys) abused in BYOVD attacks to gain kernel privileges and bypass protections such as Memory Integrity.
   Usecase: BYOVD (kernel) privilege escalation / defense evasion
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -26,10 +24,10 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
+  Company: Check Point, LTD
+  Description: ZoneAlarm
+  Product: ZoneAlarm
+  ProductVersion: 14.1.32.0
   Authentihash:
     MD5: d4534a5aed4e8fadbd30af524a956c38
     SHA1: a51490ec6c31de4fcdd7b5f053a1d9b58971308e
@@ -49,16 +47,16 @@ KnownVulnerableSamples:
     SHA256: b74a3fc8fa79e3dbf929c6ed8b66b2c330c198b27a5457ce3e9e1c993c9a43ff
   Sections:
     .text:
-      Entropy: 6.304806026937392
+      Entropy: 6.304806026937393
       Virtual Size: '0x5c200'
     .rdata:
-      Entropy: 5.444005160274885
+      Entropy: 5.444005160274884
       Virtual Size: '0x4ae4'
     .data:
       Entropy: 2.760342870132615
       Virtual Size: '0x28120'
     .pdata:
-      Entropy: 5.7209213561560865
+      Entropy: 5.720921356156087
       Virtual Size: '0x246c'
     PAGE:
       Entropy: 6.2290890354471085
@@ -67,13 +65,13 @@ KnownVulnerableSamples:
       Entropy: 5.629767492775658
       Virtual Size: '0x212c'
     .rsrc:
-      Entropy: 3.369580246650634
+      Entropy: 3.3695802466506337
       Virtual Size: '0x3d0'
     .reloc:
-      Entropy: 3.1719006421111935
+      Entropy: 3.171900642111193
       Virtual Size: '0x9d6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-01-06 23:00:07'
+  CreationTimestamp: '2016-01-07 00:00:07'
   OriginalFilename: ''
   FileVersion: ''
   MachineType: AMD64
@@ -317,9 +315,6 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
-      CertificateType: CA
-      IsCodeSigning: false
-      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -334,9 +329,6 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
-      CertificateType: Intermediate
-      IsCodeSigning: false
-      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -352,9 +344,6 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
-      CertificateType: CA
-      IsCodeSigning: true
-      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -368,9 +357,6 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
-      IsCodeSigning: false
-      IsCA: true
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -386,9 +372,6 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 47e81c30f2ca2304e8f8bc304e44ab6f
       Version: 3
-      CertificateType: Leaf (Code Signing)
-      IsCodeSigning: true
-      IsCA: false
       TBS:
         MD5: daf6e43b70019bdc783bd31bf3b39a03
         SHA1: fcbf8ab54eb50a40215dbbdc632534f3ac0069b8
@@ -404,9 +387,6 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
-      CertificateType: CA
-      IsCodeSigning: true
-      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d

@@ -44,11 +44,11 @@ KnownVulnerableSamples:
     MD5: 2d7f04ca689981b18fb8a4488e029843
     SHA1: 6c0af836a89234e9a69363495719b686fbad8d7d
     SHA256: d580349730ace5170e7c33850bdcb37cbf16b70d0d1adc2568fdd223c2a55a77
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2018-04-09 03:08:57'
+  Company: Trend Micro Inc.
+  Copyright: Copyright  (C)  2018 Trend Micro Incorporated. All rights reserved.
+  CreationTimestamp: '2018-04-09 06:08:57'
   Date: ''
-  Description: ''
+  Description: TrendMicro Common Module
   ExportedFunctions:
   - ??0CAutoUpdateConfigThread@@QEAA@AEBV0@@Z
   - ??0CAutoUpdateConfigThread@@QEAA@PEAU_UNICODE_STRING@@P6AX0PEAX@Z1@Z
@@ -550,7 +550,7 @@ KnownVulnerableSamples:
   - ValidateAddressWithSize
   - _ResetProtectFromClose
   - _UtilDosPathNameToNtPathName
-  FileVersion: ''
+  FileVersion: 7.30.0.1099
   Filename: TmComm.sys
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -761,13 +761,13 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: TmComm.sys
   MD5: 2e1f8a2a80221deb93496a861693c565
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: TmComm.sys
+  Product: Trend Micro Eyes
+  ProductVersion: '7.30'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 1ef18db502f07590b0133ea93427886b
@@ -780,7 +780,7 @@ KnownVulnerableSamples:
       Entropy: 5.885154328803672
       Virtual Size: '0x53645'
     .rdata:
-      Entropy: 3.4521682563196068
+      Entropy: 3.4521682563196063
       Virtual Size: '0x6174'
     .data:
       Entropy: 4.6769393569967495

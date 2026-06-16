@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 9628077052773b85d492e06322fa4366
     SHA1: 013c02f8fb3b1eb638a8ccdd9da5277749d1060b
     SHA256: 46ec6310c5ea5e289299d40f5ecca82b9c722ffc766dfd08f36dc88835e63567
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2011 Intel Corporation All Rights Reserved.
   MachineType: IA64
   Imports:
   - ntoskrnl.exe
@@ -162,9 +162,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -226,7 +226,7 @@ KnownVulnerableSamples:
       Entropy: 0.41227279241255127
       Virtual Size: '0x1020'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-05 00:13:31'
+  CreationTimestamp: '2011-10-05 03:13:31'
   Imphash: 4bd0bd7710a7f71d38f056241c8ce0a7
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -237,14 +237,14 @@ KnownVulnerableSamples:
     MD5: 9e5958641168a690ab2b8003d3095a1f
     SHA1: b1ce8991df0af287d5fd6837306384bd4327ea1d
     SHA256: 6f2cf1c9502c5c5054edb556827ba30ffc2e6689faf807db404672781b032eaf
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.3.2.16 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.3.2.16
+  Copyright: Copyright (C) 2002-2018 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -423,7 +423,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-06 01:56:07'
+  CreationTimestamp: '2018-04-06 04:56:07'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -434,14 +434,14 @@ KnownVulnerableSamples:
     MD5: de5dc7fda88792287ab03e73cece0ba8
     SHA1: 99adef60a03c2ba9aa008adcd151686175ede2db
     SHA256: 0ae3c446e5f075e8fc3db31eabd744a65b2c50a9b4a52877873547951bc19bc9
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.6 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.6
+  Copyright: Copyright (C) 2002-2012 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -607,7 +607,7 @@ KnownVulnerableSamples:
       Entropy: 3.419370252627768
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-10-23 01:48:15'
+  CreationTimestamp: '2012-10-23 04:48:15'
   Imphash: 55db306bc2be3ff71a6b91fd9db051b8
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -618,14 +618,14 @@ KnownVulnerableSamples:
     MD5: 61c9bc2fd776b341f21b71fb1891eb5a
     SHA1: 9af173db51828d2a3c64d34e9120f1fd129a2359
     SHA256: ecd6e879e5521ca4053a59ef6682a95d97f6d9ba75f313b87bd133afe5267852
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.3.2.17 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.3.2.17
+  Copyright: Copyright (C) 2002-2018 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -805,7 +805,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-09-17 02:18:08'
+  CreationTimestamp: '2018-09-17 05:18:08'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -816,14 +816,14 @@ KnownVulnerableSamples:
     MD5: b962ae9f688f5a0fc864e3b64a8fa443
     SHA1: f6e5a0c338354dfbd1a9170fb9bd71123db5ac3b
     SHA256: ee625d1910f91fc9e79237bd60b0ee5efb85c7f859922f30e4434db6cd50fa9b
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2006 Intel Corporation All Rights Reserved.
   MachineType: IA64
   Imports:
   - ntoskrnl.exe
@@ -939,9 +939,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1003,7 +1003,7 @@ KnownVulnerableSamples:
       Entropy: 0.5046360681325445
       Virtual Size: '0x1170'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-02-13 15:23:41'
+  CreationTimestamp: '2007-02-13 18:23:41'
   Imphash: a793af44219650b4dd07d8a19ede33f1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1014,14 +1014,14 @@ KnownVulnerableSamples:
     MD5: 772d513b311dd6ff2ded105980a7f92a
     SHA1: 5db96ed94e2e32cf82f38724f8715fd775e0ebff
     SHA256: 94b42f99cb2ac4db601a3759afe374168bad1714bd48662d74fed69099517a65
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2006 Intel Corporation All Rights Reserved.
   MachineType: IA64
   Imports:
   - ntoskrnl.exe
@@ -1137,9 +1137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1201,7 +1201,7 @@ KnownVulnerableSamples:
       Entropy: 0.5046360681325445
       Virtual Size: '0x1170'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-05-23 23:36:30'
+  CreationTimestamp: '2007-05-24 02:36:30'
   Imphash: a793af44219650b4dd07d8a19ede33f1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1212,14 +1212,14 @@ KnownVulnerableSamples:
     MD5: b08ec7710e9596bf9389b458b4f9717b
     SHA1: d544c1dfd17aee4bf15dc4aa8d5208fe304f4eb4
     SHA256: b261d4065c03dcc732a951a9451b3a9f6054899eb3b8a4062dfed1c0ca3f3755
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.3.2.13 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.3.2.13
+  Copyright: Copyright (C) 2002-2017 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1430,7 +1430,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-03 08:14:26'
+  CreationTimestamp: '2017-04-03 11:14:26'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1441,14 +1441,14 @@ KnownVulnerableSamples:
     MD5: 5617c10f9fb9e09aba8657adb2c05b07
     SHA1: b4d869e7b3be6f0ae0113b05bc5358b955e2f6d4
     SHA256: 08209cd92723526d56863e89f283750e2ee57c69db37ae501aa889c0c60bb552
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.2.7 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.2.7
+  Copyright: Copyright (C) 2002-2016 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1659,7 +1659,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-23 18:52:09'
+  CreationTimestamp: '2016-08-23 21:52:09'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1670,14 +1670,14 @@ KnownVulnerableSamples:
     MD5: c50808f1da14138ea4b38907f113ab5a
     SHA1: 859be8b0b744eee0b9a3410fc5a614b924ac4b43
     SHA256: e7fe1fa6d2e5502ff1882a345790d0aab3ad34fe269ab23e3115d2d93db3fe6b
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2006 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1786,9 +1786,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1844,7 +1844,7 @@ KnownVulnerableSamples:
       Entropy: 1.2283624043981463
       Virtual Size: '0x12c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-05-12 13:12:21'
+  CreationTimestamp: '2009-05-12 16:12:21'
   Imphash: 5c77661ac2951da388949d9a834eb694
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1855,14 +1855,14 @@ KnownVulnerableSamples:
     MD5: 0b6c1cf6b4bad6edccd9c8457af495bc
     SHA1: 69e6d06476e4c55989507cf47722f0c355f568ad
     SHA256: c857c2db1fe1b9c979079add29d5b970147d6a264b4095e6579b5d0669c2b572
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.3.2.18 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.3.2.18
+  Copyright: Copyright (C) 2002-2019 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2041,7 +2041,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-24 04:50:56'
+  CreationTimestamp: '2019-04-24 07:50:56'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2052,14 +2052,14 @@ KnownVulnerableSamples:
     MD5: 67bc13f641db5e7b40ffd8fd33b7d9c6
     SHA1: 627e4a44e5a5da00cdb8ae2a538175ded6a9a113
     SHA256: 9f94d9180104c820c3d27f03e20f5bbc9d2a5bc2ae6e74baf2a848f2f1790ec8
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2006 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2168,9 +2168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2223,7 +2223,7 @@ KnownVulnerableSamples:
       Entropy: 3.411600288391384
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-09-01 22:02:32'
+  CreationTimestamp: '2010-09-02 01:02:32'
   Imphash: 5c77661ac2951da388949d9a834eb694
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2234,14 +2234,14 @@ KnownVulnerableSamples:
     MD5: 1789a16d20ca2b55f491ad71848166a2
     SHA1: 2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7
     SHA256: 785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.7 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.7
+  Copyright: Copyright (C) 2002-2013 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2402,13 +2402,13 @@ KnownVulnerableSamples:
       Entropy: 4.307215755522235
       Virtual Size: '0x408'
     INIT:
-      Entropy: 5.835829282045136
+      Entropy: 5.835829282045137
       Virtual Size: '0x7a8'
     .rsrc:
       Entropy: 3.423830950438437
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-14 07:22:43'
+  CreationTimestamp: '2013-11-14 10:22:43'
   Imphash: 55db306bc2be3ff71a6b91fd9db051b8
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2419,14 +2419,14 @@ KnownVulnerableSamples:
     MD5: 99f8e77dfc84cbd445500575ec9ab78a
     SHA1: 154c4d80f243b40dcebc2d5a2f3cee968d2f6f0c
     SHA256: 7cc54914473d7c75a483c5672655bd9df2ce20b556a0d92c6e4cb8722ab1647b
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2006 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2535,9 +2535,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2590,7 +2590,7 @@ KnownVulnerableSamples:
       Entropy: 3.411600288391384
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-10-28 07:22:55'
+  CreationTimestamp: '2010-10-28 10:22:55'
   Imphash: 5c77661ac2951da388949d9a834eb694
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2601,14 +2601,14 @@ KnownVulnerableSamples:
     MD5: 02eedc6afdeb843f391a69611266a838
     SHA1: 9dae306ebc30a8c2f160e3f6e726fcd3e4f92280
     SHA256: 727666434d5ea292a7631d0944edd36097db12862730996ce8a3f052be04a2cd
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2006 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2717,9 +2717,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2772,7 +2772,7 @@ KnownVulnerableSamples:
       Entropy: 3.411600288391384
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-08-26 06:48:52'
+  CreationTimestamp: '2010-08-26 09:48:52'
   Imphash: 5c77661ac2951da388949d9a834eb694
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2783,14 +2783,14 @@ KnownVulnerableSamples:
     MD5: 3e2ca18cf98afa0faac4da0fb1eca408
     SHA1: 15a85aa659248751080984a29dc848c37e900002
     SHA256: ccc65f108ad084af41725e42efc3c3c539f89a474c1b1293b111a83e3eba216a
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.1.2 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.1.2
+  Copyright: Copyright (C) 2002-2015 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -2969,7 +2969,7 @@ KnownVulnerableSamples:
       Entropy: 3.4283016769481693
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-10-29 14:44:49'
+  CreationTimestamp: '2015-10-29 17:44:49'
   Imphash: a86fb9a41955bda815ab902fb58baa27
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2980,14 +2980,14 @@ KnownVulnerableSamples:
     MD5: d6a18c98a17d12e0c8678cd0c1cc5fc6
     SHA1: d3f4a292c29d6c87b4744370a430889cba6ab093
     SHA256: 83aad7f91c4ebec89fb63e60ccc05628281aa0439362097bd91c69f4b74470bb
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2006 Intel Corporation All Rights Reserved.
   MachineType: IA64
   Imports:
   - ntoskrnl.exe
@@ -3103,9 +3103,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3167,7 +3167,7 @@ KnownVulnerableSamples:
       Entropy: 0.5046360681325445
       Virtual Size: '0x1170'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-06-12 07:31:18'
+  CreationTimestamp: '2007-06-12 10:31:18'
   Imphash: a793af44219650b4dd07d8a19ede33f1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -3178,14 +3178,14 @@ KnownVulnerableSamples:
     MD5: 23b096e4055705b360ce4c802fb5e36c
     SHA1: 4d3d6c6932e2882067830b2167b994b169e536d1
     SHA256: e80597ea0d75e9198428c81ca5b4495bf11922dd29852a0a2e63998e36857746
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.1.0 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.1.0
+  Copyright: Copyright (C) 2002-2015 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -3364,7 +3364,7 @@ KnownVulnerableSamples:
       Entropy: 3.4182486205222795
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-24 06:11:47'
+  CreationTimestamp: '2015-11-24 09:11:47'
   Imphash: a86fb9a41955bda815ab902fb58baa27
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -3375,14 +3375,14 @@ KnownVulnerableSamples:
     MD5: a3680d04628485c4f6258dc95f4e8e76
     SHA1: a254c2464cf2f39e729125250fa80297de9dcf01
     SHA256: dcd4d4bee76aacba8792df291eb55cc716752bd7ddb51ecb9bec491b02f57c70
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.1.0 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.1.0
+  Copyright: Copyright (C) 2002-2015 Intel Corporation All Rights Reserved.
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -3562,7 +3562,7 @@ KnownVulnerableSamples:
       Entropy: 3.4182486205222795
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-22 04:46:58'
+  CreationTimestamp: '2015-04-22 07:46:58'
   Imphash: a86fb9a41955bda815ab902fb58baa27
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -3573,14 +3573,14 @@ KnownVulnerableSamples:
     MD5: e6245e7df4ae8bd2e49e0f41d3fad7fc
     SHA1: 73d3fbb52669d917c11808919817d8d97681c6ac
     SHA256: 1452103306895429c54ba1735800b8c8694c3165cdef32ca12ed6ce348019292
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Company: 'Intel Corporation '
+  InternalName: iQVW64.SYS
+  OriginalFilename: iQVW64.SYS
+  FileVersion: '1.03.0.4 built by: WinDDK'
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.4
+  Copyright: Copyright (C) 2002-2006 Intel Corporation All Rights Reserved.
   MachineType: IA64
   Imports:
   - ntoskrnl.exe
@@ -3696,9 +3696,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3760,6 +3760,6 @@ KnownVulnerableSamples:
       Entropy: 0.5046360681325445
       Virtual Size: '0x1170'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-11-15 07:41:42'
+  CreationTimestamp: '2006-11-15 10:41:42'
   Imphash: a793af44219650b4dd07d8a19ede33f1
   LoadsDespiteHVCI: 'FALSE'

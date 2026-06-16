@@ -46,13 +46,13 @@ KnownVulnerableSamples:
     MD5: 9b6609bd5d9d8de37273fe2d355ae349
     SHA1: 4bf9ce7ffca224020572af6c13e866d8d41ad5bf
     SHA256: 46ffe559f5a8f6bd611ac5a9264edf92d8449d8d31b2ddf6b2add5971e309c56
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-01-28 00:45:17'
+  Company: DT Research, Inc.
+  Copyright: DT Research Inc. All Rights Reserved.
+  CreationTimestamp: '2013-01-28 03:45:17'
   Date: ''
-  Description: ''
+  Description: DTR Kernel mode driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 2.3.0.0
   Filename: iomem64.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -73,13 +73,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: iomem.sys
   MD5: 0898af0888d8f7a9544ef56e5e16354e
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: iomem.sys
+  Product: iomem.sys
+  ProductVersion: 2.3.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 0ae286be57b21fec5b461a83d859358d
@@ -95,7 +95,7 @@ KnownVulnerableSamples:
       Entropy: 4.340575063764079
       Virtual Size: '0x198'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.3340349653294203
@@ -214,13 +214,13 @@ KnownVulnerableSamples:
     MD5: 91896c53af5ab967f7f131285354e4ac
     SHA1: 7eec42b3027252dea4c777bbdbd47560bc179986
     SHA256: 57d36936fbf8785380536b03e5d9be172e5dd5c3bf435e19875a80aa96f97e1f
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-12-03 00:39:06'
+  Company: DT Research, Inc.
+  Copyright: DT Research Inc. All Rights Reserved.
+  CreationTimestamp: '2012-12-03 03:39:06'
   Date: ''
-  Description: ''
+  Description: DTR Kernel mode driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 2.2.0.0
   Filename: iomem64.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -241,13 +241,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: iomem.sys
   MD5: f1e054333cc40f79cfa78e5fbf3b54c2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: iomem.sys
+  Product: iomem.sys
+  ProductVersion: 2.2.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 0ae286be57b21fec5b461a83d859358d
@@ -263,7 +263,7 @@ KnownVulnerableSamples:
       Entropy: 4.330082770085826
       Virtual Size: '0x198'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.3340349653294203

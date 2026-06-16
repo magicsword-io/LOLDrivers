@@ -58,13 +58,13 @@ KnownVulnerableSamples:
     MD5: 1789a16d20ca2b55f491ad71848166a2
     SHA1: 2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7
     SHA256: 785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-11-14 07:22:43'
+  Company: 'Intel Corporation '
+  Copyright: Copyright (C) 2002-2013 Intel Corporation All Rights Reserved.
+  CreationTimestamp: '2013-11-14 10:22:43'
   Date: ''
-  Description: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.03.0.7 built by: WinDDK'
   Filename: iqvw64e.sys
   ImportedFunctions:
   - IoCreateSymbolicLink
@@ -109,13 +109,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: iQVW64.SYS
   MD5: 1898ceda3247213c084f43637ef163b3
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: iQVW64.SYS
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.7
   Publisher: ''
   RichPEHeaderHash:
     MD5: 4521e9ed78c16f8d1e49a1981dfb32eb
@@ -137,7 +137,7 @@ KnownVulnerableSamples:
       Entropy: 4.307215755522235
       Virtual Size: '0x408'
     INIT:
-      Entropy: 5.835829282045136
+      Entropy: 5.835829282045137
       Virtual Size: '0x7a8'
     .rsrc:
       Entropy: 3.423830950438437

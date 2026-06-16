@@ -35,16 +35,16 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
-- Company: ''
+- Company: EVGA Technology Inc.
   Date: ''
-  Description: ''
-  FileVersion: ''
+  Description: Windows Vista64 Smart IO Device
+  FileVersion: 5.13.01.2008-1.00
   Filename: ''
   MD5: bdd8dc8880dfbc19d729ca51071de288
   MachineType: AMD64
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: SMARTEIO64.SYS
+  Product: Windows Vista64 Smart IO Device
+  ProductVersion: 5.13.01.2008-1.00
   Publisher: ''
   SHA1: 87d2b638e5dfab1e37961d27ca734b83ece02804
   SHA256: 3c95ebf3f1a87f67d2861dbd1c85dc26c118610af0c9fbf4180428e653ac3e50
@@ -78,9 +78,9 @@ KnownVulnerableSamples:
       Entropy: 3.4551847693345743
       Virtual Size: '0x468'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-11-18 03:53:50'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2008-11-18 06:53:50'
+  InternalName: Windows Vista64 Smart IO Device
+  Copyright: Copyright(c) 2007 EVGA Technology Inc.
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -180,9 +180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

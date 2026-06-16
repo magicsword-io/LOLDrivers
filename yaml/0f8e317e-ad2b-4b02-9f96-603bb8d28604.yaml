@@ -35,15 +35,15 @@ KnownVulnerableSamples:
     MD5: 290440da10e3caf10caea93952046a3f
     SHA1: b7e2d4ed97b7e3ca43a7f1605efd561540b283bd
     SHA256: 407ca87833bd0931eec8005bb125e56d5765058c9b6422620aa95d8b2044239a
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2008-08-18 09:16:41'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2008-08-18 12:16:41'
   Date: ''
-  Description: ''
+  Description: Novell Client Portability Layer
   ExportedFunctions:
   - DllGetClassObject
   - XTCOM_Table
-  FileVersion: ''
+  FileVersion: 3.1.6.0
   Filename: ''
   ImportedFunctions:
   - KeWaitForSingleObject
@@ -123,10 +123,10 @@ KnownVulnerableSamples:
   MD5: c0e2a64ba0d23ab95258372457060143
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: NICM.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.6
   Publisher: ''
   RichPEHeaderHash:
     MD5: 7ccba2f5532d28974864bb49f2f7ecde
@@ -142,7 +142,7 @@ KnownVulnerableSamples:
       Entropy: 4.709078409109689
       Virtual Size: '0x7c8'
     .data:
-      Entropy: 2.354080818221328
+      Entropy: 2.3540808182213286
       Virtual Size: '0x8c8'
     .pdata:
       Entropy: 4.31228440148608
@@ -240,9 +240,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

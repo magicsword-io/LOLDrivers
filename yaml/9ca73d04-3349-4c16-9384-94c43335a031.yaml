@@ -35,13 +35,13 @@ KnownVulnerableSamples:
     MD5: c0422d1f940cc872c08c1d0d7103856d
     SHA1: 87c2e547126b4eebfa51142625b14eb4312a53cc
     SHA256: 7fba2584bb4fb801f322e3a63253ffac36a76d9dc5f0a4747746b0791e2a0d0b
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-03-21 05:35:29'
+  Company: ASUStek
+  Copyright: 'Copyright '
+  CreationTimestamp: '2013-03-21 08:35:29'
   Date: ''
-  Description: ''
+  Description: The driver for the ECtool driver-based tools
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 2.5.0.2
   Filename: ''
   ImportedFunctions:
   - IoWMIQueryAllData
@@ -67,14 +67,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: Driver7.sys
   MD5: 4ad13cdb6330cede4b2c4e1be3ee267f
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: Driver7
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: EC tool
+  ProductVersion: '2.5'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2e1105714ec7e9b57b3520499701e54b
@@ -172,9 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

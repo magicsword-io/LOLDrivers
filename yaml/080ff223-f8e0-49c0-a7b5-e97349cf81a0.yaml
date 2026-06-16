@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 986877a0cf596be97155e9469f3c4b40
     SHA1: 98807d9e11bad4feed54d0d2c1abadeb95ca997c
     SHA256: 35b31c96194d78cbb98b3223bf810f78f53fc0e4601f49169938ca883586e4e9
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2021-04-20 20:22:47'
+  Company: HP Inc.
+  Copyright: Copyright (C) 2020-2021 HP Inc. All rights reserved.
+  CreationTimestamp: '2021-04-20 23:22:47'
   Date: ''
-  Description: ''
+  Description: HpPortIo
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.2.0.9
   Filename: HpPortIox64.sys
   ImportedFunctions:
   - MmGetSystemRoutineAddress
@@ -94,13 +94,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HpPortIox64.sys
   MD5: a641e3dccba765a10718c9cb0da7879e
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: HpPortIox64.sys
+  Product: HpPortIo
+  ProductVersion: 1.2.0.9
   Publisher: ''
   RichPEHeaderHash:
     MD5: 4d4d28dcc041614dbd266ba38ab0b695

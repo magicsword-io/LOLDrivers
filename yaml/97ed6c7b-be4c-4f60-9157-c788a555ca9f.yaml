@@ -37,13 +37,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Insyde Software
+  Description: iscflashx64.sys
+  Product: Insyde Flash Utility 64 bit Driver
+  ProductVersion: 5, 2, 1, 1
+  FileVersion: 5, 2, 1, 1
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: iscflashx64.sys
   Imphash: 31a3c2c72c9a565dc4ba75ef26677569
   Authentihash:
     MD5: 89fd5d30f33a1c6c052f9561fae3c6c8
@@ -76,12 +76,12 @@ KnownVulnerableSamples:
       Entropy: 5.122839794345092
       Virtual Size: '0x362'
     .rsrc:
-      Entropy: 3.3502407165489383
+      Entropy: 3.350240716548938
       Virtual Size: '0x3c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-01-04 22:43:38'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2015-01-05 01:43:38'
+  InternalName: InsydeFlash
+  Copyright: Copyright (c) 2015 Insyde Software Corp. All Rights Reserved.
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''

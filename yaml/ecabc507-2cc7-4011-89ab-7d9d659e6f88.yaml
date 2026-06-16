@@ -35,11 +35,11 @@ KnownVulnerableSamples:
     MD5: a25f4c5111ddfde40e42212d87e07c8f
     SHA1: d164686b53fb72444d42e196ffdd30fad4aaf37e
     SHA256: 07c0239c548fdabcb18ac3b54001edd0f8abffd8285e39662d7632a26456d58b
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2008-02-19 08:08:53'
+  Company: innotek GmbH
+  Copyright: Copyright (C) 2004-2007 innotek GmbH
+  CreationTimestamp: '2008-02-19 11:08:53'
   Date: ''
-  Description: ''
+  Description: VirtualBox i8042 Port Driver
   ExportedFunctions:
   - AssertMsg1
   - AssertMsg2
@@ -73,7 +73,7 @@ KnownVulnerableSamples:
   - RTStrFormat
   - RTStrFormatNumber
   - RTStrFormatV
-  FileVersion: ''
+  FileVersion: 1.5.6.28241
   Filename: ''
   ImportedFunctions:
   - memmove
@@ -144,14 +144,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: i8042prt
   MD5: 77fee376657e3178546185d135656268
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: VBoxMouseNT.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: VirtualBox Guest Additions
+  ProductVersion: 1.5.6.28241
   Publisher: ''
   RichPEHeaderHash:
     MD5: b29e9f07f83635e751136d5722b353c8
@@ -277,9 +277,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

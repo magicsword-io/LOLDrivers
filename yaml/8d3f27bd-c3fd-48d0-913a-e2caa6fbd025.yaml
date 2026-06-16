@@ -59,14 +59,14 @@ KnownVulnerableSamples:
     MD5: dbcdc8d0f902e064773b158644ee717d
     SHA1: 7593d46a73ec00e00aef3e9d0031c2b21b74ecfb
     SHA256: 64d060216cf55210f595609487b708d5e70e0706a8de0827369bf58898205f34
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Realtek IO Driver
+  Company: 'Realtek                                            '
+  InternalName: 'rtkio64.sys '
+  OriginalFilename: 'rtkio64.sys '
+  FileVersion: '1.006.0118.2017 built by: WinDDK'
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.006.0118.2017
+  Copyright: 'Copyright (C) 2017 Realtek Semiconductor Corporation. All Right Reserved.            '
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -126,10 +126,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=22671299, STREET_ADDRESS=No. 2, Innovation Road II, Hsinchu Science
-        Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor
-        Corp., CN=Realtek Semiconductor Corp.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
+        Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2016-06-13 00:00:00'
       ValidTo: '2019-01-24 12:00:00'
       Signature: 9616a10e728762896fad0b74d574eb1775ae3bd1b12dc07441d668ec373ffb2ed5590d43f821b8d440c8e11338272d0cd1bc0ea5c05a428538c0ba1195e800c51e81db998174bdbe25be284a2c367d3578cf801524bd9f18b9098f4ee79f45a0e9af74894b828523f0b2c1c6837bc572da3be7f769e8df8749f26fd05087cc4b09fedac11c037e3690441286f8c52c09f18c7c179138f4844a8d99d8f9e7dec178ead089e12a05469c046a3c85b43d038811f02c6803128bf9bc1b757a2bb72d3ad61f670d3ae856ade0165f9dff89c36592b5295ead0718458c19c2f21781cd1ef0685049ebddd88806cd17e6eab078e2f0a505845ee5d9fca6904260ef8a1a
@@ -229,7 +228,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-18 00:48:25'
+  CreationTimestamp: '2017-01-18 03:48:25'
   Imphash: 8ee2435c62b02fe0372cde028be489cb
   LoadsDespiteHVCI: 'TRUE'
 - Filename: rtkio.sys
@@ -240,14 +239,14 @@ KnownVulnerableSamples:
     MD5: d543d754cbb1d404d62b6c574a1aa3cd
     SHA1: daca8d39b72bbe8a5b6d5fa35bbb4ecef198a359
     SHA256: e657e54c341d37881837dbaf553e10bbe31ff2d6ccf9ca939ca5433ec464a73b
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Realtek IODriver
+  Company: Windows (R) Codename Longhorn DDK provider
+  InternalName: rtkio.sys
+  OriginalFilename: rtkio.sys
+  FileVersion: '6.0.6000.16386 built by: WinDDK'
+  Product: Windows (R) Codename Longhorn DDK driver
+  ProductVersion: 6.0.6000.16386
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
   MachineType: I386
   Imports:
   - ntoskrnl.exe
@@ -345,9 +344,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -404,7 +403,7 @@ KnownVulnerableSamples:
       Entropy: 5.056661630034299
       Virtual Size: '0x134'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 05:59:01'
+  CreationTimestamp: '2010-07-02 08:59:01'
   Imphash: 6ce93eab57a73915ecd5c202a339f6ce
   LoadsDespiteHVCI: 'FALSE'
 - Filename: rtkiow10x64.sys
@@ -415,14 +414,14 @@ KnownVulnerableSamples:
     MD5: 02f3eb42f514eb2652d6097e36874a1c
     SHA1: 3c5cc137458500a4a7a0be5860a02a00df92e2d8
     SHA256: 8944a3f50f38d92d17b8cfe2e08201a79ea30f38812d18f28036e59789d3f58c
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Realtek IO Driver
+  Company: 'Realtek                                            '
+  InternalName: 'rtkiow10x64.sys '
+  OriginalFilename: 'rtkiow10x64.sys '
+  FileVersion: 1.009.0709.2020
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.009.0709.2020
+  Copyright: 'Copyright (C) 2020 Realtek Semiconductor Corporation. All Right Reserved.            '
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -505,9 +504,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=22671299, C=TW, L=HSINCHU, O=Realtek Semiconductor Corp., CN=Realtek
-        Semiconductor Corp.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=22671299, C=TW, L=HSINCHU,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2020-01-09 00:00:00'
       ValidTo: '2020-09-15 12:00:00'
       Signature: 622ab6660f0bb6b692dbbfe701f462a2f59e43a039ed1bf699a2e55c1871b0d24036819d02f456b8b5903628c5cf7094cd138332eed3e985232c30c7b3bb7c0640f06bb230d5c1eccd4e13d2377c168df20895c77a8c87b44c6200f6f06bc3bc40b285efa3f855f75c7ff3518dfb299c638b5d560fb94d3e97eea3a29a7524a0c1192311571fd06905346264c6d6c8336e08cb34d9ee7440677b92aa061981364db6bb67b4d3479041e85c7b4e31e009f3d315b75c6c50d8cefe6b63475ac598505235fe9c5f69bee61d70940d47ac10a760e3eac26e268f21508b5e567e6d92c5b1ba9b1de5ebc9da9ac472d6ca33dae12b01fca6113e6e8082bd00a3a33840
@@ -607,7 +605,7 @@ KnownVulnerableSamples:
       Entropy: 3.3766291673878226
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-07-09 02:28:24'
+  CreationTimestamp: '2020-07-09 05:28:24'
   Imphash: 317f02ddc9809d608a9bf63ce24e9550
   LoadsDespiteHVCI: 'TRUE'
 - Filename: rtkio.sys
@@ -618,14 +616,14 @@ KnownVulnerableSamples:
     MD5: 2131039a2273befb71bfd7aedf9196b1
     SHA1: df5d3b52f987c4b48c6d164d8266e57c86a4a2d7
     SHA256: 1044ea40d459fe4c619a44afe53e6ff5a9cc5a37cf568d974ae23ed62da58759
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: Realtek IODriver
+  Company: Windows (R) Codename Longhorn DDK provider
+  InternalName: rtkio.sys
+  OriginalFilename: rtkio.sys
+  FileVersion: '6.0.6000.16386 built by: WinDDK'
+  Product: Windows (R) Codename Longhorn DDK driver
+  ProductVersion: 6.0.6000.16386
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -716,9 +714,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -760,13 +758,13 @@ KnownVulnerableSamples:
       Entropy: 4.132643471964034
       Virtual Size: '0x1cc'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.365873090848691
       Virtual Size: '0x90'
     PAGE:
-      Entropy: 6.2669065574898655
+      Entropy: 6.266906557489865
       Virtual Size: '0x78e'
     INIT:
       Entropy: 5.352491123942965
@@ -775,7 +773,7 @@ KnownVulnerableSamples:
       Entropy: 3.411543280486889
       Virtual Size: '0x408'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 05:59:21'
+  CreationTimestamp: '2010-07-02 08:59:21'
   Imphash: d6c920c10d4d0f92f0ac14c3fefed233
   LoadsDespiteHVCI: 'FALSE'
 - Filename: rtkio64.sys
@@ -788,19 +786,19 @@ KnownVulnerableSamples:
   - DigiCert
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: 'Realtek                                            '
+  Description: Realtek IO Driver
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.008.0823.2017
+  FileVersion: '1.008.0823.2017 built by: WinDDK'
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: 'rtkio64.sys '
   Authentihash:
     MD5: dbe68427fd1f2194715b4d146dedeae7
     SHA1: 118ebc5c7ac859d17c14ceeaa8ab973d694fdd7b
     SHA256: e46bb410c3bb95a1f3d61ced157c679bfac7dc997534e46b83b234a6fc5cbb14
-  InternalName: ''
-  Copyright: ''
+  InternalName: 'rtkio64.sys '
+  Copyright: 'Copyright (C) 2017 Realtek Semiconductor Corporation. All Right Reserved.            '
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -861,10 +859,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=22671299, STREET_ADDRESS=No. 2, Innovation Road II, Hsinchu Science
-        Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor
-        Corp., CN=Realtek Semiconductor Corp.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
+        Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2016-06-13 00:00:00'
       ValidTo: '2019-01-24 12:00:00'
       Signature: 9616a10e728762896fad0b74d574eb1775ae3bd1b12dc07441d668ec373ffb2ed5590d43f821b8d440c8e11338272d0cd1bc0ea5c05a428538c0ba1195e800c51e81db998174bdbe25be284a2c367d3578cf801524bd9f18b9098f4ee79f45a0e9af74894b828523f0b2c1c6837bc572da3be7f769e8df8749f26fd05087cc4b09fedac11c037e3690441286f8c52c09f18c7c179138f4844a8d99d8f9e7dec178ead089e12a05469c046a3c85b43d038811f02c6803128bf9bc1b757a2bb72d3ad61f670d3ae856ade0165f9dff89c36592b5295ead0718458c19c2f21781cd1ef0685049ebddd88806cd17e6eab078e2f0a505845ee5d9fca6904260ef8a1a
@@ -964,7 +961,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 08:43:11'
+  CreationTimestamp: '2017-08-23 11:43:11'
   Imphash: f046e37fa7914491dc25a6f7718da341
   LoadsDespiteHVCI: 'TRUE'
 - Filename: rtkio.sys
@@ -977,19 +974,19 @@ KnownVulnerableSamples:
   - DigiCert
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Windows (R) Codename Longhorn DDK provider
+  Description: Realtek IODriver
+  Product: Windows (R) Codename Longhorn DDK driver
+  ProductVersion: 6.0.6000.16386
+  FileVersion: '6.0.6000.16386 built by: WinDDK'
   MachineType: I386
-  OriginalFilename: ''
+  OriginalFilename: rtkio.sys
   Authentihash:
     MD5: d543d754cbb1d404d62b6c574a1aa3cd
     SHA1: daca8d39b72bbe8a5b6d5fa35bbb4ecef198a359
     SHA256: e657e54c341d37881837dbaf553e10bbe31ff2d6ccf9ca939ca5433ec464a73b
-  InternalName: ''
-  Copyright: ''
+  InternalName: rtkio.sys
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1044,10 +1041,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=22671299, STREET_ADDRESS=No. 2, Innovation Road II, Hsinchu Science
-        Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor
-        Corp., CN=Realtek Semiconductor Corp.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
+        Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2016-06-13 00:00:00'
       ValidTo: '2019-01-24 12:00:00'
       Signature: 9616a10e728762896fad0b74d574eb1775ae3bd1b12dc07441d668ec373ffb2ed5590d43f821b8d440c8e11338272d0cd1bc0ea5c05a428538c0ba1195e800c51e81db998174bdbe25be284a2c367d3578cf801524bd9f18b9098f4ee79f45a0e9af74894b828523f0b2c1c6837bc572da3be7f769e8df8749f26fd05087cc4b09fedac11c037e3690441286f8c52c09f18c7c179138f4844a8d99d8f9e7dec178ead089e12a05469c046a3c85b43d038811f02c6803128bf9bc1b757a2bb72d3ad61f670d3ae856ade0165f9dff89c36592b5295ead0718458c19c2f21781cd1ef0685049ebddd88806cd17e6eab078e2f0a505845ee5d9fca6904260ef8a1a
@@ -1144,7 +1140,7 @@ KnownVulnerableSamples:
       Entropy: 5.056661630034299
       Virtual Size: '0x134'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 05:59:01'
+  CreationTimestamp: '2010-07-02 08:59:01'
   Imphash: 6ce93eab57a73915ecd5c202a339f6ce
   LoadsDespiteHVCI: 'FALSE'
 - Filename: rtkiow10x64.sys
@@ -1157,19 +1153,19 @@ KnownVulnerableSamples:
   - DigiCert
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: 'Realtek                                            '
+  Description: Realtek IO Driver
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.008.0823.2017
+  FileVersion: 1.008.0823.2017
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: 'rtkiow10x64.sys '
   Authentihash:
     MD5: 4d01000bdb93d60aa1ff5700b4b0a9a2
     SHA1: 5e85fc1f7ef1c3c2745c842739c0ab596f87f9f9
     SHA256: bc65d8ade2e72475a585307311e3058b3dbc4a7d2be6740c2c53a5902e698e7f
-  InternalName: ''
-  Copyright: ''
+  InternalName: 'rtkiow10x64.sys '
+  Copyright: 'Copyright (C) 2017 Realtek Semiconductor Corporation. All Right Reserved.            '
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1230,10 +1226,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=22671299, STREET_ADDRESS=No. 2, Innovation Road II, Hsinchu Science
-        Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor
-        Corp., CN=Realtek Semiconductor Corp.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
+        Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2016-06-13 00:00:00'
       ValidTo: '2019-01-24 12:00:00'
       Signature: 9616a10e728762896fad0b74d574eb1775ae3bd1b12dc07441d668ec373ffb2ed5590d43f821b8d440c8e11338272d0cd1bc0ea5c05a428538c0ba1195e800c51e81db998174bdbe25be284a2c367d3578cf801524bd9f18b9098f4ee79f45a0e9af74894b828523f0b2c1c6837bc572da3be7f769e8df8749f26fd05087cc4b09fedac11c037e3690441286f8c52c09f18c7c179138f4844a8d99d8f9e7dec178ead089e12a05469c046a3c85b43d038811f02c6803128bf9bc1b757a2bb72d3ad61f670d3ae856ade0165f9dff89c36592b5295ead0718458c19c2f21781cd1ef0685049ebddd88806cd17e6eab078e2f0a505845ee5d9fca6904260ef8a1a
@@ -1333,7 +1328,7 @@ KnownVulnerableSamples:
       Entropy: 3.0976094754943175
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 08:44:32'
+  CreationTimestamp: '2017-08-23 11:44:32'
   Imphash: 6faad89adbfc9d5448bb1bd12e7714cd
   LoadsDespiteHVCI: 'TRUE'
 - Filename: rtkiow8x64.sys
@@ -1346,16 +1341,19 @@ KnownVulnerableSamples:
   - DigiCert
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: 'Realtek                                            '
+  Description: Realtek IO Driver
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.008.0823.2017
+  FileVersion: 1.008.0823.2017
   MachineType: AMD64
+  OriginalFilename: 'rtkiow8x64.sys'
   Authentihash:
     MD5: d2914b13c253d24728fade34df3d91df
     SHA1: fa7fbb04748088557085ef3060b5fdb65a7b6b10
     SHA256: ed68f30f8246730c2b57495ed1db1480350d879b01d070999d35f38630865f5c
+  InternalName: 'rtkiow8x64.sys'
+  Copyright: 'Copyright (C) 2017 Realtek Semiconductor Corporation. All Right Reserved.            '
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -1416,10 +1414,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=22671299, STREET_ADDRESS=No. 2, Innovation Road II, Hsinchu Science
-        Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor
-        Corp., CN=Realtek Semiconductor Corp.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
+        Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2016-06-13 00:00:00'
       ValidTo: '2019-01-24 12:00:00'
       Signature: 9616a10e728762896fad0b74d574eb1775ae3bd1b12dc07441d668ec373ffb2ed5590d43f821b8d440c8e11338272d0cd1bc0ea5c05a428538c0ba1195e800c51e81db998174bdbe25be284a2c367d3578cf801524bd9f18b9098f4ee79f45a0e9af74894b828523f0b2c1c6837bc572da3be7f769e8df8749f26fd05087cc4b09fedac11c037e3690441286f8c52c09f18c7c179138f4844a8d99d8f9e7dec178ead089e12a05469c046a3c85b43d038811f02c6803128bf9bc1b757a2bb72d3ad61f670d3ae856ade0165f9dff89c36592b5295ead0718458c19c2f21781cd1ef0685049ebddd88806cd17e6eab078e2f0a505845ee5d9fca6904260ef8a1a
@@ -1519,20 +1516,20 @@ KnownVulnerableSamples:
       Entropy: 3.0976094754943175
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 08:43:48'
+  CreationTimestamp: '2017-08-23 11:43:48'
   Imphash: 8122311437457ccae22578e301c6a17d
   LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 323c438f0a5a5e25ab49d996f968e876
     SHA1: f9399f08551048d8c72269d26ad1ac09a463d87f
     SHA256: aff3f4d25b85b6b3147d2b7f586edc3e9aa2ec25c37d5dc7ad809d99677497ea
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-01-15 23:07:46'
+  Company: 'Realtek                                            '
+  Copyright: 'Copyright (C) 2015 Realtek Semiconductor Corporation. All Right Reserved.            '
+  CreationTimestamp: '2015-01-16 02:07:46'
   Date: ''
-  Description: ''
+  Description: Realtek IODriver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.002.0116.2015 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - MmUnmapLockedPages
@@ -1559,14 +1556,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: 'rtkio64.sys '
   MD5: f23b2adcfab58e33872e5c2d0041ad88
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: 'rtkio64.sys '
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: 'Realtek IODriver                      '
+  ProductVersion: 1.002.0116.2015
   Publisher: ''
   RichPEHeaderHash:
     MD5: 828915d5ff115e52f37d95524c7a0117
@@ -1582,7 +1579,7 @@ KnownVulnerableSamples:
       Entropy: 4.461315550778224
       Virtual Size: '0x23c'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.651730578389947
@@ -1700,13 +1697,13 @@ KnownVulnerableSamples:
     MD5: b63a971807801d7c8873059cd5eef56f
     SHA1: 7e75c5237b2536a8ffb04bc9db85b421f560ee80
     SHA256: 4ecb25cb7a127729a0124d1c0e0ba7dd0c24a02f48f40f6af174b15581b6925c
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-07-25 07:19:43'
+  Company: 'Realtek                                            '
+  Copyright: 'Copyright (C) 2012 Realtek Semiconductor Corporation. All Right Reserved.            '
+  CreationTimestamp: '2012-07-25 10:19:43'
   Date: ''
-  Description: ''
+  Description: Realtek IODriver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.001.0725.2012 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -1733,14 +1730,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: 'rtkio64.sys '
   MD5: dd050e79c515e4a6d1ae36cac5545025
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: 'rtkio64.sys '
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: 'Realtek IODriver                      '
+  ProductVersion: 1.001.0725.2012
   Publisher: ''
   RichPEHeaderHash:
     MD5: 828915d5ff115e52f37d95524c7a0117
@@ -1756,13 +1753,13 @@ KnownVulnerableSamples:
       Entropy: 4.279574069269288
       Virtual Size: '0x1ec'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.4238240815263694
       Virtual Size: '0x9c'
     PAGE:
-      Entropy: 6.24558419772641
+      Entropy: 6.2455841977264095
       Virtual Size: '0x77e'
     INIT:
       Entropy: 5.41262022426708
@@ -1834,9 +1831,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1872,13 +1869,13 @@ KnownVulnerableSamples:
     MD5: b21ab759cfaa77178c30c8b43678707d
     SHA1: e66b3b650761b1272b22d46ab41649b8a5c26603
     SHA256: 902b754dd302a994074ea8d3e619d2f9000e6c6997e428f19f41533f7c5e192c
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2020-07-09 02:29:01'
+  Company: 'Realtek                                            '
+  Copyright: 'Copyright (C) 2020 Realtek Semiconductor Corporation. All Right Reserved.            '
+  CreationTimestamp: '2020-07-09 05:29:01'
   Date: ''
-  Description: ''
+  Description: Realtek IO Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.009.0709.2020 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - MmMapIoSpace
@@ -1940,14 +1937,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: 'rtkio64.sys '
   MD5: 96e10a2904fff9491762a4fb549ad580
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: 'rtkio64.sys '
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.009.0709.2020
   Publisher: ''
   RichPEHeaderHash:
     MD5: 63f7901aa6e4d4f06db211ef42799ba5
@@ -2002,9 +1999,8 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=22671299, C=TW, L=HSINCHU, O=Realtek Semiconductor Corp., CN=Realtek
-        Semiconductor Corp.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=22671299, C=TW, L=HSINCHU,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2020-01-09 00:00:00'
       ValidTo: '2020-09-15 12:00:00'
       Signature: 622ab6660f0bb6b692dbbfe701f462a2f59e43a039ed1bf699a2e55c1871b0d24036819d02f456b8b5903628c5cf7094cd138332eed3e985232c30c7b3bb7c0640f06bb230d5c1eccd4e13d2377c168df20895c77a8c87b44c6200f6f06bc3bc40b285efa3f855f75c7ff3518dfb299c638b5d560fb94d3e97eea3a29a7524a0c1192311571fd06905346264c6d6c8336e08cb34d9ee7440677b92aa061981364db6bb67b4d3479041e85c7b4e31e009f3d315b75c6c50d8cefe6b63475ac598505235fe9c5f69bee61d70940d47ac10a760e3eac26e268f21508b5e567e6d92c5b1ba9b1de5ebc9da9ac472d6ca33dae12b01fca6113e6e8082bd00a3a33840
@@ -2080,13 +2076,13 @@ KnownVulnerableSamples:
     MD5: d5757762e2ab3f34b0fa097b9abd3b90
     SHA1: bdcbf070f68d8eecc47d7efbd9f377e8e652d026
     SHA256: f3308899fc0ebdd04a4dacc386873c25dabe32a8f34607fb335148d2dab667d8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-08-25 02:11:29'
+  Company: 'Realtek                                            '
+  Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
+  CreationTimestamp: '2016-08-25 05:11:29'
   Date: ''
-  Description: ''
+  Description: Realtek IO Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.005.0825.2016 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - MmMapIoSpace
@@ -2121,14 +2117,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: 'rtkio64.sys '
   MD5: 4e67277648c63b79563360dac22b5492
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: 'rtkio64.sys '
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.005.0825.2016
   Publisher: ''
   RichPEHeaderHash:
     MD5: 9006d42eb57a81b9dadafec544fe5df2
@@ -2183,10 +2179,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=22671299, STREET_ADDRESS=No. 2, Innovation Road II, Hsinchu Science
-        Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor
-        Corp., CN=Realtek Semiconductor Corp.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
+        Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2016-06-16 00:00:00'
       ValidTo: '2017-09-05 12:00:00'
       Signature: ae5485b82bba5f5c5ee1c0e8e65b4d5f93fb294c16884ab6dd4a3abeb7ea20465a454deae2249adb71e25d01a063c46a1cdcf61c6d12f7f4d74fc6785ef7512e0be878f0b9842f6d940c6c42bb62cf4069ed91d4067ab6bcc74a85aa48aa2a97a30acfb4ffdfb9f7f82e624910eda3ce62bcf6e2663f701284c0bf3f6d42cda004887fd61d88ef7aa613a256040ef40cbb107f2b38d46f1b078c0bf4aee7597bcbed8c7e3a240908f11428182cb158a6e125ba22953c75753b720d91abf039326fe3e2c79237cc973d74f10b1bf5dbdb13fde60af6124a2dce9cb2f66516f0798dbd739ebe336db585c6d1b0691f85d71c460f3ce8ef7f21753f3b863d418ade
@@ -2262,13 +2257,13 @@ KnownVulnerableSamples:
     MD5: 9335f6098f8706ebb83466fbd449bc0f
     SHA1: 533e7f159d3adb334067257f80073e33accaa483
     SHA256: ed617d4c50288921a6a760de19db1633bd8172421109dcf68082c67db085ddb1
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-01-04 21:48:28'
+  Company: 'Realtek                                            '
+  Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
+  CreationTimestamp: '2016-01-05 00:48:28'
   Date: ''
-  Description: ''
+  Description: Realtek IO Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.004.0105.2016 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - MmUnmapLockedPages
@@ -2294,14 +2289,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: 'rtkio64.sys '
   MD5: 7dd538bcaa98d6c063ead8606066333f
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: 'rtkio64.sys '
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.004.0105.2016
   Publisher: ''
   RichPEHeaderHash:
     MD5: ad2ff1abb61c2353de692b4809ddaab0
@@ -2317,7 +2312,7 @@ KnownVulnerableSamples:
       Entropy: 4.5445281371973945
       Virtual Size: '0x228'
     .data:
-      Entropy: 0.5035334969292565
+      Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
       Entropy: 3.5974706785237442
@@ -2435,13 +2430,13 @@ KnownVulnerableSamples:
     MD5: e13260e98e8c2ff45d504114da8117e8
     SHA1: 16b17721cf655f2442bf3865a9329f96e1e15295
     SHA256: c6389dca278be297b95846badc2b6859b488f123dbdc5d7bfc6f4393eeb7e678
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-08-25 02:11:29'
+  Company: 'Realtek                                            '
+  Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
+  CreationTimestamp: '2016-08-25 05:11:29'
   Date: ''
-  Description: ''
+  Description: Realtek IO Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.005.0825.2016 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - MmMapIoSpace
@@ -2476,14 +2471,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: 'rtkio64.sys '
   MD5: 34edf3464c3f5605c1ca3a071f12e28c
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: 'rtkio64.sys '
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: 'Realtek IO Driver                      '
+  ProductVersion: 1.005.0825.2016
   Publisher: ''
   RichPEHeaderHash:
     MD5: 9006d42eb57a81b9dadafec544fe5df2
@@ -2538,10 +2533,9 @@ KnownVulnerableSamples:
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
         SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
-        serialNumber=22671299, STREET_ADDRESS=No. 2, Innovation Road II, Hsinchu Science
-        Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor
-        Corp., CN=Realtek Semiconductor Corp.
+    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
+        Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2016-06-13 00:00:00'
       ValidTo: '2019-01-24 12:00:00'
       Signature: 9616a10e728762896fad0b74d574eb1775ae3bd1b12dc07441d668ec373ffb2ed5590d43f821b8d440c8e11338272d0cd1bc0ea5c05a428538c0ba1195e800c51e81db998174bdbe25be284a2c367d3578cf801524bd9f18b9098f4ee79f45a0e9af74894b828523f0b2c1c6837bc572da3be7f769e8df8749f26fd05087cc4b09fedac11c037e3690441286f8c52c09f18c7c179138f4844a8d99d8f9e7dec178ead089e12a05469c046a3c85b43d038811f02c6803128bf9bc1b757a2bb72d3ad61f670d3ae856ade0165f9dff89c36592b5295ead0718458c19c2f21781cd1ef0685049ebddd88806cd17e6eab078e2f0a505845ee5d9fca6904260ef8a1a

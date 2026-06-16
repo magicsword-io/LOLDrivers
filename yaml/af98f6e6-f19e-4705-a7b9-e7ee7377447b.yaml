@@ -32,13 +32,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Filseclab Corporation
+  Description: Filseclab Dynamic Defense System Drv
+  Product: Filseclab Dynamic Defense System
+  ProductVersion: 2, 0, 0, 8553
+  FileVersion: 2, 0, 0, 8553
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: fildds.sys
   Imphash: 8a83e9dfc88f971a2dfc34e277724d28
   Authentihash:
     MD5: 1485041cae109ae12931b4e3d566d16c
@@ -74,9 +74,9 @@ KnownVulnerableSamples:
       Entropy: 5.25387854848233
       Virtual Size: '0x5b8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-04-11 00:21:09'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2013-04-11 03:21:09'
+  InternalName: fildds
+  Copyright: Copyright (C) 2002-2011 Filseclab Corporation
   Imports:
   - ntoskrnl.exe
   - filnk.sys
@@ -155,9 +155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

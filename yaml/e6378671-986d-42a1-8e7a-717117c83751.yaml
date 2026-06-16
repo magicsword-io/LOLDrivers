@@ -72,7 +72,7 @@ KnownVulnerableSamples:
   Imphash: 1014dd148858e163ab9a4d27d0e3594a
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-01-30 10:32:16'
+  CreationTimestamp: '2018-01-30 13:32:16'
   RichPEHeaderMD5: 1e7257fad0156a8620120920a4eba3d1
   RichPEHeaderSHA1: 81c0a25338b94e6f37fd4b008a96ec206578ae8c
   RichPEHeaderSHA256: 28b974fe883d1f49b63303afa89877013459bc739b2443009f34bf3f7206140e
@@ -100,18 +100,18 @@ KnownVulnerableSamples:
       Virtual Size: '0xc'
   CompanyName: Paragon Software GmbH
   FileDescription: A part of Paragon System Utilities
-  InternalName: ''
-  OriginalFilename: ''
+  InternalName: biontdrv
+  OriginalFilename: biontdrv.sys
   FileVersion: ''
   ProductName: Paragon System Utilities
   LegalCopyright: Copyright 1994-2017 Paragon Software GmbH
-  ProductVersion: ''
+  ProductVersion: 1.3.0
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: "C=DE, ST=Baden,W\xFCrttemberg, L=Freiburg im Breisgau, O=Paragon Software\
-        \ GmbH, CN=Paragon Software GmbH"
+    - Subject: C=DE, ST=Baden,Wrttemberg, L=Freiburg im Breisgau, O=Paragon Software
+        GmbH, CN=Paragon Software GmbH
       ValidFrom: '2017-08-28 00:00:00'
       ValidTo: '2018-09-16 23:59:59'
       Signature: b6880e26e7f7a31499535b4ef31185c25627f07f203bb88c3db097e8f87d9c700a61a5ec4181d88e49e8aa287813fa2322eb15e5c590bed5bc39b545f5ca5a716e7be94f0f93985746d938462bd0c0649eb72fdedea26b837085fb177a738968d3a92e8c1f8408d108c0ad23f075feed4be4bb72430a46380d7c9e90aff4a1972a3bf3c82112f902d88e26b1b585cd0daec825d64468e0642f9a0f3269ee440efe0a1b561f69cf827aa480cd1fe02638f02d6fb2474a033cc7bd72e95b609a54bd3b3cf58ed3da2a13145e0c973a104d173af454ec00611912b1e706fcb09da6f159e5659107afcc8ba2620c7524af645a6804fdcc54f51ef40e5e9fb5246b6d
@@ -177,10 +177,10 @@ KnownVulnerableSamples:
     MD5: 1e7257fad0156a8620120920a4eba3d1
     SHA1: 81c0a25338b94e6f37fd4b008a96ec206578ae8c
     SHA256: 28b974fe883d1f49b63303afa89877013459bc739b2443009f34bf3f7206140e
-  Description: ''
-  Company: ''
-  Product: ''
-  Copyright: ''
+  Description: A part of Paragon System Utilities
+  Company: Paragon Software GmbH
+  Product: Paragon System Utilities
+  Copyright: Copyright 1994-2017 Paragon Software GmbH
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -247,7 +247,7 @@ KnownVulnerableSamples:
   Imphash: f4f462bcde0472cb6202214475f889b1
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-08-11 05:04:23'
+  CreationTimestamp: '2022-08-11 08:04:23'
   RichPEHeaderMD5: 103ed1ac1ea56c3cc7db32fa7d2eae72
   RichPEHeaderSHA1: 4888504201b2e54209e2098252644cf9c7dac7ba
   RichPEHeaderSHA256: 180e1ac2cc854b49c7afdf2bd752147097fb55f5a5199a831885db6a4957ec10
@@ -275,12 +275,12 @@ KnownVulnerableSamples:
       Virtual Size: '0xc'
   CompanyName: Paragon Software GmbH
   FileDescription: A part of Paragon System Utilities
-  InternalName: ''
-  OriginalFilename: ''
+  InternalName: biontdrv
+  OriginalFilename: biontdrv.sys
   FileVersion: ''
   ProductName: Paragon System Utilities
   LegalCopyright: Copyright 1994-2022 Paragon Software GmbH
-  ProductVersion: ''
+  ProductVersion: 1.5.1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -302,8 +302,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: "C=DE, ST=Baden,W\xFCrttemberg, L=Freiburg, O=Paragon Software GmbH,\
-        \ CN=Paragon Software GmbH"
+    - Subject: C=DE, ST=Baden,Wrttemberg, L=Freiburg, O=Paragon Software GmbH, CN=Paragon
+        Software GmbH
       ValidFrom: '2021-10-27 00:00:00'
       ValidTo: '2022-11-09 23:59:59'
       Signature: 60efe8e490f73560084068cb01097a77ddc92a2b0a0c4fc2d148becc30dc16ca81fa83edad0813b37ad623ada902100d64b4b3e75cd38a858ca11a068b2b70a80ad3be0edd05f449b254108d9fcdf04bfefbcf2e976b3be1c5190efcadfddd3a98493c0e088b4e5d67396054d593fa176999cd14f49d928a36aec45214539d624cfda6f97dc77691dc4155a4b8348ce3910588c7a6c309c63e2b7ab45d4b09228f62b6127c094171c5e533a69eba287b1c15aa5797f79debf5ff378692cbe41925ff5a226bf3b521ce8c988cf7ecb655bba8e5b3a6ae70792df23b1bdc86cf1d5f43aa0cddd6fb1bc9ea7c70aae4e161e7abbb12a9c63b5cccbb4efd9cd680c1c126151746b996517a083eb73c6d30b7255e38c8e52f105a58969f53f7c64811a285629b1ffc1b364342680e55c26532a8eaae218430598031cc94c37adf26f80018bbfc6d54fcbd351683f2bcd61ab84af6ef2d9ab3322b0437343c6f69ad6bfafa56e6e0cd0ba5a769bb53772b2546d43d38375d224375bb29adf2a495f5c44b04a3efb9130594ab0690bc85538a4a612efb47d6dd0bb032196eb47e00c4a150052c860a112f46163c6cf071f6ee9ef928f5c895a206a9886f23f58e394f28415dcaf227cf2dc0690a0880362bb558ba140d084966593754a8dd896ff67e5e1b7abe130c2b503406d0c7ac387422b83973c4dffe8f4b7c0d17dc800463091e
@@ -332,10 +332,10 @@ KnownVulnerableSamples:
     MD5: 103ed1ac1ea56c3cc7db32fa7d2eae72
     SHA1: 4888504201b2e54209e2098252644cf9c7dac7ba
     SHA256: 180e1ac2cc854b49c7afdf2bd752147097fb55f5a5199a831885db6a4957ec10
-  Description: ''
-  Company: ''
-  Product: ''
-  Copyright: ''
+  Description: A part of Paragon System Utilities
+  Company: Paragon Software GmbH
+  Product: Paragon System Utilities
+  Copyright: Copyright 1994-2022 Paragon Software GmbH
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe

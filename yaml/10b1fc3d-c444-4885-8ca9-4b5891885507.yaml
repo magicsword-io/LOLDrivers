@@ -52,14 +52,14 @@ KnownVulnerableSamples:
     MD5: 75c20227e11024bdfd5fbe23e769bbca
     SHA1: 2e3cf3678d476420696ec7df46b08d4d24d25644
     SHA256: c9b8ecd0657fda14476920fe47783bd8a951d7a4a640935d9199b4a7ae4b8b69
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATI Diagnostics Hardware Abstraction Sys
+  Company: ATI Technologies Inc.
+  InternalName: atillk64.sys
+  OriginalFilename: atillk64.sys
+  FileVersion: 5.11.9.0
+  Product: ATI Diagnostics
+  ProductVersion: 5.11.9.0
+  Copyright: Copyright (C) ATI Technologies Inc., 2003
   MachineType: IA64
   Imports:
   - ntoskrnl.exe
@@ -166,9 +166,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -210,7 +210,7 @@ KnownVulnerableSamples:
       Entropy: 0.6102086113176999
       Virtual Size: '0x128'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-09-09 11:36:29'
+  CreationTimestamp: '2005-09-09 14:36:29'
   Imphash: a18b467c3b43f334ca455c495a3ef70d
   LoadsDespiteHVCI: 'FALSE'
 - Filename: atillk64.sys
@@ -221,14 +221,14 @@ KnownVulnerableSamples:
     MD5: 78103f6de4cad64d95a8beda5f8b9112
     SHA1: 0358bcba83349cb23ea44d5c36b9e22adaec8d94
     SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATI Diagnostics Hardware Abstraction Sys
+  Company: ATI Technologies Inc.
+  InternalName: atillk64.sys
+  OriginalFilename: atillk64.sys
+  FileVersion: 5.11.9.0
+  Product: ATI Diagnostics
+  ProductVersion: 5.11.9.0
+  Copyright: Copyright (C) ATI Technologies Inc., 2003
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -328,9 +328,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -366,7 +366,7 @@ KnownVulnerableSamples:
       Entropy: 3.3307368674259283
       Virtual Size: '0x3a8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-09-09 11:40:54'
+  CreationTimestamp: '2005-09-09 14:40:54'
   Imphash: b4c2607b2af5376910bf80b561e9a18a
   LoadsDespiteHVCI: 'FALSE'
 - Filename: atillk64.sys
@@ -377,14 +377,14 @@ KnownVulnerableSamples:
     MD5: 78103f6de4cad64d95a8beda5f8b9112
     SHA1: 0358bcba83349cb23ea44d5c36b9e22adaec8d94
     SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: ATI Diagnostics Hardware Abstraction Sys
+  Company: ATI Technologies Inc.
+  InternalName: atillk64.sys
+  OriginalFilename: atillk64.sys
+  FileVersion: 5.11.9.0
+  Product: ATI Diagnostics
+  ProductVersion: 5.11.9.0
+  Copyright: Copyright (C) ATI Technologies Inc., 2003
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -484,9 +484,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -522,6 +522,6 @@ KnownVulnerableSamples:
       Entropy: 3.3307368674259283
       Virtual Size: '0x3a8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-09-09 11:40:54'
+  CreationTimestamp: '2005-09-09 14:40:54'
   Imphash: b4c2607b2af5376910bf80b561e9a18a
   LoadsDespiteHVCI: 'FALSE'

@@ -65,7 +65,7 @@ KnownVulnerableSamples:
       Entropy: 5.184632949990556
       Virtual Size: '0x472'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-26 12:46:20'
+  CreationTimestamp: '2011-10-26 15:46:20'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -166,9 +166,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -256,7 +256,7 @@ KnownVulnerableSamples:
       Entropy: 5.184632949990556
       Virtual Size: '0x472'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-01-31 10:42:33'
+  CreationTimestamp: '2012-01-31 13:42:33'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -357,9 +357,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

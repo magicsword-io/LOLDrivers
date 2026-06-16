@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 62d9c8a109afc08e2858d98df9776850
     SHA1: 7beb26c59b8d1b9540c6fae7c05c2b1cc2537e54
     SHA256: d852810a7319e3249077a1b9f1317f6f4157a19bb99b90063d118c30c2c84ac2
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-07-27 22:28:05'
+  Company: "Windows\xAE winows 7 driver kits provider"
+  Copyright: "Copyright\xA9 Microsoft Corporation. All rights reserved."
+  CreationTimestamp: '2012-07-28 01:28:05'
   Date: ''
-  Description: ''
+  Description: Hardware read & write driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.5.0
   Filename: HwRwDrv.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -68,13 +68,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HwRwDrv.sys
   MD5: dbc415304403be25ac83047c170b0ec2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: HwRwDrv.sys
+  Product: Hardware read & write driver
+  ProductVersion: 1.0.5.0
   Publisher: Shuttle Inc.
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d

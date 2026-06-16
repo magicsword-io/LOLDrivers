@@ -46,13 +46,13 @@ KnownVulnerableSamples:
     MD5: 3bfdb46b5ad5fa267b992a2350a6518a
     SHA1: cb65c6f9f411892d13ffe8ba1cb5e9c4be2c0a25
     SHA256: bd243e33fa80f4bd6010c23ecdf94b6008fee30df248255dcfe014c91f2ce2af
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-11-27 15:59:02'
+  Company: Microsoft Corporation
+  Copyright: Microsoft Corporation. All rights reserved.
+  CreationTimestamp: '2013-11-27 18:59:02'
   Date: ''
-  Description: ''
+  Description: WAN Transport Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 6.1.7600.1172
   Filename: wantd_6.sys
   ImportedFunctions:
   - wcsncmp
@@ -141,13 +141,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - NDIS.SYS
-  InternalName: ''
+  InternalName: wantd.sys
   MD5: 4b058945c9f2b8d8ebc485add1101ba5
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: wantd.sys
+  Product: Microsoft Windows Operating System
+  ProductVersion: 6.1.7600.1172
   Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
   RichPEHeaderHash:
     MD5: 8cdd468850a9084b109fb26005e28d1f

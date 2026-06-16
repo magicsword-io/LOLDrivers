@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 8a3fb969d6edfb9a860e13a556a9d64f
     SHA1: d9cf173dd75bf410c2f7f35247cd4db186af9a41
     SHA256: fe14940b5d3068b7ceffd28a529196811f1d0e175522f4dfab26573e7aca0bb4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2018-12-27 15:06:43'
+  Company: LG Electronics Inc.
+  Copyright: ultrabios@hotmail.com
+  CreationTimestamp: '2018-12-27 18:06:43'
   Date: ''
-  Description: ''
+  Description: LHA
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '6.1.7600.16385 built by: WinDDK'
   Filename: LHA.sys
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -109,13 +109,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: LHA.sys
   MD5: 748cf64b95ca83abc35762ad2c25458f
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: LHA.sys
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 6.1.7600.16385
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8de9ce6c09a8dc70b9c6399d53ed5752

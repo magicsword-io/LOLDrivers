@@ -30,13 +30,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Tonec Inc.
+  Description: Internet Download Manager TDI Driver
+  Product: Internet Download Manager
+  ProductVersion: 6.32.3.1
+  FileVersion: 6.32.3.80
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: idmtdi.sys
   Imphash: 5ea7a944eb3873467dc30aafabea2752
   Authentihash:
     MD5: 539c14f9f300778263bade546b1ec50e
@@ -78,9 +78,9 @@ KnownVulnerableSamples:
       Entropy: 3.3389621467649535
       Virtual Size: '0x384'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-12-21 05:07:48'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2022-12-21 08:07:48'
+  InternalName: idmtdi.sys
+  Copyright: "Copyright \xA9 1999 - 2018 Tonec Inc."
   Imports:
   - ntoskrnl.exe
   - HAL.dll

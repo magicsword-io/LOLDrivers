@@ -332,7 +332,7 @@ KnownVulnerableSamples:
   Imphash: 71686eb45898fe5283b523ecbc867eb5
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2042-03-24 04:13:22'
+  CreationTimestamp: '2042-03-24 07:13:22'
   RichPEHeaderMD5: fed2865b1ab6bb9b3f59d7294f4377a5
   RichPEHeaderSHA1: 87c769274b3c6f69944f8294717875821006f610
   RichPEHeaderSHA256: 8f7fc8ffaea73552b4fd84c7d463524bb34ed4abc1a8160d4348ffd49ecdd0da
@@ -375,12 +375,12 @@ KnownVulnerableSamples:
       Virtual Size: '0x26d8'
   CompanyName: Microsoft Corporation
   FileDescription: Windows Client Side Caching Driver
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
+  InternalName: csc.sys
+  OriginalFilename: CSC.Sys
+  FileVersion: 10.0.22621.1 (WinBuild.160101.0800)
   ProductName: "Microsoft\xAE Windows\xAE Operating System"
   LegalCopyright: "\xA9 Microsoft Corporation. All rights reserved."
-  ProductVersion: ''
+  ProductVersion: 10.0.22621.1
   Signatures: {}
   LoadsDespiteHVCI: 'TRUE'
   Authentihash:
@@ -391,10 +391,10 @@ KnownVulnerableSamples:
     MD5: fed2865b1ab6bb9b3f59d7294f4377a5
     SHA1: 87c769274b3c6f69944f8294717875821006f610
     SHA256: 8f7fc8ffaea73552b4fd84c7d463524bb34ed4abc1a8160d4348ffd49ecdd0da
-  Description: ''
-  Company: ''
-  Product: ''
-  Copyright: ''
+  Description: Windows Client Side Caching Driver
+  Company: Microsoft Corporation
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe

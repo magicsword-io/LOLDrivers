@@ -49,13 +49,13 @@ KnownVulnerableSamples:
     MD5: 56b6144e389ce3b1e2a0a96a954aa7d8
     SHA1: 6d9543725aca0c9c8f403425952692ccc1d2d7f2
     SHA256: 34e6a56c60746c51034b45a7b2a36617205b598d0bbcc695f92404605a0975d5
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2022-01-28 09:59:24'
+  Company: Lenovo Group Limited (R)
+  Copyright: "\xA9 2021 Lenovo Group Limited. All rights reserved."
+  CreationTimestamp: '2022-01-28 12:59:24'
   Date: ''
-  Description: ''
+  Description: Lenovo Diagnostics Driver for Windows 10 and later.
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.4.0
   Filename: LenovoDiagnosticsDriver.sys
   ImportedFunctions:
   - MmMapIoSpace
@@ -101,13 +101,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: LenovoDiagnosticsDriver.sys
   MD5: b941c8364308990ee4cc6eadf7214e0f
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: LenovoDiagnosticsDriver.sys
+  Product: Lenovo Diagnostics
+  ProductVersion: 1.0.4.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: f9a028999bfd69ee65e86573d56d2de3
@@ -117,7 +117,7 @@ KnownVulnerableSamples:
   SHA256: f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe
   Sections:
     .text:
-      Entropy: 6.20228145901243
+      Entropy: 6.202281459012431
       Virtual Size: '0x11b6'
     .rdata:
       Entropy: 4.307397917054479

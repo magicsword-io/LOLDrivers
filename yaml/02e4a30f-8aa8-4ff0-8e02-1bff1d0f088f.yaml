@@ -35,13 +35,13 @@ KnownVulnerableSamples:
     MD5: aa06c91cf9286e2aea99534794daa427
     SHA1: d9326484320452a9887daad7d39bad711bd7cefe
     SHA256: 2bb0418dcfb3fa15f01220dc039f2c9ad4dc12eb7f0396deaa9b2e81cb5e77e9
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-12-18 04:32:13'
+  Company: ASRock Incorporation
+  Copyright: Copyright (C) 2012 ASRock Incorporation
+  CreationTimestamp: '2015-12-18 07:32:13'
   Date: ''
-  Description: ''
+  Description: AsrAutoChkUpdDrv_1_0_32 Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -69,14 +69,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: AsrAutoChkUpdDrv_1_0_32.sys
   MD5: d9c24542dd04d2562ae9e050061cee1d
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: AsrAutoChkUpdDrv_1_0_32.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: AsrAutoChkUpdDrv_1_0_32 Driver
+  ProductVersion: 1.00.00.0000
   Publisher: ''
   RichPEHeaderHash:
     MD5: a84c01eca8a6ca8e5221dbca3000c16e
@@ -168,9 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

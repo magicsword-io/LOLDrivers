@@ -48,13 +48,14 @@ KnownVulnerableSamples:
     MD5: c21e45ae33d6b1f864a276a13ba3aaeb
     SHA1: 94b9b91a2acc786b54e8dbc11b759b05bc15fc3f
     SHA256: 9f70169f9541c8f5b13d3ec1f3514cc4f2607d572ffb4c7e5a98be0856852dd8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-01-27 05:33:44'
+  Company: Highresolution Enterprises [www.highrez.co.uk]
+  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
+    Logix4u
+  CreationTimestamp: '2016-01-27 08:33:44'
   Date: ''
-  Description: ''
+  Description: Kernel level port access driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.2 x64 built by: WinDDK'
   Filename: inpoutx64.sys
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -73,13 +74,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: inpoutx64.sys
   MD5: 4d487f77be4471900d6ccbc47242cc25
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: inpoutx64.sys
+  Product: inpoutx64 Driver Version 1.2
+  ProductVersion: 1.2 x64
   Publisher: ''
   RichPEHeaderHash:
     MD5: 3c96e0741ae47291a272a41e4b9e80e5
@@ -212,13 +213,14 @@ KnownVulnerableSamples:
     MD5: c21e45ae33d6b1f864a276a13ba3aaeb
     SHA1: 94b9b91a2acc786b54e8dbc11b759b05bc15fc3f
     SHA256: 9f70169f9541c8f5b13d3ec1f3514cc4f2607d572ffb4c7e5a98be0856852dd8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-01-27 05:33:44'
+  Company: Highresolution Enterprises [www.highrez.co.uk]
+  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
+    Logix4u
+  CreationTimestamp: '2016-01-27 08:33:44'
   Date: ''
-  Description: ''
+  Description: Kernel level port access driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.2 x64 built by: WinDDK'
   Filename: inpoutx64.sys
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -237,13 +239,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: inpoutx64.sys
   MD5: 5ca1922ed5ee2b533b5f3dd9be20fd9a
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: inpoutx64.sys
+  Product: inpoutx64 Driver Version 1.2
+  ProductVersion: 1.2 x64
   Publisher: ''
   RichPEHeaderHash:
     MD5: 3c96e0741ae47291a272a41e4b9e80e5
@@ -376,13 +378,14 @@ KnownVulnerableSamples:
     MD5: ad4eff45cdb0b12af3990945afff9a8f
     SHA1: 8e1f51761f21148f68ac925cc5f9e9c78f3d5ec4
     SHA256: d61ce5874adb89b4e992df8df879b568d9c4136df568718a768cd807d789a726
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2008-10-17 16:01:16'
+  Company: Highresolution Enterprises [www.highrez.co.uk]
+  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
+    Logix4u
+  CreationTimestamp: '2008-10-17 19:01:16'
   Date: ''
-  Description: ''
+  Description: Kernel level port access driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.2 x64 built by: WinDDK'
   Filename: inpoutx64.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -401,13 +404,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: inpoutx64.sys
   MD5: 9321a61a25c7961d9f36852ecaa86f55
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: inpoutx64.sys
+  Product: inpoutx64 Driver Version 1.2
+  ProductVersion: 1.2 x64
   Publisher: ''
   RichPEHeaderHash:
     MD5: 1b19b7c8c29ee1a90f9c2b13eb7d131b
@@ -518,9 +521,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

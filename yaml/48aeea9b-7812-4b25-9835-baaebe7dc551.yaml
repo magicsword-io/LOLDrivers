@@ -30,13 +30,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: ADLINK Technology, Inc.
+  Description: ADLINK Resource Manager Kenerl Service.
+  Product: ADLINK Resource Manager Kenerl Service.
+  ProductVersion: 1.12.802.0
+  FileVersion: 1.12.802.2022
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: ADRMDRVSYS.sys
   Imphash: eef1bff6680f68ccc7bfea46aaab8210
   Authentihash:
     MD5: dddde12c1e852679d330a053cadd56d6
@@ -69,9 +69,9 @@ KnownVulnerableSamples:
       Entropy: 3.0890191852411095
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-05-22 01:05:36'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2023-05-22 04:05:36'
+  InternalName: ADRMDRVSYS
+  Copyright: Copyright (C) 2016-2021 ADLINK Technology, Inc.
   Imports:
   - ntoskrnl.exe
   - HAL.dll

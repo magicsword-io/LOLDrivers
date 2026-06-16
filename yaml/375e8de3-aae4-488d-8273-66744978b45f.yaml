@@ -33,13 +33,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: iS3 Inc.
+  Description: szkg Device Driver
+  Product: Stopzilla
+  ProductVersion: 5.0.95.0
+  FileVersion: 3.0.24
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: szkg64.sys
   Imphash: f5a9e7716a1b8e1d5f64dfacca5283d0
   Authentihash:
     MD5: 392ed92d6a91fa7cd318e2846ce07490
@@ -81,9 +81,9 @@ KnownVulnerableSamples:
       Entropy: 3.582279956777612
       Virtual Size: '0x212'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-26 08:16:17'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2011-09-26 11:16:17'
+  InternalName: Avenger 64
+  Copyright: Copyright (c)2005-2011  iS3 Inc . All rights reserved.
   Imports:
   - ntoskrnl.exe
   ExportedFunctions: ''
@@ -239,9 +239,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

@@ -33,13 +33,14 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Basil
+  Description: 'The WinDivert 2.2 driver [URL: https://reqrypt.org/windivert.html]
+    [Bitcoin: 1C5vZVSbizPeZ8ydTYhUfm4LA2cNwBfcYh]'
+  Product: WinDivert 2.2 driver
+  ProductVersion: '2.2'
+  FileVersion: '2.2'
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: WinDivert.sys
   Imphash: 5bfe3723089cbcfcc271ba6d7ab617aa
   Authentihash:
     MD5: 75982fa2a79981d94b5f765af01bf6f8
@@ -75,9 +76,9 @@ KnownVulnerableSamples:
       Entropy: 5.026645084048212
       Virtual Size: '0x1a4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-09-19 18:09:22'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2022-09-19 21:09:22'
+  InternalName: WinDivert.sys
+  Copyright: "Copyright \xA9 Basil 2011-2022"
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -230,10 +231,8 @@ KnownVulnerableSamples:
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
         SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
         SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
-    - Subject: "serialNumber=91510107MA7E8Y2876, JURISDICTION_OF_INCORPORATION_C=CN,\
-        \ BUSINESS_CATEGORY=Private Organization, C=CN, ST=\u56DB\u5DDD\u7701, O=\u6210\
-        \u90FD\u5BC6\u601D\u542C\u79D1\u6280\u6709\u9650\u516C\u53F8, CN=\u6210\u90FD\
-        \u5BC6\u601D\u542C\u79D1\u6280\u6709\u9650\u516C\u53F8"
+    - Subject: serialNumber=91510107MA7E8Y2876, ??=CN, ??=Private Organization, C=CN,
+        ST=, O=, CN=
       ValidFrom: '2022-05-25 00:00:00'
       ValidTo: '2023-05-25 23:59:59'
       Signature: b75f493e19a27fd2fb38884a1c07997ab236a090a9299ad269b17a711f034b6b9b9686ecce7330d3ee9692c63be512b6c84ac3cca2b89606296226c512075251deca429743e7950038f9b5ee7f0d31e8b77e3f8aa11209fca096788a3679c9b68b2187e32ce6348c217e89066ac5758b87fe04e1e8a070194bcc034a8cc9e3e8e4cf67df553f3e4e55627971461eb011c4ee7ffdf1b3a388642ccfd7b7d272cd0d855ec7b9287d482a14c366f668a32c3daf404e9cda6296aff82fe45c7b1bfdc94ae6d0a08796685828dc250495e69b0c42daa45fb7dab634df7799c474b7c00da1104c5c7ce17c5587ccbcfa4949ee29c862a4482ee6e5cb5cc9871b4ce075974f6547e84d23eb494e831371f431c31d570daddec0988360a4023be17b2a8729d675aad81cdfd380738802d379131353dd22dae12912514e668ecda25b79888543e398bbd1e1d869131c9c5135ec75b7718537f69e2585363e0de3d42982f200ad88b2f9ce4f6abb2790771b638411013c80ce8055514c9351e403e438995f
@@ -261,13 +260,14 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Basil
+  Description: 'The WinDivert 2.2 driver [URL: https://reqrypt.org/windivert.html]
+    [Bitcoin: 1C5vZVSbizPeZ8ydTYhUfm4LA2cNwBfcYh]'
+  Product: WinDivert 2.2 driver
+  ProductVersion: '2.2'
+  FileVersion: '2.2'
   MachineType: I386
-  OriginalFilename: ''
+  OriginalFilename: WinDivert.sys
   Imphash: bb607f74958acb5ad3d1bbcb8a7407e3
   Authentihash:
     MD5: f1ec6b6ce86371c69fb627c10e93a71d
@@ -297,9 +297,9 @@ KnownVulnerableSamples:
       Entropy: 6.5698896674213545
       Virtual Size: '0x9b8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-09-19 18:09:17'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2022-09-19 21:09:17'
+  InternalName: WinDivert.sys
+  Copyright: "Copyright \xA9 Basil 2011-2022"
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -456,10 +456,8 @@ KnownVulnerableSamples:
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
         SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
         SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
-    - Subject: "serialNumber=91510107MA7E8Y2876, JURISDICTION_OF_INCORPORATION_C=CN,\
-        \ BUSINESS_CATEGORY=Private Organization, C=CN, ST=\u56DB\u5DDD\u7701, O=\u6210\
-        \u90FD\u5BC6\u601D\u542C\u79D1\u6280\u6709\u9650\u516C\u53F8, CN=\u6210\u90FD\
-        \u5BC6\u601D\u542C\u79D1\u6280\u6709\u9650\u516C\u53F8"
+    - Subject: serialNumber=91510107MA7E8Y2876, ??=CN, ??=Private Organization, C=CN,
+        ST=, O=, CN=
       ValidFrom: '2022-05-25 00:00:00'
       ValidTo: '2023-05-25 23:59:59'
       Signature: b75f493e19a27fd2fb38884a1c07997ab236a090a9299ad269b17a711f034b6b9b9686ecce7330d3ee9692c63be512b6c84ac3cca2b89606296226c512075251deca429743e7950038f9b5ee7f0d31e8b77e3f8aa11209fca096788a3679c9b68b2187e32ce6348c217e89066ac5758b87fe04e1e8a070194bcc034a8cc9e3e8e4cf67df553f3e4e55627971461eb011c4ee7ffdf1b3a388642ccfd7b7d272cd0d855ec7b9287d482a14c366f668a32c3daf404e9cda6296aff82fe45c7b1bfdc94ae6d0a08796685828dc250495e69b0c42daa45fb7dab634df7799c474b7c00da1104c5c7ce17c5587ccbcfa4949ee29c862a4482ee6e5cb5cc9871b4ce075974f6547e84d23eb494e831371f431c31d570daddec0988360a4023be17b2a8729d675aad81cdfd380738802d379131353dd22dae12912514e668ecda25b79888543e398bbd1e1d869131c9c5135ec75b7718537f69e2585363e0de3d42982f200ad88b2f9ce4f6abb2790771b638411013c80ce8055514c9351e403e438995f
@@ -487,13 +485,14 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Basil
+  Description: 'The WinDivert 2.2 driver [URL: https://reqrypt.org/windivert.html]
+    [Bitcoin: 1C5vZVSbizPeZ8ydTYhUfm4LA2cNwBfcYh]'
+  Product: WinDivert 2.2 driver
+  ProductVersion: '2.2'
+  FileVersion: '2.2'
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: WinDivert.sys
   Imphash: 5bfe3723089cbcfcc271ba6d7ab617aa
   Authentihash:
     MD5: 98e59da805f38429d3a3ad15e0aa66ef
@@ -505,7 +504,7 @@ KnownVulnerableSamples:
     SHA256: 52b29a3981a021cd7e3dd0f8b37f79ed1ea92c8d039d04fc6f931e8e0432d609
   Sections:
     .text:
-      Entropy: 6.301775714116261
+      Entropy: 6.3017757141162605
       Virtual Size: '0xb2fa'
     .rdata:
       Entropy: 4.318426453167154
@@ -529,9 +528,9 @@ KnownVulnerableSamples:
       Entropy: 5.026645084048212
       Virtual Size: '0x1a4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-04-09 17:27:36'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2022-04-09 20:27:36'
+  InternalName: WinDivert.sys
+  Copyright: "Copyright \xA9 Basil 2011-2022"
   Imports:
   - ntoskrnl.exe
   - HAL.dll
@@ -684,10 +683,8 @@ KnownVulnerableSamples:
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
         SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
         SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
-    - Subject: "serialNumber=91510107MA7E8Y2876, JURISDICTION_OF_INCORPORATION_C=CN,\
-        \ BUSINESS_CATEGORY=Private Organization, C=CN, ST=\u56DB\u5DDD\u7701, O=\u6210\
-        \u90FD\u5BC6\u601D\u542C\u79D1\u6280\u6709\u9650\u516C\u53F8, CN=\u6210\u90FD\
-        \u5BC6\u601D\u542C\u79D1\u6280\u6709\u9650\u516C\u53F8"
+    - Subject: serialNumber=91510107MA7E8Y2876, ??=CN, ??=Private Organization, C=CN,
+        ST=, O=, CN=
       ValidFrom: '2022-05-25 00:00:00'
       ValidTo: '2023-05-25 23:59:59'
       Signature: b75f493e19a27fd2fb38884a1c07997ab236a090a9299ad269b17a711f034b6b9b9686ecce7330d3ee9692c63be512b6c84ac3cca2b89606296226c512075251deca429743e7950038f9b5ee7f0d31e8b77e3f8aa11209fca096788a3679c9b68b2187e32ce6348c217e89066ac5758b87fe04e1e8a070194bcc034a8cc9e3e8e4cf67df553f3e4e55627971461eb011c4ee7ffdf1b3a388642ccfd7b7d272cd0d855ec7b9287d482a14c366f668a32c3daf404e9cda6296aff82fe45c7b1bfdc94ae6d0a08796685828dc250495e69b0c42daa45fb7dab634df7799c474b7c00da1104c5c7ce17c5587ccbcfa4949ee29c862a4482ee6e5cb5cc9871b4ce075974f6547e84d23eb494e831371f431c31d570daddec0988360a4023be17b2a8729d675aad81cdfd380738802d379131353dd22dae12912514e668ecda25b79888543e398bbd1e1d869131c9c5135ec75b7718537f69e2585363e0de3d42982f200ad88b2f9ce4f6abb2790771b638411013c80ce8055514c9351e403e438995f

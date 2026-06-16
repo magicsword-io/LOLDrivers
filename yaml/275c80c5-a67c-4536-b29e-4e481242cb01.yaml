@@ -151,9 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -185,7 +185,7 @@ KnownVulnerableSamples:
       Entropy: 4.4494366822955245
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-24 23:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Imphash: 543f80399f79401471523d335ea61642
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -303,9 +303,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -336,7 +336,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: rtcore64.sys
@@ -449,10 +449,9 @@ KnownVulnerableSamples:
         SHA1: b84d6a44f86e112ef3ecb55e22527fd37f622de8
         SHA256: 60c5e154e6794b6ac214b221c8b62a733eb8794092aa400729bbf88b72748230
         SHA384: be8fab78dcd9709d29c973205e536a3994a93769c7032b72d9ab26106a5e00b5a3497e41baec9cf9824506ca0990ffac
-    - Subject: BUSINESS_CATEGORY=Private Organization, serialNumber=22178368, JURISDICTION_OF_INCORPORATION_C=TW,
-        C=TW, ST=New Taipei, L=New Taipei, STREET_ADDRESS=NO.69, LI,DE ST., ZHONGHE
-        DIST., O=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
-        LTD.
+    - Subject: ??=Private Organization, serialNumber=22178368, ??=TW, C=TW, ST=New
+        Taipei, L=New Taipei, ??=NO.69, LI,DE ST., ZHONGHE DIST., O=MICRO,STAR INTERNATIONAL
+        CO., LTD., CN=MICRO,STAR INTERNATIONAL CO., LTD.
       ValidFrom: '2019-09-16 08:28:21'
       ValidTo: '2022-09-16 08:28:21'
       Signature: 31d3e258a115d41cea97ae1122b5482d2df37785b800cd8b16ee0e42b12a04e5b75d4c3447e1ffb7da8be87e733164fd2ed0020ab3d1010bf21a78cda4d031c4a75cec091a5072b44e8946476eb7c04c69e2e46af012ce640075751baf523140e803c62108f3b9efff3024a0e27138ba6763d36ca957fb480006e9b824f677b980edb98903a116d529b318753b539854a15778dacc6e4db10e4f3c5748b399f7270b244fe83e59743dbe4576c110bde088b2224d91e0c32bc8e4e5c7a61516602b962d66b01a46ccd5814a71bf9e99aac9604179d90230caea6c1229ecd20d2638084d62ff053dcf29675a0a44de07b9e75d5c3f8aeb66900828b949ea9289a8
@@ -494,7 +493,7 @@ KnownVulnerableSamples:
       Entropy: 5.101996629515978
       Virtual Size: '0x2f0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-19 03:45:31'
+  CreationTimestamp: '2019-09-19 06:45:31'
   Imphash: b0356152212dc6e33752847235064fb0
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -612,9 +611,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -645,7 +644,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -766,9 +765,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -799,7 +798,7 @@ KnownVulnerableSamples:
       Entropy: 4.523481595961036
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-24 00:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
   Imphash: cde9174249f04dad0f79890c976c0792
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -917,9 +916,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -952,7 +951,7 @@ KnownVulnerableSamples:
       Entropy: 4.4494366822955245
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-24 23:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Imphash: 543f80399f79401471523d335ea61642
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -1106,7 +1105,7 @@ KnownVulnerableSamples:
       Entropy: 5.101996629515978
       Virtual Size: '0x2f0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-19 03:45:31'
+  CreationTimestamp: '2019-09-19 06:45:31'
   Imphash: b0356152212dc6e33752847235064fb0
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -1227,9 +1226,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1260,7 +1259,7 @@ KnownVulnerableSamples:
       Entropy: 4.523481595961036
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-24 00:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
   Imphash: cde9174249f04dad0f79890c976c0792
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -1447,7 +1446,7 @@ KnownVulnerableSamples:
       Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-18 04:55:42'
+  CreationTimestamp: '2020-06-18 07:55:42'
   Imphash: 37f7c6238c9ce110408e01ae1bc45635
   LoadsDespiteHVCI: 'TRUE'
 - Filename: RTCore64.sys
@@ -1565,9 +1564,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1600,7 +1599,7 @@ KnownVulnerableSamples:
       Entropy: 4.4494366822955245
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-24 23:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Imphash: 543f80399f79401471523d335ea61642
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -1718,9 +1717,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1751,7 +1750,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -1872,9 +1871,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1905,7 +1904,7 @@ KnownVulnerableSamples:
       Entropy: 4.523481595961036
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-24 00:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
   Imphash: cde9174249f04dad0f79890c976c0792
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -2024,9 +2023,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2059,7 +2058,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -2177,9 +2176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2210,7 +2209,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -2312,9 +2311,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2382,7 +2381,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -2500,9 +2499,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2535,7 +2534,7 @@ KnownVulnerableSamples:
       Entropy: 4.4494366822955245
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-24 23:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Imphash: 543f80399f79401471523d335ea61642
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -2653,9 +2652,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2688,7 +2687,7 @@ KnownVulnerableSamples:
       Entropy: 4.4494366822955245
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-24 23:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Imphash: 543f80399f79401471523d335ea61642
   LoadsDespiteHVCI: 'FALSE'
 - Filename: rtcore64.sys
@@ -2807,9 +2806,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2842,7 +2841,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -2961,9 +2960,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2994,7 +2993,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 22:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: rtcore64.sys
@@ -3112,9 +3111,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3145,7 +3144,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 22:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -3264,9 +3263,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3297,7 +3296,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 22:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -3416,9 +3415,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3449,7 +3448,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 22:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -3567,9 +3566,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3600,7 +3599,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 22:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -3686,9 +3685,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3719,7 +3718,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -3840,9 +3839,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3873,7 +3872,7 @@ KnownVulnerableSamples:
       Entropy: 4.528890116790764
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-30 05:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
   Imphash: 7363079b9aae7d58bd33c691a613c83c
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -3994,9 +3993,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4027,7 +4026,7 @@ KnownVulnerableSamples:
       Entropy: 4.528890116790764
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-30 05:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
   Imphash: 7363079b9aae7d58bd33c691a613c83c
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -4145,9 +4144,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4178,7 +4177,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -4296,9 +4295,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4329,7 +4328,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -4447,9 +4446,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4480,7 +4479,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
 - Filename: rtcore64.sys
@@ -4598,9 +4597,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4633,7 +4632,7 @@ KnownVulnerableSamples:
       Entropy: 4.4494366822955245
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-24 23:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Imphash: 543f80399f79401471523d335ea61642
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -4754,9 +4753,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4787,7 +4786,7 @@ KnownVulnerableSamples:
       Entropy: 4.523481595961036
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-24 00:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
   Imphash: cde9174249f04dad0f79890c976c0792
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RTCore64.sys
@@ -4973,7 +4972,7 @@ KnownVulnerableSamples:
       Entropy: 4.528890116790764
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-30 05:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
   Imphash: 7363079b9aae7d58bd33c691a613c83c
   LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
@@ -4982,7 +4981,7 @@ KnownVulnerableSamples:
     SHA256: 5182caf10de9cec0740ecde5a081c21cdc100d7eb328ffe6f3f63183889fec6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-09-06 05:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -5101,9 +5100,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

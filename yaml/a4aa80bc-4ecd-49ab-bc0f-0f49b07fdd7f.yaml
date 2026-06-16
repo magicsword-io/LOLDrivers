@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 5751b28d2c87f7016e4271edbdcf6017
     SHA1: 4fb10f02d5af8ead68a5fdf101651b2f645a9eae
     SHA256: e1d2d76829640542eabc0c96356675c0a930e4607869de8037daf62f898903b5
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-03-25 22:49:03'
+  Company: Insyde Software Corp.
+  Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
+  CreationTimestamp: '2014-03-26 01:49:03'
   Date: ''
-  Description: ''
+  Description: SEG Windows Driver x64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 100, 0, 7, 0
   Filename: ''
   ImportedFunctions:
   - ExAllocatePoolWithTag
@@ -84,14 +84,14 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: segwindrvx64.sys
   MD5: 9cbdb5fb6dc63cb13f10b6333407cbb9
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: segwindrvx64.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: SEG Windows Driver x64
+  ProductVersion: 100, 0, 7, 0
   Publisher: ''
   RichPEHeaderHash:
     MD5: b8dc0c597ed9fbe3b9c1d1979a5835b1
@@ -110,7 +110,7 @@ KnownVulnerableSamples:
       Entropy: 5.918798816254175
       Virtual Size: '0xaa1c'
     .rdata:
-      Entropy: 4.589120564200676
+      Entropy: 4.589120564200675
       Virtual Size: '0x45c'
     .data:
       Entropy: 0.378703493487675
@@ -192,9 +192,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -247,13 +247,13 @@ KnownVulnerableSamples:
     MD5: bfc8d6405949be17179975d604e62c90
     SHA1: c7d32983805f04c7aac4e9713d203399aaca7acc
     SHA256: f1f345591efe74fd12e706132939f51963eb39dd0a1db556123c3e850c60fada
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-04-01 02:39:09'
+  Company: Insyde Software Corp.
+  Copyright: Copyright (c) 2012 - 2015, Insyde Software Corp. All Rights Reserved.
+  CreationTimestamp: '2015-04-01 05:39:09'
   Date: ''
-  Description: ''
+  Description: SEG Windows Driver x64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 100.00.07.02
   Filename: segwindrvx64.sys
   ImportedFunctions:
   - MmMapLockedPagesSpecifyCache
@@ -287,13 +287,13 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: segwindrvx64.sys
   MD5: 4ae55080ec8aed49343e40d08370195c
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: segwindrvx64.sys
+  Product: SEG Windows Driver x64
+  ProductVersion: 100.00.07.02
   Publisher: ''
   RichPEHeaderHash:
     MD5: dc3dfe1fda1d095e5fa3849e71bb1fb6
@@ -321,7 +321,7 @@ KnownVulnerableSamples:
       Entropy: 4.315963058834505
       Virtual Size: '0x3c0'
     INIT:
-      Entropy: 5.431683261883791
+      Entropy: 5.4316832618837925
       Virtual Size: '0x42a'
     .rsrc:
       Entropy: 3.3723185213577525
@@ -436,12 +436,12 @@ KnownVulnerableSamples:
     MD5: 9eea185193b6357a2bd97455572b650c
     SHA1: 4ac29762ab2ad025a13a1e8cf7af9b7f4c875aac
     SHA256: ca213b79336c69128620bc39e6d987c1e605299fb6525344ba1b08b7829197c7
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-03-18 13:20:01'
-  Description: ''
+  Company: Insyde Software Corp.
+  Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
+  CreationTimestamp: '2014-03-18 16:20:01'
+  Description: SEG Windows Driver x64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 100, 0, 7, 0
   Filename: segwindrvx64.sys
   ImportedFunctions:
   - MmMapLockedPagesSpecifyCache
@@ -475,13 +475,13 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: segwindrvx64.sys
   MD5: bdc3b6b83dde7111d5d6b9a2aadf233f
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: segwindrvx64.sys
+  Product: SEG Windows Driver x64
+  ProductVersion: 100, 0, 7, 0
   RichPEHeaderHash:
     MD5: b771c0bd9fe0e428b467b774d1cbc0bf
     SHA1: 93b03b61a7b4b4efd2f85ff40709bdacae9d0a2a
@@ -580,9 +580,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -635,13 +635,13 @@ KnownVulnerableSamples:
     MD5: 455be805eef8874daa03b46c0dc8237b
     SHA1: 7ebdf0f226a8e60cc9da39add12f75e17f615b7a
     SHA256: ee8ee16198dd8eec8d5fbb7f98f64bb849b2dfcf652cc102f4cdc63a4551549f
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-03-18 13:27:12'
+  Company: Insyde Software Corp.
+  Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
+  CreationTimestamp: '2014-03-18 16:27:12'
   Date: ''
-  Description: ''
+  Description: SEG Windows Driver x64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 100, 0, 7, 0
   Filename: ''
   ImportedFunctions:
   - WRITE_REGISTER_ULONG
@@ -693,14 +693,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: segwindrvx64.sys
   MD5: 31a331a88c6280555859455518a95c35
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: segwindrvx64.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: SEG Windows Driver x64
+  ProductVersion: 100, 0, 7, 0
   Publisher: ''
   RichPEHeaderHash:
     MD5: d3ecd8b9995fa87438ee429391c9f76b
@@ -798,9 +798,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -853,13 +853,13 @@ KnownVulnerableSamples:
     MD5: 0c6627c22f2d4cedbace35610ef22217
     SHA1: 287617c248c57c29357d09d46b795690efeb1f7f
     SHA256: f83465d2c38c20a3854d86c293867de3baae2f90419dbe82405bc9f9dd7bbd8c
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-09-18 23:42:51'
+  Company: Insyde Software Corp.
+  Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
+  CreationTimestamp: '2014-09-19 02:42:51'
   Date: ''
-  Description: ''
+  Description: SEG Windows Driver x64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 100.00.07.01
   Filename: ''
   ImportedFunctions:
   - MmMapLockedPagesSpecifyCache
@@ -893,14 +893,14 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: segwindrvx64.sys
   MD5: 875c44411674b75feb07592aeffa09c1
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: segwindrvx64.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: SEG Windows Driver x64
+  ProductVersion: 100.00.07.01
   Publisher: ''
   RichPEHeaderHash:
     MD5: dc3dfe1fda1d095e5fa3849e71bb1fb6
@@ -928,10 +928,10 @@ KnownVulnerableSamples:
       Entropy: 4.341982648651994
       Virtual Size: '0x3c0'
     INIT:
-      Entropy: 5.431683261883791
+      Entropy: 5.4316832618837925
       Virtual Size: '0x42a'
     .rsrc:
-      Entropy: 3.360573519283275
+      Entropy: 3.3605735192832755
       Virtual Size: '0x418'
     .reloc:
       Entropy: 2.4954618442383216
@@ -1040,13 +1040,13 @@ KnownVulnerableSamples:
     MD5: 0bc06ae681c0c6d57349c70a56da0d6c
     SHA1: 95c09ff1fdec9fa1739492c047d333fd8124b33b
     SHA256: 61bd9a26c01371d865e681f6354853dc0e27b1064906cd99b15220098be6e88d
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-11-14 23:50:12'
+  Company: Insyde Software Corp.
+  Copyright: Copyright (c) 2012 - 2013, Insyde Software Corp. All Rights Reserved.
+  CreationTimestamp: '2013-11-15 02:50:12'
   Date: ''
-  Description: ''
+  Description: SEG Windows Driver x64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 100, 0, 4, 0
   Filename: ''
   ImportedFunctions:
   - ExAllocatePoolWithTag
@@ -1075,14 +1075,14 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: segwindrvx64.sys
   MD5: dad8f40626ed4702e0e8502562d93d7c
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: segwindrvx64.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: SEG Windows Driver x64
+  ProductVersion: 100, 0, 4, 0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 11b19e98ecaef1027a2916f67da6a9ee
@@ -1180,9 +1180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1235,13 +1235,13 @@ KnownVulnerableSamples:
     MD5: 1845c2eab4e455303c6505335101afb6
     SHA1: 5c0bf58978971842776ce4ec33ad6bcdeaeee353
     SHA256: b06dad9821beef3442cd9e775228baa56582a3a85c9d178693f3cf236623de17
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-02-21 21:35:02'
+  Company: Insyde Software Corp.
+  Copyright: Copyright (c) 2012 - 2013, Insyde Software Corp. All Rights Reserved.
+  CreationTimestamp: '2013-02-22 00:35:02'
   Date: ''
-  Description: ''
+  Description: SEG Windows Driver x64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 100, 0, 0, 1
   Filename: ''
   ImportedFunctions:
   - ExAllocatePoolWithTag
@@ -1270,14 +1270,14 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: segwindrvx64.sys
   MD5: f14359ceb3705d77353b244bb795b552
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: segwindrvx64.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: SEG Windows Driver x64
+  ProductVersion: 100, 0, 0, 1
   Publisher: ''
   RichPEHeaderHash:
     MD5: a6b77c0eb57f1bd34daae338bb41d04d
@@ -1375,9 +1375,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

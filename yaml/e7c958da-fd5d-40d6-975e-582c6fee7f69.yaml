@@ -46,13 +46,13 @@ KnownVulnerableSamples:
     MD5: 380a4fd97d795fec244add19a9c21fd6
     SHA1: 6832acd68bcf08f8ced63023b5f7da36824cc596
     SHA256: 6991be9952aa08c0d2ac9fa728410ebdb44988b496ed01b8b7f478785ebb30c4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2019-01-10 18:06:10'
+  Company: BIOSTAR Group
+  Copyright: Copyright (c) 2018-2019 BIOSTAR Group
+  CreationTimestamp: '2019-01-10 21:06:10'
   Date: ''
-  Description: ''
+  Description: I/O Interface driver file
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 10.0.1901.1100
   Filename: BS_RCIO64.sys
   ImportedFunctions:
   - KeInitializeSemaphore
@@ -85,13 +85,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: I/O driver
   MD5: b10b210c5944965d0dc85e70a0b19a42
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: BS_RCIO64.sys
+  Product: BIOSTAR I/O driver
+  ProductVersion: 10.0.1901.1100
   Publisher: ''
   RichPEHeaderHash:
     MD5: fa3d25060a1ec2f8199a8bba2d045991

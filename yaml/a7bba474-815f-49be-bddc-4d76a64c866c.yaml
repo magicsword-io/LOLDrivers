@@ -126,13 +126,13 @@ KnownVulnerableSamples:
     MD5: fb5bbdd2bc73cd1f1f4bf727e6ddb137
     SHA1: 918768712f37fe0f3092b2ea452906d06f189bb3
     SHA256: 5b08a501124d13262c86889617071743521aeefc2d77f678d541aa8dbad52992
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-04-12 00:04:16'
+  Company: MSI
+  Copyright: Copyright (C) 2016 Micro-Star INT'L CO., LTD.
+  CreationTimestamp: '2016-04-12 03:04:16'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.2
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -150,13 +150,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib_X64.sys
   MD5: 6126065af2fc2639473d12ee3c0c198e
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib_X64.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.2
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -285,13 +285,13 @@ KnownVulnerableSamples:
     MD5: b3f5d7d5ea5ddb56cae089ab780d2058
     SHA1: b648e51b784f071adbf9f53048e3765efb96ab8a
     SHA256: 745273e1620bc657d2210ae1b5abb49f4f5928829f95c8ef01ce151bdbb4c32f
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-03-17 03:24:03'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2014-03-17 06:24:03'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -309,13 +309,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: c6f8983dd3d75640c072a8459b8fa55a
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -426,9 +426,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -444,13 +444,13 @@ KnownVulnerableSamples:
     MD5: 63cc49f8ae8897706dec2444951c0414
     SHA1: ae69d3501e7fe1e2109998beed9da13f74e032c2
     SHA256: 7334c46a55acf8bb18435ab60ed9b89f2c1ab31587ef052730358efc32fddb62
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-10-25 04:46:40'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-10-25 07:46:40'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -468,13 +468,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: f7cbbb5eb263ec9a35a1042f52e82ca4
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6c9272bb390e89b75934eea3b15a1858
@@ -584,9 +584,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -602,13 +602,13 @@ KnownVulnerableSamples:
     MD5: 07744c410b3e3a459576524f1b522a88
     SHA1: bfa958230e3816f9879e16ec391e94b607f292e6
     SHA256: 7af3585ca7c2dd65032fa48759a0124db2c5bbca5fc8caf8bb8f61fa5085149d
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-09-07 19:55:34'
+  Company: MSI
+  Copyright: Copyright (C) 2016 Micro-Star INT'L CO., LTD.
+  CreationTimestamp: '2016-09-07 22:55:34'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.3
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -626,13 +626,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 7ed6030f14e66e743241f2c1fa783e69
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.3
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -761,13 +761,13 @@ KnownVulnerableSamples:
     MD5: 575bfa9a34097f8d19982dcdd9118094
     SHA1: 9369dbe6e082a2af351daebeef1c464af33cc270
     SHA256: 6f96c129eb96bc4df9a7d247a98fecb9a3801dde63281ac1aba3d2ef869d32a5
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-12-23 01:24:53'
+  Company: MSI
+  Copyright: Copyright (C) 2014 MSI. All rights reserved.
+  CreationTimestamp: '2014-12-23 04:24:53'
   Date: ''
-  Description: ''
+  Description: NTIOLib_X64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.1
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -785,13 +785,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib_X64.sys
   MD5: 3651a6990fe38711ebb285143f867a43
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib_X64.sys
+  Product: NTIOLib_X64
+  ProductVersion: 1.0.0.1
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -920,13 +920,13 @@ KnownVulnerableSamples:
     MD5: fb364fe88525eface63e291f7e86338e
     SHA1: 0f661f61f0106faeda1d6cbe83b81aaf3ea4d28c
     SHA256: 299f36c717c5d5d77a8e9c15879e95cd825f74e77c7ed24e7cccbefeb38a2165
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-22 23:16:41'
+  Company: MSI
+  Copyright: Copyright (C) 2011-2012 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-23 02:16:41'
   Date: ''
-  Description: ''
+  Description: NTIOLib For MSISimple_OC
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.2
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -944,13 +944,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 736c4b85ce346ddf3b49b1e3abb4e72a
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.2
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -1060,9 +1060,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1078,13 +1078,13 @@ KnownVulnerableSamples:
     MD5: 1a384cdc0edc4e14d6dfb5b242e9313f
     SHA1: 13874ae76957845e9315eedf0f5f2b59eedcb9a6
     SHA256: 1f210a62de46c5acb868a083465b94287331ec28acd3b269e64ab6c3f372021f
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-04-14 23:40:05'
+  Company: MSI
+  Copyright: Copyright (C) 2013 MSI. All rights reserved.
+  CreationTimestamp: '2013-04-15 02:40:05'
   Date: ''
-  Description: ''
+  Description: MSI ComCenService Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -1102,13 +1102,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 4a06bcd96ef0b90a1753a805b4235f28
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -1219,9 +1219,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1237,13 +1237,13 @@ KnownVulnerableSamples:
     MD5: 9e87790870d27c78e12a870557a5decf
     SHA1: ff09c47ebaa82cdde41a1be4e65f5a7cafb28322
     SHA256: 051dad67cc6cb6b6e20b1230b04c09cc360d106a6b7000e0991381356ace0811
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-20 00:25:26'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-20 03:25:26'
   Date: ''
-  Description: ''
+  Description: NTIOLib for MSIFrequency_CC
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -1261,13 +1261,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 63e333d64a8716e1ae59f914cb686ae8
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -1377,9 +1377,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1395,13 +1395,13 @@ KnownVulnerableSamples:
     MD5: 4f3fc3f46b55c66e36a411e0389d9740
     SHA1: fed54cfff38966133b7fbc067246bbfca871118b
     SHA256: 9a1d483d6ca994942533fcfe10c11b1725bbb9551e435476453a57ce7ff17029
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-07-12 02:43:04'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2010-07-12 05:43:04'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -1419,13 +1419,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 79483cb29a0c428e1362ec8642109eee
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -1552,9 +1552,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1571,13 +1571,13 @@ KnownVulnerableSamples:
     MD5: d3ef4e7146fce9f2a17134d42c07166b
     SHA1: ee34907ac4afce04fe1bab85e68d7e743db05841
     SHA256: a6bf32fafa57bcbb84b06db0d7d28e4b1457ead69c33fa883d5abe84ecd91b51
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-10-25 03:27:58'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-10-25 06:27:58'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -1595,13 +1595,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 23cf3da010497eb2bf39a5c5a57e437c
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6c9272bb390e89b75934eea3b15a1858
@@ -1711,9 +1711,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1729,13 +1729,13 @@ KnownVulnerableSamples:
     MD5: ff9b15a51f11874a9abe7a1b9f4cfd0d
     SHA1: 0d3956de7c3a7788727358867abf34880eaa7100
     SHA256: cf3ec8972720f84d73e907bb293de40468a0d605ce0da658a786f7b4842b3c62
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-01-05 22:15:54'
+  Company: MSI
+  Copyright: Copyright (C) 2011-2012 MSI. All rights reserved.
+  CreationTimestamp: '2014-01-06 01:15:54'
   Date: ''
-  Description: ''
+  Description: NTIOLib For NTIOLib_ECO
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.2
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -1753,13 +1753,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 9638f265b1ddd5da6ecdf5c0619dcbe6
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.2
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -1870,9 +1870,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1888,13 +1888,13 @@ KnownVulnerableSamples:
     MD5: 2d87365d63e81ef0edc577bf0cb33995
     SHA1: b472d32094e258b2af60914db8604cd0bf439c4b
     SHA256: d33f19a12cd8e8649a56ce2a41e2b56d2ed80f203e5ededc4114c78ef773ffa8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-11-23 22:34:45'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2015-11-24 01:34:45'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -1912,13 +1912,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: f2f728d2f69765f5dfda913d407783d2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -2047,13 +2047,13 @@ KnownVulnerableSamples:
     MD5: 1d0d0ef174a767359bb32e53fe346416
     SHA1: 4dbbf2558cdbdaf4a5e5ec65e844f5abdace5514
     SHA256: 809403706c3669a0d67bd35a87f66714989d1bc66e2aa6ca5979781ae3c4fdb0
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-10-25 18:46:44'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-10-25 21:46:44'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -2071,13 +2071,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 992ded5b623be3c228f32edb4ca3f2d2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -2187,9 +2187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2205,13 +2205,13 @@ KnownVulnerableSamples:
     MD5: 922f6d3d0dda7748bad7a537a8bc9e4e
     SHA1: 71355d9ebcf35492b60c3f936550d30310a31049
     SHA256: 9d734d6443a707d601d76577692dc613b35201518856d0189b037f7a4fbd420d
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-10-04 18:28:48'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2009-10-04 21:28:48'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -2229,13 +2229,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: c3fea895fe95ea7a57d9f4d7abed5e71
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -2362,9 +2362,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2381,13 +2381,13 @@ KnownVulnerableSamples:
     MD5: c6830e904e56ea951005ea7639eedd35
     SHA1: c57c0dd18135bca5fdb094858a70033c006cd281
     SHA256: 4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-01-05 19:05:14'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2011-01-05 22:05:14'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -2405,13 +2405,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 0395b4e0eb21693590ad1cfdf7044b8b
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -2522,9 +2522,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2540,13 +2540,13 @@ KnownVulnerableSamples:
     MD5: 3b7d9b57810ca80137223615a97635e0
     SHA1: 8d9f65a6a9048ec91dd010216071c4ec983887c7
     SHA256: 4e92baa37cd8b665ca0851f8442766aaf3b96fa61ea137d5972d5eb059389a05
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-20 00:19:18'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-20 03:19:18'
   Date: ''
-  Description: ''
+  Description: NTIOLib For MSIRatio_CC
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -2564,13 +2564,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 68dde686d6999ad2e5d182b20403240b
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -2680,9 +2680,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2698,13 +2698,13 @@ KnownVulnerableSamples:
     MD5: 066bcfa3fdd0925385faf92debce887c
     SHA1: a2948b9d2e2ee9f4929b39acad6c850ea70dd34c
     SHA256: 7fa5c326b294f4fc537207a27947c2fcbbfa4eabde1ba4727c92cd8613e0fc7f
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-07-08 19:05:01'
+  Company: MSI
+  Copyright: Copyright (C) 2014 MSI. All rights reserved.
+  CreationTimestamp: '2014-07-08 22:05:01'
   Date: ''
-  Description: ''
+  Description: NTIOLib_X64
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.1
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -2722,13 +2722,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib_X64.sys
   MD5: 34069a15ae3aa0e879cd0d81708e4bcc
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib_X64.sys
+  Product: NTIOLib_X64
+  ProductVersion: 1.0.0.1
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -2857,13 +2857,13 @@ KnownVulnerableSamples:
     MD5: 7c60ced61bb34cad2982f5ddb1306754
     SHA1: d02d19abf19569df72ea2c5071330de3d57e0982
     SHA256: fa861c61102cbcaa1e5f6020deaa066c4fcdfaee3ded1ee156ab81d59ad54f9a
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-01-17 18:31:59'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2010-01-17 21:31:59'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -2881,13 +2881,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 3f39f013168428c8e505a7b9e6cba8a2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -3014,9 +3014,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3033,13 +3033,13 @@ KnownVulnerableSamples:
     MD5: ef516589154145d31284df600c9ad58b
     SHA1: dbed3d7755df2c30d7e445529ed2bbe60ce9ee2d
     SHA256: 6bed7f1304c6785a06064b04e0e3cb55384588f18ea2fc348a6fcd5784f47558
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-06-28 18:57:56'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2011-06-28 21:57:56'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -3057,13 +3057,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 1ed043249c21ab201edccb37f1d40af9
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -3157,9 +3157,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3176,13 +3176,13 @@ KnownVulnerableSamples:
     MD5: 133e1582c5d14c52ac3590c9d2ada850
     SHA1: a22e6b855062f1154ae8f244e2652e04b4ea5b4c
     SHA256: 5a63937a6320f50c4782d0675104932907d16a91d89088ac979a7a0129aad986
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-10-28 20:49:49'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-10-28 23:49:49'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -3200,13 +3200,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 96b463b6fa426ae42c414177af550ba2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -3316,9 +3316,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3334,13 +3334,13 @@ KnownVulnerableSamples:
     MD5: 761bee6879171d50932f73cfa9c718e0
     SHA1: 33b2e3af695f0febd39d02d8f931e92ad88461f4
     SHA256: e951858d5317724c015eef07d402e8bcb33cf1a7c2ccf7a75cea63e3430d16a2
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-02-09 00:39:49'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2011-02-09 03:39:49'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -3358,13 +3358,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 0752f113d983030939b4ab98b0812cf0
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -3458,9 +3458,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3477,13 +3477,13 @@ KnownVulnerableSamples:
     MD5: 63ea2f5ce789857efaf657ae86d029c5
     SHA1: 33286e984b12811b38b2ad3396451388e2f24424
     SHA256: 98f5cb928827e8dadc79c1be4f27f67755dbeb802c3485af9cace78b9eb65c59
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-26 02:11:53'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-26 05:11:53'
   Date: ''
-  Description: ''
+  Description: NTIOLib for MSIDDR_CC
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -3501,13 +3501,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 6cce5bb9c8c2a8293df2d3b1897941a2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -3617,9 +3617,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3635,13 +3635,13 @@ KnownVulnerableSamples:
     MD5: c6788d75093368b6dc2bc373df4591b8
     SHA1: a3799e1aa983ad65de762a430f3286eefeff61e0
     SHA256: 1ef80a6b63766ca36e2f2a7d29c49dc5859a58604bd8fde15011d8c379f76e01
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-03-19 03:14:02'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2013-03-19 06:14:02'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -3659,13 +3659,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 64efbffaa153b0d53dc1bccda4279299
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -3776,9 +3776,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3794,13 +3794,13 @@ KnownVulnerableSamples:
     MD5: 5e4c54660e02b951d67e54ce3c16dcc9
     SHA1: 14e798609095df77d135dd2afae8277e0a968d99
     SHA256: 5eb233ed9df3c1def326e2c63ee304dc85af303f8c9f038c993aa6e34f91ffaf
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-08 17:43:52'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-08 20:43:52'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -3818,13 +3818,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 2da209dde8188076a9579bd256dc90d0
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -3934,9 +3934,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3952,13 +3952,13 @@ KnownVulnerableSamples:
     MD5: e2fde714a590d75cec614058707ac9d7
     SHA1: 450a92b5d604ad2c7d848ab96dc1c0455c7d1f92
     SHA256: 5dfb950d4771c35f4f82626b5d8859cce74bf03db67f2be3036631894a62eca8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-05-23 23:11:50'
+  Company: MSI
+  Copyright: Copyright (C) 2013 MSI. All rights reserved.
+  CreationTimestamp: '2013-05-24 02:11:50'
   Date: ''
-  Description: ''
+  Description: NTIOLib for DebugLED
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -3976,13 +3976,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 84ba7af6ada1b3ea5efb9871a0613fc6
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -4093,9 +4093,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4111,13 +4111,13 @@ KnownVulnerableSamples:
     MD5: b36ce3dc6e3ca0e76c9f9a7d4d331524
     SHA1: 0b68901f632deadc3f0691febe7d0dacb8a2d4d8
     SHA256: bb4e3aa888a779238b210d6406aa480f01d27ea28d20699b1ec29a59dae19913
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-10-19 23:45:49'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2010-10-20 02:45:49'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -4135,13 +4135,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 1b32c54b95121ab1683c7b83b2db4b96
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -4268,9 +4268,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4287,13 +4287,13 @@ KnownVulnerableSamples:
     MD5: 498e18a0df3d49779e5d50e2ce1e8385
     SHA1: cb7ed29416920b38a00695d11751ca6766a7b5f9
     SHA256: 48ac8ae911c490e1b7f7813c0f345677e110ffaa9ef385b86ca25e5519e2c0de
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-06-11 02:40:43'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2009-06-11 05:40:43'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -4311,13 +4311,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: b0baac4d6cbac384a633c71858b35a2e
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -4444,9 +4444,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4463,13 +4463,13 @@ KnownVulnerableSamples:
     MD5: b70f71ebef5d45dcf99098beb0f72951
     SHA1: 049b1cd656849214bd5c864c79e3b27be6b46b34
     SHA256: c1795ec9d05d0efe56e76bf4b76a09a804d3cd5b0e75bc47049d5ee488fc2bec
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-12-19 22:45:05'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2010-12-20 01:45:05'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -4487,13 +4487,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: b89b097b8b8aecb8341d05136f334ebb
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -4587,9 +4587,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4606,13 +4606,13 @@ KnownVulnerableSamples:
     MD5: ec3966c4b4ec6fc15ff0940548fd10c2
     SHA1: 531a782723ecc50ea4fcfbbfe4b94465782a21d0
     SHA256: eae8045d43f16e33232fd8bd2399f48b14f8a6391c9fffe38960c03fee978b27
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-18 20:20:28'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-18 23:20:28'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -4630,13 +4630,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: a711e6ab17802fabf2e69e0cd57c54cd
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -4746,9 +4746,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4764,13 +4764,13 @@ KnownVulnerableSamples:
     MD5: 364af1be1135ce8bede31bb6c201f7bb
     SHA1: 3d0c8e9e7fcd431a91d4c4ea088d94fa371d546b
     SHA256: c1c18591d7b68fafa870f3d0f1124a353682765236674cc7476c5f1cc71b1528
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-01-26 22:43:32'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2011-01-27 01:43:32'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -4788,13 +4788,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 490b1f404c4f31f4538b36736c990136
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -4888,9 +4888,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4907,13 +4907,13 @@ KnownVulnerableSamples:
     MD5: c7069e41aab11ec8cb06657e6e8babd0
     SHA1: 156907d0ca2ecff7efa07f479622b018af74bf2f
     SHA256: 9c513f4d4c38a10af9f4a967bb6c7901275adf0df8046fc7e1b7e4c3e3c7c3cf
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-05-14 18:48:55'
+  Company: MSI
+  Copyright: Copyright (C) 2015 MSI. All rights reserved.
+  CreationTimestamp: '2015-05-14 21:48:55'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.1
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -4931,13 +4931,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 6f5d54ab483659ac78672440422ae3f1
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib_X64.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.1
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -5066,13 +5066,13 @@ KnownVulnerableSamples:
     MD5: 55cd6f1f309b3409bf2cb92a4eb56e74
     SHA1: e7558eaa5e3357ca3010ee219cf52fdf46e5cd5a
     SHA256: a502c904a7fe42183d3ea66f1e01fbd4321eb202280b054b9124dd333f093ba2
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-18 20:32:58'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-18 23:32:58'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -5090,13 +5090,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: dd04cd3de0c19bede84e9c95a86b3ca8
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -5206,9 +5206,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5224,13 +5224,13 @@ KnownVulnerableSamples:
     MD5: 0c06dcbb129db21d296df3f6f8e98514
     SHA1: d3642da8e37cb772b1dd7b75a69323a4a00566c8
     SHA256: ce89124d29b5e562bbcc2f07b1dfac0f22dd66ad3deb32dd32c8c138a3739ef8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-20 00:11:26'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-20 03:11:26'
   Date: ''
-  Description: ''
+  Description: NTIOLib for MSIClock_CC
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -5248,13 +5248,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 95e4c7b0384da89dce8ea6f31c3613d9
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -5364,9 +5364,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5382,13 +5382,13 @@ KnownVulnerableSamples:
     MD5: 37256f56e87f5530dd63e3069a3e3252
     SHA1: 17f4ab1865a5a2be4768cd25019439441fd0e10b
     SHA256: 61a3bf24d4e3eac56c380b022dfc195bad4cc8d03156cdc3ba743faab582284a
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2016-10-11 00:40:12'
+  Company: MSI
+  Copyright: Copyright (C) 2016 Micro-Star INT'L CO., LTD.
+  CreationTimestamp: '2016-10-11 03:40:12'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.01
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -5406,13 +5406,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 9aa7ed7809eec0d8bc6c545a1d18107a
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.01
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -5541,13 +5541,13 @@ KnownVulnerableSamples:
     MD5: c6830e904e56ea951005ea7639eedd35
     SHA1: c57c0dd18135bca5fdb094858a70033c006cd281
     SHA256: 4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-01-05 19:05:14'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2011-01-05 22:05:14'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -5565,13 +5565,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: c02f70960fa934b8defa16a03d7f6556
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -5665,9 +5665,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5684,13 +5684,13 @@ KnownVulnerableSamples:
     MD5: 6b5dd12cfdee0cf8a654eacc65028c36
     SHA1: 081d87fdb40a348b85382c63ea029281f213b778
     SHA256: d82a938dc7b0077a06d940bd3ce6097e3b02cdc254ec6fd863c0e526f2af69fa
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-09-19 20:09:19'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2011-09-19 23:09:19'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -5708,13 +5708,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 300c5b1795c9b6cc1bc4d7d55c7bbe85
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -5791,9 +5791,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5809,13 +5809,13 @@ KnownVulnerableSamples:
     MD5: c80d819869c1718a58dfada2167e842c
     SHA1: 0d6b74ac325c816bfdc20aa4a0fc0eb2cd45f4e6
     SHA256: f8ffb8a23be71c26f784905110b7e752473be55216300d08a83c40c1496fb6c1
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-18 20:31:30'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-18 23:31:30'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -5833,13 +5833,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 3dbf69f935ea48571ea6b0f5a2878896
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -5949,9 +5949,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5967,13 +5967,13 @@ KnownVulnerableSamples:
     MD5: 7e9154ee514d494701eb8559524f8e2e
     SHA1: 95c5f63e97d18e1ccc449a79ec952a5f6e76b9eb
     SHA256: 543ee203b355c4cbac74d9bac71fb73c0c5c5c3afe268e2ae8ae48d61d350709
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-12-03 00:49:26'
+  Company: MSI
+  Copyright: Copyright (C) 2011-2012 MSI. All rights reserved.
+  CreationTimestamp: '2013-12-03 03:49:26'
   Date: ''
-  Description: ''
+  Description: NTIOLib For MSISimple_OC
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.2
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -5991,13 +5991,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 8d63e1a9ff4cafee1af179c0c544365c
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.2
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -6108,9 +6108,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -6126,13 +6126,13 @@ KnownVulnerableSamples:
     MD5: 01a9049b40b0e848649dd1e0d224e63e
     SHA1: 9030ba396131afec733fc208ef55a4d37b6ffc07
     SHA256: 826e80ea5f657c75127c066b86caea8089f33b09b12c3d393fca8efedd40c1ef
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-11-20 00:14:23'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-11-20 03:14:23'
   Date: ''
-  Description: ''
+  Description: NTIOLib for MSICPU_CC
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -6150,13 +6150,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: e9a30edef1105b8a64218f892b2e56ed
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -6266,9 +6266,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -6284,13 +6284,13 @@ KnownVulnerableSamples:
     MD5: 94faebdbb74a0b99a8a17430671cdf9e
     SHA1: aca4c47b4823b5653cb42e599ee6168f435bdcc7
     SHA256: 21a6689456d9833453d5247e4c5faf13edcd4835408e033c40ae1a225711ae8f
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-12-25 02:41:18'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2013-12-25 05:41:18'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -6308,13 +6308,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 361a598d8bb92c13b18abb7cac850b01
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 41ddd08b440611823bc5d8cb732c563d
@@ -6425,9 +6425,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -6443,13 +6443,13 @@ KnownVulnerableSamples:
     MD5: 85dcbf05c91ceacc919a1638dd3c8f9f
     SHA1: 3d947aff431bb8ec02d9be3b4499312a62d4fec9
     SHA256: 5c22b7f65de948fdb74ffc3b5bae68f109bf7404a154ddbfa25dfd53e1bde667
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-10-25 19:11:43'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2012-10-25 22:11:43'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -6467,13 +6467,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: 7b43dfd84de5e81162ebcfafb764b769
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 39c75f9f5960f67f8cc161923c9e27de
@@ -6583,9 +6583,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -6601,13 +6601,13 @@ KnownVulnerableSamples:
     MD5: b9951498dd00ac42a36a6f5d59ebe98d
     SHA1: 0c429ee64668374fdf6d187071d4f0a932992a5f
     SHA256: 2e5648f892460e2a2a450519b523007ca6973a3679a59c07582aa5bdbd6584d4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-04-20 18:13:34'
+  Company: MSI
+  Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
+  CreationTimestamp: '2010-04-20 21:13:34'
   Date: ''
-  Description: ''
+  Description: NTIOLib
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.0.0.0
   Filename: NTIOLib.sys
   ImportedFunctions:
   - MmUnmapIoSpace
@@ -6625,13 +6625,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: NTIOLib.sys
   MD5: f66b96aa7ae430b56289409241645099
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
@@ -6758,9 +6758,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

@@ -29,13 +29,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Chengdu Westhouse Interactive Entertainment Ltd.
+  Description: Game Protect
+  Product: SeasunProtect
+  ProductVersion: 1.2.6.1
+  FileVersion: 1.2.6.1
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: SeasunProtect.sys
   Imphash: e48d3385e8828a97aa6fa76d9fc4a9f1
   Authentihash:
     MD5: de6d51b3ddeef7764df31692de1b5f7c
@@ -53,7 +53,7 @@ KnownVulnerableSamples:
       Entropy: 4.088412845022573
       Virtual Size: '0x930'
     .data:
-      Entropy: 1.5150817200210465
+      Entropy: 1.5150817200210467
       Virtual Size: '0x224c'
     .pdata:
       Entropy: 3.8454693680987755
@@ -68,9 +68,9 @@ KnownVulnerableSamples:
       Entropy: 3.955544226629556
       Virtual Size: '0x44'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-05-25 20:34:19'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2023-05-25 23:34:19'
+  InternalName: SeasunProtect
+  Copyright: Copyright (C) 2023
   Imports:
   - ksecdd.sys
   - ntoskrnl.exe

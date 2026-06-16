@@ -45,11 +45,11 @@ KnownVulnerableSamples:
     MD5: b30004dbb5ad9b8320c964273875a103
     SHA1: 7678c8c5a3153f4c06db097e1c3e1b2942149c7a
     SHA256: b756d234559ee0ed93328bb598352ead2efb27eabaf1afac5fb3e2f43b9901f3
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-08-26 12:52:25'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2014-08-26 15:52:25'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -62,7 +62,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.11.0
   Filename: ''
   ImportedFunctions:
   - ExAcquireResourceExclusiveLite
@@ -133,10 +133,10 @@ KnownVulnerableSamples:
   MD5: f026460a7a720d0b8394f28a1f9203dc
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.11
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8850702894d4f93edec22b7062734311
@@ -273,11 +273,11 @@ KnownVulnerableSamples:
     MD5: e6998e382a753d8ca44f7959e293f770
     SHA1: ef4e66576fd736dc05419b33267eef99dd90e628
     SHA256: ae85245fcb873d6fbf61f1923b8c10f0680abeaf2bf5527aef1c4a52aae321d0
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-12-22 00:29:03'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2015-12-22 03:29:03'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -290,7 +290,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.12.0
   Filename: ''
   ImportedFunctions:
   - ExAcquireResourceExclusiveLite
@@ -361,10 +361,10 @@ KnownVulnerableSamples:
   MD5: 21e72a43aedefcd70ca8999cc353b51b
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.12
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8850702894d4f93edec22b7062734311
@@ -501,11 +501,11 @@ KnownVulnerableSamples:
     MD5: cc4471fe044c4ef3e14b12bc1a406d37
     SHA1: 364af2f39c71999cf403d29b8dab412862f1994d
     SHA256: 83e993691aa4f5f599dddd1fab2bc3e0791587c9e93eeb9e405c130922096343
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2007-08-09 12:32:46'
+  Company: Novell, Inc.
+  Copyright: "Copyright \xA9 1997-2007 Novell, Inc."
+  CreationTimestamp: '2007-08-09 15:32:46'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -518,7 +518,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.5.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -586,10 +586,10 @@ KnownVulnerableSamples:
   MD5: 1bd38ac06ef8709ad23af666622609c9
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier for Windows
+  ProductVersion: v3.1.5 (20060828)
   Publisher: ''
   RichPEHeaderHash:
     MD5: c494b59abc401ff89dd4da62031a1572
@@ -703,9 +703,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -723,11 +723,11 @@ KnownVulnerableSamples:
     MD5: 1bc4bf123f43b3ce055593d1b830b48f
     SHA1: 10054d42b03ef3bc3800524673e2ce6b9cf05a63
     SHA256: 6d4cb02a826973521678309a0076b2fd50894c09dda87ca86089e815f4bc9bce
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-03-18 18:30:06'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2012-03-18 21:30:06'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -740,7 +740,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.10.0
   Filename: ''
   ImportedFunctions:
   - ExAcquireResourceExclusiveLite
@@ -810,10 +810,10 @@ KnownVulnerableSamples:
   MD5: 55c36d43dd930069148008902f431ea5
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.10
   Publisher: ''
   RichPEHeaderHash:
     MD5: 4a53ed67faf49ecb288c974cd66ea496
@@ -927,9 +927,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -947,11 +947,11 @@ KnownVulnerableSamples:
     MD5: 73c68c141f839f59d677542d06dbfdfc
     SHA1: 51bd5e3567352d021979026eb2b7c3bd1cf2ac1c
     SHA256: 3ad340c8a4a6e071e15095fd286b600847cd600b7312bd573802f26a73600da7
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-04-01 18:14:26'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2011-04-01 21:14:26'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -964,7 +964,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.6.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -1036,10 +1036,10 @@ KnownVulnerableSamples:
   MD5: 6822566b28be75b2a76446a57064369f
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.6
   Publisher: ''
   RichPEHeaderHash:
     MD5: 1057b10c078b885e3f08290c07a28c50
@@ -1150,9 +1150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1170,11 +1170,11 @@ KnownVulnerableSamples:
     MD5: f386df5a06d6c8e4cc55a328c706f9a5
     SHA1: d2aba6c93eec7bfed77d10e9f01671d9a07ab0ae
     SHA256: 1aee4d8a00f126582c4488025c7451fdbb9d0becbbfd58a396a2ac52011fac14
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-03-10 12:42:24'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2010, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2010-03-10 15:42:24'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -1187,7 +1187,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.6.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -1259,10 +1259,10 @@ KnownVulnerableSamples:
   MD5: 46cae59443ae41f4dbb42e050a9b501a
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.6
   Publisher: ''
   RichPEHeaderHash:
     MD5: 1057b10c078b885e3f08290c07a28c50
@@ -1373,9 +1373,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1393,11 +1393,11 @@ KnownVulnerableSamples:
     MD5: 04fd9292c73e5cc527eae867e930dfbb
     SHA1: 04fa843bbb3e54e9a3566e769d476034fbaab240
     SHA256: 9ce5188745ffcb5dc8304dac97cd037360600d8eb4739cfdbfb06bcd0efd72e4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-11-18 00:05:43'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2014-11-18 03:05:43'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -1410,7 +1410,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.11.0
   Filename: ''
   ImportedFunctions:
   - ExAcquireResourceExclusiveLite
@@ -1481,10 +1481,10 @@ KnownVulnerableSamples:
   MD5: 5dd25029499cd5656927e9c559955b07
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.11
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8850702894d4f93edec22b7062734311
@@ -1621,11 +1621,11 @@ KnownVulnerableSamples:
     MD5: efa641bd31d86547dedc5bd0a678170b
     SHA1: c20217149ac84ed17db7a13d3a07f642866adb64
     SHA256: 3b22adc61900fbdc26629dc1135344d878f6a368ec6df0d4ec374559cb669182
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-12-18 06:20:49'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2009-12-18 09:20:49'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -1638,7 +1638,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.6.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -1710,10 +1710,10 @@ KnownVulnerableSamples:
   MD5: 1c591efa8660d4d36a75db9b82474174
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.6
   Publisher: ''
   RichPEHeaderHash:
     MD5: 1057b10c078b885e3f08290c07a28c50
@@ -1824,9 +1824,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1844,11 +1844,11 @@ KnownVulnerableSamples:
     MD5: fa31cbbfe06a2f4f6b29c60b76de5c30
     SHA1: 8e7500a8d24c5a6cd6dce5679bab065e58b4dbb5
     SHA256: 5ebfc2c2fc43fc34cc98378f627e6147af473cb37076f4c2ba278210bd88b2bf
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-09-29 18:29:05'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2011-09-29 21:29:05'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -1861,7 +1861,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.6.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -1931,10 +1931,10 @@ KnownVulnerableSamples:
   MD5: fc6dadb97bd3b7a61d06f20d0d2e1bac
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.6
   Publisher: ''
   RichPEHeaderHash:
     MD5: c93ac24ebf03669439ddaedcdec40816
@@ -2048,9 +2048,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2068,11 +2068,11 @@ KnownVulnerableSamples:
     MD5: 9aee04fa1bdb51eb3122c1c9b5e9b3c1
     SHA1: 7e2db8140582d0d606627ff4d97e294080d4d334
     SHA256: e2a330131ca4a9499736fdc72e819a6ff1f883b1c6dc7b83d5b69d288508e0fe
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2014-08-26 12:52:33'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2014-08-26 15:52:33'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -2085,7 +2085,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.11.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -2158,10 +2158,10 @@ KnownVulnerableSamples:
   MD5: 0703c1e07186cb98837a2ae76f50d42e
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.11
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5fa7f0eaf5758a703ef3f6b22d70dc13
@@ -2295,11 +2295,11 @@ KnownVulnerableSamples:
     MD5: dc077cd1d4adde370496ba2ea39e9397
     SHA1: fa064d914e051cfb54bebfeec92f38d7b4f714d3
     SHA256: 6429f89dd7e9f8f7784736b6d3471be3c480d4eb4c9a573c698ede1dd64f5010
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-12-18 01:18:10'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2013-12-18 04:18:10'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -2312,7 +2312,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.11.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -2385,10 +2385,10 @@ KnownVulnerableSamples:
   MD5: 41339c852c6e8e4c94323f500c87a79c
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.11
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5fa7f0eaf5758a703ef3f6b22d70dc13
@@ -2522,11 +2522,11 @@ KnownVulnerableSamples:
     MD5: 31ea879f360e292dc09e69d8098e5dbe
     SHA1: d6f4650669233ba26c47c7b252867b4ffa2e7f06
     SHA256: 615c391666b0fdaa0a8096320d35c7b951e6a0ee7f984ab3e892f838cb212b60
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-06-26 05:07:19'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2015-06-26 08:07:19'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -2539,7 +2539,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.12.0
   Filename: ''
   ImportedFunctions:
   - ExAcquireResourceExclusiveLite
@@ -2610,10 +2610,10 @@ KnownVulnerableSamples:
   MD5: d48f681f70e19d2fa521df63bc72ab9e
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.12
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8850702894d4f93edec22b7062734311
@@ -2750,11 +2750,11 @@ KnownVulnerableSamples:
     MD5: 468460d75f9141ee3e1bfba845ef8c13
     SHA1: 22fcace035c25521bdfca64df32a67fb16ee87bc
     SHA256: d0b918d766e6ce4218a833314525dd6eaeba83c597e9e1a9efefa7f95ec64a95
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-06-26 05:07:25'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2015-06-26 08:07:25'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -2767,7 +2767,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.12.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -2840,10 +2840,10 @@ KnownVulnerableSamples:
   MD5: da7e98b23b49b7293ee06713032c74f6
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.12
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5fa7f0eaf5758a703ef3f6b22d70dc13
@@ -2977,11 +2977,11 @@ KnownVulnerableSamples:
     MD5: 25c0efa043f90ef63f9fdb49bae0342e
     SHA1: dc1295fe99e5908dd0569acbffdb2d31652accbf
     SHA256: 5e789b6d535b49c66c658978099e50fa2f8d02c2511bdaf9358bb8e40bdcef8e
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-09-08 12:26:55'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2009-09-08 15:26:55'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -2994,7 +2994,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.6.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -3066,10 +3066,10 @@ KnownVulnerableSamples:
   MD5: aae268c4b593156bdae25af5a2a4af21
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.6
   Publisher: ''
   RichPEHeaderHash:
     MD5: 1057b10c078b885e3f08290c07a28c50
@@ -3180,9 +3180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3200,11 +3200,11 @@ KnownVulnerableSamples:
     MD5: c9fb69b3569b42eed1b945c068245fb7
     SHA1: f9af5075200f0d08359e8ee5bfcbfae5e31ac002
     SHA256: 30accf1de5969ff5bf958786b9c9deb9001d1a19d121aac8b3c92c5b463a087e
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2012-03-18 18:27:38'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2012-03-18 21:27:38'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -3217,7 +3217,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.10.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -3289,10 +3289,10 @@ KnownVulnerableSamples:
   MD5: 20afd54ca260e2bf6589fac72935fecf
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.10
   Publisher: ''
   RichPEHeaderHash:
     MD5: 3a47368eb1de45f496d5ab77e5376986
@@ -3403,9 +3403,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3423,11 +3423,11 @@ KnownVulnerableSamples:
     MD5: d296fda4ade4f49f4defb49740ce23ca
     SHA1: dd62a35fd568dd79419e151bce6e7c5a8c9819f3
     SHA256: e03d8492926408a299100ef02c46bf3510a816bd9eed2f988b47c066049e9111
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2015-09-26 06:20:01'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2015-09-26 09:20:01'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -3440,7 +3440,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.12.0
   Filename: ''
   ImportedFunctions:
   - ExAcquireResourceExclusiveLite
@@ -3511,10 +3511,10 @@ KnownVulnerableSamples:
   MD5: 7eeb4c0cb786a409b94066986addf315
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.12
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8850702894d4f93edec22b7062734311
@@ -3527,7 +3527,7 @@ KnownVulnerableSamples:
       Entropy: 6.322257190894552
       Virtual Size: '0x3b20'
     .rdata:
-      Entropy: 4.719212075912108
+      Entropy: 4.7192120759121075
       Virtual Size: '0x584'
     .data:
       Entropy: 2.7659755587497967
@@ -3651,11 +3651,11 @@ KnownVulnerableSamples:
     MD5: 9af58e71b9b5720a3b8b2dec0a26f917
     SHA1: ddb8f39d27ee3124553dac4b929898a261c021f7
     SHA256: a1b56ae08d822bb5d041c2a67584371ffddcb7f6d69191efec5b8189e0028331
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2013-01-15 22:19:24'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2013-01-16 01:19:24'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -3668,7 +3668,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.11.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -3740,10 +3740,10 @@ KnownVulnerableSamples:
   MD5: fb7637cfe8562095937f4d6cff420784
   MachineType: I386
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.11
   Publisher: ''
   RichPEHeaderHash:
     MD5: 3a47368eb1de45f496d5ab77e5376986
@@ -3855,9 +3855,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3875,11 +3875,11 @@ KnownVulnerableSamples:
     MD5: 93d6f10e70096a91206b6bca05e1f63a
     SHA1: ced518548a4800f50ab31a24eda3475d46a5e0ac
     SHA256: e0e65416f40cf3bea00d77515a7d8ab508d3aa2b7b622a8799a49635c4d5dbb5
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-09-08 12:35:51'
+  Company: Novell, Inc.
+  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
+  CreationTimestamp: '2009-09-08 15:35:51'
   Date: ''
-  Description: ''
+  Description: Novell XTCOM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -3892,7 +3892,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.6.0
   Filename: ''
   ImportedFunctions:
   - ExFreePoolWithTag
@@ -3962,10 +3962,10 @@ KnownVulnerableSamples:
   MD5: bafd6bad121e42f940a0b8abc587eadf
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: libnicm.sys
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: Novell XTier
+  ProductVersion: 3.1.6
   Publisher: ''
   RichPEHeaderHash:
     MD5: c93ac24ebf03669439ddaedcdec40816
@@ -4079,9 +4079,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4099,11 +4099,11 @@ KnownVulnerableSamples:
     MD5: f4c87edbb9a270058e01fdc58f29692a
     SHA1: e82346880e59a3d7652896128eb91512f5ee3d53
     SHA256: bd1d579a15ec3c1120cc6e0c8ff6b265623980de3570a5dd2f57d0c5981334d8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2022-03-03 02:49:58'
+  Company: Micro Focus
+  Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
+  CreationTimestamp: '2022-03-03 05:49:58'
   Date: ''
-  Description: ''
+  Description: XTier COM Services Driver
   ExportedFunctions:
   - NicmCreateInstance
   - NicmDeregisterClassFactory
@@ -4116,7 +4116,7 @@ KnownVulnerableSamples:
   - XTComGetVersion
   - XTComInitialize
   - XTComRegisterClassFactory
-  FileVersion: ''
+  FileVersion: 3.1.12.0
   Filename: libnicm.sys
   ImportedFunctions:
   - ExAcquireResourceExclusiveLite
@@ -4187,9 +4187,9 @@ KnownVulnerableSamples:
   MD5: c1fce7aac4e9dd7a730997e2979fa1e2
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: libnicm.sys
+  Product: Micro Focus XTier
+  ProductVersion: 3.1.12
   Publisher: ''
   RichPEHeaderHash:
     MD5: 8850702894d4f93edec22b7062734311

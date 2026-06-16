@@ -32,13 +32,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Topaz OFD
+  Description: Topaz OFD - PM
+  Product: wsddprm
+  ProductVersion: 2.0.0.0
+  FileVersion: 2.0.0.0
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: wsftprm.sys
   Imphash: 70d95d244db4c9ba22a801a149570551
   Authentihash:
     MD5: fef5c6b4bf229133ff0ba9b3187db3fa
@@ -71,9 +71,9 @@ KnownVulnerableSamples:
       Entropy: 3.691340563438217
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-02-27 12:51:07'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2023-02-27 15:51:07'
+  InternalName: wsddprm.sys
+  Copyright: Copyright  2022 - Topaz OFD
   Imports:
   - ntoskrnl.exe
   - WDFLDR.SYS
@@ -137,8 +137,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: "C=BR, ST=S\xE3o Paulo, L=Indaiatuba, O=TPZ SOLUCOES DIGITAIS LTDA,\
-        \ OU=OFD, CN=TPZ SOLUCOES DIGITAIS LTDA"
+    - Subject: C=BR, ST=So Paulo, L=Indaiatuba, O=TPZ SOLUCOES DIGITAIS LTDA, OU=OFD,
+        CN=TPZ SOLUCOES DIGITAIS LTDA
       ValidFrom: '2022-12-19 00:00:00'
       ValidTo: '2026-01-20 23:59:59'
       Signature: 11f4de7903bf687c3404a2068f87a2375a5da0b0d5cdf6593dabedce060e7b975c5b248da7e815c9da5f9c3dae2f1035d7c28360bb793956905d58a6114cb2562d4176634ea3c24a845a36731ffe26b3668c6e090573e78ff432680b1c53804d62f72a858305ec65dbd835c87623eebbf66b8fdadeacc30bec276d6418f009016e36ab94aae3177bd2fd4af060e3d0b9ba265a41f019b9af409f77505057d4dc9ba3b429aa258a4436a9a7346ed01b9396334dd50482be7d6625c5fe41dc0eb64a24640309a632aa99824dfab947480e0f819efc211574fb8aefc5140ebdf7db59af5c044190d860e9da997e978dd6c1e80466713cb3e9943131568eb58ab32089734b0c65c7f5258fb25eb2b1184ec817971bbfc5a2a7ec9405428db2ce5ddba04cd48056c1a74ce21a4179c4e535e9ce597171d52d4b6840050783406982af40bd1d7591604b158d07f259ab1232c9143e66c585e11a60f55dd0eb4758120588de62e1507eddd39dee42f3130caba4bf8144d15e8785c1e99da911b41771f23444f5be7fc7e27a141efe1134ec1df87a726bfe099c1e576e75790c1fb342e08e4b9bad2fbefb6c08b37db6d62ac9f2107885c7afe3207a0c42db7cf860c48fad4104f09ae2fe038796a0b888aa593595c90f17d01988ad074f1c6a1b88779166fe70d1d6b13a95571bfbfc0244b8661291a83d6f9f1b856c5633ff057194c9

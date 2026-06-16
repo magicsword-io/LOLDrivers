@@ -38,14 +38,14 @@ KnownVulnerableSamples:
     MD5: 9996409a6c7c91374a597ea9d1f7799c
     SHA1: 5851f58c92f8fd548c42f10c258d1e95afe7ce88
     SHA256: 1fd7a44b042d397ad5a6417e4aa4b30eb2e40df6274d3ac7155ecc68c88cdb6d
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: RwDrv Driver
+  Company: RW-Everything
+  InternalName: RwDrv.sys
+  OriginalFilename: RwDrv.sys
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Product: RwDrv Driver
+  ProductVersion: 1.00.00.0000
+  Copyright: Copyright (C) 2011 RW-Everything
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -151,9 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -224,7 +224,7 @@ KnownVulnerableSamples:
       Entropy: 3.270238715581358
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-07-24 17:34:56'
+  CreationTimestamp: '2011-07-24 20:34:56'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RwDrv.sys
@@ -235,14 +235,14 @@ KnownVulnerableSamples:
     MD5: a3b9e0285d00597ea1531664a051be06
     SHA1: e7fac017b371a43276e03bf5f71d437e8d377930
     SHA256: 0a3090ae46b3ce5f4cc6ba2d4dd265033e23c813d5c1e9c7a20a84d5d167dae3
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: RW-Everything Read & Write Driver
+  Company: RW-Everything
+  InternalName: RwDrv.sys
+  OriginalFilename: RwDrv.sys
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Product: RW-Everything Read & Write Driver
+  ProductVersion: 1.00.00.0000
+  Copyright: Copyright (C) 2008 RW-Everything
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -335,9 +335,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -408,7 +408,7 @@ KnownVulnerableSamples:
       Entropy: 3.3169950909252863
       Virtual Size: '0x3c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-25 00:39:58'
+  CreationTimestamp: '2015-12-25 03:39:58'
   Imphash: 9d7183c1d8107495354c4fad9dae3452
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RwDrv.sys
@@ -419,14 +419,14 @@ KnownVulnerableSamples:
     MD5: a36411168cc8b448c6864d890c7727ea
     SHA1: c2f2ac17f06be23c0b71f929ea63356123f3a72f
     SHA256: aa7f25d4857a4b443222934bcbb0904348a799fc884096f653d921817c0b34aa
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: RW-Everything Read & Write Driver
+  Company: RW-Everything
+  InternalName: RwDrv.sys
+  OriginalFilename: RwDrv.sys
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Product: RW-Everything Read & Write Driver
+  ProductVersion: 1.00.00.0000
+  Copyright: Copyright (C) 2008 RW-Everything
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -518,9 +518,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -591,7 +591,7 @@ KnownVulnerableSamples:
       Entropy: 3.3169950909252863
       Virtual Size: '0x3c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-05-19 00:42:38'
+  CreationTimestamp: '2011-05-19 03:42:38'
   Imphash: 9d7183c1d8107495354c4fad9dae3452
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RwDrv.sys
@@ -602,14 +602,14 @@ KnownVulnerableSamples:
     MD5: 0496b6428ce874959af5387ce44b4eaf
     SHA1: 39257fb86df888207e4f3a7768561b4ab1557848
     SHA256: d475c4fe917020d420b5d0cf1f074b1427f49bd1f4414873501be51700f8832d
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: RwDrv Driver
+  Company: RW-Everything
+  InternalName: RwDrv.sys
+  OriginalFilename: RwDrv.sys
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Product: RwDrv Driver
+  ProductVersion: 1.00.00.0000
+  Copyright: Copyright (C) 2011 RW-Everything
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -750,7 +750,7 @@ KnownVulnerableSamples:
       Entropy: 3.2712100257771235
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-05-25 06:02:31'
+  CreationTimestamp: '2013-05-25 09:02:31'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'TRUE'
 - Filename: RwDrv.sys
@@ -761,14 +761,14 @@ KnownVulnerableSamples:
     MD5: 7fd75a9a4906445cc73a0a402bae506a
     SHA1: cd111bf04815d4d1040a2813efb2d15ccfbd9b74
     SHA256: a97e5c6cd926fa47ab1a69963169223cc669bd654a2f128165ba4ebe1d08bd17
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: RW-Everything Read & Write Driver
+  Company: RW-Everything
+  InternalName: RwDrv.sys
+  OriginalFilename: RwDrv.sys
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Product: RW-Everything Read & Write Driver
+  ProductVersion: 1.00.00.0000
+  Copyright: Copyright (C) 2008 RW-Everything
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -874,9 +874,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -947,7 +947,7 @@ KnownVulnerableSamples:
       Entropy: 3.3169950909252863
       Virtual Size: '0x3c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-05-30 23:05:48'
+  CreationTimestamp: '2011-05-31 02:05:48'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RwDrv.sys
@@ -958,14 +958,14 @@ KnownVulnerableSamples:
     MD5: 0496b6428ce874959af5387ce44b4eaf
     SHA1: 39257fb86df888207e4f3a7768561b4ab1557848
     SHA256: d475c4fe917020d420b5d0cf1f074b1427f49bd1f4414873501be51700f8832d
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: RwDrv Driver
+  Company: RW-Everything
+  InternalName: RwDrv.sys
+  OriginalFilename: RwDrv.sys
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Product: RwDrv Driver
+  ProductVersion: 1.00.00.0000
+  Copyright: Copyright (C) 2011 RW-Everything
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1106,7 +1106,7 @@ KnownVulnerableSamples:
       Entropy: 3.2712100257771235
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-05-25 06:02:31'
+  CreationTimestamp: '2013-05-25 09:02:31'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'TRUE'
 - Filename: RwDrv.sys
@@ -1117,14 +1117,14 @@ KnownVulnerableSamples:
     MD5: 0496b6428ce874959af5387ce44b4eaf
     SHA1: 39257fb86df888207e4f3a7768561b4ab1557848
     SHA256: d475c4fe917020d420b5d0cf1f074b1427f49bd1f4414873501be51700f8832d
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
+  Description: RwDrv Driver
+  Company: RW-Everything
+  InternalName: RwDrv.sys
+  OriginalFilename: RwDrv.sys
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Product: RwDrv Driver
+  ProductVersion: 1.00.00.0000
+  Copyright: Copyright (C) 2011 RW-Everything
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
@@ -1281,6 +1281,6 @@ KnownVulnerableSamples:
       Entropy: 3.2712100257771235
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-05-25 06:02:31'
+  CreationTimestamp: '2013-05-25 09:02:31'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'FALSE'

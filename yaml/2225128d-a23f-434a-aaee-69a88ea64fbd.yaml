@@ -35,13 +35,13 @@ KnownVulnerableSamples:
     MD5: 969796117a4fa98be98ac97f8f2b591e
     SHA1: 3cacdf1da953824f860841528a3d59524dd51a2b
     SHA256: c44b807e14e5da43a060cb36a83aa5b1e4b7b95620f9e41d289694f9daa8b77a
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-09-09 02:22:55'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2010-09-09 05:22:55'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '7.80 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - KeRaiseIrql
@@ -78,14 +78,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: 76c8d022c6788a3b29ebc19e8d7956c4
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '7.80'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5d4e7ab49649a192043dd9fb437a8396
@@ -217,9 +217,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -236,13 +236,13 @@ KnownVulnerableSamples:
     MD5: 3fd8beaf2f09124dbe58df0e7a71a369
     SHA1: 7079a8b908f9a8ef7f2d678596991dc141ecaff4
     SHA256: 80b2c44b2cdb74bafcc1271c5338f1d80f3621308b6c9d24d52bb28c8983677c
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-12-19 00:47:57'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2011-12-19 03:47:57'
   Date: ''
-  Description: ''
+  Description: HWiNFO32/64 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '8.60 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - IofCompleteRequest
@@ -288,14 +288,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: 28042093c08db49d0e0dc1903cf46907
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32/64 Kernel Driver
+  ProductVersion: '8.60'
   Publisher: ''
   RichPEHeaderHash:
     MD5: f59ce45a9c2cf63611d807e290a9f8e7
@@ -326,7 +326,7 @@ KnownVulnerableSamples:
       Entropy: 5.290544135278689
       Virtual Size: '0x59a'
     .rsrc:
-      Entropy: 3.428677838590305
+      Entropy: 3.4286778385903047
       Virtual Size: '0x3a0'
     .reloc:
       Entropy: 0.6879064653040092
@@ -427,9 +427,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -446,13 +446,13 @@ KnownVulnerableSamples:
     MD5: 6881883968d95a082828577d3fbff303
     SHA1: 07bc5786187e7d6fe43f56aed0b65a045a96fd6a
     SHA256: 02f63773cdd991c891e10044633630154ae6fa63dbfe9b35082e48d4924f2dde
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-05-22 13:51:10'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2011-05-22 16:51:10'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '8.00 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - KeRaiseIrql
@@ -489,14 +489,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: 8602bd2326f95beecf25fded10f5bc8a
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '8.00'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5d4e7ab49649a192043dd9fb437a8396
@@ -628,9 +628,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -647,13 +647,13 @@ KnownVulnerableSamples:
     MD5: 9c6685995569d4b18567aed8d8014b7d
     SHA1: 63927811a735f7e761a26a1063901eb77b77492b
     SHA256: 3bf77c52cc0e6b1b0f2b8ceffaadb156673768146950401c27fbfd7e2bedd618
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2008-11-21 00:48:44'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2008 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2008-11-21 03:48:44'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '6.70 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - KeTickCount
@@ -681,14 +681,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: a058cb2f78d6c44d26def1e264d67e78
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '6.70'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 62e6b2b6428daab8daa3b4494acaa9a1
@@ -710,7 +710,7 @@ KnownVulnerableSamples:
       Entropy: 1.9604047768631525
       Virtual Size: '0x28'
     .sdata:
-      Entropy: 2.373381895752503
+      Entropy: 2.3733818957525035
       Virtual Size: '0xe0'
     INIT:
       Entropy: 5.1971875289773655
@@ -802,9 +802,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -822,13 +822,13 @@ KnownVulnerableSamples:
     MD5: a8e9e298989cec5c398f4d95af201924
     SHA1: 2de4fdd95dce93c31e7774411a1aedc0b814d27e
     SHA256: 3e62730949b6cbbaf938d9b2015fe1b84eb63322c4287d0ce2b4c6f987c2dadd
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-09-21 23:45:00'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2011-09-22 02:45:00'
   Date: ''
-  Description: ''
+  Description: HWiNFO32/64 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '8.50 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - IofCompleteRequest
@@ -874,14 +874,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: 6b5a579b2039eaa97b1694468dab2119
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32/64 Kernel Driver
+  ProductVersion: '8.50'
   Publisher: ''
   RichPEHeaderHash:
     MD5: f59ce45a9c2cf63611d807e290a9f8e7
@@ -1013,9 +1013,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1032,13 +1032,13 @@ KnownVulnerableSamples:
     MD5: 928b862389f2292f01a565634187fc49
     SHA1: 7d210df06c16ca3b1ca35d6e97f89a31df303376
     SHA256: 742b102cc69403c669244f0efcf9ac8e5bbdb9b10f35f03c743651afe5ac32ba
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-07-25 05:37:28'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2010-07-25 08:37:28'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '7.70 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - KeRaiseIrql
@@ -1075,14 +1075,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: 49dbc80ecf8e331ff828b964e491621b
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '7.70'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5d4e7ab49649a192043dd9fb437a8396
@@ -1214,9 +1214,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1233,13 +1233,13 @@ KnownVulnerableSamples:
     MD5: f15ac2bf1b7a126c79176423b87320e4
     SHA1: 2feca887d30672e52e0d39d7adbc1ddacdd9379b
     SHA256: de09000bb9f5f81ff6c9ba239ea2498cff4e3decf6ae0220e4b0d64c3500acf8
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-07-16 07:22:02'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2009 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2009-07-16 10:22:02'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '7.20 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -1270,14 +1270,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: 2293aa65ada1c1d15a1ffb596612aee3
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '7.20'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6fdbfc3bac2ddbbe5ab20f15ed759e6b
@@ -1406,9 +1406,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1425,13 +1425,13 @@ KnownVulnerableSamples:
     MD5: 98fb0e1bc59ed4b47f15ddb13a1aa45b
     SHA1: 42690535d571a8b1520a96d2e8bec3236138a329
     SHA256: c191c7d4ec03c4ef0f51a67af42a90390f75ebd6f83dbc05e317fe5a90a1fb31
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-09-29 15:13:28'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2010-09-29 18:13:28'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '7.90 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - KeRaiseIrql
@@ -1468,14 +1468,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: 7ceb48348ecd008c97bb5f74bdbea843
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '7.90'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5d4e7ab49649a192043dd9fb437a8396
@@ -1607,9 +1607,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1626,13 +1626,13 @@ KnownVulnerableSamples:
     MD5: d7f92dde8fdeaebe0e1d6f2a64d19222
     SHA1: f1e0b049757aa5278fa27dc11569077aec71241f
     SHA256: 52b9302507bccd7eb775137a4c17b0df9a5a99671968c01924cd0c52a0c69262
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-06-20 10:16:25'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2010-06-20 13:16:25'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '7.50 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - KeRaiseIrql
@@ -1669,14 +1669,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: 52c7dac60d4b5c673441da38983df4ad
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '7.50'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 5d4e7ab49649a192043dd9fb437a8396
@@ -1808,9 +1808,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1827,13 +1827,13 @@ KnownVulnerableSamples:
     MD5: ebf591cbc6be4ee0a92cda76d0594fff
     SHA1: 6b517a42b4d9cce99091f6a67f9100ed1d7f3c62
     SHA256: 13d7c729c019c1c5a4b3e9fb27d1dd0b992fb7099f4314e011aafcb3472b7107
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2011-08-23 00:06:20'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2011-08-23 03:06:20'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '8.30 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - IofCompleteRequest
@@ -1879,14 +1879,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: ecbc7e628a7ea22a3b90d9b16a948707
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '8.30'
   Publisher: ''
   RichPEHeaderHash:
     MD5: c971695bf5c8b443588c57eb4d4aba35
@@ -2018,9 +2018,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2037,13 +2037,13 @@ KnownVulnerableSamples:
     MD5: e3038d0db9de4a5e65cb1a4f2c887572
     SHA1: 61c0d4dc5608e82740b906755d53c0e34ef2ec58
     SHA256: a082cdb569b9f1f82252402fa05785fd409222912d5b9e5423299819e6f940ed
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-02-16 13:45:04'
+  Company: REALiX(tm)
+  Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
+  CreationTimestamp: '2010-02-16 16:45:04'
   Date: ''
-  Description: ''
+  Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '7.30 built by: WinDDK'
   Filename: ''
   ImportedFunctions:
   - IoDeleteSymbolicLink
@@ -2074,14 +2074,14 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: HWiNFO32.SYS
   MD5: a57afed9703b5893fbfee5f9710b8aee
   MachineType: IA64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
+  OriginalFilename: HWiNFO32.SYS
   PDBPath: ''
-  Product: ''
-  ProductVersion: ''
+  Product: HWiNFO32 Kernel Driver
+  ProductVersion: '7.30'
   Publisher: ''
   RichPEHeaderHash:
     MD5: 6fdbfc3bac2ddbbe5ab20f15ed759e6b
@@ -2094,7 +2094,7 @@ KnownVulnerableSamples:
       Entropy: 5.518699866362356
       Virtual Size: '0x5202'
     .rdata:
-      Entropy: 3.065726305373268
+      Entropy: 3.0657263053732686
       Virtual Size: '0x580'
     .pdata:
       Entropy: 3.4860181353362267
@@ -2210,9 +2210,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf

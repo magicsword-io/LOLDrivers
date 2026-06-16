@@ -44,13 +44,13 @@ KnownVulnerableSamples:
     MD5: 5cf72ecb15ffea87586783893b02c43d
     SHA1: ef2d7210b761f158a0832083a8407b3ec2f99db9
     SHA256: cde02c7db90626bcfbfbbc1315d4ce18d4f15667fa57c16b9ac2b060507c62ad
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-09-22 21:36:24'
+  Company: Phoenix Technologies, Ltd.
+  Copyright: (c) Phoenix Technologies, Ltd. 2000-2003
+  CreationTimestamp: '2009-09-23 00:36:24'
   Date: ''
-  Description: ''
+  Description: SWinFlash Driver for Windows NT
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: 1.6.1.0
   Filename: PhlashNT.sys
   ImportedFunctions:
   - IoDeleteDevice
@@ -68,13 +68,13 @@ KnownVulnerableSamples:
   - ExAllocatePoolWithTag
   Imports:
   - ntoskrnl.exe
-  InternalName: ''
+  InternalName: PHLASHNT
   MD5: e9e786bdba458b8b4f9e93d034f73d00
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: PHLASHNT.SYS
+  Product: WinPhlash
+  ProductVersion: 1.6.1.0
   Publisher: ''
   RichPEHeaderHash:
     MD5: 73c7564d5bcb59bfea5884036081a613
@@ -171,9 +171,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
-      CertificateType: CA
+      CertificateType: Intermediate
       IsCodeSigning: false
-      IsCA: true
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727

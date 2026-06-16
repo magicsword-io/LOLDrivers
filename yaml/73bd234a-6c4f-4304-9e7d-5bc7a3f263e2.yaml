@@ -1,19 +1,19 @@
 Id: 73bd234a-6c4f-4304-9e7d-5bc7a3f263e2
 Tags:
-- bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56
+- hlpdrv.sys
 Author: Michael Haag
 Created: '2025-10-27'
 MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create KMHLPSVC binPath=C:\windows\temp\hlpdrv.sys type=kernel &&
-    sc.exe start KMHLPSVC
-  Description: hlpdrv.sys is a malicious driver used to disable Windows Defender by
-    modifying registry settings. This driver has been observed in Akira ransomware
+  Command: sc.exe create KMHLPSVC binPath=C:\windows\temp\hlpdrv.sys type=kernel
+    && sc.exe start KMHLPSVC
+  Description: 'hlpdrv.sys is a malicious driver used to disable Windows Defender
+    by modifying registry settings. This driver has been observed in Akira ransomware
     campaigns, where it is deployed to facilitate AV/EDR evasion or disablement through
     a Bring Your Own Vulnerable Driver (BYOVD) exploitation chain. The malware modifies
-    the DisableAntiSpyware registry key via regedit.exe execution.
+    the DisableAntiSpyware registry key via regedit.exe execution.'
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -98,5 +98,7 @@ KnownVulnerableSamples:
       Entropy: 3.680768321596844
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2025-03-03 03:11:32'
+  CreationTimestamp: '2025-03-03 04:11:32'
   Signatures: {}
+Tags:
+- bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56

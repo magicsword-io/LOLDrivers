@@ -39,13 +39,13 @@ KnownVulnerableSamples:
   Signature: ''
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
+  Company: Realtek Semiconductor Corporation
+  Description: RTS PCIE READER Driver
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  FileVersion: 10.0.26100.21373
   MachineType: ARM64
-  OriginalFilename: ''
+  OriginalFilename: RTSPER.SYS
   Imphash: 5dfbbdfddea4d6dc325c7c3759fdda18
   Authentihash:
     MD5: 4873b596b473865c3e1ebbcc31a5420a
@@ -81,9 +81,9 @@ KnownVulnerableSamples:
       Entropy: 5.1844217058793705
       Virtual Size: '0x2d8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2024-04-16 19:33:34'
-  InternalName: ''
-  Copyright: ''
+  CreationTimestamp: '2024-04-16 22:33:34'
+  InternalName: RTS_PCIE10.0.26100.21373 (Windows 8 x86)
+  Copyright: "Copyright \xA9 Realtek Semiconductor Corporation 2013"
   Imports:
   - cng.sys
   - ntoskrnl.exe
@@ -264,9 +264,8 @@ KnownVulnerableSamples:
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
         SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
-        serialNumber=22671299, C=TW, L=Hsinchu, O=Realtek Semiconductor Corp., CN=Realtek
-        Semiconductor Corp.
+    - Subject: ??=TW, ??=Private Organization, serialNumber=22671299, C=TW, L=Hsinchu,
+        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2023-06-15 00:00:00'
       ValidTo: '2026-06-15 23:59:59'
       Signature: 4e8d4307ac16ffe234a0c43c75ded55cae08624ce02cdcd029c0db935fa519b01b17fe75b7ddf45f8f3bdd71b1f60c48168fe17c00620a8adc188d85f8ff318178776c2c451a083bc6b410d8f675e183ccb39ebf429cb6f114692d78111b12ea934835a078ec05d01ddab4c2e8fa7937a264b1abfa0633075bc48baf85c95023baabf10a60338cdcd6689a69970fa041a2954241e56ee8b463738bd0b5526496944489aa22b4f68884146fddcab8da5486930a4218017e4d9e881c53aa22468eb9098a04a31387030571bff83ae8ec0c659c3c72b0cb88a702c6f8a894f74e710b35a2b710a094540397a0c0481b9eb1241ee5976b045b30c032cb2c5a5e2df6899c8c60cea4b74edd958daf0a33a243d77ac6505e07c64e5169557c3b625a0639930ed78819591e7055ce9af999612fa381bcf851d1a8ee7dc165872ac33f32dfaf48638d28c379a2a7925cc2031394f6a768eeafc6424facd0e23f3812ed77a7578fd9b29edf338388177a3f71c50cf036ff06b5564c296ebe9c6614d0b5f87ffdf81748de0d916ae5a8f24db0263f214706d21c15bd447a8df0ad10f0f1d59ec09cb9c403b80206e3d74b525dbc96129e19caf89251412539b94ec8e92c67bbca3e00a94f7b19b935aa8305ee44696232c88e1f46508d5b0b25e364482a82256449d2ed4fca4b613c30540a58043d4a92687d525305296f236f14dd49a478

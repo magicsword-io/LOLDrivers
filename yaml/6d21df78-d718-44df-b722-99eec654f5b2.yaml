@@ -51,13 +51,13 @@ KnownVulnerableSamples:
     MD5: 9bb721ac0afc94a499a238ae32418d51
     SHA1: 04a903f13528536f1d0b1751886754d9aa5cdafa
     SHA256: 5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2019-10-16 18:19:01'
+  Company: MICSYS Technology Co., LTd
+  Copyright: Copyright (c) 2019 MICSYS
+  CreationTimestamp: '2019-10-16 21:19:01'
   Date: ''
-  Description: ''
+  Description: MICSYS driver
   ExportedFunctions: ''
-  FileVersion: ''
+  FileVersion: '1.1 x64 built by: WinDDK'
   Filename: MsIo64.sys
   ImportedFunctions:
   - RtlInitUnicodeString
@@ -77,13 +77,13 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-  InternalName: ''
+  InternalName: MsIo64.sys
   MD5: dc943bf367ae77016ae399df8e71d38a
   MachineType: AMD64
   MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
+  OriginalFilename: MsIo64.sys
+  Product: MsIo64 Driver Version 1.1
+  ProductVersion: 1.1 x64
   Publisher: ''
   RichPEHeaderHash:
     MD5: 16fd38750e66bdbd1fea732d9f09426a
