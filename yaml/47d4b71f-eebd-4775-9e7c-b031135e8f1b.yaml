@@ -1,0 +1,41 @@
+Id: 47d4b71f-eebd-4775-9e7c-b031135e8f1b
+Tags:
+- LECOMAx64.sys
+- LECOMAx.SYS
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-06-16'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create LECOMAx64 binPath=C:\windows\temp\LECOMAx64.sys type=kernel && sc.exe start LECOMAx64
+  Description: LECOMAx64.sys is a signed LECO LECOMA device driver referenced by public PPLShade supported-driver research.
+  Usecase: Load a vulnerable signed kernel driver
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/redteamfortress/PPLShade#supported-drivers
+- https://github.com/magicsword-io/LOLDrivers/issues/354
+Detection: []
+Acknowledgement:
+  Person: Arnim Rupp
+  Handle: ruppde
+KnownVulnerableSamples:
+- Filename: LECOMAx64.sys
+  MD5: 8ac99a014b36c4cf1eeee98f99410cca
+  SHA1: eb817e8af016f6a3ece2b7cf421ec6d96970e285
+  SHA256: 0f2dff4116a84241d8cafe534b63454fb4ea26272da8977be03670701ec6631c
+  Signature:
+  - LECO Corporation
+  Date: '07:30 PM 05/09/2007'
+  Publisher: LECO Corporation
+  Company: LECO Corporation
+  Description: LECO LECOMA Device Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: '2.31'
+  MachineType: AMD64
+  OriginalFilename: LECOMAx.SYS
+  InternalName: LECOMAx.SYS
+  Copyright: Copyright LECO Corporation 1996-2007, All Rights Reserved
+  Imphash: 4a4d806c1efb1a0f5eb911acb564db83
