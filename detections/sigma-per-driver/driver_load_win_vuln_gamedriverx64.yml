@@ -3,11 +3,13 @@ id: cea66937-1eb9-5917-9de7-d55f90139436
 status: experimental
 description: |
     Detects loading of driver GameDriverX64.sys via hash.
-    GameDriverX64.sys is a signed game driver reported in public DragonForce intrusion tradecraft as an abused vulnerable driver.
+    GameDriverX64.sys is a signed game driver reported in public DragonForce intrusion tradecraft and BlackSnufkin BYOVD research as an abused vulnerable driver. Public research identifies vulnerable builds that can be used as process-killer providers, including CVE-2025-61155 context.
 references:
     - https://www.loldrivers.io/drivers/271ace20-2f68-4695-9579-0d4de8cb4fe6/
     - https://www.security.com/blog-post/dragonforce-msteams-backdoor
     - https://github.com/magicsword-io/LOLDrivers/issues/360
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/GameDriverX64-Killer
+    - https://www.security.com/threat-intelligence/dragonforce-msteams-backdoor
 author: Michael Haag
 date: 2026/06/16
 modified: 2026/06/16
@@ -23,7 +25,10 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=cb34be5126520f4c402be3c6f09e11cf'
+            - 'MD5=8f0577d28c4ff5f71b149f444bfaba8e'
             - 'SHA1=7edbc5d18449fabd1ac214fa3959ea5a9e330a12'
+            - 'SHA1=7556ae58c215b8245a43f764f0676c7a8f0fdd1a'
+            - 'SHA256=9ddae47ff968343a8c32a5344060257fdc08e2a7bdb9a227c8b3a584ee3c9f1e'
             - 'SHA256=b6628d201c2a68d2a3de2a87de7a5acfe21b101a97928e1c8d5c82102d967383'
             - 'IMPHASH=b615e95f5fb9f4b26a7d238fcdd00e79'
     condition: selection_hashes

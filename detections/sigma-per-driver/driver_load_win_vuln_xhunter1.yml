@@ -1,0 +1,32 @@
+title: Driver Load - xhunter1.sys
+id: 3a6a6bad-c0ca-5d8d-9fd4-da8190e9d85a
+status: experimental
+description: |
+    Detects loading of driver xhunter1.sys via hash.
+    Wellbia xhunter1.sys is an XIGNCODE3 anti-cheat kernel component documented by BlackSnufkin BYOVD research as CVE-2026-3609. The legacy build exposes command paths that can be abused to interfere with target process handles and terminate protected security processes from kernel context.
+references:
+    - https://www.loldrivers.io/drivers/96ba5e53-6a40-4813-b6f1-ccce31a883cf/
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/Xhunter1-Killer
+    - https://web.archive.org/web/20180820182619/https://x86.re/blog/xigncode3-xhunter1.sys-lpe/
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c61c16de83acabd35ee18e410c1c37c1'
+            - 'SHA1=852049ecfd6a42370f2d6ed0d5e67e52c8d88211'
+            - 'SHA256=e727d0753d2cd0b2f6eeba4cea53aa10b3ff3ed2afeb78f545fcf6d840f85c3e'
+            - 'IMPHASH=49fb0d422e6e128d1184af793f7f8c79'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

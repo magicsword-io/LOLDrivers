@@ -3,11 +3,13 @@ id: 32a822a4-bd85-5227-902d-e3d2944053e2
 status: experimental
 description: |
     Detects loading of driver GameDriverX64.sys via name.
-    GameDriverX64.sys is a signed game driver reported in public DragonForce intrusion tradecraft as an abused vulnerable driver.
+    GameDriverX64.sys is a signed game driver reported in public DragonForce intrusion tradecraft and BlackSnufkin BYOVD research as an abused vulnerable driver. Public research identifies vulnerable builds that can be used as process-killer providers, including CVE-2025-61155 context.
 references:
     - https://www.loldrivers.io/drivers/271ace20-2f68-4695-9579-0d4de8cb4fe6/
     - https://www.security.com/blog-post/dragonforce-msteams-backdoor
     - https://github.com/magicsword-io/LOLDrivers/issues/360
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/GameDriverX64-Killer
+    - https://www.security.com/threat-intelligence/dragonforce-msteams-backdoor
 author: Michael Haag
 date: 2026/06/16
 modified: 2026/06/16

@@ -1,0 +1,28 @@
+title: Driver Load - RootLaser.sys
+id: d960fd9b-e4e7-5a2e-af26-ac59f07abe90
+status: experimental
+description: |
+    Detects loading of driver RootLaser.sys via name.
+    Adlice RootLaser.sys version 3.4.1 is a signed kernel driver assessed in public KOSEC BYOVD research. The driver retains a process-termination IOCTL reachable from administrator context and additional kernel read/information-leak attack surface, even though newer access-control and PPL checks mitigate some earlier TrueSight abuse paths.
+references:
+    - https://www.loldrivers.io/drivers/4c9a91ff-9284-49a7-899d-dfe85a112465/
+    - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/Adlice
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rootlaser.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

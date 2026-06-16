@@ -3,11 +3,13 @@ id: c77952eb-ef18-523a-ae5a-a3e785067721
 status: experimental
 description: |
     Detects loading of driver STProcessMonitor.sys via name.
-    Safetica Technologies process monitoring kernel driver vulnerable to BYOVD-style process termination via IOCTL. CVE-2025-70795. 18 execution parents observed in VirusTotal indicating active abuse by threat actors. 1/73 detections. Driver facilitates arbitrary process kill from kernel context, enabling EDR/AV bypass.
+    Safetica STProcessMonitor / ProcessMonitorDriver.sys exposes process-termination functionality through vulnerable IOCTL paths documented in public BYOVD research. The tracked samples include the 11.26.18.0 build and the legacy 11.11.4.0 build; public research notes that affected versions can be abused to terminate endpoint security processes from kernel context.
 references:
     - https://www.loldrivers.io/drivers/0712c54c-69fd-41f2-950a-da678ac51246/
     - https://www.cve.org/CVERecord?id=CVE-2025-70795
     - https://github.com/magicsword-io/LOLDrivers/issues/268
+    - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/Safetica
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/STProcessMonitor-Killer
 author: Michael Haag
 date: 2026/03/20
 modified: 2026/06/16

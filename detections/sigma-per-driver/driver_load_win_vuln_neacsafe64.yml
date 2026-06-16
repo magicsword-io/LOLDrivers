@@ -1,0 +1,32 @@
+title: Driver Load - NeacSafe64.sys
+id: 7c2b7339-c146-5a34-aad9-c108925c61ca
+status: experimental
+description: |
+    Detects loading of driver NeacSafe64.sys via hash.
+    NetEase NeacSafe64.sys is an anti-cheat mini-filter driver referenced by KDU and public NeacController research. Versions prior to 1.0.0.8 expose IOCTL/message-handler paths that provide arbitrary kernel read/write primitives and can be chained for SYSTEM privilege escalation or kernel-mode code execution.
+references:
+    - https://www.loldrivers.io/drivers/d474d8ad-14d9-4664-addd-86b4a9b7a1a5/
+    - https://github.com/smallzhong/NeacController
+    - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=dcc288fafad0bf3b505c4b44791d423d'
+            - 'SHA1=7e6dd5f1363c3070c59378ec8b23b6ec7b5671b4'
+            - 'SHA256=65447f727801e8be8a51aaaafc07618c8196553e683affb0721da441e2430bad'
+            - 'IMPHASH=7a377a157a35494d3fc033245b7fd077'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

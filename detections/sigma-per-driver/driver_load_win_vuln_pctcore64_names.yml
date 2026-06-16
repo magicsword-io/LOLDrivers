@@ -1,0 +1,29 @@
+title: Driver Load - PCTcore64.sys
+id: 2c9de89c-a83e-51c4-9708-3c453343dc94
+status: experimental
+description: |
+    Detects loading of driver PCTcore64.sys via name.
+    PC Tools PCTcore64.sys is documented by BlackSnufkin BYOVD research and CERT/CC as CVE-2026-8501. The driver creates a PCTCore device interface without restrictive access controls and exposes a process-termination IOCTL reachable by local callers.
+references:
+    - https://www.loldrivers.io/drivers/8f2d3be4-3e25-490f-82bc-0aca16aee101/
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/PCTcore64-Killer
+    - https://kb.cert.org/vuls/id/158530
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\pctcore64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

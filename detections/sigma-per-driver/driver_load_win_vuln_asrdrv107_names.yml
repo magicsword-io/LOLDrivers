@@ -1,0 +1,29 @@
+title: Driver Load - AsrDrv107.sys
+id: 86c3269e-ff62-5b3a-b6fb-6d32d5a20677
+status: experimental
+description: |
+    Detects loading of driver AsrDrv107.sys via name.
+    ASRock AsrDrv107.sys and AsrDrv107n.sys are ASRock IO driver builds listed as KDU providers for ASRock Motherboard Utility versions 3.0.498 and below. The driver family is associated with CVE-2020-15368 and exposes low-level privileged access primitives used by KDU.
+references:
+    - https://www.loldrivers.io/drivers/2d3178da-ea76-4f36-93f4-d76bf846c240/
+    - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+    - https://github.com/Barakat/CVE-2020-15368
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrdrv107.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

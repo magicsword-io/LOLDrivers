@@ -8,6 +8,9 @@ references:
     - https://www.loldrivers.io/drivers/30e8d598-2c60-49e4-953b-a6f620da1371/
     - https://northwave-cybersecurity.com/vulnerability-notice-topaz-antifraud
     - https://github.com/xM0kht4r/AV-EDR-Killer
+    - https://github.com/wesmar/kvcKiller
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/Wsftprm-Killer
+    - https://www.security.com/threat-intelligence/dragonforce-msteams-backdoor
 author: Northwave Cyber Security
 date: 2024/09/11
 modified: 2026/06/16
@@ -22,8 +25,8 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=521f17a8b04bffb3ad5130fb24a8c372'
             - 'MD5=2f4b5a0d98bc4e5616f2dd04337ae674'
+            - 'MD5=521f17a8b04bffb3ad5130fb24a8c372'
             - 'SHA1=ddf6112b8124ecbaf05f6b315c28302c3ee6ffd2'
             - 'SHA1=f8a3f28ecbd0b08ecab73ef571f16c3d0bd5e009'
             - 'SHA256=ff5dbdcf6d7ae5d97b6f3ef412df0b977ba4a844c45b30ca78c0eeb2653d69a8'

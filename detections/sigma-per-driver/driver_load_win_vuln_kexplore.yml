@@ -1,0 +1,32 @@
+title: Driver Load - KExplore.sys
+id: 9af93cf3-ddb2-5d04-b6ea-edead697872f
+status: experimental
+description: |
+    Detects loading of driver KExplore.sys via hash.
+    KExplore.sys is Pavel Yosifovich's Kernel Explorer driver and is listed as a KDU-compatible provider. KDU uses supported provider drivers to access kernel memory primitives for actions such as process-object modification and driver mapping.
+references:
+    - https://www.loldrivers.io/drivers/1b916d35-f62b-41ef-8454-3aed20299cb0/
+    - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+    - https://github.com/hsheric0210/SharpKernel/blob/main/provider-list.md
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b685345355d9fba9af6df590a87948ce'
+            - 'SHA1=090a4fc285d4f47b1e6a1011353a329c1f4c8e09'
+            - 'SHA256=c71e14961ac29165ddf6e5e8f9372e82fc79494da07afbfaf2ccfc9bd3bbbe18'
+            - 'IMPHASH=3965dae43010cc5fb249037453f57240'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

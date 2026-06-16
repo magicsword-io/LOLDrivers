@@ -1,0 +1,37 @@
+title: Driver Load - KObjExp.sys
+id: ba4450e1-cbc0-522b-b66e-189a45c0472a
+status: experimental
+description: |
+    Detects loading of driver KObjExp.sys via hash.
+    KObjExp.sys is Pavel Yosifovich's Kernel Object Explorer driver and is listed as a KDU-compatible provider. The staged samples include the KDU provider hash and a separate JobExplorer build of the same driver family.
+references:
+    - https://www.loldrivers.io/drivers/8347c4af-8946-4135-b890-cde3ed35fc28/
+    - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+    - https://github.com/hsheric0210/SharpKernel/blob/main/provider-list.md
+    - https://github.com/zodiacon/JobExplorer
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=af27a89e19e96a2a83a9908f75a12221'
+            - 'MD5=5f0b029db26afd7852e077ad02c4a031'
+            - 'SHA1=3303ba52a334da58a4992c4f9fba7272e294b7af'
+            - 'SHA1=4844bff55efaa94a0d50b02e3444bb5a272bf1cb'
+            - 'SHA256=d93d045bb73620055ad4158dbc2e1d3d4c7bfcefbbc90fdc6dfa3663c6cbdac1'
+            - 'SHA256=88a9b030ab81082629253c581fe0670019c766f32acfc78a6cdc1080ad272fe4'
+            - 'IMPHASH=4cc26fea341ef2b6f349339056a5dfb9'
+            - 'IMPHASH=56077d4efbf498f901e7098df0cdcf53'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

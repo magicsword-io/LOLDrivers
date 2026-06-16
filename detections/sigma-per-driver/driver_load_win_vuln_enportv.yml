@@ -1,0 +1,32 @@
+title: Driver Load - EnPortv.sys
+id: 07289cfc-82c9-5f47-8b6a-834a54310e9b
+status: experimental
+description: |
+    Detects loading of driver EnPortv.sys via hash.
+    Guidance Software EnPortv.sys is an older EnCase kernel driver documented in KOSEC BYOVD research and in public reporting on signed forensic drivers used by EDR-killer tooling. KOSEC documents a KillProc IOCTL path that can terminate a target process when called from an administrator context with the expected caller PID material.
+references:
+    - https://www.loldrivers.io/drivers/18935808-e00c-4b75-a7fc-03e409a7570e/
+    - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/EnCase
+    - https://www.bleepingcomputer.com/news/security/edr-killer-tool-uses-signed-kernel-driver-from-forensic-software/
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=20a783d3d7076d7a51c66e9eac2ae643'
+            - 'SHA1=4914037cdf1c8bce60be2ca64b19a4af728c932a'
+            - 'SHA256=d42f1b420747b82533e33107c710c45c29ff20aa5da3d1c8498b7bed7f9ebc81'
+            - 'IMPHASH=fbd5760fdc3436bed9ce5f31879f26db'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

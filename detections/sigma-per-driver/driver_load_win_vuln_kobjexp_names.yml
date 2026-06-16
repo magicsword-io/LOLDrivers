@@ -1,0 +1,30 @@
+title: Driver Load - KObjExp.sys
+id: 03b852db-8f2c-5577-b1a1-2b3cb2f43392
+status: experimental
+description: |
+    Detects loading of driver KObjExp.sys via name.
+    KObjExp.sys is Pavel Yosifovich's Kernel Object Explorer driver and is listed as a KDU-compatible provider. The staged samples include the KDU provider hash and a separate JobExplorer build of the same driver family.
+references:
+    - https://www.loldrivers.io/drivers/8347c4af-8946-4135-b890-cde3ed35fc28/
+    - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+    - https://github.com/hsheric0210/SharpKernel/blob/main/provider-list.md
+    - https://github.com/zodiacon/JobExplorer
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kobjexp.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

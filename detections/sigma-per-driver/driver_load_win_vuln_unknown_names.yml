@@ -1,0 +1,29 @@
+title: Driver Load - unknown.sys
+id: face9211-2fb2-569b-b539-58c867d30b2b
+status: experimental
+description: |
+    Detects loading of driver unknown.sys via name.
+    unknown.sys is an unattributed signed kernel driver documented in public UnknownKiller / BlackSnufkin BYOVD research. The public PoCs identify the driver as exposing a process-kill primitive suitable for BYOVD process termination research.
+references:
+    - https://www.loldrivers.io/drivers/bffcac17-f20c-43cc-baf0-93fd20bc1ed5/
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/UnknownKiller
+    - https://github.com/lukmannurhikma/UnknownKiller
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\unknown.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

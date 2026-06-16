@@ -1,0 +1,28 @@
+title: Driver Load - ZYArKit.sys
+id: 01c128cb-d387-5cdb-99df-e643f532bfec
+status: experimental
+description: |
+    Detects loading of driver ZYArKit.sys via name.
+    V-secure ZYArKit.sys version 2.0.13.5 is a signed kernel driver assessed in public KOSEC BYOVD research. KOSEC documents an IOCTL path that references a user-supplied process handle and reaches ZwTerminateProcess, allowing administrator-context termination of non-protected processes from kernel mode.
+references:
+    - https://www.loldrivers.io/drivers/f2032ff3-9c67-4d48-981b-2479babb153d/
+    - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/V-secure
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\zyarkit.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

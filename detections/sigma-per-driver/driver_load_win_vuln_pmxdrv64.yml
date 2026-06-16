@@ -1,0 +1,32 @@
+title: Driver Load - pmxdrv64.sys
+id: 188ea881-5489-5f2e-9860-d60e0489e021
+status: experimental
+description: |
+    Detects loading of driver pmxdrv64.sys via hash.
+    Intel PMxDrv / pmxdrv64.sys is listed as a KDU provider for Intel Management Engine Tools driver abuse. Public vulnerable-driver research also documents physical-memory access through this driver family.
+references:
+    - https://www.loldrivers.io/drivers/95fc9bf0-ec86-44b3-abad-a4c922aa7742/
+    - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+    - https://github.com/GetRektBoy724/vuln-drivers/tree/main/pmxdrv.sys
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=3807073232994eca5dafe266b9674743'
+            - 'SHA1=9e5fcaea33c9a181c56f7d0e4d9c42f8edead252'
+            - 'SHA256=b1a8ee1222eea5f199028d90b9b77c2acf46d6d84a9e125403b2888c6f681c72'
+            - 'IMPHASH=3a1007f4b4aba578ddc0289781690ab6'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,32 @@
+title: Driver Load - pcdsrvc_x64.sys
+id: 946dd702-eaea-5486-a0a0-12412fc92b86
+status: experimental
+description: |
+    Detects loading of driver pcdsrvc_x64.sys via hash.
+    PC-Doctor pcdsrvc_x64.sys is listed as a KDU provider for Dell PC Doctor / SupportAssist driver abuse. The driver family is associated with CVE-2019-12280 and exposes kernel access primitives used by KDU as a provider for kernel memory operations.
+references:
+    - https://www.loldrivers.io/drivers/d4eb6ed4-c23f-45a9-9891-5aa8f218b863/
+    - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+    - https://github.com/hsheric0210/SharpKernel/blob/main/provider-list.md
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4b5f5774ff1c577b9515fdd2b5c535c5'
+            - 'SHA1=d0a228ed8af190dec0c1a812e212f5e68ee3b43e'
+            - 'SHA256=1d053020079124ac526d84affb17bf4a1563ecd872c83b4b6299c9aa6a732557'
+            - 'IMPHASH=ee80920dc13af08a91dc574363231916'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

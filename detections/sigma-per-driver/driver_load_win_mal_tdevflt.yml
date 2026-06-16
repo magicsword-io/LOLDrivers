@@ -1,0 +1,32 @@
+title: Driver Load - tdevflt.sys
+id: b0d5b787-6130-54a3-9eb8-b6b72a142221
+status: experimental
+description: |
+    Detects loading of driver tdevflt.sys via hash.
+    This ABYSSWORKER-related malicious kernel driver presents as Palo Alto Networks tdevflt.sys / Cortex XDR PnP Device Filter Driver. Public DragonForce reporting lists the sample in a BYOVD tradecraft set alongside known vulnerable process-killer drivers.
+references:
+    - https://www.loldrivers.io/drivers/65458077-861e-4423-b446-2a9c7afe44b5/
+    - https://www.security.com/threat-intelligence/dragonforce-msteams-backdoor
+    - https://www.elastic.co/security-labs/abyssworker
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0aaae94aeed94870f755487e8ec17259'
+            - 'SHA1=a86c445b9d233b6316a66842c5224265feda8ba7'
+            - 'SHA256=8284c8676cc22c4b2e66826ac16986da7ddecba1f2776b16771be17bfdc45dc2'
+            - 'IMPHASH=4e3c3df003b6a014459f47ae8cb021c7'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

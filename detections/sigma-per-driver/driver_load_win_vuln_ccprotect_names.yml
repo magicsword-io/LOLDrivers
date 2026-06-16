@@ -1,0 +1,28 @@
+title: Driver Load - CcProtect.sys
+id: 0765b74b-4cd2-566b-841b-883d06f4b164
+status: experimental
+description: |
+    Detects loading of driver CcProtect.sys via name.
+    CnCrypt CcProtect.sys is a signed kernel driver used by BlackSnufkin BYOVD research as a process-killer provider. The public PoC documents this hash as a vulnerable CcProtect driver and notes that HVCI must be disabled to avoid instability.
+references:
+    - https://www.loldrivers.io/drivers/3e3067b0-3d74-46fe-9f57-1ae3a0293958/
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/CcProtect-Killer
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ccprotect.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -3,10 +3,11 @@ id: f1cd0a9c-176a-5555-8031-f6233bdf4634
 status: experimental
 description: |
     Detects loading of driver ProcessCtr.sys via hash.
-    The driver creates a device object at \\.\ProcessCtr with no DACL restrictions, so any local user can open a handle. The IRP_MJ_DEVICE_CONTROL dispatcher accepts IOCTL 0x89DB202C with a 4-byte DWORD input (target PID) and chains ZwOpenProcess -> ZwTerminateProcess against the supplied PID, with no caller validation. Because the kernel-mode caller bypasses user-mode access checks, the primitive can terminate any process on the system including PPL-protected AV/EDR processes.
+    EsafeNet ProcessCtr / ProcessCtrl64.sys creates a device object reachable by local callers and exposes process-control IOCTL paths. Public research documents a vulnerable process-termination path that can allow privileged process termination or denial of service when user-supplied context/handle material is accepted without adequate authorization checks.
 references:
     - https://www.loldrivers.io/drivers/5d658b45-81f0-442e-ac43-7c249ce1d54f/
     - https://github.com/The-Sword-of-Constantine/UsingBYOVD/blob/master/BYOVD/ProcessCtr.cpp
+    - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/EsafeNet
 author: Element2023H
 date: 2026/06/09
 modified: 2026/06/16

@@ -3,11 +3,14 @@ id: bb65ab0b-25a5-58f5-bc4a-23ab20d71bfb
 status: experimental
 description: |
     Detects loading of driver GGProtect64.sys via name.
-    GGProtect64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+    GGProtect64.sys is a Microsoft-signed anticheat kernel driver for GG租号 that exposes a \\.\GGProtect64 device. Public research documents a bypassable caller-registration flow through IOCTL 0x223C14 and a privileged process termination path through IOCTL 0x223C04, allowing a local process to terminate or suspend protected processes from kernel mode.
 references:
     - https://www.loldrivers.io/drivers/13d67487-8c65-47bb-a3d3-d799b5f7533b/
     - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/magicsword-io/LOLDrivers/issues/368
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+    - https://github.com/Haider303/GGProtect-exploit
+    - https://medium.com/@haider303mustafa/bypassing-weak-driver-authentication-to-kill-ppl-protected-processes-ggprotect64-sys-analysis-d8f44c5837b4
 author: Michael Haag
 date: 2026/04/17
 modified: 2026/06/16

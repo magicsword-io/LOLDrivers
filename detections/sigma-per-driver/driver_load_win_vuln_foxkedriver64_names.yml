@@ -3,11 +3,14 @@ id: e7ef1f74-aedb-5798-9dbe-edcd4f4c31f3
 status: experimental
 description: |
     Detects loading of driver FoxKeDriver64.sys via name.
-    FoxKeDriver64.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+    FoxKeDriver64.sys is a vulnerable Foxconn kernel driver that exposes a \\.\Fox_FOXONE_Driver device. Public research documents IOCTL 0x2220C0 for translating a caller-supplied virtual address to a physical address, which can support local privilege escalation chains with other vulnerable drivers.
 references:
     - https://www.loldrivers.io/drivers/7f52f435-d217-4c13-98a4-4fdc6c8516c8/
     - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/magicsword-io/LOLDrivers/issues/370
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+    - https://github.com/Haider303/sliff-driv-exploit
+    - https://medium.com/@haider303mustafa/applockerflter-sliffdriver-sys-full-kernel-exploit-chain-from-driver-recon-to-system-shell-b57d87738308
 author: Michael Haag
 date: 2026/04/17
 modified: 2026/06/16

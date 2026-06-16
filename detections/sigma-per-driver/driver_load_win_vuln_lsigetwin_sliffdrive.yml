@@ -3,11 +3,14 @@ id: a2fa9eee-dc11-5e13-a4fe-020baa302da3
 status: experimental
 description: |
     Detects loading of driver lsigetwin_SliffDriver.sys via hash.
-    lsigetwin_SliffDriver.sys is a vulnerable kernel driver from the KeServiceDescriptorTable/vulnerable-drivers repository. The driver exposes dangerous kernel primitives to usermode.
+    lsigetwin_SliffDriver.sys is a Microsoft-signed vulnerable kernel driver that exposes a \\.\SliffDriver device. Public research documents IOCTL 0x80002004 for mapping caller-supplied physical memory into user mode, enabling local privilege escalation when chained with kernel address discovery and virtual-to-physical translation primitives.
 references:
     - https://www.loldrivers.io/drivers/430f94b4-69e8-4541-bea7-329be7d283b7/
     - https://github.com/magicsword-io/LOLDrivers/issues/325
+    - https://github.com/magicsword-io/LOLDrivers/issues/370
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+    - https://github.com/Haider303/sliff-driv-exploit
+    - https://medium.com/@haider303mustafa/applockerflter-sliffdriver-sys-full-kernel-exploit-chain-from-driver-recon-to-system-shell-b57d87738308
 author: Michael Haag
 date: 2026/04/17
 modified: 2026/06/16
