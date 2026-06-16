@@ -1,0 +1,31 @@
+title: Driver Load - NGStar.sys
+id: 0c72ab73-58cd-5149-8323-edd404bbe95b
+status: experimental
+description: |
+    Detects loading of driver NGStar.sys via hash.
+    NGStar.sys is the kernel-mode USB fingerprint sensor driver for NITGEN Fingkey Hamster II/III devices. The driver creates \Device\gstar-0 exposed as \\.\gstar-0 via IoCreateDevice with FILE_DEVICE_UNKNOWN and no IoCreateDeviceSecure call, making all 28 IOCTL codes (0x00222004-0x00222070) reachable by any unprivileged user-mode process (FILE_ANY_ACCESS on all codes). IOCTLs 0x0022206C and 0x00222070 allocate a fixed 10-byte NonPagedPool block via the deprecated ExAllocatePool API then pass it directly as the receive buffer for an uncapped USB bulk transfer with no post-transfer bounds check — kernel pool overflow leading to local privilege escalation to SYSTEM. ExAllocatePool (non-tagged, removed from Windows 11 and Server 2022 kernel exports) causes a kernel bugcheck (BSOD) on any IOCTL reaching the allocation path — confirmed local DoS. IOCTL 0x00222050 decrements a session reference counter at [rbp+0x40] via lock add without an underflow guard; counter wraps to 0xFFFFFFFF from zero, corrupting the device extension refcount and triggering premature cleanup leading to use-after-free. Driver carries no embedded PE signature; trusted via catalog fdu11.cat (VeriSign-signed, expired 2014, valid via timestamp countersignature). VT detection: 0/77.
+references:
+    - https://www.loldrivers.io/drivers/5b9a202c-0695-532e-9d92-662cedefee07/
+    - Internal Research
+author: @BohraDJayesh
+date: 2026/06/01
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=297a9b187c6897749bc7bb92d02e95c0'
+            - 'SHA1=3f102ab63f53869309443b5de9c9416a5e001284'
+            - 'SHA256=4542b20be7adceb61fa5f538fed8c395951e775dbd7c4a2f7c6aee477c4d924e'
+            - 'IMPHASH=f439f8c9fec466e01688b1d0833513a8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
