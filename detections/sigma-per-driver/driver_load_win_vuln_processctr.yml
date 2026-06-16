@@ -1,0 +1,31 @@
+title: Driver Load - ProcessCtr.sys
+id: f1cd0a9c-176a-5555-8031-f6233bdf4634
+status: experimental
+description: |
+    Detects loading of driver ProcessCtr.sys via hash.
+    The driver creates a device object at \\.\ProcessCtr with no DACL restrictions, so any local user can open a handle. The IRP_MJ_DEVICE_CONTROL dispatcher accepts IOCTL 0x89DB202C with a 4-byte DWORD input (target PID) and chains ZwOpenProcess -> ZwTerminateProcess against the supplied PID, with no caller validation. Because the kernel-mode caller bypasses user-mode access checks, the primitive can terminate any process on the system including PPL-protected AV/EDR processes.
+references:
+    - https://www.loldrivers.io/drivers/5d658b45-81f0-442e-ac43-7c249ce1d54f/
+    - https://github.com/The-Sword-of-Constantine/UsingBYOVD/blob/master/BYOVD/ProcessCtr.cpp
+author: Element2023H
+date: 2026/06/09
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5ee52684ee22f3ad730b6af7e327d82b'
+            - 'SHA1=72ffc3e2afc384657bc1559eb69b4651e24d57d6'
+            - 'SHA256=d64eeb940daffdc8327fb18b160c20e539088cf8407813655f59efa9fdf0022e'
+            - 'IMPHASH=54560b58b671978b0335b8f1671e3b38'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,29 @@
+title: Driver Load - LECOMAx64.sys
+id: 1b735042-49da-5885-bd53-c88d6a8cba03
+status: experimental
+description: |
+    Detects loading of driver LECOMAx64.sys via name.
+    LECOMAx64.sys is a signed LECO LECOMA device driver referenced by public PPLShade supported-driver research.
+references:
+    - https://www.loldrivers.io/drivers/47d4b71f-eebd-4775-9e7c-b031135e8f1b/
+    - https://github.com/redteamfortress/PPLShade#supported-drivers
+    - https://github.com/magicsword-io/LOLDrivers/issues/354
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\lecomax64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

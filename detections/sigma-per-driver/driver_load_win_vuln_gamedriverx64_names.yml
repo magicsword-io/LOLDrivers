@@ -1,0 +1,29 @@
+title: Driver Load - GameDriverX64.sys
+id: 32a822a4-bd85-5227-902d-e3d2944053e2
+status: experimental
+description: |
+    Detects loading of driver GameDriverX64.sys via name.
+    GameDriverX64.sys is a signed game driver reported in public DragonForce intrusion tradecraft as an abused vulnerable driver.
+references:
+    - https://www.loldrivers.io/drivers/271ace20-2f68-4695-9579-0d4de8cb4fe6/
+    - https://www.security.com/blog-post/dragonforce-msteams-backdoor
+    - https://github.com/magicsword-io/LOLDrivers/issues/360
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\gamedriverx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

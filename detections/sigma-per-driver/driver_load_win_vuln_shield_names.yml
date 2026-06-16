@@ -1,0 +1,28 @@
+title: Driver Load - shield.sys
+id: 11186e0d-5cba-50b6-ad42-5e372ad1b13d
+status: experimental
+description: |
+    Detects loading of driver shield.sys via name.
+    Horizon DataSys Shield drivers expose IOCTL functionality reported to provide arbitrary kernel read/write primitives.
+references:
+    - https://www.loldrivers.io/drivers/0e272ccf-81e5-4612-95d2-365e7ded6eac/
+    - https://github.com/magicsword-io/LOLDrivers/issues/344
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\shield.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

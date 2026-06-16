@@ -1,0 +1,40 @@
+title: Driver Load - LnvMSRIO.sys
+id: c61f42be-5cb7-5c5c-a69f-b011c57ad48a
+status: experimental
+description: |
+    Detects loading of driver LnvMSRIO.sys via hash.
+    LnvMSRIO.sys is a Lenovo Dispatcher driver affected by CVE-2025-8061. Vulnerable Lenovo Dispatcher 3.0 and 3.1 drivers expose the WinMsrDev device interface with insufficient access control. Public research documents primitives for physical memory read (IOCTL 0x9C406104), physical memory write (IOCTL 0x9C40A108), MSR read (IOCTL 0x9C402084), and MSR write (IOCTL 0x9C402088), enabling an authenticated local user to execute code with elevated privileges when Memory Integrity is not enabled. Lenovo reports Dispatcher 3.2 and driver versions 3.1.0.41 and later as not affected.
+references:
+    - https://www.loldrivers.io/drivers/87680018-393b-47b6-8130-6b41bed2bc7c/
+    - https://github.com/magicsword-io/LOLDrivers/issues/242
+    - https://github.com/symeonp/Lenovo-CVE-2025-8061
+    - https://blog.quarkslab.com/exploiting-lenovo-driver-cve-2025-8061.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-8061
+    - https://support.lenovo.com/us/en/product_security/LEN-200860
+    - https://github.com/segura2010/lenovo-dispatcher-poc
+    - https://github.com/spawn451/CVE-2025-8061-Exploit
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e2b952939b8e9d76cff7d130b797a74d'
+            - 'MD5=517917ff2e5008c791d007cecab5e335'
+            - 'SHA1=0186912447648a5e4b9c9c31d718f605d5e5c925'
+            - 'SHA1=f496bc9b6e77fef03f945b48f86b840baf61fe47'
+            - 'SHA256=7023f08c9f99076a5fb82a0f661847e2951800f095fca1793a0e6bd9c949b478'
+            - 'SHA256=245b6ab442a7d53dc30ece28e1c6de727c019669385877cbe929b81aa1a2ad2f'
+            - 'IMPHASH=3b2a2be6141c8dd9d480fe7ab5ede02b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

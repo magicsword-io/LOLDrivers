@@ -1,0 +1,28 @@
+title: Driver Load - Cndom6.sys
+id: 0fbaecb9-7335-58ea-9ef4-279ed48090de
+status: experimental
+description: |
+    Detects loading of driver Cndom6.sys via name.
+    Signed malicious drivers reported in Silver Fox activity; rwdriver.sys exposes a rootkit IOCTL primitive, while Cndom6.sys and XiaoH.sys are reported as watchdog/support drivers.
+references:
+    - https://www.loldrivers.io/drivers/2703d3dd-05f0-4ae2-83a2-2ad0939467d0/
+    - https://github.com/magicsword-io/LOLDrivers/issues/350
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\cndom6.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

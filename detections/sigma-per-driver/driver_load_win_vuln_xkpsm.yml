@@ -1,0 +1,31 @@
+title: Driver Load - xkpsm.sys
+id: f76d8fc4-7899-5849-92e2-f9727b1a3840
+status: experimental
+description: |
+    Detects loading of driver xkpsm.sys via hash.
+    xkpsm.sys is an xkeeper kernel driver from JiranJikyosoft. The driver exposes IOCTL 0x8505E008 to user mode and reaches ZwTerminateProcess, enabling kernel-mediated process termination without sufficient caller or target validation. This makes the driver useful in BYOVD-style process termination and security tool impairment scenarios after it is loaded.
+references:
+    - https://www.loldrivers.io/drivers/767ed0a0-606b-4297-a858-e2af5b4a0400/
+    - https://github.com/magicsword-io/LOLDrivers/issues/343
+author: Michael Haag
+date: 2026/06/16
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=bb08ca77afc108421b8135d22ea6b374'
+            - 'SHA1=d60fc160f73450ee63c9f46dd55d5cede6fe3dcd'
+            - 'SHA256=28c5bb735f9fc38e0ebd366978898f0cfcd455e4ff8bf1a321768b09e01ee84d'
+            - 'IMPHASH=68dea920d822aa2e15f3dd7f2c59678a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

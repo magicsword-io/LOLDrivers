@@ -1,0 +1,28 @@
+title: Driver Load - ProcessCtr.sys
+id: 8ff5fbb5-a875-5c41-8c38-18c5eb071af7
+status: experimental
+description: |
+    Detects loading of driver ProcessCtr.sys via name.
+    The driver creates a device object at \\.\ProcessCtr with no DACL restrictions, so any local user can open a handle. The IRP_MJ_DEVICE_CONTROL dispatcher accepts IOCTL 0x89DB202C with a 4-byte DWORD input (target PID) and chains ZwOpenProcess -> ZwTerminateProcess against the supplied PID, with no caller validation. Because the kernel-mode caller bypasses user-mode access checks, the primitive can terminate any process on the system including PPL-protected AV/EDR processes.
+references:
+    - https://www.loldrivers.io/drivers/5d658b45-81f0-442e-ac43-7c249ce1d54f/
+    - https://github.com/The-Sword-of-Constantine/UsingBYOVD/blob/master/BYOVD/ProcessCtr.cpp
+author: Element2023H
+date: 2026/06/09
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\processctr.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
