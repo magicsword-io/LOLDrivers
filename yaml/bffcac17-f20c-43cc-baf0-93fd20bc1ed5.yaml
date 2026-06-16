@@ -1,0 +1,142 @@
+Id: bffcac17-f20c-43cc-baf0-93fd20bc1ed5
+Tags:
+- unknown.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-06-16'
+MitreID: T1562.001
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create unknown binPath=C:\windows\temp\unknown.sys type=kernel &&
+    sc.exe start unknown
+  Description: unknown.sys is an unattributed signed kernel driver documented in public
+    UnknownKiller / BlackSnufkin BYOVD research. The public PoCs identify the driver
+    as exposing a process-kill primitive suitable for BYOVD process termination research.
+  Usecase: Terminate processes from kernel mode through an unattributed vulnerable
+    driver.
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://github.com/BlackSnufkin/BYOVD/tree/main/UnknownKiller
+- https://github.com/lukmannurhikma/UnknownKiller
+Detection: []
+Acknowledgement:
+  Person: BlackSnufkin / lukmannurhikma
+  Handle: '@BlackSnufkin / @lukmannurhikma'
+KnownVulnerableSamples:
+- Filename: unknown.sys
+  SHA256: 97bd65e98cdc4e93d49edd4ea905d43a61244df0fd3323e6649330de3b1be091
+  MD5: 4e5136230ec590ce6ef038aac6e72cb2
+  SHA1: ba914fe77b177b45799403b16dd14765c510a074
+  Imphash: 176b3852ff8a4c513156b0ded5c86113
+  Authentihash:
+    MD5: 793ea731f474590d5542d0df0f1db133
+    SHA1: ed88d7f2d05454545272e80a8c6450783a4e6083
+    SHA256: 0d7099bd4a0714a354cfe36f312d907843bcaaa2a1e3dcf269637f58920b1e47
+  RichPEHeaderHash:
+    MD5: 7aeb0c4cf7961d5e9a110c152b975dde
+    SHA1: 2f65984d2f1c266865faa954b4becd6dc0aefc6f
+    SHA256: c0e40a6d627e4ab5e7421b2a28abb50b2d1f5b51a0e587fe49487f6191b39983
+  Sections:
+    .text:
+      Entropy: 5.3569485241032435
+      Virtual Size: '0x3455'
+    .rdata:
+      Entropy: 3.968483685855926
+      Virtual Size: '0x7c4'
+    .data:
+      Entropy: 0.5447517787934827
+      Virtual Size: '0x68'
+    .pdata:
+      Entropy: 3.874855286133879
+      Virtual Size: '0x198'
+    INIT:
+      Entropy: 4.919740852475849
+      Virtual Size: '0x564'
+    .reloc:
+      Entropy: 2.9464393446710155
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-11-29 17:15:50'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - RtlFreeUnicodeString
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - __chkstk
+  - RtlEqualUnicodeString
+  - ExAllocatePoolWithTagPriority
+  - ExFreePoolWithTag
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetCurrentProcess
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ObRegisterCallbacks
+  - ObUnRegisterCallbacks
+  - ZwClose
+  - MmIsAddressValid
+  - PsGetProcessId
+  - IoCreateFileSpecifyDeviceObjectHint
+  - ZwTerminateProcess
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - PsLookupProcessByProcessId
+  - ZwDeleteFile
+  - ZwAllocateVirtualMemory
+  - ZwFreeVirtualMemory
+  - ZwWaitForSingleObject
+  - PsGetProcessWow64Process
+  - PsGetProcessPeb
+  - MmCopyVirtualMemory
+  - ZwProtectVirtualMemory
+  - RtlCreateUserThread
+  - ZwQuerySystemInformation
+  - __C_specific_handler
+  - PsProcessType
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, O=Microsoft Windows Hardware Compatibility Publisher, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2025-09-01 16:20:58'
+      ValidTo: '2026-09-01 16:20:58'
+      Signature: 3046022100c43caac50d639f514a37d188330d15d91cbf2021c4d9b48e0e51fbe37180346e022100a13554245e188623b6ed5e24bd84488341f06f1c432159cdaf51176c91caeb57
+      SignatureAlgorithmOID: 1.2.840.10045.4.3.2
+      IsCertificateAuthority: false
+      SerialNumber: 77f685fe096792d8605e243ecdcc9f63eaf940b3
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 58c1bd6db58833b50407d01d1bd174e4
+        SHA1: 6958f6814b8105d5fd3894b61dec15d1b5a7caf7
+        SHA256: 61970b3445e9d357c3270a4c6f976bc7d074e47462e97111a8a0d199b89b313c
+        SHA384: 948c9bf666bfaa1208a9585c70b89210a0bdf5fc1c9120b2a9940f776a404323ed12d7b5045609ded0939b5b532d6fed
+    Signer:
+    - SerialNumber: 77f685fe096792d8605e243ecdcc9f63eaf940b3
+      Issuer: C=CN, O=Microsoft Windows Third Party Component CA, CN=Microsoft Windows
+        Third Party Component CA
+      Version: 1

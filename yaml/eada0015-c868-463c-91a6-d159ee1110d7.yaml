@@ -1,0 +1,180 @@
+Id: eada0015-c868-463c-91a6-d159ee1110d7
+Tags:
+- KRegExp.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-06-16'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create KRegExp binPath=C:\windows\temp\KRegExp.sys type=kernel &&
+    sc.exe start KRegExp
+  Description: KRegExp.sys is Pavel Yosifovich's Kernel Registry Explorer driver and
+    is listed as a KDU-compatible provider. KDU uses provider drivers to perform privileged
+    kernel operations including kernel memory access and process-object manipulation.
+  Usecase: Access kernel primitives through a KDU-supported provider driver.
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+- https://github.com/hsheric0210/SharpKernel/blob/main/provider-list.md
+Detection: []
+Acknowledgement:
+  Person: KDU Project / SharpKernel
+  Handle: '@hfiref0x / @hsheric0210'
+KnownVulnerableSamples:
+- Filename: KRegExp.sys
+  SHA256: 5c237dcec01f5e31a78cf8c883e41d85c74675b1426379302b46b771d091dce6
+  MD5: a5406327e13ad633b00bc62353e7dedc
+  SHA1: f3383fe0ff00bdea1aa9e68bcaad8b83885e306d
+  Imphash: 0b9365a82a9033a116c4ea996fdc6315
+  Authentihash:
+    MD5: c8b9281ccc87adb65ca3e4ebf56d3bbf
+    SHA1: d889e03ce654903a5113f49f49a1c23f3317e7d0
+    SHA256: a057a2e353d94358ceba83114d8f94adf77c7c25ab9ca47029c80a6bf2d6d35f
+  RichPEHeaderHash:
+    MD5: e2568c75b95f2cb160c53cf02b969fd0
+    SHA1: 3dd86f27464bec295e2dc33442d2dcfa109dab26
+    SHA256: 67ca3332db9f47c17e0eedb7b1cf5b07ffe88e4e2a797aefa45a00205e8ed40b
+  Sections:
+    .text:
+      Entropy: 6.064799196655556
+      Virtual Size: '0xc88'
+    .rdata:
+      Entropy: 4.167012175452395
+      Virtual Size: '0xbc4'
+    .data:
+      Entropy: 1.5956217160611863
+      Virtual Size: '0x300'
+    .pdata:
+      Entropy: 3.9935302975510067
+      Virtual Size: '0x234'
+    PAGE:
+      Entropy: 6.210259751905154
+      Virtual Size: '0x1c8c'
+    INIT:
+      Entropy: 5.172533452223653
+      Virtual Size: '0x65e'
+    .reloc:
+      Entropy: 3.842482531225721
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-10-09 07:03:36'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - wcsrchr
+  - _wcsicmp
+  - ExInitializeResourceLite
+  - ExEnterCriticalRegionAndAcquireResourceExclusive
+  - ExReleaseResourceAndLeaveCriticalRegion
+  - ExDeleteResourceLite
+  - CmUnRegisterCallback
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ZwClose
+  - ZwOpenKey
+  - PsGetCurrentProcessId
+  - ZwOpenProcess
+  - ZwDuplicateObject
+  - ZwQueryInformationProcess
+  - KeBugCheckEx
+  - ZwCreateKey
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - ExFreePoolWithTag
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - ExAllocatePoolWithTag
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - RtlFreeUnicodeString
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=IL, L=Kefar Sava, O=Pavel Yosifovich, CN=Pavel Yosifovich
+      ValidFrom: '2020-10-01 00:00:00'
+      ValidTo: '2023-10-06 12:00:00'
+      Signature: 948ecd53b80e7aa733853dbd47145ca321eaac8e9d19376678412743f3d66e9f5e1122f21c2ada8c2f1504d125710ea7c454585709396be1fd2d1915fe1605fbd605a79818136e478e75ca820825da63058b10dfb2b48697e6ccc25cf2454bf63c8df58caa9065ae325cdc1d5002a33ad32805461dc9de5ff7ebec86d7bb6f604fb539c572a4501e3ebc1c47f0f13595a7138087e11f6fc6c933e39ccafa458d0c5e7e0440c1e967bdd60217c3e7744c05a618edb45e6b6f5fd1d3b7466b0ec88044782e80f99f0cc68c54fb73da7bfb8786200a8fed36cb848511772babcb830cc8f90ce03d0876ad3960135cdb4aa2b98f48ef7d919005018a83f501823788
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 010fb25b4de76443a40569857a384f24
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e8e116fcb3d9b3c61b102fe93742fd99
+        SHA1: 27c1a64f11108ae747e3d29549da0773b32c7c57
+        SHA256: 3151642f0c68e2030cb6e077c25bd9cf74d1fb2a72c125fbd8f26229fd72d1ae
+        SHA384: 0be70b5b5c1e40768551545cb6c44efdd4dfdfb0604216f36101c28fb1e8ecc36e8103c9a66a3e14ad217acb07dd2040
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
+        CA
+      ValidFrom: '2011-04-15 19:41:37'
+      ValidTo: '2021-04-15 19:51:37'
+      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611cb28a000000000026
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 983a0c315a50542362f2bd6a5d71c8d0
+        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+    Signer:
+    - SerialNumber: 010fb25b4de76443a40569857a384f24
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      Version: 1
