@@ -1,0 +1,27 @@
+title: Driver Load - PGRHostControl.sys
+id: 3085b65f-a24b-533d-b7c3-ea5319440253
+status: experimental
+description: |
+    Detects loading of driver PGRHostControl.sys via name.
+    PGRHostControl.sys is a signed kernel driver distributed by FLIR Integrated Imaging Solutions, Inc. (formerly Point Grey Research). The driver exposes multiple privileged IOCTL handlers that can be accessed without sufficient authorization checks, allowing user-controlled requests to map arbitrary physical memory through \Device\PhysicalMemory and provides unrestricted I/O port read and write primitives via the x86 IN/OUT instructions. These capabilities can be abused to access physical RAM, interact directly with hardware registers, access MMIO regions, and potentially facilitate local privilege escalation or post-exploitation activity. Due to the absence of adequate access controls around highly privileged operations, the driver constitutes a Bring Your Own Vulnerable Driver (BYOVD) primitive.
+references:
+    - https://www.loldrivers.io/drivers/82eee73e-156e-4344-b975-babbf0bc131f/
+author: rhaym
+date: 2026/06/06
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\pgrhostcontrol.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

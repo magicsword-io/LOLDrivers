@@ -1,0 +1,30 @@
+title: Driver Load - PGRHostControl.sys
+id: 7f28675c-6360-56fa-8981-ac16696b8e58
+status: experimental
+description: |
+    Detects loading of driver PGRHostControl.sys via hash.
+    PGRHostControl.sys is a signed kernel driver distributed by FLIR Integrated Imaging Solutions, Inc. (formerly Point Grey Research). The driver exposes multiple privileged IOCTL handlers that can be accessed without sufficient authorization checks, allowing user-controlled requests to map arbitrary physical memory through \Device\PhysicalMemory and provides unrestricted I/O port read and write primitives via the x86 IN/OUT instructions. These capabilities can be abused to access physical RAM, interact directly with hardware registers, access MMIO regions, and potentially facilitate local privilege escalation or post-exploitation activity. Due to the absence of adequate access controls around highly privileged operations, the driver constitutes a Bring Your Own Vulnerable Driver (BYOVD) primitive.
+references:
+    - https://www.loldrivers.io/drivers/82eee73e-156e-4344-b975-babbf0bc131f/
+author: rhaym
+date: 2026/06/06
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f0e46578a7fed41c88ec64fdc11d2a72'
+            - 'SHA1=8d733095ac1cfcd799f58be3b8a25800f31e6fe2'
+            - 'SHA256=4b0e9834dd672e4ce81464d8887c71f9a0942140557cd0ad321da9a1aa849959'
+            - 'IMPHASH=ca98e73abb2034feb3d76a2a0a3bea54'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
