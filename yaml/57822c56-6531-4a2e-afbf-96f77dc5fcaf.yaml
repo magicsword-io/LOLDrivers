@@ -1,0 +1,214 @@
+Id: 57822c56-6531-4a2e-afbf-96f77dc5fcaf
+Tags:
+- KslD.sys
+- MpKslDrv.sys
+Author: Noam Pomerantz
+Created: '2026-03-26'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: reg add "HKLM\SYSTEM\CurrentControlSet\Services\KslD\SharedState" /v AllowedProcessName
+    /t REG_SZ /d "\Device\HarddiskVolumeX\Path\To\Exploit.exe" /f && sc.exe start
+    KslD
+  Description: KslD.sys is a Microsoft-signed Windows Defender support driver that
+    can be abused for kernel memory access after its SharedState process-name check
+    is redirected to an attacker-controlled process. Public research documents IOCTL
+    0x222044 as exposing physical and virtual memory read primitives that can support
+    KASLR bypass, token discovery, and LSASS/PPL bypass workflows.
+  Usecase: Abuse a trusted Microsoft Defender support driver for kernel memory reads
+    and credential-dumping support primitives.
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://fndsec.net/2025/04/20/uncovering-a-new-loldriver-kaslr-bypass-with-ksld-sys/
+- https://github.com/Pumi96/DefenderDump
+- https://github.com/vergamota/KslKatz
+- https://github.com/andreisss/KslDump
+- https://github.com/carved4/gokatz
+- https://github.com/Muz1K1zuM/kslkatz_bof
+Acknowledgement:
+  Person: Noam Pomerantz
+  Handle: Pumi96
+Detection: []
+KnownVulnerableSamples:
+- Filename: KslD.sys
+  MD5: b316425d6f200244a25bd7b9998d9c43
+  SHA1: b678371d2dac5ad2fcca014ded25e0cc7a74eed1
+  SHA256: 2b3195346d9b62b08bb61bb61f0da20b2abb0c726186c09a2e4fa926baacbfc5
+  Imphash: f202af7ca75a2191538cd0a107201e7a
+  Authentihash:
+    MD5: 4e1f15c5d292c7fee5ce8d1e9b5b03e3
+    SHA1: e0c981c2341a425f6fd21bcd469e038a4c5da5f9
+    SHA256: 5bfc550dcbf7ea19663a3e1db089aa247c372372d00b09e60e047b401df1daf2
+  RichPEHeaderHash:
+    MD5: e73c750a5944c76c886fbc36f9225409
+    SHA1: 3cdfeeb8cc5780089118dab7d527d8fe04915772
+    SHA256: cd34888899b9b577d17e02a9174097a73f42b0e4baaaf24b291feb19b925b674
+  Sections:
+    .text:
+      Entropy: 6.323960304719268
+      Virtual Size: '0x3bd6f'
+    awesome:
+      Entropy: 2.725480556997868
+      Virtual Size: '0x9'
+    .rdata:
+      Entropy: 5.11131496601513
+      Virtual Size: '0xa16c'
+    .data:
+      Entropy: 0.5484206922210878
+      Virtual Size: '0x10f8'
+    .pdata:
+      Entropy: 5.475306926083698
+      Virtual Size: '0x2c70'
+    PAGE:
+      Entropy: 6.04594329994223
+      Virtual Size: '0x547'
+    INIT:
+      Entropy: 6.224146127626467
+      Virtual Size: '0x1516'
+    .rsrc:
+      Entropy: 3.448439159900828
+      Virtual Size: '0x448'
+    .reloc:
+      Entropy: 6.7338892389775875
+      Virtual Size: '0x1818'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '1970-12-12 19:40:23'
+  Description: KSLD
+  Company: Microsoft Corporation
+  InternalName: KSLD
+  OriginalFilename: KSLD.sys
+  FileVersion: 1.1.25041.64017 (5f4e0875c06cb7d3b67e5e7e4354b254dda9b0b4)
+  Product: Microsoft Malware Protection
+  ProductVersion: 1.1.25041.64017
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WDFLDR.SYS
+  - ntoskrnl.exe
+  - WppRecorder.sys
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  - WdfVersionUnbind
+  - WdfLdrQueryInterface
+  - WdfVersionBind
+  - ZwDeleteFile
+  - RtlCompareUnicodeString
+  - ObfDereferenceObject
+  - PsProcessType
+  - PsGetCurrentProcessId
+  - ObReferenceObjectByHandle
+  - ZwClose
+  - ZwOpenProcess
+  - KeInsertQueueDpc
+  - ZwQuerySystemInformation
+  - ZwOpenSection
+  - ZwUnmapViewOfSection
+  - KeGetCurrentIrql
+  - KeInitializeDpc
+  - KeStackAttachProcess
+  - KeInitializeSemaphore
+  - ZwMapViewOfSection
+  - KeLowerIrql
+  - KeReleaseSemaphore
+  - KeSetTargetProcessorDpc
+  - KeQueryActiveProcessors
+  - KfRaiseIrql
+  - KeWaitForSingleObject
+  - KeUnstackDetachProcess
+  - ZwFsControlFile
+  - RtlAppendUnicodeStringToString
+  - ZwReadFile
+  - RtlAppendUnicodeToString
+  - IoFreeIrp
+  - IoGetRelatedDeviceObject
+  - MmBuildMdlForNonPagedPool
+  - _purecall
+  - RtlQueryRegistryValues
+  - IoBuildAsynchronousFsdRequest
+  - RtlPrefixUnicodeString
+  - IoFileObjectType
+  - KeSetEvent
+  - IoFreeMdl
+  - IoCreateFileSpecifyDeviceObjectHint
+  - IofCallDriver
+  - KeInitializeEvent
+  - ZwQueryInformationFile
+  - __C_specific_handler
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ExAllocatePoolWithTag
+  - RtlEqualUnicodeString
+  - ZwDeleteKey
+  - ZwQueryValueKey
+  - ZwOpenKey
+  - ExDeleteResourceLite
+  - KeEnterCriticalRegion
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ExInitializeResourceLite
+  - KeLeaveCriticalRegion
+  - ZwQueryInformationProcess
+  - MmMapLockedPagesSpecifyCache
+  - MmIsAddressValid
+  - HalDispatchTable
+  - ExFreePoolWithTag
+  - RtlFreeUnicodeString
+  - IoWMIRegistrationControl
+  - KeBugCheckEx
+  - MmGetSystemRoutineAddress
+  - RtlGetVersion
+  - RtlInitUnicodeString
+  - IoAllocateMdl
+  - imp_WppRecorderGetTriageInfo
+  - WppAutoLogStart
+  - WppAutoLogStop
+  - WppAutoLogTrace
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows
+      ValidFrom: '2024-09-12 20:04:07'
+      ValidTo: '2025-09-11 20:04:07'
+      Signature: c7550b683e09ca5ea84311ca06c47cf84d243537d6e1a4f001dda3d43bb422800f9b00bef7a51dd6d315b82e12e270b4f25b8c81f8c3d65cece6374157a8961005adf0721fee60943834f083a86d120f8423d3992dba7ba69266a8acd452f8365560ecdfb71fe4feb4729647d478c9e503d23ecc2506636ab25139c90a781ab193dea3e9437ba4324487b606bdcf576a754fa32d5b07cd406ac92de7fc14f493ac522ef06bd55b03cd5551e025c4127c2806a2a526c2d5ceaae803258ee4540688baa9bd41e0fd9fe4e66ad5a694275d67d23717a2fab0fd2f3a318948833a19b0bf0eabe7baf9e9b06e711eebc1c289519545faf16cd811cd703cbf9fe132eb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000004a882e6b8ac1c5d5ff00000000004a8
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: a371d0c2c888dfd8e70a03e4536957c0
+        SHA1: 3ef3847d097c8e203ae62f4abbf165c3569bd66b
+        SHA256: be93d7b56cdfbd317cf29dbe54240ce5e8cf52c7abe28730b33558353ffb8d4d
+        SHA384: d785e77c830bca6e88547fc3127dddfb44d9080494e0402e317f3afd0eb6e477432d9842ef478ff92db94d1f68290343
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Production PCA 2011
+      ValidFrom: '2011-10-19 18:41:42'
+      ValidTo: '2026-10-19 18:51:42'
+      Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: '61077656000000000008'
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 30a3f0b64324ed7f465e7fc618cb69e7
+        SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
+        SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
+        SHA384: 4f9a02c3eac5e83c38074d54c0bf270e03a1d668e0001c9812c509eb08a19075ee778a7630e65598e4608fc66e2d1c66
+    Signer:
+    - SerialNumber: 33000004a882e6b8ac1c5d5ff00000000004a8
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Production PCA 2011
+      Version: 1
