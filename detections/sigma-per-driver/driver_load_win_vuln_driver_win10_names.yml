@@ -1,0 +1,30 @@
+title: Driver Load - Driver_win10.sys
+id: f9c8f4f9-d9ab-5fbd-9ec4-f8ff83cab785
+status: experimental
+description: |
+    Detects loading of driver Driver_win10.sys via name.
+    Kernel driver family observed dropped by Black Basta tooling and adjacent intrusions during 2025. The 55 KB sample is signed by Microsoft Windows Hardware Compatibility Publisher (WHQL attestation), allowing it to load on systems with HVCI enabled. Two additional 44 KB unsigned variants share the same imphash and identical/near-identical authentihashes, indicating the same driver body redistributed without the embedded signature blob. Imports include FltEnumerateFilters and FltUnregisterFilter (minifilter enumeration and unregistration), MmCopyVirtualMemory (cross-process kernel-assisted memory copy), ZwTerminateProcess and ZwOpenProcess (process termination), and KeStackAttachProcess (process attach) — primitives suitable for tamper protection or evasion of endpoint security minifilters.
+references:
+    - https://www.loldrivers.io/drivers/cb9f4425-66de-4371-a3df-3aeec1fda65c/
+    - https://www.virustotal.com/gui/file/70c9f9e8dcbba700e0fc20e6ae9b4c5df98326cf212ac8794fc8ee9a46e948c4
+    - https://www.virustotal.com/gui/file/c4179ed787aab61dc99879e87e1155003c5438cf683455b1230959f55296579d
+    - https://www.virustotal.com/gui/file/97550af2414d6c9b70d67b2142b6711e98289483cec3f788192096638c2dda51
+author: Michael Haag
+date: 2026/05/05
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\driver_win10.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

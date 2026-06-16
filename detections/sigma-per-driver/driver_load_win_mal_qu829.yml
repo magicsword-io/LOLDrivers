@@ -1,0 +1,36 @@
+title: Driver Load - qu829.sys
+id: 9d0d8fcd-f364-5a56-82c6-fb65006f336e
+status: experimental
+description: |
+    Detects loading of driver qu829.sys via hash.
+    Kernel driver signed by "Fuqing Yuntan Network Tech Co.,Ltd." (a revoked VeriSign code-signing certificate that Microsoft has flagged as abused). Multiple samples in this family produce a Cobalt Strike beacon reflective loader YARA hit (Elastic protections-artifacts ruleset Windows_Trojan_CobaltStrike) and are detected by Microsoft as Trojan:Win32/Hitbrovi.G. Samples are dropped to C:\Windows under random eight-character filenames (e.g. qu829.exe) and registered as kernel services. Both observed variants share imphash ca73883db8881686fb258a9d289e3909.
+references:
+    - https://www.loldrivers.io/drivers/3599f0ef-67fc-4130-910f-0c482612d16f/
+    - https://www.virustotal.com/gui/file/46f2c93c279763a818dffbf89c8893ac0718bd3f5d8fbf327887063068a412a5
+    - https://www.virustotal.com/gui/file/57d7a0e5d53a7403c2ea7ae6f6836f43a9fdebefcc8408d66e7dea02ffc41f94
+    - https://github.com/elastic/protections-artifacts
+author: Michael Haag
+date: 2026/05/05
+modified: 2026/06/16
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=08883a5dfc47d41a60f6cea6ec3b445c'
+            - 'MD5=9c31fe097a5cac88d27fbe93fda4e056'
+            - 'SHA1=131b5c8a1083393229999f899826fdc459c8ff2b'
+            - 'SHA1=e09d059f3f563710b0a34e350a57eec11f47bff5'
+            - 'SHA256=57d7a0e5d53a7403c2ea7ae6f6836f43a9fdebefcc8408d66e7dea02ffc41f94'
+            - 'SHA256=46f2c93c279763a818dffbf89c8893ac0718bd3f5d8fbf327887063068a412a5'
+            - 'IMPHASH=ca73883db8881686fb258a9d289e3909'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
