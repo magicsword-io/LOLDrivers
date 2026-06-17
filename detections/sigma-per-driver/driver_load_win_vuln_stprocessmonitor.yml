@@ -12,7 +12,7 @@ references:
     - https://github.com/BlackSnufkin/BYOVD/tree/main/STProcessMonitor-Killer
 author: Michael Haag
 date: 2026/03/20
-modified: 2026/06/16
+modified: 2026/06/17
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -24,8 +24,8 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=5761bd63da03686fc480245da7bd1e9f'
             - 'MD5=485a04675df7cf40a8865706e003eb25'
+            - 'MD5=5761bd63da03686fc480245da7bd1e9f'
             - 'SHA1=68fec379f2ae76c3d2ce913f7be650cea1d06990'
             - 'SHA1=711ef221526997039e804a18db9647c91680bbe2'
             - 'SHA256=5b4f59236a9b950bcd5191b35d19125f60cfb9e1a1e1aa2e4f914b6745dde9df'

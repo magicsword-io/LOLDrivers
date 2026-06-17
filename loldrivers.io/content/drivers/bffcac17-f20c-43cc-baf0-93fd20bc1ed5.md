@@ -19,7 +19,7 @@ unknown.sys is an unattributed signed kernel driver documented in public Unknown
 - **UUID**: bffcac17-f20c-43cc-baf0-93fd20bc1ed5
 - **Created**: 2026-06-16
 - **Author**: Michael Haag
-- **Acknowledgement**: BlackSnufkin / lukmannurhikma | [@BlackSnufkin / @lukmannurhikma](https://twitter.com/@BlackSnufkin / @lukmannurhikma)
+- **Acknowledgement**: BlackSnufkin / lukmannurhikma | [@BlackSnufkin42 / @lukmannurhikma](https://twitter.com/@BlackSnufkin42 / @lukmannurhikma)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4e5136230ec590ce6ef038aac6e72cb2.bin" "Download" >}}
 {{< tip "warning" >}}
@@ -244,7 +244,7 @@ sc.exe create unknown binPath=C:\windows\temp\unknown.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/bffcac17-f20c-43cc-baf0-93fd20bc1ed5.yaml)
 
-*last_updated:* 2026-06-16
+*last_updated:* 2026-06-17
 
 {{< /column >}}
 {{< /block >}}

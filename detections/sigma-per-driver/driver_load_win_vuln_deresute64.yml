@@ -9,7 +9,7 @@ references:
     - https://x.com/nextronresearch/status/2051653303893680456
 author: Pierre-Henri Pezier
 date: 2026/05/05
-modified: 2026/06/16
+modified: 2026/06/17
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,30 +21,30 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=5480873d19c83b3cb8d5542f03c4182d'
-            - 'MD5=ed96f1a99a3693d40cc302d5ae0840b8'
-            - 'MD5=165900b09295d79bf0b53f3acd2a9aa3'
-            - 'MD5=b7d34956622d0adc9242fb3f17944043'
-            - 'MD5=b78864853fc27438b3df480bf3ceddc7'
-            - 'MD5=73236c534a805826368406f849ca4e23'
             - 'MD5=05c0f275cb3270e196d099e13e23612d'
+            - 'MD5=b78864853fc27438b3df480bf3ceddc7'
+            - 'MD5=b7d34956622d0adc9242fb3f17944043'
+            - 'MD5=165900b09295d79bf0b53f3acd2a9aa3'
+            - 'MD5=5480873d19c83b3cb8d5542f03c4182d'
             - 'MD5=9d9314faa1c0c4962c075c64698a262e'
+            - 'MD5=ed96f1a99a3693d40cc302d5ae0840b8'
+            - 'MD5=73236c534a805826368406f849ca4e23'
             - 'SHA1=3406929eb81855c878261c897f9b452aed3aa3ea'
             - 'SHA1=b040522bf83a7aab46b1bab007d8c122cc446967'
-            - 'SHA1=cfed486846db08c66afccfcfcba9d458162eed15'
-            - 'SHA1=62d68301154018e04f456a000a24fe9f5048ec52'
             - 'SHA1=a30cd72f9a1528001cda841531b016c752c72ce1'
+            - 'SHA1=62d68301154018e04f456a000a24fe9f5048ec52'
+            - 'SHA1=cfed486846db08c66afccfcfcba9d458162eed15'
+            - 'SHA1=0707e4b64fd745d2887c3066fdda1eeda20e434b'
             - 'SHA1=371b65249aed01a48bdfb266083016a219108b91'
             - 'SHA1=074de2138433c15f50c95dc1fec24d58f56644c2'
-            - 'SHA1=0707e4b64fd745d2887c3066fdda1eeda20e434b'
-            - 'SHA256=65b2956b1f1f26136b692d91de8ad98d6590b7f5b94d0acc88bbc61f8228a579'
-            - 'SHA256=79c2d06072e004639ea3b27c405d5cbb50a0af3531b743521c2b4a42557cc26f'
             - 'SHA256=079842b1c4fae65b5c6af3e75a7305a263865cd033696a5a2fe7ea707e0c3d71'
-            - 'SHA256=64035e86735d0c01e0eb0862def6a48f012ec0a8e701874092ee1506ab65d273'
-            - 'SHA256=740025dd6d222bc08b925692a6ef3bd5af86ecd030a8e8cef68b09f5da761fb2'
-            - 'SHA256=1f280d67ff50607e1435b1c10f67c633d681801bcad0d8870128b3698c10634d'
-            - 'SHA256=52591fc20b01ab714543e97b4fcbcfad630d50a4725d98da6f11e9bd5b1cf5bb'
             - 'SHA256=09a5ca7673f3734f8987b2b4d69255ffaa05cd2e77cf2d6f72a2d6a3c91139fb'
+            - 'SHA256=65b2956b1f1f26136b692d91de8ad98d6590b7f5b94d0acc88bbc61f8228a579'
+            - 'SHA256=64035e86735d0c01e0eb0862def6a48f012ec0a8e701874092ee1506ab65d273'
+            - 'SHA256=1f280d67ff50607e1435b1c10f67c633d681801bcad0d8870128b3698c10634d'
+            - 'SHA256=79c2d06072e004639ea3b27c405d5cbb50a0af3531b743521c2b4a42557cc26f'
+            - 'SHA256=52591fc20b01ab714543e97b4fcbcfad630d50a4725d98da6f11e9bd5b1cf5bb'
+            - 'SHA256=740025dd6d222bc08b925692a6ef3bd5af86ecd030a8e8cef68b09f5da761fb2'
             - 'IMPHASH=7ff8b7e52d90fc7aaec62298cb528434'
     condition: selection_hashes
 falsepositives:
