@@ -1,0 +1,32 @@
+title: Driver Load - ardrv.sys
+id: 0bca9b05-6719-561d-8d9f-bb89231bb623
+status: experimental
+description: |
+    Detects loading of driver ardrv.sys via hash.
+    OPSWAT AppRemover ardrv.sys version 2017.10.02.1551 and earlier exposes a user-accessible \\.\ardrv device. Public research documents IOCTL 0x2420031 reaching process-termination paths, including ZwTerminateProcess, without sufficient caller or target validation. This allows local users to terminate arbitrary processes, including security tooling, and makes the driver useful in BYOVD-style defense impairment after it is loaded.
+references:
+    - https://www.loldrivers.io/drivers/9eb0156e-4c43-487f-be8c-40a7b19a4279/
+    - https://github.com/redteamfortress/CVE-2026-36425
+    - https://github.com/magicsword-io/LOLDrivers/issues/374
+author: Michael Haag
+date: 2026/06/19
+modified: 2026/06/19
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=826c6d2e3d80f2d43f7977f998525ad3'
+            - 'SHA1=7340eae2ccf3d57ac3ae271c9983996d8ae7fde0'
+            - 'SHA256=07c5209bf83065fe760f4fee4ed2308b0c523671f68ca73a3854c2c8c28c0541'
+            - 'IMPHASH=04becf2aed91570c44993f040922303d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

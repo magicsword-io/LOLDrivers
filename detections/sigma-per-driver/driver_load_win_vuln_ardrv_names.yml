@@ -1,0 +1,29 @@
+title: Driver Load - ardrv.sys
+id: 3f8bbf8d-b2b2-55a2-8f0d-b35405e92e61
+status: experimental
+description: |
+    Detects loading of driver ardrv.sys via name.
+    OPSWAT AppRemover ardrv.sys version 2017.10.02.1551 and earlier exposes a user-accessible \\.\ardrv device. Public research documents IOCTL 0x2420031 reaching process-termination paths, including ZwTerminateProcess, without sufficient caller or target validation. This allows local users to terminate arbitrary processes, including security tooling, and makes the driver useful in BYOVD-style defense impairment after it is loaded.
+references:
+    - https://www.loldrivers.io/drivers/9eb0156e-4c43-487f-be8c-40a7b19a4279/
+    - https://github.com/redteamfortress/CVE-2026-36425
+    - https://github.com/magicsword-io/LOLDrivers/issues/374
+author: Michael Haag
+date: 2026/06/19
+modified: 2026/06/19
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ardrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
