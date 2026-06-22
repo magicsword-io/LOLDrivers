@@ -1,0 +1,38 @@
+Id: acb5da93-1dcc-4d16-8415-6b4b221cb4a1
+Tags:
+- 360netmon_wfp.sys
+- 360netmon.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-06-22'
+MitreID: T1562.001
+CVE: []
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create 360netmon_wfp binPath=C:\windows\temp\360netmon_wfp.sys
+    type=kernel && sc.exe start 360netmon_wfp
+  Description: Qihoo 360netmon_wfp.sys is a signed kernel driver documented by ESET
+    as the driver abused by the GentleKiller Network Blocker variant used in Gentlemen
+    ransomware intrusions. The sample is associated with ESET detection Win64/VulnDriver.Qihoo360.A.
+  Usecase: Impair defenses through a signed kernel driver abused by an EDR killer.
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+- https://www.eset.com/us/about/newsroom/research/eset-research-gentlemen-ransomware-gang-edr-killers/
+- https://github.com/magicsword-io/LOLDrivers/issues/377
+Detection: []
+Acknowledgement:
+  Person: ESET Research, 0xd3vnull
+  Handle: '@ESETresearch, @0xd3vnull'
+KnownVulnerableSamples:
+- Filename: 360netmon_wfp.sys
+  MD5: 40f64b91348bed955acf8551853b72a8
+  SHA1: 9ad51ad97c01e97ab59214116740785e0f6320a8
+  SHA256: 3d769a5f1ad0d32fb4e06478d35401d9788bad1a477b813adbdf4fd93b2c2694
+  Filesize: 107584
+  Signature: Signed
+  Company: 360.cn Inc.
+  Description: 360netmon
+  Product: 360netmon
+  OriginalFilename: 360netmon.sys

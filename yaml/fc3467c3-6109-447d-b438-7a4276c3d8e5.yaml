@@ -1,6 +1,7 @@
 Id: fc3467c3-6109-447d-b438-7a4276c3d8e5
 Tags:
 - PoisonX.sys
+- G11.sys
 - PoisonX10.sys
 - PoisonX11.sys
 - PoisonX12.sys
@@ -37,6 +38,8 @@ Commands:
 Resources:
 - https://medium.com/@jehadbudagga/reverse-engineering-a-0day-used-against-crowdstrike-edr-a5ea1fbe3fd4
 - https://github.com/j3h4ck/PoisonKiller/
+- https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+- https://github.com/magicsword-io/LOLDrivers/issues/377
 Acknowledgement:
   Person: Jehad Abudagga
   Handle: '@jehadbudagga'
@@ -153,6 +156,12 @@ KnownVulnerableSamples:
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
   MagicHeader: 50 45 0 0
+- Filename: G11.sys
+  MD5: 07e9f0b8627a95960e79e930fb099e84
+  SHA1: 56bee9df5833a637f5c54d5911df98b0812fe643
+  SHA256: 2d91a78e739891c9854c254f5b2a6b84c0e167dfa253466cbccd2cdd1c20145d
+  Filesize: 19672
+  Signature: Signed
 - Filename: PoisonX10.sys
   MD5: e4704b728eb6daeeb780688786303c4f
   SHA1: a3bfa49170fa5808d66415ba73f5aac68a195ffd

@@ -14,6 +14,8 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/BlackSnufkin/BYOVD
+- https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+- https://github.com/magicsword-io/LOLDrivers/issues/377
 Acknowledgement:
   Person: ''
   Handle: ''
@@ -272,5 +274,15 @@ KnownVulnerableSamples:
       Issuer: CN=Thawte Timestamping CA,OU=Thawte Certification,O=Thawte,L=Durbanville,ST=Western
         Cape,C=ZA
       Version: 1
+- Filename: googleApiUtil64.sys
+  MD5: 5f8df2c0389ead04ce2e69d632edcdbd
+  SHA1: ec296f9501ad71e430810cb5cdc38d954d4ba536
+  SHA256: f6ee01303cf1d68015eee49f7dc7f26151a04ae642a47e49c70806931ce652d3
+  Filesize: 116936
+  Signature: Signed
+  Company: Baidu, Inc.
+  Description: Baidu Antivirus BdApi Driver
+  Product: Baidu Antivirus
+  OriginalFilename: BdApiUtil64.sys
 Tags:
 - BdApiUtil64.sys

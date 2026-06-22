@@ -1,6 +1,7 @@
 Id: 2c7d54ff-7b49-4da8-ae77-00ac6fa2944f
 Tags:
 - HWAuidoOs2Ec.sys
+- havoc.sys
 Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-04-17'
@@ -19,6 +20,9 @@ Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/325
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
 - https://www.security.com/threat-intelligence/dragonforce-msteams-backdoor
+- https://www.huntress.com/blog/w2-malvertising-to-kernel-mode-edr-kill
+- https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+- https://github.com/magicsword-io/LOLDrivers/issues/377
 Detection: []
 Acknowledgement:
   Person: ''
@@ -170,3 +174,15 @@ KnownVulnerableSamples:
       Version: 1
   LoadsDespiteHVCI: 'TRUE'
   Imphash: 9cfa9662095195fc2607e952710e62ae
+- Filename: havoc.sys
+  MD5: eef8a950952696b018aa9c6da2f5d7ad
+  SHA1: 1fa071303fb846308571e64727501fb98b1c2be6
+  SHA256: 5abe477517f51d81061d2e69a9adebdcda80d36667d0afabe103fda4802d33db
+  Filesize: 47240
+  Signature: Signed
+  Company: Huawei Device Co., Ltd.
+  Description: HWAuidoOs2Ec
+  Product: Huawei Audio Driver
+  ProductVersion: 1.0.0.0
+  FileVersion: 1.0.0.0
+  OriginalFilename: HWAuidoOs2Ec.sys
