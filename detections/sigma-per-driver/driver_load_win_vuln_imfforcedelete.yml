@@ -1,0 +1,35 @@
+title: Driver Load - IMFForceDelete
+id: b6fc8f06-365e-5a06-a463-6a68ace8ae70
+status: experimental
+description: |
+    Detects loading of driver IMFForceDelete via hash.
+    IObit Malware Fighter IMFForceDelete.sys is a vulnerable force-delete filter driver. ESET documents GentleKiller's Cleaner variant dropping this driver without the trailing .sys extension, and CVE-2019-6494 describes IOCTL 0x8016E000 allowing low-privileged users to delete files regardless of access controls.
+references:
+    - https://www.loldrivers.io/drivers/6ca608ec-df2e-4a8d-8a0b-350f9e0271ab/
+    - https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+    - https://www.eset.com/us/about/newsroom/research/eset-research-gentlemen-ransomware-gang-edr-killers/
+    - https://github.com/magicsword-io/LOLDrivers/issues/377
+    - https://nvd.nist.gov/vuln/detail/CVE-2019-6494
+    - https://github.com/advisories/GHSA-rj7p-8gjh-5gqf
+author: Michael Haag
+date: 2026/06/22
+modified: 2026/06/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=75590850346c74a95d505ea3f8ff4a75'
+            - 'SHA1=12500f6c87ce62712a0ed6652c57468d15c14223'
+            - 'SHA256=ef4e4b88df24825dbf4e7131e71a41002715d38b7a8c0c432aa936c854152ef3'
+            - 'IMPHASH=7816745e971bb8da69822ba11f0b6c0c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

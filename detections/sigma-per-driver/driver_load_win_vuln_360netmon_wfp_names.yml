@@ -1,0 +1,30 @@
+title: Driver Load - 360netmon_wfp.sys
+id: 86e861e3-daf7-5ee7-acd8-f401b06ab3e4
+status: experimental
+description: |
+    Detects loading of driver 360netmon_wfp.sys via name.
+    Qihoo 360netmon_wfp.sys is a signed kernel driver documented by ESET as the driver abused by the GentleKiller Network Blocker variant used in Gentlemen ransomware intrusions. The sample is associated with ESET detection Win64/VulnDriver.Qihoo360.A.
+references:
+    - https://www.loldrivers.io/drivers/acb5da93-1dcc-4d16-8415-6b4b221cb4a1/
+    - https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+    - https://www.eset.com/us/about/newsroom/research/eset-research-gentlemen-ransomware-gang-edr-killers/
+    - https://github.com/magicsword-io/LOLDrivers/issues/377
+author: Michael Haag
+date: 2026/06/22
+modified: 2026/06/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\360netmon_wfp.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
