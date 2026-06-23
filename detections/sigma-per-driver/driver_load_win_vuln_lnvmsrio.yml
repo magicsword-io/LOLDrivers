@@ -15,7 +15,7 @@ references:
     - https://github.com/spawn451/CVE-2025-8061-Exploit
 author: Michael Haag
 date: 2026/06/16
-modified: 2026/06/19
+modified: 2026/06/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -27,10 +27,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=e2b952939b8e9d76cff7d130b797a74d'
             - 'MD5=517917ff2e5008c791d007cecab5e335'
-            - 'SHA1=0186912447648a5e4b9c9c31d718f605d5e5c925'
+            - 'MD5=e2b952939b8e9d76cff7d130b797a74d'
             - 'SHA1=f496bc9b6e77fef03f945b48f86b840baf61fe47'
+            - 'SHA1=0186912447648a5e4b9c9c31d718f605d5e5c925'
             - 'SHA256=7023f08c9f99076a5fb82a0f661847e2951800f095fca1793a0e6bd9c949b478'
             - 'SHA256=245b6ab442a7d53dc30ece28e1c6de727c019669385877cbe929b81aa1a2ad2f'
             - 'IMPHASH=3b2a2be6141c8dd9d480fe7ab5ede02b'

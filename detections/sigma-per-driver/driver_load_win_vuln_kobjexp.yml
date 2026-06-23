@@ -11,7 +11,7 @@ references:
     - https://github.com/zodiacon/JobExplorer
 author: Michael Haag
 date: 2026/06/16
-modified: 2026/06/19
+modified: 2026/06/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -23,12 +23,12 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=af27a89e19e96a2a83a9908f75a12221'
             - 'MD5=5f0b029db26afd7852e077ad02c4a031'
-            - 'SHA1=3303ba52a334da58a4992c4f9fba7272e294b7af'
+            - 'MD5=af27a89e19e96a2a83a9908f75a12221'
             - 'SHA1=4844bff55efaa94a0d50b02e3444bb5a272bf1cb'
-            - 'SHA256=d93d045bb73620055ad4158dbc2e1d3d4c7bfcefbbc90fdc6dfa3663c6cbdac1'
+            - 'SHA1=3303ba52a334da58a4992c4f9fba7272e294b7af'
             - 'SHA256=88a9b030ab81082629253c581fe0670019c766f32acfc78a6cdc1080ad272fe4'
+            - 'SHA256=d93d045bb73620055ad4158dbc2e1d3d4c7bfcefbbc90fdc6dfa3663c6cbdac1'
             - 'IMPHASH=4cc26fea341ef2b6f349339056a5dfb9'
             - 'IMPHASH=56077d4efbf498f901e7098df0cdcf53'
     condition: selection_hashes

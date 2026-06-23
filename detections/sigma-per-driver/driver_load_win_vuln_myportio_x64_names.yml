@@ -1,0 +1,32 @@
+title: Driver Load - MyPortIO_x64.sys
+id: 65fd6c9b-3fe9-5d62-b276-bc811cd38e74
+status: experimental
+description: |
+    Detects loading of driver MyPortIO_x64.sys via name.
+    MyPortIO_x64.sys and MyPortIO_x86.sys are Nuvoton Technology kernel drivers bundled with ASRock Polychrome RGB. Public issue #380 and the MyPortIO-Exploit writeup document unauthenticated IOCTL handlers that expose physical memory read/write and I/O port access primitives from user mode.
+references:
+    - https://www.loldrivers.io/drivers/7d9fee48-82d8-4582-be9a-a46682054e3e/
+    - https://github.com/magicsword-io/LOLDrivers/issues/380
+    - https://sploitus.com/exploit?id=7004A1F2-9DB9-5904-9F61-0492A070C636
+    - https://www.asrock.com/support/index.asp?cat=Utilities
+    - https://download.asrock.com/Utility/RGB/PolychromeRGB(v2.0.190).zip
+    - https://download.asrock.com/Utility/RGB/PolychromeRGB(v2.0.217).zip
+author: Michael Haag
+date: 2026/06/22
+modified: 2026/06/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\myportio_x64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

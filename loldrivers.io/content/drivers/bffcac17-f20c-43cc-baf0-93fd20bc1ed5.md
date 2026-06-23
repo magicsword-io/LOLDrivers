@@ -244,7 +244,7 @@ sc.exe create unknown binPath=C:\windows\temp\unknown.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/bffcac17-f20c-43cc-baf0-93fd20bc1ed5.yaml)
 
-*last_updated:* 2026-06-19
+*last_updated:* 2026-06-23
 
 {{< /column >}}
 {{< /block >}}

@@ -10,7 +10,7 @@ references:
     - https://github.com/Barakat/CVE-2020-15368
 author: Michael Haag
 date: 2026/06/16
-modified: 2026/06/19
+modified: 2026/06/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -26,10 +26,10 @@ detection:
             - 'MD5=894b30abec6e268d1e8b10edc030e8b4'
             - 'SHA1=11d7e0d29ab17292fd43bdd5ccb7da0403e50e52'
             - 'SHA1=b1fad5da173c6a603fffe20e0cb5f0bdca823bd5'
-            - 'SHA256=be131e30464c7be03bd2d16f99ea2b04c106b482cc5c52be659e4c0301206348'
             - 'SHA256=12177d777345f60a579e7bd8f0df95296af6e293e5560ee544fcced99a5db0df'
-            - 'IMPHASH=3edc8a0f9cf180b3687025e17be537cc'
+            - 'SHA256=be131e30464c7be03bd2d16f99ea2b04c106b482cc5c52be659e4c0301206348'
             - 'IMPHASH=88e21ed9e717781eaf87209acbdbb567'
+            - 'IMPHASH=3edc8a0f9cf180b3687025e17be537cc'
     condition: selection_hashes
 falsepositives:
     - Unknown
