@@ -1406,7 +1406,7 @@ sc.exe create deresute64.sys binPath=C:\windows\temp\deresute64.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/dbd78de7-f5ab-4fb7-a246-39cbcca4678c.yaml)
 
-*last_updated:* 2026-06-23
+*last_updated:* 2026-06-26
 
 {{< /column >}}
 {{< /block >}}

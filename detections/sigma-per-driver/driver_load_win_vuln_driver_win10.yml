@@ -11,7 +11,7 @@ references:
     - https://www.virustotal.com/gui/file/97550af2414d6c9b70d67b2142b6711e98289483cec3f788192096638c2dda51
 author: Michael Haag
 date: 2026/05/05
-modified: 2026/06/23
+modified: 2026/06/26
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -26,12 +26,12 @@ detection:
             - 'MD5=f05ed5805c259c3c770db028188b1e75'
             - 'MD5=16371565c1ee97f68ba76fb78e6620e7'
             - 'MD5=cb1bec51ceb551bcd522ee61afe3964e'
-            - 'SHA1=1a55b45735ce928ce2df94d4cc2a536da1ee55c7'
-            - 'SHA1=02fbacd721a7da543f73257ee1b6668dd10aec9a'
             - 'SHA1=61272df03b1d73a1de814b45d07590b502514828'
+            - 'SHA1=02fbacd721a7da543f73257ee1b6668dd10aec9a'
+            - 'SHA1=1a55b45735ce928ce2df94d4cc2a536da1ee55c7'
             - 'SHA256=70c9f9e8dcbba700e0fc20e6ae9b4c5df98326cf212ac8794fc8ee9a46e948c4'
-            - 'SHA256=c4179ed787aab61dc99879e87e1155003c5438cf683455b1230959f55296579d'
             - 'SHA256=97550af2414d6c9b70d67b2142b6711e98289483cec3f788192096638c2dda51'
+            - 'SHA256=c4179ed787aab61dc99879e87e1155003c5438cf683455b1230959f55296579d'
             - 'IMPHASH=9261c7ebc31630ff8bd053b515a62e6f'
     condition: selection_hashes
 falsepositives:

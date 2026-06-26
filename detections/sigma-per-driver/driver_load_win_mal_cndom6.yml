@@ -9,7 +9,7 @@ references:
     - https://github.com/magicsword-io/LOLDrivers/issues/350
 author: Michael Haag
 date: 2026/06/16
-modified: 2026/06/23
+modified: 2026/06/26
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -24,15 +24,15 @@ detection:
             - 'MD5=7ddb60de73657cd3b2756965fd2e1269'
             - 'MD5=5231a08c5286803e300ac657e37272f8'
             - 'MD5=e059cf1f9169302a0ff91b0061da1c14'
-            - 'SHA1=c01d742c730185cc5647b91608acc810b559a89e'
-            - 'SHA1=0ec6faa266d38a8c42ff9ddf116bce4246857ab4'
             - 'SHA1=900377f5c3418e89ea73356ca2787ea7bdba392a'
+            - 'SHA1=0ec6faa266d38a8c42ff9ddf116bce4246857ab4'
+            - 'SHA1=c01d742c730185cc5647b91608acc810b559a89e'
             - 'SHA256=8c12407a40eab287a8281be64665b1e72b0e91b2daf84030a1a15dc280e5dbf1'
             - 'SHA256=1c763af41b74c7502d70093763723939a8025199e0ac7e39c04b5cf992f9e273'
             - 'SHA256=83c4f9abe074d426fc5b08b57058208e4c184bfbe481e7847b67aeb87b04cd4a'
-            - 'IMPHASH=511d57e1f2f0c690b1a31e29574a9c15'
-            - 'IMPHASH=d8084e2c7bca0dd08f92ed5439f8dc78'
             - 'IMPHASH=507fe2094d62e61828e0e002093ff70d'
+            - 'IMPHASH=d8084e2c7bca0dd08f92ed5439f8dc78'
+            - 'IMPHASH=511d57e1f2f0c690b1a31e29574a9c15'
     condition: selection_hashes
 falsepositives:
     - Unknown
