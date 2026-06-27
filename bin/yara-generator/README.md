@@ -6,7 +6,7 @@ This YARA rule generator creates YARA rules for the vulnerable / malicious drive
 
 The generator processes the input samples and extract specific 'VersionInfo' values from the driver's PE headers. This includes e.g., the company name, file version, product version, description and other values. It then creates YARA rules that look for these specific values and uses a condition that's very permissive (`all of them`). This allows us to detect the drivers even if they are embedded in another file or loaded into memory.
 
-The rule generator in version 0.4 generates five output files:
+The rule generator in version 0.5 generates five output files:
 
 | File Name | Description | Score | 
 | --- | --- | --- |
@@ -20,27 +20,53 @@ The rule generator in version 0.4 generates five output files:
 
 ## Requirements
 
-* [Python 3.10](https://www.python.org/downloads/)
-* [Poetry](https://python-poetry.org/docs/#installation)
+* [pyenv](https://github.com/pyenv/pyenv)
+* Python 3.10+ (tested with Python 3.13.5)
+* `pip` (for `pefile` and `pyyaml`)
 
-## Setup
+## Setup (pyenv + venv)
 
-1. Install dependencies:
+1. Initialize `pyenv` in `zsh`:
 
+```sh
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
+exec zsh
 ```
-poetry install
+
+2. Create and activate a project virtual environment:
+
+```sh
+cd /path/to/LOLDrivers
+pyenv install -s 3.13.5
+pyenv local 3.13.5
+python -m venv .venv
+source .venv/bin/activate   # zsh/bash
+# source .venv/bin/activate.fish   # fish shell
+python -m pip install --upgrade pip
+python -m pip install -r ./bin/yara-generator/requirements.txt
 ```
 
-2. Activate the virtual environment:
+Shell-agnostic alternative (no activation required):
 
+```sh
+cd /path/to/LOLDrivers
+python -m venv .venv
+./.venv/bin/python -m pip install --upgrade pip
+./.venv/bin/python -m pip install -r ./bin/yara-generator/requirements.txt
 ```
-poetry shell
+
+3. Verify dependencies:
+
+```sh
+python -c "import yaml, pefile; print('deps-ok')"
 ```
 
 ## Usage
 
 ```sh
-usage: yara-generator.py [-h] [-d [driver-files ...]] [-y [yaml-files ...]] [-o output-folder] [--debug]
+usage: yara-generator.py [-h] [-d [driver-files ...]] [-y [yaml-files ...]] [-f log-file] [-o output-folder] [--debug]
 
 YARA Rule Generator for PE Header Info
 
@@ -49,24 +75,63 @@ options:
   -d [driver-files ...]
                         Path to driver directories (can be used multiple times)
   -y [yaml-files ...]   Path to YAML files with information on the drivers (can be used multiple times)
+  -f log-file           Write a log file
   -o output-folder      Output folder for rules
   --debug               Debug output
 ```
 
+### Default paths
+
+If no `-d`, `-y`, or `-o` values are given, defaults are resolved relative to the script location (`bin/yara-generator/`):
+
+* Drivers: `../../drivers/`
+* YAML metadata: `../../yaml/`
+* Output: `../../detections/yara/`
+
+This means running from the repository root or from the script directory works consistently.
+
+### YAML validation
+
+The generator skips YAML files that are invalid, do not parse to a top-level mapping, or do not contain a `KnownVulnerableSamples` list. Skipped files are reported in the log output.
+
+### Existing rule files
+
+The generator now merges newly generated rules with the existing output files instead of blindly overwriting them.
+
+Rule update behavior:
+
+* If an existing rule has identical detection logic (`strings` and `condition`), the existing rule is kept unchanged. Its original `date` is preserved and no `modified` field is added or updated.
+* If an existing rule changes, the original `date` is preserved and a `modified` field is added or updated with the current date.
+* If a rule is new, it is added with `date` set to the current date.
+* If an older rule exists in the output file but no replacement rule is generated in the current run, the older rule is preserved as-is.
+
+The merge logic also avoids churn from regenerated rules that are semantically identical but would otherwise only differ by the freshly generated `date` value.
+
 ## Examples
+
+### Quick start (first run)
+
+```sh
+cd /path/to/LOLDrivers
+python3 -m venv .venv
+./.venv/bin/python -m pip install -r ./bin/yara-generator/requirements.txt
+./.venv/bin/python ./bin/yara-generator/yara-generator.py
+```
 
 ### Working on Linux / macOS
 
-Generate the YARA rules and then use the command line tool YARA to scan the home folder using these rules:
+Generate the YARA rules (after setup/dependency install):
 
 ```sh
-python yara-generator.py -d ../../drivers/
+source .venv/bin/activate
+python ./bin/yara-generator/yara-generator.py
 ```
 
-Show debug output while generating the rules
+Show debug output while generating the rules:
 
 ```sh
-python yara-generator.py -d ../../drivers/ --debug
+source .venv/bin/activate
+python ./bin/yara-generator/yara-generator.py --debug
 ```
 
 ### Working on Windows
@@ -74,13 +139,104 @@ python yara-generator.py -d ../../drivers/ --debug
 Generate the YARA rules and then use the command line tool YARA to scan the drive C: using these rules:
 
 ```sh
-python yara-generator.py -d ..\..\drivers\
+python .\bin\yara-generator\yara-generator.py
 ```
 
 Show debug output while generating the rules
 
 ```sh
-python yara-generator.py -d ..\..\drivers\ --debug
+python .\bin\yara-generator\yara-generator.py --debug
+```
+
+## Troubleshooting
+
+If you see:
+
+```text
+ModuleNotFoundError: No module named 'yaml'
+```
+
+then dependencies are missing in the active Python environment. Install them in your venv and run again:
+
+```sh
+./.venv/bin/python -m pip install -r ./bin/yara-generator/requirements.txt
+./.venv/bin/python ./bin/yara-generator/yara-generator.py
+```
+
+If you see:
+
+```text
+source: Error while reading file '.venv/bin/activate'
+```
+
+you are likely using `fish` shell. Use either:
+
+```sh
+source .venv/bin/activate.fish
+```
+
+or run commands directly with `./.venv/bin/python` (shell-agnostic).
+
+If you see:
+
+```text
+error: externally-managed-environment
+```
+
+you are installing into system/Homebrew Python. Use the virtualenv interpreter path (`./.venv/bin/python -m pip ...`) instead.
+
+## Validate Rules Against Repo Samples
+
+Automated validation (recommended):
+
+```sh
+./.venv/bin/python ./bin/yara-generator/validate-malicious-rules.py
+```
+
+Useful options:
+
+```sh
+# Reuse existing generated rules (skip regeneration)
+./.venv/bin/python ./bin/yara-generator/validate-malicious-rules.py --skip-generate
+
+# Write outputs to a custom folder
+./.venv/bin/python ./bin/yara-generator/validate-malicious-rules.py --output-dir /tmp/yara-malicious-validation
+```
+
+The script writes hit files and a JSON summary (default: `/tmp/yara-malicious-validation/summary.json`).
+It reports `intentionally skipped samples` separately (from `SKIP_DRIVERS`) and excludes them from `missing expected matches`.
+It also reports root-cause breakdown for missing matches (`no PE FileInfo`, `insufficient VersionInfo strings`, `no YAML for grouped representative`, `grouped into vulnerable rule`).
+When `--skip-generate` is used and no generator log exists yet, the script creates a temporary generator log under the output directory so missing matches can still be classified without rewriting the checked-in rule files.
+The script exits with status `2` if `missing_reason_counts.unknown` is greater than `0`, which makes it suitable for CI.
+
+Manual validation commands (equivalent workflow):
+
+Run these commands from the repository root to confirm malicious-driver rules match malicious samples tracked in `yaml/`.
+
+```sh
+cd /path/to/LOLDrivers
+./.venv/bin/python ./bin/yara-generator/yara-generator.py
+```
+
+Scan all driver samples with both malicious rule sets:
+
+```sh
+yara -r ./detections/yara/yara-rules_mal_drivers.yar ./drivers > /tmp/yara-mal-hits.txt
+yara -r ./detections/yara/other/yara-rules_mal_drivers_strict.yar ./drivers > /tmp/yara-mal-strict-hits.txt
+```
+
+Quick hit counts:
+
+```sh
+wc -l /tmp/yara-mal-hits.txt /tmp/yara-mal-strict-hits.txt
+awk '{print $2}' /tmp/yara-mal-hits.txt | sort -u | wc -l
+awk '{print $2}' /tmp/yara-mal-strict-hits.txt | sort -u | wc -l
+```
+
+Get a full analytics summary (including missing/extra sets with hash-to-file mapping):
+
+```sh
+./.venv/bin/python ./bin/yara-generator/validate-malicious-rules.py --skip-generate --json-output
 ```
 
 ## Example Output
