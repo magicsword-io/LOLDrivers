@@ -19,7 +19,8 @@ Commands:
     processes, through an unauthenticated IOCTL handler.
   Privileges: kernel
   OperatingSystem: Windows 10, Windows 11
-Resources: -https://github.com/The-Sword-of-Constantine/UsingBYOVD
+Resources: 
+- https://github.com/The-Sword-of-Constantine/UsingBYOVD
 KnownVulnerableSamples:
 - Filename: shdrv_x64.sys
   MD5: 4521531a5003be1897a7964481cace4a
