@@ -1,0 +1,52 @@
+Id: 5329911b-bd24-4206-94b2-f844b4c7a708
+Tags:
+    - WinRing0.sys
+    - WinRing0x64.sys
+    - OpenHardwareMonitorLib.sys
+    - TrafficMonitor.sys
+    - ZenStates-Core.sys
+    - WR64.sys
+    - WinRing0x64_Fan.sys
+Author: Jose Manuel Martinez
+Created: '2026-07-18'
+MitreID: T1068
+CVE:
+    - CVE-2020-14979
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+    Command: 'sc.exe create WinRing0 binPath=C:\Windows\Temp\WinRing0.sys type=kernel && sc.exe start WinRing0'
+    Description: 'Create and start the vulnerable WinRing0 kernel driver'
+    Usecase: 'Load a vulnerable kernel driver that exposes arbitrary physical memory read and write capabilities'
+    Privileges: Administrator
+    OperatingSystem: Windows
+Resources:
+    - 'https://nvd.nist.gov/vuln/detail/CVE-2020-14979'
+    - 'https://posts.specterops.io/cve-2020-14979-local-privilege-escalation-in-evga-precisionx1-cf63c6b95896'
+    - 'https://www.evga.com/precisionx1/'
+Acknowledgement:
+    Person: 'SpecterOps'
+    Handle: '@SpecterOps'
+KnownVulnerableSamples:
+-   Filename: WinRing0.sys
+    MD5: 0c0195c48b6b8582fa6f6373032118da
+    SHA1: d25340ae8e92a6d29f599fef426a2bc1b5217299
+    SHA256: 11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5
+    Signature:
+        - 'Noriyuki MIYAZAKI'
+    Date: '2008-07-26 13:29:37 UTC'
+    Publisher: OpenLibSys.org
+    Company: OpenLibSys.org
+    Description: WinRing0
+    Product: WinRing0
+    ProductVersion: 1.2.0.5
+    FileVersion: 1.2.0.5
+    MachineType: AMD64
+    OriginalFilename: WinRing0.sys
+    Authentihash:
+        SHA256: 1b845e5e43ce9e9b645ac198549e81f45c08197aad69708d96cdb9a719eb0e29
+    InternalName: WinRing0.sys
+    Copyright: 'Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.'
+    Imports:
+        - ntoskrnl.exe
+        - HAL.dll
