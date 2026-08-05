@@ -7,7 +7,7 @@ Author: Michael Haag
 Created: '2023-07-22'
 MitreID: T1068
 CVE:
-- ''
+- CVE-2025-52347
 Category: vulnerable driver
 Commands:
   Command: ''
@@ -17,12 +17,13 @@ Commands:
   Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+- https://github.com/floppywiggler/directio64-disclosure
 Detection:
 - type: ''
   value: ''
 Acknowledgement:
-  Handle: ''
-  Person: ''
+  Handle: floppywiggler
+  Person: Emil Sorbroden
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 0c357509adc3c4e42390c50a6a79575d
@@ -208,3 +209,7 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: cef6a450f196b28e634aa3c0655d8eda
   LoadsDespiteHVCI: 'FALSE'
+- Filename: DirectIo64.sys
+  MD5: db6d09b6ea72411f715f3effe1b42ca7
+  SHA1: 8e71859907ea3c2198a0b32a9b6c7b69feb8879a
+  SHA256: b147a26dad59d9109710798b033ec3504a799f02e4356a358d6e32fdf7841b4a
