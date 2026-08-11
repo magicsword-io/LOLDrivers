@@ -7,14 +7,13 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create shdrv binPath=C:\windows\temp\zntport.sys type=kernel &&
-    sc.exe start shdrv
+  Command: sc.exe create zntport binPath=C:\windows\temp\zntport.sys type=kernel &&
+    sc.exe start zntport
   Description: The driver creates a device object named "\\.\zntport" without strict access controls, allowing low-privileged users to interact with it. 
     It exposes an unauthenticated IOCTL control code "0xF10024CC" that accepts an attacker-controlled physical memory address directly from the SystemBuffer. 
     The handler blindly maps this arbitrary physical memory into kernel space via MmMapIoSpace and copies its content, 
     enabling local attackers to perform unauthorized arbitrary physical memory reads.
-  Usecase: Terminate arbitrary processes from kernel mode, including protected security
-    processes, through an unauthenticated IOCTL handler.
+  Usecase: Read arbitrary physical memory to leak sensitive kernel data or bypass security mitigations.
   Privileges: kernel
   OperatingSystem: Windows 10, Windows 11
 Resources:
