@@ -1,0 +1,130 @@
+Id: 8fcec30c-f5ca-4aae-b2d8-77af60b78d42
+Tags:
+- zntport.sys
+Author: Element2023H
+Created: '2026-08-11'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create zntport binPath=C:\windows\temp\zntport.sys type=kernel &&
+    sc.exe start zntport
+  Description: The driver creates a device object named "\\.\zntport" without strict access controls, allowing low-privileged users to interact with it. 
+    It exposes an unauthenticated IOCTL control code "0xF10024CC" that accepts an attacker-controlled physical memory address directly from the SystemBuffer. 
+    The handler blindly maps this arbitrary physical memory into kernel space via MmMapIoSpace and copies its content, 
+    enabling local attackers to perform unauthorized arbitrary physical memory reads.
+  Usecase: Read arbitrary physical memory to leak sensitive kernel data or bypass security mitigations.
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://github.com/The-Sword-of-Constantine/UsingBYOVD
+KnownVulnerableSamples:
+- Filename: zntport.sys
+  MD5: 1e712a45f50b2c7cc235e81fb7e06e8f
+  SHA1: 86025bc313156397b0b5e3864106208898e27218
+  SHA256: c653fe66aeb6170899ad8b405b7550e247490a2366bda828bfa3b2a2dc18fa91
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  CreationTimestamp: '2007-12-22 16:35:56'
+  Company: Zeal SoftStudio
+  Description: NTPort Library kernel driver
+  Product: NTPort Library
+  ProductVersion: 2, 8, 3, 1
+  FileVersion: 2, 8, 3, 1
+  MachineType: AMD64
+  Authentihash:
+    MD5: a8dfc8192b5a589bbcf4c6618135cedd
+    SHA1: 4301542b6e2d0bb05daefc31d0a9559c2b325ef0
+    SHA256: d9a6d18a51bfd4cb1f375590b051ea95f9e2d9090dcda4be51fca6fddaafb598
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - strcpy
+  - MmMapIoSpace
+  - IoRaiseInformationalHardError
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - MmFreeNonCachedMemory
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - MmAllocateNonCachedMemory
+  - IoQueryDeviceDescription
+  - KeBugCheckEx
+  PDBPath: F:\Products\NTPort\Driver\objfre\amd64\zntport.pdb
+  Imphash: 7a6c1efa03e4389d37e651cd32862f47
+  RichPEHeaderHash:
+    MD5: bab7ca9d03f0546edd81ae1a9b85cd52
+    SHA1: 3ae35f55cd52006c8d5cf02622947e49d888386c
+    SHA256: 25b450c68d20191e07f756e2b35dddc1d486a5c8ebef34ea41f1345830d2ae9f
+  Sections:
+    .text:
+      Entropy: 5.36621882244601
+      Virtual Size: '0xdd0'
+    .data:
+      Entropy: 3.1174924611847556
+      Virtual Size: '0x18'
+    .pdata:
+      Entropy: 3.1155849059563336
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 4.460212015669741
+      Virtual Size: '0x1dc'
+    .rsrc:
+      Entropy: 3.3341047618694395
+      Virtual Size: '0x408'
+  MagicHeader: 50 45 0 0
+  InternalName: zntport
+  OriginalFilename: zntport.sys
+  Copyright: Copyright (c)1997-2007 Hai Li, Zeal SoftStudio.
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=09424319, C=TW, ST=T'ai,pei, L=New Taipei, O=CLEVO CO., CN=CLEVO
+        CO.
+      ValidFrom: '2018-08-21 00:00:00'
+      ValidTo: '2021-11-17 12:00:00'
+      Signature: 0d6ff3c3775d78638245067a52811b8d4de62370b8cefcb1323b8304f2445f4c3861bbe76b933ce316478d04af1bc45b578bbdc4fdc7f07148cb716cd7292c4f94133165a9fa7137f9679d45566381783bdd2f38db7a395d9653958a4ce211bd459724571339504e554f31066142a050d71d1134a4e8e07f15f77d44001821a8fbcc195395235845bc0dd0dc6c66f0449292736a44395be9ca15b063863cfbc8d9eb0f9da047fc9156ce272a8924529cd47a8697c681f2742855d726a3871e33fc5c1c698a37c9f389ba91049902a953b1f1fca4179011d49bcd04c26fccefb02b5dfae916ea909dc78430f9a26fb93bd09bb0098dac413e9af4f4f9f478c913
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d91d62ed03dda74e5efe8d70ae793c9
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: c5edda178503ccfbc896cd596dba71ab
+        SHA1: 7df69e18fcb66c69f1b17258919f2976988265bb
+        SHA256: 59091d162fa68b89e157ddf3eb49d6be09a7ae6e16158980a00c7aaf1677ad2c
+        SHA384: e76a77ddcf5addcad9f86979645e26d6c4f191daa6fb58a2c7016082b9ad648081b6b4f73af456843a78f9ed60b74bcb
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 0d91d62ed03dda74e5efe8d70ae793c9
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: Element2023H
