@@ -1,0 +1,31 @@
+title: Driver Load - KKYUM.sys
+id: 2b505fcc-9a7c-5c84-9d74-ac8c4db8f97e
+status: experimental
+description: |
+    Detects loading of driver KKYUM.sys via hash.
+    The driver creates a device object named "\\.\KKYUM" without strict access controls, allowing low-privileged users to interact with it. It exposes unauthenticated IOCTL control codes "0x22265C" (Read) and "0x222658" (Write) that encapsulate the MmCopyVirtualMemory kernel API. The handler accepts a target Process ID (PID) and a structured array of source/destination virtual addresses directly from user space without checking execution privileges, enabling local attackers to perform unauthorized arbitrary process memory reads and writes against any active process.
+references:
+    - https://www.loldrivers.io/drivers/459c39a0-d6bd-4d3e-91ae-a701bb0b3198/
+    - https://github.com/The-Sword-of-Constantine/UsingBYOVD
+author: Element2023H
+date: 2026/08/12
+modified: 2026/08/12
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8516410b49bb79c08c19a37c516dad72'
+            - 'SHA1=4d0708b4a6adee830c30b72add84172fb62fd049'
+            - 'SHA256=72bd55f4459c992b9caa1a33cb6862f1f3085ca35839c58dee8b75db22ca605f'
+            - 'IMPHASH=1f0b3ed19bdad1a668d8bdf3ebeccbab'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

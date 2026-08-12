@@ -10,7 +10,7 @@ references:
     - https://github.com/magicsword-io/LOLDrivers/issues/386
 author: Aaron Walton
 date: 2026/07/10
-modified: 2026/07/10
+modified: 2026/08/12
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -22,14 +22,14 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=e3c123a2ee4720001ed35d45fa1e57eb'
             - 'MD5=96a8b9db2dc9cba8cdf90c7c33fe11c4'
             - 'MD5=2c10be1aea72b7bdf07c735a4ad68876'
-            - 'SHA1=92f5c4fd5791db408fa801fd3d887870691af1f8'
+            - 'MD5=e3c123a2ee4720001ed35d45fa1e57eb'
             - 'SHA1=8b5cf43fba2c2226e6146ee065490dad17acc820'
             - 'SHA1=86c85f4cbc36377d6fdb3f2af7d3049d5174c62c'
-            - 'SHA256=7ee17efef04bb7c9de90d5210263ed6993f867e5a11f86e65e3bb1362c7de237'
+            - 'SHA1=92f5c4fd5791db408fa801fd3d887870691af1f8'
             - 'SHA256=9ca9432b0d29204cb5420a1a6b01533d4552130c2a8a5ecd7837efadefb4a046'
+            - 'SHA256=7ee17efef04bb7c9de90d5210263ed6993f867e5a11f86e65e3bb1362c7de237'
             - 'SHA256=89ba754861e11d9db4440b2b5db61fd5bee16752e4623c4271b8fdd0a666c677'
             - 'IMPHASH=ec4687bc52f296b7dcdfa7967aecbc0c'
             - 'IMPHASH=70988f60e2fd3f3d7776089a737aece5'
