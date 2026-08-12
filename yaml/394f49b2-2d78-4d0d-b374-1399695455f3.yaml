@@ -7,6 +7,7 @@ Created: '2024-08-21'
 MitreID: T1068
 CVE:
 - CVE-2023-21768
+- CVE-2026-68820
 Category: vulnerable driver
 Commands:
   Command: sc.exe create Afd.sys binPath=C:\windows\temp\Afd.sys type=kernel && sc.exe
@@ -19,6 +20,7 @@ Commands:
 Resources:
 - https://securityintelligence.com/x-force/patch-tuesday-exploit-wednesday-pwning-windows-ancillary-function-driver-winsock/
 - https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21768
+- https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/
 Detection: []
 Acknowledgement:
   Person: ''
