@@ -1,0 +1,85 @@
+Id: 84a3007a-de5e-4622-bfc5-f05d927c3618
+Tags:
+- Alinubx.sys
+- nvfsflt64.sys
+Verified: 'TRUE'
+Author: Jose Hernandez
+Created: '2026-08-27'
+MitreID: T1068
+CVE:
+- ''
+Category: vulnerable driver
+Commands:
+  Command: ''
+  Description: Alinubx.sys exposes IOCTL 0x222024 which allows user-mode applications
+    to terminate arbitrary processes from the kernel via ZwTerminateProcess. The IOCTL
+    input buffer expects a structure containing the PID (DWORD) and an exit status
+    code (DWORD). Abused by the Cruciferra MaaS loader to kill AV/EDR processes.
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Terminate AV/EDR processes from kernel mode (BYOVD)
+Resources:
+- https://www.esentire.com/blog/malware-as-a-service-cocktail-errtraffic-and-cruciferra-killing-your-edr-since-2025
+- https://www.virustotal.com/gui/file/611b3ba687b7f46319a19609605ddfe5225e6d85277d8e923eea3fdb6f7b5b61/details
+- https://github.com/magicsword-io/LOLDrivers/issues/412
+- https://x.com/YungBinary/status/2092812095456936172
+Detection:
+- type: ''
+  value: ''
+Acknowledgement:
+  Handle: '@eSentire_TRU'
+  Person: eSentire Threat Response Unit (TRU)
+KnownVulnerableSamples:
+- Filename: Alinubx.sys
+  MD5: 10b3049f4a954665512eca5d24728c89
+  SHA1: 172c5ce3afab6d63fe12a7e036f20271b9d09c13
+  SHA256: 611b3ba687b7f46319a19609605ddfe5225e6d85277d8e923eea3fdb6f7b5b61
+  Authentihash:
+    SHA256: c202e7bb00135434321dad49f6c746b1ea071f6e7400a598438868f660f0e887
+  Imphash: 57a2f40fccb4fb28f3e0fc12f06cf4b2
+  RichPEHeaderHash:
+    MD5: 65e11ac7adedb54f4ce7a324f7ae2a5b
+  CreationTimestamp: '2023-03-24 11:08:33'
+  Date: '12:18 PM 03/24/2023'
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  Company: 河南大风软件有限公司
+  Copyright: ''
+  Description: Alinubx Driver
+  Product: CnCrypt
+  FileVersion: '1.32'
+  OriginalFilename: Alinubx.sys
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  - ksecdd.sys
+  - NDIS.SYS
+  - fwpkclnt.sys
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=Microsoft Windows Hardware Compatibility Publisher
+      ValidFrom: ''
+      ValidTo: ''
+      IsCodeSigning: true
+    Signer:
+    - Issuer: CN=Microsoft Windows Third Party Component CA 2014
+  Sections:
+    .text:
+      Entropy: 6.42
+      Virtual Size: '0x3837d'
+    .rdata:
+      Entropy: 5.14
+      Virtual Size: '0x30d0'
+    .data:
+      Entropy: 1.89
+      Virtual Size: '0xb4f0'
+    .pdata:
+      Entropy: 5.41
+      Virtual Size: '0x20e8'
+    PAGE:
+      Entropy: 6.32
+      Virtual Size: '0x23e8'
