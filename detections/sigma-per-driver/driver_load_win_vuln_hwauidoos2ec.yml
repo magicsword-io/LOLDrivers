@@ -14,7 +14,7 @@ references:
     - https://github.com/magicsword-io/LOLDrivers/issues/377
 author: Michael Haag
 date: 2026/04/17
-modified: 2026/08/12
+modified: 2026/08/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -32,8 +32,8 @@ detection:
             - 'SHA1=1fa071303fb846308571e64727501fb98b1c2be6'
             - 'SHA256=90d2e9e994ed8e964845a26dce741ad43b29ff54cf5faa67271d62d4e24acbc8'
             - 'SHA256=5abe477517f51d81061d2e69a9adebdcda80d36667d0afabe103fda4802d33db'
-            - 'IMPHASH=9cfa9662095195fc2607e952710e62ae'
             - 'IMPHASH=543809105fd767866c03705a39fb25a8'
+            - 'IMPHASH=9cfa9662095195fc2607e952710e62ae'
     condition: selection_hashes
 falsepositives:
     - Unknown

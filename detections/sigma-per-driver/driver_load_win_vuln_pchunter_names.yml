@@ -1,15 +1,15 @@
-title: Driver Load - pchunter.sys
-id: 79ebcb8f-5efe-5d79-9112-93e2f7ff5a7b
+title: Driver Load - PCHunter.sys
+id: 2e785818-50c1-5053-8055-689cfd2fb491
 status: experimental
 description: |
-    Detects loading of driver pchunter.sys via name.
-    Confirmed vulnerable driver from Microsoft Block List
+    Detects loading of driver PCHunter.sys via name.
+    Epoolsoft Windows Information View Tools
 references:
-    - https://www.loldrivers.io/drivers/73290fcb-a0d7-481e-81a5-65a9859b50f5/
-    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+    - https://www.loldrivers.io/drivers/a261cd64-0d04-4bf5-ad73-f3bb96bf83cf/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 author: Michael Haag
-date: 2023/07/22
-modified: 2026/08/12
+date: 2023/01/09
+modified: 2026/08/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

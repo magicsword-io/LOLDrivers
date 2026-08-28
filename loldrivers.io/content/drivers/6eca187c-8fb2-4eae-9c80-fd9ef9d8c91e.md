@@ -244,7 +244,7 @@ acpi.exe
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/6eca187c-8fb2-4eae-9c80-fd9ef9d8c91e.yaml)
 
-*last_updated:* 2026-08-12
+*last_updated:* 2026-08-28
 
 {{< /column >}}
 {{< /block >}}
