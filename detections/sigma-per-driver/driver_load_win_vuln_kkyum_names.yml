@@ -1,0 +1,28 @@
+title: Driver Load - KKYUM.sys
+id: b861a061-5193-5283-8381-1b9b55addd10
+status: experimental
+description: |
+    Detects loading of driver KKYUM.sys via name.
+    The driver creates a device object named "\\.\KKYUM" without strict access controls, allowing low-privileged users to interact with it. It exposes unauthenticated IOCTL control codes "0x22265C" (Read) and "0x222658" (Write) that encapsulate the MmCopyVirtualMemory kernel API. The handler accepts a target Process ID (PID) and a structured array of source/destination virtual addresses directly from user space without checking execution privileges, enabling local attackers to perform unauthorized arbitrary process memory reads and writes against any active process.
+references:
+    - https://www.loldrivers.io/drivers/459c39a0-d6bd-4d3e-91ae-a701bb0b3198/
+    - https://github.com/The-Sword-of-Constantine/UsingBYOVD
+author: Element2023H
+date: 2026/08/12
+modified: 2026/08/28
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kkyum.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

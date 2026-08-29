@@ -17,7 +17,7 @@ references:
     - https://github.com/svespalec/TowerOfFlaws
 author: Michael Haag
 date: 2026/06/16
-modified: 2026/07/10
+modified: 2026/08/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -29,39 +29,39 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=9a1cd3071888ba68fb131f36bcc000e9'
-            - 'MD5=ff3351f67270b2021937cb8a54af3d25'
             - 'MD5=cb34be5126520f4c402be3c6f09e11cf'
-            - 'MD5=af036499a90e70e9ec4121ac4da9f5e2'
-            - 'MD5=e1787057703c662e07f022f1bd67d008'
-            - 'MD5=1f06e06a9e64bad05ba9cccfffa92421'
             - 'MD5=8f0577d28c4ff5f71b149f444bfaba8e'
-            - 'MD5=0d9bbed76c17b954ec9120bdfb144ec9'
-            - 'MD5=3b1c40c32b92696d192d846ab4ca2b45'
             - 'MD5=3d2a9d56b16831b18de4b4dfd26603c9'
-            - 'SHA1=7edbc5d18449fabd1ac214fa3959ea5a9e330a12'
-            - 'SHA1=7556ae58c215b8245a43f764f0676c7a8f0fdd1a'
-            - 'SHA1=debcc23345afe4ffe858749b3f7e287c00a185bc'
-            - 'SHA1=0d4f0196e0ed8c5c346f9c612ea2847215483a66'
-            - 'SHA1=6fa02c7d563be45d0f615c3c170ce2b425629d6c'
-            - 'SHA1=6bdfd00b7bdb8e24f413bd369058b49a84a98f20'
-            - 'SHA1=de6da17f92c669f1466f2a5947a054aa4c6ec04c'
+            - 'MD5=e1787057703c662e07f022f1bd67d008'
+            - 'MD5=ff3351f67270b2021937cb8a54af3d25'
+            - 'MD5=0d9bbed76c17b954ec9120bdfb144ec9'
+            - 'MD5=af036499a90e70e9ec4121ac4da9f5e2'
+            - 'MD5=1f06e06a9e64bad05ba9cccfffa92421'
+            - 'MD5=9a1cd3071888ba68fb131f36bcc000e9'
+            - 'MD5=3b1c40c32b92696d192d846ab4ca2b45'
             - 'SHA1=30f08056ec1228cb78a4e1f267566919bae6b269'
+            - 'SHA1=7edbc5d18449fabd1ac214fa3959ea5a9e330a12'
+            - 'SHA1=de6da17f92c669f1466f2a5947a054aa4c6ec04c'
+            - 'SHA1=7556ae58c215b8245a43f764f0676c7a8f0fdd1a'
+            - 'SHA1=6bdfd00b7bdb8e24f413bd369058b49a84a98f20'
+            - 'SHA1=6fa02c7d563be45d0f615c3c170ce2b425629d6c'
             - 'SHA1=edf005b78104c208d05d2ea01fe747a8b8999bb9'
             - 'SHA1=1b648ce9b743bf2d9c8da10143f4995ffd055b50'
-            - 'SHA256=9d396b83647f5233cd93f47caa05e0a0d0dd5dd2f17ba2b0ae5cd1afc0afa69d'
-            - 'SHA256=c0db95a62e50f3a2c757ac264534ef17340bf8b8aa94b98fcb7663c493b2d569'
-            - 'SHA256=4ea893c2da9f60590c6223b3c71b13e071d5f700cc3b93f4508b90187ef6091a'
-            - 'SHA256=ca22e593362a8fa4f728e83f6861f983373f61480d0384e26ed149e507706d6a'
+            - 'SHA1=0d4f0196e0ed8c5c346f9c612ea2847215483a66'
+            - 'SHA1=debcc23345afe4ffe858749b3f7e287c00a185bc'
             - 'SHA256=9ddae47ff968343a8c32a5344060257fdc08e2a7bdb9a227c8b3a584ee3c9f1e'
             - 'SHA256=e55bfbb979143c6d1bc97129c9b5663639b895f1db605cef578b7f06633c08f6'
             - 'SHA256=2005e9afa51b7918dd1d0143d181641529c488e945fc6bfe1db48805aabdedb3'
+            - 'SHA256=f90cab0c3b8159162be3103fcca5bafc27fbf4ec24620900acedaf84b7c0cf30'
+            - 'SHA256=c0db95a62e50f3a2c757ac264534ef17340bf8b8aa94b98fcb7663c493b2d569'
             - 'SHA256=b6628d201c2a68d2a3de2a87de7a5acfe21b101a97928e1c8d5c82102d967383'
             - 'SHA256=fd08ac95226585436c03b01745c608035bfb15a3a832135589a049cb243cefd9'
-            - 'SHA256=f90cab0c3b8159162be3103fcca5bafc27fbf4ec24620900acedaf84b7c0cf30'
+            - 'SHA256=9d396b83647f5233cd93f47caa05e0a0d0dd5dd2f17ba2b0ae5cd1afc0afa69d'
+            - 'SHA256=4ea893c2da9f60590c6223b3c71b13e071d5f700cc3b93f4508b90187ef6091a'
+            - 'SHA256=ca22e593362a8fa4f728e83f6861f983373f61480d0384e26ed149e507706d6a'
             - 'IMPHASH=3ce472198cabef134ebbd7e847218cf4'
-            - 'IMPHASH=2a4da7c8a269c324f92513f358167269'
             - 'IMPHASH=b615e95f5fb9f4b26a7d238fcdd00e79'
+            - 'IMPHASH=2a4da7c8a269c324f92513f358167269'
     condition: selection_hashes
 falsepositives:
     - Unknown

@@ -1,15 +1,15 @@
-title: Driver Load - pchunter.sys
-id: 1f464556-867a-5e11-bce1-7ab6b47c0860
+title: Driver Load - PCHunter.sys
+id: 223b1060-64d9-5000-bcdc-3390397a3bf7
 status: experimental
 description: |
-    Detects loading of driver pchunter.sys via hash.
-    Confirmed vulnerable driver from Microsoft Block List
+    Detects loading of driver PCHunter.sys via hash.
+    Epoolsoft Windows Information View Tools
 references:
-    - https://www.loldrivers.io/drivers/73290fcb-a0d7-481e-81a5-65a9859b50f5/
-    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+    - https://www.loldrivers.io/drivers/a261cd64-0d04-4bf5-ad73-f3bb96bf83cf/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 author: Michael Haag
-date: 2023/07/22
-modified: 2026/07/10
+date: 2023/01/09
+modified: 2026/08/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -21,10 +21,10 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=366bd312aad96a7eb4912688b9e8d268'
-            - 'SHA1=8d15036ef8dd0d79d89cc7b02920bd073849a381'
-            - 'SHA256=3f20ac5dac9171857fc5791865458fdb6eac4fab837d7eabc42cb0a83cb522fc'
-            - 'IMPHASH=c56dbf2e72704141d7b2279a64c54621'
+            - 'MD5=c2c1b8c00b99e913d992a870ed478a24'
+            - 'SHA1=a64354aac2d68b4fa74b5829a9d42d90d83b040c'
+            - 'SHA256=1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa'
+            - 'IMPHASH=f510a429c6ce5c8d414550518b3823d2'
     condition: selection_hashes
 falsepositives:
     - Unknown

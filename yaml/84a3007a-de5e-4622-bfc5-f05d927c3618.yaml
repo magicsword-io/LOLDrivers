@@ -1,0 +1,377 @@
+Id: 84a3007a-de5e-4622-bfc5-f05d927c3618
+Tags:
+- Alinubx.sys
+- nvfsflt64.sys
+Verified: 'TRUE'
+Author: Jose Hernandez
+Created: '2026-08-27'
+MitreID: T1068
+CVE:
+- ''
+Category: vulnerable driver
+Commands:
+  Command: ''
+  Description: Alinubx.sys exposes IOCTL 0x222024 which allows user-mode applications
+    to terminate arbitrary processes from the kernel via ZwTerminateProcess. The IOCTL
+    input buffer expects a structure containing the PID (DWORD) and an exit status
+    code (DWORD). Abused by the Cruciferra MaaS loader to kill AV/EDR processes.
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Terminate AV/EDR processes from kernel mode (BYOVD)
+Resources:
+- https://www.esentire.com/blog/malware-as-a-service-cocktail-errtraffic-and-cruciferra-killing-your-edr-since-2025
+- https://github.com/magicsword-io/LOLDrivers/issues/412
+- https://x.com/YungBinary/status/2092812095456936172
+Detection:
+- type: ''
+  value: ''
+Acknowledgement:
+  Handle: '@eSentire_TRU'
+  Person: eSentire Threat Response Unit (TRU)
+KnownVulnerableSamples:
+- Filename: Alinubx.sys
+  MD5: 10b3049f4a954665512eca5d24728c89
+  SHA1: 172c5ce3afab6d63fe12a7e036f20271b9d09c13
+  SHA256: 611b3ba687b7f46319a19609605ddfe5225e6d85277d8e923eea3fdb6f7b5b61
+  Authentihash:
+    MD5: 207e7aaa3c30c8dffeb20fd8f3b72852
+    SHA1: 1cbb8931e81f662af15b71db621d78d7988fe704
+    SHA256: c202e7bb00135434321dad49f6c746b1ea071f6e7400a598438868f660f0e887
+  Imphash: 57a2f40fccb4fb28f3e0fc12f06cf4b2
+  RichPEHeaderHash:
+    MD5: 65e11ac7adedb54f4ce7a324f7ae2a5b
+    SHA1: e608e549ca9c3fc44c31dcd38561b0b035eb7b75
+    SHA256: ed10715fb9768cbe7f171a8d633022bd64d380f746ceaead60a263c5ed5ba8f7
+  CreationTimestamp: '2023-03-24 05:08:33'
+  Date: 12:18 PM 03/24/2023
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  Company: CnCrypt Foundation
+  Copyright: ''
+  Description: Alinubx Driver
+  Product: CnCrypt
+  FileVersion: '1.32'
+  OriginalFilename: Alinubx.sys
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  - ksecdd.sys
+  - NDIS.SYS
+  - fwpkclnt.sys
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2022-06-07 18:08:05'
+      ValidTo: '2023-06-01 18:08:05'
+      Signature: 0915e1bc394d6afd2453e27c2cb0907bb3a569ca2f39bc8e430a355013bd29a2aa0f8d724499e05b94f919195e917a198a754a790c8f4f49ebeea699d62e4b97b18055d6872b13e5c3866e8617fafb65a59cf0c463f75b45f870595677ecdda4ae3562b0f4a30d09626cef7f4e20e77385bd4e4db94fc77088d698236e92e1440cef351a1f3bff256df13c1a14b5c6787dad23e1e28d4148b69b3a92fe692bed7db3feb760db45fe1700983b834ab7805ba6105fdf94d5e0833679fae2fc051d745c6fab49c8aa9044d92da8c26fe7c87a9268bd1211117298b391752c08f98ffaa3731bbca891a83a0bdb9d94546d1bab380ade386213b3833327f48b9ff29971732bfe5810b51569da90676b459f8f6341ef9ff11f96f44f58181ef7ffe3ff19ba7874ad2e8c4faa9f8d1c5cd698bbdab1658f5f234f64a0063ecaa346f16e58690dea8c52e02733560027155457863b38775e24f30176cadd0d2738b4d90f2e4f688e25bc908a5fb1057be8372e58dc7c018b4663588fb1ab36855c09e54924951cff3b29810339efca415995a577e7db9d8b43c79b0bcb888b3647c7b28b9599bf0cbc7683e0e68c610d0071e79a3f1b4160dcfcb3002478ccc6bbf0c6dd27893169825f7b50356e01ea77aeae1b534d8c8801eda6bc60682a7b3a78b8b74eddb75044a789e7c4fd8f27ac8050196a7b1de4b5ac2e2b268c568534f75ca9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 330000005635887ede1882ef76000000000056
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b2247e5539fb97f429f20b17b38c4bcb
+        SHA1: a3b745afc365e9ddf6abdb2f52f76f1714c0461c
+        SHA256: e0c84b42e07e8f56ed8dcd2103e98cd43816cf2e05a27b8ff09fdccccfbcffaa
+        SHA384: 70e84fe31ec8f61d70755ec61ba53db7741610d7348247c97796147dcaa77a55bc3887cedf16eb0a2f32867670d007c1
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 330000005635887ede1882ef76000000000056
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+  Sections:
+    .text:
+      Entropy: 6.425748426163659
+      Virtual Size: '0x3837d'
+    .rdata:
+      Entropy: 5.225851534532288
+      Virtual Size: '0x30d0'
+    .data:
+      Entropy: 1.889525297232436
+      Virtual Size: '0xb4f0'
+    .pdata:
+      Entropy: 5.529801228792628
+      Virtual Size: '0x20e8'
+    PAGE:
+      Entropy: 6.32945823837949
+      Virtual Size: '0x23e8'
+    INIT:
+      Entropy: 5.9160723075063
+      Virtual Size: '0x28ac'
+    .rsrc:
+      Entropy: 3.1585031139600117
+      Virtual Size: '0x2d0'
+    .reloc:
+      Entropy: 1.8525569859993862
+      Virtual Size: '0x426'
+  InternalName: ''
+  ProductVersion: '1.32'
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlAppendUnicodeToString
+  - _wcsicmp
+  - ZwQuerySystemInformation
+  - ZwQueryInformationProcess
+  - PsGetCurrentProcessId
+  - ZwTerminateProcess
+  - ObOpenObjectByPointer
+  - PsGetCurrentProcessWow64Process
+  - PsWrapApcWow64Thread
+  - KeInitializeApc
+  - KeInsertQueueApc
+  - PsGetThreadTeb
+  - ZwWaitForSingleObject
+  - IoGetCurrentProcess
+  - ZwFreeVirtualMemory
+  - PsIsThreadTerminating
+  - PsGetCurrentThreadId
+  - KeTestAlertThread
+  - ZwQueryInformationThread
+  - PsLookupThreadByThreadId
+  - PsGetProcessWow64Process
+  - ZwAllocateVirtualMemory
+  - RtlAppendUnicodeStringToString
+  - RtlImageNtHeader
+  - isspace
+  - tolower
+  - isdigit
+  - RtlCopyUnicodeString
+  - ZwQueryValueKey
+  - ZwOpenKey
+  - ExAllocatePool
+  - isprint
+  - MmUnmapLockedPages
+  - MmProtectMdlSystemAddress
+  - _strlwr
+  - MmGetSystemRoutineAddress
+  - RtlPrefixUnicodeString
+  - ZwDeleteFile
+  - ZwWriteFile
+  - _snwprintf
+  - swprintf
+  - wcsstr
+  - ZwEnumerateValueKey
+  - IoGetDeviceProperty
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - IoFileObjectType
+  - RtlQueryRegistryValues
+  - KeStackAttachProcess
+  - RtlWriteRegistryValue
+  - RtlUnicodeStringToInteger
+  - RtlCreateRegistryKey
+  - PsProcessType
+  - PsThreadType
+  - ZwCreateKey
+  - ZwDeleteValueKey
+  - ZwSetValueKey
+  - wcsncat
+  - ObQueryNameString
+  - ZwDeleteKey
+  - IoCreateFile
+  - ExInterlockedInsertHeadList
+  - memchr
+  - RtlGetVersion
+  - KeSetTimerEx
+  - KeQueryTimeIncrement
+  - KeInitializeTimerEx
+  - IoAcquireRemoveLockEx
+  - IoDeleteSymbolicLink
+  - IoRegisterShutdownNotification
+  - IoDeleteDevice
+  - IoReleaseRemoveLockEx
+  - IofCompleteRequest
+  - IoReleaseRemoveLockAndWaitEx
+  - IoCreateSymbolicLink
+  - IoInitializeRemoveLockEx
+  - IoCreateDevice
+  - ExAllocatePoolWithQuotaTag
+  - IoCreateNotificationEvent
+  - KdDebuggerEnabled
+  - KdDisableDebugger
+  - RtlRandomEx
+  - IoGetDeviceObjectPointer
+  - ExGetPreviousMode
+  - RtlIntegerToUnicodeString
+  - DbgPrintEx
+  - wcschr
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - IoGetDeviceAttachmentBaseRef
+  - ExInitializeNPagedLookasideList
+  - ExDeleteNPagedLookasideList
+  - KeBugCheckEx
+  - PsGetProcessId
+  - PsInitialSystemProcess
+  - KeDelayExecutionThread
+  - KeUnstackDetachProcess
+  - LsaFreeReturnBuffer
+  - PsReferencePrimaryToken
+  - PsLookupProcessByProcessId
+  - PsGetProcessPeb
+  - ExQueueWorkItem
+  - ZwQueryInformationFile
+  - ZwReadFile
+  - MmIsAddressValid
+  - PsSetLoadImageNotifyRoutine
+  - ObfReferenceObject
+  - NtBuildNumber
+  - MmUnlockPages
+  - KeReleaseMutex
+  - KeInitializeMutex
+  - KeResetEvent
+  - IoReuseIrp
+  - RtlFreeUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - strncpy
+  - strncmp
+  - RtlFreeAnsiString
+  - RtlUnicodeStringToAnsiString
+  - atoi
+  - RtlInitAnsiString
+  - strchr
+  - strstr
+  - ExDeleteLookasideListEx
+  - SeQueryAuthenticationIdToken
+  - ExInitializeLookasideListEx
+  - ExInterlockedRemoveHeadList
+  - ExQueryDepthSList
+  - ExInterlockedInsertTailList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - wcsncpy
+  - sprintf
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - _stricmp
+  - _snprintf
+  - _strnicmp
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - PsTerminateSystemThread
+  - KeClearEvent
+  - ObfDereferenceObject
+  - PsCreateSystemThread
+  - KeAcquireInStackQueuedSpinLock
+  - KeReleaseInStackQueuedSpinLock
+  - IofCallDriver
+  - IoAllocateMdl
+  - IoAllocateIrp
+  - MmProbeAndLockPages
+  - IoFreeIrp
+  - KeWaitForSingleObject
+  - ObReferenceObjectByHandle
+  - ZwClose
+  - ZwCreateFile
+  - IoFreeMdl
+  - KeInitializeEvent
+  - KeSetEvent
+  - IoBuildDeviceIoControlRequest
+  - strrchr
+  - PsGetVersion
+  - RtlTimeToTimeFields
+  - _vsnwprintf
+  - ExSystemTimeToLocalTime
+  - RtlInitUnicodeString
+  - _wcsnicmp
+  - ExFreePoolWithTag
+  - IoGetTransactionParameterBlock
+  - ExAllocatePoolWithTag
+  - __C_specific_handler
+  - RtlRaiseException
+  - FltFreeCallbackData
+  - FltSetCallbackDataDirty
+  - FltCreateFile
+  - FltClose
+  - FltPerformSynchronousIo
+  - FltAllocateCallbackData
+  - FltCheckAndGrowNameControl
+  - FltGetFileNameInformationUnsafe
+  - FltGetDiskDeviceObject
+  - FltReleaseContext
+  - FltCreateFileEx2
+  - FltAllocateContext
+  - FltGetFileNameInformation
+  - FltUnregisterFilter
+  - FltGetRoutineAddress
+  - FltGetVolumeName
+  - FltRegisterFilter
+  - FltReleaseFileNameInformation
+  - FltStartFiltering
+  - FltSetVolumeContext
+  - FltGetStreamHandleContext
+  - FltGetVolumeContext
+  - FltSetStreamHandleContext
+  - FltLockUserBuffer
+  - FltGetDestinationFileNameInformation
+  - FltDoCompletionProcessingWhenSafe
+  - FltParseFileNameInformation
+  - FltReadFile
+  - FltCreateFileEx
+  - FltQueryInformationFile
+  - GetSecurityUserInfo
+  - NdisFreeNetBufferListPool
+  - NdisGetDataBuffer
+  - NdisRetreatNetBufferDataStart
+  - NdisAdvanceNetBufferDataStart
+  - NdisAllocateGenericObject
+  - NdisFreeNetBufferPool
+  - NdisAllocateNetBufferPool
+  - NdisAllocateNetBufferListPool
+  - NdisFreeGenericObject
+  - FwpmFreeMemory0
+  - FwpmEngineClose0
+  - FwpmTransactionBegin0
+  - FwpsCalloutRegister1
+  - FwpmFilterAdd0
+  - FwpmEngineOpen0
+  - FwpmTransactionAbort0
+  - FwpmCalloutGetByKey0
+  - FwpmCalloutAdd0
+  - FwpmTransactionCommit0
+  - FwpsInjectionHandleCreate0
+  - FwpsInjectionHandleDestroy0
+  - FwpmSubLayerAdd0
+  - FwpsCalloutUnregisterById0
+  - FwpsReleaseClassifyHandle0
+  - FwpsAcquireClassifyHandle0
+  - FwpsAllocateCloneNetBufferList0
+  - FwpsInjectNetworkSendAsync0
+  - FwpsQueryPacketInjectionState0
+  - FwpsFreeCloneNetBufferList0
+  - FwpsInjectNetworkReceiveAsync0
+  - FwpsApplyModifiedLayerData0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsFreeNetBufferList0
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpsReferenceNetBufferList0
+  - FwpsDereferenceNetBufferList0
+  - FwpmSubLayerDeleteByKey0
+  - FwpsFlowRemoveContext0
+  - FwpsFlowAssociateContext0
+  - FwpsStreamInjectAsync0
+  - FwpsCopyStreamDataToBuffer0

@@ -1,0 +1,29 @@
+title: Driver Load - DCRCVDrv.sys
+id: 3470572c-2bda-5f31-95cb-b9863d251aed
+status: experimental
+description: |
+    Detects loading of driver DCRCVDrv.sys via name.
+    DCRCVDrv.sys exposes IOCTL 0x2205C0 which allows user-mode applications to terminate arbitrary processes from the kernel via ZwTerminateProcess. The IOCTL input buffer contains the PID to terminate. Abused by the Cruciferra MaaS loader, which writes the driver to C:\Windows\Temp\DCRCVDrv.sys, creates a service for it, and opens a handle via the symbolic link \\.\DCRCVDRV_U to kill AV/EDR processes.
+references:
+    - https://www.loldrivers.io/drivers/89643454-e38b-41cb-853d-abf649a104a5/
+    - https://www.esentire.com/blog/malware-as-a-service-cocktail-errtraffic-and-cruciferra-killing-your-edr-since-2025
+    - https://github.com/magicsword-io/LOLDrivers/issues/412
+author: Jose Hernandez
+date: 2026/08/27
+modified: 2026/08/28
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dcrcvdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

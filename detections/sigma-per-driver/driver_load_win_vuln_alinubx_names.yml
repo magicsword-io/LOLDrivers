@@ -1,0 +1,30 @@
+title: Driver Load - Alinubx.sys
+id: 72075576-6842-5170-85d5-dd2bd9e17b54
+status: experimental
+description: |
+    Detects loading of driver Alinubx.sys via name.
+    Alinubx.sys exposes IOCTL 0x222024 which allows user-mode applications to terminate arbitrary processes from the kernel via ZwTerminateProcess. The IOCTL input buffer expects a structure containing the PID (DWORD) and an exit status code (DWORD). Abused by the Cruciferra MaaS loader to kill AV/EDR processes.
+references:
+    - https://www.loldrivers.io/drivers/84a3007a-de5e-4622-bfc5-f05d927c3618/
+    - https://www.esentire.com/blog/malware-as-a-service-cocktail-errtraffic-and-cruciferra-killing-your-edr-since-2025
+    - https://github.com/magicsword-io/LOLDrivers/issues/412
+    - https://x.com/YungBinary/status/2092812095456936172
+author: Jose Hernandez
+date: 2026/08/27
+modified: 2026/08/28
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\alinubx.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
