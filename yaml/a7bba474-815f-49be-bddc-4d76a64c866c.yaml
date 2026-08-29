@@ -15,6 +15,9 @@ Commands:
   Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
+- https://github.com/Haider303/trinity-lpe
+- https://medium.com/@haider303mustafa/fastdump-sys-citmdrv-sys-567f57e9cd20
+- https://github.com/magicsword-io/LOLDrivers/issues/394
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/09bedbf7a41e0f8dabe4f41d331db58373ce15b2e9204540873a1884f38bdde1.yara
