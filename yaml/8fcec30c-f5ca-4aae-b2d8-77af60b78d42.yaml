@@ -7,25 +7,31 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create zntport binPath=C:\windows\temp\zntport.sys type=kernel &&
-    sc.exe start zntport
-  Description: The driver creates a device object named "\\.\zntport" without strict access controls, allowing low-privileged users to interact with it. 
-    It exposes an unauthenticated IOCTL control code "0xF10024CC" that accepts an attacker-controlled physical memory address directly from the SystemBuffer. 
-    The handler blindly maps this arbitrary physical memory into kernel space via MmMapIoSpace and copies its content, 
-    enabling local attackers to perform unauthorized arbitrary physical memory reads.
-  Usecase: Read arbitrary physical memory to leak sensitive kernel data or bypass security mitigations.
-  Privileges: kernel
-  OperatingSystem: Windows 10, Windows 11
+  Command: sc.exe create zntport binPath= C:\windows\temp\zntport.sys type= kernel
+    && sc.exe start zntport
+  Description: The legacy NTPort driver creates the "\\.\zntport" device and exposes
+    IOCTL 0xF10024CC with FILE_ANY_ACCESS. The handler accepts a caller-controlled
+    32-bit physical address, maps 0x32 bytes below 4 GiB with MmMapIoSpace, and copies
+    data through an unchecked strcpy operation. After an administrator installs the
+    driver, an unprivileged process may be able to abuse the device for physical-memory
+    disclosure or memory corruption, depending on the device ACL.
+  Usecase: Read physical memory below 4 GiB or trigger memory corruption through the
+    unchecked copy operation.
+  Privileges: Administrator required to install; device access may be available to
+    unprivileged users after installation
+  OperatingSystem: Windows NT, Windows 2000, Windows XP, Windows Server 2003, Windows
+    Vista
 Resources:
-- https://github.com/The-Sword-of-Constantine/UsingBYOVD
+- https://github.com/The-Sword-of-Constantine/UsingBYOVD/blob/master/RawDriverFiles/zntport.sys
+- https://www.zealsoftstudio.com/ntport/portfaq.html
 KnownVulnerableSamples:
 - Filename: zntport.sys
   MD5: 1e712a45f50b2c7cc235e81fb7e06e8f
   SHA1: 86025bc313156397b0b5e3864106208898e27218
   SHA256: c653fe66aeb6170899ad8b405b7550e247490a2366bda828bfa3b2a2dc18fa91
   Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  CreationTimestamp: '2007-12-22 16:35:56'
+  - CLEVO CO.
+  CreationTimestamp: '2007-12-22 01:35:56'
   Company: Zeal SoftStudio
   Description: NTPort Library kernel driver
   Product: NTPort Library
