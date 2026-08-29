@@ -1,6 +1,20 @@
 Id: 9eb0156e-4c43-487f-be8c-40a7b19a4279
 Tags:
 - ardrv.sys
+- ardrv_1.sys
+- ardrv_2.sys
+- ardrv_3.sys
+- ardrv_4.sys
+- ardrv_6.sys
+- ardrv_7.sys
+- ardrv_8.sys
+- ardrv_9.sys
+- ardrv_10.sys
+- ardrv_11.sys
+- ardrv_13.sys
+- ardrv_14.sys
+- ardrv_15.sys
+- ardrv_16.sys
 Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-06-19'
@@ -9,8 +23,8 @@ CVE:
 - CVE-2026-36425
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create ardrv binPath=C:\windows\temp\ardrv.sys type=kernel && sc.exe
-    start ardrv
+  Command: sc.exe create ardrv binPath= C:\windows\temp\ardrv.sys type= kernel &&
+    sc.exe start ardrv
   Description: OPSWAT AppRemover ardrv.sys version 2017.10.02.1551 and earlier exposes
     a user-accessible \\.\ardrv device. Public research documents IOCTL 0x2420031
     reaching process-termination paths, including ZwTerminateProcess, without sufficient
@@ -23,11 +37,12 @@ Commands:
   OperatingSystem: Windows 10, Windows 11
 Resources:
 - https://github.com/redteamfortress/CVE-2026-36425
+- https://github.com/redteamfortress/CVE-2026-36425/tree/main/Drivers
 - https://github.com/magicsword-io/LOLDrivers/issues/374
 Detection: []
 Acknowledgement:
-  Person: Jehad Abudagga, wwwab
-  Handle: '@j3h4ck, @wwwab123'
+  Person: Jehad Abudagga, wwwab, Jose Manuel Martinez
+  Handle: '@j3h4ck, @wwwab123, @josemmm11-eng'
 KnownVulnerableSamples:
 - Filename: ardrv.sys
   MD5: 826c6d2e3d80f2d43f7977f998525ad3
@@ -199,6 +214,2422 @@ KnownVulnerableSamples:
         SHA384: 3cba4aa32bfb91c8eedf6933c3e6e9dcc5a11b257fe2f71f790f2cd3db65a7e6cd865ef3e1b31b82af4a328433a4a663
     Signer:
     - SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_1.sys
+  SHA256: 0b4c5a2d24810748de8ce6fb3d6a3e8acd0305272d6425fa054632410d23ec80
+  MD5: 099b1f700fbe9d6cebe21e6edd24ba80
+  SHA1: 70b09d5ae1b0e6c5cb2e05e2587f11baba8d2292
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 429e22f2a8d076f0374c83717958cd24
+    SHA1: cd45e04ef4d008f9c39fa744048b741a16aa9e74
+    SHA256: 0a06c3ad018bf9756293d858418493f66ca807f67b9a42e72b96276a96bcbe7d
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.044702346328131
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.329441317403935
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2017-11-21 12:12:00'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2017.11.21.1111
+  Product: AppRemover Driver
+  ProductVersion: 4.3.4.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2015-06-02 00:00:00'
+      ValidTo: '2018-08-31 23:59:59'
+      Signature: 00b224b0896ac046b130e7a9af612e0c92ce6fa6f465ae4b5dc422432d880c3ef15357c56c0db528c8ca2055263c8a3857988ce32dcc13e1578b0493d6dec39d734547eef1e37a3ac334ba5979ae0b5ab7b2c8d75323076d8cd50b68fbb8c5e47e95d359b9a4be08ba4ada34eb70f4a27ed9b4d285e285c338d19f2ef15321301b9337bfa3549e16a189aa28af9e96bff5c1b083a57e89259c9a369f72dc312db3a04334a099006c54279a7ca199b2c94a79f198def484fbf7cb8f9d8cd6df8bcf97c33c79991ed92ac2080db67741aabfa7bc41fd426fc06f2c5f0594471245777401d169c91355784699b8f1b61eb857835083c4755b8244774b231fd19610
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 222b2be1297ccd28fe05de06d1d9254f
+        SHA1: 47a67d8afd2c756e021a6547e66e4928ba32f53a
+        SHA256: 1eb2656b465452860774b29579998a45ffe61caebf4e77dc4fbf1bbdffb41340
+        SHA384: 3cba4aa32bfb91c8eedf6933c3e6e9dcc5a11b257fe2f71f790f2cd3db65a7e6cd865ef3e1b31b82af4a328433a4a663
+    Signer:
+    - SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_2.sys
+  SHA256: 1c5129b4d63f2d5252b5b02a0a7d655dac3b6eac23dd4ed92b4dd55f243387ff
+  MD5: 75f0123d41e16a14f98c47a2d40bce68
+  SHA1: de016290d02e6fb438950da38311c0309909e67c
+  Imphash: a7bb9c93850e96a3893e41efd0986b3b
+  Authentihash:
+    MD5: f39442348d960f6a96ef23da92e7da29
+    SHA1: 747ac325a69b19ff8e552657b5fb249c7e40d541
+    SHA256: 9fe018578f9b53dc5cfff659974a69351e630f17a078210f7b71c4026c43aaaf
+  RichPEHeaderHash:
+    MD5: d0f47ac3d9eabe6d0c43786b26d15ccc
+    SHA1: 9fae5d824d54f79e3c720ee7d7068015fc18c005
+    SHA256: 9abacf8be1d1d649634c338e5f3b499d90b76316ac33a900dbfa10b3043c5364
+  Sections:
+    .text:
+      Entropy: 6.05746242066814
+      Virtual Size: '0x12b4'
+    .rdata:
+      Entropy: 4.012255743665952
+      Virtual Size: '0x264'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.684580548402959
+      Virtual Size: '0xcc'
+    INIT:
+      Entropy: 5.114759378529217
+      Virtual Size: '0x4b0'
+    .rsrc:
+      Entropy: 3.337054650332837
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-10-22 07:58:45'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2019.10.22.0658
+  Product: AppRemover Driver
+  ProductVersion: 4.3.37.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - _wcsicmp
+  - MmGetSystemRoutineAddress
+  - RtlGetVersion
+  - CmUnRegisterCallback
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2018-07-17 00:00:00'
+      ValidTo: '2021-09-01 23:59:59'
+      Signature: 47480379338b7d293852209e8541135253cd84f00ef21600969b2272533eae42274196c044ad7a7dd12a1cb49e8e51f05b56e7c4d9a54418ea9bf548a7acebdc6f945541100dc916b82ee6694c9d564371c00f4a06294c852163609c88234e2c8f105f8cf8a3e0bce5cffe6d2edf253069afc0eb1f867b0311173912d488ce1d43558bc9ff5f7e21660682b3ddb6e3a71f797ecb2bf809cab45e1f8f8e12309cea1619af670d1b1df339a601675c881c897b383e8dc88dc079eed51c9dd59fd83be24d4b021915e6583b761025b10cf0d58e6e53466f6de4380872d51fb248bb6493ae229c05f9c97b93669b1c9687f77494ac97ce7fd50eafdae776aeca9013
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 91e929d451a9dbc7dda914de6410cf45
+        SHA1: 5fbf2980c2a64984a843a13fa7665f42a025d19b
+        SHA256: bf46d33c8f992fbc6e4e0bef411c9ff96ffb4a574555a87be2381a30f46b10e1
+        SHA384: 4166d3ac6d95c33a38ecf7c8833a064f4eb04f3ca03b8561259579ec5bba223866fd4870672d7a04030b9c0fc94460f8
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_3.sys
+  SHA256: 4d07b6423f4d5d80d2daec8faed7ecc40855339bee95c26289179c1fd083078e
+  MD5: a21bc9c04bd840d655bfcd274cc84e40
+  SHA1: da57a16315d9e9c7bd426cc69bbb0427874b52d7
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 4d827e63c628676213a2a63e13fc1ca5
+    SHA1: fae53fe11250869426275062dfa59fe891edb79c
+    SHA256: b8c5be860e52484d513f45266eb41e7587d2db69c5fed075bc6f3b546aba5b6e
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.069009953207316
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.3400976948734513
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-11-14 16:56:08'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2018.11.14.1555
+  Product: AppRemover Driver
+  ProductVersion: 4.3.25.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2018-07-17 00:00:00'
+      ValidTo: '2021-09-01 23:59:59'
+      Signature: 47480379338b7d293852209e8541135253cd84f00ef21600969b2272533eae42274196c044ad7a7dd12a1cb49e8e51f05b56e7c4d9a54418ea9bf548a7acebdc6f945541100dc916b82ee6694c9d564371c00f4a06294c852163609c88234e2c8f105f8cf8a3e0bce5cffe6d2edf253069afc0eb1f867b0311173912d488ce1d43558bc9ff5f7e21660682b3ddb6e3a71f797ecb2bf809cab45e1f8f8e12309cea1619af670d1b1df339a601675c881c897b383e8dc88dc079eed51c9dd59fd83be24d4b021915e6583b761025b10cf0d58e6e53466f6de4380872d51fb248bb6493ae229c05f9c97b93669b1c9687f77494ac97ce7fd50eafdae776aeca9013
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 91e929d451a9dbc7dda914de6410cf45
+        SHA1: 5fbf2980c2a64984a843a13fa7665f42a025d19b
+        SHA256: bf46d33c8f992fbc6e4e0bef411c9ff96ffb4a574555a87be2381a30f46b10e1
+        SHA384: 4166d3ac6d95c33a38ecf7c8833a064f4eb04f3ca03b8561259579ec5bba223866fd4870672d7a04030b9c0fc94460f8
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_4.sys
+  SHA256: 6b208ce68ba3f6c788bd89ba677ebf1c2407a55f9f43a42ea7207635634baf66
+  MD5: 1569d08f94cca34993ae1ccb763de7d0
+  SHA1: 590df795c95b229360abb5cd1d83c1eaef755e01
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 273297a89c1c999554acb5cfcc8b034f
+    SHA1: d906ddf3fbbaa66ba04e17bd805aab5102b91af4
+    SHA256: 40d9ef785f8363522bd79f70b03c30f8e82902860b3d40cebff42f95130c8cd4
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.077103224279144
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.325977635914864
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-04-23 11:53:31'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2019.04.23.1053
+  Product: AppRemover Driver
+  ProductVersion: 4.3.31.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2018-07-17 00:00:00'
+      ValidTo: '2021-09-01 23:59:59'
+      Signature: 47480379338b7d293852209e8541135253cd84f00ef21600969b2272533eae42274196c044ad7a7dd12a1cb49e8e51f05b56e7c4d9a54418ea9bf548a7acebdc6f945541100dc916b82ee6694c9d564371c00f4a06294c852163609c88234e2c8f105f8cf8a3e0bce5cffe6d2edf253069afc0eb1f867b0311173912d488ce1d43558bc9ff5f7e21660682b3ddb6e3a71f797ecb2bf809cab45e1f8f8e12309cea1619af670d1b1df339a601675c881c897b383e8dc88dc079eed51c9dd59fd83be24d4b021915e6583b761025b10cf0d58e6e53466f6de4380872d51fb248bb6493ae229c05f9c97b93669b1c9687f77494ac97ce7fd50eafdae776aeca9013
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 91e929d451a9dbc7dda914de6410cf45
+        SHA1: 5fbf2980c2a64984a843a13fa7665f42a025d19b
+        SHA256: bf46d33c8f992fbc6e4e0bef411c9ff96ffb4a574555a87be2381a30f46b10e1
+        SHA384: 4166d3ac6d95c33a38ecf7c8833a064f4eb04f3ca03b8561259579ec5bba223866fd4870672d7a04030b9c0fc94460f8
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_6.sys
+  SHA256: 7b3f8fa5844d829142002d47c2df8573c7d67defe4171414c6a015a38afe55f5
+  MD5: 78518c0636da8f3bf1bbeefbeb2b4920
+  SHA1: 4e367bb25124c2e45579f267a0fb01bcc3fc3f3b
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 724292b2e438061faa574208759022f1
+    SHA1: 4322a81827b98943887cc7696cd9a649992092de
+    SHA256: f219247bdbbb8755ba0d765424e4a753ca5b01b1ce4e74a4c651a2867c82f7e4
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.054946820173166
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.3393755722577723
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-03-02 14:10:18'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2018.03.02.1310
+  Product: AppRemover Driver
+  ProductVersion: 4.3.9.2
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2015-06-02 00:00:00'
+      ValidTo: '2018-08-31 23:59:59'
+      Signature: 00b224b0896ac046b130e7a9af612e0c92ce6fa6f465ae4b5dc422432d880c3ef15357c56c0db528c8ca2055263c8a3857988ce32dcc13e1578b0493d6dec39d734547eef1e37a3ac334ba5979ae0b5ab7b2c8d75323076d8cd50b68fbb8c5e47e95d359b9a4be08ba4ada34eb70f4a27ed9b4d285e285c338d19f2ef15321301b9337bfa3549e16a189aa28af9e96bff5c1b083a57e89259c9a369f72dc312db3a04334a099006c54279a7ca199b2c94a79f198def484fbf7cb8f9d8cd6df8bcf97c33c79991ed92ac2080db67741aabfa7bc41fd426fc06f2c5f0594471245777401d169c91355784699b8f1b61eb857835083c4755b8244774b231fd19610
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 222b2be1297ccd28fe05de06d1d9254f
+        SHA1: 47a67d8afd2c756e021a6547e66e4928ba32f53a
+        SHA256: 1eb2656b465452860774b29579998a45ffe61caebf4e77dc4fbf1bbdffb41340
+        SHA384: 3cba4aa32bfb91c8eedf6933c3e6e9dcc5a11b257fe2f71f790f2cd3db65a7e6cd865ef3e1b31b82af4a328433a4a663
+    Signer:
+    - SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_7.sys
+  SHA256: 9f326ede322930a7d5e149fa8720802b0623c1972dc54e41a2a73608fb6810dd
+  MD5: 630c1751ae29f3e1a127afcbcfa7c4d7
+  SHA1: 1583390bdd47357cf81d116d449f882b908348cb
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 71d5ca5029e81a04e0d65a387c197b6d
+    SHA1: e055500885c87851e8f53810957c47f68eea36c9
+    SHA256: 958b3c5b647856ed0fabc30683e9deb256968060b85411e8afe9ed3d94884c38
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.085139041786276
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.3176658046658565
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-10-10 04:20:33'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2018.10.10.0320
+  Product: AppRemover Driver
+  ProductVersion: 4.3.23.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2018-07-17 00:00:00'
+      ValidTo: '2021-09-01 23:59:59'
+      Signature: 47480379338b7d293852209e8541135253cd84f00ef21600969b2272533eae42274196c044ad7a7dd12a1cb49e8e51f05b56e7c4d9a54418ea9bf548a7acebdc6f945541100dc916b82ee6694c9d564371c00f4a06294c852163609c88234e2c8f105f8cf8a3e0bce5cffe6d2edf253069afc0eb1f867b0311173912d488ce1d43558bc9ff5f7e21660682b3ddb6e3a71f797ecb2bf809cab45e1f8f8e12309cea1619af670d1b1df339a601675c881c897b383e8dc88dc079eed51c9dd59fd83be24d4b021915e6583b761025b10cf0d58e6e53466f6de4380872d51fb248bb6493ae229c05f9c97b93669b1c9687f77494ac97ce7fd50eafdae776aeca9013
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 91e929d451a9dbc7dda914de6410cf45
+        SHA1: 5fbf2980c2a64984a843a13fa7665f42a025d19b
+        SHA256: bf46d33c8f992fbc6e4e0bef411c9ff96ffb4a574555a87be2381a30f46b10e1
+        SHA384: 4166d3ac6d95c33a38ecf7c8833a064f4eb04f3ca03b8561259579ec5bba223866fd4870672d7a04030b9c0fc94460f8
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_8.sys
+  SHA256: 34ad901b4fea05da301ebb619fa48cfac058720e41db71b3fca1c47763bae066
+  MD5: 3226c85fee6897a798a566aeb9d0b2f0
+  SHA1: 029430fcfc45dc1fda080af6b429e5f48fc8216f
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: aaadb7cd10b470f24c1d06e6ed4a0c90
+    SHA1: 38e59152902d88ebe97cd65255e423acd1b97df9
+    SHA256: ca94e53f4537f945a734c27d1ad28b318ffd3c746232e3dd03070e2ed505c962
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.074042428652563
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.3342177001263957
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-03-22 07:25:33'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2018.03.22.0625
+  Product: AppRemover Driver
+  ProductVersion: 4.3.11.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2015-06-02 00:00:00'
+      ValidTo: '2018-08-31 23:59:59'
+      Signature: 00b224b0896ac046b130e7a9af612e0c92ce6fa6f465ae4b5dc422432d880c3ef15357c56c0db528c8ca2055263c8a3857988ce32dcc13e1578b0493d6dec39d734547eef1e37a3ac334ba5979ae0b5ab7b2c8d75323076d8cd50b68fbb8c5e47e95d359b9a4be08ba4ada34eb70f4a27ed9b4d285e285c338d19f2ef15321301b9337bfa3549e16a189aa28af9e96bff5c1b083a57e89259c9a369f72dc312db3a04334a099006c54279a7ca199b2c94a79f198def484fbf7cb8f9d8cd6df8bcf97c33c79991ed92ac2080db67741aabfa7bc41fd426fc06f2c5f0594471245777401d169c91355784699b8f1b61eb857835083c4755b8244774b231fd19610
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 222b2be1297ccd28fe05de06d1d9254f
+        SHA1: 47a67d8afd2c756e021a6547e66e4928ba32f53a
+        SHA256: 1eb2656b465452860774b29579998a45ffe61caebf4e77dc4fbf1bbdffb41340
+        SHA384: 3cba4aa32bfb91c8eedf6933c3e6e9dcc5a11b257fe2f71f790f2cd3db65a7e6cd865ef3e1b31b82af4a328433a4a663
+    Signer:
+    - SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_9.sys
+  SHA256: 4574cf50dbe2fbce849881e8875297753ce2e240c312e01b3b461d80df063bbe
+  MD5: c8078d9e8bc13f562631c2a742b42c39
+  SHA1: 5971b2b204b2e60dc8c4727833c99decac11a714
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: c94e9d5d40e78bb6fdd5cf335f9a390a
+    SHA1: 05f6effe0e2768d3ff1471a5b06e0c9dd4a09278
+    SHA256: 2ade2faf3b07080560d5d9792ff635c9f6cc1f530fd7cfb005aa8b5a048f2017
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.053297783480573
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.328287838194684
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-06-14 04:44:07'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2018.06.14.0343
+  Product: AppRemover Driver
+  ProductVersion: 4.3.17.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2015-06-02 00:00:00'
+      ValidTo: '2018-08-31 23:59:59'
+      Signature: 00b224b0896ac046b130e7a9af612e0c92ce6fa6f465ae4b5dc422432d880c3ef15357c56c0db528c8ca2055263c8a3857988ce32dcc13e1578b0493d6dec39d734547eef1e37a3ac334ba5979ae0b5ab7b2c8d75323076d8cd50b68fbb8c5e47e95d359b9a4be08ba4ada34eb70f4a27ed9b4d285e285c338d19f2ef15321301b9337bfa3549e16a189aa28af9e96bff5c1b083a57e89259c9a369f72dc312db3a04334a099006c54279a7ca199b2c94a79f198def484fbf7cb8f9d8cd6df8bcf97c33c79991ed92ac2080db67741aabfa7bc41fd426fc06f2c5f0594471245777401d169c91355784699b8f1b61eb857835083c4755b8244774b231fd19610
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 222b2be1297ccd28fe05de06d1d9254f
+        SHA1: 47a67d8afd2c756e021a6547e66e4928ba32f53a
+        SHA256: 1eb2656b465452860774b29579998a45ffe61caebf4e77dc4fbf1bbdffb41340
+        SHA384: 3cba4aa32bfb91c8eedf6933c3e6e9dcc5a11b257fe2f71f790f2cd3db65a7e6cd865ef3e1b31b82af4a328433a4a663
+    Signer:
+    - SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_10.sys
+  SHA256: 75454a8583ea2a5b6c7711e9bf32c61b8a7e902f5c429fcbe36673ccc076e910
+  MD5: e62c7582ecc0f5a9694f02374c0014ed
+  SHA1: 19a7c0f3bd57e289c3522b0ec94df86dc051145f
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 68b2bff40bed9106fe7d684926fae2cc
+    SHA1: cf52d28e919f5034a2d206491742ab21df16e0d4
+    SHA256: c23b96fdf13b405480bbcd2e611cc67d98fd92f92cd2444da73fd8c4a4770393
+  RichPEHeaderHash:
+    MD5: 3b6934b997e6bdf8c7a22007105b190d
+    SHA1: b437f306b8f280d2bc9f878e94cd1d5ed804fdac
+    SHA256: 9e822696e56f37827e85e7bd4934cfdbba5aa80da654025b29bffaa3c028ffd0
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.050036833496202
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.340466534342975
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2017-10-02 16:52:04'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2017.10.02.1551
+  Product: AppRemover Driver
+  ProductVersion: 4.3.2.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2015-06-02 00:00:00'
+      ValidTo: '2018-08-31 23:59:59'
+      Signature: 00b224b0896ac046b130e7a9af612e0c92ce6fa6f465ae4b5dc422432d880c3ef15357c56c0db528c8ca2055263c8a3857988ce32dcc13e1578b0493d6dec39d734547eef1e37a3ac334ba5979ae0b5ab7b2c8d75323076d8cd50b68fbb8c5e47e95d359b9a4be08ba4ada34eb70f4a27ed9b4d285e285c338d19f2ef15321301b9337bfa3549e16a189aa28af9e96bff5c1b083a57e89259c9a369f72dc312db3a04334a099006c54279a7ca199b2c94a79f198def484fbf7cb8f9d8cd6df8bcf97c33c79991ed92ac2080db67741aabfa7bc41fd426fc06f2c5f0594471245777401d169c91355784699b8f1b61eb857835083c4755b8244774b231fd19610
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 222b2be1297ccd28fe05de06d1d9254f
+        SHA1: 47a67d8afd2c756e021a6547e66e4928ba32f53a
+        SHA256: 1eb2656b465452860774b29579998a45ffe61caebf4e77dc4fbf1bbdffb41340
+        SHA384: 3cba4aa32bfb91c8eedf6933c3e6e9dcc5a11b257fe2f71f790f2cd3db65a7e6cd865ef3e1b31b82af4a328433a4a663
+    Signer:
+    - SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_11.sys
+  SHA256: 551254a5e59df92e6049867162633e3e476cdf5999d05c3e23a57c98be03f475
+  MD5: e03e68542ce64a1922794f497faeb861
+  SHA1: 99f6eee59a77b479cc4fb6e9007a1294cab8d9f7
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 62dbea684cb595e62d8a05813c252ecf
+    SHA1: a2bb57742714c7e25dc08eed86b667e749d0651d
+    SHA256: 52fc780cc73b70fda46d528cdea0700d8e4c0ffa586dc0d543f6a86d532ea12e
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.034612453209733
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.318677001940288
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-04-19 05:10:13'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2018.04.19.0409
+  Product: AppRemover Driver
+  ProductVersion: 4.3.13.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2015-06-02 00:00:00'
+      ValidTo: '2018-08-31 23:59:59'
+      Signature: 00b224b0896ac046b130e7a9af612e0c92ce6fa6f465ae4b5dc422432d880c3ef15357c56c0db528c8ca2055263c8a3857988ce32dcc13e1578b0493d6dec39d734547eef1e37a3ac334ba5979ae0b5ab7b2c8d75323076d8cd50b68fbb8c5e47e95d359b9a4be08ba4ada34eb70f4a27ed9b4d285e285c338d19f2ef15321301b9337bfa3549e16a189aa28af9e96bff5c1b083a57e89259c9a369f72dc312db3a04334a099006c54279a7ca199b2c94a79f198def484fbf7cb8f9d8cd6df8bcf97c33c79991ed92ac2080db67741aabfa7bc41fd426fc06f2c5f0594471245777401d169c91355784699b8f1b61eb857835083c4755b8244774b231fd19610
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 222b2be1297ccd28fe05de06d1d9254f
+        SHA1: 47a67d8afd2c756e021a6547e66e4928ba32f53a
+        SHA256: 1eb2656b465452860774b29579998a45ffe61caebf4e77dc4fbf1bbdffb41340
+        SHA384: 3cba4aa32bfb91c8eedf6933c3e6e9dcc5a11b257fe2f71f790f2cd3db65a7e6cd865ef3e1b31b82af4a328433a4a663
+    Signer:
+    - SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_13.sys
+  SHA256: 33233988d8c735fdf1162e043ed1e6fff62e7d6102c5bd300561d71fd32526f3
+  MD5: 3c06828180ffe41164bf353c97c813bb
+  SHA1: b2f72854bbef8ef1b7be7fa9f5a5967a0161d001
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 7fca31ccd3dc311b164dab3c7d7ab1b1
+    SHA1: 7b4a420fd8d69037ba8ad37a3e2b2208e7bdbf8c
+    SHA256: bc3171fb4293c061770ecd9db47b19adf8a7375523d58085d6e5deb228a3360c
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.079328189514314
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.350551075456629
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2017-11-15 15:35:24'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2017.11.15.1435
+  Product: AppRemover Driver
+  ProductVersion: 4.3.3.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2015-06-02 00:00:00'
+      ValidTo: '2018-08-31 23:59:59'
+      Signature: 00b224b0896ac046b130e7a9af612e0c92ce6fa6f465ae4b5dc422432d880c3ef15357c56c0db528c8ca2055263c8a3857988ce32dcc13e1578b0493d6dec39d734547eef1e37a3ac334ba5979ae0b5ab7b2c8d75323076d8cd50b68fbb8c5e47e95d359b9a4be08ba4ada34eb70f4a27ed9b4d285e285c338d19f2ef15321301b9337bfa3549e16a189aa28af9e96bff5c1b083a57e89259c9a369f72dc312db3a04334a099006c54279a7ca199b2c94a79f198def484fbf7cb8f9d8cd6df8bcf97c33c79991ed92ac2080db67741aabfa7bc41fd426fc06f2c5f0594471245777401d169c91355784699b8f1b61eb857835083c4755b8244774b231fd19610
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 222b2be1297ccd28fe05de06d1d9254f
+        SHA1: 47a67d8afd2c756e021a6547e66e4928ba32f53a
+        SHA256: 1eb2656b465452860774b29579998a45ffe61caebf4e77dc4fbf1bbdffb41340
+        SHA384: 3cba4aa32bfb91c8eedf6933c3e6e9dcc5a11b257fe2f71f790f2cd3db65a7e6cd865ef3e1b31b82af4a328433a4a663
+    Signer:
+    - SerialNumber: 1ca9cc01747a11b1eaaf103c8d9a9e6c
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_14.sys
+  SHA256: 59080957de2519f5013be8ccf0b9012dc97ad692e69578cb3f60148c528bdbb1
+  MD5: 77bdf1dada2014c98e4e50b2765fbd05
+  SHA1: 11e24f2debc92df1dd0574a7de14ae7903b1ca5f
+  Imphash: a7bb9c93850e96a3893e41efd0986b3b
+  Authentihash:
+    MD5: 1af56274e9ab6dbb0304ee0280c0b71c
+    SHA1: f7e3d145f82d069dc318723a1814dfbf52cf9675
+    SHA256: 135621810a6cf5cd73ce2a08c5b1c35111ecac44bc0e1a8e241f328f6f7ed5e9
+  RichPEHeaderHash:
+    MD5: d0f47ac3d9eabe6d0c43786b26d15ccc
+    SHA1: 9fae5d824d54f79e3c720ee7d7068015fc18c005
+    SHA256: 9abacf8be1d1d649634c338e5f3b499d90b76316ac33a900dbfa10b3043c5364
+  Sections:
+    .text:
+      Entropy: 6.05746242066814
+      Virtual Size: '0x12b4'
+    .rdata:
+      Entropy: 4.021627210158614
+      Virtual Size: '0x264'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.684580548402959
+      Virtual Size: '0xcc'
+    INIT:
+      Entropy: 5.114759378529217
+      Virtual Size: '0x4b0'
+    .rsrc:
+      Entropy: 3.320991816755103
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-09-06 04:44:27'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2019.09.06.0344
+  Product: AppRemover Driver
+  ProductVersion: 4.3.35.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - _wcsicmp
+  - MmGetSystemRoutineAddress
+  - RtlGetVersion
+  - CmUnRegisterCallback
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2018-07-17 00:00:00'
+      ValidTo: '2021-09-01 23:59:59'
+      Signature: 47480379338b7d293852209e8541135253cd84f00ef21600969b2272533eae42274196c044ad7a7dd12a1cb49e8e51f05b56e7c4d9a54418ea9bf548a7acebdc6f945541100dc916b82ee6694c9d564371c00f4a06294c852163609c88234e2c8f105f8cf8a3e0bce5cffe6d2edf253069afc0eb1f867b0311173912d488ce1d43558bc9ff5f7e21660682b3ddb6e3a71f797ecb2bf809cab45e1f8f8e12309cea1619af670d1b1df339a601675c881c897b383e8dc88dc079eed51c9dd59fd83be24d4b021915e6583b761025b10cf0d58e6e53466f6de4380872d51fb248bb6493ae229c05f9c97b93669b1c9687f77494ac97ce7fd50eafdae776aeca9013
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 91e929d451a9dbc7dda914de6410cf45
+        SHA1: 5fbf2980c2a64984a843a13fa7665f42a025d19b
+        SHA256: bf46d33c8f992fbc6e4e0bef411c9ff96ffb4a574555a87be2381a30f46b10e1
+        SHA384: 4166d3ac6d95c33a38ecf7c8833a064f4eb04f3ca03b8561259579ec5bba223866fd4870672d7a04030b9c0fc94460f8
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_15.sys
+  SHA256: d82108e6578f4866d7114d6847282c04f0b146809bc66ded3300fe993b42d20f
+  MD5: 50390455e92fb62cbe6a89dbb61037c2
+  SHA1: b02ad9271e5410dfd7edd03d50469997ea54a8b2
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 516afe0e8a9715fe3c7c2799717ac537
+    SHA1: 2280abcbe90c9afd74b3393e484f0a033241c0ea
+    SHA256: 3484d14dd304bfb29343e2c38ed28cfc6838771d250029468e6a2c4ab8384ea1
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.058423030391475
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.329667722964193
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-08-28 02:35:24'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2018.08.28.0135
+  Product: AppRemover Driver
+  ProductVersion: 4.3.21.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2018-07-17 00:00:00'
+      ValidTo: '2021-09-01 23:59:59'
+      Signature: 47480379338b7d293852209e8541135253cd84f00ef21600969b2272533eae42274196c044ad7a7dd12a1cb49e8e51f05b56e7c4d9a54418ea9bf548a7acebdc6f945541100dc916b82ee6694c9d564371c00f4a06294c852163609c88234e2c8f105f8cf8a3e0bce5cffe6d2edf253069afc0eb1f867b0311173912d488ce1d43558bc9ff5f7e21660682b3ddb6e3a71f797ecb2bf809cab45e1f8f8e12309cea1619af670d1b1df339a601675c881c897b383e8dc88dc079eed51c9dd59fd83be24d4b021915e6583b761025b10cf0d58e6e53466f6de4380872d51fb248bb6493ae229c05f9c97b93669b1c9687f77494ac97ce7fd50eafdae776aeca9013
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 91e929d451a9dbc7dda914de6410cf45
+        SHA1: 5fbf2980c2a64984a843a13fa7665f42a025d19b
+        SHA256: bf46d33c8f992fbc6e4e0bef411c9ff96ffb4a574555a87be2381a30f46b10e1
+        SHA384: 4166d3ac6d95c33a38ecf7c8833a064f4eb04f3ca03b8561259579ec5bba223866fd4870672d7a04030b9c0fc94460f8
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: ardrv_16.sys
+  SHA256: e3cb9f52a4fde53fc886dc35d41bb36e8b993c74826389d22440b92d94480a6d
+  MD5: 400dadc6b2cedba270fd1e2ff8295813
+  SHA1: ff7d6a3f9d7534cf822759950a03da312e5e6536
+  Imphash: 04becf2aed91570c44993f040922303d
+  Authentihash:
+    MD5: 66ef2f069da685e765e779a62744dc24
+    SHA1: e8df9abc595355f8073c3459c8fa145bcaeeac8a
+    SHA256: 67c2bd29bc47bb2cfcf8d0a804c75394986bea81a90f4abc322ac9cf4235ce2e
+  RichPEHeaderHash:
+    MD5: 272345eb0d8f7828353909ced9707204
+    SHA1: b9243dfd2695456298e8826c5b84e2d3b5b8cafe
+    SHA256: 0292811c78976e97e55a8db1d0db0ef39a6bd771249a1967bed84df5e0ed5665
+  Sections:
+    .text:
+      Entropy: 5.9269739323177415
+      Virtual Size: '0xeed'
+    .rdata:
+      Entropy: 4.039445781019653
+      Virtual Size: '0x224'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5459473662913776
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 5.158608395501925
+      Virtual Size: '0x440'
+    .rsrc:
+      Entropy: 3.333605055435446
+      Virtual Size: '0x360'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-08-16 10:52:04'
+  Description: AppRemover Driver
+  Company: OPSWAT, Inc.
+  InternalName: ardrv.sys
+  OriginalFilename: ardrv.sys
+  FileVersion: 2018.08.16.0951
+  Product: AppRemover Driver
+  ProductVersion: 4.3.20.1
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ZwAssignProcessToJobObject
+  - PsLookupProcessByProcessId
+  - ProbeForWrite
+  - IoCreateFile
+  - ZwSetValueKey
+  - ZwSetInformationFile
+  - KeDetachProcess
+  - IoFileObjectType
+  - ZwClose
+  - ZwCreateJobObject
+  - ObReferenceObjectByHandle
+  - ZwFlushKey
+  - KeAttachProcess
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ObOpenObjectByPointer
+  - FsRtlReleaseFile
+  - FsRtlAcquireFileExclusive
+  - ZwTerminateJobObject
+  - ZwOpenKey
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2018-07-17 00:00:00'
+      ValidTo: '2021-09-01 23:59:59'
+      Signature: 47480379338b7d293852209e8541135253cd84f00ef21600969b2272533eae42274196c044ad7a7dd12a1cb49e8e51f05b56e7c4d9a54418ea9bf548a7acebdc6f945541100dc916b82ee6694c9d564371c00f4a06294c852163609c88234e2c8f105f8cf8a3e0bce5cffe6d2edf253069afc0eb1f867b0311173912d488ce1d43558bc9ff5f7e21660682b3ddb6e3a71f797ecb2bf809cab45e1f8f8e12309cea1619af670d1b1df339a601675c881c897b383e8dc88dc079eed51c9dd59fd83be24d4b021915e6583b761025b10cf0d58e6e53466f6de4380872d51fb248bb6493ae229c05f9c97b93669b1c9687f77494ac97ce7fd50eafdae776aeca9013
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 91e929d451a9dbc7dda914de6410cf45
+        SHA1: 5fbf2980c2a64984a843a13fa7665f42a025d19b
+        SHA256: bf46d33c8f992fbc6e4e0bef411c9ff96ffb4a574555a87be2381a30f46b10e1
+        SHA384: 4166d3ac6d95c33a38ecf7c8833a064f4eb04f3ca03b8561259579ec5bba223866fd4870672d7a04030b9c0fc94460f8
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 5914c82b0f0fecbd0a98cb204b83ae27
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
