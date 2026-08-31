@@ -1,0 +1,32 @@
+title: Driver Load - zntport.sys
+id: de5f1843-8acf-55a9-9f7a-51c6fef3056b
+status: experimental
+description: |
+    Detects loading of driver zntport.sys via hash.
+    The legacy NTPort driver creates the "\\.\zntport" device and exposes IOCTL 0xF10024CC with FILE_ANY_ACCESS. The handler accepts a caller-controlled 32-bit physical address, maps 0x32 bytes below 4 GiB with MmMapIoSpace, and copies data through an unchecked strcpy operation. After an administrator installs the driver, an unprivileged process may be able to abuse the device for physical-memory disclosure or memory corruption, depending on the device ACL.
+references:
+    - https://www.loldrivers.io/drivers/8fcec30c-f5ca-4aae-b2d8-77af60b78d42/
+    - https://github.com/The-Sword-of-Constantine/UsingBYOVD/blob/master/RawDriverFiles/zntport.sys
+    - https://www.zealsoftstudio.com/ntport/portfaq.html
+author: Element2023H
+date: 2026/08/11
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1e712a45f50b2c7cc235e81fb7e06e8f'
+            - 'SHA1=86025bc313156397b0b5e3864106208898e27218'
+            - 'SHA256=c653fe66aeb6170899ad8b405b7550e247490a2366bda828bfa3b2a2dc18fa91'
+            - 'IMPHASH=7a6c1efa03e4389d37e651cd32862f47'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

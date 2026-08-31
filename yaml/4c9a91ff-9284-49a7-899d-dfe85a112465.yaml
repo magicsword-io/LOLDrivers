@@ -5,26 +5,29 @@ Tags:
 Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-06-16'
-MitreID: T1562.001
+MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create RootLaser binPath=C:\windows\temp\RootLaser.sys type=kernel
+  Command: sc.exe create RootLaser binPath= C:\windows\temp\RootLaser.sys type= kernel
     && sc.exe start RootLaser
-  Description: Adlice RootLaser.sys version 3.4.1 is a signed kernel driver assessed
-    in public KOSEC BYOVD research. The driver retains a process-termination IOCTL
-    reachable from administrator context and additional kernel read/information-leak
-    attack surface, even though newer access-control and PPL checks mitigate some
-    earlier TrueSight abuse paths.
-  Usecase: Terminate non-protected processes from kernel mode and expose kernel read/information
-    leak primitives.
-  Privileges: kernel
+  Description: Adlice RootLaser.sys version 3.4.1 is a signed kernel driver with
+    administrator-reachable kernel read and write primitives through IOCTLs 0x22E050
+    and 0x22E014. Public proof-of-concept code combines these primitives with build-specific
+    kernel offsets to replace a process token and elevate an administrator to SYSTEM.
+    The exploit requires offsets that match the target Windows build.
+  Usecase: Read and write kernel memory to replace a process token or terminate non-protected
+    processes.
+  Privileges: Administrator
   OperatingSystem: Windows 10, Windows 11
 Resources:
 - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/Adlice
+- https://github.com/AmeerTheInteger/Windows-kernel-LPE-RootLaser.sys
+- https://github.com/magicsword-io/LOLDrivers/issues/410
+- https://github.com/magicsword-io/LOLDrivers/issues/411
 Detection: []
 Acknowledgement:
-  Person: KOSEC LLC
-  Handle: ''
+  Person: KOSEC LLC, megab0t
+  Handle: '@AmeerTheInteger'
 KnownVulnerableSamples:
 - Filename: RootLaser.sys
   SHA256: 85b69f4e518c66b8ba7154ecb1ac1e8791dfe2fdf1e20b7c3a707f59639ac10d

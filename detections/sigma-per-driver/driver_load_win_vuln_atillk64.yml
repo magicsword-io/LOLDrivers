@@ -9,7 +9,7 @@ references:
     - Internal Research
 author: Nasreddine Bencherchali
 date: 2023/05/06
-modified: 2026/08/28
+modified: 2026/08/31
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -27,8 +27,8 @@ detection:
             - 'SHA1=eb0d45aa6f537f5b2f90f3ad99013606eafcd162'
             - 'SHA256=38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7'
             - 'SHA256=ad40e6d0f77c0e579fb87c5106bf6de3d1a9f30ee2fbf8c9c011f377fa05f173'
-            - 'IMPHASH=a18b467c3b43f334ca455c495a3ef70d'
             - 'IMPHASH=b4c2607b2af5376910bf80b561e9a18a'
+            - 'IMPHASH=a18b467c3b43f334ca455c495a3ef70d'
     condition: selection_hashes
 falsepositives:
     - Unknown

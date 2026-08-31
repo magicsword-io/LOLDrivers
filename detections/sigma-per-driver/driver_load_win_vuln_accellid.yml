@@ -10,7 +10,7 @@ references:
     - https://github.com/magicsword-io/LOLDrivers/issues/355
 author: Northwave Cyber Security
 date: 2024/09/11
-modified: 2026/08/28
+modified: 2026/08/31
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -22,8 +22,8 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=887e6502a420acb183342c60c396b0e3'
             - 'MD5=833becd0e4abc9cfff8c835694694f80'
+            - 'MD5=887e6502a420acb183342c60c396b0e3'
             - 'SHA1=19871a15d483b9be1aa868a31a3384513b05e8ba'
             - 'SHA256=08675796b8712e0e4ccbdf7831450b907bb94c2e3e85560d9aba1b24931f0d55'
             - 'IMPHASH=082b83ad4226208cdab708a369872223'

@@ -1,0 +1,29 @@
+title: Driver Load - zntport.sys
+id: f386f981-42ec-52d9-b864-8f0e0ab699aa
+status: experimental
+description: |
+    Detects loading of driver zntport.sys via name.
+    The legacy NTPort driver creates the "\\.\zntport" device and exposes IOCTL 0xF10024CC with FILE_ANY_ACCESS. The handler accepts a caller-controlled 32-bit physical address, maps 0x32 bytes below 4 GiB with MmMapIoSpace, and copies data through an unchecked strcpy operation. After an administrator installs the driver, an unprivileged process may be able to abuse the device for physical-memory disclosure or memory corruption, depending on the device ACL.
+references:
+    - https://www.loldrivers.io/drivers/8fcec30c-f5ca-4aae-b2d8-77af60b78d42/
+    - https://github.com/The-Sword-of-Constantine/UsingBYOVD/blob/master/RawDriverFiles/zntport.sys
+    - https://www.zealsoftstudio.com/ntport/portfaq.html
+author: Element2023H
+date: 2026/08/11
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\zntport.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

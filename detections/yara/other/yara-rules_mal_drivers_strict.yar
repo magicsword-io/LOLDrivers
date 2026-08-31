@@ -1,3 +1,20 @@
+rule MAL_Driver_501E {
+	meta:
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - kernel_utility_driver64.sys, kernel_utility_driver32.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
+		author = "Florian Roth"
+		reference = "https://github.com/magicsword-io/LOLDrivers"
+		hash = "501ea082774f29adc752887402af6df0edf49bf7b3816b93f6e52c06a79685bc"
+		hash = "962fb670510807fd5cab3a6e6f886aeb2b925c42054c29fa02f67011be935954"
+		date = "2026-08-28"
+		score = 85
+	strings:
+		$ = { 460069006c006500560065007200730069006f006e00[1-8]31002c0035003000320036002c0031003000300030002c00310032003700 } /* FileVersion  */
+		$ = { 500072006f006400750063007400560065007200730069006f006e00[1-8]31002c0035003000320036002c0031003000300030002c00310032003700 } /* ProductVersion  */
+		$ = { 4c006500670061006c0043006f007000790072006900670068007400[1-8]48724367406209672000280043002900200032003000310030002d003200300032003600 } /* LegalCopyright C */
+	condition:
+		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+}
+
 rule MAL_Driver_773B {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
