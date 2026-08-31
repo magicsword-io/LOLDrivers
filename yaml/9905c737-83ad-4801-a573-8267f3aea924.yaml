@@ -1,35 +1,188 @@
 Id: 9905c737-83ad-4801-a573-8267f3aea924
 Tags:
 - bsitf.sys
+- AsusBSItf.sys
+- ASUS BIOS Flash Driver
 Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-04-17'
 MitreID: T1068
+CVE:
+- CVE-2024-33221
 Category: vulnerable driver
 Commands:
   Command: sc.exe create bsitf binPath=C:\windows\temp\bsitf.sys type=kernel && sc.exe
     start bsitf
-  Description: bsitf.sys is the ASUS BIOS Flash Driver distributed with ASUS WinFlash
-    BIOS update utility. The driver persists on disk after WinFlash completes and
-    exposes physical memory read via MmMapIoSpace (IOCTL 0x222804), physically contiguous
-    kernel memory allocation mapped to usermode via MDL (IOCTL 0x222808), arbitrary
-    I/O port write (IOCTL 0x222810) and read (IOCTL 0x222818), PCI config space read
-    with BAR mapping to usermode (IOCTL 0x222814), and BIOS flash write via MmMapIoSpace
-    (IOCTL 0x22281c). WHQL attestation signed via Microsoft Windows Third Party Component
-    CA 2014. Device SDDL grants full access to Administrators group.
+  Description: bsitf.sys and AsusBSItf.sys are ASUS BIOS Flash Driver naming variants
+    distributed with the ASUS WinFlash utility. The driver exposes physical-memory
+    reads through MmMapIoSpace (IOCTL 0x222804), contiguous kernel-memory allocation
+    mapped to user mode through an MDL (IOCTL 0x222808), arbitrary I/O-port writes
+    and reads (IOCTLs 0x222810 and 0x222818), PCI configuration-space reads with BAR
+    mapping (IOCTL 0x222814), and BIOS flash writes (IOCTL 0x22281C). Public research
+    identifies the 3.2.12.0 AsusBSItf.sys build as CVE-2024-33221 because low-privileged
+    callers can reach these operations and use them for privilege escalation, kernel
+    code execution, or information disclosure.
   Usecase: Elevate privileges
-  Privileges: kernel
+  Privileges: User
   OperatingSystem: Windows 10
 Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/409
 - https://github.com/magicsword-io/LOLDrivers/issues/325
 - https://github.com/magicsword-io/LOLDrivers/pull/332
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
 - https://github.com/fluffycats31/vulnerable-drivers
+- https://nvd.nist.gov/vuln/detail/CVE-2024-33221
+- https://github.com/DriverHunter/Win-Driver-EXP/tree/main/CVE-2024-33221
 Detection: []
 Acknowledgement:
   Person: fluffycats31
   Handle: '@rainbowdynamix, @DbgPrint, @AkaTorich, @fluffycats31'
 KnownVulnerableSamples:
+- Filename: AsusBSItf.sys
+  SHA256: c82377f2c1b75afd1503bb494e1b23fc45a4a6b81c7678e4e6cf391ce023ccbb
+  MD5: 7afc060df3d17bbaf4d1d97de5aeb7ab
+  SHA1: 10abdafa632f5460f1d6da16f250257b30e9f7f7
+  Imphash: 28d244dd772cc099f1ccc617f46863fc
+  Authentihash:
+    MD5: bcf222909522659e1471e0fd718add96
+    SHA1: 77a404930cb34a172caee87060d2e8a56d6ca902
+    SHA256: 9387ad984318ffc0f2055006aab9c6af251d6d6534c39c1c335be7f115c17177
+  RichPEHeaderHash:
+    MD5: cb0aef4a0ebe414a83cc5cf06c221763
+    SHA1: c082cabc79bbee2afc97c711a2817a72f4455fda
+    SHA256: 994dc10423bacedfef915682d72766ddefa90513a69bcdeeefee1ed7307691cf
+  Sections:
+    .text:
+      Entropy: 6.251487960842492
+      Virtual Size: '0x1834'
+    .rdata:
+      Entropy: 4.37756485212279
+      Virtual Size: '0xce0'
+    .data:
+      Entropy: 1.6413515232083404
+      Virtual Size: '0x300'
+    .pdata:
+      Entropy: 4.0641389358534505
+      Virtual Size: '0x2ac'
+    PAGE:
+      Entropy: 6.252943848647559
+      Virtual Size: '0x21ec'
+    INIT:
+      Entropy: 5.197351419429812
+      Virtual Size: '0x644'
+    .rsrc:
+      Entropy: 3.557086642432217
+      Virtual Size: '0x428'
+    .reloc:
+      Entropy: 3.795121441439695
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-10-26 21:32:34'
+  Description: ASUS BIOS Flash Driver
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusBSItf.sys
+  OriginalFilename: AsusBSItf.sys
+  FileVersion: 3.2.12.0
+  Product: ASUS BIOS Flash Driver
+  ProductVersion: 3.2.12.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPages
+  - MmUnmapLockedPages
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - IoAllocateMdl
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - IoWMIRegistrationControl
+  - IoWMIOpenBlock
+  - IoWMIQueryAllData
+  - ObfDereferenceObject
+  - MmGetPhysicalAddress
+  - ZwCreateKey
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - RtlFreeUnicodeString
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
 - Filename: bsitf.sys
   MD5: 4d59cc4dd2c94cdb78e561f3a422e899
   SHA1: e77af2651fb4a4ff0fe80bf838ebe0b76aa8edd4
