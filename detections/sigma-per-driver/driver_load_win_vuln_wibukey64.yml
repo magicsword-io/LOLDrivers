@@ -1,0 +1,35 @@
+title: Driver Load - WibuKey64.sys
+id: 33feb635-127a-5b02-b4b7-0b4bd4bdf6c3
+status: experimental
+description: |
+    Detects loading of driver WibuKey64.sys via hash.
+    WibuKey for Windows versions before 6.70 are affected by CVE-2024-45181 and CVE-2024-45182. This signed 6.50a WibuKey64.sys build exposes the \\Device\\WibuKey interface. Improper buffer-bound checks allow crafted local requests to read from or write to arbitrary kernel addresses, causing kernel memory corruption or denial of service and potentially enabling privilege escalation.
+references:
+    - https://www.loldrivers.io/drivers/a07e5897-3835-4188-9e3e-bd810c3e34a5/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://cdn.wibu.com/fileadmin/wibu_downloads/security_advisories/AdvisoryWIBU-94453.pdf
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45181
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45182
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=63bcd4467778d02e53cb958afa66e964'
+            - 'SHA1=6e06e8443f9551cfcd9f50370af0ba625a7c540d'
+            - 'SHA256=7ab52ce255f4ee1d192e9a3cc0b836eaea10bd3c2d0d732519eb2f5968617ffd'
+            - 'IMPHASH=d17078994081d128a915504f53c91bab'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

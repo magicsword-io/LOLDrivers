@@ -3,10 +3,14 @@ id: 0c5004e8-5238-5aec-b6c6-5205662789c1
 status: experimental
 description: |
     Detects loading of driver mydrivers.sys via name.
-    DriverGenius Hardware monitor
+    DriverGenius mydrivers.sys 9.2.707.1214 is affected by CVE-2023-1676. IOCTL 0x9C402088 dispatches caller-controlled values to the privileged WRMSR instruction without adequate access control. A local user can corrupt kernel state, execute code in ring 0, and elevate privileges.
 references:
     - https://www.loldrivers.io/drivers/d9e00cc7-a8f4-4390-a6dc-0f5423e97da4/
     - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://nvd.nist.gov/vuln/detail/CVE-2023-1676
+    - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1676
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31

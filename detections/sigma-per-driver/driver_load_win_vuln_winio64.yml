@@ -3,11 +3,13 @@ id: 681a8bb9-7caf-52ee-8d35-a1bde2f961b4
 status: experimental
 description: |
     Detects loading of driver WinIo64.sys via hash.
-    WinIo64.sys is a hardware access driver based on the WinIo library that provides direct physical memory access and I/O port operations from usermode. The driver maps the \Device\PhysicalMemory section object to user space via ZwOpenSection and ZwMapViewOfSection (IOCTL 0x80102040), with corresponding unmap (IOCTL 0x80102044), and provides arbitrary I/O port read (IOCTL 0x80102050) and write (IOCTL 0x80102054) in byte, word, and dword widths. Physical address translation via HalTranslateBusAddress is also available. WHQL attestation signed via Microsoft Windows Third Party Component CA 2014. Distributed by multiple OEM utilities and heavily abused in the wild with 61 malicious execution parents on VT including malware droppers and BYOVD tools. Used by KDU (Kernel Driver Utility) as a provider.
+    WinIo64 is a hardware-access driver based on the WinIo library that provides direct physical-memory mapping and I/O-port operations from user mode. Its IOCTL interface exposes physical-memory map and unmap, I/O-port read and write, and physical-address translation primitives that are repeatedly incorporated into BYOVD tooling.
 references:
     - https://www.loldrivers.io/drivers/96501e5b-e4f2-41a9-a8ee-d09e36d31a39/
     - https://github.com/magicsword-io/LOLDrivers/issues/222
     - https://github.com/hfiref0x/KDU
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://aka.ms/VulnerableDriverBlockList
 author: Michael Haag
 date: 2026/04/22
 modified: 2026/08/31
@@ -22,10 +24,23 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=f356d371ac517c6655f7321e34bde956'
+            - 'MD5=b3225765f3d125af668e077478a671ab'
+            - 'MD5=d91e0b4cf17e1c7f94175dd790df54aa'
             - 'MD5=66ab7f46db42bf52db06840ec3b4deb3'
+            - 'MD5=34458980db56fbab608ba99b108246cb'
+            - 'SHA1=b1f0659d94c4c077ebf79e6e0c330d850e1827af'
+            - 'SHA1=380f8b4c5fb7985e414add59e7a2a015623d4ec9'
+            - 'SHA1=0549d02d10edec9deab6dc73be1297c644377f05'
+            - 'SHA1=036357ba2605bd0010e3549c7b37e466e415df2c'
             - 'SHA1=9745d77e3c27437bbccf39e074f7d57a99fe83b1'
+            - 'SHA256=bbb7e83911abdedfc9529e9329d0f90cf7c94a7d00845b610c5f7099efaca492'
+            - 'SHA256=be929ae99015fafa0ab55cb475035e8c1359db1b61e00507defc1919a3538385'
+            - 'SHA256=175e32800edf65d0027821ed2f484088ab4e935527f8a1bd83010a005dec4a5e'
             - 'SHA256=eaaed21c1788baca09ee16b06e1a231cb11c8417b3949d7d90596d50305dc604'
+            - 'SHA256=462fdbbc7a638d5168a3017ebd333dab90fbb44c045aa2d65d7df3667e364b77'
             - 'IMPHASH=6e12984aefe0bde46dd36197366ec5c2'
+            - 'IMPHASH=3547cd37c31cc9ec12dced85dc2b1f24'
     condition: selection_hashes
 falsepositives:
     - Unknown

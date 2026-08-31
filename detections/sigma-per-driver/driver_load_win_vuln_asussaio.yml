@@ -1,0 +1,34 @@
+title: Driver Load - AsusSAIO.sys
+id: 798da2da-1280-5c28-bc77-0b8c00a75aec
+status: experimental
+description: |
+    Detects loading of driver AsusSAIO.sys via hash.
+    ASUS System Analysis IO drivers affected by CVE-2024-55408 expose privileged hardware operations through the \\Device\\ASUSSAIO interface. This 1.0.1.0 build accepts FILE_ANY_ACCESS IOCTLs, including 0x80102074 and 0x80102078, that map caller-selected physical addresses with MmMapIoSpace for read and write operations. The interface also exposes direct I/O-port access without a caller-token authorization check, allowing a local user to cross the user-to-kernel security boundary.
+references:
+    - https://www.loldrivers.io/drivers/207b30f5-e3da-4eb2-829f-54b946eb526a/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-55408
+    - https://github.com/heyheysky/vulnerable-driver/blob/master/CVE-2024-55408/CVE-2024-55408_AsusSAIO.sys_README.md
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8b9c06294510f07360e20bafc26813cf'
+            - 'SHA1=1b06d83f6cca14563fe2cd3da2ba6e0f90942353'
+            - 'SHA256=2d1c04a9ee1664c25574048363620800482a89e1c99f4338dc252038aa949419'
+            - 'IMPHASH=1ac96b4270f0fe700cb9a3d755426cea'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

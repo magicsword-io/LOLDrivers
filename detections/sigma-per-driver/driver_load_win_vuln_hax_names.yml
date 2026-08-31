@@ -1,0 +1,31 @@
+title: Driver Load - hax.sys
+id: 28f7137d-45b4-5687-a521-26c504a99e1c
+status: experimental
+description: |
+    Detects loading of driver hax.sys via name.
+    Intel Hardware Accelerated Execution Manager versions before 7.7.1 are affected by CVE-2022-21812. The signed 7.6.5, 7.6.5.3, and 7.7.0 builds tracked here expose the \\Device\\GHAX interface. Improper access control in the driver allows an authenticated local user to cross the user-to-kernel security boundary and elevate privileges.
+references:
+    - https://www.loldrivers.io/drivers/9771266b-72e2-4ed3-ac14-1ac25dc5fb25/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00655.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2022-21812
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\hax.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

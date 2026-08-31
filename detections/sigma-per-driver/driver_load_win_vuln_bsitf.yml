@@ -3,12 +3,16 @@ id: 6a90c289-f152-5840-b686-cacf95d35eb4
 status: experimental
 description: |
     Detects loading of driver bsitf.sys via hash.
-    bsitf.sys is the ASUS BIOS Flash Driver distributed with ASUS WinFlash BIOS update utility. The driver persists on disk after WinFlash completes and exposes physical memory read via MmMapIoSpace (IOCTL 0x222804), physically contiguous kernel memory allocation mapped to usermode via MDL (IOCTL 0x222808), arbitrary I/O port write (IOCTL 0x222810) and read (IOCTL 0x222818), PCI config space read with BAR mapping to usermode (IOCTL 0x222814), and BIOS flash write via MmMapIoSpace (IOCTL 0x22281c). WHQL attestation signed via Microsoft Windows Third Party Component CA 2014. Device SDDL grants full access to Administrators group.
+    bsitf.sys and AsusBSItf.sys are ASUS BIOS Flash Driver naming variants distributed with the ASUS WinFlash utility. The 3.2.12.0 AsusBSItf.sys build exposes physical-memory reads through MmMapIoSpace (IOCTL 0x222804), contiguous kernel-memory allocation mapped to user mode through an MDL (IOCTL 0x222808), arbitrary I/O-port writes and reads (IOCTLs 0x222810 and 0x222818), and PCI configuration-space reads with BAR mapping (IOCTL 0x222814). Public research identifies this low-privilege interface as CVE-2024-33221 and demonstrates its use for privilege escalation, kernel code execution, or information disclosure. Earlier bsitf.sys builds tracked in this record additionally expose BIOS flash writes through IOCTL 0x22281C.
 references:
     - https://www.loldrivers.io/drivers/9905c737-83ad-4801-a573-8267f3aea924/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
     - https://github.com/magicsword-io/LOLDrivers/issues/325
     - https://github.com/magicsword-io/LOLDrivers/pull/332
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-33221
+    - https://github.com/DriverHunter/Win-Driver-EXP/tree/main/CVE-2024-33221
 author: Michael Haag
 date: 2026/04/17
 modified: 2026/08/31
@@ -23,12 +27,48 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=3449f8581980785d6b35d2c85ba8360f'
+            - 'MD5=5450cf5bcbf4d050563621fd44b5293b'
+            - 'MD5=ae2454c4b0f2cb159a1d419636658514'
+            - 'MD5=346a00e5b4af2e5e54f29f9e83b63f49'
+            - 'MD5=684b273804e93966ab33126a19b10081'
+            - 'MD5=04edefd2322c55d396e737a52fde127f'
+            - 'MD5=9559ad8c4b674b6d26e888728933fc2b'
+            - 'MD5=66d62669f75297f1ef9c3fc7da023894'
+            - 'MD5=fac9a7be193a8c83dd2a2a6ef6a4a64f'
             - 'MD5=835dd954d9f306f09050fd1751e9e1d2'
+            - 'MD5=7afc060df3d17bbaf4d1d97de5aeb7ab'
+            - 'MD5=7ce755f7bb9b1e6e300baa84e70590f6'
             - 'MD5=4d59cc4dd2c94cdb78e561f3a422e899'
-            - 'SHA1=d80b8c9dfd317c57cbd9c3c6dfacc5b787bac06d'
+            - 'MD5=f92971e1a7c995959af7d55fc66d2341'
             - 'SHA1=e77af2651fb4a4ff0fe80bf838ebe0b76aa8edd4'
-            - 'SHA256=41f604cfc56b101cafba8d12ee7f30409457deb13684091262571f1a6c1ddd07'
+            - 'SHA1=92be49e79b4e2baca13904636a616ab0e3cbb1c3'
+            - 'SHA1=e5b562aa028e978158ad1875c53c09a61832e919'
+            - 'SHA1=7eb76ad802dde690a32877884c45bdaf2bbd0abf'
+            - 'SHA1=d924fc336c8c337196dcdfce81f8fa9bc2ce0885'
+            - 'SHA1=d80b8c9dfd317c57cbd9c3c6dfacc5b787bac06d'
+            - 'SHA1=10abdafa632f5460f1d6da16f250257b30e9f7f7'
+            - 'SHA1=6a9668321104c94bb6f0418e3152cec14d7ce956'
+            - 'SHA1=90c51a1d6a6834437e268811cbf1cdc0cbb21b0e'
+            - 'SHA1=db79da0fd20cab108af2bf98f60fe5b988769417'
+            - 'SHA1=7f1ab2880f8db472db5121bc95d0ddd01e0f52a0'
+            - 'SHA1=63b722ff2bede1e9801648f258a628c8207b460b'
+            - 'SHA1=9384f44413621701be8e99558cc6b77f48808c33'
+            - 'SHA1=15972f940c2e43274e778fce3d3a4f3b981f685c'
+            - 'SHA256=fecfa23abf0d2a7dcf96eed620d8c5c614d61e483c44b3f5d7fccf5cd6498efd'
+            - 'SHA256=084645f99cdb6103ae779228b138e960ce57e21e1e9680d708883278f367350d'
+            - 'SHA256=f21bb1d8cf4ffc60d3ee1435f305a0997bd70fcc3dabf56e9bab2f9a396f2e2d'
+            - 'SHA256=663b248cae58cc25b7dbe32fd3162689244055da5f64f2cb56b00b31bcc04cbb'
+            - 'SHA256=74adbc40526354d688e199a29bc84f72416b7d65a88f4cec925a3e1bbb2fde45'
+            - 'SHA256=c82377f2c1b75afd1503bb494e1b23fc45a4a6b81c7678e4e6cf391ce023ccbb'
+            - 'SHA256=91c9b881a5c1a5aadac1751c7957fcaa2b94691093875048729a551dab65e3df'
+            - 'SHA256=506c8a63ad44737e893385c6ee70e05b30725ec52752c9134842906cf9d14fee'
+            - 'SHA256=87db5659f019a5d909f2310ae09c2cd089f3feee57d1eae3d302fe59eea53c70'
             - 'SHA256=602bef923ddbf2ea7967cedf56866b9db10fb43f0e90a9681cd021f1cddc05c9'
+            - 'SHA256=41f604cfc56b101cafba8d12ee7f30409457deb13684091262571f1a6c1ddd07'
+            - 'SHA256=7d9bb305a98d49658a625f6f12f1c95e291c4fe3aa2ba150fef094b3be6337e3'
+            - 'SHA256=16f25dcae1da288989bfcd43af7a7508550c9c3995f611a576f653e3dbb2b188'
+            - 'SHA256=f743bec7528848f6ae893eff849be21463dc78d2decfd7bcf50f165d2e03f1dd'
             - 'IMPHASH=28d244dd772cc099f1ccc617f46863fc'
     condition: selection_hashes
 falsepositives:

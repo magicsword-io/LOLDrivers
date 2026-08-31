@@ -1,0 +1,31 @@
+title: Driver Load - fekern.sys
+id: 263deedf-2d71-5f0e-9f10-758e60c79534
+status: experimental
+description: |
+    Detects loading of driver fekern.sys via name.
+    Trellix HX Agent fekern.sys 34.x is affected by CVE-2025-14963. The signed FireEye 34.5.0 and 34.8.0 builds tracked here expose the \\Device\\fekern_00 interface. Used as a standalone BYOVD, the vulnerable driver can provide access to LSASS memory and enable local privilege escalation. A fully functioning HX Agent restricts access through tamper protection.
+references:
+    - https://www.loldrivers.io/drivers/8858c9c8-e570-41ed-a5cc-054d9eb51d40/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-14963
+    - https://thrive.trellix.com/s/article/000015100
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\fekern.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

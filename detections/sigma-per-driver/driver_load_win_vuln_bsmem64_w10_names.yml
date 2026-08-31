@@ -1,0 +1,31 @@
+title: Driver Load - BSMEM64_W10.sys
+id: d1a61f2b-817a-5238-870c-7caa61eeb2fc
+status: experimental
+description: |
+    Detects loading of driver BSMEM64_W10.sys via name.
+    Biostar BSMEM64_W10 exposes direct physical-memory and port/PCI access through \Device\BSMEM. IOCTLs 0x226044 and 0x226084 map caller-selected physical addresses with MmMapIoSpace and copy data from or to the mapped region, providing arbitrary physical-memory read and write primitives.
+references:
+    - https://www.loldrivers.io/drivers/685c38ea-6939-4b02-a250-b47dcfecf817/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://documents.trendmicro.com/assets/white_papers/wp-an-in-depth-look-at-windows-kernel-threats.pdf
+    - https://aka.ms/VulnerableDriverBlockList
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bsmem64_w10.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

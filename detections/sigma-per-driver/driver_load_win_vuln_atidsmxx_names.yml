@@ -1,0 +1,31 @@
+title: Driver Load - atidsmxx.sys
+id: ae9883f6-2a58-568d-8c26-0f2b894f7467
+status: experimental
+description: |
+    Detects loading of driver atidsmxx.sys via name.
+    AMD's ATI DSM Dynamic Driver exposes hardware-control IOCTLs through \Device\AtiDCM. The interface accepts caller-controlled MSR indexes for RDMSR operations and exposes PCI/device I/O and physical-address mapping paths. These privileged primitives can disclose hardware state and support kernel-level tampering when the device is accessible from user mode.
+references:
+    - https://www.loldrivers.io/drivers/347d5d79-35e6-4438-885f-57a7c95eeb89/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://nvd.nist.gov/vuln/detail/CVE-2007-4315
+    - https://aka.ms/VulnerableDriverBlockList
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\atidsmxx.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

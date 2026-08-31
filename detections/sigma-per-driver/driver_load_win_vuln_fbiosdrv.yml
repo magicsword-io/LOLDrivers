@@ -1,0 +1,34 @@
+title: Driver Load - fbiosdrv.sys
+id: f0b59d0d-d2b5-52c5-a823-47d5ababd67e
+status: experimental
+description: |
+    Detects loading of driver fbiosdrv.sys via hash.
+    Fujitsu BIOS Driver versions before 2.5.0.0 are affected by CVE-2025-65001. This signed 2.4.0.0 build creates the \\Device\\FBIOSDRV interface. A specially crafted request from a local authenticated administrator can trigger an out-of-bounds write, potentially causing arbitrary kernel code execution or a denial of service.
+references:
+    - https://www.loldrivers.io/drivers/dc82ae79-d3e2-439a-a4c7-ec1f23e1261b/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://jvn.jp/en/vu/JVNVU96854657/index.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-65001
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e202f26b0ff4f8b1b8c99aec91381212'
+            - 'SHA1=3ced179b3223e40d6e0aaab057cacf326dec6bca'
+            - 'SHA256=6e06493619cf1358bd2c5aafd375e78bba233b835e9d9ef21eafee30c23a62d9'
+            - 'IMPHASH=101d843ca78c691d4c6f938158aca795'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

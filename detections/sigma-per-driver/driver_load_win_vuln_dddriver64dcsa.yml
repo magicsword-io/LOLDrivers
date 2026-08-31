@@ -8,6 +8,7 @@ references:
     - https://www.loldrivers.io/drivers/705330b3-5e2c-4c87-ab92-0f01b68b1b2d/
     - https://github.com/magicsword-io/LOLDrivers/issues/325
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag
 date: 2026/04/17
 modified: 2026/08/31
@@ -23,8 +24,11 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=85eca49a1b9d2787c13b2d32b0f693cb'
+            - 'MD5=50007d3a8b5d03dc1828202bc1afae41'
+            - 'SHA1=c1ecfd2e3fb65a9b1a415b2b3ac53ca4f6e4a51d'
             - 'SHA1=558e247370affd7c3f72b98864c1a1a2069ad7b0'
             - 'SHA256=1f46f7a8f414bb1ac9f875799efa4b5f62bd18806c64b17d961007755accb5ab'
+            - 'SHA256=1907ebc1398f8bf40c76065fd5b10872c3e947c051e62bc9feeb7316651aab0d'
             - 'IMPHASH=67965c1ed4aaccae610f743ae2dfb65b'
     condition: selection_hashes
 falsepositives:

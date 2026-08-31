@@ -3,9 +3,11 @@ id: c4d8f51a-65cf-5e45-bc80-ed58a7da65a7
 status: experimental
 description: |
     Detects loading of driver TSDRVX64.sys via hash.
-    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+    Northwave Cyber Security identified TSDRVX64 as a local privilege-escalation vulnerability with a CVSSv3 score of 8.8. Successful exploitation provides kernel-level impact and may enable an attacker to disable security controls or tamper with the operating system.
 references:
     - https://www.loldrivers.io/drivers/424a387e-735e-49d1-99de-f067dcf1c3e9/
+    - https://github.com/elastic/protections-artifacts/blob/main/yara/rules/Windows_VulnDriver_Tsdrvx64.yar
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Northwave Cyber Security
 date: 2024/09/11
 modified: 2026/08/31
@@ -21,7 +23,10 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=0412e9fd6ff7d41f599e878b22b8a9b7'
+            - 'MD5=099b9428dd0f854dad836d18e2091e5f'
             - 'SHA1=fce89640ba51d0e53aea0540d6a18aca0cb8e3a3'
+            - 'SHA1=486d9b1b20e1507f14db964f7957200c2d79c75c'
+            - 'SHA256=15ffa1952b4018e4c07a5caf53d650a792b4872fa806deb8e22ccce69e6def6e'
             - 'SHA256=9bf84b41789b3d5d5622732b5c4f5630da189ede2098b0ce166fcae331178377'
             - 'IMPHASH=c730a86e18ca21521b50355afd4c7cf7'
     condition: selection_hashes

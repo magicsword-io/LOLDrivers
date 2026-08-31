@@ -3,10 +3,12 @@ id: e93f911c-5001-5093-8ab9-e825128fd1ca
 status: experimental
 description: |
     Detects loading of driver AsrDrv106.sys via name.
-    ASRock IO Driver
+    ASRock AsrDrv106 drivers expose physical-memory mapping, contiguous memory allocation, and port-I/O primitives through user-controlled IOCTL handlers, enabling privileged manipulation of kernel memory.
 references:
     - https://www.loldrivers.io/drivers/6a50e368-1120-434b-9232-1a0702c80437/
     - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://aka.ms/VulnerableDriverBlockList
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31

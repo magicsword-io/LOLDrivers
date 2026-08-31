@@ -3,9 +3,12 @@ id: 7c8b273f-5171-560e-b2ca-87b33f087bfe
 status: experimental
 description: |
     Detects loading of driver BioNTdrv.sys via hash.
-    Microsoft has identified five security flaws in the Paragon Partition Manager BioNTdrv.sys driver, one of which was exploited by ransomware gangs in zero-day attacks to gain SYSTEM privileges on Windows systems. These vulnerabilities, found in BioNTdrv.sys versions 1.3.0 and 1.5.1, enable attackers to escalate their privileges to SYSTEM level to a higher access level than standard administrator permissions.
+    Paragon Hard Disk Manager BioNTdrv.sys versions 10.1.x and older, 1.0.0.0, 1.1.0.0, 1.3.0.0, 1.4.0.0, and 1.5.1.0 contain five vulnerabilities that expose arbitrary kernel-memory mapping, write, and move operations, insecure kernel resource access, and a null-pointer dereference. Local attackers can use the affected driver to elevate to SYSTEM or cause a denial of service. CVE-2025-0289 has been observed in ransomware BYOVD attacks. Version 2.0.0 fixes the flaws.
 references:
     - https://www.loldrivers.io/drivers/e6378671-986d-42a1-8e7a-717117c83751/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://kb.cert.org/vuls/id/726882
     - https://www.sdxcentral.com/alerts/paragon-partition-manager-driver-flaws-enable-privilege-escalation-and-dos-attacks/2025/02/
     - https://www.bleepingcomputer.com/news/security/ransomware-gangs-exploit-paragon-partition-manager-bug-in-byovd-attacks/
     - https://paragon-software.zendesk.com/hc/en-us/articles/32993902732817-IMPORTANT-Paragon-Driver-Security-Patch-for-All-Products-of-Hard-Disk-Manager-Product-Line-Biontdrv-sys
@@ -23,13 +26,26 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=525ef6014f0ef20e44fe47c1d9980b69'
             - 'MD5=ef32d203a12462403c205b39eb4eef5b'
-            - 'SHA1=b31a85406ac9a6a69bfbee74d6dc67d9d7bddee6'
+            - 'MD5=bee39ff7c8be071f14d1285596e6c34b'
+            - 'MD5=525ef6014f0ef20e44fe47c1d9980b69'
+            - 'MD5=d2fdad79aa8fc5c66687dc8516cab756'
+            - 'MD5=42e7463e46255bf19b9b540d65ed304c'
+            - 'MD5=414904e1562e3fd9ea5d9539989b3f03'
+            - 'SHA1=3e2b19b7111393987f0f8ba99693baef3ced5d56'
+            - 'SHA1=5cc6394fbfc6ea3638df534e0e069de536899171'
             - 'SHA1=cab45e9d03efa8a09595b99b275caadb8f250811'
+            - 'SHA1=b31a85406ac9a6a69bfbee74d6dc67d9d7bddee6'
+            - 'SHA1=21da44b8390a07dfa88bc3cc3d100b6ee1ce7c6c'
+            - 'SHA1=6ac13b7105b6bab8bfed4fe6f3d218c114aa7474'
+            - 'SHA256=69a9c8f3134130617f3bbe19a7221752d98f029763cd2d9100fec4680333ed16'
             - 'SHA256=fb0dbc3b9c897b7571b94fb2203ffb1ac0facfe366b2cb1f91904ea5335018f0'
+            - 'SHA256=f83560719a0054cb9911811372d0fcb2d8b3704d30c5503cd0aeeccda3dc6b4b'
+            - 'SHA256=6415b01fbe1e2694547c472f3fad6e17ffb33efdfb44a89cbb623cbd4f731f2a'
             - 'SHA256=174c8d771d31d70fc95448e961a395f5ceb7658f0cc381a718fb3b854cde4efe'
+            - 'SHA256=e78f14d0adf4c5599b09d3995f84d265dbea20fc25112a9c3227b7a35910ca90'
             - 'IMPHASH=f4f462bcde0472cb6202214475f889b1'
+            - 'IMPHASH=6dfbd0e495cff008f6a4255e4df45629'
             - 'IMPHASH=1014dd148858e163ab9a4d27d0e3594a'
     condition: selection_hashes
 falsepositives:

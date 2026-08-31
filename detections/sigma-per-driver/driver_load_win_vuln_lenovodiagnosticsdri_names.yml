@@ -3,13 +3,16 @@ id: 6667861d-8bca-5911-8d07-268d18c6b9aa
 status: experimental
 description: |
     Detects loading of driver LenovoDiagnosticsDriver.sys via name.
-    The aforementioned driver has been identified as vulnerable to CVE-2022-3699
+    Lenovo Diagnostics versions before 4.45 are affected by CVE-2022-3699. Public exploit research documents FILE_ANY_ACCESS IOCTLs 0x222010 and 0x222014 in LenovoDiagnosticsDriver.sys that map caller-selected physical addresses and copy values from or to mapped memory. These arbitrary physical-memory read and write primitives allow a low-privileged local user to execute code with elevated privileges.
 references:
     - https://www.loldrivers.io/drivers/81a73e57-2e92-4d21-97d3-1c21eb4c3aea/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
     - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
     - https://nephosec.com/cve-2022-3699-lenovo-diagnostics-driver-eop-arbitrary-r-w/
     - https://github.com/alfarom256/CVE-2022-3699
-    - https://support.lenovo.com/us/en/product_security/LEN-94532
+    - https://support.lenovo.com/us/en/solutions/ps500533-lenovo-diagnostics-vulnerabilities
+    - https://nvd.nist.gov/vuln/detail/CVE-2022-3699
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31

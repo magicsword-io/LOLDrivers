@@ -3,10 +3,12 @@ id: 03799a60-fa68-5563-a346-61d43b56d392
 status: experimental
 description: |
     Detects loading of driver AsrDrv106.sys via hash.
-    ASRock IO Driver
+    ASRock AsrDrv106 drivers expose physical-memory mapping, contiguous memory allocation, and port-I/O primitives through user-controlled IOCTL handlers, enabling privileged manipulation of kernel memory.
 references:
     - https://www.loldrivers.io/drivers/6a50e368-1120-434b-9232-1a0702c80437/
     - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://aka.ms/VulnerableDriverBlockList
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31
@@ -21,10 +23,14 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=7f9c2649000242416349e1e4f0f76955'
             - 'MD5=12908c285b9d68ee1f39186110df0f1e'
             - 'SHA1=b0032b8d8e6f4bd19a31619ce38d8e010f29a816'
+            - 'SHA1=f7d41a8e2f35c555a28875ad99df477b28f9a2ae'
+            - 'SHA256=14c5576eda5a28d476a93c9cdb91236f18573dbd0578ac2bb183dfd115f4a166'
             - 'SHA256=3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838'
             - 'IMPHASH=88e21ed9e717781eaf87209acbdbb567'
+            - 'IMPHASH=3edc8a0f9cf180b3687025e17be537cc'
     condition: selection_hashes
 falsepositives:
     - Unknown

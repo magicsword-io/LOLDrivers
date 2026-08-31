@@ -3,10 +3,14 @@ id: 3399e9c9-af29-5f53-99ed-3ea32179756e
 status: experimental
 description: |
     Detects loading of driver AMDPowerProfiler.sys via hash.
-    AMD Power Profiling Driver
+    AMD uProf AMDPowerProfiler.sys is affected by CVE-2021-26334. Insufficient access control permits lower-privileged callers to access model-specific registers, which can lead to privilege escalation and ring-0 code execution. AMD addresses the issue in the Windows uProf 3.4.494 release.
 references:
     - https://www.loldrivers.io/drivers/9a4fb66e-9084-4b21-9d76-a7afbe330606/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
     - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1016.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2021-26334
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31
@@ -21,10 +25,17 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=e70ab7b9b9929ffd730556555045f3c6'
             - 'MD5=e4266262a77fffdea2584283f6c4f51d'
+            - 'MD5=a39771e8edd0e947aa92e1fef441c5f1'
+            - 'SHA1=fb64b28842c2043214d7f1773cba3d9d5484f77f'
+            - 'SHA1=ca7c1ef1c832149315c8ca349cb1ae1387021c4b'
             - 'SHA1=b480c54391a2a2f917a44f91a5e9e4590648b332'
+            - 'SHA256=5f7bf4e385cd44014f389058411374172ecd79d9066abcbbbc59dd84f89b85fb'
             - 'SHA256=0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05'
+            - 'SHA256=1e6f08a686be2e28469b2d71d8567f2023ddbd65bd65618fc7bbac16d39e04d5'
             - 'IMPHASH=1422b8d354b95d9cd880c8726df45dfc'
+            - 'IMPHASH=dc46830dae0b3da4d2889bb5d44a3f85'
     condition: selection_hashes
 falsepositives:
     - Unknown

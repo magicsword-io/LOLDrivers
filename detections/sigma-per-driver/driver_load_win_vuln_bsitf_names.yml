@@ -3,12 +3,16 @@ id: cf3d397c-df74-5a14-ae94-a9fdbc86eeed
 status: experimental
 description: |
     Detects loading of driver bsitf.sys via name.
-    bsitf.sys is the ASUS BIOS Flash Driver distributed with ASUS WinFlash BIOS update utility. The driver persists on disk after WinFlash completes and exposes physical memory read via MmMapIoSpace (IOCTL 0x222804), physically contiguous kernel memory allocation mapped to usermode via MDL (IOCTL 0x222808), arbitrary I/O port write (IOCTL 0x222810) and read (IOCTL 0x222818), PCI config space read with BAR mapping to usermode (IOCTL 0x222814), and BIOS flash write via MmMapIoSpace (IOCTL 0x22281c). WHQL attestation signed via Microsoft Windows Third Party Component CA 2014. Device SDDL grants full access to Administrators group.
+    bsitf.sys and AsusBSItf.sys are ASUS BIOS Flash Driver naming variants distributed with the ASUS WinFlash utility. The 3.2.12.0 AsusBSItf.sys build exposes physical-memory reads through MmMapIoSpace (IOCTL 0x222804), contiguous kernel-memory allocation mapped to user mode through an MDL (IOCTL 0x222808), arbitrary I/O-port writes and reads (IOCTLs 0x222810 and 0x222818), and PCI configuration-space reads with BAR mapping (IOCTL 0x222814). Public research identifies this low-privilege interface as CVE-2024-33221 and demonstrates its use for privilege escalation, kernel code execution, or information disclosure. Earlier bsitf.sys builds tracked in this record additionally expose BIOS flash writes through IOCTL 0x22281C.
 references:
     - https://www.loldrivers.io/drivers/9905c737-83ad-4801-a573-8267f3aea924/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
     - https://github.com/magicsword-io/LOLDrivers/issues/325
     - https://github.com/magicsword-io/LOLDrivers/pull/332
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-33221
+    - https://github.com/DriverHunter/Win-Driver-EXP/tree/main/CVE-2024-33221
 author: Michael Haag
 date: 2026/04/17
 modified: 2026/08/31

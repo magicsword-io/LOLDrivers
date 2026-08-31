@@ -3,11 +3,15 @@ id: cb65e310-153d-5b2e-b89a-528e4ad64a67
 status: experimental
 description: |
     Detects loading of driver aswArPot.sys via name.
-    Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vulnerable to two high severity attacks that could potentially lead to privilege escalation by running code in the kernel from a non-administrator user.
+    Avast and AVG Anti Rootkit driver aswArPot.sys versions before 22.1 are affected by CVE-2022-26522 and CVE-2022-26523. Double-fetch races in kernel handlers allow a non-administrator user to corrupt kernel memory and execute code in kernel context, enabling local privilege escalation and security-product bypass.
 references:
     - https://www.loldrivers.io/drivers/57fc510a-e649-4599-b83e-8f3605e3d1d9/
     - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-    - CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version 22.1.
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://www.sentinelone.com/labs/vulnerabilities-in-avast-and-avg-put-millions-at-risk/
+    - https://nvd.nist.gov/vuln/detail/CVE-2022-26522
+    - https://nvd.nist.gov/vuln/detail/CVE-2022-26523
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31

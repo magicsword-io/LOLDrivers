@@ -3,11 +3,13 @@ id: 33a0925b-cb71-5957-9833-b95f3728f5c5
 status: experimental
 description: |
     Detects loading of driver WinRing0.sys via name.
-    WinRing0
+    OpenLibSys WinRing0 hardware-access drivers expose MSR, I/O-port, and physical-memory operations to user mode. Attackers can abuse these primitives for kernel-memory access and security-control tampering.
 references:
     - https://www.loldrivers.io/drivers/7bb5ff05-25f8-410d-ae99-c8e8f082d24f/
     - https://github.com/namazso/physmem_drivers
     - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://aka.ms/VulnerableDriverBlockList
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31

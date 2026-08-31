@@ -3,10 +3,13 @@ id: b0fba088-31e7-5be4-92c7-b1b6058e8615
 status: experimental
 description: |
     Detects loading of driver ADRMDRVSYS.sys via hash.
-    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+    ADLINK Resource Manager exposes physical-memory mapping through IOCTL 0x2234D4, allowing low-privilege callers to read kernel memory. The interface has also been weaponized by Blackout Reloaded to terminate protected antimalware processes through a driver path that reaches ZwTerminateProcess.
 references:
     - https://www.loldrivers.io/drivers/48aeea9b-7812-4b25-9835-baaebe7dc551/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
     - https://northwave-cybersecurity.com/vulnerability-notice-adlink-pxi-platform-services?hsLang=en
+    - https://github.com/tijme/blackout-reloaded
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Northwave Cyber Security
 date: 2024/09/11
 modified: 2026/08/31
@@ -21,9 +24,24 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=ceb08040c76342faa29d85c275349302'
+            - 'MD5=ca6367efbebda8123aa7bdaa8f38dff7'
             - 'MD5=b7b961e5052519435626a417cf612b97'
+            - 'MD5=12e1825a3d65c0ba409dac61ac84469d'
+            - 'MD5=eceb8140cc29d5348bcff3bb78f8d1d4'
+            - 'MD5=4f4b41628f7685fec956017686c9ed35'
+            - 'SHA1=a76cf0a0f292bbf61538b9743e80aee1878c06a6'
+            - 'SHA1=3d99a08dfb08f1bd6c30ea393881c1d883842927'
+            - 'SHA1=8bbe29e97cfe32a9da9d532ed8506e646e3f7321'
+            - 'SHA1=843ada80361bd77645af60286405600a86f0eb1f'
+            - 'SHA1=8c922bc8e5070d76098db446f6ebdcbc7c861ce7'
             - 'SHA1=8e879a968846f811ed8d99acee414ffa66d0589f'
+            - 'SHA256=9822ecd5b19022c6db17a0c2bf4a26c00216b456a834371e11ba20323efa7262'
             - 'SHA256=a1f79a2e1441970bb3e7c838f8c14a8f3d39a46b0ff9648614e922ac475c743d'
+            - 'SHA256=edac730a75ed453bdcdfb7ca1dd19cf1e269e9ca59295efb15ca0071c96ed2f5'
+            - 'SHA256=57afe716c49b1a141351b4c24f70d71a688c5ac6d95da8fff348d7f184851a4d'
+            - 'SHA256=fa59c670b2282d870dd4c9920e56419ddfd8f5ab15b24e1b8708aa841439cc91'
+            - 'SHA256=806b9f9967e26bee69843f71a7b76305386ceb231fd57549eabeb6b1652ee07e'
             - 'IMPHASH=eef1bff6680f68ccc7bfea46aaab8210'
     condition: selection_hashes
 falsepositives:

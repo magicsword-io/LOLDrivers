@@ -3,10 +3,13 @@ id: de90b253-b21a-5d17-bf0e-517e48197256
 status: experimental
 description: |
     Detects loading of driver cg6kwin2k.sys via hash.
-    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+    Sangoma cg6kwin2k versions before 2.1.7.0 expose IOCTLs without sufficient access control. A low-privilege user can perform I/O against arbitrary hardware ports or physical addresses, enabling firmware erasure or modification.
 references:
     - https://www.loldrivers.io/drivers/fda3ff67-12dc-488c-a4c2-603f5bf420bd/
     - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+    - https://jvndb.jvn.jp/en/contents/2024/JVNDB-2024-003008.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-29216
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Takahiro Haruyama
 date: 2023/11/02
 modified: 2026/08/31
@@ -22,7 +25,10 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=e3d290406de40c32095bd76dc88179fb'
+            - 'MD5=a82109dc70202686416ba5fdefe667f5'
             - 'SHA1=06ec62c590ca0f1f2575300c151c84640d2523c0'
+            - 'SHA1=f30e4838787e43d035fe2bb1b667f129b45b4452'
+            - 'SHA256=e054f61bb54672b374c6ac0f5d8176407ba43d397bc624ec40e281909724e6c7'
             - 'SHA256=223f61c3f443c5047d1aeb905b0551005a426f084b7a50384905e7e4ecb761a1'
             - 'IMPHASH=6c42ea981bc29a7e2ed56d297e0b56dc'
     condition: selection_hashes

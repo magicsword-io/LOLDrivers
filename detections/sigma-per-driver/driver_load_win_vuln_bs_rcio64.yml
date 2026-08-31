@@ -3,12 +3,14 @@ id: 13fb2695-b390-5c5b-b5bf-439614121efc
 status: experimental
 description: |
     Detects loading of driver BS_RCIO64.sys via hash.
-    I/O Interface driver file
+    BIOSTAR BS_RCIO64_W10 exposes IOCTLs 0x226004 and 0x226008 that map caller-selected physical addresses with MmMapIoSpace and read from or write to the mapped range. Additional IOCTLs expose raw port and PCI configuration access, providing privileged hardware-control primitives suitable for kernel tampering.
 references:
     - https://www.loldrivers.io/drivers/e7c958da-fd5d-40d6-975e-582c6fee7f69/
     - https://github.com/jbaines-r7/dellicious
     - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
     - https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L54
+    - https://nephosec.com/cve-biostar-exploit/
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31
@@ -23,8 +25,11 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=83f77a67e70733496fde17a1792fa33b'
             - 'MD5=b10b210c5944965d0dc85e70a0b19a42'
             - 'SHA1=5db61d00a001fd493591dc919f69b14713889fc5'
+            - 'SHA1=9ffb0e96d1354b04533c70af6c8cd2cbfa5e5db3'
+            - 'SHA256=7c6f16af074c3f1c74fc69734f1c8b8a03b0594ac2085d5a0c582fc8cc378858'
             - 'SHA256=d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e'
             - 'IMPHASH=095c0cdb9c0421da216371c1f4e8790e'
     condition: selection_hashes

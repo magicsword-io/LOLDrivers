@@ -3,11 +3,15 @@ id: ae4ea55f-3270-52f2-953b-f22ae450a1b2
 status: experimental
 description: |
     Detects loading of driver aswArPot.sys via hash.
-    Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vulnerable to two high severity attacks that could potentially lead to privilege escalation by running code in the kernel from a non-administrator user.
+    Avast and AVG Anti Rootkit driver aswArPot.sys versions before 22.1 are affected by CVE-2022-26522 and CVE-2022-26523. Double-fetch races in kernel handlers allow a non-administrator user to corrupt kernel memory and execute code in kernel context, enabling local privilege escalation and security-product bypass.
 references:
     - https://www.loldrivers.io/drivers/57fc510a-e649-4599-b83e-8f3605e3d1d9/
     - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-    - CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version 22.1.
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://www.sentinelone.com/labs/vulnerabilities-in-avast-and-avg-put-millions-at-risk/
+    - https://nvd.nist.gov/vuln/detail/CVE-2022-26522
+    - https://nvd.nist.gov/vuln/detail/CVE-2022-26523
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31
@@ -22,10 +26,18 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=13e5678932fe26a7a7f864acbff40e82'
+            - 'MD5=54d015e3c3f31090db762f0dd5ad43c0'
             - 'MD5=a179c4093d05a3e1ee73f6ff07f994aa'
+            - 'SHA1=090e5427ec21ee0d69f52ed2eb99bb5f806ce7d7'
+            - 'SHA1=be27b16ae4225403c97142e4f91b4b7e95694d60'
             - 'SHA1=5d6b9e80e12bfc595d4d26f6afb099b3cb471dd4'
+            - 'SHA256=421cb64792a32ce79db7c8c07db4fb58bf105e58a7acf3cf1e6b5135e37795cf'
             - 'SHA256=4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1'
+            - 'SHA256=bf5beb8560b85454ded94d2954c446970ab44dc2eeb83d80170ea3a68afa1787'
+            - 'IMPHASH=26150d69f50aa9247c3f3f17521d18a2'
             - 'IMPHASH=3702511999371bac8982d01820dd70f2'
+            - 'IMPHASH=e951e0b26d5c36b13f3da573ac4c7b54'
     condition: selection_hashes
 falsepositives:
     - Unknown

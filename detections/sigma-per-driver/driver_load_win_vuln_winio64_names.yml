@@ -3,11 +3,13 @@ id: 1ea5c75d-897a-5207-ac21-993d1b5f294d
 status: experimental
 description: |
     Detects loading of driver WinIo64.sys via name.
-    WinIo64.sys is a hardware access driver based on the WinIo library that provides direct physical memory access and I/O port operations from usermode. The driver maps the \Device\PhysicalMemory section object to user space via ZwOpenSection and ZwMapViewOfSection (IOCTL 0x80102040), with corresponding unmap (IOCTL 0x80102044), and provides arbitrary I/O port read (IOCTL 0x80102050) and write (IOCTL 0x80102054) in byte, word, and dword widths. Physical address translation via HalTranslateBusAddress is also available. WHQL attestation signed via Microsoft Windows Third Party Component CA 2014. Distributed by multiple OEM utilities and heavily abused in the wild with 61 malicious execution parents on VT including malware droppers and BYOVD tools. Used by KDU (Kernel Driver Utility) as a provider.
+    WinIo64 is a hardware-access driver based on the WinIo library that provides direct physical-memory mapping and I/O-port operations from user mode. Its IOCTL interface exposes physical-memory map and unmap, I/O-port read and write, and physical-address translation primitives that are repeatedly incorporated into BYOVD tooling.
 references:
     - https://www.loldrivers.io/drivers/96501e5b-e4f2-41a9-a8ee-d09e36d31a39/
     - https://github.com/magicsword-io/LOLDrivers/issues/222
     - https://github.com/hfiref0x/KDU
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://aka.ms/VulnerableDriverBlockList
 author: Michael Haag
 date: 2026/04/22
 modified: 2026/08/31

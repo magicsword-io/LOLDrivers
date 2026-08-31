@@ -3,12 +3,13 @@ id: cb1c0c8b-0f0e-5405-aefa-70999fa73a44
 status: experimental
 description: |
     Detects loading of driver AMDRyzenMasterDriver.sys via name.
-    AMD Ryzen Master Service Driver
+    AMD Ryzen Master drivers affected by CVE-2023-20564 insufficiently validate IOCTL input buffers. A privileged caller can read or write memory through the exposed interface, potentially enabling arbitrary kernel execution.
 references:
     - https://www.loldrivers.io/drivers/13973a71-412f-4a18-a2a6-476d3853f8de/
     - Internal Research
     - https://github.com/elastic/protections-artifacts/search?q=AMDRyzenMasterDriver
     - https://github.com/NtGabrielGomes/CVE-2023-20564
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag, Nasreddine Bencherchali
 date: 2023/01/09
 modified: 2026/08/31

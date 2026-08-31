@@ -1,0 +1,48 @@
+title: Driver Load - PGPwded.sys
+id: 52c98a0c-59ec-5c2e-a9e6-8677c37b7b53
+status: experimental
+description: |
+    Detects loading of driver PGPwded.sys via hash.
+    PGPwded.sys in Symantec Encryption Desktop and Symantec Endpoint Encryption is affected by CVE-2019-9702. The storage filter exposes raw-disk read and write IOCTLs 0x8002206C and 0x80022070. Public research shows that a low-privileged user can reach these operations through a trusted PGP process, overwrite sectors backing protected system files, and gain SYSTEM execution after reboot. Symantec Encryption Desktop is affected in all versions and Symantec Endpoint Encryption is affected before 11.3.0.
+references:
+    - https://www.loldrivers.io/drivers/1a0fab94-f4a7-48c2-a2f4-72d19c382642/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/0/0/symsa1485
+    - https://nvd.nist.gov/vuln/detail/CVE-2019-9702
+    - https://github.com/DavidCarliez/CVE-2019-9702_Symantec_Encryption_Desktop_LPE_PoC
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=99e8631183314b2bd136de34c02c7b09'
+            - 'MD5=ef4d6fa6679fc8dfa9d223408124c884'
+            - 'MD5=555705000dd726b10432d3bcf9e36c54'
+            - 'MD5=cf433fa0463e9fba56102bc1436ef7f3'
+            - 'MD5=e7bc75d787e88ca7b6b3797ea8c4f376'
+            - 'SHA1=8148913cb9a748b8d9d1ad5863e8075ceee6f10f'
+            - 'SHA1=33caf07739768023bf156cde226bd4d0ec85e864'
+            - 'SHA1=72602fe173a375988b5c3d3a1bbb956fd8fe1f08'
+            - 'SHA1=1c13bc569c84a0616fad95bc65d63216e1169523'
+            - 'SHA1=48f0e0856707e7cb82fd4e962dcac02a8625d8e0'
+            - 'SHA256=2bb84d2b3af3d9ee0f2dbcdfe3574a5c576bc2c7dd2a5b3dbcb7784fbc9efec6'
+            - 'SHA256=90c7fe509129a8095319c3d4ce7e867f503321a1d41d23b674dcf2adfd7424fa'
+            - 'SHA256=6dd193dd6d60f08482a85e23d3c434f540fd38488281aea0f87ec5e9a1a8e4d9'
+            - 'SHA256=02579d833200abb641e476468bafd1f07d448f3d232f70cc34e2adad402b5c75'
+            - 'SHA256=5247d4ab237e8fc486ce95d018bd92074b2a8cf1af351cd699a5b4a9355c7071'
+            - 'IMPHASH=a4359099176fcbc68e8bf3089cb9a264'
+            - 'IMPHASH=e676b7c75a8af537e52df8305bcb16c7'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

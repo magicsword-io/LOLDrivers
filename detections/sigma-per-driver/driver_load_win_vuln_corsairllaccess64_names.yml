@@ -3,10 +3,13 @@ id: 19778803-2be3-5633-97df-1ad8f33d9b3a
 status: experimental
 description: |
     Detects loading of driver CorsairLLAccess64.sys via name.
-    Corsair LL Access
+    Corsair LL Access 1.0.22.0 maps caller-selected physical addresses with MmMapIoSpace and can expose the mapped pages to user mode through MmMapLockedPagesSpecifyCache. These physical-memory access primitives can be abused for kernel tampering by an attacker able to load and open the driver.
 references:
     - https://www.loldrivers.io/drivers/a9d9cbb7-b5f6-4e74-97a5-29993263280e/
     - Internal Research
+    - https://github.com/magicsword-io/LOLDrivers/issues/302
+    - https://nvd.nist.gov/vuln/detail/CVE-2020-8808
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Nasreddine Bencherchali
 date: 2023/05/06
 modified: 2026/08/31

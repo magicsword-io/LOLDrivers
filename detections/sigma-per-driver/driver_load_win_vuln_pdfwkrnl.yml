@@ -7,6 +7,7 @@ description: |
 references:
     - https://www.loldrivers.io/drivers/ed27c0b8-6177-4132-a7af-5c15bcb386f3/
     - https://www.welivesecurity.com/en/eset-research/edr-killers-explained/
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag
 date: 2026/03/20
 modified: 2026/08/31
@@ -22,8 +23,11 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=b96d75a000367c200958089728fc5cb8'
+            - 'MD5=546b6f66c3ba0115ab13233e2504bd38'
             - 'SHA1=f329ae0fdf1e198bea6ba787e59cb73f90714002'
+            - 'SHA1=62f3f7101d02c9c612b1175dc9e4a1c2f8fcde71'
             - 'SHA256=6e8b49cf70bf854e8c59c7d27cefa89406caf8978461190dabb86dafcd8554e1'
+            - 'SHA256=e9745f1791b2a6374711756e89c7bf2864e52f9ff467974f2f7bdc667f9f28c6'
             - 'IMPHASH=3f4c9025125027e307b7e52dd577303b'
     condition: selection_hashes
 falsepositives:

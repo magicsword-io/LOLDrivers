@@ -1,0 +1,33 @@
+title: Driver Load - pskmad_64.sys
+id: e1ec6e1b-18f6-59f4-a58f-28434dcfff3d
+status: experimental
+description: |
+    Detects loading of driver pskmad_64.sys via name.
+    Panda Kernel Memory Access Driver versions through 1.1.0.21 are affected by CVE-2023-6330, CVE-2023-6331, and CVE-2023-6332. This signed 1.0.0.17 build exposes the \\Device\\PSMEMDriver interface and handles IOCTL 0xB3702C08, which can trigger an out-of-bounds write or disclose arbitrary kernel memory because request data and memory ranges are not adequately validated. The flaws can cause a system crash, leak sensitive kernel data, and may support kernel code execution when chained with another weakness.
+references:
+    - https://www.loldrivers.io/drivers/c67ad48b-223e-40f8-bfc7-0cb904d0a3d7/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://www.sophos.com/en-us/blog/multiple-vulnerabilities-discovered-in-widely-used-security-driver
+    - https://www.watchguard.com/wgrd-psirt/advisory/wgsa-2024-00001
+    - https://www.watchguard.com/wgrd-psirt/advisory/wgsa-2024-00002
+    - https://www.watchguard.com/wgrd-psirt/advisory/wgsa-2024-00003
+author: Michael Haag
+date: 2026/08/31
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\pskmad_64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

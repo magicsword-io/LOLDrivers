@@ -3,10 +3,11 @@ id: e296eb1e-47b0-52a6-b63e-b3feaf158a16
 status: experimental
 description: |
     Detects loading of driver asmmap64.sys via name.
-    Memory mapping Driver
+    ASUS asmmap64 is a memory-mapping driver that exposes physical-memory mapping to user mode. A privileged caller can abuse the interface to read or modify kernel and physical memory.
 references:
     - https://www.loldrivers.io/drivers/d0048840-970f-4ad5-9a07-1d39469d721f/
     - https://github.com/namazso/physmem_drivers
+    - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/08/31
