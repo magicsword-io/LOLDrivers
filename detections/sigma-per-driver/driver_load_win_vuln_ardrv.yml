@@ -3,11 +3,13 @@ id: 0bca9b05-6719-561d-8d9f-bb89231bb623
 status: experimental
 description: |
     Detects loading of driver ardrv.sys via hash.
-    OPSWAT AppRemover ardrv.sys version 2017.10.02.1551 and earlier exposes a user-accessible \\.\ardrv device. Public research documents IOCTL 0x2420031 reaching process-termination paths, including ZwTerminateProcess, without sufficient caller or target validation. This allows local users to terminate arbitrary processes, including security tooling, and makes the driver useful in BYOVD-style defense impairment after it is loaded.
+    OPSWAT AppRemover ardrv.sys version 2017.10.02.1551 and earlier exposes a user-accessible \\.\ardrv device. Public research documents IOCTL 0x2420031 reaching process-termination paths, including ZwTerminateProcess, without sufficient caller or target validation. This allows local users to terminate arbitrary processes, including security tooling, and makes the driver useful in BYOVD-style defense impairment after it is loaded. Acronis observed the tracked ardrv.sys variant in an August 2026 campaign where it was used to terminate Microsoft Defender, Huorong, and Tencent security processes before SparkRAT deployment.
 references:
     - https://www.loldrivers.io/drivers/9eb0156e-4c43-487f-be8c-40a7b19a4279/
     - https://github.com/redteamfortress/CVE-2026-36425
     - https://github.com/magicsword-io/LOLDrivers/issues/374
+    - https://www.acronis.com/en/tru/posts/cambodia-focused-cluster-uses-multi-stage-infection-chain-with-localized-lures/
+    - https://github.com/redteamfortress/CVE-2026-36425/tree/main/Drivers
 author: Michael Haag
 date: 2026/06/19
 modified: 2026/08/31
@@ -22,9 +24,55 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=78518c0636da8f3bf1bbeefbeb2b4920'
+            - 'MD5=630c1751ae29f3e1a127afcbcfa7c4d7'
+            - 'MD5=75f0123d41e16a14f98c47a2d40bce68'
+            - 'MD5=3c06828180ffe41164bf353c97c813bb'
+            - 'MD5=50390455e92fb62cbe6a89dbb61037c2'
+            - 'MD5=c8078d9e8bc13f562631c2a742b42c39'
+            - 'MD5=400dadc6b2cedba270fd1e2ff8295813'
             - 'MD5=826c6d2e3d80f2d43f7977f998525ad3'
+            - 'MD5=e62c7582ecc0f5a9694f02374c0014ed'
+            - 'MD5=3226c85fee6897a798a566aeb9d0b2f0'
+            - 'MD5=1569d08f94cca34993ae1ccb763de7d0'
+            - 'MD5=a21bc9c04bd840d655bfcd274cc84e40'
+            - 'MD5=77bdf1dada2014c98e4e50b2765fbd05'
+            - 'MD5=099b1f700fbe9d6cebe21e6edd24ba80'
+            - 'MD5=e03e68542ce64a1922794f497faeb861'
+            - 'MD5=567f0e5ba3865b0c3af7083ca02794d9'
             - 'SHA1=7340eae2ccf3d57ac3ae271c9983996d8ae7fde0'
+            - 'SHA1=4e367bb25124c2e45579f267a0fb01bcc3fc3f3b'
+            - 'SHA1=b02ad9271e5410dfd7edd03d50469997ea54a8b2'
+            - 'SHA1=99f6eee59a77b479cc4fb6e9007a1294cab8d9f7'
+            - 'SHA1=de016290d02e6fb438950da38311c0309909e67c'
+            - 'SHA1=ff7d6a3f9d7534cf822759950a03da312e5e6536'
+            - 'SHA1=590df795c95b229360abb5cd1d83c1eaef755e01'
+            - 'SHA1=b2f72854bbef8ef1b7be7fa9f5a5967a0161d001'
+            - 'SHA1=4efb248e4330ead57850ed81f249c54af783e88b'
+            - 'SHA1=1583390bdd47357cf81d116d449f882b908348cb'
+            - 'SHA1=5971b2b204b2e60dc8c4727833c99decac11a714'
+            - 'SHA1=70b09d5ae1b0e6c5cb2e05e2587f11baba8d2292'
+            - 'SHA1=11e24f2debc92df1dd0574a7de14ae7903b1ca5f'
+            - 'SHA1=029430fcfc45dc1fda080af6b429e5f48fc8216f'
+            - 'SHA1=19a7c0f3bd57e289c3522b0ec94df86dc051145f'
+            - 'SHA1=da57a16315d9e9c7bd426cc69bbb0427874b52d7'
+            - 'SHA256=1c5129b4d63f2d5252b5b02a0a7d655dac3b6eac23dd4ed92b4dd55f243387ff'
+            - 'SHA256=9f326ede322930a7d5e149fa8720802b0623c1972dc54e41a2a73608fb6810dd'
+            - 'SHA256=34ad901b4fea05da301ebb619fa48cfac058720e41db71b3fca1c47763bae066'
+            - 'SHA256=4d07b6423f4d5d80d2daec8faed7ecc40855339bee95c26289179c1fd083078e'
             - 'SHA256=07c5209bf83065fe760f4fee4ed2308b0c523671f68ca73a3854c2c8c28c0541'
+            - 'SHA256=6b208ce68ba3f6c788bd89ba677ebf1c2407a55f9f43a42ea7207635634baf66'
+            - 'SHA256=d82108e6578f4866d7114d6847282c04f0b146809bc66ded3300fe993b42d20f'
+            - 'SHA256=e3cb9f52a4fde53fc886dc35d41bb36e8b993c74826389d22440b92d94480a6d'
+            - 'SHA256=4574cf50dbe2fbce849881e8875297753ce2e240c312e01b3b461d80df063bbe'
+            - 'SHA256=7504887e1e195ad585cffa5b6a5034161a7cc49f351123d60def79302bdb8326'
+            - 'SHA256=551254a5e59df92e6049867162633e3e476cdf5999d05c3e23a57c98be03f475'
+            - 'SHA256=0b4c5a2d24810748de8ce6fb3d6a3e8acd0305272d6425fa054632410d23ec80'
+            - 'SHA256=59080957de2519f5013be8ccf0b9012dc97ad692e69578cb3f60148c528bdbb1'
+            - 'SHA256=7b3f8fa5844d829142002d47c2df8573c7d67defe4171414c6a015a38afe55f5'
+            - 'SHA256=33233988d8c735fdf1162e043ed1e6fff62e7d6102c5bd300561d71fd32526f3'
+            - 'SHA256=75454a8583ea2a5b6c7711e9bf32c61b8a7e902f5c429fcbe36673ccc076e910'
+            - 'IMPHASH=a7bb9c93850e96a3893e41efd0986b3b'
             - 'IMPHASH=04becf2aed91570c44993f040922303d'
     condition: selection_hashes
 falsepositives:

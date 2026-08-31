@@ -1,0 +1,32 @@
+title: Driver Load - HP_SWTOOLS_DRIVER.sys
+id: 6a6d2da9-a6ae-5528-b80f-91dcae48a50b
+status: experimental
+description: |
+    Detects loading of driver HP_SWTOOLS_DRIVER.sys via hash.
+    HP_SWTOOLS_DRIVER exposes privileged CPU and memory operations through the \\.\HP_WKS_SWTOOLS_DRIVER device. Static analysis confirms IOCTLs for MSR read and write, performance-counter access, physical/MMIO mapping and read/write, PCI configuration access, port I/O, and a CPU-halt path. A standard user can reach the device after an administrator installs the driver.
+references:
+    - https://www.loldrivers.io/drivers/19f13965-7078-4c19-a2e3-71ab8b77a9b7/
+    - https://github.com/10fax01/HP_SWTOOLS_DRIVER
+    - https://github.com/magicsword-io/LOLDrivers/issues/401
+author: Faxs
+date: 2026/08/29
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c3c0be3d23dac6698ba12cea5d7b2dd8'
+            - 'SHA1=528c24f0b3424598843937c10f97ee37dbb07109'
+            - 'SHA256=bf07c46effde8b6b0fd3c9586a5a9636800fb37418c1e8e606c67cb613cbf832'
+            - 'IMPHASH=367517ad3d7699009eb23e8b62c3d5d5'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

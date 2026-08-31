@@ -3,11 +3,13 @@ id: 3f8bbf8d-b2b2-55a2-8f0d-b35405e92e61
 status: experimental
 description: |
     Detects loading of driver ardrv.sys via name.
-    OPSWAT AppRemover ardrv.sys version 2017.10.02.1551 and earlier exposes a user-accessible \\.\ardrv device. Public research documents IOCTL 0x2420031 reaching process-termination paths, including ZwTerminateProcess, without sufficient caller or target validation. This allows local users to terminate arbitrary processes, including security tooling, and makes the driver useful in BYOVD-style defense impairment after it is loaded.
+    OPSWAT AppRemover ardrv.sys version 2017.10.02.1551 and earlier exposes a user-accessible \\.\ardrv device. Public research documents IOCTL 0x2420031 reaching process-termination paths, including ZwTerminateProcess, without sufficient caller or target validation. This allows local users to terminate arbitrary processes, including security tooling, and makes the driver useful in BYOVD-style defense impairment after it is loaded. Acronis observed the tracked ardrv.sys variant in an August 2026 campaign where it was used to terminate Microsoft Defender, Huorong, and Tencent security processes before SparkRAT deployment.
 references:
     - https://www.loldrivers.io/drivers/9eb0156e-4c43-487f-be8c-40a7b19a4279/
     - https://github.com/redteamfortress/CVE-2026-36425
     - https://github.com/magicsword-io/LOLDrivers/issues/374
+    - https://www.acronis.com/en/tru/posts/cambodia-focused-cluster-uses-multi-stage-infection-chain-with-localized-lures/
+    - https://github.com/redteamfortress/CVE-2026-36425/tree/main/Drivers
 author: Michael Haag
 date: 2026/06/19
 modified: 2026/08/31

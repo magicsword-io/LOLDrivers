@@ -3,11 +3,14 @@ id: 3a6a6bad-c0ca-5d8d-9fd4-da8190e9d85a
 status: experimental
 description: |
     Detects loading of driver xhunter1.sys via hash.
-    Wellbia xhunter1.sys is an XIGNCODE3 anti-cheat kernel component documented by BlackSnufkin BYOVD research as CVE-2026-3609. The legacy build exposes command paths that can be abused to interfere with target process handles and terminate protected security processes from kernel context.
+    Wellbia xhunter1.sys is an XIGNCODE3 anti-cheat kernel component affected by CVE-2026-3609 through version 2023.12.7.78. Public research demonstrates that its unauthenticated command channel can expose protected-process handles, read cross-process memory, terminate security processes, elevate privileges, and inject code from kernel context.
 references:
     - https://www.loldrivers.io/drivers/96ba5e53-6a40-4813-b6f1-ccce31a883cf/
     - https://github.com/BlackSnufkin/BYOVD/tree/main/Xhunter1-Killer
     - https://web.archive.org/web/20180820182619/https://x86.re/blog/xigncode3-xhunter1.sys-lpe/
+    - https://blacksnufkin.github.io/posts/Hunting-the-Hunter/
+    - https://github.com/BlackSnufkin/AxHunter
+    - https://www.cve.org/CVERecord?id=CVE-2026-3609
 author: Michael Haag
 date: 2026/06/16
 modified: 2026/08/31
@@ -22,9 +25,13 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=01d01adc1241c8f0a4caf6764439679c'
             - 'MD5=c61c16de83acabd35ee18e410c1c37c1'
+            - 'SHA1=722a040af40397626f701b7e02ef3a6715c8259a'
             - 'SHA1=852049ecfd6a42370f2d6ed0d5e67e52c8d88211'
             - 'SHA256=e727d0753d2cd0b2f6eeba4cea53aa10b3ff3ed2afeb78f545fcf6d840f85c3e'
+            - 'SHA256=0d1fd685dc98d0c193529df3ddde7144d839f56b7b38251fd7039c33c0fcf760'
+            - 'IMPHASH=1b6804e310b6be3b3a4fd962cf3e7973'
             - 'IMPHASH=49fb0d422e6e128d1184af793f7f8c79'
     condition: selection_hashes
 falsepositives:

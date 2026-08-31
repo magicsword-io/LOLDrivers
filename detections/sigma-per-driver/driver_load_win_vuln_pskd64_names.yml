@@ -1,0 +1,30 @@
+title: Driver Load - PSKD64.SYS
+id: 4e34b9ff-4be7-5a60-bcb9-8a67b857e4ee
+status: experimental
+description: |
+    Detects loading of driver PSKD64.SYS via name.
+    APSoft PCIScope's PSKD64 driver exposes memory-access operations through \\.\PSKD64. IOCTL 0x220044 dispatches sub-operations 0x701E and 0x701F for caller-selected virtual or physical memory reads and writes without constraining the target address. Public testing demonstrates arbitrary kernel read/write on Windows 11, including process protection removal and security-process termination.
+references:
+    - https://www.loldrivers.io/drivers/7789e9ca-8508-486b-9d77-7497c5c61474/
+    - https://www.tssc.de/site/products/tools/pciscope
+    - https://www.tssc.de/site/download/prods/pciscope.exe
+    - https://github.com/magicsword-io/LOLDrivers/issues/408
+author: Venexy
+date: 2026/08/29
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\pskd64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

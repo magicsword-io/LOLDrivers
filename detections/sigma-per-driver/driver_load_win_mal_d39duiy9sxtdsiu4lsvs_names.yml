@@ -1,0 +1,28 @@
+title: Driver Load - d39DuiY9sxtDSiu4LSvS.sys
+id: f9c2b3ea-1af9-53db-bdca-36557458b3e0
+status: experimental
+description: |
+    Detects loading of driver d39DuiY9sxtDSiu4LSvS.sys via name.
+    This purpose-built kernel loader creates the \\.\wifis device and accepts encrypted PE images through IOCTL 0x222000. Its worker thread decrypts input with an RC4-like routine using the embedded key dsmjklsafbv, manually maps the supplied PE image, resolves imports and relocations, and transfers execution to the unsigned payload in kernel memory.
+references:
+    - https://www.loldrivers.io/drivers/3207f14b-a66c-4d5e-a5d5-2467ffd58265/
+    - https://github.com/magicsword-io/LOLDrivers/issues/400
+author: wwwab
+date: 2026/08/29
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\d39duiy9sxtdsiu4lsvs.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

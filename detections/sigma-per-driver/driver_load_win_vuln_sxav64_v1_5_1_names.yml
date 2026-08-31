@@ -1,0 +1,28 @@
+title: Driver Load - sxav64-v1.5.1.sys
+id: 930f67c1-c700-54bc-bc46-0b10e2f1100a
+status: experimental
+description: |
+    Detects loading of driver sxav64-v1.5.1.sys via name.
+    The signed SXClient sxav.sys security driver processes an SXBOOTDB boot configuration whose integrity is protected only by an unkeyed MD5 digest. Public research demonstrates that an administrator can generate a valid configuration containing arbitrary absolute paths, point the service to it, and have the kernel driver delete those files during the next boot. The primitive can be abused to remove security-product files that are otherwise locked while Windows is running.
+references:
+    - https://www.loldrivers.io/drivers/b1f406cd-117a-45bb-97db-3f9ecb44f70d/
+    - https://github.com/wwwab123/Sxav_ZwDeleteFile_BYOVD
+author: Michael Haag
+date: 2026/08/28
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sxav64-v1.5.1.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -6,7 +6,7 @@ description: |
     NetEase NeacSafe64.sys is an anti-cheat mini-filter driver referenced by KDU and public NeacController research. Versions prior to 1.0.0.8 expose IOCTL/message-handler paths that provide arbitrary kernel read/write primitives and can be chained for SYSTEM privilege escalation or kernel-mode code execution.
 references:
     - https://www.loldrivers.io/drivers/d474d8ad-14d9-4664-addd-86b4a9b7a1a5/
-    - https://github.com/smallzhong/NeacController
+    - https://github.com/za233/NeacController
     - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
 author: Michael Haag
 date: 2026/06/16

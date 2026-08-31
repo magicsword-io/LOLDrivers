@@ -1,0 +1,33 @@
+title: Driver Load - xhunter2.sys
+id: c0361f6e-ed45-5061-a06c-97bddcceadd0
+status: experimental
+description: |
+    Detects loading of driver xhunter2.sys via hash.
+    Wellbia xhunter2.sys version 2026.6.1.192 is an XIGNCODE3 anti-cheat kernel component affected by CVE-2026-15430. Public research demonstrates bypasses for its module, caller, and request authentication layers, exposing privileged command paths for cross-process memory access, protected-process handle creation, process termination, local privilege escalation, and kernel-assisted code injection.
+references:
+    - https://www.loldrivers.io/drivers/ed3abb66-c577-44b8-89fa-80d300c82373/
+    - https://blacksnufkin.github.io/posts/Hunting-the-Hunter-II/
+    - https://github.com/BlackSnufkin/AxHunter
+    - https://www.cve.org/CVERecord?id=CVE-2026-15430
+author: Michael Haag
+date: 2026/08/28
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9976ae79fb3887e0243dc159b2b68a48'
+            - 'SHA1=fb2dc9c59b8dfcf040b42f7d5eb41eb7b12852fb'
+            - 'SHA256=44cefb0b3b6516e6731de09a3e2e0eb8b98b02cc3fdf7bb4b22680e93f3cde1e'
+            - 'IMPHASH=adbf77a9144f66e2953ee1e6ed60c41c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

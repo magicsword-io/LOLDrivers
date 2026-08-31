@@ -1,0 +1,30 @@
+title: Driver Load - kernel_utility_driver64.sys
+id: 9bd2728b-f8ef-5f8e-b72e-ddff36c9e97e
+status: experimental
+description: |
+    Detects loading of driver kernel_utility_driver64.sys via name.
+    Huorong Security identified these WHCP-signed kernel drivers in Vaultify rogueware. After a challenge-response exchange, the driver accepts a target driver name and removes process-creation callbacks registered by that driver. This strips callback-based antivirus and EDR visibility from kernel context. Public analysis reproduced the behavior in both the 32-bit and 64-bit builds.
+references:
+    - https://www.loldrivers.io/drivers/c7f94129-f95f-4848-b1ab-68aae24275e7/
+    - https://github.com/magicsword-io/LOLDrivers/issues/398
+    - https://bbs.huorong.cn/thread-163244-1-1.html
+    - https://github.com/wwwab123/Tjbxld_Drv_CreateProcessCallbacksKiller_BYOVD
+author: Michael Haag
+date: 2026/08/28
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kernel_utility_driver64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

@@ -1,0 +1,32 @@
+title: Driver Load - giveio.sys
+id: 1570665b-b067-504a-ad8f-2b55652913fb
+status: experimental
+description: |
+    Detects loading of driver giveio.sys via hash.
+    The 32-bit giveio driver bundled with SpeedFan creates the \\.\giveio device and handles IRP_MJ_CREATE by applying a zeroed 8 KiB I/O permission map to the opening process through Ke386IoSetAccessProcess and Ke386SetIoAccessMap. This grants unrestricted direct access to all x86 I/O ports without validating the caller.
+references:
+    - https://www.loldrivers.io/drivers/50bbae3f-f6d8-4881-8fd7-a70002d52841/
+    - https://github.com/magicsword-io/LOLDrivers/issues/407
+    - https://www.almico.com/speedfan.php
+author: impudent
+date: 2026/08/29
+modified: 2026/08/31
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=77ebf3e9386daa51551af429052d88d0'
+            - 'SHA1=bd4f3e24f531e974fbaac43381120b42e804fbaf'
+            - 'SHA256=94c3294bb9e14b07448734ae65b37801d3ff15bec987d182a929a017fef7b276'
+            - 'IMPHASH=b5986408bbf7e1b5028742a5d8adac66'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
