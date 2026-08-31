@@ -15,6 +15,9 @@ Commands:
   Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
+- https://github.com/Haider303/trinity-2.0-lpe
+- https://medium.com/@haider303mustafa/teaccess-sys-adv64drv-sys-phymem-sys-kaslr-bypass-to-system-token-theft-69441310b7f4
+- https://github.com/magicsword-io/LOLDrivers/issues/395
 Detection:
 - type: BlockRule
   value: https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules

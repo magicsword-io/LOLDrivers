@@ -1,0 +1,84 @@
+Id: 50bbae3f-f6d8-4881-8fd7-a70002d52841
+Tags:
+- giveio.sys
+Verified: 'TRUE'
+Author: impudent
+Created: '2026-08-29'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create giveio binPath= C:\windows\temp\giveio.sys type= kernel &&
+    sc.exe start giveio
+  Description: The 32-bit giveio driver bundled with SpeedFan creates the \\.\giveio
+    device and handles IRP_MJ_CREATE by applying a zeroed 8 KiB I/O permission map
+    to the opening process through Ke386IoSetAccessProcess and Ke386SetIoAccessMap.
+    This grants unrestricted direct access to all x86 I/O ports without validating
+    the caller.
+  Usecase: Grant a user-mode process unrestricted access to hardware I/O ports.
+  Privileges: Administrator required to install; opening the device grants port access
+    without an additional caller check
+  OperatingSystem: 32-bit Windows NT, Windows 2000, Windows XP
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/407
+- https://www.almico.com/speedfan.php
+Detection: []
+Acknowledgement:
+  Person: impudent
+  Handle: '@dsavxc'
+KnownVulnerableSamples:
+- Filename: giveio.sys
+  MD5: 77ebf3e9386daa51551af429052d88d0
+  SHA1: bd4f3e24f531e974fbaac43381120b42e804fbaf
+  SHA256: 94c3294bb9e14b07448734ae65b37801d3ff15bec987d182a929a017fef7b276
+  Imphash: b5986408bbf7e1b5028742a5d8adac66
+  Authentihash:
+    MD5: 196f8a68da8632173d1243354d124484
+    SHA1: bdd62bb96cda70580b9a0abec86432fb1cdf7f60
+    SHA256: daf4d9df4b1e64ca7c800500a7f290b9af5fdc5c63c5afadb7d6630480688ddc
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 5.451405826272336
+      Virtual Size: '0x168'
+    .rdata:
+      Entropy: 2.073478759373367
+      Virtual Size: '0x54'
+    .data:
+      Entropy: 2.3039580038764
+      Virtual Size: '0x4a'
+    .idata:
+      Entropy: 4.5908291157247785
+      Virtual Size: '0x192'
+    .reloc:
+      Entropy: 3.327969535943128
+      Virtual Size: '0x48'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '1996-04-03 19:33:25'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: I386
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoGetCurrentProcess
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - MmFreeNonCachedMemory
+  - Ke386SetIoAccessMap
+  - Ke386IoSetAccessProcess
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - MmAllocateNonCachedMemory
+  Signatures: {}
