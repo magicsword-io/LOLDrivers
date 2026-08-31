@@ -1,0 +1,248 @@
+Id: 300cdb55-6e01-4365-83e5-5783be2f9262
+Tags:
+- snxpsamd.sys
+- SUNIX Serial Driver
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-08-31'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create snxpsamd type= kernel binPath= C:\\windows\\temp\\snxpsamd.sys
+    && sc.exe start snxpsamd
+  Description: SUNIX Serial Driver x64 version 10.1.0.0 is affected by CVE-2024-55412.
+    This exact signed build exposes raw I/O-port operations to low-privilege callers
+    through IOCTLs including 0x9C403C04 and 0x9C403C08. An attacker can use the unrestricted
+    port read/write primitives to disclose information, tamper with privileged hardware
+    state, and elevate privileges.
+  Usecase: Read and write arbitrary I/O ports
+  Privileges: User
+  OperatingSystem: Windows
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/409
+- https://github.com/fluffycats31/vulnerable-drivers
+- https://nvd.nist.gov/vuln/detail/CVE-2024-55412
+- https://github.com/heyheysky/vulnerable-driver/blob/master/CVE-2024-55412/CVE-2024-55412_snxpsamd.sys_README.md
+Detection: []
+Acknowledgement:
+  Person: fluffycats31
+  Handle: '@fluffycats31'
+KnownVulnerableSamples:
+- Filename: snxpsamd.sys
+  MD5: fc673f2b36cc141869db00db309587d2
+  SHA1: bcab4386a9b39f26ee4ae4672b2e3425337c94aa
+  SHA256: 1eaaa7dd2f187a5f25600f6fc6c8f0b905d9e6aeacd0803643ae58367354a513
+  Imphash: 2219562fa87532a62ce10bd50c4c17be
+  Authentihash:
+    MD5: e7590f6ee66a992893b06dc6f2112008
+    SHA1: fb6a6f9f109159398e6812b4bc81bce43e545e31
+    SHA256: 223173a4fcf3c59b84e482303d1368e5ec81ecfa7e5b3af1ae19a8d2080f15ab
+  RichPEHeaderHash:
+    MD5: 8a86aa640fed384033453e9cbc855331
+    SHA1: d3f8f46fda8fdc2b25e7983fcf45f43ff2f16985
+    SHA256: a756186564d687a3d6ece766147f91507640021b5478477c5d9763a451cc428d
+  Sections:
+    .text:
+      Entropy: 6.378252728909475
+      Virtual Size: '0x5e28'
+    .rdata:
+      Entropy: 4.865368258594214
+      Virtual Size: '0xfb4'
+    .data:
+      Entropy: 2.233034688695598
+      Virtual Size: '0x1b0'
+    .pdata:
+      Entropy: 4.654888257054296
+      Virtual Size: '0x774'
+    PAGESRP0:
+      Entropy: 6.3009973975032905
+      Virtual Size: '0x5697'
+    PAGESER:
+      Entropy: 6.313759607389794
+      Virtual Size: '0x5397'
+    INIT:
+      Entropy: 5.787538723708194
+      Virtual Size: '0xf88'
+    .rsrc:
+      Entropy: 3.302212424825455
+      Virtual Size: '0x388'
+    .reloc:
+      Entropy: 3.6548086098910746
+      Virtual Size: '0x38'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-10-12 19:26:39'
+  Description: SUNIX Serial Driver (x64)
+  Company: SUNIX Co., Ltd.
+  InternalName: snxpsamd
+  OriginalFilename: snxpsamd.sys
+  FileVersion: 10.1.0.0
+  Product: SUNIX Multi I/O Card
+  ProductVersion: 10.1.0.0
+  Copyright: Copyright (c) 2001-2021
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WMILIB.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoReleaseCancelSpinLock
+  - KeLowerIrql
+  - KfRaiseIrql
+  - KeInitializeDpc
+  - KeRemoveQueueDpc
+  - KeInitializeTimer
+  - KeInitializeSpinLock
+  - ExAllocatePool2
+  - ExFreePoolWithTag
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmLockPagableDataSection
+  - MmUnlockPagableImageSection
+  - IoCancelIrp
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoWMIRegistrationControl
+  - IoOpenDeviceRegistryKey
+  - ZwClose
+  - MmGetPhysicalAddress
+  - IoGetConfigurationInformation
+  - __C_specific_handler
+  - KeInsertQueueDpc
+  - KeDelayExecutionThread
+  - KeWaitForSingleObject
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - MmQuerySystemSize
+  - PoFxActivateComponent
+  - PoFxIdleComponent
+  - IoAcquireCancelSpinLock
+  - RtlIntegerToUnicodeString
+  - RtlInitUnicodeString
+  - RtlWriteRegistryValue
+  - RtlDeleteRegistryValue
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - KeInitializeEvent
+  - KeSetEvent
+  - IoAttachDeviceToDeviceStack
+  - IofCallDriver
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - IoRegisterDeviceInterface
+  - IoSetDeviceInterfaceState
+  - KeClearEvent
+  - PoRequestPowerIrp
+  - PoSetPowerState
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - RtlQueryRegistryValues
+  - MmGetSystemRoutineAddress
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - KeGetCurrentIrql
+  - KeCancelTimer
+  - KeSetTimer
+  - IoAllocateErrorLogEntry
+  - IoWriteErrorLogEntry
+  - IoInvalidateDeviceState
+  - IoBuildSynchronousFsdRequest
+  - KeReleaseSpinLock
+  - KeAcquireSpinLockRaiseToDpc
+  - KeSynchronizeExecution
+  - MmLockPagableSectionByHandle
+  - IofCompleteRequest
+  - KdComPortInUse
+  - WmiSystemControl
+  - WmiCompleteRequest
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
+      ValidFrom: '2018-09-19 00:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 2370e9cfe2bef559ae94426fc44333aacd3f3ab96417f262064b48f140880617a1feabd15f3cc633f2f38edd1f1d3ecc1a6099820bacc7fc7e9a872aa57d0fa657eeac3b6a85d6debd4063f8ada6c888b012fcf641df0f09971e38ea539fbe05f43eead39f501276be098bc20b487d1e2e51f68d53d3ab1f401b8a8eed7dfb4f7956705f0cd38e1bb3a7700d372b9795abdae0126b1c40cec5c77eedc26258ec77ed7322c28af5864388adea136efdd8fe422fb97d5ead18ef9490ca3d27ab26949975c7cbd37bf7ca4cd3af5121925b847d2b9f153f74cb51e89e830e166f1be746ce23bdf9e4a28bd2396baa791c912ce261242d8e2a487090c41ec5e8e070
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 01ee5f169dff97352b6465d66a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 51c3959a45cecf3d21a3effb05762573
+        SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
+        SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Code Signing Root R45
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2029-03-18 00:00:00'
+      Signature: acf7cc158b3079a81d0b28881909d71c7ffe86bd7b5a336e0d670e7b62d9e1185cb0bd135d1d23ae39507637aa44fd5f01235986564cccadbc64131430a420a8e03fe89c72dc7ef3d80c23baa82daa3cf6ec9f87310765f539a7518275e1f22f97f6d1e165968364fea11d51fbb5249bf5d27769bc852c5cfa5877d1aea7b10be2d677bba9b4344aa96f3df4f30d955de6f97a45b02517312edbf70f68e6831fa9f7e5d49d988cd3614b2fc3287e7ade930eb47da00a6d92c4b4663f7da758eeacf7ecc30801ab38fc0a1ca9c597b288c8090219f65c9a1af14d6c30d4b306ab0060480d78abcf17ad9293622077756cbdc832b4dc4debd9dfc1909629bdc17f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 7803184245708a41cf6f01b8eeb4a954
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: a33260428269bc902bc1cd280e4b1837
+        SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
+        SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
+        SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2030-07-28 00:00:00'
+      Signature: 2575a009c939bab7a139892f189fabd6eb1d4be8947c0d07689b1c9def71b6176a6b024fb33f864587cc659b4ce35806022266d56102c5638fd4a2f1b65e250b7796e9cd7140338829eceef3a26dbc4db53e064bc97333ca08142d3d4ce8b0ba75a6742da4583a6c1349f8a5150a149685b16a68342542af9656f410fa247df12b72c116e16bebe6a998c73e5af4d0189dfd74978677462a3d237d28738aaeef2b1b9abf6c53a7149e3c8771c05e8ec8fbd32a9233ea574d5e075ecac118ac812d1a21fa6ecf97617bdf717a3aca63f7d530443732febb4385dcbafca6ca33192b776ddbcb05f07e5f752ea2b6bf35aa3663c9ce64d9bdfcbc2cf3495600c8122bc627bb37af57efc4cf1e29c4f4e22dce2a61cf57edf50a40e2f518d61ee9902fcad3875f938a481a111de537859f2e66629a5e814e95ac555743dc538b257e3c610f8a0bbaf53fa6d78ef704565e21bb9fd76a7180bf96de7203d8d8222bf327164f38e851400cae92efbe3d7df780c64c36578495a7841548300e5227088d8ea2bd22c719c9a6ca0ea87a36db6aba615f112495a4e28e68ee19a949995ed0b434bdd6f940c710973152393529118724d3c4fba963cb7748d5fa62fc24e0047a4ed0e46edece9e385026f4217165d70925d4c907007ab8c7f377e8c5d4e255d0d31ef67f52e2498db911720c88442633660144dfe4330e21de62894807daf5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 65fd1dac1f115d9507f4e1840c8cb36a
+        SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
+        SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
+        SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
+    - Subject: BUSINESS_CATEGORY=Private Organization, serialNumber=22470770, JURISDICTION_OF_INCORPORATION_C=TW,
+        C=TW, ST=New Taipei, L=New Taipei, STREET_ADDRESS=10 F., No. 205,3, Sec. 3,
+        Beixin Rd., Xindian Dist., O=SUNIX CO., LTD., CN=SUNIX CO., LTD.
+      ValidFrom: '2021-12-02 07:59:26'
+      ValidTo: '2025-01-24 10:19:13'
+      Signature: 398b34b69dff000b2560fd54dccd06f51d5776cbe4922aeb2a0604d0d1bdf324e9b07826ffb1e30cdef23ca4935a6d1a34480de87db6c5860d63e6b4af224c4ff2ec642803170e337bf63b08f90f2dd4a828c432f1b3d8d12ce284535792ca5f3be5fbd9aecfd2f2e4a2fcd27ecadadedfc59e16a1670795d1fd740fafb3aa8a13ce7e3850e9bb2c89dce388c379732e3915fbb9ef2152e893da3729c0623b257e2d12d4707707f9584951c1bb6d78feeff96a8ba08a2e60dd95de8138f08b21e427dcbc049e2866fcc0ebfc6aa655d5ec30b6ce63a47344aafb7999b77ad78b3b96fc1b209329d41ca44127fcdf9739e220d7f613e49884c3ff01d7f661965e3f866c89be1339507cdbee237ba97512a32c37fee7628a1ff4db20b33f41d089dfb9136c5151aaa051dc472dd6d91532cb4ea9e23c574a584f36686bf295edc9537f33f9a81c8a2511a77b2dac12cde5ac54e52a2b6474e8f7f1e935d7651b5121e99926f5f43ae675887e0a72fdc1474b0a213a4cb7a83efe69a3c018bba79d323a5a3b0e933b83ccf690f3c6be05a00ded38f15c5989b152205f913eaf901ffaacc0eeb139ae898e96f62dbe6774055559b1b516981dda79e2eea7616b31be03a2739db8c58b3d15bed7f54c23507c172d53d3753959b088ac6b82173b5b7c22094b75101df3adc2ebb45047cfa43d482952a0028ae2f26159f7e82e2693b5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0be7a1f547aad334e04e8067
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: bc5623b70481bb6cc10efe2b1d3ea700
+        SHA1: ffeb44a08593dd74ed3cfbab519667123059a773
+        SHA256: 4aca03b922ede6a98e58e4a2634c088eba86adccb1034e25e36a7548f23e388b
+        SHA384: bdc17e94aa04d1ef07675964bdbc9e1e11e1574e237552613de05a49838c25b7847a1272c369be98d95272ec7d9f9c77
+    Signer:
+    - SerialNumber: 0be7a1f547aad334e04e8067
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
+      Version: 1

@@ -9,12 +9,15 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create asmmap64.sys binPath=C:\windows\temp\asmmap64.sys type=kernel
     && sc.exe start asmmap64.sys
-  Description: ''
+  Description: ASUS asmmap64 is a memory-mapping driver that exposes physical-memory
+    mapping to user mode. A privileged caller can abuse the interface to read or modify
+    kernel and physical memory.
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
+- https://github.com/fluffycats31/vulnerable-drivers
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4.yara
@@ -37,8 +40,8 @@ Detection:
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-  Handle: ''
-  Person: ''
+  Person: fluffycats31
+  Handle: '@fluffycats31'
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 882ef4da71bcb67204bdec731afe1c94
@@ -222,7 +225,7 @@ KnownVulnerableSamples:
   SHA256: 5f76c140118b181427969237e364fd70b14fa36533061fd4d8eb2f4751706739
   Signature:
   - ASUSTeK Computer Inc.
-  Date: '03:11 AM 07/24/2007'
+  Date: 03:11 AM 07/24/2007
   Publisher: ASUSTeK Computer Inc.
   Company: ASUSTeK Computer Inc.
   Description: Memory mapping Driver
@@ -240,7 +243,7 @@ KnownVulnerableSamples:
   SHA256: 42baccea0fceb60b79f78098163147a8dd1ded24cb2f0dbb93edc07dab66135c
   Signature:
   - ASUSTeK Computer Inc.
-  Date: '03:08 AM 07/24/2007'
+  Date: 03:08 AM 07/24/2007
   Publisher: ASUSTeK Computer Inc.
   Company: ASUSTeK Computer Inc.
   Description: Memory mapping Driver
@@ -252,3 +255,121 @@ KnownVulnerableSamples:
   InternalName: asmmap.sys
   Copyright: Copyright (C)
   Imphash: 1385e5e01080290e46e448ba2bbb3087
+- Filename: asmmap64.sys
+  MD5: 116dd55eef8843d7c526eb17a932822f
+  SHA1: d45b60ddcea1ad4c85dabeb604acf5786fbb7068
+  SHA256: 003326a58256a5bf9912a0b4f6f39295c2909596b33c3837a0c85c7ba7523e14
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 228bac53e82887d1ed92f51a667a8231
+  Authentihash:
+    MD5: 882ef4da71bcb67204bdec731afe1c94
+    SHA1: 734f215383ef61350c2da97dea53589ede21a3d2
+    SHA256: ab300e7e0d5d540900dbe11495b8d6788039d1cffb22e2dc2304b730a71eec97
+  RichPEHeaderHash:
+    MD5: 489421b3bc2efbff64c7ebb190792545
+    SHA1: 9e0ccca479f274f2850957f9f537e83466b00bcf
+    SHA256: 32cea88cc91e2ca87d15e37abade9eff363d2181098b8158a82fad96fe397af8
+  Sections:
+    .text:
+      Entropy: 6.115881282143121
+      Virtual Size: '0xc24'
+    .rdata:
+      Entropy: 4.18878869048599
+      Virtual Size: '0x1c8'
+    .data:
+      Entropy: 0.4804878386624626
+      Virtual Size: '0x128'
+    .pdata:
+      Entropy: 3.106598149978197
+      Virtual Size: '0x54'
+    PAGE:
+      Entropy: 4.745588841989914
+      Virtual Size: '0x55'
+    INIT:
+      Entropy: 5.098158205267566
+      Virtual Size: '0x384'
+    .rsrc:
+      Entropy: 3.2593250631693493
+      Virtual Size: '0x350'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2009-07-02 03:13:26'
+  Description: Memory mapping Driver
+  Company: ASUS
+  InternalName: asmmap.sys
+  OriginalFilename: asmmap.sys
+  FileVersion: 1, 0, 9, 1
+  Product: ATK Generic Function Service
+  ProductVersion: 1, 0, 9, 0
+  Copyright: Copyright (C) 2009
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapLockedPages
+  - ZwMapViewOfSection
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - MmFreeContiguousMemory
+  - MmBuildMdlForNonPagedPool
+  - IoFreeMdl
+  - MmGetPhysicalAddress
+  - ZwUnmapViewOfSection
+  - IoDeleteSymbolicLink
+  - IofCompleteRequest
+  - ObReferenceObjectByHandle
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ZwOpenSection
+  - DbgPrint
+  - IoAllocateMdl
+  - MmAllocateContiguousMemory
+  - KeBugCheckEx
+  - ZwClose
+  - MmUnmapLockedPages
+  - __C_specific_handler
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2015-01-14 21:31:25'
+      ValidTo: '2016-04-14 21:31:25'
+      Signature: 6285e319cd93cdbfa9ec995bc47fdeed4e31621fb94f9f16f5a59fb8bf40b0505236402f00491c6e04e1bd038d782b5b4f293cef521d23515d0b7a887566f976fe2d030d642c183c685b271b1048d1221270cc0fabce8a7404a8cffad985638f6795f93a1dd6c3f0e41fc127dbb9a423db4123559188c9e2b22f7eaf050520f62495c98a1eaa89b653ec29d6dcab6edbbd6e059698150611aaecc716071a9929c737c2be38639df5866d6a75495664f36c76431bab6c9a691b745516640ba37de6ec0c0f73c861dd63415fb387d6f638db87c6fa9a367d773cf51d67dcb50b1fb762360a27ef110ce853e604fb1c18606841c8025fe50ece666a0e7cbae169f2cb6e8552e875ae9534e48eab7d45f1737ef360c2ea87417460289a7ffd47f0f02926fcde5a9651ee492ce071c31c0637d18a5601ee903610d875c8ec0b793f08cde325da3a7b69dba7b157138cae71ed7f79ae3f1083b29a3a6392e260aa1452d6c607ba0392d9b972a7914c902c95cfbeaf95433d581f889cc7c3db6da5c4b646001d116b0d370793f8ed5210026b55d6594c07e28d555ccb3cb3a12331f8caec7ab669ffed9411385cdc43a80d85dd7ea08f5e1e4f02326a4d98c3bf6995f2b3fb044382ac7d9f6ea4d42b379630ae4846a2919a4215eaac5a331753e9f2d053c90cb41ef5ed3b1aca322b1012cb30621855734405c82c46565060d1134c6c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 330000000cd4840c29fd1712a000000000000c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 518cec47456b7d55c36f58bea9c68476
+        SHA1: 923bc6e21aaa6802adeb82ca7be7558e86eaa13f
+        SHA256: 6a24dbb4e4809ba56db48ae26fd75677d721c6b93f36e6310c2df699ca2f55f6
+        SHA384: 9d55360fd6374d0e4cbc351e9170e3303f5bc6b702a958cc7edf12a9870bf0039ee4cff9cd785b79158b0badf18c6240
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 330000000cd4840c29fd1712a000000000000c
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
