@@ -14,14 +14,15 @@ Commands:
   Command: sc.exe create bsitf binPath=C:\windows\temp\bsitf.sys type=kernel && sc.exe
     start bsitf
   Description: bsitf.sys and AsusBSItf.sys are ASUS BIOS Flash Driver naming variants
-    distributed with the ASUS WinFlash utility. The driver exposes physical-memory
-    reads through MmMapIoSpace (IOCTL 0x222804), contiguous kernel-memory allocation
-    mapped to user mode through an MDL (IOCTL 0x222808), arbitrary I/O-port writes
-    and reads (IOCTLs 0x222810 and 0x222818), PCI configuration-space reads with BAR
-    mapping (IOCTL 0x222814), and BIOS flash writes (IOCTL 0x22281C). Public research
-    identifies the 3.2.12.0 AsusBSItf.sys build as CVE-2024-33221 because low-privileged
-    callers can reach these operations and use them for privilege escalation, kernel
-    code execution, or information disclosure.
+    distributed with the ASUS WinFlash utility. The 3.2.12.0 AsusBSItf.sys build
+    exposes physical-memory reads through MmMapIoSpace (IOCTL 0x222804), contiguous
+    kernel-memory allocation mapped to user mode through an MDL (IOCTL 0x222808),
+    arbitrary I/O-port writes and reads (IOCTLs 0x222810 and 0x222818), and PCI
+    configuration-space reads with BAR mapping (IOCTL 0x222814). Public research
+    identifies this low-privilege interface as CVE-2024-33221 and demonstrates its
+    use for privilege escalation, kernel code execution, or information disclosure.
+    Earlier bsitf.sys builds tracked in this record additionally expose BIOS flash
+    writes through IOCTL 0x22281C.
   Usecase: Elevate privileges
   Privileges: User
   OperatingSystem: Windows 10

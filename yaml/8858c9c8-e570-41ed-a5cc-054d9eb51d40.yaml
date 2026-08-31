@@ -7,6 +7,8 @@ Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-08-31'
 MitreID: T1068
+CVE:
+- CVE-2025-14963
 Category: vulnerable driver
 Commands:
   Command: sc.exe create fekern type= kernel binPath= C:\\windows\\temp\\fekern.sys
