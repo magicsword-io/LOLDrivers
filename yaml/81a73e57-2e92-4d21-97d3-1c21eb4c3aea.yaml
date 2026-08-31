@@ -11,7 +11,10 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys
     type=kernel && sc.exe start LenovoDiagnosticsDriver.sys
-  Description: The aforementioned driver has been identified as vulnerable to CVE-2022-3699
+  Description: LenovoDiagnosticsDriver 1.0.2.0 exposes FILE_ANY_ACCESS IOCTLs 0x222010
+    and 0x222014 that map caller-selected physical addresses and copy values from
+    or to mapped memory. The resulting arbitrary physical-memory read/write primitives
+    enable local privilege escalation and are associated with CVE-2022-3699.
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
@@ -187,8 +190,143 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       Version: 1
-  Imphash: 225e24ee3c4081a16ef32831b70bf8ef
+- Filename: LenovoDiagnosticsDriver.sys
+  MD5: 121ee36aea275809e6dca642fa069091
+  SHA1: a15049e59691214018ca1a6c063e080ab789422e
+  SHA256: 279cf7f22d08724fa346b8138a35cda22ff4bb7a6d19d2d44e8905b0e9634dfd
   LoadsDespiteHVCI: 'FALSE'
+  Imphash: 225e24ee3c4081a16ef32831b70bf8ef
+  Authentihash:
+    MD5: ee7f812973c3f68005863528be8929cf
+    SHA1: 16270f2017ed1a0d601084ca4b20d3ea2403d1a4
+    SHA256: 54e111f07f7bdc0b1ae23acac65381f4d1feb16527ce29091ffc394c7325b824
+  RichPEHeaderHash:
+    MD5: 5a4fdaa578bb3b1de71703dd1514a69a
+    SHA1: a80de7c0643968fa587dfc186a5164a7fb4343aa
+    SHA256: 025742de774c4c30c209240fabd850c3b98db5f0c180449e8b56d92fbe5ac621
+  Sections:
+    .text:
+      Entropy: 6.216394038362479
+      Virtual Size: '0xe42'
+    .rdata:
+      Entropy: 4.166857800884967
+      Virtual Size: '0xcec'
+    .data:
+      Entropy: 2.153299992379607
+      Virtual Size: '0x270'
+    .pdata:
+      Entropy: 4.006390128333739
+      Virtual Size: '0x270'
+    PAGE:
+      Entropy: 6.209551355886413
+      Virtual Size: '0x1c8c'
+    INIT:
+      Entropy: 5.02972916403978
+      Virtual Size: '0x56e'
+    .rsrc:
+      Entropy: 3.517923593975154
+      Virtual Size: '0x4a0'
+    .reloc:
+      Entropy: 3.5153837769337524
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-08-03 05:55:50'
+  Description: Lenovo Diagnostics Driver for Windows 10 and later.
+  Company: Lenovo Group Limited (R)
+  InternalName: LenovoDiagnosticsDriver.sys
+  OriginalFilename: LenovoDiagnosticsDriver.sys
+  FileVersion: 1,00,02,0
+  Product: Lenovo Diagnostics
+  ProductVersion: 1,00,02,0
+  Copyright: "\xA9 2021 Lenovo Group Limited. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - ExFreePoolWithTag
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - ExAllocatePoolWithTag
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - RtlGetOwnerSecurityDescriptor
+  - DbgPrintEx
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G14, CN=Lenovo
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2022-03-30 23:59:59'
+      Signature: 7acfc05e3cc62cd64e7ca090933c35cc013b1bf0dbe0e06ad642d4af2acedc60ef7079c0e6aaebed888d24f5c71a8ba526ad92f6189dc86a16d1a3800a5c522ef432753e68ba373f9caa10ff2135edfdd1599d87aa61d8afb3acbb3ac7bf8ef3416026e3a6ad3d699b555df8574fff34afa0938a962aa19c697bb03c4c6d2e7da2c7ce05e64aba4dbccdb1e96f84ebc8f87eee1628636fb7c85e73646d09b84092c189a2f08b1cd7f359947c294fc25129679e8e0a13bbbb31c69e31145c149cde2c7f886109588df73258ccbb3724f65899050c059ebead84441eaf97a91920335d26571d0baffa61b6a0c4365451a32437970ba3875f225b775ba3f1549557
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d7b70a9ac21e07d79e6c5f9120310a2
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: c3ae773af8ea223d66b4f2eea11ef2a2
+        SHA1: ef5c3a238c4260a7cc0c058494a18f58a6eb42ce
+        SHA256: 78c50cba800b5a79e7e0500c9b684be523d0cd97011bc734d5ee5b3c1f16e3ae
+        SHA384: c181f6387ee4c315ed87f050007ddeb20fb8feeef326622ce4914a054754448c8e6f91e95fb778b4f9b8e8eb7cfe6e71
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    Signer:
+    - SerialNumber: 0d7b70a9ac21e07d79e6c5f9120310a2
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      Version: 1
 - Filename: LenovoDiagnosticsDriver.sys
   MD5: e0ae49af6741ca8b83b2246cf858f779
   SHA1: 69b2f9735ccaf06c5ba3cd5205e5ffff31e08bc1

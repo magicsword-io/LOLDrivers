@@ -1,0 +1,156 @@
+Id: 207b30f5-e3da-4eb2-829f-54b946eb526a
+Tags:
+- AsusSAIO.sys
+- ASUSSAIO
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-08-31'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create AsusSAIO binPath=C:\windows\temp\AsusSAIO.sys type=kernel
+    && sc.exe start AsusSAIO
+  Description: ASUS System Analysis IO drivers affected by CVE-2024-55408 expose privileged
+    hardware operations through the \\Device\\ASUSSAIO interface. This 1.0.1.0 build
+    accepts FILE_ANY_ACCESS IOCTLs, including 0x80102074 and 0x80102078, that map
+    caller-selected physical addresses with MmMapIoSpace for read and write operations.
+    The interface also exposes direct I/O-port access without a caller-token authorization
+    check, allowing a local user to cross the user-to-kernel security boundary.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/409
+- https://github.com/fluffycats31/vulnerable-drivers
+- https://nvd.nist.gov/vuln/detail/CVE-2024-55408
+- https://github.com/heyheysky/vulnerable-driver/blob/master/CVE-2024-55408/CVE-2024-55408_AsusSAIO.sys_README.md
+Detection: []
+Acknowledgement:
+  Person: fluffycats31
+  Handle: '@fluffycats31'
+KnownVulnerableSamples:
+- Filename: AsusSAIO.sys
+  MD5: 8b9c06294510f07360e20bafc26813cf
+  SHA1: 1b06d83f6cca14563fe2cd3da2ba6e0f90942353
+  SHA256: 2d1c04a9ee1664c25574048363620800482a89e1c99f4338dc252038aa949419
+  Imphash: 1ac96b4270f0fe700cb9a3d755426cea
+  Authentihash:
+    MD5: 401633b3f8abac8976c363b44aa5e26f
+    SHA1: ca24736218dba34edaaf196d78d32ec7b570e7de
+    SHA256: 15ce830a64d7158b7bf45f3eeaa6fdbe8b5d47835a12608296f9cd363bc092ad
+  RichPEHeaderHash:
+    MD5: dea9b9521c851abd2faf1bfc98cf1186
+    SHA1: 6525d457b2ee6a8db1de06b0f860f48eccbe8948
+    SHA256: d743347c67577a836866abef2bbe3b3d98a5b9ba00a5186bb9fe235248e207a5
+  Sections:
+    .text:
+      Entropy: 6.274950548492365
+      Virtual Size: '0x1c8a'
+    .rdata:
+      Entropy: 4.566941817862183
+      Virtual Size: '0x818'
+    .data:
+      Entropy: 0.6818051085309023
+      Virtual Size: '0x3b0'
+    .pdata:
+      Entropy: 3.9998736771510024
+      Virtual Size: '0x204'
+    PAGE:
+      Entropy: 5.97642034846583
+      Virtual Size: '0x59c'
+    INIT:
+      Entropy: 4.759675380839832
+      Virtual Size: '0x3d0'
+    .rsrc:
+      Entropy: 3.268987225869393
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.0655570101740874
+      Virtual Size: '0x28'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2020-08-17 03:38:31'
+  Description: ASUSSAIO(asus1000)
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: ASUSSAIO(asus1000).sys
+  OriginalFilename: ASUSSAIO(asus1000).sys
+  FileVersion: 1.0.1.0
+  Product: ASUSSAIO(asus1000)
+  ProductVersion: 1.0.1.0
+  Copyright: ASUSTek Computer Inc.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WppRecorder.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - IoCreateSymbolicLink
+  - KeWaitForSingleObject
+  - IoCreateDevice
+  - IofCompleteRequest
+  - KeInitializeMutex
+  - KeReleaseMutex
+  - IoWMIRegistrationControl
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - IoDeleteDevice
+  - RtlCopyUnicodeString
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - KeDelayExecutionThread
+  - HalGetBusDataByOffset
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - WppAutoLogTrace
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionUnbindClass
+  - WdfVersionBindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, L=Taipei, O=ASUSTek Computer Inc., OU=SYS PC
+        SW center, CN=ASUSTek Computer Inc.
+      ValidFrom: '2018-06-07 00:00:00'
+      ValidTo: '2021-06-04 12:00:00'
+      Signature: 9987b72c4f75e6d7212baa6aedb1fd539263b310f52bfa12ae0ab9b7efdb7da22b43ca0376a2968ff983c618db416d648493980f67f243609a47e29a863f106c3d6f95acfe2f680b58d75c9c67a964993eacaa878dfbebf46998acda6b73a0f8ae0dbe34d27b1e06f7f9f7ac200da723bbd3d80ffa24dd90a2db6bc7a4dfd426c21aa0e9278894329eee6404911fb4ef96fbd3292e0b388a865353e08ced7ec8467610bf9e78e434f7af0522934d635fc57a8e6449deac1e51a24fa34ea7dd4030d84b2ececabbc8b8ec887dde7f65f71bb1308a66b69f5fb67f2c22c7150732e9f40d94b004c7a8d1648796c1966325176542e50df96794034faa17f102b829
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 17b90cbd98af42c34e637c5b8df4eb64
+        SHA1: 7914797171811270bc01561479d5bd5c7388cec2
+        SHA256: 1759c954acc8ec1fb2a768612afbbdaee5df42277068e55408a067350e24ce91
+        SHA384: c1edf17c215952f496ac4345813ae91737c7f4efdbc6eb3966cad4572810bc574e621a27212cbcceef489a17df53b457
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
