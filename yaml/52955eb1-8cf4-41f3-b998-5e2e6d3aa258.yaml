@@ -18,10 +18,11 @@ Commands:
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/325
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
+- https://github.com/fluffycats31/vulnerable-drivers
 Detection: []
 Acknowledgement:
-  Person: ''
-  Handle: '@rainbowdynamix, @DbgPrint'
+  Person: fluffycats31
+  Handle: '@rainbowdynamix, @DbgPrint, @fluffycats31'
 KnownVulnerableSamples:
 - Filename: Windows_CPU_Temperature_Component.sys
   MD5: 3215e7615124e528f039bc02872789e9
@@ -140,3 +141,168 @@ KnownVulnerableSamples:
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
   Imphash: 8434fd924f47e8af731cc83bc34000ea
+- Filename: Windows_CPU_Temperature_Component.sys
+  MD5: 877227519255e3dce43b479651242875
+  SHA1: dc68f8d3648e95c5b75d4938b47e5b90d52d874f
+  SHA256: 3e4c9190b8c1b00e7d53f92cef0b66c16594cc26773ba8d5d682a5468ea86e00
+  LoadsDespiteHVCI: 'FALSE'
+  Imphash: 8434fd924f47e8af731cc83bc34000ea
+  Authentihash:
+    MD5: 94a672ff56b28d340a26a985a1f56ea6
+    SHA1: f4963744672fd85f4cae30ef1f1d3c9bef317a27
+    SHA256: 590822bd1b935237555d2d03e0535e835cfac71c0cf9dbbc4b0c8061e4106049
+  RichPEHeaderHash:
+    MD5: 1472665604fe2c6c202077ecf6c1365f
+    SHA1: da5b1a822055714c3c432f44120771fd5b56f9c1
+    SHA256: 3ab219821835b9557e278eae5845c84b2d87e07a7aaaaa1ddb64f3a1c8962e83
+  Sections:
+    .text:
+      Entropy: 6.2400958299930975
+      Virtual Size: '0xe40'
+    .rdata:
+      Entropy: 3.7667099998278264
+      Virtual Size: '0x4f8'
+    .data:
+      Entropy: 0.5787364804614866
+      Virtual Size: '0x434'
+    .pdata:
+      Entropy: 3.5718244445736285
+      Virtual Size: '0x114'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.127177794761642
+      Virtual Size: '0x268'
+    .rsrc:
+      Entropy: 3.3332672731289166
+      Virtual Size: '0x400'
+    .reloc:
+      Entropy: 3.0535088547976788
+      Virtual Size: '0x18'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-01-20 20:09:42'
+  Description: seewo - Windows CPU Temperature Component
+  Company: Guangzhou Shirui Electronics
+  InternalName: Windows CPU Temperature Component(SW)
+  OriginalFilename: ''
+  FileVersion: 0.0.1.6
+  Product: Windows CPU Temperature Component
+  ProductVersion: 0.0.1.6
+  Copyright: Copyright (C) 2018. Guangzhou Shirui Electronics. All Rights Reserved.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - _vsnwprintf
+  - __C_specific_handler
+  - KeBugCheckEx
+  - MmMapIoSpace
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , SHA256 ,
+        G2
+      ValidFrom: '2011-08-02 10:00:00'
+      ValidTo: '2029-03-29 10:00:00'
+      Signature: 0456824a7cd0cec9bf3666d1be359e936c97e806ce311859f96c415f802ec04225b818c7fcd4b137c468a0cf286a03744b63978577613bd72fe3f5bd33a2927d111f9e8a6cef2cb0f4628d3673d11636f1bc5eecb4809878fcd27679e8e12194e01fc4a2e1aa67dbb39c73e54022cf39cedbe67795a7bbb2cbf619869d9fc8d49805b2716f4e75aef13d646a3b5e4e46a62a5d0892f1a3f31d74bf620d238c5c2a3895d2c0d5cdcf88da1f28b5ba8169642ab5a6a2d573afdc46db04ae91d76ec598bad447c45674804778588cbeef2bfdec6cbfd194f7bf50e07be090fd20187818225d082e8c1ca097f31d997da39d91d306444e046e7a1c20e336f0b650b9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000013189c65004
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: b80eafbb56fdf468b7ec6fde1fd3f03b
+        SHA1: 8e47f540dfa60c5349b5303668b736cf367872ef
+        SHA256: 2f0469d37aae631ac9fe1c38a1169b8bb2b188d89433cd8ece92bf5b4b5c691c
+        SHA384: 1fd4a0ab5ea5e0073a0e1379f344f1a9ba4a5dcac024d2d28c11e4e81ac91155d860b5689bd3ac7520991b97938751b9
+    - Subject: CN=GlobalSign TSA for MS Authenticode advanced , G2
+      ValidFrom: '2018-02-19 00:00:00'
+      ValidTo: '2029-03-18 10:00:00'
+      Signature: 247250a50cbc4009a6c1f4d5826a4e415fcec78839d3e47cf9226c3878b8f4baf76be124eb9d7ccd48ac8becb5764c8fdc82690896e7bae167b6f0a6bf180842e1ebcd195839a5116123d619d700e9bbd2f95f41fb043efe8a20600cd14f235a191a18efd8c6ded65f54a17a93e1b67785c0fbb146c409ae2f53fb959c8e26e24ae4c4e63c35efbac6d9b9c5cdcd079b63bb3d0f61bc557c2310b58c8aa3d26845b140baa0dd3c1b1540b849786fe594c06d564b3cf6122ad485f3481305e1bb30450a41b77c926ebe4e926082ca5b64e655d3d207de9d5f9ba101ed9bf0c35dbb19f0180c9aa01ce96a080b3de96697a7751e0fbf28d709230de216fabaf334
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 2454b87f1e1453ad37faa178
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e48d125e08460474d2622743f09f1841
+        SHA1: f2a552dcc396e432febde950095a56206559656d
+        SHA256: 7046fd89933dffa31bd6ea13d90eeac33f63fd22283495ba403bcb8c74dd4149
+        SHA384: 712509fdb4509a00bf0e464c3595500aa8650f2751b7167ccf16c0c22b1352a1b8f6bf8b3acaafca4b1ce87cddb6f8ce
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 Extended Validation Code Signing CA , G2
+      ValidFrom: '2014-03-04 00:00:00'
+      ValidTo: '2024-03-03 23:59:59'
+      Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 191a32cb759c97b8cfac118dd5127f49
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 788b61bd26da89253179e3de2cdb527f
+        SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
+        SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=CN, JURISDICTION_OF_INCORPORATION_SP=Guangdong,\
+        \ JURISDICTION_OF_INCORPORATION_L=Guangzhou, BUSINESS_CATEGORY=Private Organization,\
+        \ serialNumber=914401016756828477, C=CN, ST=\u5E7F\u4E1C, L=\u5E7F\u5DDE,\
+        \ O=Guangzhou Shirui Electronics Co., Ltd, OU=IT, CN=Guangzhou Shirui Electronics\
+        \ Co., Ltd"
+      ValidFrom: '2017-09-11 00:00:00'
+      ValidTo: '2020-09-10 23:59:59'
+      Signature: ca3e56962d04432116beef060847f66d20fada3b0efdd1ac1d6d40c86e162d24a5a5f172afa07c0fb18ffb9f5a264bee8407174b453ba65ead945be3d26829ccff99d500bac73b45429db01712bf878e6dac01eb030f5499667209452468aee11387f082b0c10ca227e7f08b311453af247b0c4046970d300745c8990e1cd6d53242cf58a5217173219f80be31da74502d1848897c1aa1dc771f1a39dca02325604bfc9675f89eafb54423a7346b4d79f8ec958cfbdd261152d0cbd4f2023d7e658978eecc811e15c66f92abfa0fcd6fe86279b0ac0aa3ea41bca2d0d5f31e74c6af2ccfc16e61a92784b16948bde16f9635de1d39a95dbf769faf0cdafeba19
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 20d35ce0f766e1cbb977ab572a5ab018
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 87b7fa58b71058984d762b43f6881991
+        SHA1: 04a5590166c200be2b3ca89a8f9451dde5545371
+        SHA256: 617937326ab383cbb9a94d672f390fea7f0574827aa8143f117c5e411414324d
+        SHA384: 65c1afa3ee8dea0ccb5a14d2d71009dc84dca2f073cbbd102513b4c5105820d48f65aa81241ef2bb88845cf058b2f99c
+    Signer:
+    - SerialNumber: 20d35ce0f766e1cbb977ab572a5ab018
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 Extended Validation Code Signing CA , G2
+      Version: 1
