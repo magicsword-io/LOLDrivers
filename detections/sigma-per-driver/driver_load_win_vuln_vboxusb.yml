@@ -9,7 +9,7 @@ references:
     - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 author: Michael Haag
 date: 2023/07/22
-modified: 2026/08/28
+modified: 2026/08/31
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -25,10 +25,10 @@ detection:
             - 'MD5=f142e613d2ebc11c6bec22baf9392337'
             - 'SHA1=f1b602cdada1de1211a3d08392840c52d8748cde'
             - 'SHA1=29930854867211089548d75210950d3236237563'
-            - 'SHA256=5b26c4678ecd37d1829513f41ff9e9df9ef1d1d6fea9e3d477353c90cc915291'
             - 'SHA256=c509935f3812ad9b363754216561e0a529fc2d5b8e86bfa7302b8d149b7d04aa'
-            - 'IMPHASH=bda5fae6640f659c3a67cb8962317e29'
+            - 'SHA256=5b26c4678ecd37d1829513f41ff9e9df9ef1d1d6fea9e3d477353c90cc915291'
             - 'IMPHASH=5dc868004c7214c10f9f8aa53947cd3a'
+            - 'IMPHASH=bda5fae6640f659c3a67cb8962317e29'
     condition: selection_hashes
 falsepositives:
     - Unknown
