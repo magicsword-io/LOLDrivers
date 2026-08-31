@@ -1,0 +1,247 @@
+Id: ed3abb66-c577-44b8-89fa-80d300c82373
+Tags:
+- xhunter2.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-08-28'
+MitreID: T1562.001
+CVE:
+- CVE-2026-15430
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create xhunter2 binPath= C:\windows\temp\xhunter2.sys type= kernel
+    && sc.exe start xhunter2
+  Description: Wellbia xhunter2.sys version 2026.6.1.192 is an XIGNCODE3 anti-cheat
+    kernel component affected by CVE-2026-15430. Public research demonstrates bypasses
+    for its module, caller, and request authentication layers, exposing privileged
+    command paths for cross-process memory access, protected-process handle creation,
+    process termination, local privilege escalation, and kernel-assisted code injection.
+  Usecase: Impair security processes and access protected process memory through privileged
+    kernel command paths.
+  Privileges: kernel
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://blacksnufkin.github.io/posts/Hunting-the-Hunter-II/
+- https://github.com/BlackSnufkin/AxHunter
+- https://www.cve.org/CVERecord?id=CVE-2026-15430
+Detection: []
+Acknowledgement:
+  Person: BlackSnufkin
+  Handle: '@BlackSnufkin42'
+KnownVulnerableSamples:
+- Filename: xhunter2.sys
+  SHA256: 44cefb0b3b6516e6731de09a3e2e0eb8b98b02cc3fdf7bb4b22680e93f3cde1e
+  MD5: 9976ae79fb3887e0243dc159b2b68a48
+  SHA1: fb2dc9c59b8dfcf040b42f7d5eb41eb7b12852fb
+  Imphash: adbf77a9144f66e2953ee1e6ed60c41c
+  Authentihash:
+    MD5: 2e89c3f2aed10a71f7d1dcf16c711fe0
+    SHA1: 943f317e5ef8fcff293e959ec1a57d1a66dfe3e4
+    SHA256: 3c92a1df7bb856afaef29216533b1d407408bfc4c6236961eb2b769c205f936f
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.912644724668445
+      Virtual Size: '0x125e8'
+    .rdata:
+      Entropy: 4.055747129084019
+      Virtual Size: '0xd124'
+    .data:
+      Entropy: 5.156849789135883
+      Virtual Size: '0x44f8'
+    .pdata:
+      Entropy: 7.956115984894373
+      Virtual Size: '0xf18'
+    INIT:
+      Entropy: 5.464664983880308
+      Virtual Size: '0xfa0'
+    .E!z:
+      Entropy: 6.149100035654993
+      Virtual Size: '0x8efc'
+    .reloc:
+      Entropy: 4.479838194504187
+      Virtual Size: '0x74'
+    .rsrc:
+      Entropy: 3.61577537982695
+      Virtual Size: '0x43c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2026-06-01 01:35:20'
+  Description: Wellbia.com System Guard
+  Company: Wellbia.com Co., Ltd.
+  InternalName: xhunter1.sys
+  OriginalFilename: xhunter1.sys
+  FileVersion: 2026.6.1.192
+  Product: Wellbia.com System Guard
+  ProductVersion: 2026.6.1.192
+  Copyright: Copyright (c) 2006-2023 Wellbia.com Co., Ltd.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ZwClose
+  - ObOpenObjectByPointer
+  - ZwAllocateVirtualMemory
+  - ZwFreeVirtualMemory
+  - ZwWaitForSingleObject
+  - PsGetProcessSectionBaseAddress
+  - __C_specific_handler
+  - PsProcessType
+  - RtlCompareMemory
+  - ExFreePoolWithTag
+  - ProbeForRead
+  - IoGetCurrentProcess
+  - ObfReferenceObject
+  - ObfDereferenceObject
+  - ZwCreateFile
+  - ZwReadFile
+  - PsGetCurrentProcessId
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - ZwQueryVirtualMemory
+  - _vsnprintf
+  - MmHighestUserAddress
+  - wcsrchr
+  - ExAllocatePoolWithTag
+  - ObReferenceObjectByHandle
+  - ZwOpenFile
+  - MmSecureVirtualMemory
+  - ObReferenceObjectByName
+  - ZwQueryInformationProcess
+  - ObSetHandleAttributes
+  - IoFileObjectType
+  - IoDriverObjectType
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmIsAddressValid
+  - PsLookupProcessByProcessId
+  - PsLookupThreadByThreadId
+  - IoThreadToProcess
+  - PsThreadType
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - IoAllocateMdl
+  - IoFreeMdl
+  - PsSetLoadImageNotifyRoutine
+  - PsRemoveLoadImageNotifyRoutine
+  - RtlCompareUnicodeString
+  - DbgPrint
+  - ZwQueryValueKey
+  - RtlPrefixUnicodeString
+  - PsGetProcessId
+  - KeEnterGuardedRegion
+  - KeLeaveGuardedRegion
+  - _stricmp
+  - MmProtectMdlSystemAddress
+  - ZwQuerySystemInformation
+  - KeInitializeEvent
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - KeSetEvent
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - RtlInitUnicodeString
+  - ExDeleteNPagedLookasideList
+  - IoCreateNotificationEvent
+  - _wcsnicmp
+  - RtlEqualUnicodeString
+  - KeInitializeMutex
+  - PsSetCreateProcessNotifyRoutine
+  - RtlCopyUnicodeString
+  - KeAreAllApcsDisabled
+  - ProbeForWrite
+  - IoGetTopLevelIrp
+  - ZwQueryInformationFile
+  - ObQueryNameString
+  - PsLookupProcessThreadByCid
+  - PsGetProcessInheritedFromUniqueProcessId
+  - ZwQueryInformationThread
+  - MmSystemRangeStart
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ZwUnloadDriver
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - PsGetVersion
+  - RtlFreeUnicodeString
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - RtlImageNtHeader
+  - ExAcquireResourceSharedLite
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ZwOpenProcess
+  - ZwDuplicateObject
+  - PsAcquireProcessExitSynchronization
+  - PsReleaseProcessExitSynchronization
+  - PsGetProcessImageFileName
+  - PsIsSystemProcess
+  - strcmp
+  - PsInitialSystemProcess
+  - PsLoadedModuleList
+  - PsSetCreateProcessNotifyRoutineEx
+  - RtlEnumerateGenericTableAvl
+  - ExAcquireSpinLockExclusive
+  - ExReleaseSpinLockExclusive
+  - KeBugCheckEx
+  - MmGetSystemRoutineAddress
+  - ExInitializeNPagedLookasideList
+  - KeQueryPerformanceCounter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=KR, JURISDICTION_OF_INCORPORATION_SP=Seoul,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=110111,3525536, C=KR,
+        ST=Seoul, L=Geumcheon District, O=Wellbia.com Co., Ltd., CN=Wellbia.com Co.,
+        Ltd.
+      ValidFrom: '2026-04-29 00:00:00'
+      ValidTo: '2027-04-28 23:59:59'
+      Signature: 8171796de4d7f5a8227e192b7eeb7cc68ae96d4566d199e29879598d9f45afe264e6bf47b15727d46fea0eb4725cd9dbb8664236609283ef1bf3a9d161afba599cc1120d80e8512eee3d37e1fef715b967b4260c9cff2ea8073eaae0dbed1492c13bf506dc8c8c798cf1e0d66e5a34ff3a0cea94cff78b72b2909add08171304d0d7797b624759869c2186e6aa265ccbdfb02e002697c9ba50d28adc1a84d0df00f94b4424aa6d8f5ab657ce0a18d61d0f4b969f8fab103ad3e3c176db00dc6ddde9542f0b91a0118825605faa881b64813329a81400258e35dacaf3cab5c2e21c21085886aa06d9fedbbba05b5aaf99001abca272ffb80caf3f9fc5cfd7a90d3e32cabdd0483a3ad0e934b5ba26cebe5f0f277234f7e0cb586cfcd031397b59fc0b48a11bb43af9dbc935f48468d8483f9bcddb86c371a40217ad01cea59202b6e96f6782efb3bb58b00c1e3912609387bf533d238ccf36f991d9a0ed6d23b8d24c2b151b71dea2da7e4a802bd018be43f981e3b89053b2d7962fa09d4f728fa5999c775c6237d1dca69a2c79da987df05e8c0917ee83f373ce828f1d93ef14d2db8a39749c0f44f90b4ba392852257a1540109d01a9e1a2ad1ad1502e92afcaffe87a4d60efaf86ae307e52b73d1a406591a609bbe7f821a3476932eb62579089fdb83543046dbe91dd8f6a0c9f0bbe6a97dcc9fda4c544c69ea4c36c7b2d8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 05d5c8c98ae5547b352ea1861bc7a61f
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 6a52a903261459fbd47e0591ab8572e0
+        SHA1: 31ff51a1fddc77381767e844743d17288377d27e
+        SHA256: dada17fc5f5f4835fbb3bdefc41a706baf10de685aa6e6492388f58605e7fc5d
+        SHA384: cff132037cc82be91998d5dc0a0cd2cd314b0bc4f00f0fac0f9fb11f499440abe486226d2c254b4dd3e59f5fc6669e5b
+    Signer:
+    - SerialNumber: 05d5c8c98ae5547b352ea1861bc7a61f
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
