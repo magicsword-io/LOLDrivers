@@ -6,15 +6,20 @@ Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-08-31'
 MitreID: T1068
+CVE:
+- CVE-2024-45181
+- CVE-2024-45182
 Category: vulnerable driver
 Commands:
   Command: sc.exe create WibuKey type= kernel binPath= C:\\windows\\temp\\WibuKey64.sys
     && sc.exe start WibuKey
-  Description: WibuKey for Windows versions before 6.70 are affected by CVE-2024-45181
-    and CVE-2024-45182. This signed 6.50a WibuKey64.sys build exposes the \\Device\\WibuKey
-    interface. Improper buffer-bound checks allow crafted local requests to read from
-    or write to arbitrary kernel addresses, causing kernel memory corruption or denial
-    of service and potentially enabling privilege escalation.
+  Description: WibuKey for Windows releases before 6.70 are affected by CVE-2024-45181
+    and CVE-2024-45182. Version 6.70 is separately affected by the boundary-validation
+    flaw documented in WIBU-100057 and fixed in 6.71. The tracked 6.40 and 6.50a
+    builds fall in the first affected range. In the tracked 6.70 build, subcommand
+    0x14 of IOCTL 0x8200E804 combines a caller-controlled offset with an input-buffer
+    pointer without validating that the resulting object remains inside the request,
+    enabling out-of-bounds kernel access.
   Usecase: Read and corrupt kernel memory
   Privileges: User
   OperatingSystem: Windows
@@ -24,6 +29,7 @@ Resources:
 - https://cdn.wibu.com/fileadmin/wibu_downloads/security_advisories/AdvisoryWIBU-94453.pdf
 - https://nvd.nist.gov/vuln/detail/CVE-2024-45181
 - https://nvd.nist.gov/vuln/detail/CVE-2024-45182
+- https://cdn.wibu.com/fileadmin/wibu_downloads/security_advisories/AdvisoryWIBU-100057.pdf
 Detection: []
 Acknowledgement:
   Person: fluffycats31
@@ -236,4 +242,406 @@ KnownVulnerableSamples:
     - SerialNumber: 300eb838fe32cf1f9bcfc50a
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
+      Version: 1
+- Filename: WibuKey64.sys
+  SHA256: 17cf356d124df2afd44bfd1e26c1bd0dd5c73dc4709525a4d84b481a2e44771b
+  MD5: 392dd03ff1b0d32784407853cb400b2e
+  SHA1: 1b67d6c17a5201979d3276a2e40eaea15168fc5c
+  Imphash: d17078994081d128a915504f53c91bab
+  Authentihash:
+    MD5: 43944466d47b177e26a74dbf9a643367
+    SHA1: ed0a176846fb34121d2675f0878baaac601242d6
+    SHA256: 0a3b656fe3eaca840eb5225a5f85816b350d1e052b0cb696d1853503a3a1ea03
+  RichPEHeaderHash:
+    MD5: 0e798ff0adf4437499aa402e33df6e3a
+    SHA1: 77eecca917da9f03e04929e7d482992663019a9a
+    SHA256: 578c458b7c72679af566f32027db3a28262c14fac0c0cc7a65f5a53e16af4a2c
+  Sections:
+    .text:
+      Entropy: 6.371956612580783
+      Virtual Size: '0x10e79'
+    .rdata:
+      Entropy: 5.133876900992481
+      Virtual Size: '0x242c'
+    .data:
+      Entropy: 3.07872085805786
+      Virtual Size: '0x14dc'
+    .pdata:
+      Entropy: 5.0677761502062895
+      Virtual Size: '0x12f0'
+    .edata:
+      Entropy: 2.510074660663609
+      Virtual Size: '0x36'
+    INIT:
+      Entropy: 4.9742188158132485
+      Virtual Size: '0x554'
+    .rsrc:
+      Entropy: 3.5331711694274914
+      Virtual Size: '0x5a0'
+    .reloc:
+      Entropy: 4.618961546334768
+      Virtual Size: '0xe4'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2016-12-16 04:11:10'
+  Description: WibuKey Windows NT Kernel Driver
+  Company: WIBU-SYSTEMS AG
+  InternalName: WibuKey
+  OriginalFilename: WibuKey64.Sys
+  FileVersion: Version 6.40 of 2016-Dec-14 (Build 2400)
+  Product: WibuKey Software Protection System
+  ProductVersion: Version 6.40 of 2016-Dec-14 (Build 2400)
+  Copyright: Copyright (C) 1993-2016 by WIBU-SYSTEMS AG
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlAppendUnicodeToString
+  - RtlGetVersion
+  - KeInitializeEvent
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ZwClose
+  - ZwOpenKey
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - RtlInitAnsiString
+  - RtlQueryRegistryValues
+  - MmGetSystemRoutineAddress
+  - RtlUnicodeStringToAnsiString
+  - RtlTimeToTimeFields
+  - mbstowcs
+  - RtlAppendUnicodeStringToString
+  - KeLowerIrql
+  - KfRaiseIrql
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - IoBuildSynchronousFsdRequest
+  - IoCancelIrp
+  - KeSetPriorityThread
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmIsAddressValid
+  - strchr
+  - IoGetConfigurationInformation
+  - IoQueryDeviceDescription
+  - RtlCompareMemory
+  - ExAllocatePoolWithTag
+  - ExFreePool
+  - RtlInitUnicodeString
+  - RtlIntegerToUnicodeString
+  - sprintf
+  - HalTranslateBusAddress
+  - KeStallExecutionProcessor
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
+      ValidFrom: '2009-11-18 10:00:00'
+      ValidTo: '2019-03-18 10:00:00'
+      Signature: 4252a97ea2cf5b3bcb4bddbaf85759d324a47772ef62443782ed06ee04d5165f24a314dc6c54056ab09b3dda8139daad28db956f8183f5cd62b14524b1dd29e5085495958cf01d065f1ad6463f1340174811169b474dd13ab50f571c9230d0f8b2253b0acdf687f9c7b257d33f7da58c14ce9ca8c79f4693da59fa795d652035445a4fc1909dc1549256dc34c8f5c103d05dc059489c00fc95a0f1d176f71636c813927f2d2bc0b880f126261f414d52bf1e97bb018208e715f6c1d5342accf5e4c3877a5781e1d6d74286620177e2a9c47a86f404387a076a7d00ec73f7a80b3478c59eb3efb838400e8c3353c875ec5f3eea755eff820e7415dc1905f3ba31
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 04000000000125071df9af
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: f47739306d14722e670d9436eadb8e4f
+        SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
+        SHA256: bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7
+        SHA384: b8b268a1bdf388be66a1c969b7b353cb2bbc9fad446049b7efa05a9ab3b714494e97f4d1ee1c0bae35bfd9bf6ef275b3
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+        CA , SHA256 , G3
+      ValidFrom: '2016-06-15 00:00:00'
+      ValidTo: '2024-06-15 00:00:00'
+      Signature: 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 481b6a07a9424c1eaafef3cdf10f
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: fd8cfeea06be14fa89689909e1fc72dc
+        SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
+        SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
+        SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    - Subject: BUSINESS_CATEGORY=Private Organization, serialNumber=HRB 107315, JURISDICTION_OF_INCORPORATION_C=DE,
+        JURISDICTION_OF_INCORPORATION_SP=Baden,Wuerttemberg, JURISDICTION_OF_INCORPORATION_L=Mannheim,
+        C=DE, ST=Baden,Wuerttemberg, L=Karlsruhe, STREET_ADDRESS=Rueppurrer Str. 52,54,
+        O=WIBU,SYSTEMS AG, CN=WIBU,SYSTEMS AG
+      ValidFrom: '2016-11-02 08:29:49'
+      ValidTo: '2018-10-26 15:49:28'
+      Signature: 2a236d648d4815ff6e83490aceae46e8cbb1ddbcfd09f9f1b621933503ef8f981dc1a82a9d6911de2de884d082335a25fa4c9eea5824b7e9f589b1978084a35b3766361547b31f00e2aa522335a04812cec3eb8133bd55d50abed332ee9715ba505b1223cd3a50d8af5469a1c22f7cbcf9f88c944402d76bdfca84522f3a3fdbbbb6ed075dca7d0b436d1afd845fbae3942f6e933e2d7166a7041bbfc707511990b1d14f7e0edea4c455f2b7afe1e3aace436d97db5892281cfdf8e1f0bd95af6df7f4c18767da73b885a9776b3b1016e597d1ca4544c9be4c848ce9b6fd41f1a48cf060adf94af42e09a884696de1decf6b37040372569d2b4b0d311f200764
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 5e9c8a1bb34550e89f6e6cbc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: cc2c7add3d97031c9fae01827a121703
+        SHA1: 07d7812677911f6a606ec24f449b7c5d3c8cc861
+        SHA256: c6d5a50b11746a6798a0be819e2d8130f5aa09c915432aa10ffc4e98886f6cf6
+        SHA384: 4295998572b621145e8d4a36a5b38ea5b1d1205f7fd0f0a4fde45182f2ec9a3ca086a1aee728bcd8b4ba81d0179782df
+    Signer:
+    - SerialNumber: 5e9c8a1bb34550e89f6e6cbc
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+        CA , SHA256 , G3
+      Version: 1
+- Filename: WibuKey64.sys
+  SHA256: 3e74265e10f596a89f2725b1fb19bd7098113d16301208c81b32356b34ee378a
+  MD5: 682588c4c5a28fcef48be859791c95b6
+  SHA1: 9094cdc8bddb487024379c4ed8438e87b21de930
+  Imphash: 2596c98269f53b39773f6dd9df345e33
+  Authentihash:
+    MD5: c2d88a59ff9615ad49f73343544b14de
+    SHA1: 7b6e0065fd31fb699b5b3963cbcb70ccf3e8678e
+    SHA256: c1d7ef1165e8ecb5ccd5de4108cd79c88b4d87b4b600f102ecbe2279b242d9e7
+  RichPEHeaderHash:
+    MD5: 7f5b8e1925dfe5e7eda3201f5d2af435
+    SHA1: 31eab0e8bf90db3678f3e761082575f2ba0ae653
+    SHA256: d4250776a9ff60529a9c0a1b8f3fb2bd4bbbec0cbfe60322b357d790a9617591
+  Sections:
+    .text:
+      Entropy: 6.402851175976764
+      Virtual Size: '0x12c40'
+    .rdata:
+      Entropy: 5.151529544744908
+      Virtual Size: '0x27c8'
+    .data:
+      Entropy: 2.2492676245076084
+      Virtual Size: '0x135c'
+    .pdata:
+      Entropy: 5.0646976469131575
+      Virtual Size: '0x129c'
+    .edata:
+      Entropy: 2.4129429477407096
+      Virtual Size: '0x36'
+    INIT:
+      Entropy: 4.9922007133491615
+      Virtual Size: '0x586'
+    .rsrc:
+      Entropy: 3.565246340041579
+      Virtual Size: '0x5a0'
+    .reloc:
+      Entropy: 4.6774680948057235
+      Virtual Size: '0xe4'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-08-29 04:06:05'
+  Description: WibuKey Windows NT Kernel Driver
+  Company: WIBU-SYSTEMS AG
+  InternalName: WibuKey
+  OriginalFilename: WibuKey64.Sys
+  FileVersion: Version 6.70 of 2024- Aug- 28(Build 6532)
+  Product: WibuKey Software Protection System
+  ProductVersion: Version 6.70 of 2024- Aug- 28(Build 6532)
+  Copyright: Copyright(C) 1993 - 2024 by WIBU-SYSTEMS AG
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlGetVersion
+  - KeInitializeEvent
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ZwClose
+  - ZwOpenKey
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - __C_specific_handler
+  - RtlInitAnsiString
+  - RtlQueryRegistryValues
+  - MmGetSystemRoutineAddress
+  - RtlUnicodeStringToAnsiString
+  - mbstowcs
+  - RtlIntegerToUnicodeString
+  - KeLowerIrql
+  - KfRaiseIrql
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - IoBuildSynchronousFsdRequest
+  - IoCancelIrp
+  - KeSetPriorityThread
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmIsAddressValid
+  - strchr
+  - IoGetConfigurationInformation
+  - IoQueryDeviceDescription
+  - RtlCompareMemory
+  - ExAllocatePoolWithTag
+  - ExFreePool
+  - strnlen
+  - RtlTimeToTimeFields
+  - sprintf
+  - KeStallExecutionProcessor
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-08-01 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 70a0bf435c55e7385fa0a3741b3db616d7f7bf5707bd9aaca1872cec855ea91abb22f8871a695422eda488776dbd1a14f4134a7a2f2db738eff4ff80b9f8a1f7f272de24bc5203c84ed02adefa2d56cff9f4f7ac307a9a8bb25ed4cfd143449b4321eb9672a148b499cb9d4fa7060313772744d4e77fe859a8f0bf2f0ba6e9f2343cecf703c787a8d24c401935466a6954b0b8a1568eeca4d53de8b1dcfd1cd8f4775a5c548c6fefa1503dfc760968849f6fcadb208d35601c0203cb20b0ac58a00e4063c59822c1b259f5556bcf27ab6c76ce6f232df47e716a236b22ff12b8542d277ed83ad9f0b68796fd5bd15cac18c34d9f73b701a99f57aa5e28e2b994
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 21a266bd49f2778b24d13d95641ea6ac
+        SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
+        SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
+        SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2023
+      ValidFrom: '2023-07-14 00:00:00'
+      ValidTo: '2034-10-13 23:59:59'
+      Signature: 811ad6dea0a9b59817bc708d4f8a3c689cd825ffcb2ce4cdea5d2292ec8c2202a9b8cf80a8d9e7e3c5ed26828a712f18dd4eb6de6cd7e1609c2beded3d488eb86bba7c5dbdc26137684977a3eb90aa12d72785f38e1e92dac240389f5dc8a02e2578259d2a057a842998b657798fdb26562bb0f3a7bd370cd898764f56b952c2b69d38a981e76d415c8c69d1b92bc4c67bcf9cfa78e2931a76a26975d350e44412be200d9ea944d0f8e54977085a21c5b4cf98951a54bab9bcc16919bacf16f28337346eb04126ddde5a974f338dd48d777d7545a1a558266a0345ded950b5508caf56bd4cc5e146c528d3ade7430070decc989e198903ead49137ef4d52f3c96021c45647edda114b8c32c388e658e2b6db3ef95fb042d68fe31791d1aac055e386bfac272c41d09a334aa836d4b972967e977938485fcac2dc3d32df75d636675a89f8f6a7c7e54f353c00bdbe9c2a6c7901dcda44e63ade383b075e3958f47c733155a08011cb140c7eaebcfea4eb7965aa68d622ca3beb9a8235572816cb69f2329ab2d2d83ab8b146866bba17fdc4776c156caeabaf733ae84946b7d57fccb638c0d8ec1cf5b6a1b8432cdf4e4c7d1e6870c0770ad402e05c60bb28ff38e5525ad6ac1722234ef4ecd317fb506bff07771f71974441c9b846d36c327c582f674765e51b73b699f96b2c0646ef411ef0f05fe0dbd9ad908044af8010418a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0544aff3949d0839a6bfdb3f5fe56116
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 7630cbd02cc6732394e9fdfe99d0d8f8
+        SHA1: bc1890d694f9d392c4cbae6a174e35d70e7ec8b1
+        SHA256: 594a02de632b3a08ed6644c36994025e57f35bc8e7bd16cec5d347883390d1d8
+        SHA384: 31d9fb75262762d17046f31e5c54509f58a295d505e411019544000b64f607b44b3346b708fa50d48f199dba56f0c0b1
+    - Subject: "JURISDICTION_OF_INCORPORATION_C=DE, JURISDICTION_OF_INCORPORATION_SP=Baden,W\xFC\
+        rttemberg, JURISDICTION_OF_INCORPORATION_L=Mannheim, BUSINESS_CATEGORY=Private\
+        \ Organization, serialNumber=HRB 107315, C=DE, ST=Baden,W\xFCrttemberg, L=Karlsruhe,\
+        \ O=WIBU,SYSTEMS AG, CN=WIBU,SYSTEMS AG"
+      ValidFrom: '2024-03-04 00:00:00'
+      ValidTo: '2026-03-04 23:59:59'
+      Signature: bcd9193c39746bdd02331404b0ec30f10b95a59c08486bf30a0ac1578c64ac7fa49a65a9b1f218bbdc02259d8189344deb044930bf4e4d44e056f5b89c97da4fc96f76ab1efbb68e48c3046fe40d9aad06689c1e52e5add936b22cfa2b4fe3a02ab4445c56acd7792af23ddf7848dc7f08d995efdcd58ef644b7774b3968a665c693125a4e21d95711f12f6adf070db648bc6bb5551c3fd0b9d56b6aa816be839ac0f6580ae6467ac269334686c4b9262cd1250b26124ec84ec401fa3af61d4dc614c1fe6a79dd9cd169811968cb92b2982e1312dbd0a9dd2dd1a13cea2758a1ddeaf03e68f561fa42b85280963a746f1c567e7ae0cf5f4db31de8392da7f1b7815d4b023b634ede7e1163fc792178a170bbdada1514cc348ec57a1fa94380c3bc48c062f5e30b865f6e7249397e592c286c3cd4522fb39b705349657ec3c21019f2800230a2fb394583b863429b05a4e285b9bd6efb720f3b2bf33a106ed4098c793375a035a13910325a48c8c30f57bb3efe718d3b7ff1c97ab096cc46bf47e59f223f857dd37ea34854422983303b81b06e98c5feae617125b7b6d4443152e58e4ef3a87b13d53c43e777642f38d8a5c7a177aa6bc850211f5a8142a759bfc99dad7e85f7c092b5ffdd3dc314a24758ee9ca20bf12369b1b522deaa4c1e4f0c251894b9a5cf2daa08702d1dbb756434ef0b33cd6db5f60a5f69ff801a1d6a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0961563061a40bc5e75a9d961f58dd8e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 68a8c51c35302f2b720eb22add297ede
+        SHA1: 55e9ea3ecdbd2c081ca843b33502e4930c624fef
+        SHA256: 8a38ee7cbe756863fcf3446af521162a8d66fb1483299cc7712f2fa3f9874445
+        SHA384: aa9fe00f7f3ef88fe1ccdbfdc3733605fe075240e7a9eeb8c3f2e23a2993fe52f9afbe951158a674c3f2b88bf64cb270
+    Signer:
+    - SerialNumber: 0961563061a40bc5e75a9d961f58dd8e
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
       Version: 1

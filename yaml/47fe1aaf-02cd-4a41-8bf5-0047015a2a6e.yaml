@@ -1,6 +1,7 @@
 Id: 47fe1aaf-02cd-4a41-8bf5-0047015a2a6e
 Tags:
 - phymem64.sys
+- phymem.sys
 Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
@@ -9,11 +10,19 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create phymem64.sys binPath=C:\windows\temp\phymem64.sys type=kernel
     && sc.exe start phymem64.sys
-  Description: ''
+  Description: Supermicro phymem drivers expose direct physical-memory operations
+    to user mode. In the tracked 2.3.0.0 build, IOCTL 0x80002000 accepts a physical
+    address and length, maps the range with MmMapIoSpace, builds an MDL, and maps
+    the pages to user mode with MmMapLockedPagesSpecifyCache; 0x80002004 releases
+    the mapping. Adjacent paths provide direct physical-memory reads and port I/O.
+    An administrator with device access can use these primitives to inspect or modify
+    kernel state.
   OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+  Privileges: Administrator
+  Usecase: Read and write physical memory
 Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/409
+- https://github.com/fluffycats31/vulnerable-drivers
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection:
 - type: yara_signature
@@ -37,8 +46,8 @@ Detection:
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-  Handle: ''
-  Person: ''
+  Person: fluffycats31
+  Handle: '@fluffycats31'
 KnownVulnerableSamples:
 - Authentihash:
     MD5: aa43aa9f88e2fed984077a8852d85a4f
@@ -231,3 +240,258 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 69260cce3156aa2dc0540fb78f5fe826
   LoadsDespiteHVCI: 'FALSE'
+- Filename: phymem64.sys
+  SHA256: 4f9d38567f3a2ac47ae1d8ac5e34a8c99a42a2ca3afc5f1ace44a4cd1097e814
+  MD5: 50493aa68b56d96cf2493f7f18006933
+  SHA1: 8dd8033c50b75c8f33b1f860f4ea1c605fc69ebb
+  Imphash: 6bf6c7ee793a089775db504944eb267e
+  Authentihash:
+    MD5: 4361ef663928b5fe414946bb2a831611
+    SHA1: 6bae7e847d119a2012eaed98bb7b06da19ed25e6
+    SHA256: d7bbb86ccc9c1f4e0c47b2d98c54e73e6915d68d560525e62817205434b01fb6
+  RichPEHeaderHash:
+    MD5: dcfb3408a43287615a36996ce13c7d9d
+    SHA1: ea444085c9b1638227923cafa27b526a202776dd
+    SHA256: 6c37612dabc26fb87a369a84879cdbf13b83021f394a8f895040e0dc0839285f
+  Sections:
+    .text:
+      Entropy: 5.508710400956982
+      Virtual Size: '0x25b2'
+    .rdata:
+      Entropy: 5.365654927108557
+      Virtual Size: '0x784'
+    .data:
+      Entropy: 4.978852824955872
+      Virtual Size: '0x6b8'
+    .pdata:
+      Entropy: 3.752061421099071
+      Virtual Size: '0x108'
+    INIT:
+      Entropy: 4.703751829381467
+      Virtual Size: '0x434'
+    .rsrc:
+      Entropy: 3.239027880442994
+      Virtual Size: '0x6a8'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-09-03 02:37:42'
+  Description: phymem Application
+  Company: Super Micro Computer, Inc.
+  InternalName: phymem
+  OriginalFilename: phymem.sys
+  FileVersion: 2, 3, 0, 0
+  Product: phymem
+  ProductVersion: 2, 3, 0, 0
+  Copyright: 'Copyright(c) Super Micro Computer, Inc. All rights reserved. '
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - KeInitializeEvent
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ExAllocatePool
+  - RtlInitUnicodeString
+  - InitSafeBootMode
+  - IofCompleteRequest
+  - ExFreePoolWithTag
+  - MmUnmapLockedPages
+  - ExReleaseFastMutex
+  - ExAcquireFastMutex
+  - IoFreeMdl
+  - MmFreePagesFromMdl
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - IoDeleteSymbolicLink
+  - IoReleaseRemoveLockEx
+  - IoAcquireRemoveLockEx
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - IoDetachDevice
+  - IoReleaseRemoveLockAndWaitEx
+  - KeSetEvent
+  - IoInitializeRemoveLockEx
+  - IoAttachDeviceToDeviceStack
+  - PsGetVersion
+  - MmGetSystemRoutineAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2019-06-05 18:06:32'
+      ValidTo: '2020-06-03 18:06:32'
+      Signature: 11f64665e99ee9a3212a8317075cf2122256a6cd5452564366da4b3e890c7a94b167d27a0cb1e962de146f371429f531349fc359cccece5f32fa84cd25231f892e44c4676b5ff4008ce6b3f3d9a2690a956a2a6a9e982ba8ebd4256971437156136a25b2e5184e11550aecb83f5ec8ae5467e866d6bbf44b9e8642c8bd5e316a4a494f676aa15eefad41893dd0a7187c881fa235b45f1a0696a8ad2d5c1531eed442d7281290b84f976f9ca241027378c241157a326739b2e8305adbfcef5005f5ccec402c1ab03d6e28c36987ae0d07cd12e41a348098d846f57c3225dbfed0c1b809ad311770854d368d150ee7767676c39a3d148f05cf7c2dcea5f1f7c6f2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000857f83dc2a6ca979b8000000000085
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 85e8c40624a19ac2076dd91f49d8fb53
+        SHA1: 621756d2a4e10231e34677a3c0f2a8d1fb0fb7ca
+        SHA256: 442ba2fb3fc8ab1b1b3c71a45f6ea08ce00cea7eae124ef915d4c17622eb336a
+        SHA384: 19b80fb83482cdb42c94c2eabac29e4db7777988905aab348bd7ed62e325d2ea1f4c80df0d7275abcb2b67585cfc7c36
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 33000000857f83dc2a6ca979b8000000000085
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+- Filename: phymem64.sys
+  SHA256: e7ecb1c259bb0e2b91f3b0a5f1970f4cfe68c59730f762cb3bb068db79e3612e
+  MD5: 57a1995aa572caee922a8ea19ccd7802
+  SHA1: 1c5e40117b0175392c0e90733f82ab626394e5f4
+  Imphash: d722e65a33b35166122d0e2871f6710c
+  Authentihash:
+    MD5: fe8fac73718b86156996635a4d7b1f6d
+    SHA1: afceb95cbc759eeb5dbafffc2a6ad8affadbfa00
+    SHA256: 206f6277ce57bd0e7d0a29820cb6adb733f92473789605ae41f4e79016e614de
+  RichPEHeaderHash:
+    MD5: 34525dd21f3adcbaf5d4e45db0b3a29b
+    SHA1: 22e0f95ca0c0b16e87bf436ebd00f9521d4cfc35
+    SHA256: e607d80e342eebc2df56179fe22125416264c8bcd67923e1081de070d107482c
+  Sections:
+    .text:
+      Entropy: 5.494924236560177
+      Virtual Size: '0x23d2'
+    .rdata:
+      Entropy: 5.391131259681137
+      Virtual Size: '0x78c'
+    .data:
+      Entropy: 4.524432230854527
+      Virtual Size: '0x618'
+    .pdata:
+      Entropy: 3.7190186505227603
+      Virtual Size: '0x108'
+    INIT:
+      Entropy: 4.710104704841271
+      Virtual Size: '0x458'
+    .rsrc:
+      Entropy: 3.252609404293686
+      Virtual Size: '0x690'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2017-11-24 09:20:30'
+  Description: phymem Application
+  Company: Super Micro Computer, Inc.
+  InternalName: phymem
+  OriginalFilename: phymem.sys
+  FileVersion: 2, 2, 0, 0
+  Product: phymem
+  ProductVersion: 2, 2, 0, 0
+  Copyright: Copyright(c) 1993-2017 Super Micro Computer, Inc.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - KeInitializeEvent
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ExAllocatePool
+  - RtlInitUnicodeString
+  - InitSafeBootMode
+  - IofCompleteRequest
+  - ExFreePoolWithTag
+  - MmUnmapLockedPages
+  - MmUnmapIoSpace
+  - ExReleaseFastMutex
+  - ExAcquireFastMutex
+  - IoFreeMdl
+  - MmFreePagesFromMdl
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmMapIoSpace
+  - IoDeleteSymbolicLink
+  - IoGetDeviceObjectPointer
+  - IoReleaseRemoveLockEx
+  - IoAcquireRemoveLockEx
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - IoDetachDevice
+  - IoReleaseRemoveLockAndWaitEx
+  - KeSetEvent
+  - IoInitializeRemoveLockEx
+  - IoAttachDeviceToDeviceStack
+  - PsGetVersion
+  - MmGetSystemRoutineAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2017-11-01 19:18:41'
+      ValidTo: '2018-11-01 19:18:41'
+      Signature: 1da5255a0c9534c4f9e8b78d6e26bd833cce8e78df19ebfa79026fef69abe1e77b68dabacef2774ce4352b4d1572cf67e81c171c1efea5cf5a43f4384619c82bf7e114158506b302665f4f0e661517318186a4424f86725a9bfa6f7d36740d2ea64aa7871599dc5b432d903fc524f89f1ebc39ddaf94c97afaa217f8fa2a59607eb8c704af09d03f4803c18df958c2fd0e951e54ca14695b2a1f2e6b98a17bb42d20b91e3243f514eeca3e9c64ba4e05a8ec69ab5f7b66953f308ed4ddf7daca9278bd49ada9739c8e51734dc20d06be283cfdcc2d2a55cd87a591f5c587a76aa00adf3b7bd282ca1330a42fb1b25ef533254ec96c0e7c3fd63edd434daaff88
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000573ed49abe493f9d4a000000000057
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 7fd4ab7d01103dfa075bf921f93286a9
+        SHA1: a784a4767fbc494cfda41dafb11e95737cf23f75
+        SHA256: 2b0d2128fb9426b04298d12631dfb8d080815408f5396daf9ad30498becec161
+        SHA384: b04ae79695fbfed2e2cbb7b009ca83700a6ce22fd366bbf590db5593f31597902e30f095b0bceda4a8c0e50a7bb59acd
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 33000000573ed49abe493f9d4a000000000057
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
