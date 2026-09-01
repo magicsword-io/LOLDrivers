@@ -1,6 +1,8 @@
 Id: 3ab0d182-6365-47a7-89f4-34121e889503
 Tags:
 - HwOs2Ec10x64.sys
+- HwOs2Ec.sys
+- Huawei MateBook
 Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
@@ -9,12 +11,20 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys     type=kernel
     && sc.exe start HwOs2Ec10x64.sys
-  Description: ''
+  Description: Huawei HwOs2Ec 1.0.0.1 exposes kernel process termination to administrative
+    callers. In the tracked HwOs2Ec.sys build, IOCTL 0x22400C accepts a four-byte
+    PID, rejects only PID 0 and PID 4, opens the target with full process access,
+    and calls ZwTerminateProcess. Proofpoint observed this exact signed driver deployed
+    by Cruciferra as an alternative BYOVD helper for tampering with endpoint security
+    tools.
   OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+  Privileges: Administrator
+  Usecase: Terminate protected security processes
 Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/409
+- https://github.com/fluffycats31/vulnerable-drivers
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+- https://www.proofpoint.com/us/blog/threat-insight/unpacking-cruciferra-analysis-sophisticated-crypter-service
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc.yara
@@ -37,8 +47,8 @@ Detection:
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-  Handle: ''
-  Person: ''
+  Person: fluffycats31
+  Handle: '@fluffycats31'
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 20be6af18d3b97968b2a8d5a9513caaa
@@ -349,3 +359,255 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 071356ee9d8c7f91cbe8fa3c448286a2
   LoadsDespiteHVCI: 'TRUE'
+- Filename: HwOs2Ec.sys
+  SHA256: c4e93449453cf67c5d5605bb8f425207a738a242fdb432d720acc32faa74926c
+  MD5: 63bfd6567f4c704e8ed6530f5cdd704e
+  SHA1: 080fdb73a6bbc99625c2190730257d1e54723952
+  Imphash: dcf524d72961e33f0c6462f869bb6a4a
+  Authentihash:
+    MD5: 620301316b071f339f8ffe7ee4d24990
+    SHA1: 846c4f2abdbef8492f4478505b205375b0c88159
+    SHA256: 30de6a51d0a56e8d2b3d37393252eaa16728b6c4747f57153e6b4ca0b6022f56
+  RichPEHeaderHash:
+    MD5: 855ca6b69838dec250f7af889ac6ae76
+    SHA1: 231e021a37a1363050b733c4a35b21a7f04ba53e
+    SHA256: 88a21f0d4614599d6c8179ee1eb6cf72cb1564aa021fb1950701add96d853357
+  Sections:
+    .text:
+      Entropy: 6.357167334949913
+      Virtual Size: '0x373a'
+    .rdata:
+      Entropy: 4.363297381309785
+      Virtual Size: '0xe34'
+    .data:
+      Entropy: 1.44161352725558
+      Virtual Size: '0x35c'
+    .pdata:
+      Entropy: 4.397484052665614
+      Virtual Size: '0x480'
+    PAGE:
+      Entropy: 6.259500456839248
+      Virtual Size: '0x225d'
+    INIT:
+      Entropy: 5.407548837207753
+      Virtual Size: '0xa4c'
+    .rsrc:
+      Entropy: 3.3089434332999756
+      Virtual Size: '0x370'
+    .reloc:
+      Entropy: 3.3942493131687033
+      Virtual Size: '0x2c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-02-25 19:25:36'
+  Description: HwOs2Ec
+  Company: Huawei Device Co., Ltd.
+  InternalName: HwOs2Ec
+  OriginalFilename: HwOs2Ec.sys
+  FileVersion: 1.0.0.1
+  Product: Huawei MateBook
+  ProductVersion: 1.0.0.1
+  Copyright: "Copyright \xA9 Huawei Device Co., Ltd. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - InitSafeBootMode
+  - memcpy_s
+  - memmove_s
+  - wcscat_s
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IoWMIOpenBlock
+  - IoWMIQueryAllData
+  - IoWMIExecuteMethod
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - MmGetSystemRoutineAddress
+  - RtlGetVersion
+  - ObReferenceObjectByHandle
+  - ZwTerminateProcess
+  - DbgPrint
+  - __C_specific_handler
+  - PsProcessType
+  - RtlTimeToTimeFields
+  - KeInitializeEvent
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - ExSystemTimeToLocalTime
+  - PsSetCreateProcessNotifyRoutineEx
+  - KeSetEvent
+  - KeWaitForMultipleObjects
+  - KeWaitForSingleObject
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - wcscpy_s
+  - _wcsnicmp
+  - RtlCompareUnicodeString
+  - RtlAppendUnicodeStringToString
+  - ExAllocatePool
+  - ZwCreateFile
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - ZwQueryInformationProcess
+  - ObOpenObjectByPointer
+  - ObQueryNameString
+  - IoFileObjectType
+  - ZwCreateKey
+  - ZwOpenProcess
+  - RtlInitUnicodeString
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwSetValueKey
+  - RtlFreeUnicodeString
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: O=GlobalSign, OU=GlobalSign Root CA , R3, CN=GlobalSign
+      ValidFrom: '2015-06-04 17:47:53'
+      ValidTo: '2025-06-04 17:47:53'
+      Signature: 6002ac0e090db46a7d590cad66450a180f5ea7255c14f6d35acf9d5e3bc77afc005f6e402b2de1ce6f76ab3cabd9f945cf779052ea21973ad25d3e57ba73ec007577a2754574c76226b054bad5c9c9da6ced66f2ff8b17b27959ca805465da96ca11de2abbc3d43d37fce6fdcb92866eb9ad4d1b68e047d9b08634231cda1ddd6e54edcb0ee17ad54db2a1abceda712fa23e0804ac2a53d713d93c6e338ca7b7b935afa559df305fea3ee8777123f8f9e91edbe214036a8aef64c17be05d56e0e4f2c84ce0d7ef07d3d620fade651998a7c6712b5d94aee9c90b91578690ccde9fd43c1995043efd5c2ba4fc39958fa88787b25bca804fc31638f50eb0edd7caf6fc774477d84ac89d9fff301798d712d590dde53a66e0f12c974799b60f0e56da9b410dc34bd5f0689ccaa5865c866612f23b8304ff46ed2d64d456952b7e799d01831318d568bd91cedd86fb08a0ab0c4564c3d126345e56a26c4c690c8b63ca84187ac573abb352ae8ddce22b03677d862a126f684f6481752d85e5b8ec80059bab3969ee1f316a6a2afb35bd63aac5ee65d3d696a43e99931ebeee3b6c646caecd140afcd88c20a31cf8627fa4c07d1f2c7f3a50c0269396379c8fa51363b473d816ab27487eaafeeb0f487f29989e3b499190f08f3ebadc9f26819d736631a727b6e4a94d04e5ea5331c0fa934a879dfc4a61e063a2ac4f88f4c5781f65
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 330000003b6ac01e2b21e615dc00000000003b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b61c1ad0b5d89c8170aaa81f8b6218a3
+        SHA1: b84d6a44f86e112ef3ecb55e22527fd37f622de8
+        SHA256: 60c5e154e6794b6ac214b221c8b62a733eb8794092aa400729bbf88b72748230
+        SHA384: be8fab78dcd9709d29c973205e536a3994a93769c7032b72d9ab26106a5e00b5a3497e41baec9cf9824506ca0990ffac
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-08-01 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 70a0bf435c55e7385fa0a3741b3db616d7f7bf5707bd9aaca1872cec855ea91abb22f8871a695422eda488776dbd1a14f4134a7a2f2db738eff4ff80b9f8a1f7f272de24bc5203c84ed02adefa2d56cff9f4f7ac307a9a8bb25ed4cfd143449b4321eb9672a148b499cb9d4fa7060313772744d4e77fe859a8f0bf2f0ba6e9f2343cecf703c787a8d24c401935466a6954b0b8a1568eeca4d53de8b1dcfd1cd8f4775a5c548c6fefa1503dfc760968849f6fcadb208d35601c0203cb20b0ac58a00e4063c59822c1b259f5556bcf27ab6c76ce6f232df47e716a236b22ff12b8542d277ed83ad9f0b68796fd5bd15cac18c34d9f73b701a99f57aa5e28e2b994
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 21a266bd49f2778b24d13d95641ea6ac
+        SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
+        SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
+        SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Code Signing Root R45
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2029-03-18 00:00:00'
+      Signature: acf7cc158b3079a81d0b28881909d71c7ffe86bd7b5a336e0d670e7b62d9e1185cb0bd135d1d23ae39507637aa44fd5f01235986564cccadbc64131430a420a8e03fe89c72dc7ef3d80c23baa82daa3cf6ec9f87310765f539a7518275e1f22f97f6d1e165968364fea11d51fbb5249bf5d27769bc852c5cfa5877d1aea7b10be2d677bba9b4344aa96f3df4f30d955de6f97a45b02517312edbf70f68e6831fa9f7e5d49d988cd3614b2fc3287e7ade930eb47da00a6d92c4b4663f7da758eeacf7ecc30801ab38fc0a1ca9c597b288c8090219f65c9a1af14d6c30d4b306ab0060480d78abcf17ad9293622077756cbdc832b4dc4debd9dfc1909629bdc17f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 7803184245708a41cf6f01b8eeb4a954
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: a33260428269bc902bc1cd280e4b1837
+        SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
+        SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
+        SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp 2022 , 2
+      ValidFrom: '2022-09-21 00:00:00'
+      ValidTo: '2033-11-21 23:59:59'
+      Signature: 55aa2a1af346f378573730fc75e34fd68523f1fcf995399b25e6f7728a98c377d464fc15fb36c249512c7888635509463900fc69d4ca9b29fba33fc0c9009b131db09889dc78f2cd7c85cd539daf62e26166a3142a45874a98422b50fc1bb59e083009fae42dd7098979f909e688ce7d1bb86aa29bc1536009e8a3b89dd7ad1f1cb8ec9841f0f60e80fbe4ffdf9d10a7eb00ba5f4a8f1a3a52b4eabf0949153536599a0f54d2b21b7f7e5e09ad76548a746dcad205672b76ebff98b226953819884414e50a59a26be7223e4421d23f1cc09bed7c48b2d8920c914f3c6694af5d0253eb9ee29ee4d31f8601649c00c2e95a74750d3de17988bf1c0197c9192380d7365a5f9616b1630cc646403bce5d35d4593e439a18aec3c9cbc3fb9b135f6ab5c7e0f305c359df27622bde41c953b9ff341067f62632987bfe5c42948194829dac0a8bc64b154ad3989045603380e023def803a4f64547e5ceb8034247e841367177adfda2e897744e2eda1e1d8c5ac81e9ad5c2f0c622a84f9bbdd81c9a51c42f9af65fa72797ba962e8557c060e778567f6aefc2959a4b1102c8829cc91a057cba71b54e7a996cf4e89ed45a98c89fbf8dbb185c43f5d02ae8e262ee7804dbbdd1fb5b0aa8707ef0978478e308035d472c63a825389701d23f3adae5e5f6e69bdc7e2cccff174c4d00a2d8d6010eb88beee6e07255892c271961f677018c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0c4d69724b94fa3c2a4a3d2907803d5a
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 812cb8ca0c79b318780ec5128ad13c1d
+        SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
+        SHA256: 0c0b121e6f807bc22d4e0f4945634c22eca7e4d5ca58a1526a40e918a35c1d79
+        SHA384: 86aab81948499b3c90833253a853e7b3fd82ccf7b65b35806831ab60814bfc6ad8848c990df262a1c89b6fc4267dad81
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 CodeSigning CA 2020
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2030-07-28 00:00:00'
+      Signature: 08887226c6affaac5f06c0aa8c90dad0b2c0a297ff6e13321654fd3ef430119f8f98f99b52ddf2a216eed97895a69a7c61b804b5f8ebcbf4611133f66525b711428bd8696ec7ff95b48143a97eaebf82d64dcc11a383716a105e1905a7e76c7f56f4a85cc34e09ad596bb8f97ea52eb8fcde0ec2a0fbb004d4131bc727a9b9aa2d313bcf464c9deb4cecbc2e9cf187a37f38695f414067f6537dea41ef8e3dfba9d4113846df3cebf6cd22bd13cdf0e1e6e533a0be3ce478d51bcc20f23073b0221cf684d69b5c0002e128524bff124b40eaeeb01a06069e84e6e7f0db8446fb73d92b42b6c95734c716c0a6eb21b9aa0ef7fedbcaebbc17cbb867ebe33e4fdba994866455c9090ac0d904714a114b5a64c3bc7878ad4c4726650799d5cd3660a13353b3f67b2ad589403c71a5abf89959fde39b924bdd05bd0b0c78062bcf53d8bd129a5b2786853f91bee078807354dfa71d672b6ab6ae4d89802408527050f301ff44ae2f9ae0e14908e1e15bd738d19e0a8a9d94279bcaa3b9dbe2366ae36fb95862e036783601fac1a7897a2653a35cbbd2b2eb8acb63082ffe1ef35629e2359bd8ffe9a5bd6d4b592c892c2f52bbb52990da4347bc72ddbcd9bf80c1dcb0abb44b1d58363764eb9be185179a29a2fde608d292ffa0f87ce1e9a7d1308e5f26502bc7a2e297778aefd84d3e26eb994060f33c670cb608722935538134dc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 77bd0e03a1b708f854ab067210d90447
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 3ac895a2c335c262c99974d6dbbac0b7
+        SHA1: f6bd87a060c0a15c54ee2dbf0f698ab43d8e1462
+        SHA256: b8b44319d788ea6ec3e7dea27fab059d25e3c4dcf09fcd1c67be7faed44a6b02
+        SHA384: 7a53befc061bab1086eafefc9e2e3ff7912594c831e18d76b1a1a58f27c6e7d7edba342776b87089d607f8ca5592a5b3
+    - Subject: C=CN, ST=Guangdong, L=Dongguan, O=Huawei Device Co., Ltd., OU=IT Dept.,
+        CN=Huawei Device Co., Ltd.
+      ValidFrom: '2022-06-17 03:33:13'
+      ValidTo: '2023-04-09 08:30:19'
+      Signature: 0c4c6249c7618aebece43e89cfb04a61dc27d1ffdf68675349a411f5d3c1f8596d9c5157696fcda93828b804d094d9cfad0e73eef7df791ee99157e8e03324c0bf5da51648f72cbc552d7aec9e48fd4bc7006edbd826831ffe95ddf6d372d8cb8fd7afe071678cd2069149317d67acf76169a4a86f286c753d99694a769d52e52bbffb1626adb7e3427d4c768974bf86d12cdb330f2dda4bfa623715f5d3cc76b1d2d8df933482a20150b0e0bcfa2cf24f6c7f665a8ddac0f8af47ec6afcdec2e4aefca23ecbf8039ed2288f880475554a5dca8ac6f7538a22dde36f0813d9dbd2fc40f7a94b496b08bb7db903fe12bafa167a9a9db0a76046bab0e688f907e145b8d082d0d1fd41cfae01117fc5f5593bafb809ba37df0b38ea1364911210a36e4ae41ae188ca9519e464d9c55f3c69f059319254ebfe271cb91e48ac4d3ceaae8f67964c8badeb47f8ffb7fdd093b636ad373fc2cbd592dbd53a0634b0559818d1c325f1118f94375f67b6fbabddc095bde83eb253974ae87bed9269165552a0863581c0ec6e2494b63b875e9de9c19c87dbb2cf8c0c500a1f8f3526fb9377fae805c3a2e13c2e5f75ec599de8dec88fbe1079aa982d56a4e787bc9087da407f6f77462a21d0a85226247a4a25b5b818d843151aa313de7be35d03374b9785e3f475725d6bffb2fe454094d9f6b18e2476d438a6cdb56a9b0f80c0305e861f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 41c888cd480408c6a6defe9e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 134a4a23784bdb29a00c8ccc937a9a2f
+        SHA1: c7d3094f44b8fdb806ade61f4e3770b1a931e9f1
+        SHA256: feb000473e49a6a7d536c65548a7f10f43e68ec07f169566ebdf5f42b1da0608
+        SHA384: 77f3d890b65e131a474903cffd84794e21f22aa0c7ad6fff9e065e3fd3fe0e93f5a64b7cb7c93d5a46eec62d897b240f
+    Signer:
+    - SerialNumber: 41c888cd480408c6a6defe9e
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 CodeSigning CA 2020
+      Version: 1
