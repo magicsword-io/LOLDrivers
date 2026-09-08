@@ -11,7 +11,7 @@ references:
     - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag
 date: 2026/04/17
-modified: 2026/08/31
+modified: 2026/09/08
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -27,8 +27,8 @@ detection:
             - 'MD5=877227519255e3dce43b479651242875'
             - 'SHA1=0a642db605ce0d393dadc945afb11609e407f8d2'
             - 'SHA1=dc68f8d3648e95c5b75d4938b47e5b90d52d874f'
-            - 'SHA256=3e4c9190b8c1b00e7d53f92cef0b66c16594cc26773ba8d5d682a5468ea86e00'
             - 'SHA256=4cea52c32579869d0209f18ced0b9cc9ad8f86cac29e0fb63b3d60eb64801bda'
+            - 'SHA256=3e4c9190b8c1b00e7d53f92cef0b66c16594cc26773ba8d5d682a5468ea86e00'
             - 'IMPHASH=8434fd924f47e8af731cc83bc34000ea'
     condition: selection_hashes
 falsepositives:
