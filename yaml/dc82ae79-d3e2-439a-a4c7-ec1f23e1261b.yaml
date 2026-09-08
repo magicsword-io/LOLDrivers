@@ -6,14 +6,17 @@ Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-08-31'
 MitreID: T1068
+CVE:
+- CVE-2025-65001
 Category: vulnerable driver
 Commands:
   Command: sc.exe create FBIOSDRV type= kernel binPath= C:\\windows\\temp\\fbiosdrv.sys
     && sc.exe start FBIOSDRV
   Description: Fujitsu BIOS Driver versions before 2.5.0.0 are affected by CVE-2025-65001.
-    This signed 2.4.0.0 build creates the \\Device\\FBIOSDRV interface. A specially
-    crafted request from a local authenticated administrator can trigger an out-of-bounds
-    write, potentially causing arbitrary kernel code execution or a denial of service.
+    The tracked 1.2.1.0 through 2.4.0.0 fBiosDrv.sys builds all precede the fixed
+    release. A crafted request from a local authenticated administrator can trigger
+    an out-of-bounds write, potentially causing arbitrary kernel code execution or
+    denial of service.
   Usecase: Execute code in the kernel
   Privileges: Administrator
   OperatingSystem: Windows
@@ -171,5 +174,1099 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 66deb11a5dd83ca0efcfd38af6cbf224
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      Version: 1
+- Filename: fBiosDrv.sys
+  SHA256: 1955a346d1e414f354c69fe86a846450403d456739f8adeef17281056f8b71da
+  MD5: 8f3c74a9a4c8767fec6ccc6aefcbd791
+  SHA1: 242bdfbabb90bc77977c164031cbc0d14e2812cc
+  Imphash: d3b8c7777bd6cfeb46b95304000c5cdc
+  Authentihash:
+    MD5: 609ee93f38c135423560d24f7c63c6fe
+    SHA1: 62eb2e81f2b54ee5ab17f1ac11fe816c9ccbf750
+    SHA256: 535c85ce3b60c64d1b7fb202ca3751f36bb96f7bff11b8bed24aafb5e3071df3
+  RichPEHeaderHash:
+    MD5: 911c1d763338a4e8875ccfc565f4e19c
+    SHA1: 801bc3966270226117dfbddef69a41dafa8161ee
+    SHA256: ebcf7a188a6bf53e55b5aba9e20b7d7603caa5f9be9c5dbca36a10b538e123ec
+  Sections:
+    .text:
+      Entropy: 6.130112469631129
+      Virtual Size: '0xc51'
+    .rdata:
+      Entropy: 4.600768448193788
+      Virtual Size: '0x78c'
+    .data:
+      Entropy: 0.910293087641677
+      Virtual Size: '0xa0'
+    .pdata:
+      Entropy: 3.9566910373081368
+      Virtual Size: '0x1d4'
+    PAGE:
+      Entropy: 6.240636013808722
+      Virtual Size: '0x1bea'
+    INIT:
+      Entropy: 5.3855372690193715
+      Virtual Size: '0x5a6'
+    .rsrc:
+      Entropy: 3.379169084029248
+      Virtual Size: '0x3b8'
+    .reloc:
+      Entropy: 2.8561450333085068
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-09-17 23:13:54'
+  Description: Fujitsu BIOS Driver
+  Company: FUJITSU CLIENT COMPUTING LIMITED
+  InternalName: fbiosdrv.sys
+  OriginalFilename: fbiosdrv.sys
+  FileVersion: 2.3.40.0
+  Product: Fujitsu BIOS Driver
+  ProductVersion: 2.3.40.0
+  Copyright: Copyright FUJITSU CLIENT COMPUTING LIMITED 2009-2019.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - IoAttachDeviceToDeviceStack
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDetachDevice
+  - IoInitializeRemoveLockEx
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoReleaseRemoveLockAndWaitEx
+  - IoWMIRegistrationControl
+  - MmMapLockedPagesSpecifyCache
+  - MmAllocateContiguousNodeMemory
+  - MmFreeContiguousMemory
+  - MmGetPhysicalAddress
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItemEx
+  - IoRegisterPlugPlayNotification
+  - IoUnregisterPlugPlayNotificationEx
+  - ObfDereferenceObject
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=JP, postalCode=211,0053, ST=KANAGAWA, L=KAWASAKI, STREET_ADDRESS=4,1,1,
+        KAMIKODANAKA, NAKAHARA,KU, O=FUJITSU CLIENT COMPUTING LIMITED, CN=FUJITSU
+        CLIENT COMPUTING LIMITED
+      ValidFrom: '2018-04-24 00:00:00'
+      ValidTo: '2021-04-23 23:59:59'
+      Signature: 7c3082da74bb1e2aa2429360edb2a6e65a546e6e9e9980778056323b1c0d1b99330e351531ca53181db60321f69d15e3f054ac6acb4c91e98ae3a36260e9904682925077f48dd6643de449ab99878706df3c1d8dd813a625d8c779c3a3a9e2ea7608358916670ab3bb08cd9423563c9302e39d1db39605cd84b7b708ef866a3175a5d6236d31262a01547936a26ae41d4ed58e6d0e50900aef8bd89c4b53f746e6352aeb2681c9adb2add693a5ec9ce065abd72ea2199e4a29c6d393d1ff107320ac0a15e679bc926e8b4019d3dfa050d84ab7315edccfb0f64ddbe4772aa291e00fc3f68cfc79a01d5e36cf7aba046f02ea4aa9ecff49a7630d70945d558b07
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 4b4cd137001ea3d32d40dea3668d4ab3
+        SHA1: 531a6ef8088445353c809dd34ab31b846f8e206d
+        SHA256: 5680c352d9f0cd8cba0ce1ee56799ef3540b747c1744822aa80bcf4bd533d084
+        SHA384: 3888363ff16c0ff6f48ba465d386f8e5ba5a6f4159f78d1ef6549d84af25df57c591b656c144c6e81ca22dfce14d4f33
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      ValidFrom: '2013-05-09 00:00:00'
+      ValidTo: '2028-05-08 23:59:59'
+      Signature: 023f0239c3eef8ca3b89de0c6d4db1f14e924fafc2382c04ccc56311ab0963afaba2d7023fcc6f19c33dd61a0894ff25d8a988a72b101ae09bb107221a511c3ad4e1e909bfe62474af1e7b16316e23ef54512d5202e27508054cf1b751e15100c687f66cee104476576af1df586b21aa49d47c374ebdffb67554401836576711cd4f02e4fef3dafc7517dbecb7f7650923491f435783ea7e207761c84df2bb654da8f7854507af7a6927659029408bdf7b3a51398ca81f7079ad6d4220a2cf0c6c038c4ccd730794e75a8e3a04baa2a17c1fcb633a15a7d4151ba7524732a9f4bf6447d1aa1f534e323073c26fb778829d5cff46bb6b221d880bf81baa34a6fc8cf5dd7f658c8c315731d036ec47a1cfcb8ba8ef1c1858c50677ca4b9b51af4c084a7a8fe2a352e28e8ecc26e4b2d8e538c2a8edc6819c356ba958614a0a97b44b42b6559dbe99e7706d59f86d2a0c7f19605f0c9a886c30ac520990161bff2b9ddbd020ca89ea287e328e19df7b48331ed765f8aec9f8831493767d64d08ecebe357dff72314d9f9ebd1e6c2fa88f0c0650fb8c27b376c9f4e6d7c334e28c87218661febf5574e12177030a686cbbe4c9a9e6cf5925eb7cec450e796668e822cdb8ef98854d96113c098ad07fbc282813fb6aca548d925ccdc26598069ece485bd4b5379346417c07ddcffa43efba6761ff7d49e0bb307d5c80e3e616394ba7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2e7c87cc0e934a52fe94fd1cb7cd34af
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f64df7e88bb2b95c7204bc07bb197a87
+        SHA1: a1bfa9f0f46a1e9ac66259c9b2b1b2dcaf16db9b
+        SHA256: a3dd3858c0e514dd37cacd5f23fc8222443ff636eef4a9fe90bc0ecbbb051fd1
+        SHA384: 4805a7e23d6c8ff5e149f197b744bcb2346e73f19a48835a2f64129183981109256b75ea371a331746d01fd4e135ab6e
+    Signer:
+    - SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      Version: 1
+- Filename: fBiosDrv.sys
+  SHA256: 23a99ab2bd0ad069a088a2b256bf45ff96082e33ed2580ae06eeca06c053bec8
+  MD5: b668c532afda4f2cca4ee38b4b1bcad6
+  SHA1: cbb987bdfa30b73c384c61d97e211485b9235478
+  Imphash: 86842affc0e2217f0bc0c6c5bcb5bd59
+  Authentihash:
+    MD5: 841bec58dac9f1e5fcbb34f1cf4b96a5
+    SHA1: 7124f5433f25542e9bf3566c75a244eb82d91dad
+    SHA256: 13f85a2966610799c72c917262e9f3431891b87780fd269d52e4e11b32808d06
+  RichPEHeaderHash:
+    MD5: 8368a5ce52ea2d94673c31452bcbca3c
+    SHA1: b84abfb8556ce793e3581a8e8352d9a721fa8921
+    SHA256: 8b385470a67e089d4fd209eb5cfe940d10c10dc878841758f7770200bf9d053c
+  Sections:
+    .text:
+      Entropy: 6.208290857923722
+      Virtual Size: '0x1a6e'
+    .rdata:
+      Entropy: 3.9412073861301615
+      Virtual Size: '0x394'
+    .data:
+      Entropy: 3.0417062775743133
+      Virtual Size: '0x19'
+    .pdata:
+      Entropy: 3.763563036468669
+      Virtual Size: '0x120'
+    INIT:
+      Entropy: 4.925886570033038
+      Virtual Size: '0x33a'
+    .rsrc:
+      Entropy: 3.3132749923555886
+      Virtual Size: '0x370'
+    .reloc:
+      Entropy: 2.091917186688699
+      Virtual Size: '0x10'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2015-10-27 21:18:40'
+  Description: Fujitsu BIOS Driver
+  Company: FUJITSU LIMITED
+  InternalName: Fujitsu BIOS Driver
+  OriginalFilename: fbiosdrv.sys
+  FileVersion: 1.2.1.0
+  Product: Fujitsu BIOS Driver
+  ProductVersion: 1.2.1.0
+  Copyright: Copyright FUJITSU LIMITED 2009-2015
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - ZwQuerySystemInformation
+  - RtlInitUnicodeString
+  - RtlCompareMemory
+  - KeInitializeGuardedMutex
+  - KeAcquireGuardedMutex
+  - KeReleaseGuardedMutex
+  - MmMapLockedPagesSpecifyCache
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ExAllocatePool
+  - ExFreePoolWithTag
+  - MmMapIoSpace
+  - ZwClose
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - ZwQueryValueKey
+  - MmGetSystemRoutineAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=JP, ST=Kanagawa, L=Kawasaki, O=FUJITSU LIMITED, OU=Personal Systems
+        Business Unit, CN=FUJITSU LIMITED
+      ValidFrom: '2015-08-03 00:00:00'
+      ValidTo: '2016-11-01 23:59:59'
+      Signature: 2a290dcee21cf63f9c83f7fb30202e52e84550a4d5325762c9f7876b4c6a7186f90d1ee288c812a497358ad14e2f00db2ba68f8d1977f51accaf6f003e8c2c94488980c43083d4891dddb4ae2f62320186341930a9734c70adf1c2bdfaa9932c314d5e3d98a3b7b2790e93fc7a6cc41b6440e72ffeb09ae200c6971364eb02069fc08cadac5496f2ff7dd64dc24515298beaa7e236bd11a0a15f95a8b0019f0f1ffbf1f48ce7c8e2b62215bb85afd404126bbe8544011799c3b2f58e8806eb2ec11982de13bf6facbdc596a026c24ef1ad17c2fe1fc9bd9d0f734003945f917043027e802c4206b147568f4a739d6dfb58eddfe20b17fcc022fc42680ba1442c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 2cd9656643cb2adaea1528cad864d3fc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 929f2a1e6a9ea8f4a2b139170b7d306d
+        SHA1: e6b2345c3b687714119f87e81f29ac3bfd1d604f
+        SHA256: 047de0987aaaaeb5e36ca04772d71a72676fc6c73fbe9373a497bed9d94afa02
+        SHA384: 0084d228edb2028579a15e2ab81906c4bf099f2f5688a03830d1cdf9e57308c801d2bfbb3221892b8dd6f9c8082e87fa
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 2cd9656643cb2adaea1528cad864d3fc
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: fBiosDrv.sys
+  SHA256: 23b2615f9417d6545ad595492a4423f1330bbc7cde32a95a219b63b4c28ea8de
+  MD5: 2cb15cafe598063d5b6d0f29e5fa8090
+  SHA1: a37da11592ccbb75dd9cebcb3846882d36f3b40b
+  Imphash: 86ef49f5f0767a73573cea0d82bc9ef4
+  Authentihash:
+    MD5: 159ecef4cb6e9fbd8ce3cdc24f71a9da
+    SHA1: 107fe4242d7e630413123083d67b888bd9c21b91
+    SHA256: af0b10dd5b8970b698accf85685be3a421b70e33b41188cdb8c09720b3053839
+  RichPEHeaderHash:
+    MD5: 25312effb71bdfe12248dd325ca76eaf
+    SHA1: d0ced7b6f1aba97a50b1195c2c17318bf0f763ba
+    SHA256: cad3ec8869197e05c01a04d844be76aade65e44d8fecaacb578f0196e8cd7d2a
+  Sections:
+    .text:
+      Entropy: 6.5598186660255315
+      Virtual Size: '0x602e'
+    .rdata:
+      Entropy: 4.412646315270482
+      Virtual Size: '0x524'
+    .data:
+      Entropy: 1.7043043220210539
+      Virtual Size: '0x39'
+    .pdata:
+      Entropy: 4.142586872651922
+      Virtual Size: '0x258'
+    INIT:
+      Entropy: 4.985105316446277
+      Virtual Size: '0x366'
+    .rsrc:
+      Entropy: 3.3213605029979694
+      Virtual Size: '0x370'
+    .reloc:
+      Entropy: 2.091917186688699
+      Virtual Size: '0x10'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2016-01-24 18:28:21'
+  Description: Fujitsu BIOS Driver
+  Company: FUJITSU LIMITED
+  InternalName: Fujitsu BIOS Driver
+  OriginalFilename: fbiosdrv.sys
+  FileVersion: 1.2.2.0
+  Product: Fujitsu BIOS Driver
+  ProductVersion: 1.2.2.0
+  Copyright: Copyright FUJITSU LIMITED 2009-2015
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - ZwQuerySystemInformation
+  - RtlInitUnicodeString
+  - RtlCompareMemory
+  - KeDelayExecutionThread
+  - KeInitializeGuardedMutex
+  - KeAcquireGuardedMutex
+  - KeReleaseGuardedMutex
+  - MmMapLockedPagesSpecifyCache
+  - MmAllocateContiguousNodeMemory
+  - MmFreeContiguousMemory
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ZwClose
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - ZwQueryValueKey
+  - MmGetSystemRoutineAddress
+  - MmMapIoSpace
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=JP, ST=Kanagawa, L=Kawasaki, O=FUJITSU LIMITED, OU=Personal Systems
+        Business Unit, CN=FUJITSU LIMITED
+      ValidFrom: '2015-08-03 00:00:00'
+      ValidTo: '2016-11-01 23:59:59'
+      Signature: 2a290dcee21cf63f9c83f7fb30202e52e84550a4d5325762c9f7876b4c6a7186f90d1ee288c812a497358ad14e2f00db2ba68f8d1977f51accaf6f003e8c2c94488980c43083d4891dddb4ae2f62320186341930a9734c70adf1c2bdfaa9932c314d5e3d98a3b7b2790e93fc7a6cc41b6440e72ffeb09ae200c6971364eb02069fc08cadac5496f2ff7dd64dc24515298beaa7e236bd11a0a15f95a8b0019f0f1ffbf1f48ce7c8e2b62215bb85afd404126bbe8544011799c3b2f58e8806eb2ec11982de13bf6facbdc596a026c24ef1ad17c2fe1fc9bd9d0f734003945f917043027e802c4206b147568f4a739d6dfb58eddfe20b17fcc022fc42680ba1442c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 2cd9656643cb2adaea1528cad864d3fc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 929f2a1e6a9ea8f4a2b139170b7d306d
+        SHA1: e6b2345c3b687714119f87e81f29ac3bfd1d604f
+        SHA256: 047de0987aaaaeb5e36ca04772d71a72676fc6c73fbe9373a497bed9d94afa02
+        SHA384: 0084d228edb2028579a15e2ab81906c4bf099f2f5688a03830d1cdf9e57308c801d2bfbb3221892b8dd6f9c8082e87fa
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 2cd9656643cb2adaea1528cad864d3fc
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: fBiosDrv.sys
+  SHA256: 25848f00e6cc7f5b7db1c52870d3592ea3dbaab00df76b5b7c542d3c9823d049
+  MD5: e09f8892891a19e152af6348e1505559
+  SHA1: 8201cd91a8f0858961c6abbc28197ab068569d7b
+  Imphash: 86ef49f5f0767a73573cea0d82bc9ef4
+  Authentihash:
+    MD5: 159ecef4cb6e9fbd8ce3cdc24f71a9da
+    SHA1: 107fe4242d7e630413123083d67b888bd9c21b91
+    SHA256: af0b10dd5b8970b698accf85685be3a421b70e33b41188cdb8c09720b3053839
+  RichPEHeaderHash:
+    MD5: 25312effb71bdfe12248dd325ca76eaf
+    SHA1: d0ced7b6f1aba97a50b1195c2c17318bf0f763ba
+    SHA256: cad3ec8869197e05c01a04d844be76aade65e44d8fecaacb578f0196e8cd7d2a
+  Sections:
+    .text:
+      Entropy: 6.5598186660255315
+      Virtual Size: '0x602e'
+    .rdata:
+      Entropy: 4.412646315270482
+      Virtual Size: '0x524'
+    .data:
+      Entropy: 1.7043043220210539
+      Virtual Size: '0x39'
+    .pdata:
+      Entropy: 4.142586872651922
+      Virtual Size: '0x258'
+    INIT:
+      Entropy: 4.985105316446277
+      Virtual Size: '0x366'
+    .rsrc:
+      Entropy: 3.3213605029979694
+      Virtual Size: '0x370'
+    .reloc:
+      Entropy: 2.091917186688699
+      Virtual Size: '0x10'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2016-01-24 18:28:21'
+  Description: Fujitsu BIOS Driver
+  Company: FUJITSU LIMITED
+  InternalName: Fujitsu BIOS Driver
+  OriginalFilename: fbiosdrv.sys
+  FileVersion: 1.2.2.0
+  Product: Fujitsu BIOS Driver
+  ProductVersion: 1.2.2.0
+  Copyright: Copyright FUJITSU LIMITED 2009-2015
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - ZwQuerySystemInformation
+  - RtlInitUnicodeString
+  - RtlCompareMemory
+  - KeDelayExecutionThread
+  - KeInitializeGuardedMutex
+  - KeAcquireGuardedMutex
+  - KeReleaseGuardedMutex
+  - MmMapLockedPagesSpecifyCache
+  - MmAllocateContiguousNodeMemory
+  - MmFreeContiguousMemory
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ZwClose
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - ZwQueryValueKey
+  - MmGetSystemRoutineAddress
+  - MmMapIoSpace
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=JP, ST=Kanagawa, L=Kawasaki, O=FUJITSU LIMITED, OU=Personal Systems
+        Business Unit, CN=FUJITSU LIMITED
+      ValidFrom: '2015-08-03 00:00:00'
+      ValidTo: '2016-11-01 23:59:59'
+      Signature: 2a290dcee21cf63f9c83f7fb30202e52e84550a4d5325762c9f7876b4c6a7186f90d1ee288c812a497358ad14e2f00db2ba68f8d1977f51accaf6f003e8c2c94488980c43083d4891dddb4ae2f62320186341930a9734c70adf1c2bdfaa9932c314d5e3d98a3b7b2790e93fc7a6cc41b6440e72ffeb09ae200c6971364eb02069fc08cadac5496f2ff7dd64dc24515298beaa7e236bd11a0a15f95a8b0019f0f1ffbf1f48ce7c8e2b62215bb85afd404126bbe8544011799c3b2f58e8806eb2ec11982de13bf6facbdc596a026c24ef1ad17c2fe1fc9bd9d0f734003945f917043027e802c4206b147568f4a739d6dfb58eddfe20b17fcc022fc42680ba1442c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 2cd9656643cb2adaea1528cad864d3fc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 929f2a1e6a9ea8f4a2b139170b7d306d
+        SHA1: e6b2345c3b687714119f87e81f29ac3bfd1d604f
+        SHA256: 047de0987aaaaeb5e36ca04772d71a72676fc6c73fbe9373a497bed9d94afa02
+        SHA384: 0084d228edb2028579a15e2ab81906c4bf099f2f5688a03830d1cdf9e57308c801d2bfbb3221892b8dd6f9c8082e87fa
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 2cd9656643cb2adaea1528cad864d3fc
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: fBiosDrv.sys
+  SHA256: 444f9593bcbdaca3178bbe5da06d8641dd62bf4dbf1efad213e130f66800ac86
+  MD5: 502d0919855df4df066887c617ecdebb
+  SHA1: 5b14bf31f4a470060eae01088e39ea26b12be37e
+  Imphash: d3b8c7777bd6cfeb46b95304000c5cdc
+  Authentihash:
+    MD5: 609ee93f38c135423560d24f7c63c6fe
+    SHA1: 62eb2e81f2b54ee5ab17f1ac11fe816c9ccbf750
+    SHA256: 535c85ce3b60c64d1b7fb202ca3751f36bb96f7bff11b8bed24aafb5e3071df3
+  RichPEHeaderHash:
+    MD5: 911c1d763338a4e8875ccfc565f4e19c
+    SHA1: 801bc3966270226117dfbddef69a41dafa8161ee
+    SHA256: ebcf7a188a6bf53e55b5aba9e20b7d7603caa5f9be9c5dbca36a10b538e123ec
+  Sections:
+    .text:
+      Entropy: 6.130112469631129
+      Virtual Size: '0xc51'
+    .rdata:
+      Entropy: 4.600768448193788
+      Virtual Size: '0x78c'
+    .data:
+      Entropy: 0.910293087641677
+      Virtual Size: '0xa0'
+    .pdata:
+      Entropy: 3.9566910373081368
+      Virtual Size: '0x1d4'
+    PAGE:
+      Entropy: 6.240636013808722
+      Virtual Size: '0x1bea'
+    INIT:
+      Entropy: 5.3855372690193715
+      Virtual Size: '0x5a6'
+    .rsrc:
+      Entropy: 3.379169084029248
+      Virtual Size: '0x3b8'
+    .reloc:
+      Entropy: 2.8561450333085068
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-09-17 23:13:54'
+  Description: Fujitsu BIOS Driver
+  Company: FUJITSU CLIENT COMPUTING LIMITED
+  InternalName: fbiosdrv.sys
+  OriginalFilename: fbiosdrv.sys
+  FileVersion: 2.3.40.0
+  Product: Fujitsu BIOS Driver
+  ProductVersion: 2.3.40.0
+  Copyright: Copyright FUJITSU CLIENT COMPUTING LIMITED 2009-2019.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - IoAttachDeviceToDeviceStack
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDetachDevice
+  - IoInitializeRemoveLockEx
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoReleaseRemoveLockAndWaitEx
+  - IoWMIRegistrationControl
+  - MmMapLockedPagesSpecifyCache
+  - MmAllocateContiguousNodeMemory
+  - MmFreeContiguousMemory
+  - MmGetPhysicalAddress
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItemEx
+  - IoRegisterPlugPlayNotification
+  - IoUnregisterPlugPlayNotificationEx
+  - ObfDereferenceObject
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=JP, postalCode=211,0053, ST=KANAGAWA, L=KAWASAKI, STREET_ADDRESS=4,1,1,
+        KAMIKODANAKA, NAKAHARA,KU, O=FUJITSU CLIENT COMPUTING LIMITED, CN=FUJITSU
+        CLIENT COMPUTING LIMITED
+      ValidFrom: '2018-04-24 00:00:00'
+      ValidTo: '2021-04-23 23:59:59'
+      Signature: 7c3082da74bb1e2aa2429360edb2a6e65a546e6e9e9980778056323b1c0d1b99330e351531ca53181db60321f69d15e3f054ac6acb4c91e98ae3a36260e9904682925077f48dd6643de449ab99878706df3c1d8dd813a625d8c779c3a3a9e2ea7608358916670ab3bb08cd9423563c9302e39d1db39605cd84b7b708ef866a3175a5d6236d31262a01547936a26ae41d4ed58e6d0e50900aef8bd89c4b53f746e6352aeb2681c9adb2add693a5ec9ce065abd72ea2199e4a29c6d393d1ff107320ac0a15e679bc926e8b4019d3dfa050d84ab7315edccfb0f64ddbe4772aa291e00fc3f68cfc79a01d5e36cf7aba046f02ea4aa9ecff49a7630d70945d558b07
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 4b4cd137001ea3d32d40dea3668d4ab3
+        SHA1: 531a6ef8088445353c809dd34ab31b846f8e206d
+        SHA256: 5680c352d9f0cd8cba0ce1ee56799ef3540b747c1744822aa80bcf4bd533d084
+        SHA384: 3888363ff16c0ff6f48ba465d386f8e5ba5a6f4159f78d1ef6549d84af25df57c591b656c144c6e81ca22dfce14d4f33
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      ValidFrom: '2013-05-09 00:00:00'
+      ValidTo: '2028-05-08 23:59:59'
+      Signature: 023f0239c3eef8ca3b89de0c6d4db1f14e924fafc2382c04ccc56311ab0963afaba2d7023fcc6f19c33dd61a0894ff25d8a988a72b101ae09bb107221a511c3ad4e1e909bfe62474af1e7b16316e23ef54512d5202e27508054cf1b751e15100c687f66cee104476576af1df586b21aa49d47c374ebdffb67554401836576711cd4f02e4fef3dafc7517dbecb7f7650923491f435783ea7e207761c84df2bb654da8f7854507af7a6927659029408bdf7b3a51398ca81f7079ad6d4220a2cf0c6c038c4ccd730794e75a8e3a04baa2a17c1fcb633a15a7d4151ba7524732a9f4bf6447d1aa1f534e323073c26fb778829d5cff46bb6b221d880bf81baa34a6fc8cf5dd7f658c8c315731d036ec47a1cfcb8ba8ef1c1858c50677ca4b9b51af4c084a7a8fe2a352e28e8ecc26e4b2d8e538c2a8edc6819c356ba958614a0a97b44b42b6559dbe99e7706d59f86d2a0c7f19605f0c9a886c30ac520990161bff2b9ddbd020ca89ea287e328e19df7b48331ed765f8aec9f8831493767d64d08ecebe357dff72314d9f9ebd1e6c2fa88f0c0650fb8c27b376c9f4e6d7c334e28c87218661febf5574e12177030a686cbbe4c9a9e6cf5925eb7cec450e796668e822cdb8ef98854d96113c098ad07fbc282813fb6aca548d925ccdc26598069ece485bd4b5379346417c07ddcffa43efba6761ff7d49e0bb307d5c80e3e616394ba7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2e7c87cc0e934a52fe94fd1cb7cd34af
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f64df7e88bb2b95c7204bc07bb197a87
+        SHA1: a1bfa9f0f46a1e9ac66259c9b2b1b2dcaf16db9b
+        SHA256: a3dd3858c0e514dd37cacd5f23fc8222443ff636eef4a9fe90bc0ecbbb051fd1
+        SHA384: 4805a7e23d6c8ff5e149f197b744bcb2346e73f19a48835a2f64129183981109256b75ea371a331746d01fd4e135ab6e
+    Signer:
+    - SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      Version: 1
+- Filename: fBiosDrv.sys
+  SHA256: 5c4772d82a13d4169df33c35d411d8c62ea4ee4ee52e7d5508d81844421ad06b
+  MD5: f83d14af05a9518450ed23e758c825dc
+  SHA1: bc1fd76a2d6aadbf31c3cf6174a0bab86c52214d
+  Imphash: 6364b695ace207a0ffb77647cc25da02
+  Authentihash:
+    MD5: e4b8fece834adfac273a3ff7a3666dcb
+    SHA1: 251e28cc30e1e59b63e0e75fdef1250e5c04fcf7
+    SHA256: e44bb3ab324b727873079b55fa804ad1d35d156ea5a5c891808adc99e00bb713
+  RichPEHeaderHash:
+    MD5: 319bd1f3cac20515980ff3ba5023f735
+    SHA1: c9a44e3f279af1edb80e42b939f5396de7f08b98
+    SHA256: db91a5398d92d8806d935e7b97696ab2469a158e5dfa0a1673b1404bff39583b
+  Sections:
+    .text:
+      Entropy: 6.1242544937603105
+      Virtual Size: '0xc51'
+    .rdata:
+      Entropy: 4.604190734349791
+      Virtual Size: '0x7a4'
+    .data:
+      Entropy: 0.910293087641677
+      Virtual Size: '0xa0'
+    .pdata:
+      Entropy: 3.9688312199845446
+      Virtual Size: '0x1d4'
+    PAGE:
+      Entropy: 6.229078983862495
+      Virtual Size: '0x1bda'
+    INIT:
+      Entropy: 5.380754138887469
+      Virtual Size: '0x5c2'
+    .rsrc:
+      Entropy: 3.3723957479614612
+      Virtual Size: '0x3b8'
+    .reloc:
+      Entropy: 2.7311450333085068
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-05-14 00:48:38'
+  Description: Fujitsu BIOS Driver
+  Company: FUJITSU CLIENT COMPUTING LIMITED
+  InternalName: fbiosdrv.sys
+  OriginalFilename: fbiosdrv.sys
+  FileVersion: 2.2.32.0
+  Product: Fujitsu BIOS Driver
+  ProductVersion: 2.2.32.0
+  Copyright: Copyright FUJITSU CLIENT COMPUTING LIMITED 2009-2018.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - RtlCompareMemory
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - IoAttachDeviceToDeviceStack
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDetachDevice
+  - IoInitializeRemoveLockEx
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoReleaseRemoveLockAndWaitEx
+  - IoWMIRegistrationControl
+  - MmMapLockedPagesSpecifyCache
+  - MmAllocateContiguousNodeMemory
+  - MmFreeContiguousMemory
+  - MmGetPhysicalAddress
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItemEx
+  - IoRegisterPlugPlayNotification
+  - IoUnregisterPlugPlayNotificationEx
+  - ObfDereferenceObject
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=JP, postalCode=211,0053, ST=KANAGAWA, L=KAWASAKI, STREET_ADDRESS=4,1,1,
+        KAMIKODANAKA, NAKAHARA,KU, O=FUJITSU CLIENT COMPUTING LIMITED, CN=FUJITSU
+        CLIENT COMPUTING LIMITED
+      ValidFrom: '2018-04-24 00:00:00'
+      ValidTo: '2021-04-23 23:59:59'
+      Signature: 7c3082da74bb1e2aa2429360edb2a6e65a546e6e9e9980778056323b1c0d1b99330e351531ca53181db60321f69d15e3f054ac6acb4c91e98ae3a36260e9904682925077f48dd6643de449ab99878706df3c1d8dd813a625d8c779c3a3a9e2ea7608358916670ab3bb08cd9423563c9302e39d1db39605cd84b7b708ef866a3175a5d6236d31262a01547936a26ae41d4ed58e6d0e50900aef8bd89c4b53f746e6352aeb2681c9adb2add693a5ec9ce065abd72ea2199e4a29c6d393d1ff107320ac0a15e679bc926e8b4019d3dfa050d84ab7315edccfb0f64ddbe4772aa291e00fc3f68cfc79a01d5e36cf7aba046f02ea4aa9ecff49a7630d70945d558b07
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 4b4cd137001ea3d32d40dea3668d4ab3
+        SHA1: 531a6ef8088445353c809dd34ab31b846f8e206d
+        SHA256: 5680c352d9f0cd8cba0ce1ee56799ef3540b747c1744822aa80bcf4bd533d084
+        SHA384: 3888363ff16c0ff6f48ba465d386f8e5ba5a6f4159f78d1ef6549d84af25df57c591b656c144c6e81ca22dfce14d4f33
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      ValidFrom: '2013-05-09 00:00:00'
+      ValidTo: '2028-05-08 23:59:59'
+      Signature: 023f0239c3eef8ca3b89de0c6d4db1f14e924fafc2382c04ccc56311ab0963afaba2d7023fcc6f19c33dd61a0894ff25d8a988a72b101ae09bb107221a511c3ad4e1e909bfe62474af1e7b16316e23ef54512d5202e27508054cf1b751e15100c687f66cee104476576af1df586b21aa49d47c374ebdffb67554401836576711cd4f02e4fef3dafc7517dbecb7f7650923491f435783ea7e207761c84df2bb654da8f7854507af7a6927659029408bdf7b3a51398ca81f7079ad6d4220a2cf0c6c038c4ccd730794e75a8e3a04baa2a17c1fcb633a15a7d4151ba7524732a9f4bf6447d1aa1f534e323073c26fb778829d5cff46bb6b221d880bf81baa34a6fc8cf5dd7f658c8c315731d036ec47a1cfcb8ba8ef1c1858c50677ca4b9b51af4c084a7a8fe2a352e28e8ecc26e4b2d8e538c2a8edc6819c356ba958614a0a97b44b42b6559dbe99e7706d59f86d2a0c7f19605f0c9a886c30ac520990161bff2b9ddbd020ca89ea287e328e19df7b48331ed765f8aec9f8831493767d64d08ecebe357dff72314d9f9ebd1e6c2fa88f0c0650fb8c27b376c9f4e6d7c334e28c87218661febf5574e12177030a686cbbe4c9a9e6cf5925eb7cec450e796668e822cdb8ef98854d96113c098ad07fbc282813fb6aca548d925ccdc26598069ece485bd4b5379346417c07ddcffa43efba6761ff7d49e0bb307d5c80e3e616394ba7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2e7c87cc0e934a52fe94fd1cb7cd34af
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f64df7e88bb2b95c7204bc07bb197a87
+        SHA1: a1bfa9f0f46a1e9ac66259c9b2b1b2dcaf16db9b
+        SHA256: a3dd3858c0e514dd37cacd5f23fc8222443ff636eef4a9fe90bc0ecbbb051fd1
+        SHA384: 4805a7e23d6c8ff5e149f197b744bcb2346e73f19a48835a2f64129183981109256b75ea371a331746d01fd4e135ab6e
+    Signer:
+    - SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      Version: 1
+- Filename: fBiosDrv.sys
+  SHA256: 678fe5aa24a610ef149b30371edb7ad56b12fd0b7f5083c1d15ea091ec20a0a1
+  MD5: 649f89d9dd989b521008657f460968ca
+  SHA1: 0e3d6088da9e35720d6282b5edc672e59e6f1269
+  Imphash: 6364b695ace207a0ffb77647cc25da02
+  Authentihash:
+    MD5: e4b8fece834adfac273a3ff7a3666dcb
+    SHA1: 251e28cc30e1e59b63e0e75fdef1250e5c04fcf7
+    SHA256: e44bb3ab324b727873079b55fa804ad1d35d156ea5a5c891808adc99e00bb713
+  RichPEHeaderHash:
+    MD5: 319bd1f3cac20515980ff3ba5023f735
+    SHA1: c9a44e3f279af1edb80e42b939f5396de7f08b98
+    SHA256: db91a5398d92d8806d935e7b97696ab2469a158e5dfa0a1673b1404bff39583b
+  Sections:
+    .text:
+      Entropy: 6.1242544937603105
+      Virtual Size: '0xc51'
+    .rdata:
+      Entropy: 4.604190734349791
+      Virtual Size: '0x7a4'
+    .data:
+      Entropy: 0.910293087641677
+      Virtual Size: '0xa0'
+    .pdata:
+      Entropy: 3.9688312199845446
+      Virtual Size: '0x1d4'
+    PAGE:
+      Entropy: 6.229078983862495
+      Virtual Size: '0x1bda'
+    INIT:
+      Entropy: 5.380754138887469
+      Virtual Size: '0x5c2'
+    .rsrc:
+      Entropy: 3.3723957479614612
+      Virtual Size: '0x3b8'
+    .reloc:
+      Entropy: 2.7311450333085068
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-05-14 00:48:38'
+  Description: Fujitsu BIOS Driver
+  Company: FUJITSU CLIENT COMPUTING LIMITED
+  InternalName: fbiosdrv.sys
+  OriginalFilename: fbiosdrv.sys
+  FileVersion: 2.2.32.0
+  Product: Fujitsu BIOS Driver
+  ProductVersion: 2.2.32.0
+  Copyright: Copyright FUJITSU CLIENT COMPUTING LIMITED 2009-2018.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - RtlCompareMemory
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - IoAttachDeviceToDeviceStack
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDetachDevice
+  - IoInitializeRemoveLockEx
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoReleaseRemoveLockAndWaitEx
+  - IoWMIRegistrationControl
+  - MmMapLockedPagesSpecifyCache
+  - MmAllocateContiguousNodeMemory
+  - MmFreeContiguousMemory
+  - MmGetPhysicalAddress
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItemEx
+  - IoRegisterPlugPlayNotification
+  - IoUnregisterPlugPlayNotificationEx
+  - ObfDereferenceObject
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=JP, postalCode=211,0053, ST=KANAGAWA, L=KAWASAKI, STREET_ADDRESS=4,1,1,
+        KAMIKODANAKA, NAKAHARA,KU, O=FUJITSU CLIENT COMPUTING LIMITED, CN=FUJITSU
+        CLIENT COMPUTING LIMITED
+      ValidFrom: '2018-04-24 00:00:00'
+      ValidTo: '2021-04-23 23:59:59'
+      Signature: 7c3082da74bb1e2aa2429360edb2a6e65a546e6e9e9980778056323b1c0d1b99330e351531ca53181db60321f69d15e3f054ac6acb4c91e98ae3a36260e9904682925077f48dd6643de449ab99878706df3c1d8dd813a625d8c779c3a3a9e2ea7608358916670ab3bb08cd9423563c9302e39d1db39605cd84b7b708ef866a3175a5d6236d31262a01547936a26ae41d4ed58e6d0e50900aef8bd89c4b53f746e6352aeb2681c9adb2add693a5ec9ce065abd72ea2199e4a29c6d393d1ff107320ac0a15e679bc926e8b4019d3dfa050d84ab7315edccfb0f64ddbe4772aa291e00fc3f68cfc79a01d5e36cf7aba046f02ea4aa9ecff49a7630d70945d558b07
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 4b4cd137001ea3d32d40dea3668d4ab3
+        SHA1: 531a6ef8088445353c809dd34ab31b846f8e206d
+        SHA256: 5680c352d9f0cd8cba0ce1ee56799ef3540b747c1744822aa80bcf4bd533d084
+        SHA384: 3888363ff16c0ff6f48ba465d386f8e5ba5a6f4159f78d1ef6549d84af25df57c591b656c144c6e81ca22dfce14d4f33
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      ValidFrom: '2013-05-09 00:00:00'
+      ValidTo: '2028-05-08 23:59:59'
+      Signature: 023f0239c3eef8ca3b89de0c6d4db1f14e924fafc2382c04ccc56311ab0963afaba2d7023fcc6f19c33dd61a0894ff25d8a988a72b101ae09bb107221a511c3ad4e1e909bfe62474af1e7b16316e23ef54512d5202e27508054cf1b751e15100c687f66cee104476576af1df586b21aa49d47c374ebdffb67554401836576711cd4f02e4fef3dafc7517dbecb7f7650923491f435783ea7e207761c84df2bb654da8f7854507af7a6927659029408bdf7b3a51398ca81f7079ad6d4220a2cf0c6c038c4ccd730794e75a8e3a04baa2a17c1fcb633a15a7d4151ba7524732a9f4bf6447d1aa1f534e323073c26fb778829d5cff46bb6b221d880bf81baa34a6fc8cf5dd7f658c8c315731d036ec47a1cfcb8ba8ef1c1858c50677ca4b9b51af4c084a7a8fe2a352e28e8ecc26e4b2d8e538c2a8edc6819c356ba958614a0a97b44b42b6559dbe99e7706d59f86d2a0c7f19605f0c9a886c30ac520990161bff2b9ddbd020ca89ea287e328e19df7b48331ed765f8aec9f8831493767d64d08ecebe357dff72314d9f9ebd1e6c2fa88f0c0650fb8c27b376c9f4e6d7c334e28c87218661febf5574e12177030a686cbbe4c9a9e6cf5925eb7cec450e796668e822cdb8ef98854d96113c098ad07fbc282813fb6aca548d925ccdc26598069ece485bd4b5379346417c07ddcffa43efba6761ff7d49e0bb307d5c80e3e616394ba7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2e7c87cc0e934a52fe94fd1cb7cd34af
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f64df7e88bb2b95c7204bc07bb197a87
+        SHA1: a1bfa9f0f46a1e9ac66259c9b2b1b2dcaf16db9b
+        SHA256: a3dd3858c0e514dd37cacd5f23fc8222443ff636eef4a9fe90bc0ecbbb051fd1
+        SHA384: 4805a7e23d6c8ff5e149f197b744bcb2346e73f19a48835a2f64129183981109256b75ea371a331746d01fd4e135ab6e
+    Signer:
+    - SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      Version: 1
+- Filename: fBiosDrv.sys
+  SHA256: e07be5f25f16a4afc01562aac0e123e6f3b25ed7ba75d114328b4ec445c21440
+  MD5: 5f481d764ce8224cfb3bdaec4e14adde
+  SHA1: ffef42377289d0ce813ce0b45ac480a2bd99284b
+  Imphash: 6364b695ace207a0ffb77647cc25da02
+  Authentihash:
+    MD5: e4b8fece834adfac273a3ff7a3666dcb
+    SHA1: 251e28cc30e1e59b63e0e75fdef1250e5c04fcf7
+    SHA256: e44bb3ab324b727873079b55fa804ad1d35d156ea5a5c891808adc99e00bb713
+  RichPEHeaderHash:
+    MD5: 319bd1f3cac20515980ff3ba5023f735
+    SHA1: c9a44e3f279af1edb80e42b939f5396de7f08b98
+    SHA256: db91a5398d92d8806d935e7b97696ab2469a158e5dfa0a1673b1404bff39583b
+  Sections:
+    .text:
+      Entropy: 6.1242544937603105
+      Virtual Size: '0xc51'
+    .rdata:
+      Entropy: 4.604190734349791
+      Virtual Size: '0x7a4'
+    .data:
+      Entropy: 0.910293087641677
+      Virtual Size: '0xa0'
+    .pdata:
+      Entropy: 3.9688312199845446
+      Virtual Size: '0x1d4'
+    PAGE:
+      Entropy: 6.229078983862495
+      Virtual Size: '0x1bda'
+    INIT:
+      Entropy: 5.380754138887469
+      Virtual Size: '0x5c2'
+    .rsrc:
+      Entropy: 3.3723957479614612
+      Virtual Size: '0x3b8'
+    .reloc:
+      Entropy: 2.7311450333085068
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-05-14 00:48:38'
+  Description: Fujitsu BIOS Driver
+  Company: FUJITSU CLIENT COMPUTING LIMITED
+  InternalName: fbiosdrv.sys
+  OriginalFilename: fbiosdrv.sys
+  FileVersion: 2.2.32.0
+  Product: Fujitsu BIOS Driver
+  ProductVersion: 2.2.32.0
+  Copyright: Copyright FUJITSU CLIENT COMPUTING LIMITED 2009-2018.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - RtlCompareMemory
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - IoAttachDeviceToDeviceStack
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDetachDevice
+  - IoInitializeRemoveLockEx
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoReleaseRemoveLockAndWaitEx
+  - IoWMIRegistrationControl
+  - MmMapLockedPagesSpecifyCache
+  - MmAllocateContiguousNodeMemory
+  - MmFreeContiguousMemory
+  - MmGetPhysicalAddress
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItemEx
+  - IoRegisterPlugPlayNotification
+  - IoUnregisterPlugPlayNotificationEx
+  - ObfDereferenceObject
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=JP, postalCode=211,0053, ST=KANAGAWA, L=KAWASAKI, STREET_ADDRESS=4,1,1,
+        KAMIKODANAKA, NAKAHARA,KU, O=FUJITSU CLIENT COMPUTING LIMITED, CN=FUJITSU
+        CLIENT COMPUTING LIMITED
+      ValidFrom: '2018-04-24 00:00:00'
+      ValidTo: '2021-04-23 23:59:59'
+      Signature: 7c3082da74bb1e2aa2429360edb2a6e65a546e6e9e9980778056323b1c0d1b99330e351531ca53181db60321f69d15e3f054ac6acb4c91e98ae3a36260e9904682925077f48dd6643de449ab99878706df3c1d8dd813a625d8c779c3a3a9e2ea7608358916670ab3bb08cd9423563c9302e39d1db39605cd84b7b708ef866a3175a5d6236d31262a01547936a26ae41d4ed58e6d0e50900aef8bd89c4b53f746e6352aeb2681c9adb2add693a5ec9ce065abd72ea2199e4a29c6d393d1ff107320ac0a15e679bc926e8b4019d3dfa050d84ab7315edccfb0f64ddbe4772aa291e00fc3f68cfc79a01d5e36cf7aba046f02ea4aa9ecff49a7630d70945d558b07
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 4b4cd137001ea3d32d40dea3668d4ab3
+        SHA1: 531a6ef8088445353c809dd34ab31b846f8e206d
+        SHA256: 5680c352d9f0cd8cba0ce1ee56799ef3540b747c1744822aa80bcf4bd533d084
+        SHA384: 3888363ff16c0ff6f48ba465d386f8e5ba5a6f4159f78d1ef6549d84af25df57c591b656c144c6e81ca22dfce14d4f33
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      ValidFrom: '2013-05-09 00:00:00'
+      ValidTo: '2028-05-08 23:59:59'
+      Signature: 023f0239c3eef8ca3b89de0c6d4db1f14e924fafc2382c04ccc56311ab0963afaba2d7023fcc6f19c33dd61a0894ff25d8a988a72b101ae09bb107221a511c3ad4e1e909bfe62474af1e7b16316e23ef54512d5202e27508054cf1b751e15100c687f66cee104476576af1df586b21aa49d47c374ebdffb67554401836576711cd4f02e4fef3dafc7517dbecb7f7650923491f435783ea7e207761c84df2bb654da8f7854507af7a6927659029408bdf7b3a51398ca81f7079ad6d4220a2cf0c6c038c4ccd730794e75a8e3a04baa2a17c1fcb633a15a7d4151ba7524732a9f4bf6447d1aa1f534e323073c26fb778829d5cff46bb6b221d880bf81baa34a6fc8cf5dd7f658c8c315731d036ec47a1cfcb8ba8ef1c1858c50677ca4b9b51af4c084a7a8fe2a352e28e8ecc26e4b2d8e538c2a8edc6819c356ba958614a0a97b44b42b6559dbe99e7706d59f86d2a0c7f19605f0c9a886c30ac520990161bff2b9ddbd020ca89ea287e328e19df7b48331ed765f8aec9f8831493767d64d08ecebe357dff72314d9f9ebd1e6c2fa88f0c0650fb8c27b376c9f4e6d7c334e28c87218661febf5574e12177030a686cbbe4c9a9e6cf5925eb7cec450e796668e822cdb8ef98854d96113c098ad07fbc282813fb6aca548d925ccdc26598069ece485bd4b5379346417c07ddcffa43efba6761ff7d49e0bb307d5c80e3e616394ba7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2e7c87cc0e934a52fe94fd1cb7cd34af
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f64df7e88bb2b95c7204bc07bb197a87
+        SHA1: a1bfa9f0f46a1e9ac66259c9b2b1b2dcaf16db9b
+        SHA256: a3dd3858c0e514dd37cacd5f23fc8222443ff636eef4a9fe90bc0ecbbb051fd1
+        SHA384: 4805a7e23d6c8ff5e149f197b744bcb2346e73f19a48835a2f64129183981109256b75ea371a331746d01fd4e135ab6e
+    Signer:
+    - SerialNumber: 317d4f720e8d36c560988717751dfccc
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
         RSA Code Signing CA
       Version: 1

@@ -11,12 +11,13 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys
     type=kernel && sc.exe start LenovoDiagnosticsDriver.sys
-  Description: Lenovo Diagnostics versions before 4.45 are affected by CVE-2022-3699.
-    Public exploit research documents FILE_ANY_ACCESS IOCTLs 0x222010 and 0x222014
-    in LenovoDiagnosticsDriver.sys that map caller-selected physical addresses and
-    copy values from or to mapped memory. These arbitrary physical-memory read and
-    write primitives allow a low-privileged local user to execute code with elevated
-    privileges.
+  Description: Lenovo Diagnostics versions before 4.45 are covered by CVE-2022-3699.
+    The vulnerable driver behavior tracked here is limited to confirmed 1.0.2.0 through
+    1.0.4.0 LenovoDiagnosticsDriver.sys builds. Their low-user device ACL exposes
+    FILE_ANY_ACCESS IOCTLs 0x222010 and 0x222014, which map caller-selected physical
+    addresses and provide unrestricted physical-memory read and write primitives.
+    Later 3.1.0.0 code removed the write path, denied Builtin Users, and limited reads
+    to allowlisted PCI registers, so that build is not tracked here.
   OperatingSystem: Windows
   Privileges: User
   Usecase: Elevate privileges
@@ -53,158 +54,6 @@ Acknowledgement:
   Person: Mike Alfaro, fluffycats31
   Handle: alfarom256, @fluffycats31
 KnownVulnerableSamples:
-- Filename: LenovoDiagnosticsDriver.sys
-  SHA256: dc5bae2e403e639ef2ebab4c85b827f75853ed6cfbd122a847784f3d49a79e51
-  MD5: 02d4646684673e8d12de7d714a4f6bbf
-  SHA1: 45624bb121a249100de540845c5d8995a2c14aa4
-  Imphash: bbd6160fc0540d3c72d3fb19715bb7e3
-  Authentihash:
-    MD5: 07b3928d7159a3fb76acb78813be6a58
-    SHA1: 4d668ace545b4446bcee3d63f0c1f807adf99293
-    SHA256: 73bb103c973d5735610a22a55f96ae84e591426a1a2481ceebba6bb1a6e5e1a6
-  RichPEHeaderHash:
-    MD5: 4d5d6416f1199eb22146be61401517ea
-    SHA1: 13def13f72b8a4d9153116f04cd480d9f672f578
-    SHA256: 71ad5582332d93cce68a593ef7ee7373fd46eb9258bb18c433dae0b9d6b98e58
-  Sections:
-    .text:
-      Entropy: 6.151972684536498
-      Virtual Size: '0x53f6'
-    .rdata:
-      Entropy: 4.155020587417031
-      Virtual Size: '0x1374'
-    .data:
-      Entropy: 1.5724523639512489
-      Virtual Size: '0x7e4'
-    .pdata:
-      Entropy: 4.385530479506204
-      Virtual Size: '0x4d4'
-    PAGE:
-      Entropy: 6.242676184172709
-      Virtual Size: '0x1dc5'
-    INIT:
-      Entropy: 5.117170567533992
-      Virtual Size: '0x71e'
-    .rsrc:
-      Entropy: 3.527255501776758
-      Virtual Size: '0x470'
-    .reloc:
-      Entropy: 4.167325447836732
-      Virtual Size: '0x48'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2025-12-05 10:09:49'
-  Description: Lenovo Diagnostics Driver for Windows 10 and later.
-  Company: Lenovo Group Limited (R)
-  InternalName: LenovoDiagnosticsDriver.sys
-  OriginalFilename: LenovoDiagnosticsDriver.sys
-  FileVersion: 3.1.0.0
-  Product: Lenovo Diagnostics
-  ProductVersion: 3.1.0.0
-  Copyright: "Copyright \xA9 2011, 2026 Lenovo"
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - ExAllocatePoolWithTag
-  - ExAllocatePool2
-  - ExFreePoolWithTag
-  - MmMapIoSpace
-  - MmUnmapIoSpace
-  - IofCompleteRequest
-  - IoCreateSymbolicLink
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - IoGetAttachedDeviceReference
-  - IoGetDeviceObjectPointer
-  - IoGetDeviceProperty
-  - IoGetDevicePropertyData
-  - ObfDereferenceObject
-  - MmIsAddressValid
-  - IoGetLowerDeviceObject
-  - wcstombs
-  - __C_specific_handler
-  - wcslen
-  - MmGetSystemRoutineAddress
-  - RtlInitUnicodeString
-  - DbgPrintEx
-  - ZwClose
-  - ZwSetSecurityObject
-  - IoDeviceObjectType
-  - strstr
-  - ObOpenObjectByPointer
-  - RtlGetDaclSecurityDescriptor
-  - RtlGetGroupSecurityDescriptor
-  - RtlGetOwnerSecurityDescriptor
-  - RtlGetSaclSecurityDescriptor
-  - SeCaptureSecurityDescriptor
-  - _snwprintf
-  - RtlLengthSecurityDescriptor
-  - SeExports
-  - RtlCreateSecurityDescriptor
-  - _wcsnicmp
-  - wcschr
-  - RtlAbsoluteToSelfRelativeSD
-  - RtlAddAccessAllowedAce
-  - RtlLengthSid
-  - IoIsWdmVersionAvailable
-  - RtlSetDaclSecurityDescriptor
-  - ZwOpenKey
-  - ZwSetValueKey
-  - ZwQueryValueKey
-  - ZwCreateKey
-  - RtlFreeUnicodeString
-  - PsGetVersion
-  - ExAllocatePoolWithQuotaTag
-  - ZwQuerySystemInformation
-  - IoCreateDevice
-  - strncmp
-  - HalGetBusDataByOffset
-  - HalSetBusDataByOffset
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2025-11-13 19:59:40'
-      ValidTo: '2026-11-10 19:59:40'
-      Signature: 86e91c9dd77bcbe24e9c811c4ec9c47116d9d554243f04666bef14828edbfeb665280fa10b643a59d05c4db8b5f2bae0657af9a75457236e455f956ed7ba65f7e8019355d00e322f681ab15f14718b34bff1e50d8cde1217dc158c31a875b17fa45f015b4b2a30c471d43345257c729d83c2287716b3d19c177ed341da95687f8af92cfebc42e1e4439eb4304762e17feb85a09316afe8153e4783a98153d91249d29da0bca831ea6ccd93bace88fc284e82987df65bcd8ab0263a2da5e178e710c26e8abec12fe398782d1f1bc669ec9c5cbf3010f8e2600133a59fb8269daba61e5b2facee4f96ba19f9cfaef3fdb21e933a65c3245f6de70cb08f28f2c818
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 330000013c4a61fb3578d2b6dd00000000013c
-      Version: 3
-      CertificateType: Leaf (Code Signing)
-      IsCodeSigning: true
-      IsCA: false
-      TBS:
-        MD5: 93354b540685ae615b51e692ea0895de
-        SHA1: b38cd5d491c85bd55e9b111e98430171a01e9515
-        SHA256: 037c041a283132dc57d29bc339b4d0d006787e32ac0a60afd7206c41c9fbf61f
-        SHA384: bbef5ad51ba2a76ba3f0e39459837c9533a56420db0da55814511346155922c98ae905d6541df5a79895ce1a51d53491
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      ValidFrom: '2012-04-18 23:48:38'
-      ValidTo: '2027-04-18 23:58:38'
-      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 610baac1000000000009
-      Version: 3
-      CertificateType: CA
-      IsCodeSigning: false
-      IsCA: true
-      TBS:
-        MD5: a569061297e8e824767dbc3184a69bea
-        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
-        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
-        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
-    Signer:
-    - SerialNumber: 330000013c4a61fb3578d2b6dd00000000013c
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      Version: 1
 - Authentihash:
     MD5: 56b6144e389ce3b1e2a0a96a954aa7d8
     SHA1: 6d9543725aca0c9c8f403425952692ccc1d2d7f2
@@ -619,4 +468,140 @@ KnownVulnerableSamples:
     - SerialNumber: 01d4b02045832881e2d7530641135991
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
+      Version: 1
+- Filename: LenovoDiagnosticsDriver.sys
+  SHA256: 93cb6b6879fc9fd71b9539265ec3d5d1969cc00cfe2758979a03d7c19cdc0e20
+  MD5: a241964e5a88ce4135988ac18e684f3c
+  SHA1: 8632b636ab472c5b64c06d9a4dd430ff55ddbf77
+  Imphash: 225e24ee3c4081a16ef32831b70bf8ef
+  Authentihash:
+    MD5: 07df389fae77608be3385555e643df1e
+    SHA1: 32ce4c31385edeeef7145678d3895101e3130e04
+    SHA256: 970a4c44b046eff139c9c2ea11ef7ccadcbc93612b41afc0a947cceda0ca5a39
+  RichPEHeaderHash:
+    MD5: 6f3ced19f6ac705d85ea03ef3b990dcb
+    SHA1: 98d16c30e5de189d4acc71d9de35996f658f7f16
+    SHA256: b9ee7f2a249720eb45a04fb5cbe9b9ca33342de2c432b89f2023c772c05e68c2
+  Sections:
+    .text:
+      Entropy: 6.217833312213398
+      Virtual Size: '0x1002'
+    .rdata:
+      Entropy: 4.24585739397924
+      Virtual Size: '0xd6c'
+    .data:
+      Entropy: 2.1121801383150514
+      Virtual Size: '0x280'
+    .pdata:
+      Entropy: 4.029492987664599
+      Virtual Size: '0x2a0'
+    PAGE:
+      Entropy: 6.216842025909382
+      Virtual Size: '0x1c8c'
+    INIT:
+      Entropy: 5.137195627507715
+      Virtual Size: '0x56e'
+    .rsrc:
+      Entropy: 3.518051469656566
+      Virtual Size: '0x498'
+    .reloc:
+      Entropy: 3.8431390622295667
+      Virtual Size: '0x40'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-08-09 08:13:23'
+  Description: Lenovo Diagnostics Driver for Windows 10 and later.
+  Company: Lenovo Group Limited (R)
+  InternalName: LenovoDiagnosticsDriver.sys
+  OriginalFilename: LenovoDiagnosticsDriver.sys
+  FileVersion: 1,0,3,0
+  Product: Lenovo Diagnostics
+  ProductVersion: 1,0,3,0
+  Copyright: "\xA9 2021 Lenovo Group Limited. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - ExFreePoolWithTag
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - ExAllocatePoolWithTag
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - RtlGetOwnerSecurityDescriptor
+  - DbgPrintEx
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G14, CN=Lenovo
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2022-03-30 23:59:59'
+      Signature: 7acfc05e3cc62cd64e7ca090933c35cc013b1bf0dbe0e06ad642d4af2acedc60ef7079c0e6aaebed888d24f5c71a8ba526ad92f6189dc86a16d1a3800a5c522ef432753e68ba373f9caa10ff2135edfdd1599d87aa61d8afb3acbb3ac7bf8ef3416026e3a6ad3d699b555df8574fff34afa0938a962aa19c697bb03c4c6d2e7da2c7ce05e64aba4dbccdb1e96f84ebc8f87eee1628636fb7c85e73646d09b84092c189a2f08b1cd7f359947c294fc25129679e8e0a13bbbb31c69e31145c149cde2c7f886109588df73258ccbb3724f65899050c059ebead84441eaf97a91920335d26571d0baffa61b6a0c4365451a32437970ba3875f225b775ba3f1549557
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d7b70a9ac21e07d79e6c5f9120310a2
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: c3ae773af8ea223d66b4f2eea11ef2a2
+        SHA1: ef5c3a238c4260a7cc0c058494a18f58a6eb42ce
+        SHA256: 78c50cba800b5a79e7e0500c9b684be523d0cd97011bc734d5ee5b3c1f16e3ae
+        SHA384: c181f6387ee4c315ed87f050007ddeb20fb8feeef326622ce4914a054754448c8e6f91e95fb778b4f9b8e8eb7cfe6e71
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    Signer:
+    - SerialNumber: 0d7b70a9ac21e07d79e6c5f9120310a2
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
       Version: 1

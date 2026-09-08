@@ -6,18 +6,21 @@ Verified: 'TRUE'
 Author: Michael Haag
 Created: '2026-08-31'
 MitreID: T1068
+CVE:
+- CVE-2024-55408
 Category: vulnerable driver
 Commands:
   Command: sc.exe create AsusSAIO binPath=C:\windows\temp\AsusSAIO.sys type=kernel
     && sc.exe start AsusSAIO
-  Description: ASUS System Analysis IO drivers affected by CVE-2024-55408 expose privileged
-    hardware operations through the \\Device\\ASUSSAIO interface. This 1.0.1.0 build
-    accepts FILE_ANY_ACCESS IOCTLs, including 0x80102074 and 0x80102078, that map
-    caller-selected physical addresses with MmMapIoSpace for read and write operations.
-    The interface also exposes direct I/O-port access without a caller-token authorization
-    check, allowing a local user to cross the user-to-kernel security boundary.
+  Description: ASUS System Analysis IO release lines before 1.0.30.0 and before 3.1.41.0
+    are affected by CVE-2024-55408. The tracked 1.0.1.0 through 1.0.9.0 builds fall
+    inside the affected 1.x line and expose FILE_ANY_ACCESS platform-control IOCTLs
+    through the \Device\AsusSAIO interface. Capabilities vary by build and include
+    PCI-derived MMIO, SMBus, I/O-port, and model-specific register operations without
+    a caller-token authorization gate, allowing local callers to misuse privileged
+    hardware controls.
   Usecase: Elevate privileges
-  Privileges: kernel
+  Privileges: User
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/409
@@ -151,6 +154,3771 @@ KnownVulnerableSamples:
         SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 0288a3e8ba6ad0075bd071e65b86617c889e7d0f7cde40231f6e8d87febdda27
+  MD5: c6ab95ccccc2eb626d78d9edacf1554a
+  SHA1: 586072512f0cd89321fd210d5ccc68e80c312e9c
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 0b9f24731bd6e6a8439474576d1c2e80aa461f343571659e528fa3b76aac9af1
+  MD5: fbacc870f517ace0103f713df09acbf4
+  SHA1: 8a5381277596e0a666c1bb0fc88e4beb2709c354
+  Imphash: 26cc1d063a99a860e5a97c5717236ed1
+  Authentihash:
+    MD5: 5f585ea67addb5869a07ce2d56f2d0c4
+    SHA1: db32caeb2c95c4ca580989991790d8e2738058d8
+    SHA256: df4511fb094b63b0f2b3dc72301c598fc170954e6ddc1786091e2406fb366cdc
+  RichPEHeaderHash:
+    MD5: d11a93733b67782520e54ec2919a523c
+    SHA1: 5b172e37f6162d6de56df3b5979bcbaa93021208
+    SHA256: 3573741dbdcd4842f12311e77b727fac1e56fa5dec5d77843c988abe67a3b690
+  Sections:
+    .text:
+      Entropy: 6.265466241070847
+      Virtual Size: '0x2e0a'
+    .rdata:
+      Entropy: 5.226661407431623
+      Virtual Size: '0xe10'
+    .data:
+      Entropy: 0.6903800294792679
+      Virtual Size: '0x3b0'
+    .pdata:
+      Entropy: 4.120335669347071
+      Virtual Size: '0x270'
+    PAGE:
+      Entropy: 5.976069452204542
+      Virtual Size: '0x59c'
+    INIT:
+      Entropy: 4.83955727058354
+      Virtual Size: '0x3e6'
+    .rsrc:
+      Entropy: 3.243865565567824
+      Virtual Size: '0x360'
+    .reloc:
+      Entropy: 3.0155570101740876
+      Virtual Size: '0x28'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-06-27 10:07:34'
+  Description: ASUSSAIO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: ASUSSAIO.sys
+  OriginalFilename: ASUSSAIO.sys
+  FileVersion: 1.0.4.0
+  Product: ASUSSAIO
+  ProductVersion: 1.0.4.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WppRecorder.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IoCreateSymbolicLink
+  - KeWaitForSingleObject
+  - IoCreateDevice
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - KeReleaseMutex
+  - IoWMIRegistrationControl
+  - IoDeleteSymbolicLink
+  - KeDelayExecutionThread
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - KeInitializeMutex
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - HalGetBusDataByOffset
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 0f839f99ed8119668b0ed146932c3c041f4fdd7a4f055ef7a307ae585a6901a1
+  MD5: b9e8ee63ce864b76caa31e8d81d7d0c1
+  SHA1: 4f40a15d278e2d2eaa9c250061e2d6dd417c9677
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 9402e96841af0feca8f20d2ef8e3ddca
+    SHA1: e606c7f5bad23230f0987168afa2cf6c08519a99
+    SHA256: ba967ddb4c5c981831bee276d67cde80a8d62d5b11b7a6246e05a380a889ad2d
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252437214528353
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564001756037566
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-12-09 20:10:17'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.6.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.6.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 14a38b6141aadda612097690c6a4d50855836dd753d6c1d41a5fd51b304ecfa6
+  MD5: 875c9fc5b2dc7256958d8fedbbfefec3
+  SHA1: 80dfd886b72914876ab2cd63f4da786872c09144
+  Imphash: b09186c5c881fc40fe43e3b267d2c826
+  Authentihash:
+    MD5: 35c3ba0be1f0cb94dc36c59e0ee6a8b1
+    SHA1: 6799a2ff8177373ecb25e2d7d6f387f65b885c12
+    SHA256: d64c32991be47c638233d9f4c19136415837663c6b00133dc18898079b13db14
+  RichPEHeaderHash:
+    MD5: 97aaec25c91422dd33c742f2c3bd7f0b
+    SHA1: 67558806727b9184fe7b2d20298ce8b5080836fb
+    SHA256: e81b005e0638f5eca45b590312b20dad5af21f2db3134ca3d87efc0187bd5790
+  Sections:
+    .text:
+      Entropy: 6.257669299601777
+      Virtual Size: '0x2a4a'
+    .rdata:
+      Entropy: 4.573414918134549
+      Virtual Size: '0x934'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 4.064625827925216
+      Virtual Size: '0x228'
+    PAGE:
+      Entropy: 6.008088056864886
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.041597591004837
+      Virtual Size: '0x412'
+    .rsrc:
+      Entropy: 3.278473301149088
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.9356919871571896
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-02-04 20:32:25'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.9.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.9.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - ExAllocatePool2
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - KeDelayExecutionThread
+  - IoGetCurrentProcess
+  - IoWMIRegistrationControl
+  - ZwClose
+  - RtlEqualSid
+  - ZwOpenProcessTokenEx
+  - ZwQueryInformationToken
+  - SeExports
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2024-04-02 00:00:00'
+      ValidTo: '2027-04-01 23:59:59'
+      Signature: 88c306258223741ba4c030bee21e620e1f2629639c3677e7133a2e8bc5f892d0316f9092a3ca346e0812c9e18121e0d782825ffeaec3d47324b3bf491606fd710b22f6f18b4ef2f2e45a1a0e53c7ebba8469fe4419cfeac9d44eaf44832295b4790f883dc1578cab7d6afc1c261a81cb75afbeb7b5480c7912aa5aa64759ec9288299b59ca8ce298d1b3f6cdcc8217ab49454f1f86a9a2a9de9055e077aa56713c6ddc9e9e613e5d71e027b97fafa6cf0059bcafe1d71258e067eecdcf4c813a52a1ace004c74f91a6b28092486a2431dc52d3d987c55190bbc248600c46ed45fe0f1a038df61d1ec9cbaa296c1a9c4f3dd8505e7e36e337092ecb4663a04bd43d1688d935c998ab3f722c9a5347693c829fe6fd700a40db85fbd7af063a33c738de344d822155fe120d86d82cfbca0f6e06508cd93be8f73324c1bb9be2b98ce2809078d9e96f2252d981a7402b9c4e6cd1828fcfdef2fa80099faa603e4b4187e17dd592f0084e977c672510ce788bd0bfcaeb6576403895e3044da2a0e401737772a09f8007e57792839f7ba95192ab4b5ede9bd9f7ddb01aba01e262ec197db31f22f09395ab57123626bc99e6de339a38a6a978ac8d1f966a300c02a60b1ab70adf3d23902f0efca204b5b0192b51322c93bbe22a9e410ef209b788b47ce1e652c823d5643e09c6b9c319cce5661d36bd443fbc0d04b4ff68726db1750a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ec4ccf5a1d6aaf291a0a0296f2a66b3a
+        SHA1: 65ae7ba31eda611350b571c55b7e9c06d3315b87
+        SHA256: bcc4af1f854abdccd1e1164a5e8aa30efb1cf2f965eb724969f1ee5335d5ad87
+        SHA384: 4ed22024aec9b6488927cdc35dd34f682e7f585d735251f03856a694624b7a70e1f165861b0d852df9bd858095fe2b1a
+    Signer:
+    - SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 1d3c1ff96c56052709fdeddfc4090907e9c9b1bfbb37feb06090311be767a516
+  MD5: 0a45cf3ae6154920ff83acf5f068f2e9
+  SHA1: 161f99a3c2fe9f59abb02a858ba62d2e9fac397f
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 9402e96841af0feca8f20d2ef8e3ddca
+    SHA1: e606c7f5bad23230f0987168afa2cf6c08519a99
+    SHA256: ba967ddb4c5c981831bee276d67cde80a8d62d5b11b7a6246e05a380a889ad2d
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252437214528353
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564001756037566
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-12-09 20:10:17'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.6.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.6.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 1ec7eb6aba695fabaa0c4e52e22346f4c8fb2187c93005f0183f67c35fc8533c
+  MD5: a61f59e9883ec1ab79346e50698d8914
+  SHA1: fd15b05c882586b513821a0b1f1794140b86e624
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 203fbc6e29534239f541e79847b027e417087ea435ab52784fb35683be60963d
+  MD5: 63aeac6044d620dc19e34862480f095c
+  SHA1: 6753f5fcec78d20bccc055910b7429aa3992196b
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 2c452dfec5f153c9f6f6fb3e9a997b3e6358eaf969c3f1027a9d9de42a455c9f
+  MD5: 7fef5d1e5f83028b49da6fdd66194207
+  SHA1: 984d2fc0377e12e5941ed0c5865d00da5914cbc3
+  Imphash: 26cc1d063a99a860e5a97c5717236ed1
+  Authentihash:
+    MD5: 15c3e8757461891a31fdee9c3f3f8581
+    SHA1: f218c403057d839b7b151e8f1b4ce15d11d4c90f
+    SHA256: e86bc491aafddecfd3a0f8e6b60f76f69e04febd6ec1f79b87380e60280779b0
+  RichPEHeaderHash:
+    MD5: 58fa9e8294b63590050476ae6186c591
+    SHA1: 84b5086d3d77acbecef3e04a94c00c104b70b1dd
+    SHA256: beab8c9557d090acb55ddcaed0c4dad89859376bd65b507fba37683bfc0c9353
+  Sections:
+    .text:
+      Entropy: 6.262947274962698
+      Virtual Size: '0x260a'
+    .rdata:
+      Entropy: 5.261862065896884
+      Virtual Size: '0xd58'
+    .data:
+      Entropy: 0.6903800294792679
+      Virtual Size: '0x3b0'
+    .pdata:
+      Entropy: 4.043344539784238
+      Virtual Size: '0x240'
+    PAGE:
+      Entropy: 5.973121989328444
+      Virtual Size: '0x59c'
+    INIT:
+      Entropy: 4.83955727058354
+      Virtual Size: '0x3e6'
+    .rsrc:
+      Entropy: 3.258203083580445
+      Virtual Size: '0x360'
+    .reloc:
+      Entropy: 3.0655570101740874
+      Virtual Size: '0x28'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2020-12-29 18:52:08'
+  Description: ASUSSAIO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: ASUSSAIO.sys
+  OriginalFilename: ASUSSAIO.sys
+  FileVersion: 1.0.3.0
+  Product: ASUSSAIO
+  ProductVersion: 1.0.3.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WppRecorder.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IoCreateSymbolicLink
+  - KeWaitForSingleObject
+  - IoCreateDevice
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - KeReleaseMutex
+  - IoWMIRegistrationControl
+  - IoDeleteSymbolicLink
+  - KeDelayExecutionThread
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - KeInitializeMutex
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - HalGetBusDataByOffset
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, L=Taipei, O=ASUSTek Computer Inc., OU=SYS PC
+        SW center, CN=ASUSTek Computer Inc.
+      ValidFrom: '2018-06-07 00:00:00'
+      ValidTo: '2021-06-04 12:00:00'
+      Signature: 9987b72c4f75e6d7212baa6aedb1fd539263b310f52bfa12ae0ab9b7efdb7da22b43ca0376a2968ff983c618db416d648493980f67f243609a47e29a863f106c3d6f95acfe2f680b58d75c9c67a964993eacaa878dfbebf46998acda6b73a0f8ae0dbe34d27b1e06f7f9f7ac200da723bbd3d80ffa24dd90a2db6bc7a4dfd426c21aa0e9278894329eee6404911fb4ef96fbd3292e0b388a865353e08ced7ec8467610bf9e78e434f7af0522934d635fc57a8e6449deac1e51a24fa34ea7dd4030d84b2ececabbc8b8ec887dde7f65f71bb1308a66b69f5fb67f2c22c7150732e9f40d94b004c7a8d1648796c1966325176542e50df96794034faa17f102b829
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 17b90cbd98af42c34e637c5b8df4eb64
+        SHA1: 7914797171811270bc01561479d5bd5c7388cec2
+        SHA256: 1759c954acc8ec1fb2a768612afbbdaee5df42277068e55408a067350e24ce91
+        SHA384: c1edf17c215952f496ac4345813ae91737c7f4efdbc6eb3966cad4572810bc574e621a27212cbcceef489a17df53b457
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 30950a3d0371727c318e06cd80690c0095372a82d7e4852d7f612037891ea2c0
+  MD5: 2851fa61fccd312f6066d5e3a7a7ecdc
+  SHA1: 0202f3064a9bb4cce1cff546ca602eb7dc69aa28
+  Imphash: 26cc1d063a99a860e5a97c5717236ed1
+  Authentihash:
+    MD5: 28d639c72d30c0d8cc72217b80d395e1
+    SHA1: 130c50e47dfd16fcc34ead74a162ad5c48d115fc
+    SHA256: 2ff910d12c2aabeecc43ad8daf14b0b1fbd2f8ba647fca141c80cad9212ab6ad
+  RichPEHeaderHash:
+    MD5: c344d7b93343765964a7b187111ecb6d
+    SHA1: 3f3a1b747367081346584a041592d3ff819474c1
+    SHA256: 5c052c09b0760ce7bc0f99f240e708b874ff1039cc86314709e76f9ffc3c6a45
+  Sections:
+    .text:
+      Entropy: 6.262947274962698
+      Virtual Size: '0x260a'
+    .rdata:
+      Entropy: 5.263014988007028
+      Virtual Size: '0xd58'
+    .data:
+      Entropy: 0.6903800294792679
+      Virtual Size: '0x3b0'
+    .pdata:
+      Entropy: 4.043344539784238
+      Virtual Size: '0x240'
+    PAGE:
+      Entropy: 5.973121989328444
+      Virtual Size: '0x59c'
+    INIT:
+      Entropy: 4.83955727058354
+      Virtual Size: '0x3e6'
+    .rsrc:
+      Entropy: 3.20240586546587
+      Virtual Size: '0x330'
+    .reloc:
+      Entropy: 3.0655570101740874
+      Virtual Size: '0x28'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2020-11-17 20:24:31'
+  Description: ASUSSAIO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: ASUSSAIO.sys
+  OriginalFilename: ASUSSAIO.sys
+  FileVersion: 1.0.2.0
+  Product: ASUSSAIO
+  ProductVersion: 1.0.2.0
+  Copyright: ASUSTek Computer Inc.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WppRecorder.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IoCreateSymbolicLink
+  - KeWaitForSingleObject
+  - IoCreateDevice
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - KeReleaseMutex
+  - IoWMIRegistrationControl
+  - IoDeleteSymbolicLink
+  - KeDelayExecutionThread
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - KeInitializeMutex
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - HalGetBusDataByOffset
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, L=Taipei, O=ASUSTek Computer Inc., OU=SYS PC
+        SW center, CN=ASUSTek Computer Inc.
+      ValidFrom: '2018-06-07 00:00:00'
+      ValidTo: '2021-06-04 12:00:00'
+      Signature: 9987b72c4f75e6d7212baa6aedb1fd539263b310f52bfa12ae0ab9b7efdb7da22b43ca0376a2968ff983c618db416d648493980f67f243609a47e29a863f106c3d6f95acfe2f680b58d75c9c67a964993eacaa878dfbebf46998acda6b73a0f8ae0dbe34d27b1e06f7f9f7ac200da723bbd3d80ffa24dd90a2db6bc7a4dfd426c21aa0e9278894329eee6404911fb4ef96fbd3292e0b388a865353e08ced7ec8467610bf9e78e434f7af0522934d635fc57a8e6449deac1e51a24fa34ea7dd4030d84b2ececabbc8b8ec887dde7f65f71bb1308a66b69f5fb67f2c22c7150732e9f40d94b004c7a8d1648796c1966325176542e50df96794034faa17f102b829
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 17b90cbd98af42c34e637c5b8df4eb64
+        SHA1: 7914797171811270bc01561479d5bd5c7388cec2
+        SHA256: 1759c954acc8ec1fb2a768612afbbdaee5df42277068e55408a067350e24ce91
+        SHA384: c1edf17c215952f496ac4345813ae91737c7f4efdbc6eb3966cad4572810bc574e621a27212cbcceef489a17df53b457
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 47c93f7a7a3c465899f69175d6360df41fc39687790985080cbc84741b83f9c8
+  MD5: 7841c17f62082fbf4c83986d1ce80ee0
+  SHA1: 43535cb879e1fcbca3b17451b6dbebd7973ee36a
+  Imphash: b09186c5c881fc40fe43e3b267d2c826
+  Authentihash:
+    MD5: 35c3ba0be1f0cb94dc36c59e0ee6a8b1
+    SHA1: 6799a2ff8177373ecb25e2d7d6f387f65b885c12
+    SHA256: d64c32991be47c638233d9f4c19136415837663c6b00133dc18898079b13db14
+  RichPEHeaderHash:
+    MD5: 97aaec25c91422dd33c742f2c3bd7f0b
+    SHA1: 67558806727b9184fe7b2d20298ce8b5080836fb
+    SHA256: e81b005e0638f5eca45b590312b20dad5af21f2db3134ca3d87efc0187bd5790
+  Sections:
+    .text:
+      Entropy: 6.257669299601777
+      Virtual Size: '0x2a4a'
+    .rdata:
+      Entropy: 4.573414918134549
+      Virtual Size: '0x934'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 4.064625827925216
+      Virtual Size: '0x228'
+    PAGE:
+      Entropy: 6.008088056864886
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.041597591004837
+      Virtual Size: '0x412'
+    .rsrc:
+      Entropy: 3.278473301149088
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.9356919871571896
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-02-04 20:32:25'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.9.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.9.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - ExAllocatePool2
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - KeDelayExecutionThread
+  - IoGetCurrentProcess
+  - IoWMIRegistrationControl
+  - ZwClose
+  - RtlEqualSid
+  - ZwOpenProcessTokenEx
+  - ZwQueryInformationToken
+  - SeExports
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2024-04-02 00:00:00'
+      ValidTo: '2027-04-01 23:59:59'
+      Signature: 88c306258223741ba4c030bee21e620e1f2629639c3677e7133a2e8bc5f892d0316f9092a3ca346e0812c9e18121e0d782825ffeaec3d47324b3bf491606fd710b22f6f18b4ef2f2e45a1a0e53c7ebba8469fe4419cfeac9d44eaf44832295b4790f883dc1578cab7d6afc1c261a81cb75afbeb7b5480c7912aa5aa64759ec9288299b59ca8ce298d1b3f6cdcc8217ab49454f1f86a9a2a9de9055e077aa56713c6ddc9e9e613e5d71e027b97fafa6cf0059bcafe1d71258e067eecdcf4c813a52a1ace004c74f91a6b28092486a2431dc52d3d987c55190bbc248600c46ed45fe0f1a038df61d1ec9cbaa296c1a9c4f3dd8505e7e36e337092ecb4663a04bd43d1688d935c998ab3f722c9a5347693c829fe6fd700a40db85fbd7af063a33c738de344d822155fe120d86d82cfbca0f6e06508cd93be8f73324c1bb9be2b98ce2809078d9e96f2252d981a7402b9c4e6cd1828fcfdef2fa80099faa603e4b4187e17dd592f0084e977c672510ce788bd0bfcaeb6576403895e3044da2a0e401737772a09f8007e57792839f7ba95192ab4b5ede9bd9f7ddb01aba01e262ec197db31f22f09395ab57123626bc99e6de339a38a6a978ac8d1f966a300c02a60b1ab70adf3d23902f0efca204b5b0192b51322c93bbe22a9e410ef209b788b47ce1e652c823d5643e09c6b9c319cce5661d36bd443fbc0d04b4ff68726db1750a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ec4ccf5a1d6aaf291a0a0296f2a66b3a
+        SHA1: 65ae7ba31eda611350b571c55b7e9c06d3315b87
+        SHA256: bcc4af1f854abdccd1e1164a5e8aa30efb1cf2f965eb724969f1ee5335d5ad87
+        SHA384: 4ed22024aec9b6488927cdc35dd34f682e7f585d735251f03856a694624b7a70e1f165861b0d852df9bd858095fe2b1a
+    Signer:
+    - SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 4f57decda52c2122b199edbcc88b94abeb34e49df4337e51da45b304b8ade266
+  MD5: 070ae91922ea731bddcb698a94dc9071
+  SHA1: 80712641c872b1ce4adf614f3517d022f3bcab1a
+  Imphash: b09186c5c881fc40fe43e3b267d2c826
+  Authentihash:
+    MD5: 35c3ba0be1f0cb94dc36c59e0ee6a8b1
+    SHA1: 6799a2ff8177373ecb25e2d7d6f387f65b885c12
+    SHA256: d64c32991be47c638233d9f4c19136415837663c6b00133dc18898079b13db14
+  RichPEHeaderHash:
+    MD5: 97aaec25c91422dd33c742f2c3bd7f0b
+    SHA1: 67558806727b9184fe7b2d20298ce8b5080836fb
+    SHA256: e81b005e0638f5eca45b590312b20dad5af21f2db3134ca3d87efc0187bd5790
+  Sections:
+    .text:
+      Entropy: 6.257669299601777
+      Virtual Size: '0x2a4a'
+    .rdata:
+      Entropy: 4.573414918134549
+      Virtual Size: '0x934'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 4.064625827925216
+      Virtual Size: '0x228'
+    PAGE:
+      Entropy: 6.008088056864886
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.041597591004837
+      Virtual Size: '0x412'
+    .rsrc:
+      Entropy: 3.278473301149088
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.9356919871571896
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-02-04 20:32:25'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.9.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.9.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - ExAllocatePool2
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - KeDelayExecutionThread
+  - IoGetCurrentProcess
+  - IoWMIRegistrationControl
+  - ZwClose
+  - RtlEqualSid
+  - ZwOpenProcessTokenEx
+  - ZwQueryInformationToken
+  - SeExports
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2024-04-02 00:00:00'
+      ValidTo: '2027-04-01 23:59:59'
+      Signature: 88c306258223741ba4c030bee21e620e1f2629639c3677e7133a2e8bc5f892d0316f9092a3ca346e0812c9e18121e0d782825ffeaec3d47324b3bf491606fd710b22f6f18b4ef2f2e45a1a0e53c7ebba8469fe4419cfeac9d44eaf44832295b4790f883dc1578cab7d6afc1c261a81cb75afbeb7b5480c7912aa5aa64759ec9288299b59ca8ce298d1b3f6cdcc8217ab49454f1f86a9a2a9de9055e077aa56713c6ddc9e9e613e5d71e027b97fafa6cf0059bcafe1d71258e067eecdcf4c813a52a1ace004c74f91a6b28092486a2431dc52d3d987c55190bbc248600c46ed45fe0f1a038df61d1ec9cbaa296c1a9c4f3dd8505e7e36e337092ecb4663a04bd43d1688d935c998ab3f722c9a5347693c829fe6fd700a40db85fbd7af063a33c738de344d822155fe120d86d82cfbca0f6e06508cd93be8f73324c1bb9be2b98ce2809078d9e96f2252d981a7402b9c4e6cd1828fcfdef2fa80099faa603e4b4187e17dd592f0084e977c672510ce788bd0bfcaeb6576403895e3044da2a0e401737772a09f8007e57792839f7ba95192ab4b5ede9bd9f7ddb01aba01e262ec197db31f22f09395ab57123626bc99e6de339a38a6a978ac8d1f966a300c02a60b1ab70adf3d23902f0efca204b5b0192b51322c93bbe22a9e410ef209b788b47ce1e652c823d5643e09c6b9c319cce5661d36bd443fbc0d04b4ff68726db1750a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ec4ccf5a1d6aaf291a0a0296f2a66b3a
+        SHA1: 65ae7ba31eda611350b571c55b7e9c06d3315b87
+        SHA256: bcc4af1f854abdccd1e1164a5e8aa30efb1cf2f965eb724969f1ee5335d5ad87
+        SHA384: 4ed22024aec9b6488927cdc35dd34f682e7f585d735251f03856a694624b7a70e1f165861b0d852df9bd858095fe2b1a
+    Signer:
+    - SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 571a731f01fad422643a2242dd5b6287d75d42f558d0a65906503e661c262be2
+  MD5: 31687439066b9f36cb87b56c647a8b43
+  SHA1: e90dc0c1fb3b40eba8b46589a33e954a4f4c7418
+  Imphash: b09186c5c881fc40fe43e3b267d2c826
+  Authentihash:
+    MD5: 35c3ba0be1f0cb94dc36c59e0ee6a8b1
+    SHA1: 6799a2ff8177373ecb25e2d7d6f387f65b885c12
+    SHA256: d64c32991be47c638233d9f4c19136415837663c6b00133dc18898079b13db14
+  RichPEHeaderHash:
+    MD5: 97aaec25c91422dd33c742f2c3bd7f0b
+    SHA1: 67558806727b9184fe7b2d20298ce8b5080836fb
+    SHA256: e81b005e0638f5eca45b590312b20dad5af21f2db3134ca3d87efc0187bd5790
+  Sections:
+    .text:
+      Entropy: 6.257669299601777
+      Virtual Size: '0x2a4a'
+    .rdata:
+      Entropy: 4.573414918134549
+      Virtual Size: '0x934'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 4.064625827925216
+      Virtual Size: '0x228'
+    PAGE:
+      Entropy: 6.008088056864886
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.041597591004837
+      Virtual Size: '0x412'
+    .rsrc:
+      Entropy: 3.278473301149088
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.9356919871571896
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-02-04 20:32:25'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.9.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.9.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - ExAllocatePool2
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - KeDelayExecutionThread
+  - IoGetCurrentProcess
+  - IoWMIRegistrationControl
+  - ZwClose
+  - RtlEqualSid
+  - ZwOpenProcessTokenEx
+  - ZwQueryInformationToken
+  - SeExports
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2024-04-02 00:00:00'
+      ValidTo: '2027-04-01 23:59:59'
+      Signature: 88c306258223741ba4c030bee21e620e1f2629639c3677e7133a2e8bc5f892d0316f9092a3ca346e0812c9e18121e0d782825ffeaec3d47324b3bf491606fd710b22f6f18b4ef2f2e45a1a0e53c7ebba8469fe4419cfeac9d44eaf44832295b4790f883dc1578cab7d6afc1c261a81cb75afbeb7b5480c7912aa5aa64759ec9288299b59ca8ce298d1b3f6cdcc8217ab49454f1f86a9a2a9de9055e077aa56713c6ddc9e9e613e5d71e027b97fafa6cf0059bcafe1d71258e067eecdcf4c813a52a1ace004c74f91a6b28092486a2431dc52d3d987c55190bbc248600c46ed45fe0f1a038df61d1ec9cbaa296c1a9c4f3dd8505e7e36e337092ecb4663a04bd43d1688d935c998ab3f722c9a5347693c829fe6fd700a40db85fbd7af063a33c738de344d822155fe120d86d82cfbca0f6e06508cd93be8f73324c1bb9be2b98ce2809078d9e96f2252d981a7402b9c4e6cd1828fcfdef2fa80099faa603e4b4187e17dd592f0084e977c672510ce788bd0bfcaeb6576403895e3044da2a0e401737772a09f8007e57792839f7ba95192ab4b5ede9bd9f7ddb01aba01e262ec197db31f22f09395ab57123626bc99e6de339a38a6a978ac8d1f966a300c02a60b1ab70adf3d23902f0efca204b5b0192b51322c93bbe22a9e410ef209b788b47ce1e652c823d5643e09c6b9c319cce5661d36bd443fbc0d04b4ff68726db1750a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ec4ccf5a1d6aaf291a0a0296f2a66b3a
+        SHA1: 65ae7ba31eda611350b571c55b7e9c06d3315b87
+        SHA256: bcc4af1f854abdccd1e1164a5e8aa30efb1cf2f965eb724969f1ee5335d5ad87
+        SHA384: 4ed22024aec9b6488927cdc35dd34f682e7f585d735251f03856a694624b7a70e1f165861b0d852df9bd858095fe2b1a
+    Signer:
+    - SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 5760f65ec8b41d28c7771a39ac7d15900df0f503f5781278dd5e06b2609acec4
+  MD5: dd1967e48de47ac92ecdc90ed28380a7
+  SHA1: c2130e5076f10c2ee22d0ea52b197c9388a6b14e
+  Imphash: b09186c5c881fc40fe43e3b267d2c826
+  Authentihash:
+    MD5: 35c3ba0be1f0cb94dc36c59e0ee6a8b1
+    SHA1: 6799a2ff8177373ecb25e2d7d6f387f65b885c12
+    SHA256: d64c32991be47c638233d9f4c19136415837663c6b00133dc18898079b13db14
+  RichPEHeaderHash:
+    MD5: 97aaec25c91422dd33c742f2c3bd7f0b
+    SHA1: 67558806727b9184fe7b2d20298ce8b5080836fb
+    SHA256: e81b005e0638f5eca45b590312b20dad5af21f2db3134ca3d87efc0187bd5790
+  Sections:
+    .text:
+      Entropy: 6.257669299601777
+      Virtual Size: '0x2a4a'
+    .rdata:
+      Entropy: 4.573414918134549
+      Virtual Size: '0x934'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 4.064625827925216
+      Virtual Size: '0x228'
+    PAGE:
+      Entropy: 6.008088056864886
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.041597591004837
+      Virtual Size: '0x412'
+    .rsrc:
+      Entropy: 3.278473301149088
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.9356919871571896
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-02-04 20:32:25'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.9.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.9.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - ExAllocatePool2
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - KeDelayExecutionThread
+  - IoGetCurrentProcess
+  - IoWMIRegistrationControl
+  - ZwClose
+  - RtlEqualSid
+  - ZwOpenProcessTokenEx
+  - ZwQueryInformationToken
+  - SeExports
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2024-04-02 00:00:00'
+      ValidTo: '2027-04-01 23:59:59'
+      Signature: 88c306258223741ba4c030bee21e620e1f2629639c3677e7133a2e8bc5f892d0316f9092a3ca346e0812c9e18121e0d782825ffeaec3d47324b3bf491606fd710b22f6f18b4ef2f2e45a1a0e53c7ebba8469fe4419cfeac9d44eaf44832295b4790f883dc1578cab7d6afc1c261a81cb75afbeb7b5480c7912aa5aa64759ec9288299b59ca8ce298d1b3f6cdcc8217ab49454f1f86a9a2a9de9055e077aa56713c6ddc9e9e613e5d71e027b97fafa6cf0059bcafe1d71258e067eecdcf4c813a52a1ace004c74f91a6b28092486a2431dc52d3d987c55190bbc248600c46ed45fe0f1a038df61d1ec9cbaa296c1a9c4f3dd8505e7e36e337092ecb4663a04bd43d1688d935c998ab3f722c9a5347693c829fe6fd700a40db85fbd7af063a33c738de344d822155fe120d86d82cfbca0f6e06508cd93be8f73324c1bb9be2b98ce2809078d9e96f2252d981a7402b9c4e6cd1828fcfdef2fa80099faa603e4b4187e17dd592f0084e977c672510ce788bd0bfcaeb6576403895e3044da2a0e401737772a09f8007e57792839f7ba95192ab4b5ede9bd9f7ddb01aba01e262ec197db31f22f09395ab57123626bc99e6de339a38a6a978ac8d1f966a300c02a60b1ab70adf3d23902f0efca204b5b0192b51322c93bbe22a9e410ef209b788b47ce1e652c823d5643e09c6b9c319cce5661d36bd443fbc0d04b4ff68726db1750a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ec4ccf5a1d6aaf291a0a0296f2a66b3a
+        SHA1: 65ae7ba31eda611350b571c55b7e9c06d3315b87
+        SHA256: bcc4af1f854abdccd1e1164a5e8aa30efb1cf2f965eb724969f1ee5335d5ad87
+        SHA384: 4ed22024aec9b6488927cdc35dd34f682e7f585d735251f03856a694624b7a70e1f165861b0d852df9bd858095fe2b1a
+    Signer:
+    - SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 5899928ef15b45bcf4abd15628ae47e3f5fbeeffff704f2b818e7eaca9836366
+  MD5: 37a3e1139457e47eee2366bfc1bf3fd1
+  SHA1: c5280fdfa60093ac57b198510bfa29910003136e
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 9402e96841af0feca8f20d2ef8e3ddca
+    SHA1: e606c7f5bad23230f0987168afa2cf6c08519a99
+    SHA256: ba967ddb4c5c981831bee276d67cde80a8d62d5b11b7a6246e05a380a889ad2d
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252437214528353
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564001756037566
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-12-09 20:10:17'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.6.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.6.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 58fe50105ffc848154c6f6510a544c0097de300b4a7800335b1561696fe01b32
+  MD5: 70b092ac10899f88be0930830eb1e4ac
+  SHA1: ee6f53647ef1f23683c00297f28d3606062ba5dc
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 5ea091a22cc41793e47290abd8f139da47598ccee5e45dad51b15844c0e5664b
+  MD5: 4a6ccef80f711dec4538b89b70c2470e
+  SHA1: fb1c738f5997754bc9f4c3ce0b4bee6d349e192a
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 65438a64ffd3177f3ea172d9a24eb9730e00abb35165fba793e7e6a1cb08473c
+  MD5: d8a3c07c80847331630bc6461e486bd1
+  SHA1: e2673ed5516b7143fe20c28b428dad12e71eab6d
+  Imphash: b09186c5c881fc40fe43e3b267d2c826
+  Authentihash:
+    MD5: 35c3ba0be1f0cb94dc36c59e0ee6a8b1
+    SHA1: 6799a2ff8177373ecb25e2d7d6f387f65b885c12
+    SHA256: d64c32991be47c638233d9f4c19136415837663c6b00133dc18898079b13db14
+  RichPEHeaderHash:
+    MD5: 97aaec25c91422dd33c742f2c3bd7f0b
+    SHA1: 67558806727b9184fe7b2d20298ce8b5080836fb
+    SHA256: e81b005e0638f5eca45b590312b20dad5af21f2db3134ca3d87efc0187bd5790
+  Sections:
+    .text:
+      Entropy: 6.257669299601777
+      Virtual Size: '0x2a4a'
+    .rdata:
+      Entropy: 4.573414918134549
+      Virtual Size: '0x934'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 4.064625827925216
+      Virtual Size: '0x228'
+    PAGE:
+      Entropy: 6.008088056864886
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.041597591004837
+      Virtual Size: '0x412'
+    .rsrc:
+      Entropy: 3.278473301149088
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.9356919871571896
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-02-04 20:32:25'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.9.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.9.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - ExAllocatePool2
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - KeDelayExecutionThread
+  - IoGetCurrentProcess
+  - IoWMIRegistrationControl
+  - ZwClose
+  - RtlEqualSid
+  - ZwOpenProcessTokenEx
+  - ZwQueryInformationToken
+  - SeExports
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2024-04-02 00:00:00'
+      ValidTo: '2027-04-01 23:59:59'
+      Signature: 88c306258223741ba4c030bee21e620e1f2629639c3677e7133a2e8bc5f892d0316f9092a3ca346e0812c9e18121e0d782825ffeaec3d47324b3bf491606fd710b22f6f18b4ef2f2e45a1a0e53c7ebba8469fe4419cfeac9d44eaf44832295b4790f883dc1578cab7d6afc1c261a81cb75afbeb7b5480c7912aa5aa64759ec9288299b59ca8ce298d1b3f6cdcc8217ab49454f1f86a9a2a9de9055e077aa56713c6ddc9e9e613e5d71e027b97fafa6cf0059bcafe1d71258e067eecdcf4c813a52a1ace004c74f91a6b28092486a2431dc52d3d987c55190bbc248600c46ed45fe0f1a038df61d1ec9cbaa296c1a9c4f3dd8505e7e36e337092ecb4663a04bd43d1688d935c998ab3f722c9a5347693c829fe6fd700a40db85fbd7af063a33c738de344d822155fe120d86d82cfbca0f6e06508cd93be8f73324c1bb9be2b98ce2809078d9e96f2252d981a7402b9c4e6cd1828fcfdef2fa80099faa603e4b4187e17dd592f0084e977c672510ce788bd0bfcaeb6576403895e3044da2a0e401737772a09f8007e57792839f7ba95192ab4b5ede9bd9f7ddb01aba01e262ec197db31f22f09395ab57123626bc99e6de339a38a6a978ac8d1f966a300c02a60b1ab70adf3d23902f0efca204b5b0192b51322c93bbe22a9e410ef209b788b47ce1e652c823d5643e09c6b9c319cce5661d36bd443fbc0d04b4ff68726db1750a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ec4ccf5a1d6aaf291a0a0296f2a66b3a
+        SHA1: 65ae7ba31eda611350b571c55b7e9c06d3315b87
+        SHA256: bcc4af1f854abdccd1e1164a5e8aa30efb1cf2f965eb724969f1ee5335d5ad87
+        SHA384: 4ed22024aec9b6488927cdc35dd34f682e7f585d735251f03856a694624b7a70e1f165861b0d852df9bd858095fe2b1a
+    Signer:
+    - SerialNumber: 0655f9459613dfa409d83e84d9657040
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 68dde5bfb0f18e8bd662a25cd9f7dfebb8b944220b25c55e7b3732a0a47b3390
+  MD5: 75cc064fd2867f84d456e48a82d1e6d0
+  SHA1: c171b2eac0363144e1d2e08132cea8e95e33c7df
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 692c018316b30e5e8301aa8bcd3240e965cf0c407de1ee401266b9b14c890353
+  MD5: 7eb4979c86d18e67af92bf25d6a5afdf
+  SHA1: 59badf5b25d46b532451d209a929494ca5300f4f
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 9402e96841af0feca8f20d2ef8e3ddca
+    SHA1: e606c7f5bad23230f0987168afa2cf6c08519a99
+    SHA256: ba967ddb4c5c981831bee276d67cde80a8d62d5b11b7a6246e05a380a889ad2d
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252437214528353
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564001756037566
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-12-09 20:10:17'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.6.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.6.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 6b89ba6551c56eb781a0bb6e5dcfc35b9cbcbd587bd301663a7f16b80e49ace5
+  MD5: 3084c8d3d86f82f4bd01edb21487c85c
+  SHA1: 035a2432200c1728d56a27ad8f654f9d3285cecd
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 9402e96841af0feca8f20d2ef8e3ddca
+    SHA1: e606c7f5bad23230f0987168afa2cf6c08519a99
+    SHA256: ba967ddb4c5c981831bee276d67cde80a8d62d5b11b7a6246e05a380a889ad2d
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252437214528353
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564001756037566
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-12-09 20:10:17'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.6.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.6.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 72783aa2433090d3b284d8fe18615928c25fd67416f5522146127b6d5a280cd6
+  MD5: b4e60baf4701c61e75929e79978ad5a6
+  SHA1: 5c50220f59a823971d28776a503dccdf29f5e91c
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 9402e96841af0feca8f20d2ef8e3ddca
+    SHA1: e606c7f5bad23230f0987168afa2cf6c08519a99
+    SHA256: ba967ddb4c5c981831bee276d67cde80a8d62d5b11b7a6246e05a380a889ad2d
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252437214528353
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564001756037566
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-12-09 20:10:17'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.6.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.6.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 809b6d2db04a627ecba4d898cbafec0d17cbb1055ddaf793cd0e38c7c7eabba2
+  MD5: 446ed415b481ba6abd072c57557c41c2
+  SHA1: 0513664e4366b39534d49cc0fdcaf660bc4db6c8
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 80b18c3883c52d9e15e3cfb1c0227c2d6172a57d639055842187823275db7dad
+  MD5: 61fc7b18312a6be25defacbfbb6a3ea1
+  SHA1: 24c8e34c75e29d62269345f2e11a900a8466e2f9
+  Imphash: 26cc1d063a99a860e5a97c5717236ed1
+  Authentihash:
+    MD5: bf3b4415ac3134a772f6f8bb9e876380
+    SHA1: 0189ac6a6d84aa0de31a5ea2dab2b3632dee1d8a
+    SHA256: ad825da18a6a79a48acf0888838c4bc110eed0928795194ed3bba016ac0582cd
+  RichPEHeaderHash:
+    MD5: c344d7b93343765964a7b187111ecb6d
+    SHA1: 3f3a1b747367081346584a041592d3ff819474c1
+    SHA256: 5c052c09b0760ce7bc0f99f240e708b874ff1039cc86314709e76f9ffc3c6a45
+  Sections:
+    .text:
+      Entropy: 6.262947274962698
+      Virtual Size: '0x260a'
+    .rdata:
+      Entropy: 5.261915305361833
+      Virtual Size: '0xd58'
+    .data:
+      Entropy: 0.6903800294792679
+      Virtual Size: '0x3b0'
+    .pdata:
+      Entropy: 4.043344539784238
+      Virtual Size: '0x240'
+    PAGE:
+      Entropy: 5.973121989328444
+      Virtual Size: '0x59c'
+    INIT:
+      Entropy: 4.83955727058354
+      Virtual Size: '0x3e6'
+    .rsrc:
+      Entropy: 3.20240586546587
+      Virtual Size: '0x330'
+    .reloc:
+      Entropy: 3.0655570101740874
+      Virtual Size: '0x28'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2020-08-31 01:06:35'
+  Description: ASUSSAIO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: ASUSSAIO.sys
+  OriginalFilename: ASUSSAIO.sys
+  FileVersion: 1.0.2.0
+  Product: ASUSSAIO
+  ProductVersion: 1.0.2.0
+  Copyright: ASUSTek Computer Inc.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WppRecorder.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IoCreateSymbolicLink
+  - KeWaitForSingleObject
+  - IoCreateDevice
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - KeReleaseMutex
+  - IoWMIRegistrationControl
+  - IoDeleteSymbolicLink
+  - KeDelayExecutionThread
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - KeInitializeMutex
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - HalGetBusDataByOffset
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=23638777, C=TW, L=Taipei, O=ASUSTek Computer Inc., OU=SYS PC
+        SW center, CN=ASUSTek Computer Inc.
+      ValidFrom: '2018-06-07 00:00:00'
+      ValidTo: '2021-06-04 12:00:00'
+      Signature: 9987b72c4f75e6d7212baa6aedb1fd539263b310f52bfa12ae0ab9b7efdb7da22b43ca0376a2968ff983c618db416d648493980f67f243609a47e29a863f106c3d6f95acfe2f680b58d75c9c67a964993eacaa878dfbebf46998acda6b73a0f8ae0dbe34d27b1e06f7f9f7ac200da723bbd3d80ffa24dd90a2db6bc7a4dfd426c21aa0e9278894329eee6404911fb4ef96fbd3292e0b388a865353e08ced7ec8467610bf9e78e434f7af0522934d635fc57a8e6449deac1e51a24fa34ea7dd4030d84b2ececabbc8b8ec887dde7f65f71bb1308a66b69f5fb67f2c22c7150732e9f40d94b004c7a8d1648796c1966325176542e50df96794034faa17f102b829
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 17b90cbd98af42c34e637c5b8df4eb64
+        SHA1: 7914797171811270bc01561479d5bd5c7388cec2
+        SHA256: 1759c954acc8ec1fb2a768612afbbdaee5df42277068e55408a067350e24ce91
+        SHA384: c1edf17c215952f496ac4345813ae91737c7f4efdbc6eb3966cad4572810bc574e621a27212cbcceef489a17df53b457
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 024fd22ed89c8823d79c2a09a4e6423f
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 8ed37651221dc0990d1db9c9b31e79bb3e25a77299a7be8b48fcdbae4e2a2053
+  MD5: 2a8bb097d85e324db56a82adef87a24f
+  SHA1: a59e38966027d36d641ca8a3886dbb9f8231b126
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 9402e96841af0feca8f20d2ef8e3ddca
+    SHA1: e606c7f5bad23230f0987168afa2cf6c08519a99
+    SHA256: ba967ddb4c5c981831bee276d67cde80a8d62d5b11b7a6246e05a380a889ad2d
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252437214528353
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564001756037566
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-12-09 20:10:17'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.6.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.6.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: 9b500aca1801246fea82217b3dd2efd54f38b18c9a05fc2d2d63ae3eec42aa9b
+  MD5: f24dd9123fa4b37cc0f16b6173c5ba7b
+  SHA1: 0b87c2aead0dd5120e8102c0f93e9113b9351329
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: a78e9a8bddb042d09eb211461836f7831651016e5ea1c917c0ddf513c061fee4
+  MD5: 7aa7cb7fbfad73e3efd1d9e7c1fff457
+  SHA1: c08eb13cdf8b4b3264897a9208e6f7ecd3263fa0
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: cfed2978ebfb9511a61f2e7d2e49967f4663be9075db9a2bc14c78f0188f6feb
+  MD5: 6e21d0e36f5960e1462f3316d95e24ff
+  SHA1: 1ceda1d89bc72b4b1d84317dde7555c97d41ce04
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: d8215b0b4eb572259c6dd0e1b414e99492da84e3bf1e6f57dd05dbff3385110a
+  MD5: d25b3e8392178be9dbc57730861cd329
+  SHA1: 8dfa4a51c65554bc2aceaa61672f2860d80cafef
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: f0663d6c18c77544c3c417ddd4075ba1c1dcf429f5f4c4c7f6ce36f08329bde2
+  MD5: 50a988e6713bebd969ca98cd97d64267
+  SHA1: 2c36386d53366058c01ddc68e606239e0428f0a7
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: f43a60428e253c7e7f1cd62638c8c68fbcdb01f89214b458a3a736835e179b81
+  MD5: 18d92652e5cb2228ff5930bdfb2236b5
+  SHA1: 0a0aa63d77d7d165485e688f21c0edcbc1fa30f2
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: AsusSAIO.sys
+  SHA256: fbe45d300cd313637cf4fe876edb5e402f3c2520a7db7e1baf78635a452844e4
+  MD5: 996d2571134d2e2ccbd01ec974e0c1c5
+  SHA1: 99da69d79a10d2057bd96dc106ba53bbc8ce5dc4
+  Imphash: d1cf6c93b71858db25a434f1fb6692df
+  Authentihash:
+    MD5: 5a83bcfbe60dbd42734bbbc53dfc4933
+    SHA1: e3355326a6693087cbd669730d7e834591862ddd
+    SHA256: a35875c5e976f93a10f5f7f0e8415a725ffd555977c29fb428d38f2669bd9ee0
+  RichPEHeaderHash:
+    MD5: 202ecda16dcee939b2b61d16d011df8e
+    SHA1: d11833f63db0a88cecfc13128d4a6b5edf42be52
+    SHA256: ec8ac04299d0103907ab1c29e0cc6df3b301b05e0a4b5dd74bafa6cde779100a
+  Sections:
+    .text:
+      Entropy: 6.252643031231874
+      Virtual Size: '0x298a'
+    .rdata:
+      Entropy: 4.564434109911337
+      Virtual Size: '0x8a4'
+    .data:
+      Entropy: 0.7790640703891142
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 3.995117749586904
+      Virtual Size: '0x21c'
+    PAGE:
+      Entropy: 6.007227721686304
+      Virtual Size: '0x5cc'
+    INIT:
+      Entropy: 5.0079678495345865
+      Virtual Size: '0x340'
+    .rsrc:
+      Entropy: 3.2858155701731784
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 2.934196364505181
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-07-10 19:27:46'
+  Description: ASUS System Analysis IO
+  Company: ASUSTeK COMPUTER INC.
+  InternalName: AsusSAIO.sys
+  OriginalFilename: AsusSAIO.sys
+  FileVersion: 1.0.7.0
+  Product: ASUS System Analysis IO
+  ProductVersion: 1.0.7.0
+  Copyright: "\xA9 ASUSTeK COMPUTER INC. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - WppRecorder.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - MmGetSystemRoutineAddress
+  - KeInitializeMutex
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeDelayExecutionThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoWMIRegistrationControl
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=TW,
+        serialNumber=23638777, C=TW, ST=Taipei City, L=Beitou District, O=ASUSTeK
+        COMPUTER INC., OU=SYS BG,PC BU,SW RD Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2021-05-04 00:00:00'
+      ValidTo: '2024-05-08 23:59:59'
+      Signature: 198104654ec4070826b40a1b0450eb45c409b6fbcba328cd9d7f797a692c3d5d2b166d5ecefc5519701cafda65263f13c3900384ec33b37eb67ef9efedea1e2c5cbc63e772c1d1d64a402b5aad0e7a3e5a947f798c8fa0a204f5b66054b6106412e8f5f1dadc3d578993b836bd6792a48cc058d3326fb3277232642e3383e418791c659fb6f0c6b9a7dfaedccc4461bae1ebd925080129daf77ad40ee0d3b9bab3fb2ca0da4518df398ca89a01a28efcf823e5d735c600c7e9fff6b4c2cb0239aeb71edd6c7b9df050ca1cef168f3b7ee3db4a0938ecc7706221c90494d958dc7e3c394be70e6e04c3718eb988fdb0a0971aaf294ccdb4edb5cd35024da6205b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b382ea0cfba11401487fca94b6ea6de6
+        SHA1: 10b2559e898bfb08af670ea5f51e6468bee5dcca
+        SHA256: fb7f21d7287cb8247255d82e6eb097e38d4e8d33aa94ff7eeb5ff267b56167b5
+        SHA384: 6002b53470e6aa7f092c8566b646d4dab7481f3ba8c8eb43d1935a603c17c4d2017bd7689b199411242399dd60572005
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 07207b3a1acb44e4dc39ebd389a96d65
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       Version: 1

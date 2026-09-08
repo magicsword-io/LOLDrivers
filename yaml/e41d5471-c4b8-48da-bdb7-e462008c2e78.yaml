@@ -9,23 +9,25 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create cpqsysio binPath=C:\windows\temp\cpqsysio64.sys type=kernel
     && sc.exe start cpqsysio
-  Description: cpqsysio64.sys is a Hewlett-Packard physical memory driver that ships
-    as part of the HP ProLiant Support Pack and HP firmware ROM update utilities.
-    The driver exposes physical memory read via MmMapIoSpace (IOCTL 0x152EF0) and
-    physical memory allocation and mapping to usermode via ZwOpenSection on Device\PhysicalMemory
-    combined with ZwMapViewOfSection (IOCTL 0x153E80). The Compaq heritage driver
-    name (cpq prefix) dates to the HP-Compaq acquisition. The driver is only 15KB
-    and is also available in the KeServiceDescriptorTable/vulnerable-drivers repository.
-  Usecase: Elevate privileges
-  Privileges: kernel
+  Description: cpqsysio64.sys is a Hewlett-Packard physical-memory driver distributed
+    with ProLiant support and firmware utilities. The tracked 4.5.0.0 and 4.6.0.0
+    builds handle IOCTL 0x152EF0 by accepting a caller-supplied physical address and
+    length, mapping that range with MmMapIoSpace, and copying from it without constraining
+    the requested physical range. An administrator with device access can read arbitrary
+    physical memory, disclose kernel-sensitive data, and recover addresses that undermine
+    kernel address randomization.
+  Usecase: Read arbitrary physical memory
+  Privileges: Administrator
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/311
+- https://github.com/magicsword-io/LOLDrivers/issues/409
+- https://github.com/fluffycats31/vulnerable-drivers
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
 Detection: []
 Acknowledgement:
-  Person: ''
-  Handle: '@rainbowdynamix, @DbgPrint'
+  Person: rainbowdynamix, DbgPrint, fluffycats31
+  Handle: '@rainbowdynamix, @DbgPrint, @fluffycats31'
 KnownVulnerableSamples:
 - Filename: cpqsysio64.sys
   MD5: cb7bc352e0a7531faec48de1dbd8a9a1
@@ -190,3 +192,172 @@ KnownVulnerableSamples:
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
   Imphash: f1073c0b639c62ba91cae90672cb0e70
+- Filename: cpqsysio64.sys
+  SHA256: 7aff3ecf106289c4d721e7613f83f817f52114c3e89891dc5b2a728b2fc26818
+  MD5: 710a33afa08c0a5f43bb77055a3d4240
+  SHA1: 11fdd809146244ff0e95bfcaebf819e3799b2953
+  Imphash: b7ee6448b88d46e031b200004f350069
+  Authentihash:
+    MD5: ccf6564241424ff845382dfcaa19e797
+    SHA1: 55b1bc7bce839f896d783b9885acb75a5370086b
+    SHA256: 6dac3c94cffbd08956eb3654be9bdddb47c5fc6cb5fe8177f2ced1246c8c59cb
+  RichPEHeaderHash:
+    MD5: 1c75ff3b7fbbf18af5a108a2e2cf7085
+    SHA1: b75430c92a671b5bda2dc4177d93c08ba30a2096
+    SHA256: d03bc47bbd277b421b4aaadcd9155409a7957702548da489369d4b2bf6e5baf4
+  Sections:
+    .text:
+      Entropy: 5.907808364868526
+      Virtual Size: '0x87a'
+    .rdata:
+      Entropy: 4.067901001497009
+      Virtual Size: '0xa64'
+    .data:
+      Entropy: 2.052029654288823
+      Virtual Size: '0x230'
+    .pdata:
+      Entropy: 3.9719403796617296
+      Virtual Size: '0x204'
+    PAGE:
+      Entropy: 6.3039400378409844
+      Virtual Size: '0x1935'
+    INIT:
+      Entropy: 5.178263770642094
+      Virtual Size: '0x520'
+    .rsrc:
+      Entropy: 3.2959802470886657
+      Virtual Size: '0x3d0'
+    .reloc:
+      Entropy: 3.3040958847955992
+      Virtual Size: '0x2c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-02-07 15:12:18'
+  Description: Physical memory driver
+  Company: Hewlett Packard Enterprise
+  InternalName: cpqsysio
+  OriginalFilename: cpqsysio64.sys
+  FileVersion: 4.6.0.0
+  Product: Physical memory driver
+  ProductVersion: 4.6.0.0
+  Copyright: Copyright 2004-2009,2015,2018 Hewlett Packard Enterprise Development
+    LP
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlFreeUnicodeString
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - ExFreePoolWithTag
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - ExAllocatePoolWithTag
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - KeBugCheckEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust
+        External CA Root
+      ValidFrom: '2013-08-15 20:26:30'
+      ValidTo: '2023-08-15 20:36:30'
+      Signature: 362ba2f2e1331fe493f7f26985c6640ec99b632fe4703798fd94ec7bcff8a14246f9ed6a4e8d34693605557a1ebbad8c99429606e925a82684bec1bf16a97caa5b04b7fdd1c0f402be28edf577c79bfe3af6e8c17bd382abfa144ecf2bcfe5d5b54840b1a38f838bad2b2553aba634cef243f74f2ce9dd1e4e5ab6bae83b10992400bc50fd78f6e523a8899493f7b74130374a57b7e644d9c9df9905aa44fc74af8264cc07cb01b609c32ee3e832a7b49f4178c7a184365462f2ec150ac8ead084f8f1e06bf456125f95e0fcddb77693fe294a25e90400f1b4110ec9849edb177df51ea58e3629193a6d6c464bd7ab7024288d05a3d9d524f2f8a0d13c8239d4a8820e693a8109fc06f0c75933843693064191232c22a5a7012b50b428aedb46b0591b86b39b87e8494e390b6d14df4c03301e1f5f74aef55b590353ec9816e0d06235751b48b87d13e57a48b87752a40798253b069b7a4e6a6f44864f144f2779273d5073414c9c413edd290c73b1c7fb1f760c176504ebd25010924149ece4067d3615446f89bf697df94d40c13a98b6a07e31d2b5aecafb53d53f5086cd5e933b6d5d7c9a3f3ff7a9255884dd114900a2c7c89e37dd778e6d718be05b81345d54baccf59347886de7ef5be228e4801b40e40f2ad17f2315655aac9994433f465526d6c4fa8895e2919aa32d0b85deac8ce0f967709f71790231f761a229c4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000035d8d5595b0671412b000000000035
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 3d488d41aaeb5661974952080abef2fd
+        SHA1: df01e35e6befc7d65625319f17397b861e618d56
+        SHA256: 3d6ef38b5d26773dc77392e415e88b3a744b30ea9f2081e2a992b5818db2f0c4
+        SHA384: ac7c06916fe4a00307834b2499f12799d3fe463c2e63d1881df669a2786745beeee2b3a7d87cd6bc9e4fe293c22e5a59
+    - Subject: C=US, postalCode=94304, ST=CA, L=Palo Alto, STREET_ADDRESS=3000 Hanover
+        Street, O=Hewlett Packard Enterprise Company, OU=HP Cyber Security, CN=Hewlett
+        Packard Enterprise Company
+      ValidFrom: '2017-11-09 00:00:00'
+      ValidTo: '2018-11-09 23:59:59'
+      Signature: 32bd78c1a2b8438b9aa928c6085acd6fa8751090f67cc3690d0683a70995058ea804fb221d0451cc101bc9248ab7f206ca05fa4e4bc43b342542179f86e4863508524ff501608e9cb6d90f38e5a0f4b32ad379ae07162135bcdc69df0c524b12b8cb6c2aa032a3f459f9e8003326bde90fb62cb12504aca9ad2d2a8b5d1a3ec647afd59b5e5067c1f93fd2d79cca1d965e02654223c2a61990790eee9fa75621c246c3bbfa6b84dc0f486891300694d95c6396d517f1fc75a18baa604cd7f0dfe53a560f141cf4f766c3f6b428a6edb58d6f3ec8c527e4f70ed9ccafcc2267946abcc5a06b5953b998ec3d99ddc46d052e2871b5d47cb661b935b2cea59ee802
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3b91910c45c4aeb887d44a217c41ddbe
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 7d8a69fff4d4e0ee591f9c5295780c43
+        SHA1: 518540f52809d8c1e029cb1ff20dd8d2068ba35f
+        SHA256: bdff95e978256a743a2c65dbe1418821130da67b109097dc596932b270de57ac
+        SHA384: cc7af3d961c2f0b93f48678748b424d7398478923fc4299b6eb8ad6310e112ad6cb0dd0dd3b53c3e0f1e67191ca69db9
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Certification Authority
+      ValidFrom: '2000-05-30 10:48:38'
+      ValidTo: '2020-05-30 10:48:38'
+      Signature: 64bf83f15f9a85d0cdb8a129570de85af7d1e93ef276046ef15270bb1e3cff4d0d746acc818225d3c3a02a5d4cf5ba8ba16dc4540975c7e3270e5d847937401377f5b4ac1cd03bab1712d6ef34187e2be979d3ab57450caf28fad0dbe5509588bbdf8557697d92d852ca7381bf1cf3e6b86e661105b31e942d7f91959259f14ccea391714c7c470c3b0b19f6a1b16c863e5caac42e82cbf90796ba484d90f294c8a973a2eb067b239ddea2f34d559f7a6145981868c75e406b23f5797aef8cb56b8bb76f46f47bf13d4b04d89380595ae041241db28f15605847dbef6e46fd15f5d95f9ab3dbd8b8e440b3cd9739ae85bb1d8ebcdc879bd1a6eff13b6f10386f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
+        SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
+        SHA256: 0d73a614eef7596cf5a34733f74daf2ccfe4df7b4a40069bf43c43e428264177
+        SHA384: 7ce102d63c57cb48f80a65d1a5e9b350a7a618482aa5a36775323ca933ddfcb00def83796a6340dec5ebf7596cfd8e5d
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      ValidFrom: '2013-05-09 00:00:00'
+      ValidTo: '2028-05-08 23:59:59'
+      Signature: 023f0239c3eef8ca3b89de0c6d4db1f14e924fafc2382c04ccc56311ab0963afaba2d7023fcc6f19c33dd61a0894ff25d8a988a72b101ae09bb107221a511c3ad4e1e909bfe62474af1e7b16316e23ef54512d5202e27508054cf1b751e15100c687f66cee104476576af1df586b21aa49d47c374ebdffb67554401836576711cd4f02e4fef3dafc7517dbecb7f7650923491f435783ea7e207761c84df2bb654da8f7854507af7a6927659029408bdf7b3a51398ca81f7079ad6d4220a2cf0c6c038c4ccd730794e75a8e3a04baa2a17c1fcb633a15a7d4151ba7524732a9f4bf6447d1aa1f534e323073c26fb778829d5cff46bb6b221d880bf81baa34a6fc8cf5dd7f658c8c315731d036ec47a1cfcb8ba8ef1c1858c50677ca4b9b51af4c084a7a8fe2a352e28e8ecc26e4b2d8e538c2a8edc6819c356ba958614a0a97b44b42b6559dbe99e7706d59f86d2a0c7f19605f0c9a886c30ac520990161bff2b9ddbd020ca89ea287e328e19df7b48331ed765f8aec9f8831493767d64d08ecebe357dff72314d9f9ebd1e6c2fa88f0c0650fb8c27b376c9f4e6d7c334e28c87218661febf5574e12177030a686cbbe4c9a9e6cf5925eb7cec450e796668e822cdb8ef98854d96113c098ad07fbc282813fb6aca548d925ccdc26598069ece485bd4b5379346417c07ddcffa43efba6761ff7d49e0bb307d5c80e3e616394ba7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2e7c87cc0e934a52fe94fd1cb7cd34af
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f64df7e88bb2b95c7204bc07bb197a87
+        SHA1: a1bfa9f0f46a1e9ac66259c9b2b1b2dcaf16db9b
+        SHA256: a3dd3858c0e514dd37cacd5f23fc8222443ff636eef4a9fe90bc0ecbbb051fd1
+        SHA384: 4805a7e23d6c8ff5e149f197b744bcb2346e73f19a48835a2f64129183981109256b75ea371a331746d01fd4e135ab6e
+    Signer:
+    - SerialNumber: 3b91910c45c4aeb887d44a217c41ddbe
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Code Signing CA
+      Version: 1
