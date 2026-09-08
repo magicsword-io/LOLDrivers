@@ -1,0 +1,336 @@
+Id: e69e3427-97cd-43bb-aeda-f1fbbeaa75f6
+Tags:
+- MemLoaderCustomize.sys
+- deletekey.sys
+Author: Michael Haag
+Created: '2026-09-08'
+MitreID: T1014
+Category: malicious
+Verified: 'TRUE'
+Commands:
+  Command: ''
+  Description: Nextron Systems identifies these samples as MemLoaderCustomize kernel
+    PE-loader variants. Capabilities reported across the pair include kernel hooking,
+    module hiding, and deletion; module hiding is specifically attributed to the c6825f94
+    sample. Static analysis confirms matching loader implementations that allocate
+    image memory, copy PE sections, apply relocations, resolve kernel imports, and
+    prepare mapped-image execution, together with file-deletion helpers. Both contain
+    a MemLoaderCustomize.pdb build path. Module hiding and successful runtime self-deletion
+    remain source-reported rather than dynamically tested.
+  Usecase: Map executable images into kernel memory outside the normal driver-loading
+    path.
+  Privileges: kernel
+  OperatingSystem: Windows x64
+Resources:
+- https://github.com/NextronSystems/iocs/blob/89038fb97602153f20dadb9ba7e9fcaeac9af148/reports/whql-signed/readme.md
+Acknowledgement:
+  Person: Nextron Systems Research
+  Handle: '@nextronresearch'
+Detection: []
+KnownVulnerableSamples:
+- Filename: MemLoaderCustomize.sys
+  MD5: 0a867d6431af8aa7a106488d7a01fcb6
+  SHA1: 3dae0278fb5e4d5133f9b73a41d8112d84618576
+  SHA256: c6825f94cda9050a12fa629768fda150affc36473a1a333c364b3478b2e02891
+  Imphash: 9f857addb3ad0a69d599cf79ecc4834a
+  Authentihash:
+    MD5: afb7cc0377ad79a0efd373a73db051e4
+    SHA1: 588e916cc5dbf7d6173c23fdd309630ec216e123
+    SHA256: 8bb51f044464a952a8f96cedccf4b425fd9695035cf61b1a2c353713bf6c0fb1
+  RichPEHeaderHash:
+    MD5: fac69431b330a20a39140010a45ed7fb
+    SHA1: 2ac32735af9bb8f66c9be3515aa4dbdcc8f56349
+    SHA256: 60326eec37be7580956fa34d794bdd7f9737c7807f25b574d7967389f6d1272a
+  Sections:
+    .text:
+      Entropy: 6.5162358250596855
+      Virtual Size: '0x7590'
+    .rdata:
+      Entropy: 4.260751621090544
+      Virtual Size: '0x16fc'
+    .data:
+      Entropy: 2.6864224971876385
+      Virtual Size: '0x608'
+    .pdata:
+      Entropy: 4.459983932947365
+      Virtual Size: '0x7e0'
+    INIT:
+      Entropy: 5.614214946073267
+      Virtual Size: '0x9ec'
+    .reloc:
+      Entropy: 4.6591810487453635
+      Virtual Size: '0x5c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-07-24 07:02:49'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeSetEvent
+  - ExAllocatePool
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ZwClose
+  - KeBugCheck
+  - MmIsAddressValid
+  - PsGetCurrentThreadTeb
+  - KeInitializeEvent
+  - KeDelayExecutionThread
+  - KeWaitForSingleObject
+  - RtlInitAnsiString
+  - MmGetSystemRoutineAddress
+  - RtlAnsiStringToUnicodeString
+  - RtlFreeUnicodeString
+  - RtlFindExportedRoutineByName
+  - RtlInitUnicodeString
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ObReferenceObjectByHandle
+  - ZwOpenFile
+  - ZwOpenKey
+  - ZwDeleteKey
+  - RtlDeleteElementGenericTableAvl
+  - RtlLookupElementGenericTableAvl
+  - MmFlushImageSection
+  - ZwDeleteFile
+  - ZwQuerySystemInformation
+  - IoFileObjectType
+  - MmUserProbeAddress
+  - strcpy_s
+  - RtlPcToFileHeader
+  - RtlUnwindEx
+  - __C_specific_handler
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - ObfDereferenceObject
+  - MmMapViewInSystemSpace
+  - MmUnmapViewInSystemSpace
+  - RtlRaiseException
+  - KeAcquireInStackQueuedSpinLock
+  - KeReleaseInStackQueuedSpinLock
+  - ExInitializeNPagedLookasideList
+  - ExDeleteNPagedLookasideList
+  - RtlInitializeGenericTableAvl
+  - RtlInsertElementGenericTableAvl
+  - RtlGetElementGenericTableAvl
+  - PsGetCurrentThreadId
+  - PsGetThreadId
+  - PsGetThreadProcessId
+  - IoGetStackLimits
+  - ZwOpenSection
+  - ZwQuerySection
+  - MmSectionObjectType
+  - RtlUnwind
+  - ExReleaseResourceAndLeaveCriticalRegion
+  - RtlGetVersion
+  - ExIsProcessorFeaturePresent
+  - ExInitializeResourceLite
+  - ExEnterCriticalRegionAndAcquireResourceExclusive
+  - ExDeleteResourceLite
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2024-10-10 19:04:52'
+      ValidTo: '2025-10-08 19:04:52'
+      Signature: 1bfc71b1c6ae1f779c132566b0692231de393c7578f2ae3adafa2968f4c01599d9dde8827a1f2ec65c46c56cad36987c0df5b1ec1c36576126f5fb988923b3c7f3f111749105254facfc1831516dba7fa7265753447f94b11979a3e9aba7f5dbd87e3f0f034229a34c7fb10cb7a90f197ffd35432e4244ee7666d4a48de1586b61b1072d441cd345eb140b613fd0fef87ab5eef73985d940029d30870053909e8550e94cb4e63696e82a182a7632267efb6056cf7c7b05c108645ea8698bba379bfa31e6bf7e179edbc3e559bbfe1fa8bf5c6b0c783edebac68aefa287bd16c1fcf2e00839c693e40e79f7c63447712a321c2ca5ee1dd2a0e03bde2702d9320a50d20439f395257fb6c5af0c11432c52801127d4bc45c0a65c660f5769fdf250aaba99a74bef0885f21a040f11e6364ba7499c795b39ca0972ff857d4e7c9bc08f257cb8dadb28817b62de202f3639de9db076ad8ee6b71a3cea1a1a476a510a3197fce4592654389629c6108656d9132971b2e55f3d19963d966a6869712265b662dcc7c92d6e3659d429c814f3efdf05ded84fe8654a039222dbe133a7992e04f05d8d7642ceb159cc705b832ec2f507ba8604047a01ff37fd69397ad861ad766df8e4e296199d81d89f708550a04d774da5c1b50062e06a72badcdb12f94820b5b834442ada4a82ce25d0450a519cac28d8362bd182257b1b80cf930e92d0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 330000006daa072f958218c9e300000000006d
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 4320213204f73b9d506bbcbb35111c2d
+        SHA1: d3cbbc8331d4d84555a6726d48dfd9571738bd25
+        SHA256: fe99f47e601d6b8ab1e89961000f680bf3b0e0629a8a59864e76f135e0c89699
+        SHA384: e0a64b97e2ac3d56d42b593fccee2d0e80fc626b8161f60a36a2adef8fe94c7c06c7509816d1c2211400626fc1fc63c7
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 330000006daa072f958218c9e300000000006d
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+- Filename: MemLoaderCustomize.sys
+  MD5: dfd65b37de8a460d2d931455478c8de2
+  SHA1: 1ba4e5b49998a3ca81b6aa4900a7c6997f586fbd
+  SHA256: 7b267455854a4353320b13306da18f9d784b8b3db2ca0912e2b62f95a791a32b
+  Imphash: 3a8a1f67500fd5be8206210f466a0e21
+  Authentihash:
+    MD5: 05e7e774088f645055317c7d6b315bd5
+    SHA1: 68c39b32c28abe0c77e622e90883bf9d07aec103
+    SHA256: 6c7573a36b6cd7b50beb1596c55d9ed95a83110da00c4b3faba71b9d2b5ba63d
+  RichPEHeaderHash:
+    MD5: fac69431b330a20a39140010a45ed7fb
+    SHA1: 2ac32735af9bb8f66c9be3515aa4dbdcc8f56349
+    SHA256: 60326eec37be7580956fa34d794bdd7f9737c7807f25b574d7967389f6d1272a
+  Sections:
+    .text:
+      Entropy: 6.499415208540978
+      Virtual Size: '0x7350'
+    .rdata:
+      Entropy: 4.269622607138776
+      Virtual Size: '0x16ec'
+    .data:
+      Entropy: 2.6864224971876385
+      Virtual Size: '0x608'
+    .pdata:
+      Entropy: 4.473134684133157
+      Virtual Size: '0x7d4'
+    INIT:
+      Entropy: 5.572835659462389
+      Virtual Size: '0x9b2'
+    .reloc:
+      Entropy: 4.569143886787184
+      Virtual Size: '0x5c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-08-28 20:56:08'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeSetEvent
+  - ExAllocatePool
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ZwClose
+  - KeBugCheck
+  - MmIsAddressValid
+  - PsGetCurrentThreadTeb
+  - KeInitializeEvent
+  - KeDelayExecutionThread
+  - KeWaitForSingleObject
+  - RtlInitAnsiString
+  - MmGetSystemRoutineAddress
+  - RtlAnsiStringToUnicodeString
+  - RtlFreeUnicodeString
+  - RtlFindExportedRoutineByName
+  - RtlInitUnicodeString
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ObReferenceObjectByHandle
+  - ZwOpenFile
+  - RtlDeleteElementGenericTableAvl
+  - RtlLookupElementGenericTableAvl
+  - MmFlushImageSection
+  - ZwDeleteFile
+  - ZwQuerySystemInformation
+  - IoFileObjectType
+  - MmUserProbeAddress
+  - strcpy_s
+  - RtlPcToFileHeader
+  - RtlUnwindEx
+  - __C_specific_handler
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - ObfDereferenceObject
+  - MmMapViewInSystemSpace
+  - MmUnmapViewInSystemSpace
+  - RtlRaiseException
+  - KeAcquireInStackQueuedSpinLock
+  - KeReleaseInStackQueuedSpinLock
+  - ExInitializeNPagedLookasideList
+  - ExDeleteNPagedLookasideList
+  - RtlInitializeGenericTableAvl
+  - RtlInsertElementGenericTableAvl
+  - RtlGetElementGenericTableAvl
+  - PsGetCurrentThreadId
+  - PsGetThreadId
+  - PsGetThreadProcessId
+  - IoGetStackLimits
+  - ZwOpenSection
+  - ZwQuerySection
+  - MmSectionObjectType
+  - RtlUnwind
+  - ExReleaseResourceAndLeaveCriticalRegion
+  - RtlGetVersion
+  - ExIsProcessorFeaturePresent
+  - ExInitializeResourceLite
+  - ExEnterCriticalRegionAndAcquireResourceExclusive
+  - ExDeleteResourceLite
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2025-02-20 20:08:09'
+      ValidTo: '2026-02-18 20:08:09'
+      Signature: 65d17fbf1de2b60cfc46b9d9945a9c84c28a9bac84abe3f49280bca6ff239461c1ba338bfc578d94c884e783881036e134bfd12b52e916281b220f6d34b8ca017fd2880da3b76f90303f497eb18ceebd711083097fee149c5ed15e3b7b4d20ecccb93798c03c462f0039f11b260167512ffd103e20b7b306603f07c1f68940a7074b648a650271c2cbf1dda3e5ba29028c027373faaf255d2af35a86fe539dc5ab7134a4994d5994b4ba7f189bd428778554f9e6402ba8c2cc832bc9fc64d5f6058c2fb6c28ce11798762addd0d567d724e7727b9c3253ea7be34f357ff32c8bb91e8eb198d858118254ceed218f47e94482e8a15f7e095f98c36986f7fa06eb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000125f31cb555767340d6000000000125
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 581df130bb04487a6d19bc11b5098119
+        SHA1: 900451bd61a1199f8b4994f451af8201a1f40c7b
+        SHA256: 82efe580f6ea4f2a1f39e1f0eaf14983218c1eccbb5d7c80b421501bd4a05a90
+        SHA384: 0debca99ab93db249e18bef9f007861026c31369eacd2eed479765dc192da38c37eb02848f744df8e94ec9afe19fa0de
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 3300000125f31cb555767340d6000000000125
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
