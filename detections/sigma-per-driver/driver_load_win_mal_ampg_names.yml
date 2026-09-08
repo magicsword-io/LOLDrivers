@@ -1,0 +1,28 @@
+title: Driver Load - ampg.sys
+id: e73f9246-6b5c-51e7-bccb-4112c2281493
+status: experimental
+description: |
+    Detects loading of driver ampg.sys via name.
+    Nextron Systems identifies this exact sample as a rootkit combining network interception, obfuscated file operations, and security-product targeting. Observed and embedded filename metadata identify it as ampg.sys. Static analysis confirms WFP filtering and packet-injection paths, XOR-based file transformation, and a process-termination routine explicitly invoked for 360Tray.exe and ZhuDongFangYu.exe. Its embedded version fields claim Microsoft Corporation and SD Crashdump Port Driver; these are file metadata claims, not evidence of Microsoft authorship. No runtime test of successful security-product termination was performed.
+references:
+    - https://www.loldrivers.io/drivers/bd5bc879-6602-4338-938e-0873f71bd3d0/
+    - https://github.com/NextronSystems/iocs/blob/89038fb97602153f20dadb9ba7e9fcaeac9af148/reports/whql-signed/readme.md
+author: Michael Haag
+date: 2026/09/08
+modified: 2026/09/08
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ampg.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

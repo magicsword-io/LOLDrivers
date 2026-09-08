@@ -22,10 +22,10 @@ detection:
         Hashes|contains:
             - 'MD5=d253c19194a18030296ae62a10821640'
             - 'MD5=e700a820f117f65e813b216fccbf78c9'
-            - 'SHA1=cc51be79ae56bc97211f6b73cc905c3492da8f9d'
             - 'SHA1=2dfcb799b3c42ecb0472e27c19b24ac7532775ce'
-            - 'SHA256=61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0'
+            - 'SHA1=cc51be79ae56bc97211f6b73cc905c3492da8f9d'
             - 'SHA256=3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25'
+            - 'SHA256=61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0'
             - 'IMPHASH=531d2392dbdd314fb1d9318fe9e5c4d2'
     condition: selection_hashes
 falsepositives:

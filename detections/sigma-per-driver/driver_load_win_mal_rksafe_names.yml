@@ -1,0 +1,28 @@
+title: Driver Load - rksafe.sys
+id: bc013bb2-afb5-5bd1-b887-d5fa1037ba0e
+status: experimental
+description: |
+    Detects loading of driver rksafe.sys via name.
+    Nextron Systems identifies this rksafe sample as a rootkit with input interception, anti-debugging, minifilter callbacks, and process protection. Static analysis confirms cross-process memory read/write routines, minifilter registration with a communication port, process and thread object callbacks, and logic that clears KdDebuggerEnabled. Input interception and successful runtime protection effects were not independently tested.
+references:
+    - https://www.loldrivers.io/drivers/5cbb1918-f7ac-4de8-b334-0bb4824a516b/
+    - https://github.com/NextronSystems/iocs/blob/89038fb97602153f20dadb9ba7e9fcaeac9af148/reports/whql-signed/readme.md
+author: Michael Haag
+date: 2026/09/08
+modified: 2026/09/08
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rksafe.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

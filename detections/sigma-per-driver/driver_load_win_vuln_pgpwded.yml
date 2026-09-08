@@ -26,30 +26,30 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=ef4d6fa6679fc8dfa9d223408124c884'
             - 'MD5=99e8631183314b2bd136de34c02c7b09'
             - 'MD5=e7bc75d787e88ca7b6b3797ea8c4f376'
             - 'MD5=cf433fa0463e9fba56102bc1436ef7f3'
+            - 'MD5=ef4d6fa6679fc8dfa9d223408124c884'
+            - 'MD5=555705000dd726b10432d3bcf9e36c54'
             - 'MD5=29b98854c8dbf6f7859ec913b09fc185'
             - 'MD5=d5f0f35134135206dd1986b4c8b19794'
-            - 'MD5=555705000dd726b10432d3bcf9e36c54'
-            - 'SHA1=33caf07739768023bf156cde226bd4d0ec85e864'
-            - 'SHA1=fceae2e110919fcbb953d75d460bc55e3e4165b9'
-            - 'SHA1=8148913cb9a748b8d9d1ad5863e8075ceee6f10f'
             - 'SHA1=5c757a3f97b15fc44550c5853eefcd2cc5f90997'
             - 'SHA1=48f0e0856707e7cb82fd4e962dcac02a8625d8e0'
             - 'SHA1=1c13bc569c84a0616fad95bc65d63216e1169523'
+            - 'SHA1=fceae2e110919fcbb953d75d460bc55e3e4165b9'
+            - 'SHA1=8148913cb9a748b8d9d1ad5863e8075ceee6f10f'
+            - 'SHA1=33caf07739768023bf156cde226bd4d0ec85e864'
             - 'SHA1=72602fe173a375988b5c3d3a1bbb956fd8fe1f08'
             - 'SHA256=02579d833200abb641e476468bafd1f07d448f3d232f70cc34e2adad402b5c75'
-            - 'SHA256=90c7fe509129a8095319c3d4ce7e867f503321a1d41d23b674dcf2adfd7424fa'
             - 'SHA256=5247d4ab237e8fc486ce95d018bd92074b2a8cf1af351cd699a5b4a9355c7071'
             - 'SHA256=2bb84d2b3af3d9ee0f2dbcdfe3574a5c576bc2c7dd2a5b3dbcb7784fbc9efec6'
+            - 'SHA256=90c7fe509129a8095319c3d4ce7e867f503321a1d41d23b674dcf2adfd7424fa'
+            - 'SHA256=6dd193dd6d60f08482a85e23d3c434f540fd38488281aea0f87ec5e9a1a8e4d9'
             - 'SHA256=fab797f9e498b078dbea8c05e7ddcf157db9aa902e2f7c0e89e21c1308867f16'
             - 'SHA256=435f56a1f5bf3f89a29125b4e42396bb8d1499d20a5d4db865a35df23c41844f'
-            - 'SHA256=6dd193dd6d60f08482a85e23d3c434f540fd38488281aea0f87ec5e9a1a8e4d9'
-            - 'IMPHASH=a4359099176fcbc68e8bf3089cb9a264'
             - 'IMPHASH=e676b7c75a8af537e52df8305bcb16c7'
             - 'IMPHASH=b99820bacc2b77dc46693f68369d79c1'
+            - 'IMPHASH=a4359099176fcbc68e8bf3089cb9a264'
     condition: selection_hashes
 falsepositives:
     - Unknown

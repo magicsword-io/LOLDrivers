@@ -1,0 +1,28 @@
+title: Driver Load - MemLoaderCustomize.sys
+id: 78acf5d4-2a1f-5e2c-a670-cff3fe8d443a
+status: experimental
+description: |
+    Detects loading of driver MemLoaderCustomize.sys via name.
+    Nextron Systems identifies these samples as MemLoaderCustomize kernel PE-loader variants. Capabilities reported across the pair include kernel hooking, module hiding, and deletion; module hiding is specifically attributed to the c6825f94 sample. Static analysis confirms matching loader implementations that allocate image memory, copy PE sections, apply relocations, resolve kernel imports, and prepare mapped-image execution, together with file-deletion helpers. Both contain a MemLoaderCustomize.pdb build path. Module hiding and successful runtime self-deletion remain source-reported rather than dynamically tested.
+references:
+    - https://www.loldrivers.io/drivers/e69e3427-97cd-43bb-aeda-f1fbbeaa75f6/
+    - https://github.com/NextronSystems/iocs/blob/89038fb97602153f20dadb9ba7e9fcaeac9af148/reports/whql-signed/readme.md
+author: Michael Haag
+date: 2026/09/08
+modified: 2026/09/08
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\memloadercustomize.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

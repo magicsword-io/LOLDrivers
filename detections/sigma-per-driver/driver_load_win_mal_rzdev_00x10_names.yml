@@ -1,0 +1,28 @@
+title: Driver Load - RzDev_00X10.sys
+id: 4d925f06-b9f5-5c1d-ba42-ed17fb8674b3
+status: experimental
+description: |
+    Detects loading of driver RzDev_00X10.sys via name.
+    Nextron Systems identifies this exact sample as a kernel communication and memory-access component with a covert user-to-kernel channel and privileged memory read/write. Static analysis confirms MDL-backed kernel mappings and a transfer path that probes a caller buffer and maps supplied virtual ranges in page-sized chunks. The obfuscated transfer callback was not fully resolved; the covert channel and privileged memory read/write semantics are source-reported, not independently demonstrated. The observed RzDev_00X10.sys filename does not establish vendor ownership.
+references:
+    - https://www.loldrivers.io/drivers/adf27819-c7a0-4476-8632-5ca759202542/
+    - https://github.com/NextronSystems/iocs/blob/89038fb97602153f20dadb9ba7e9fcaeac9af148/reports/whql-signed/readme.md
+author: Michael Haag
+date: 2026/09/08
+modified: 2026/09/08
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rzdev_00x10.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium
