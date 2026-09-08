@@ -1,6 +1,7 @@
 Id: 1a0fab94-f4a7-48c2-a2f4-72d19c382642
 Tags:
 - PGPwded.sys
+- eedDiskEncryptionDriver.sys
 - Symantec Encryption Desktop
 - Symantec Endpoint Encryption
 Verified: 'TRUE'
@@ -9,17 +10,18 @@ Created: '2026-08-31'
 MitreID: T1068
 CVE:
 - CVE-2019-9702
+- CVE-2019-9703
 Category: vulnerable driver
 Commands:
   Command: sc.exe create PGPwded type= kernel binPath= C:\\windows\\temp\\PGPwded.sys
     && sc.exe start PGPwded
-  Description: PGPwded.sys in Symantec Encryption Desktop and Symantec Endpoint Encryption
-    is affected by CVE-2019-9702. The storage filter exposes raw-disk read and write
-    IOCTLs 0x8002206C and 0x80022070. Public research shows that a low-privileged
-    user can reach these operations through a trusted PGP process, overwrite sectors
-    backing protected system files, and gain SYSTEM execution after reboot. Symantec
-    Encryption Desktop is affected in all versions and Symantec Endpoint Encryption
-    is affected before 11.3.0.
+  Description: PGPwded.sys and eedDiskEncryptionDriver.sys are Symantec drive-encryption
+    filters affected by CVE-2019-9702 and CVE-2019-9703. Symantec Endpoint Encryption
+    releases before 11.3.0 and all Symantec Encryption Desktop releases are affected.
+    The tracked filters expose raw-sector read and write controls. In the 11.1.1 eedDiskEncryptionDriver
+    build, any-access IOCTLs 0x8002206C and 0x80022070 select a tracked volume and
+    read or write sectors; its protected-range logic still permits writes beginning
+    in sectors 0 through 2, leaving boot-sector modification possible.
   Usecase: Elevate privileges
   Privileges: User
   OperatingSystem: Windows
@@ -28,11 +30,12 @@ Resources:
 - https://github.com/fluffycats31/vulnerable-drivers
 - https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/0/0/symsa1485
 - https://nvd.nist.gov/vuln/detail/CVE-2019-9702
+- https://nvd.nist.gov/vuln/detail/CVE-2019-9703
 - https://github.com/DavidCarliez/CVE-2019-9702_Symantec_Encryption_Desktop_LPE_PoC
 Detection: []
 Acknowledgement:
-  Person: fluffycats31
-  Handle: '@fluffycats31'
+  Person: Kyriakos Economou, fluffycats31
+  Handle: '@kyREcon, @fluffycats31'
 KnownVulnerableSamples:
 - Filename: PGPwded.sys
   SHA256: 02579d833200abb641e476468bafd1f07d448f3d232f70cc34e2adad402b5c75
@@ -1382,4 +1385,700 @@ KnownVulnerableSamples:
     - SerialNumber: 090c3aaa41901d6ad321fddea91e1366
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
+      Version: 1
+- Filename: eedDiskEncryptionDriver.sys
+  SHA256: 435f56a1f5bf3f89a29125b4e42396bb8d1499d20a5d4db865a35df23c41844f
+  MD5: d5f0f35134135206dd1986b4c8b19794
+  SHA1: 5c757a3f97b15fc44550c5853eefcd2cc5f90997
+  Imphash: b99820bacc2b77dc46693f68369d79c1
+  Authentihash:
+    MD5: 0093d69ee026ec06fbd518dfe0984e45
+    SHA1: 6a2d6498b6300061830208a7081dedfe3a7b19f8
+    SHA256: 792f87a87cef485e0d41c43096cf36233299ef6457688bb35b1f68c42dfb9831
+  RichPEHeaderHash:
+    MD5: 922c838586773519d8094411dc598335
+    SHA1: 7f82fd611fd5461571372b61b6b016ad82ed3d4b
+    SHA256: 5f91815a137653469192eff988326ae24b75797d9a936bf3186d69a0b40ed561
+  Sections:
+    .text:
+      Entropy: 5.823136327947804
+      Virtual Size: '0x9407'
+    LOCKCODE:
+      Entropy: 5.732328915108522
+      Virtual Size: '0x500e8'
+    .rdata:
+      Entropy: 5.1752258137831495
+      Virtual Size: '0x50cc'
+    .data:
+      Entropy: 3.150635109814339
+      Virtual Size: '0xb20'
+    .pdata:
+      Entropy: 5.4402261265655305
+      Virtual Size: '0x40b0'
+    LOCKDATA:
+      Entropy: 4.058028727597734
+      Virtual Size: '0x6a1'
+    bghkprms:
+      Entropy: 0.20172878108732903
+      Virtual Size: '0x400'
+    PAGE:
+      Entropy: 6.2452625709004925
+      Virtual Size: '0x1987'
+    INIT:
+      Entropy: 5.337058847150616
+      Virtual Size: '0x1734'
+    .rsrc:
+      Entropy: 3.3555452835176753
+      Virtual Size: '0x440'
+    .reloc:
+      Entropy: 5.389634183891276
+      Virtual Size: '0x788'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2016-04-27 21:08:54'
+  Description: Disk Encryption Driver
+  Company: Symantec Corporation
+  InternalName: eedDiskEncryptionDriver.sys
+  OriginalFilename: eedDiskEncryptionDriver.sys
+  FileVersion: 11.1.1 (Build 1200)
+  Product: Client for Symantec Endpoint Encryption
+  ProductVersion: 11.1.1 (Build 1200)
+  Copyright: Copyright (C) 2016 Symantec Corporation. All rights reserved.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - PGPCE.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - ZwCreateFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwQueryVolumeInformationFile
+  - ZwDeviceIoControlFile
+  - NtCreateFile
+  - NtQueryInformationFile
+  - NtSetInformationFile
+  - NtClose
+  - ZwDeleteFile
+  - RtlTimeFieldsToTime
+  - ExSystemTimeToLocalTime
+  - RtlCompareUnicodeString
+  - wcschr
+  - RtlCheckRegistryKey
+  - ZwOpenFile
+  - KeResetEvent
+  - ExAllocatePoolWithTag
+  - ExAllocatePoolWithTagPriority
+  - ExFreePoolWithTag
+  - ObReferenceObjectByPointer
+  - RtlEqualUnicodeString
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - MmBuildMdlForNonPagedPool
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - IoAllocateMdl
+  - PsSetLoadImageNotifyRoutine
+  - ExInterlockedInsertTailList
+  - ExInterlockedRemoveHeadList
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItem
+  - KeInitializeDpc
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - ExQueueWorkItem
+  - ExCreateCallback
+  - ExRegisterCallback
+  - ZwPowerInformation
+  - RtlInitAnsiString
+  - RtlDeleteRegistryValue
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlGetVersion
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - ObReferenceObjectByHandle
+  - ObfReferenceObject
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwDeleteValueKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - ObOpenObjectByPointer
+  - ObQueryNameString
+  - IoGetDeviceProperty
+  - KeClearEvent
+  - KeReadStateEvent
+  - IoInitializeRemoveLockEx
+  - ZwQueryInformationFile
+  - InitSafeBootMode
+  - _wcsicmp
+  - ExAllocatePoolWithQuotaTag
+  - KeReleaseSemaphore
+  - MmGetSystemRoutineAddress
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoGetCurrentProcess
+  - IoRegisterShutdownNotification
+  - ZwOpenSymbolicLinkObject
+  - ZwQuerySymbolicLinkObject
+  - ExEventObjectType
+  - MmMapLockedPagesSpecifyCache
+  - KeInitializeSemaphore
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - ExInitializeResourceLite
+  - ExAcquireResourceSharedLite
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ExDeleteResourceLite
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - MmUnlockPages
+  - MmUnmapLockedPages
+  - IoBuildAsynchronousFsdRequest
+  - IoFreeIrp
+  - IoFreeMdl
+  - ObOpenObjectByName
+  - ExSemaphoreObjectType
+  - IoAttachDeviceToDeviceStack
+  - IoDetachDevice
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoReleaseRemoveLockAndWaitEx
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - VerSetConditionMask
+  - RtlVerifyVersionInfo
+  - KeQueryActiveProcessors
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - RtlAbsoluteToSelfRelativeSD
+  - IoIsWdmVersionAvailable
+  - SeExports
+  - _wcsnicmp
+  - RtlLengthSid
+  - RtlAddAccessAllowedAce
+  - RtlGetSaclSecurityDescriptor
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlFreeUnicodeString
+  - wcsstr
+  - __C_specific_handler
+  - ZwCreateEvent
+  - ZwClose
+  - NtBuildNumber
+  - RtlAreBitsSet
+  - RtlAreBitsClear
+  - RtlSetBits
+  - RtlClearBits
+  - RtlInitializeBitMap
+  - DbgPrint
+  - KeWaitForSingleObject
+  - KeSetEvent
+  - KeInitializeEvent
+  - strcmp
+  - NtFsControlFile
+  - ExDeleteNPagedLookasideList
+  - ExInitializeNPagedLookasideList
+  - ExpInterlockedPushEntrySList
+  - KeBugCheckEx
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - IoAllocateIrp
+  - RtlUpcaseUnicodeString
+  - ExpInterlockedPopEntrySList
+  - ExQueryDepthSList
+  - _purecall
+  - _vsnwprintf
+  - _vsnprintf
+  - wcslen
+  - IoBuildSynchronousFsdRequest
+  - strlen
+  - PGPceUnpack
+  - PGPceGetDerivedKey
+  - PGPceNewKDF
+  - PGPcePeekContextMemoryMgr
+  - PGPceFreeData
+  - PGPceNewData
+  - PGPceNewMemoryMgrExternalP2
+  - PGPceDiskBlockEncryptionDecrypt
+  - PGPceDiskBlockEncryptionEncrypt
+  - PGPceInitDiskBlockEncryption
+  - PGPceNewDiskBlockEncryptionContext
+  - PGPceGetSymmetricCipherSizes
+  - PGPceSymmetricCipherDecrypt
+  - PGPceSymmetricCipherEncrypt
+  - PGPceInitSymmetricCipher
+  - PGPceNewSymmetricCipherContext
+  - PGPceGetSDKErrorState
+  - PGPceFinalizeHash
+  - PGPceContinueHash
+  - PGPceNewHashContext
+  - PGPceFreeObject
+  - PGPceFreeContext
+  - PGPceNewContext
+  - PGPceFreeMemoryMgr
+  - PGPceNewMemoryMgrExternal
+  - PGPcePack
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=Mountain View, O=Symantec Corporation, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=Symantec Corporation
+      ValidFrom: '2013-08-08 00:00:00'
+      ValidTo: '2016-11-06 23:59:59'
+      Signature: 4f98f0c2944dc1718f98e860924987d1428e5d8d9e88733eee6ccef0014655e860f461c8430efbd33dd69448a0a1f0489a79c27bf11415e945fc0ed346dfd59ea1a63ab1044efc2c130d3f8fe80da8dde7d4ca30e66a0f5c9703db2043afc4924f14b508e686148782d01c84bf538a36f722381e73ab806015af06d747857bf8bb52c014b2ab84a03981bee6a213609c0bfeece2b9ac22b1fe008a43480eba170cb6dbcb2ca4644c0630ccb6fa147ff0ed5dccd1b04a5d09e07a3dde2348e766a71009469da06c09f0a0943183e755e3bf8a0d9b9e7c180c84d28299ac7e7ed5307bbfde7704276e0f62c82c96bd4599c9a1c47db0cfa6b4bf43b61759eb54aa
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 20b44682a0de2a8026a1c3d781e63fc0
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: de8691740d00b889e29007e596f2ac08
+        SHA1: 932d2606a168b39b42094c75453b30dcad60af83
+        SHA256: 35b4c2f8a8402febb1e6864f1365ec623dd08fcfc9731d2c30889d962531ef67
+        SHA384: f97582d5131a78d477523117261c4e00ef957c064b7de587f295d9429b1ebca950ec2b59a82d16df5ef2f3b6b46c5dde
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 20b44682a0de2a8026a1c3d781e63fc0
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+- Filename: eedDiskEncryptionDriver.sys
+  SHA256: fab797f9e498b078dbea8c05e7ddcf157db9aa902e2f7c0e89e21c1308867f16
+  MD5: 29b98854c8dbf6f7859ec913b09fc185
+  SHA1: fceae2e110919fcbb953d75d460bc55e3e4165b9
+  Imphash: b99820bacc2b77dc46693f68369d79c1
+  Authentihash:
+    MD5: 511fecad28c220398c026a5730c9571b
+    SHA1: f5bc1f93fb491cf96608959bdfd48d9d4d8319ac
+    SHA256: c60e5c41c65ea34c8cda7eac06018fd33feb2b43d5b283275e87f161fd259fea
+  RichPEHeaderHash:
+    MD5: 922c838586773519d8094411dc598335
+    SHA1: 7f82fd611fd5461571372b61b6b016ad82ed3d4b
+    SHA256: 5f91815a137653469192eff988326ae24b75797d9a936bf3186d69a0b40ed561
+  Sections:
+    .text:
+      Entropy: 5.818322841154296
+      Virtual Size: '0x9487'
+    LOCKCODE:
+      Entropy: 5.731063748461246
+      Virtual Size: '0x50208'
+    .rdata:
+      Entropy: 5.166730885664501
+      Virtual Size: '0x5128'
+    .data:
+      Entropy: 3.23675925338182
+      Virtual Size: '0xb60'
+    .pdata:
+      Entropy: 5.475660249021004
+      Virtual Size: '0x40b0'
+    LOCKDATA:
+      Entropy: 4.035801552534526
+      Virtual Size: '0x6a1'
+    bghkprms:
+      Entropy: 0.20172878108732903
+      Virtual Size: '0x400'
+    PAGE:
+      Entropy: 6.245907845559353
+      Virtual Size: '0x1987'
+    INIT:
+      Entropy: 5.336420188016948
+      Virtual Size: '0x1734'
+    .rsrc:
+      Entropy: 3.3703494347525456
+      Virtual Size: '0x440'
+    .reloc:
+      Entropy: 5.387868726017709
+      Virtual Size: '0x790'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2017-06-20 13:34:09'
+  Description: Disk Encryption Driver
+  Company: Symantec Corporation
+  InternalName: eedDiskEncryptionDriver.sys
+  OriginalFilename: eedDiskEncryptionDriver.sys
+  FileVersion: 11.1.3 (Build 554)
+  Product: Client for Symantec Endpoint Encryption
+  ProductVersion: 11.1.3 (Build 554)
+  Copyright: Copyright (C) 2017 Symantec Corporation. All rights reserved.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - PGPCE.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - ZwCreateFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwQueryVolumeInformationFile
+  - ZwDeviceIoControlFile
+  - NtCreateFile
+  - NtQueryInformationFile
+  - NtSetInformationFile
+  - NtClose
+  - ZwDeleteFile
+  - RtlTimeFieldsToTime
+  - ExSystemTimeToLocalTime
+  - RtlCompareUnicodeString
+  - wcschr
+  - RtlCheckRegistryKey
+  - ZwOpenFile
+  - KeResetEvent
+  - ExAllocatePoolWithTag
+  - ExAllocatePoolWithTagPriority
+  - ExFreePoolWithTag
+  - ObReferenceObjectByPointer
+  - RtlEqualUnicodeString
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - MmBuildMdlForNonPagedPool
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - IoAllocateMdl
+  - PsSetLoadImageNotifyRoutine
+  - ExInterlockedInsertTailList
+  - ExInterlockedRemoveHeadList
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItem
+  - KeInitializeDpc
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - ExQueueWorkItem
+  - ExCreateCallback
+  - ExRegisterCallback
+  - ZwPowerInformation
+  - RtlInitAnsiString
+  - RtlDeleteRegistryValue
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlGetVersion
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - ObReferenceObjectByHandle
+  - ObfReferenceObject
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwDeleteValueKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - ObOpenObjectByPointer
+  - ObQueryNameString
+  - IoGetDeviceProperty
+  - KeClearEvent
+  - KeReadStateEvent
+  - IoInitializeRemoveLockEx
+  - ZwQueryInformationFile
+  - InitSafeBootMode
+  - _wcsicmp
+  - ExAllocatePoolWithQuotaTag
+  - KeReleaseSemaphore
+  - MmGetSystemRoutineAddress
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoGetCurrentProcess
+  - IoRegisterShutdownNotification
+  - ZwOpenSymbolicLinkObject
+  - ZwQuerySymbolicLinkObject
+  - ExEventObjectType
+  - MmMapLockedPagesSpecifyCache
+  - KeInitializeSemaphore
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - ExInitializeResourceLite
+  - ExAcquireResourceSharedLite
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ExDeleteResourceLite
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - MmUnlockPages
+  - MmUnmapLockedPages
+  - IoBuildAsynchronousFsdRequest
+  - IoFreeIrp
+  - IoFreeMdl
+  - ObOpenObjectByName
+  - ExSemaphoreObjectType
+  - IoAttachDeviceToDeviceStack
+  - IoDetachDevice
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoReleaseRemoveLockAndWaitEx
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - VerSetConditionMask
+  - RtlVerifyVersionInfo
+  - KeQueryActiveProcessors
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - RtlAbsoluteToSelfRelativeSD
+  - IoIsWdmVersionAvailable
+  - SeExports
+  - _wcsnicmp
+  - RtlLengthSid
+  - RtlAddAccessAllowedAce
+  - RtlGetSaclSecurityDescriptor
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlFreeUnicodeString
+  - wcsstr
+  - __C_specific_handler
+  - ZwCreateEvent
+  - ZwClose
+  - NtBuildNumber
+  - RtlAreBitsSet
+  - RtlAreBitsClear
+  - RtlSetBits
+  - RtlClearBits
+  - RtlInitializeBitMap
+  - DbgPrint
+  - KeWaitForSingleObject
+  - KeSetEvent
+  - KeInitializeEvent
+  - strcmp
+  - NtFsControlFile
+  - ExDeleteNPagedLookasideList
+  - ExInitializeNPagedLookasideList
+  - ExpInterlockedPushEntrySList
+  - KeBugCheckEx
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - IoAllocateIrp
+  - RtlUpcaseUnicodeString
+  - ExpInterlockedPopEntrySList
+  - ExQueryDepthSList
+  - _purecall
+  - _vsnwprintf
+  - _vsnprintf
+  - wcslen
+  - IoBuildSynchronousFsdRequest
+  - strlen
+  - PGPceUnpack
+  - PGPceGetDerivedKey
+  - PGPceNewKDF
+  - PGPcePeekContextMemoryMgr
+  - PGPceFreeData
+  - PGPceNewData
+  - PGPceNewMemoryMgrExternalP2
+  - PGPceDiskBlockEncryptionDecrypt
+  - PGPceDiskBlockEncryptionEncrypt
+  - PGPceInitDiskBlockEncryption
+  - PGPceNewDiskBlockEncryptionContext
+  - PGPceGetSymmetricCipherSizes
+  - PGPceSymmetricCipherDecrypt
+  - PGPceSymmetricCipherEncrypt
+  - PGPceInitSymmetricCipher
+  - PGPceNewSymmetricCipherContext
+  - PGPceGetSDKErrorState
+  - PGPceFinalizeHash
+  - PGPceContinueHash
+  - PGPceNewHashContext
+  - PGPceFreeObject
+  - PGPceFreeContext
+  - PGPceNewContext
+  - PGPceFreeMemoryMgr
+  - PGPceNewMemoryMgrExternal
+  - PGPcePack
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, ST=California, L=San Francisco, O=Symantec Corporation, OU=DATA
+        LOSS PREVENTION, CN=Symantec Corporation
+      ValidFrom: '2016-10-18 00:00:00'
+      ValidTo: '2018-01-01 23:59:59'
+      Signature: ad012225094fdb9c9350d249bc3ea97801503eaf00316a887a3d71aec777c7ba620dfc45cfe2362232f1f63c56c3de93b173fcbf4e66e446be32bf2cd95559516278e9cd63f033b721ece440ca556ac7506db206e4dd7b3b86f8f327566c21fc6e2b2f6401891711aaa97e23935adcced32dce9113051434a56e1e5f45d1cf65c7f3c95c6c0a5b0699af73dbb58d9f1d186a2c747fcc71c6031e8fe564cbab54ce2b312b9c6689a83c19ebad25b17e3c885b485721f5d822c00103635fe6b2984e04bc714796715e2bb572cd8c655a804b059fbfb83bb9cf025ac76061ec4d36ce34be1b8b41690b83c9796f7becdaf709090dfd6f6f47451c3c9f1109dd46ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0f2d17e62e571f288acb5666fd3c5230
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: bf3e672d7cdd9596fe28d02c40aaa83b
+        SHA1: 5c1ccf094c7e4627d5a60c368a134416cea1d2fd
+        SHA256: 63eadd5ecf45a5e861c4e62f0e4c7dad04dde0ff2a2a9ef05daa43d517d421ad
+        SHA384: 03c9bcf64c6d61f82f92ef94b9970dbe2a42de0d2ed818117ad0f30bc02e46e9d743f3c796448ee3e24108397fe94ce5
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 0f2d17e62e571f288acb5666fd3c5230
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
       Version: 1

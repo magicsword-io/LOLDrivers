@@ -12,15 +12,13 @@ Commands:
   Command: sc.exe create LnvMSRIO binPath=C:\windows\temp\LnvMSRIO.sys type=kernel
     && sc.exe start LnvMSRIO
   Description: LnvMSRIO.sys is a Lenovo Dispatcher driver affected by CVE-2025-8061.
-    Vulnerable Lenovo Dispatcher 3.0 and 3.1 drivers expose the WinMsrDev device interface
-    with insufficient access control. Public research documents primitives for physical
-    memory read (IOCTL 0x9C406104), physical memory write (IOCTL 0x9C40A108), MSR
-    read (IOCTL 0x9C402084), and MSR write (IOCTL 0x9C402088), enabling an authenticated
-    local user to execute code with elevated privileges when Memory Integrity is not
-    enabled. Lenovo reports Dispatcher 3.2 and driver versions 3.1.0.41 and later
-    as not affected.
+    The tracked 3.0.2.28 through 3.1.0.36 builds predate Lenovo's fixed 3.1.0.41 driver.
+    The WinMsrDev interface exposes physical-memory read and write through IOCTLs
+    0x9C406104 and 0x9C40A108 and MSR read and write through 0x9C402084 and 0x9C402088,
+    allowing an authenticated local user to execute code with elevated privileges
+    when Memory Integrity is not enabled.
   Usecase: Elevate privileges
-  Privileges: kernel
+  Privileges: User
   OperatingSystem: Windows 10, Windows 11
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/409
@@ -34,8 +32,8 @@ Resources:
 - https://github.com/spawn451/CVE-2025-8061-Exploit
 Detection: []
 Acknowledgement:
-  Person: nasbench
-  Handle: '@nasbench'
+  Person: nasbench, fluffycats31
+  Handle: '@nasbench, @fluffycats31'
 KnownVulnerableSamples:
 - Filename: LnvMSRIO.sys
   SHA256: 977d3b78bdf5723430e2e21cf1eb515a2335a0e370c76fa2dda4315ba062f429
@@ -483,6 +481,916 @@ KnownVulnerableSamples:
         SHA384: 77ba85f1144431f2e8e3b7ee1d586bcd497212a3b157b01df228f55e876791dc849d0a77e90ef6fa40a071eeff097658
     Signer:
     - SerialNumber: 07ea0db629e58978271f50224ec6a2d9
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: LnvMSRIO.sys
+  SHA256: 072ca56c765c937358d3e79c9ecd803c40283a0c32fc4c78e08ea1709d7a832f
+  MD5: d60fcf12d1c9a95f2033173c06c2083d
+  SHA1: 9d5410a6033c7b3a13c5776ab3ff8160c17bbf20
+  Imphash: 3b2a2be6141c8dd9d480fe7ab5ede02b
+  Authentihash:
+    MD5: 73d16ca31daf80e98727c70566922f64
+    SHA1: 3c202f71a39adcd6c32a1037fc65cbf04b6dc129
+    SHA256: cf59e0a6588061ca6851ca766d582c9f6d2138d561d67d265cd6bcdafc99449c
+  RichPEHeaderHash:
+    MD5: 7ecaee1ce6d3fba220bef21fa8e7b894
+    SHA1: ed56e4faab57a9fc79e892500dbc7259241deef3
+    SHA256: 7a755e2684301aad387876047c940375c8a2f9b4eadf2c9d63da36a8fcaec8de
+  Sections:
+    .text:
+      Entropy: 5.851536093765056
+      Virtual Size: '0x25cd'
+    .rdata:
+      Entropy: 4.429974971681147
+      Virtual Size: '0xb9c'
+    .data:
+      Entropy: 0.6046349582600534
+      Virtual Size: '0x308'
+    .pdata:
+      Entropy: 3.9875414241713316
+      Virtual Size: '0x240'
+    INIT:
+      Entropy: 4.740180933756797
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.27184307185125
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.601989420472558
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-03-26 05:24:33'
+  Description: Lenovo filter driver
+  Company: Lenovo
+  InternalName: LnvMSRIO.sys
+  OriginalFilename: LnvMSRIO.sys
+  FileVersion: 3.0.2.60
+  Product: Lenovo filter driver
+  ProductVersion: 3, 0, 2, 60
+  Copyright: Copyright (C) 2022, Lenovo. All Rights Reserved
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltSendMessage
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - PoRegisterPowerSettingCallback
+  - PoUnregisterPowerSettingCallback
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwPowerInformation
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ProbeForWrite
+  - ProbeForRead
+  - ExFreePoolWithTag
+  - ExAllocatePool2
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - WdfVersionBind
+  - WdfLdrQueryInterface
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G11, CN=Lenovo
+      ValidFrom: '2023-05-25 00:00:00'
+      ValidTo: '2024-05-24 23:59:59'
+      Signature: 78fd94096ee1363d53c2df0350cf61b1239b0773407f61ca82098087e5f9cc2ece38a7b9d8e4a68ed334a4da8abb7951add48a4ec781870eaec07510eb3b9590579060d00eff70e06747173412cdca57db7e17e3bb2635a7c17cf14dbc4dfc77fffde1a179b973c305db95e4c0f223b55cc415ea760ccbdcd1fbff3cfdee5a615be485133ceb85e25e6de7bb436d47e44c1c10456f0a5c3d8aa606d52f4996dba43310a21cb2544e3413283a56c5cbd4016ddf152619256758ca0a3aba46da5a9de078b2f4a3658ea000738483ccddf67ea74769b0ae041f34d9ca71a57e9f1acae7934b7318db367a0351e24624ebfd63e9f60197abef5814ff53f764e62434c62a47ca1b9748eb08d42f74d13679265a18a91f375de9dba0cdfab1db130ad2bef53ea52c5ad5a996f1145c3040dca7f2687559491bf17b5ffca59d28ecb228ffbd72916781a9d65738d9aca2b87a5b10f36736d2f6a18705529cb81eefa4550b875e135ace1d42c377c7b9fc76da29dd849034c8566c5859c831511639847f4132ec5b43c013cd0f3b7438c3bdd3f8ea75da750c73a5d90daf443b2d1b3ebd2311e9aee4e52d30072888477c06847db40d55c0f94e097e2004440fb70e4caea9b9b4e2f86964f681751747474977d3bff096186dfea8e1783bffc26e480e5ccd0b4d8f0dd27c5f6665c2970c21665190a0aa23159cce27a444be114b7dd5df
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0f1b5575dca88493964e207f27711085
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e1e032346eb86692663f47e6ed01e573
+        SHA1: 594e3b5564bcc009a61e04375b51a8bbaa2b4f6d
+        SHA256: a2c2e2432bdc2704f458aa3cf433f4dcd3919c3fb2bf23094a16b6407b1ecbae
+        SHA384: ccc2c0cf099b0287a79522a4f0ba96dca848a68cc0b4232a67e7a6ae58f938ac78d54c2b36a6ade41466723cb3bf0c09
+    Signer:
+    - SerialNumber: 0f1b5575dca88493964e207f27711085
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: LnvMSRIO.sys
+  SHA256: 348e7fc97dd20b3db056e3971020da107aa6e82d99be9f04c2d2170f8f39cd58
+  MD5: 41b61cad40d1593fae3a9b61257c55b0
+  SHA1: 2511d969c12d56b5d84413af07514d9a0e33c9b9
+  Imphash: 3b2a2be6141c8dd9d480fe7ab5ede02b
+  Authentihash:
+    MD5: 3578b299945dc29364a7360079abf367
+    SHA1: f76d6349f0f0caf98e5c317c25d637aa0a54da29
+    SHA256: bee39425ef2cdda84634519f0b5ed8fd509d62ba88e4484ccd436f2b4b5aef7b
+  RichPEHeaderHash:
+    MD5: 956bfec9342c19ff2cf9f1cb20787bd8
+    SHA1: 2714b369011de84e8a1895a14f99d5f277c617fe
+    SHA256: f163346df5389eeeaf1c7c13e1077f4e82217d552b1ad2662f7caca8a877c021
+  Sections:
+    .text:
+      Entropy: 5.85187473398755
+      Virtual Size: '0x25cd'
+    .rdata:
+      Entropy: 4.434824200108864
+      Virtual Size: '0xba4'
+    .data:
+      Entropy: 0.6046349582600534
+      Virtual Size: '0x308'
+    .pdata:
+      Entropy: 3.9697795786387715
+      Virtual Size: '0x240'
+    INIT:
+      Entropy: 4.738959355178401
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.270221103953194
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.601989420472558
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-01-25 19:46:26'
+  Description: Lenovo filter driver
+  Company: Lenovo
+  InternalName: LnvMSRIO.sys
+  OriginalFilename: LnvMSRIO.sys
+  FileVersion: 3.0.2.46
+  Product: Lenovo filter driver
+  ProductVersion: 3, 0, 2, 46
+  Copyright: Copyright (C) 2022, Lenovo. All Rights Reserved
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltSendMessage
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - PoRegisterPowerSettingCallback
+  - PoUnregisterPowerSettingCallback
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwPowerInformation
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ProbeForWrite
+  - ProbeForRead
+  - ExFreePoolWithTag
+  - ExAllocatePool2
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - WdfVersionBind
+  - WdfLdrQueryInterface
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G11, CN=Lenovo
+      ValidFrom: '2023-05-25 00:00:00'
+      ValidTo: '2024-05-24 23:59:59'
+      Signature: 78fd94096ee1363d53c2df0350cf61b1239b0773407f61ca82098087e5f9cc2ece38a7b9d8e4a68ed334a4da8abb7951add48a4ec781870eaec07510eb3b9590579060d00eff70e06747173412cdca57db7e17e3bb2635a7c17cf14dbc4dfc77fffde1a179b973c305db95e4c0f223b55cc415ea760ccbdcd1fbff3cfdee5a615be485133ceb85e25e6de7bb436d47e44c1c10456f0a5c3d8aa606d52f4996dba43310a21cb2544e3413283a56c5cbd4016ddf152619256758ca0a3aba46da5a9de078b2f4a3658ea000738483ccddf67ea74769b0ae041f34d9ca71a57e9f1acae7934b7318db367a0351e24624ebfd63e9f60197abef5814ff53f764e62434c62a47ca1b9748eb08d42f74d13679265a18a91f375de9dba0cdfab1db130ad2bef53ea52c5ad5a996f1145c3040dca7f2687559491bf17b5ffca59d28ecb228ffbd72916781a9d65738d9aca2b87a5b10f36736d2f6a18705529cb81eefa4550b875e135ace1d42c377c7b9fc76da29dd849034c8566c5859c831511639847f4132ec5b43c013cd0f3b7438c3bdd3f8ea75da750c73a5d90daf443b2d1b3ebd2311e9aee4e52d30072888477c06847db40d55c0f94e097e2004440fb70e4caea9b9b4e2f86964f681751747474977d3bff096186dfea8e1783bffc26e480e5ccd0b4d8f0dd27c5f6665c2970c21665190a0aa23159cce27a444be114b7dd5df
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0f1b5575dca88493964e207f27711085
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e1e032346eb86692663f47e6ed01e573
+        SHA1: 594e3b5564bcc009a61e04375b51a8bbaa2b4f6d
+        SHA256: a2c2e2432bdc2704f458aa3cf433f4dcd3919c3fb2bf23094a16b6407b1ecbae
+        SHA384: ccc2c0cf099b0287a79522a4f0ba96dca848a68cc0b4232a67e7a6ae58f938ac78d54c2b36a6ade41466723cb3bf0c09
+    Signer:
+    - SerialNumber: 0f1b5575dca88493964e207f27711085
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: LnvMSRIO.sys
+  SHA256: 358b54bdda20c7459d29857fb815548c00751ef486eed90e3f2e835b0bb42cc4
+  MD5: 48c61e32e034b15c5bbae481d7559272
+  SHA1: 0284be084b250a01fc01fdc8d3158ea055ee3bdf
+  Imphash: 3b2a2be6141c8dd9d480fe7ab5ede02b
+  Authentihash:
+    MD5: 1fc72d1b5cf27bfd8028efec7309199c
+    SHA1: f353f74dcb91f6ca58f09df76977b6f2781b1d8b
+    SHA256: 51a3ab7dd44be6daba53b64c3688b5c1c94c9e2ce1065184fe16cac0d97a0fdc
+  RichPEHeaderHash:
+    MD5: b6720e9a5db0b2dbe7ffe7ffe1c70690
+    SHA1: a569dbd46682699b8517b83db3e12b1bc2f35bb4
+    SHA256: be868093b2ce55a626834a1e15355c2c0df84f01e24993a4c8456afbd2306d1e
+  Sections:
+    .text:
+      Entropy: 5.680717358336819
+      Virtual Size: '0x1fbd'
+    .rdata:
+      Entropy: 4.411003185039879
+      Virtual Size: '0xb64'
+    .data:
+      Entropy: 0.5764104409330786
+      Virtual Size: '0x2f8'
+    .pdata:
+      Entropy: 3.9098962147044154
+      Virtual Size: '0x1f8'
+    INIT:
+      Entropy: 4.760991790681107
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.2725904712036566
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.6404509589340965
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-10-29 20:24:30'
+  Description: Lenovo filter driver
+  Company: Lenovo
+  InternalName: LnvMSRIO.sys
+  OriginalFilename: LnvMSRIO.sys
+  FileVersion: 3.0.2.28
+  Product: Lenovo filter driver
+  ProductVersion: 3, 0, 2, 28
+  Copyright: Copyright (C) 2022, Lenovo. All Rights Reserved
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltSendMessage
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - PoRegisterPowerSettingCallback
+  - PoUnregisterPowerSettingCallback
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwPowerInformation
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ProbeForWrite
+  - ProbeForRead
+  - ExFreePoolWithTag
+  - ExAllocatePool2
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - WdfVersionBind
+  - WdfLdrQueryInterface
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G11, CN=Lenovo
+      ValidFrom: '2022-12-06 00:00:00'
+      ValidTo: '2023-12-16 23:59:59'
+      Signature: 5bf6a0075d923adb843acdb924e5ef05545808e29402291892f7b30d0376495e955fb4c3e64cbd05bbccf0bc7c32f378cd0c7987f7417ff4c18309c128e831909369240d349bb62192da9e2cffaf35cdeaf5af83a2031ce7a810db0d94af915a6ff9fd04b52af6efd9894820c0eda967998c37bf301faa7781775de988ac463b3df18fcc5326223002896a27ad864ca75c2359510b276c8a44faf89d07b6bc933a3ed9c7420579b700d9d1b562cff7480a80a9d32f4b55d12f0b9d8ba0e1bd79b1170ef309ce149ebca7bc837256d4191bc57510e1ceef92ab76d80649a98b47082f36b997eefc07195ec3c619a2da28b23b5a5120db22bba31719160e72ccb3113df88de7810a1a5d29a1e0edf312eed61c197232e1ba2cefb1a2614ed2f7d04526615e2c0d644e175500d6e9c7fef412633f9e7ffb3ae3557f2fe98d5ebe92729fecf6a558dd6097012742c0e411a698efd158b886e2ccf1264ac21015e355e6aae0142badbca78a3ff3177a3376361479cbd39118198cbe468d2af7f0f87464ad412215cb29fcc3acaf4d42752f535ac08eb223856b1b70aa1533a3396c69351e0b32f4df69dc849a4e0d244ac812ca33a6c8f40ab25c9ef9dab711d982470df9435858effaa2f393b4c490cf9493449a25b6702b1d03432e33ef5ab017fe3bdf21f0fe2d392ecdb00c012ab4412b18886d542eaf3ea8b677fca03d5704ea
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0b8688de54be04aee8fe8378c15f9690
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: a91917240e17db90af5cf7d69920d835
+        SHA1: 01844787225f9ea2905b1c4696fe73528ab14e3f
+        SHA256: 72d1c774c061fc8867102cf628b55e6eb9985218679c99ea4da8616cabd8559b
+        SHA384: cf008bbcd740de4e5bf2dfafcfcde81cd400e9a63d1da80fb50939ea38475783b35534608e3d1b99c0d0ba521176a927
+    Signer:
+    - SerialNumber: 0b8688de54be04aee8fe8378c15f9690
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: LnvMSRIO.sys
+  SHA256: 9eee4b43ee454fae44e661265de3025561a59060e8969aaeecce79784794ca4d
+  MD5: 936835d0e5e7c0273c06bf2cdcaaa0e9
+  SHA1: 269cc0f1c5222d5147af0dd77102699cbcb5699d
+  Imphash: 3b2a2be6141c8dd9d480fe7ab5ede02b
+  Authentihash:
+    MD5: 61435a86b2a1051ceebdbc0ae367fc68
+    SHA1: 9fd899318967abfd5fc29cb67b7c0fa7d30ab8bc
+    SHA256: 2da75d8894499204c6cbec258fb1a37668bd80d9007253c2c2fa8599a11d9631
+  RichPEHeaderHash:
+    MD5: 7ecaee1ce6d3fba220bef21fa8e7b894
+    SHA1: ed56e4faab57a9fc79e892500dbc7259241deef3
+    SHA256: 7a755e2684301aad387876047c940375c8a2f9b4eadf2c9d63da36a8fcaec8de
+  Sections:
+    .text:
+      Entropy: 5.851536093765056
+      Virtual Size: '0x25cd'
+    .rdata:
+      Entropy: 4.43762744016443
+      Virtual Size: '0xb9c'
+    .data:
+      Entropy: 0.6046349582600534
+      Virtual Size: '0x308'
+    .pdata:
+      Entropy: 3.9875414241713316
+      Virtual Size: '0x240'
+    INIT:
+      Entropy: 4.740180933756797
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.2676741683986723
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.601989420472558
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-05-19 23:10:19'
+  Description: Lenovo filter driver
+  Company: Lenovo
+  InternalName: LnvMSRIO.sys
+  OriginalFilename: LnvMSRIO.sys
+  FileVersion: 3.0.2.70
+  Product: Lenovo filter driver
+  ProductVersion: 3, 0, 2, 70
+  Copyright: Copyright (C) 2022, Lenovo. All Rights Reserved
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltSendMessage
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - PoRegisterPowerSettingCallback
+  - PoUnregisterPowerSettingCallback
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwPowerInformation
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ProbeForWrite
+  - ProbeForRead
+  - ExFreePoolWithTag
+  - ExAllocatePool2
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - WdfVersionBind
+  - WdfLdrQueryInterface
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G11, CN=Lenovo
+      ValidFrom: '2023-05-25 00:00:00'
+      ValidTo: '2024-05-24 23:59:59'
+      Signature: 78fd94096ee1363d53c2df0350cf61b1239b0773407f61ca82098087e5f9cc2ece38a7b9d8e4a68ed334a4da8abb7951add48a4ec781870eaec07510eb3b9590579060d00eff70e06747173412cdca57db7e17e3bb2635a7c17cf14dbc4dfc77fffde1a179b973c305db95e4c0f223b55cc415ea760ccbdcd1fbff3cfdee5a615be485133ceb85e25e6de7bb436d47e44c1c10456f0a5c3d8aa606d52f4996dba43310a21cb2544e3413283a56c5cbd4016ddf152619256758ca0a3aba46da5a9de078b2f4a3658ea000738483ccddf67ea74769b0ae041f34d9ca71a57e9f1acae7934b7318db367a0351e24624ebfd63e9f60197abef5814ff53f764e62434c62a47ca1b9748eb08d42f74d13679265a18a91f375de9dba0cdfab1db130ad2bef53ea52c5ad5a996f1145c3040dca7f2687559491bf17b5ffca59d28ecb228ffbd72916781a9d65738d9aca2b87a5b10f36736d2f6a18705529cb81eefa4550b875e135ace1d42c377c7b9fc76da29dd849034c8566c5859c831511639847f4132ec5b43c013cd0f3b7438c3bdd3f8ea75da750c73a5d90daf443b2d1b3ebd2311e9aee4e52d30072888477c06847db40d55c0f94e097e2004440fb70e4caea9b9b4e2f86964f681751747474977d3bff096186dfea8e1783bffc26e480e5ccd0b4d8f0dd27c5f6665c2970c21665190a0aa23159cce27a444be114b7dd5df
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0f1b5575dca88493964e207f27711085
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e1e032346eb86692663f47e6ed01e573
+        SHA1: 594e3b5564bcc009a61e04375b51a8bbaa2b4f6d
+        SHA256: a2c2e2432bdc2704f458aa3cf433f4dcd3919c3fb2bf23094a16b6407b1ecbae
+        SHA384: ccc2c0cf099b0287a79522a4f0ba96dca848a68cc0b4232a67e7a6ae58f938ac78d54c2b36a6ade41466723cb3bf0c09
+    Signer:
+    - SerialNumber: 0f1b5575dca88493964e207f27711085
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: LnvMSRIO.sys
+  SHA256: b529b658315577e49b9432ec046263a7feca2d3440aea295937350bc974098c4
+  MD5: 1a2093b0ca0537ecba6d2c83f2d0e6b7
+  SHA1: 0f2b82c1ce7c82a542d8d781d596bfaaac9b219a
+  Imphash: 3b2a2be6141c8dd9d480fe7ab5ede02b
+  Authentihash:
+    MD5: 0eabdf928219d2fc5f0fc2a666b12a78
+    SHA1: 5762d45f34906d1a357d9cbcc9011229721bf660
+    SHA256: ece308c404c03159df71524bcdf1cc2c8746aa41a773e3584d8fa9ff21d8b763
+  RichPEHeaderHash:
+    MD5: 956bfec9342c19ff2cf9f1cb20787bd8
+    SHA1: 2714b369011de84e8a1895a14f99d5f277c617fe
+    SHA256: f163346df5389eeeaf1c7c13e1077f4e82217d552b1ad2662f7caca8a877c021
+  Sections:
+    .text:
+      Entropy: 5.85187473398755
+      Virtual Size: '0x25cd'
+    .rdata:
+      Entropy: 4.438375016578006
+      Virtual Size: '0xba4'
+    .data:
+      Entropy: 0.6046349582600534
+      Virtual Size: '0x308'
+    .pdata:
+      Entropy: 3.9697795786387715
+      Virtual Size: '0x240'
+    INIT:
+      Entropy: 4.738959355178401
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.2734329795766066
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.601989420472558
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-11-21 23:05:07'
+  Description: Lenovo filter driver
+  Company: Lenovo
+  InternalName: LnvMSRIO.sys
+  OriginalFilename: LnvMSRIO.sys
+  FileVersion: 3.0.2.34
+  Product: Lenovo filter driver
+  ProductVersion: 3, 0, 2, 34
+  Copyright: Copyright (C) 2022, Lenovo. All Rights Reserved
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltSendMessage
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - PoRegisterPowerSettingCallback
+  - PoUnregisterPowerSettingCallback
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwPowerInformation
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ProbeForWrite
+  - ProbeForRead
+  - ExFreePoolWithTag
+  - ExAllocatePool2
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - WdfVersionBind
+  - WdfLdrQueryInterface
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G11, CN=Lenovo
+      ValidFrom: '2022-12-06 00:00:00'
+      ValidTo: '2023-12-16 23:59:59'
+      Signature: 5bf6a0075d923adb843acdb924e5ef05545808e29402291892f7b30d0376495e955fb4c3e64cbd05bbccf0bc7c32f378cd0c7987f7417ff4c18309c128e831909369240d349bb62192da9e2cffaf35cdeaf5af83a2031ce7a810db0d94af915a6ff9fd04b52af6efd9894820c0eda967998c37bf301faa7781775de988ac463b3df18fcc5326223002896a27ad864ca75c2359510b276c8a44faf89d07b6bc933a3ed9c7420579b700d9d1b562cff7480a80a9d32f4b55d12f0b9d8ba0e1bd79b1170ef309ce149ebca7bc837256d4191bc57510e1ceef92ab76d80649a98b47082f36b997eefc07195ec3c619a2da28b23b5a5120db22bba31719160e72ccb3113df88de7810a1a5d29a1e0edf312eed61c197232e1ba2cefb1a2614ed2f7d04526615e2c0d644e175500d6e9c7fef412633f9e7ffb3ae3557f2fe98d5ebe92729fecf6a558dd6097012742c0e411a698efd158b886e2ccf1264ac21015e355e6aae0142badbca78a3ff3177a3376361479cbd39118198cbe468d2af7f0f87464ad412215cb29fcc3acaf4d42752f535ac08eb223856b1b70aa1533a3396c69351e0b32f4df69dc849a4e0d244ac812ca33a6c8f40ab25c9ef9dab711d982470df9435858effaa2f393b4c490cf9493449a25b6702b1d03432e33ef5ab017fe3bdf21f0fe2d392ecdb00c012ab4412b18886d542eaf3ea8b677fca03d5704ea
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0b8688de54be04aee8fe8378c15f9690
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: a91917240e17db90af5cf7d69920d835
+        SHA1: 01844787225f9ea2905b1c4696fe73528ab14e3f
+        SHA256: 72d1c774c061fc8867102cf628b55e6eb9985218679c99ea4da8616cabd8559b
+        SHA384: cf008bbcd740de4e5bf2dfafcfcde81cd400e9a63d1da80fb50939ea38475783b35534608e3d1b99c0d0ba521176a927
+    Signer:
+    - SerialNumber: 0b8688de54be04aee8fe8378c15f9690
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: LnvMSRIO.sys
+  SHA256: e76638b04f49ce7b01ed2b6ef66b2ac0e6a02643f8513344b71dfcb4aea13c79
+  MD5: 2bc59df4371b1d1bdcdaa2f4dc119f69
+  SHA1: 339da25d115d67b65d2017139856277a86ed2f17
+  Imphash: 3b2a2be6141c8dd9d480fe7ab5ede02b
+  Authentihash:
+    MD5: 49e73215de1327d237b747fede4767c2
+    SHA1: afe485ab4748d1146ad8a9292c7d9a8f40368e67
+    SHA256: cf8a7fd4ab9e2dadd9c244f01ea10fbc21f6fccd8c03d10c334daad48efa957b
+  RichPEHeaderHash:
+    MD5: 956bfec9342c19ff2cf9f1cb20787bd8
+    SHA1: 2714b369011de84e8a1895a14f99d5f277c617fe
+    SHA256: f163346df5389eeeaf1c7c13e1077f4e82217d552b1ad2662f7caca8a877c021
+  Sections:
+    .text:
+      Entropy: 5.85187473398755
+      Virtual Size: '0x25cd'
+    .rdata:
+      Entropy: 4.436756238624429
+      Virtual Size: '0xba4'
+    .data:
+      Entropy: 0.6046349582600534
+      Virtual Size: '0x308'
+    .pdata:
+      Entropy: 3.9697795786387715
+      Virtual Size: '0x240'
+    INIT:
+      Entropy: 4.738959355178401
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.277897265290892
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.601989420472558
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-01-10 23:11:31'
+  Description: Lenovo filter driver
+  Company: Lenovo
+  InternalName: LnvMSRIO.sys
+  OriginalFilename: LnvMSRIO.sys
+  FileVersion: 3.0.2.45
+  Product: Lenovo filter driver
+  ProductVersion: 3, 0, 2, 45
+  Copyright: Copyright (C) 2022, Lenovo. All Rights Reserved
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltSendMessage
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - PoRegisterPowerSettingCallback
+  - PoUnregisterPowerSettingCallback
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwPowerInformation
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ProbeForWrite
+  - ProbeForRead
+  - ExFreePoolWithTag
+  - ExAllocatePool2
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - WdfVersionBind
+  - WdfLdrQueryInterface
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G11, CN=Lenovo
+      ValidFrom: '2023-05-25 00:00:00'
+      ValidTo: '2024-05-24 23:59:59'
+      Signature: 78fd94096ee1363d53c2df0350cf61b1239b0773407f61ca82098087e5f9cc2ece38a7b9d8e4a68ed334a4da8abb7951add48a4ec781870eaec07510eb3b9590579060d00eff70e06747173412cdca57db7e17e3bb2635a7c17cf14dbc4dfc77fffde1a179b973c305db95e4c0f223b55cc415ea760ccbdcd1fbff3cfdee5a615be485133ceb85e25e6de7bb436d47e44c1c10456f0a5c3d8aa606d52f4996dba43310a21cb2544e3413283a56c5cbd4016ddf152619256758ca0a3aba46da5a9de078b2f4a3658ea000738483ccddf67ea74769b0ae041f34d9ca71a57e9f1acae7934b7318db367a0351e24624ebfd63e9f60197abef5814ff53f764e62434c62a47ca1b9748eb08d42f74d13679265a18a91f375de9dba0cdfab1db130ad2bef53ea52c5ad5a996f1145c3040dca7f2687559491bf17b5ffca59d28ecb228ffbd72916781a9d65738d9aca2b87a5b10f36736d2f6a18705529cb81eefa4550b875e135ace1d42c377c7b9fc76da29dd849034c8566c5859c831511639847f4132ec5b43c013cd0f3b7438c3bdd3f8ea75da750c73a5d90daf443b2d1b3ebd2311e9aee4e52d30072888477c06847db40d55c0f94e097e2004440fb70e4caea9b9b4e2f86964f681751747474977d3bff096186dfea8e1783bffc26e480e5ccd0b4d8f0dd27c5f6665c2970c21665190a0aa23159cce27a444be114b7dd5df
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0f1b5575dca88493964e207f27711085
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e1e032346eb86692663f47e6ed01e573
+        SHA1: 594e3b5564bcc009a61e04375b51a8bbaa2b4f6d
+        SHA256: a2c2e2432bdc2704f458aa3cf433f4dcd3919c3fb2bf23094a16b6407b1ecbae
+        SHA384: ccc2c0cf099b0287a79522a4f0ba96dca848a68cc0b4232a67e7a6ae58f938ac78d54c2b36a6ade41466723cb3bf0c09
+    Signer:
+    - SerialNumber: 0f1b5575dca88493964e207f27711085
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: LnvMSRIO.sys
+  SHA256: ec18a0839ff1354dce451926d573e72ce4b2a78782cfceb5b0084e90e77f3220
+  MD5: 6352e0b787085eac256c1a8ea41322b7
+  SHA1: a3a6c2a38f919f3c5d3fa861ff59a6fc40016ffb
+  Imphash: 3b2a2be6141c8dd9d480fe7ab5ede02b
+  Authentihash:
+    MD5: 3578b299945dc29364a7360079abf367
+    SHA1: f76d6349f0f0caf98e5c317c25d637aa0a54da29
+    SHA256: bee39425ef2cdda84634519f0b5ed8fd509d62ba88e4484ccd436f2b4b5aef7b
+  RichPEHeaderHash:
+    MD5: 956bfec9342c19ff2cf9f1cb20787bd8
+    SHA1: 2714b369011de84e8a1895a14f99d5f277c617fe
+    SHA256: f163346df5389eeeaf1c7c13e1077f4e82217d552b1ad2662f7caca8a877c021
+  Sections:
+    .text:
+      Entropy: 5.85187473398755
+      Virtual Size: '0x25cd'
+    .rdata:
+      Entropy: 4.434824200108864
+      Virtual Size: '0xba4'
+    .data:
+      Entropy: 0.6046349582600534
+      Virtual Size: '0x308'
+    .pdata:
+      Entropy: 3.9697795786387715
+      Virtual Size: '0x240'
+    INIT:
+      Entropy: 4.738959355178401
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.270221103953194
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 3.601989420472558
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-01-25 19:46:26'
+  Description: Lenovo filter driver
+  Company: Lenovo
+  InternalName: LnvMSRIO.sys
+  OriginalFilename: LnvMSRIO.sys
+  FileVersion: 3.0.2.46
+  Product: Lenovo filter driver
+  ProductVersion: 3, 0, 2, 46
+  Copyright: Copyright (C) 2022, Lenovo. All Rights Reserved
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltSendMessage
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - PoRegisterPowerSettingCallback
+  - PoUnregisterPowerSettingCallback
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwPowerInformation
+  - __C_specific_handler
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ProbeForWrite
+  - ProbeForRead
+  - ExFreePoolWithTag
+  - ExAllocatePool2
+  - IoCreateSymbolicLink
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - WdfVersionBind
+  - WdfLdrQueryInterface
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G11, CN=Lenovo
+      ValidFrom: '2023-05-25 00:00:00'
+      ValidTo: '2024-05-24 23:59:59'
+      Signature: 78fd94096ee1363d53c2df0350cf61b1239b0773407f61ca82098087e5f9cc2ece38a7b9d8e4a68ed334a4da8abb7951add48a4ec781870eaec07510eb3b9590579060d00eff70e06747173412cdca57db7e17e3bb2635a7c17cf14dbc4dfc77fffde1a179b973c305db95e4c0f223b55cc415ea760ccbdcd1fbff3cfdee5a615be485133ceb85e25e6de7bb436d47e44c1c10456f0a5c3d8aa606d52f4996dba43310a21cb2544e3413283a56c5cbd4016ddf152619256758ca0a3aba46da5a9de078b2f4a3658ea000738483ccddf67ea74769b0ae041f34d9ca71a57e9f1acae7934b7318db367a0351e24624ebfd63e9f60197abef5814ff53f764e62434c62a47ca1b9748eb08d42f74d13679265a18a91f375de9dba0cdfab1db130ad2bef53ea52c5ad5a996f1145c3040dca7f2687559491bf17b5ffca59d28ecb228ffbd72916781a9d65738d9aca2b87a5b10f36736d2f6a18705529cb81eefa4550b875e135ace1d42c377c7b9fc76da29dd849034c8566c5859c831511639847f4132ec5b43c013cd0f3b7438c3bdd3f8ea75da750c73a5d90daf443b2d1b3ebd2311e9aee4e52d30072888477c06847db40d55c0f94e097e2004440fb70e4caea9b9b4e2f86964f681751747474977d3bff096186dfea8e1783bffc26e480e5ccd0b4d8f0dd27c5f6665c2970c21665190a0aa23159cce27a444be114b7dd5df
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0f1b5575dca88493964e207f27711085
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e1e032346eb86692663f47e6ed01e573
+        SHA1: 594e3b5564bcc009a61e04375b51a8bbaa2b4f6d
+        SHA256: a2c2e2432bdc2704f458aa3cf433f4dcd3919c3fb2bf23094a16b6407b1ecbae
+        SHA384: ccc2c0cf099b0287a79522a4f0ba96dca848a68cc0b4232a67e7a6ae58f938ac78d54c2b36a6ade41466723cb3bf0c09
+    Signer:
+    - SerialNumber: 0f1b5575dca88493964e207f27711085
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       Version: 1

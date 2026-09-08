@@ -1,0 +1,1773 @@
+Id: d2a619bb-c8c6-4c79-8b6a-8368668bbfb2
+Tags:
+- windrvr1251.sys
+- windrvr1260.sys
+- windrvr1280.sys
+- windrvr1281.sys
+- windrvr1411.sys
+- Jungo WinDriver
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-08-31'
+MitreID: T1068
+CVE:
+- CVE-2023-47569
+- CVE-2023-47570
+- CVE-2023-47571
+- CVE-2023-47572
+- CVE-2024-26314
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create WinDriver type= kernel binPath= C:\\windows\\temp\\windrvr1411.sys
+    && sc.exe start WinDriver
+  Description: Jungo WinDriver versions 6.0.0 through 16.1.0 are affected by multiple
+    kernel security issues fixed in version 16.2.0. The tracked 12.5.1 through 14.1.1
+    builds fall inside that affected interval. CVE-2024-26314 allows a low-privileged
+    local attacker to escalate privileges and execute arbitrary code. The 14.1.1 driver
+    exposes METHOD_NEITHER requests that reach port I/O, PCI configuration, and mapped-resource
+    operations after the required WinDriver registration workflow.
+  Usecase: Elevate privileges
+  Privileges: User
+  OperatingSystem: Windows
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/409
+- https://github.com/fluffycats31/vulnerable-drivers
+- https://windriver.jungo.com/version/version-16-2-0/
+- https://nvd.nist.gov/vuln/detail/CVE-2023-47569
+- https://nvd.nist.gov/vuln/detail/CVE-2023-47570
+- https://nvd.nist.gov/vuln/detail/CVE-2023-47571
+- https://nvd.nist.gov/vuln/detail/CVE-2023-47572
+- https://nvd.nist.gov/vuln/detail/CVE-2024-26314
+- https://www.cisa.gov/news-events/ics-advisories/icsa-24-135-04
+Detection: []
+Acknowledgement:
+  Person: fluffycats31
+  Handle: '@fluffycats31'
+KnownVulnerableSamples:
+- Filename: windrvr1260.sys
+  SHA256: 072f16148483afeeb0c37c745421df83f26d8359da95dc1219a700742cf010f7
+  MD5: 7c00fb2ab22211127cf8822ae5f4b524
+  SHA1: a5cc29a36a2db990f1c2a104b187abcc3589e3d0
+  Imphash: 63ff5328c415b7dd9fb081af1973c137
+  Authentihash:
+    MD5: 9a906bd47a073be9e33d73fbf98245a3
+    SHA1: a9eadf8ba66413db9710150087b08b5cb6c4bfc9
+    SHA256: 254b14e05fd9e0edee406c528a867e848aabb0506ea603e0e51522c907a01c94
+  RichPEHeaderHash:
+    MD5: 673fcc191ab1107684a59d6972324d5b
+    SHA1: 721078a4837e62bbc6ab41c7df4cc48f87b30704
+    SHA256: a550ac7290e076fe408044325046f5774001b3c5e3b6d9495d55ebd6b1610470
+  Sections:
+    .text:
+      Entropy: 6.561919645163069
+      Virtual Size: '0x38978'
+    .rdata:
+      Entropy: 5.0271041389550355
+      Virtual Size: '0x1a54'
+    .data:
+      Entropy: 3.2352450049341095
+      Virtual Size: '0x6d4'
+    .pdata:
+      Entropy: 5.432605005045971
+      Virtual Size: '0x14c4'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.308076046140001
+      Virtual Size: '0xc8e'
+    .rsrc:
+      Entropy: 3.5977822986577954
+      Virtual Size: '0x4a8'
+    .reloc:
+      Entropy: 3.5175864883369976
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-01-04 05:47:35'
+  Description: WinDriver Device Driver 12.6.0
+  Company: Jungo Connectivity
+  InternalName: windrvr1260.sys
+  OriginalFilename: windrvr1260.sys
+  FileVersion: 12.6.0
+  Product: WinDriver Device Driver (x64)
+  ProductVersion: 12.6.0
+  Copyright: 'Jungo Connectivity Confidential. Copyright (c) 2017 Jungo Connectivity
+    Ltd.  http://www.jungo.com
+
+    '
+  MachineType: AMD64
+  Imports:
+  - USBD.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  - KeReleaseSpinLock
+  - IoAcquireCancelSpinLock
+  - IoAllocateIrp
+  - IoBuildSynchronousFsdRequest
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoFreeIrp
+  - IoGetAttachedDeviceReference
+  - IoReleaseCancelSpinLock
+  - IoGetDeviceProperty
+  - IoOpenDeviceRegistryKey
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwQueryValueKey
+  - KeSetEvent
+  - ExQueueWorkItem
+  - IoCancelIrp
+  - PoRequestPowerIrp
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - strncmp
+  - strncat
+  - DbgPrint
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwSetValueKey
+  - sprintf
+  - _snprintf
+  - _vsnprintf
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetDmaAdapter
+  - MmGetPhysicalAddress
+  - __C_specific_handler
+  - KeInitializeDpc
+  - KeAcquireSpinLockRaiseToDpc
+  - KeRemoveQueueDpc
+  - IoConnectInterrupt
+  - IoConnectInterruptEx
+  - IoDisconnectInterrupt
+  - IoDisconnectInterruptEx
+  - strnlen
+  - strncpy
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlFreeUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - toupper
+  - ExFreePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - KeDelayExecutionThread
+  - KeInitializeMutex
+  - KeInitializeSemaphore
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - IoReuseIrp
+  - wcschr
+  - _wcsicmp
+  - RtlCopyUnicodeString
+  - RtlGetVersion
+  - ExAllocatePoolWithTag
+  - ProbeForRead
+  - ProbeForWrite
+  - IoAttachDeviceToDeviceStack
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - IoIs32bitProcess
+  - IoRaiseInformationalHardError
+  - KeBugCheckEx
+  - KeWaitForSingleObject
+  - KeReleaseMutex
+  - KeInitializeEvent
+  - RtlInitUnicodeString
+  - KeInsertQueueDpc
+  - HalTranslateBusAddress
+  - HalSetBusDataByOffset
+  - KeStallExecutionProcessor
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Minnesota, L=Minneapolis, O=Smiths Medical, OU=RD, CN=Smiths
+        Medical
+      ValidFrom: '2017-11-13 00:00:00'
+      ValidTo: '2020-11-19 23:59:59'
+      Signature: 243cbe2b6e8c01d0dc4c2e33aa6893cb84280eb2353d434f4935abdd021a97fde591f16e1c3be200cac0c1f1ed0ee9d543dcdfcf62c36b57c7e57ac12d2cec8c4f8674722d1d5a3022eed89eda48d12aae46f88863af21136fcbc86640a0667301e8bd6893cb93996434c6effd377f74225ef17f96c8a74a85e5d1edbfbf3cdc83a3a3d5c7cb1ddffd1b6ac4e8c2c40b39ca444fc85d478460a75e7b90ef2f53220ba195cff85980d030775e43033148f12e843919fd0f28e6da8125b05c6959f1f74ee9c0bcfbe7df69c9153054b49c142552554d054247bb186d45db8e046e30f22556a719f1243d5e53f47b5d58f0052315ee1007f3fad90ac17a201da08f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 025b36a3ad30e0c8e63cff9dc8090372
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 0c4a8785d6c0f3b1ef8a30c67be21fa7
+        SHA1: 2f11f5ed2e12a580329d277eacffef44bb097827
+        SHA256: eb768e72d5a8db33cb7a3788007a984c212e5ef34861cc4e565f8cf2e9f04ced
+        SHA384: 9b3c12e88e50b9a71090872fb0c238a530cb091156ac5636827c551089b30a2e89f4a8abd1a405d9c86880084be90094
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 025b36a3ad30e0c8e63cff9dc8090372
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+- Filename: windrvr1411.sys
+  SHA256: 2421533941c9dab234239feb9f2a72ed13b21f3f9da9829dffe232282b1bc4b6
+  MD5: ed91e277e4f55465d152f2588d204951
+  SHA1: 59b759c4a9647210a625ea13397ec3a043817a92
+  Imphash: 4e7885c15e90eb195110f48193eb7de1
+  Authentihash:
+    MD5: 8f84b910f21f1a66037ebb36d0314613
+    SHA1: bed629b9a14167fed939c709c99211802ff232be
+    SHA256: 443a8982b1bdee0877e7f94a216914844be3c40b457a9e17148c2f81dafe0dd5
+  RichPEHeaderHash:
+    MD5: d3247a318349af4f541479c52651126e
+    SHA1: c8793047fbc5feea9fa1d3e264f01ae7efba71e7
+    SHA256: 4e9e3aaf9a073cd0fb4b62fd0de1c44be4a9449ecf175e2bf6908e43163c9c13
+  Sections:
+    .text:
+      Entropy: 6.545358874176259
+      Virtual Size: '0x3697a'
+    .rdata:
+      Entropy: 5.103356741959865
+      Virtual Size: '0x1984'
+    .data:
+      Entropy: 3.474232319208733
+      Virtual Size: '0x710'
+    .pdata:
+      Entropy: 5.362843814803309
+      Virtual Size: '0x1404'
+    .gfids:
+      Entropy: 2.6188750721215293
+      Virtual Size: '0x134'
+    INIT:
+      Entropy: 5.368742901367936
+      Virtual Size: '0xc92'
+    .rsrc:
+      Entropy: 3.5997775911981122
+      Virtual Size: '0x4a8'
+    .reloc:
+      Entropy: 3.73657642437037
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-07-22 07:56:47'
+  Description: WinDriver Device Driver 14.1.1
+  Company: Jungo Connectivity
+  InternalName: windrvr1411.sys
+  OriginalFilename: windrvr1411.sys
+  FileVersion: 14.1.1
+  Product: WinDriver Device Driver (x64)
+  ProductVersion: 14.1.1
+  Copyright: 'Jungo Connectivity Confidential. Copyright (c) 2019 Jungo Connectivity
+    Ltd.  https://www.jungo.com
+
+    '
+  MachineType: AMD64
+  Imports:
+  - USBD.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlGetVersion
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeDeregisterBugCheckReasonCallback
+  - KeRegisterBugCheckReasonCallback
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ProbeForRead
+  - ProbeForWrite
+  - IoAttachDeviceToDeviceStack
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDetachDevice
+  - IoIs32bitProcess
+  - ZwClose
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - IoRaiseInformationalHardError
+  - __C_specific_handler
+  - DbgPrint
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ZwCreateKey
+  - ZwSetValueKey
+  - _snprintf
+  - _vsnprintf
+  - strnlen
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlFreeUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - sprintf
+  - MmProbeAndLockPages
+  - RtlInitUnicodeString
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetDmaAdapter
+  - MmGetPhysicalAddress
+  - KeDelayExecutionThread
+  - KeInitializeDpc
+  - KeInsertQueueDpc
+  - KeRemoveQueueDpc
+  - IoAcquireCancelSpinLock
+  - IoConnectInterruptEx
+  - IoDisconnectInterruptEx
+  - IoReleaseCancelSpinLock
+  - IoAllocateIrp
+  - IoBuildSynchronousFsdRequest
+  - IoFreeIrp
+  - IoGetAttachedDeviceReference
+  - IoGetDeviceProperty
+  - IoOpenDeviceRegistryKey
+  - ExQueueWorkItem
+  - IoCancelIrp
+  - PoRequestPowerIrp
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - IoReuseIrp
+  - strncmp
+  - KeInitializeMutex
+  - KeInitializeSemaphore
+  - MmBuildMdlForNonPagedPool
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - toupper
+  - _wcsicmp
+  - wcschr
+  - strncpy
+  - strncat
+  - MmUnlockPages
+  - KeStallExecutionProcessor
+  - HalSetBusDataByOffset
+  - HalTranslateBusAddress
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=IL, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=514663335, C=IL, L=Netanya, O=Jungo Connectivity Ltd., CN=Jungo
+        Connectivity Ltd.
+      ValidFrom: '2017-09-07 00:00:00'
+      ValidTo: '2019-12-31 12:00:00'
+      Signature: 32837f5710b7f8f99cf334dea1d853895c69741317a57b8e4841813fc8c6eb34499bd123865761ffde853c1b0058703f4834cc35a4d962daef29b0bb640015a13994f7cf038dc271f880879155962ed69274e43da6262834588badab9812fcbe272ed21c03c25646f059cc0ecf5fb67eedd5a0562046c211399707ada2ad56925e0fbc08e721716fb367fcf1e9cf9d7f14e5a05941157a221275cb514dc44863330b88847354edbceb48d28878632de70d2efed4723aef17a3eda01367c163bd6844dc8eef0314f7cd2016c6b10f89ebfa5f0aa92ad31e067c65d041082d1c3c77a78dcdc1a9be9fdbf3b1845270152cb02c1faa04563a774aab4ec5997760bc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: faf1d8e635d625a5a2942e1918b24f63
+        SHA1: 4af6f904a1381ff20b4ee8796c52b5a14aa55cda
+        SHA256: 9a2af287ffb77a24650c3360e4522bb0c332c1a84620d8c26b5a4f6799588c45
+        SHA384: 325dcd8299488b0abb61a3f988eff1eb6c9309842e1754417689a0d2da554b5faae7478d3389bff0f0518b31be999a59
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
+      ValidFrom: '2014-10-22 00:00:00'
+      ValidTo: '2024-10-22 00:00:00'
+      Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 03019a023aff58b16bd6d5eae617f066
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: a752afee44f017e8d74e3f3eb7914ae3
+        SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
+        SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
+      ValidFrom: '2006-11-10 00:00:00'
+      ValidTo: '2021-11-10 00:00:00'
+      Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 4e5ad189638cf52ba9cd881d4d44668c
+        SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
+        SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
+    Signer:
+    - SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+- Filename: windrvr1260.sys
+  SHA256: 7203e3a3621f52785840e79da262d03b2ad179a406f448ad83bbbbd32ba64dd0
+  MD5: ead582d5ca1d9fcb9c4a20b93df66b2f
+  SHA1: 45260b8e29c1901fbd6e7c158c784318618f1261
+  Imphash: 63ff5328c415b7dd9fb081af1973c137
+  Authentihash:
+    MD5: 9a906bd47a073be9e33d73fbf98245a3
+    SHA1: a9eadf8ba66413db9710150087b08b5cb6c4bfc9
+    SHA256: 254b14e05fd9e0edee406c528a867e848aabb0506ea603e0e51522c907a01c94
+  RichPEHeaderHash:
+    MD5: 673fcc191ab1107684a59d6972324d5b
+    SHA1: 721078a4837e62bbc6ab41c7df4cc48f87b30704
+    SHA256: a550ac7290e076fe408044325046f5774001b3c5e3b6d9495d55ebd6b1610470
+  Sections:
+    .text:
+      Entropy: 6.561919645163069
+      Virtual Size: '0x38978'
+    .rdata:
+      Entropy: 5.0271041389550355
+      Virtual Size: '0x1a54'
+    .data:
+      Entropy: 3.2352450049341095
+      Virtual Size: '0x6d4'
+    .pdata:
+      Entropy: 5.432605005045971
+      Virtual Size: '0x14c4'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.308076046140001
+      Virtual Size: '0xc8e'
+    .rsrc:
+      Entropy: 3.5977822986577954
+      Virtual Size: '0x4a8'
+    .reloc:
+      Entropy: 3.5175864883369976
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-01-04 05:47:35'
+  Description: WinDriver Device Driver 12.6.0
+  Company: Jungo Connectivity
+  InternalName: windrvr1260.sys
+  OriginalFilename: windrvr1260.sys
+  FileVersion: 12.6.0
+  Product: WinDriver Device Driver (x64)
+  ProductVersion: 12.6.0
+  Copyright: 'Jungo Connectivity Confidential. Copyright (c) 2017 Jungo Connectivity
+    Ltd.  http://www.jungo.com
+
+    '
+  MachineType: AMD64
+  Imports:
+  - USBD.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  - KeReleaseSpinLock
+  - IoAcquireCancelSpinLock
+  - IoAllocateIrp
+  - IoBuildSynchronousFsdRequest
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoFreeIrp
+  - IoGetAttachedDeviceReference
+  - IoReleaseCancelSpinLock
+  - IoGetDeviceProperty
+  - IoOpenDeviceRegistryKey
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwQueryValueKey
+  - KeSetEvent
+  - ExQueueWorkItem
+  - IoCancelIrp
+  - PoRequestPowerIrp
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - strncmp
+  - strncat
+  - DbgPrint
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwSetValueKey
+  - sprintf
+  - _snprintf
+  - _vsnprintf
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetDmaAdapter
+  - MmGetPhysicalAddress
+  - __C_specific_handler
+  - KeInitializeDpc
+  - KeAcquireSpinLockRaiseToDpc
+  - KeRemoveQueueDpc
+  - IoConnectInterrupt
+  - IoConnectInterruptEx
+  - IoDisconnectInterrupt
+  - IoDisconnectInterruptEx
+  - strnlen
+  - strncpy
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlFreeUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - toupper
+  - ExFreePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - KeDelayExecutionThread
+  - KeInitializeMutex
+  - KeInitializeSemaphore
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - IoReuseIrp
+  - wcschr
+  - _wcsicmp
+  - RtlCopyUnicodeString
+  - RtlGetVersion
+  - ExAllocatePoolWithTag
+  - ProbeForRead
+  - ProbeForWrite
+  - IoAttachDeviceToDeviceStack
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - IoIs32bitProcess
+  - IoRaiseInformationalHardError
+  - KeBugCheckEx
+  - KeWaitForSingleObject
+  - KeReleaseMutex
+  - KeInitializeEvent
+  - RtlInitUnicodeString
+  - KeInsertQueueDpc
+  - HalTranslateBusAddress
+  - HalSetBusDataByOffset
+  - KeStallExecutionProcessor
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=IL, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=514663335, C=IL, L=Netanya, O=Jungo Connectivity Ltd., CN=Jungo
+        Connectivity Ltd.
+      ValidFrom: '2017-09-07 00:00:00'
+      ValidTo: '2019-12-31 12:00:00'
+      Signature: 32837f5710b7f8f99cf334dea1d853895c69741317a57b8e4841813fc8c6eb34499bd123865761ffde853c1b0058703f4834cc35a4d962daef29b0bb640015a13994f7cf038dc271f880879155962ed69274e43da6262834588badab9812fcbe272ed21c03c25646f059cc0ecf5fb67eedd5a0562046c211399707ada2ad56925e0fbc08e721716fb367fcf1e9cf9d7f14e5a05941157a221275cb514dc44863330b88847354edbceb48d28878632de70d2efed4723aef17a3eda01367c163bd6844dc8eef0314f7cd2016c6b10f89ebfa5f0aa92ad31e067c65d041082d1c3c77a78dcdc1a9be9fdbf3b1845270152cb02c1faa04563a774aab4ec5997760bc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: faf1d8e635d625a5a2942e1918b24f63
+        SHA1: 4af6f904a1381ff20b4ee8796c52b5a14aa55cda
+        SHA256: 9a2af287ffb77a24650c3360e4522bb0c332c1a84620d8c26b5a4f6799588c45
+        SHA384: 325dcd8299488b0abb61a3f988eff1eb6c9309842e1754417689a0d2da554b5faae7478d3389bff0f0518b31be999a59
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
+      ValidFrom: '2014-10-22 00:00:00'
+      ValidTo: '2024-10-22 00:00:00'
+      Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 03019a023aff58b16bd6d5eae617f066
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: a752afee44f017e8d74e3f3eb7914ae3
+        SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
+        SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
+      ValidFrom: '2006-11-10 00:00:00'
+      ValidTo: '2021-11-10 00:00:00'
+      Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 4e5ad189638cf52ba9cd881d4d44668c
+        SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
+        SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
+    Signer:
+    - SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+- Filename: windrvr1280.sys
+  SHA256: b8d8f642ef62d2781e2dc4d1f797c66599961b43e469d30b6ce1dce718cc5808
+  MD5: 3d6927933e9b0413efcaa7eb7b5c0719
+  SHA1: c570e03d9e27a33df268d6c4a0e5f6e09ef9bc64
+  Imphash: 043f918df206295e42c363b5288eaaba
+  Authentihash:
+    MD5: b4dacc864899a1a57550f739305a88f1
+    SHA1: 5138910ce98dee8b70db7985afe38a28dd466b61
+    SHA256: e4e613e586ccd41daf27a7e55edb3e6d74e25052862c27403a404b103cbb8e1a
+  RichPEHeaderHash:
+    MD5: 0b59978547b48a5ab72c80c65870e3a1
+    SHA1: 415006c69d832155ed3d987777b1adb4cb63af1c
+    SHA256: b4ec91d40f48f9213a77ba95c1288d7cca55bc818bb2d5488c9aa345787ce35f
+  Sections:
+    .text:
+      Entropy: 6.562011254573384
+      Virtual Size: '0x39118'
+    .rdata:
+      Entropy: 5.069599012157865
+      Virtual Size: '0x1bac'
+    .data:
+      Entropy: 3.3014116970744642
+      Virtual Size: '0x714'
+    .pdata:
+      Entropy: 5.454074031868831
+      Virtual Size: '0x14e8'
+    INIT:
+      Entropy: 5.318474762337046
+      Virtual Size: '0xce8'
+    .rsrc:
+      Entropy: 3.594393791931866
+      Virtual Size: '0x4a8'
+    .reloc:
+      Entropy: 3.7950726744424848
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-07-02 04:48:09'
+  Description: WinDriver Device Driver 12.8.0
+  Company: Jungo Connectivity
+  InternalName: windrvr1280.sys
+  OriginalFilename: windrvr1280.sys
+  FileVersion: 12.8.0
+  Product: WinDriver Device Driver (x64)
+  ProductVersion: 12.8.0
+  Copyright: 'Jungo Connectivity Confidential. Copyright (c) 2018 Jungo Connectivity
+    Ltd.  http://www.jungo.com
+
+    '
+  MachineType: AMD64
+  Imports:
+  - USBD.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  - KeReleaseSpinLock
+  - IoAcquireCancelSpinLock
+  - IoAllocateIrp
+  - IoBuildSynchronousFsdRequest
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoFreeIrp
+  - IoGetAttachedDeviceReference
+  - IoReleaseCancelSpinLock
+  - IoGetDeviceProperty
+  - IoOpenDeviceRegistryKey
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwQueryValueKey
+  - KeSetEvent
+  - ExQueueWorkItem
+  - IoCancelIrp
+  - PoRequestPowerIrp
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - strncmp
+  - strncat
+  - DbgPrint
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwSetValueKey
+  - _snprintf
+  - _vsnprintf
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetDmaAdapter
+  - MmGetPhysicalAddress
+  - __C_specific_handler
+  - KeInitializeDpc
+  - KeInsertQueueDpc
+  - KeRemoveQueueDpc
+  - KeAcquireSpinLockRaiseToDpc
+  - IoConnectInterruptEx
+  - IoDisconnectInterrupt
+  - IoDisconnectInterruptEx
+  - strnlen
+  - strncpy
+  - sprintf
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlFreeUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - toupper
+  - ExFreePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - KeDelayExecutionThread
+  - KeInitializeMutex
+  - KeInitializeSemaphore
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - IoReuseIrp
+  - wcschr
+  - _wcsicmp
+  - RtlCopyUnicodeString
+  - RtlGetVersion
+  - KeDeregisterBugCheckReasonCallback
+  - KeRegisterBugCheckReasonCallback
+  - ExAllocatePoolWithTag
+  - ProbeForRead
+  - ProbeForWrite
+  - IoAttachDeviceToDeviceStack
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - IoIs32bitProcess
+  - IoRaiseInformationalHardError
+  - KeBugCheckEx
+  - KeWaitForSingleObject
+  - KeReleaseMutex
+  - KeInitializeEvent
+  - RtlInitUnicodeString
+  - IoConnectInterrupt
+  - HalTranslateBusAddress
+  - HalSetBusDataByOffset
+  - KeStallExecutionProcessor
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=IL, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=514663335, C=IL, L=Netanya, O=Jungo Connectivity Ltd., CN=Jungo
+        Connectivity Ltd.
+      ValidFrom: '2017-09-07 00:00:00'
+      ValidTo: '2019-12-31 12:00:00'
+      Signature: 32837f5710b7f8f99cf334dea1d853895c69741317a57b8e4841813fc8c6eb34499bd123865761ffde853c1b0058703f4834cc35a4d962daef29b0bb640015a13994f7cf038dc271f880879155962ed69274e43da6262834588badab9812fcbe272ed21c03c25646f059cc0ecf5fb67eedd5a0562046c211399707ada2ad56925e0fbc08e721716fb367fcf1e9cf9d7f14e5a05941157a221275cb514dc44863330b88847354edbceb48d28878632de70d2efed4723aef17a3eda01367c163bd6844dc8eef0314f7cd2016c6b10f89ebfa5f0aa92ad31e067c65d041082d1c3c77a78dcdc1a9be9fdbf3b1845270152cb02c1faa04563a774aab4ec5997760bc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: faf1d8e635d625a5a2942e1918b24f63
+        SHA1: 4af6f904a1381ff20b4ee8796c52b5a14aa55cda
+        SHA256: 9a2af287ffb77a24650c3360e4522bb0c332c1a84620d8c26b5a4f6799588c45
+        SHA384: 325dcd8299488b0abb61a3f988eff1eb6c9309842e1754417689a0d2da554b5faae7478d3389bff0f0518b31be999a59
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
+      ValidFrom: '2014-10-22 00:00:00'
+      ValidTo: '2024-10-22 00:00:00'
+      Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 03019a023aff58b16bd6d5eae617f066
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: a752afee44f017e8d74e3f3eb7914ae3
+        SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
+        SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
+      ValidFrom: '2006-11-10 00:00:00'
+      ValidTo: '2021-11-10 00:00:00'
+      Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 4e5ad189638cf52ba9cd881d4d44668c
+        SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
+        SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
+    Signer:
+    - SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+- Filename: windrvr1251.sys
+  SHA256: d217dbb7738ae0a9b8c054d553c94d9d3de9e08d5e98b007c041f4efe766d241
+  MD5: b16775b5512ee8f760984d4048d3fa71
+  SHA1: 105da7bf907e754c00911d091825bd6487e208f9
+  Imphash: bd304184eb21b2b188713aaabcf14c40
+  Authentihash:
+    MD5: a6ecb264daee700afbea7409f69b0e84
+    SHA1: 105c4ed821908622b3e87f53e63100c3f3ac0aa4
+    SHA256: c7f668acffa12fc2cde7e9baef4da0ff526a1b569d0e453b85f53e9916ceb38e
+  RichPEHeaderHash:
+    MD5: faccb7e11443d150d0cacaaa87c5f227
+    SHA1: b3d41d10822ef7d9fd0bba9694de5a05eee46ebf
+    SHA256: 6f4a0b318c07fc8cf102548779eb8095ffcb750e8778bf764cc50fe65c67f896
+  Sections:
+    .text:
+      Entropy: 6.562961086038381
+      Virtual Size: '0x37f58'
+    .rdata:
+      Entropy: 5.08854302371235
+      Virtual Size: '0x1a90'
+    .data:
+      Entropy: 3.1834089101318885
+      Virtual Size: '0x6cc'
+    .pdata:
+      Entropy: 5.389886581065658
+      Virtual Size: '0x14e8'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.359818534946299
+      Virtual Size: '0xc7c'
+    .rsrc:
+      Entropy: 3.5928068414287266
+      Virtual Size: '0x4a8'
+    .reloc:
+      Entropy: 3.6450547988658983
+      Virtual Size: '0x40'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2017-10-31 06:26:24'
+  Description: WinDriver Device Driver 12.5.1
+  Company: Jungo Connectivity
+  InternalName: windrvr1251.sys
+  OriginalFilename: windrvr1251.sys
+  FileVersion: 12.5.1
+  Product: WinDriver Device Driver (x64)
+  ProductVersion: 12.5.1
+  Copyright: 'Jungo Connectivity Confidential. Copyright (c) 2017 Jungo Connectivity
+    Ltd.  http://www.jungo.com
+
+    '
+  MachineType: AMD64
+  Imports:
+  - USBD.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  - KeReleaseSpinLock
+  - IoAcquireCancelSpinLock
+  - IoAllocateIrp
+  - IoBuildSynchronousFsdRequest
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoFreeIrp
+  - IoGetAttachedDeviceReference
+  - IoReleaseCancelSpinLock
+  - IoGetDeviceProperty
+  - IoOpenDeviceRegistryKey
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwQueryValueKey
+  - KeSetEvent
+  - ExQueueWorkItem
+  - IoCancelIrp
+  - PoRequestPowerIrp
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - strncmp
+  - strncat
+  - DbgPrint
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwSetValueKey
+  - sprintf
+  - _snprintf
+  - _vsnprintf
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetDmaAdapter
+  - MmGetPhysicalAddress
+  - __C_specific_handler
+  - KeInitializeDpc
+  - KeAcquireSpinLockRaiseToDpc
+  - KeRemoveQueueDpc
+  - IoConnectInterrupt
+  - IoConnectInterruptEx
+  - IoDisconnectInterrupt
+  - IoDisconnectInterruptEx
+  - strncpy
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlFreeUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - toupper
+  - ExFreePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - KeDelayExecutionThread
+  - KeInitializeMutex
+  - KeInitializeSemaphore
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - IoReuseIrp
+  - wcschr
+  - _wcsicmp
+  - RtlCopyUnicodeString
+  - RtlGetVersion
+  - ExAllocatePoolWithTag
+  - ProbeForRead
+  - ProbeForWrite
+  - IoAttachDeviceToDeviceStack
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - IoIs32bitProcess
+  - IoRaiseInformationalHardError
+  - KeBugCheckEx
+  - KeWaitForSingleObject
+  - KeReleaseMutex
+  - KeInitializeEvent
+  - RtlInitUnicodeString
+  - KeInsertQueueDpc
+  - HalTranslateBusAddress
+  - HalSetBusDataByOffset
+  - KeStallExecutionProcessor
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=IL, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=514663335, C=IL, L=Netanya, O=Jungo Connectivity Ltd., CN=Jungo
+        Connectivity Ltd.
+      ValidFrom: '2017-09-07 00:00:00'
+      ValidTo: '2019-12-31 12:00:00'
+      Signature: 32837f5710b7f8f99cf334dea1d853895c69741317a57b8e4841813fc8c6eb34499bd123865761ffde853c1b0058703f4834cc35a4d962daef29b0bb640015a13994f7cf038dc271f880879155962ed69274e43da6262834588badab9812fcbe272ed21c03c25646f059cc0ecf5fb67eedd5a0562046c211399707ada2ad56925e0fbc08e721716fb367fcf1e9cf9d7f14e5a05941157a221275cb514dc44863330b88847354edbceb48d28878632de70d2efed4723aef17a3eda01367c163bd6844dc8eef0314f7cd2016c6b10f89ebfa5f0aa92ad31e067c65d041082d1c3c77a78dcdc1a9be9fdbf3b1845270152cb02c1faa04563a774aab4ec5997760bc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: faf1d8e635d625a5a2942e1918b24f63
+        SHA1: 4af6f904a1381ff20b4ee8796c52b5a14aa55cda
+        SHA256: 9a2af287ffb77a24650c3360e4522bb0c332c1a84620d8c26b5a4f6799588c45
+        SHA384: 325dcd8299488b0abb61a3f988eff1eb6c9309842e1754417689a0d2da554b5faae7478d3389bff0f0518b31be999a59
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
+      ValidFrom: '2014-10-22 00:00:00'
+      ValidTo: '2024-10-22 00:00:00'
+      Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 03019a023aff58b16bd6d5eae617f066
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: a752afee44f017e8d74e3f3eb7914ae3
+        SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
+        SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
+      ValidFrom: '2006-11-10 00:00:00'
+      ValidTo: '2021-11-10 00:00:00'
+      Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 4e5ad189638cf52ba9cd881d4d44668c
+        SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
+        SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
+    Signer:
+    - SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+- Filename: windrvr1411.sys
+  SHA256: de8172a5989463dee93862985da6384b1e265c29ff5ff7b546f7ca38e0043377
+  MD5: 0fda09c2037d9620ed267b030e3d2f29
+  SHA1: 018e39018b665e60de14302853b74ad3ee5309b8
+  Imphash: 4e7885c15e90eb195110f48193eb7de1
+  Authentihash:
+    MD5: 8f84b910f21f1a66037ebb36d0314613
+    SHA1: bed629b9a14167fed939c709c99211802ff232be
+    SHA256: 443a8982b1bdee0877e7f94a216914844be3c40b457a9e17148c2f81dafe0dd5
+  RichPEHeaderHash:
+    MD5: d3247a318349af4f541479c52651126e
+    SHA1: c8793047fbc5feea9fa1d3e264f01ae7efba71e7
+    SHA256: 4e9e3aaf9a073cd0fb4b62fd0de1c44be4a9449ecf175e2bf6908e43163c9c13
+  Sections:
+    .text:
+      Entropy: 6.545358874176259
+      Virtual Size: '0x3697a'
+    .rdata:
+      Entropy: 5.103356741959865
+      Virtual Size: '0x1984'
+    .data:
+      Entropy: 3.474232319208733
+      Virtual Size: '0x710'
+    .pdata:
+      Entropy: 5.362843814803309
+      Virtual Size: '0x1404'
+    .gfids:
+      Entropy: 2.6188750721215293
+      Virtual Size: '0x134'
+    INIT:
+      Entropy: 5.368742901367936
+      Virtual Size: '0xc92'
+    .rsrc:
+      Entropy: 3.5997775911981122
+      Virtual Size: '0x4a8'
+    .reloc:
+      Entropy: 3.73657642437037
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-07-22 07:56:47'
+  Description: WinDriver Device Driver 14.1.1
+  Company: Jungo Connectivity
+  InternalName: windrvr1411.sys
+  OriginalFilename: windrvr1411.sys
+  FileVersion: 14.1.1
+  Product: WinDriver Device Driver (x64)
+  ProductVersion: 14.1.1
+  Copyright: 'Jungo Connectivity Confidential. Copyright (c) 2019 Jungo Connectivity
+    Ltd.  https://www.jungo.com
+
+    '
+  MachineType: AMD64
+  Imports:
+  - USBD.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlGetVersion
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeDeregisterBugCheckReasonCallback
+  - KeRegisterBugCheckReasonCallback
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ProbeForRead
+  - ProbeForWrite
+  - IoAttachDeviceToDeviceStack
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDetachDevice
+  - IoIs32bitProcess
+  - ZwClose
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - IoRaiseInformationalHardError
+  - __C_specific_handler
+  - DbgPrint
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ZwCreateKey
+  - ZwSetValueKey
+  - _snprintf
+  - _vsnprintf
+  - strnlen
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlFreeUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - sprintf
+  - MmProbeAndLockPages
+  - RtlInitUnicodeString
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetDmaAdapter
+  - MmGetPhysicalAddress
+  - KeDelayExecutionThread
+  - KeInitializeDpc
+  - KeInsertQueueDpc
+  - KeRemoveQueueDpc
+  - IoAcquireCancelSpinLock
+  - IoConnectInterruptEx
+  - IoDisconnectInterruptEx
+  - IoReleaseCancelSpinLock
+  - IoAllocateIrp
+  - IoBuildSynchronousFsdRequest
+  - IoFreeIrp
+  - IoGetAttachedDeviceReference
+  - IoGetDeviceProperty
+  - IoOpenDeviceRegistryKey
+  - ExQueueWorkItem
+  - IoCancelIrp
+  - PoRequestPowerIrp
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - IoReuseIrp
+  - strncmp
+  - KeInitializeMutex
+  - KeInitializeSemaphore
+  - MmBuildMdlForNonPagedPool
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - toupper
+  - _wcsicmp
+  - wcschr
+  - strncpy
+  - strncat
+  - MmUnlockPages
+  - KeStallExecutionProcessor
+  - HalSetBusDataByOffset
+  - HalTranslateBusAddress
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=IL, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=514663335, C=IL, L=Netanya, O=Jungo Connectivity Ltd., CN=Jungo
+        Connectivity Ltd.
+      ValidFrom: '2017-09-07 00:00:00'
+      ValidTo: '2019-12-31 12:00:00'
+      Signature: 32837f5710b7f8f99cf334dea1d853895c69741317a57b8e4841813fc8c6eb34499bd123865761ffde853c1b0058703f4834cc35a4d962daef29b0bb640015a13994f7cf038dc271f880879155962ed69274e43da6262834588badab9812fcbe272ed21c03c25646f059cc0ecf5fb67eedd5a0562046c211399707ada2ad56925e0fbc08e721716fb367fcf1e9cf9d7f14e5a05941157a221275cb514dc44863330b88847354edbceb48d28878632de70d2efed4723aef17a3eda01367c163bd6844dc8eef0314f7cd2016c6b10f89ebfa5f0aa92ad31e067c65d041082d1c3c77a78dcdc1a9be9fdbf3b1845270152cb02c1faa04563a774aab4ec5997760bc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: faf1d8e635d625a5a2942e1918b24f63
+        SHA1: 4af6f904a1381ff20b4ee8796c52b5a14aa55cda
+        SHA256: 9a2af287ffb77a24650c3360e4522bb0c332c1a84620d8c26b5a4f6799588c45
+        SHA384: 325dcd8299488b0abb61a3f988eff1eb6c9309842e1754417689a0d2da554b5faae7478d3389bff0f0518b31be999a59
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
+      ValidFrom: '2014-10-22 00:00:00'
+      ValidTo: '2024-10-22 00:00:00'
+      Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 03019a023aff58b16bd6d5eae617f066
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: a752afee44f017e8d74e3f3eb7914ae3
+        SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
+        SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
+      ValidFrom: '2006-11-10 00:00:00'
+      ValidTo: '2021-11-10 00:00:00'
+      Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 4e5ad189638cf52ba9cd881d4d44668c
+        SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
+        SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
+    Signer:
+    - SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+- Filename: windrvr1281.sys
+  SHA256: fb007d649728eace633ce12eb4287cc3ecf47fbfe1f9a875a7e8e992fa36b972
+  MD5: aac64c8f77dc0fda6765326672a90427
+  SHA1: 0af592a352a2005e06ae0f389bdc50648c12a180
+  Imphash: 043f918df206295e42c363b5288eaaba
+  Authentihash:
+    MD5: 0787146ccf9ea8ae04e33407aa1aff39
+    SHA1: 88d4cbc24cfa5f0aae4e704503989b2293b4f8ff
+    SHA256: 6742c0ff50c1d6357acb67feda2950f5224cdee37d036f18c292392e44b69443
+  RichPEHeaderHash:
+    MD5: 0b59978547b48a5ab72c80c65870e3a1
+    SHA1: 415006c69d832155ed3d987777b1adb4cb63af1c
+    SHA256: b4ec91d40f48f9213a77ba95c1288d7cca55bc818bb2d5488c9aa345787ce35f
+  Sections:
+    .text:
+      Entropy: 6.561013079566458
+      Virtual Size: '0x39208'
+    .rdata:
+      Entropy: 5.068825098791669
+      Virtual Size: '0x1bc4'
+    .data:
+      Entropy: 3.305022516160186
+      Virtual Size: '0x714'
+    .pdata:
+      Entropy: 5.4419799012824726
+      Virtual Size: '0x14e8'
+    INIT:
+      Entropy: 5.319322699997166
+      Virtual Size: '0xce8'
+    .rsrc:
+      Entropy: 3.6075814294538544
+      Virtual Size: '0x4a8'
+    .reloc:
+      Entropy: 3.7950726744424848
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-08-20 03:52:13'
+  Description: WinDriver Device Driver 12.8.1
+  Company: Jungo Connectivity
+  InternalName: windrvr1281.sys
+  OriginalFilename: windrvr1281.sys
+  FileVersion: 12.8.1
+  Product: WinDriver Device Driver (x64)
+  ProductVersion: 12.8.1
+  Copyright: 'Jungo Connectivity Confidential. Copyright (c) 2018 Jungo Connectivity
+    Ltd.  https://www.jungo.com
+
+    '
+  MachineType: AMD64
+  Imports:
+  - USBD.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  - KeReleaseSpinLock
+  - IoAcquireCancelSpinLock
+  - IoAllocateIrp
+  - IoBuildSynchronousFsdRequest
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoFreeIrp
+  - IoGetAttachedDeviceReference
+  - IoReleaseCancelSpinLock
+  - IoGetDeviceProperty
+  - IoOpenDeviceRegistryKey
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwQueryValueKey
+  - KeSetEvent
+  - ExQueueWorkItem
+  - IoCancelIrp
+  - PoRequestPowerIrp
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - strncmp
+  - strncat
+  - DbgPrint
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwSetValueKey
+  - _snprintf
+  - _vsnprintf
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetDmaAdapter
+  - MmGetPhysicalAddress
+  - __C_specific_handler
+  - KeInitializeDpc
+  - KeInsertQueueDpc
+  - KeRemoveQueueDpc
+  - KeAcquireSpinLockRaiseToDpc
+  - IoConnectInterruptEx
+  - IoDisconnectInterrupt
+  - IoDisconnectInterruptEx
+  - strnlen
+  - strncpy
+  - sprintf
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlFreeUnicodeString
+  - IoBuildDeviceIoControlRequest
+  - IoGetDeviceObjectPointer
+  - toupper
+  - ExFreePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - KeDelayExecutionThread
+  - KeInitializeMutex
+  - KeInitializeSemaphore
+  - KeInitializeTimer
+  - KeCancelTimer
+  - KeSetTimer
+  - IoReuseIrp
+  - wcschr
+  - _wcsicmp
+  - RtlCopyUnicodeString
+  - RtlGetVersion
+  - KeDeregisterBugCheckReasonCallback
+  - KeRegisterBugCheckReasonCallback
+  - ExAllocatePoolWithTag
+  - ProbeForRead
+  - ProbeForWrite
+  - IoAttachDeviceToDeviceStack
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - IoIs32bitProcess
+  - IoRaiseInformationalHardError
+  - KeBugCheckEx
+  - KeWaitForSingleObject
+  - KeReleaseMutex
+  - KeInitializeEvent
+  - RtlInitUnicodeString
+  - IoConnectInterrupt
+  - HalTranslateBusAddress
+  - HalSetBusDataByOffset
+  - KeStallExecutionProcessor
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=IL, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=514663335, C=IL, L=Netanya, O=Jungo Connectivity Ltd., CN=Jungo
+        Connectivity Ltd.
+      ValidFrom: '2017-09-07 00:00:00'
+      ValidTo: '2019-12-31 12:00:00'
+      Signature: 32837f5710b7f8f99cf334dea1d853895c69741317a57b8e4841813fc8c6eb34499bd123865761ffde853c1b0058703f4834cc35a4d962daef29b0bb640015a13994f7cf038dc271f880879155962ed69274e43da6262834588badab9812fcbe272ed21c03c25646f059cc0ecf5fb67eedd5a0562046c211399707ada2ad56925e0fbc08e721716fb367fcf1e9cf9d7f14e5a05941157a221275cb514dc44863330b88847354edbceb48d28878632de70d2efed4723aef17a3eda01367c163bd6844dc8eef0314f7cd2016c6b10f89ebfa5f0aa92ad31e067c65d041082d1c3c77a78dcdc1a9be9fdbf3b1845270152cb02c1faa04563a774aab4ec5997760bc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: faf1d8e635d625a5a2942e1918b24f63
+        SHA1: 4af6f904a1381ff20b4ee8796c52b5a14aa55cda
+        SHA256: 9a2af287ffb77a24650c3360e4522bb0c332c1a84620d8c26b5a4f6799588c45
+        SHA384: 325dcd8299488b0abb61a3f988eff1eb6c9309842e1754417689a0d2da554b5faae7478d3389bff0f0518b31be999a59
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
+      ValidFrom: '2014-10-22 00:00:00'
+      ValidTo: '2024-10-22 00:00:00'
+      Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 03019a023aff58b16bd6d5eae617f066
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: a752afee44f017e8d74e3f3eb7914ae3
+        SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
+        SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
+      ValidFrom: '2006-11-10 00:00:00'
+      ValidTo: '2021-11-10 00:00:00'
+      Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 4e5ad189638cf52ba9cd881d4d44668c
+        SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
+        SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
+    Signer:
+    - SerialNumber: 0cbc3f1c8c52bcd0b8e944deec881c52
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
