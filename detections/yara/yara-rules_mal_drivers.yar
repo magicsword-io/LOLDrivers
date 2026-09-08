@@ -804,6 +804,27 @@ rule MAL_Driver_Legalcorp_Pciexpressvideocapture_FD22 {
 		all of them
 }
 
+rule MAL_Driver_Microsoftcorporation_Ampgsys_Microsoftwindowsoperatingsystem_CACA {
+	meta:
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ampg.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
+		author = "Florian Roth"
+		reference = "https://github.com/magicsword-io/LOLDrivers"
+		hash = "cacaf0698c6371f8cc45fae85a13fb738f0b8ce0db716c5e4d0d12152de163e3"
+		date = "2026-09-08"
+		score = 70
+	strings:
+		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]53004400200043007200610073006800640075006d007000200050006f00720074002000440072006900760065007200 } /* FileDescription SDCrashdumpPortDriver */
+		$ = { 43006f006d00700061006e0079004e0061006d006500[1-8]4d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e00 } /* CompanyName MicrosoftCorporation */
+		$ = { 460069006c006500560065007200730069006f006e00[1-8]310030002e0030002e00320036003100300030002e00340032003000320020002800570069006e004200750069006c0064002e003100360030003100300031002e0030003800300030002900 } /* FileVersion WinBuild */
+		$ = { 500072006f006400750063007400560065007200730069006f006e00[1-8]310030002e0030002e00320036003100300030002e003400320030003200 } /* ProductVersion  */
+		$ = { 49006e007400650072006e0061006c004e0061006d006500[1-8]61006d00700067002e00730079007300 } /* InternalName ampgsys */
+		$ = { 500072006f0064007500630074004e0061006d006500[1-8]4d006900630072006f0073006f0066007400ae002000570069006e0064006f0077007300ae0020004f007000650072006100740069006e0067002000530079007300740065006d00 } /* ProductName MicrosoftWindowsOperatingSystem */
+		$ = { 4f0072006900670069006e0061006c00460069006c0065006e0061006d006500[1-8]61006d00700067002e00730079007300 } /* OriginalFilename ampgsys */
+		$ = { 4c006500670061006c0043006f007000790072006900670068007400[1-8]a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e00 } /* LegalCopyright MicrosoftCorporationAllrightsreserved */
+	condition:
+		all of them
+}
+
 rule MAL_Driver_Microsoftcorporation_Ndislansys_Microsoftwindowsoperatingsystem_B0EB {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ndislan.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
