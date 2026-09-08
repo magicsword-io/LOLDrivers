@@ -1,0 +1,37 @@
+title: Driver Load - PlugPlayService.sys
+id: 3f0824b7-a2a5-56a1-9a08-7189aef2ad23
+status: experimental
+description: |
+    Detects loading of driver PlugPlayService.sys via hash.
+    Nextron Systems identified PlugPlayService.sys as a heavily obfuscated, WHQL-signed malicious Windows kernel driver providing arbitrary memory access and direct access to RAID devices. Nextron catalogs this exact sample as an obfuscated kernel PE loader with arbitrary shellcode execution capabilities. Its embedded signature uses Microsoft Windows Hardware Compatibility Publisher. Nextron reports control-flow obfuscation similarities to RegPhantom and reports that xigmapper has deployed similar drivers; these observations do not establish that this exact sample is RegPhantom or was deployed by a particular xigmapper sample. Static analysis confirms encoded indirect calls, system-thread creation, physical-memory mapping, and enumeration of Disk driver device objects. The neonddu.sys sample has byte-identical PE sections and the same Authentihash as PlugPlayService.sys, but has a different embedded signature that fails cryptographic verification; the WHQL signing observation applies to PlugPlayService.sys, not neonddu.sys.
+references:
+    - https://www.loldrivers.io/drivers/03d1a3a2-e76c-4fd5-a134-55ec983fdc4c/
+    - https://x.com/nextronresearch/status/2097265605183234075
+    - https://github.com/NextronSystems/iocs/pull/5
+    - https://github.com/NextronSystems/iocs/blob/e1fb663fa2e0716824a965d6776980cd60b6713b/reports/whql-signed/readme.md
+    - https://www.nextron-systems.com/2026/03/20/regphantom-backdoor-threat-analysis/
+author: Michael Haag
+date: 2026/09/08
+modified: 2026/09/08
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a26abe238cc339da81f4853ab16e1a6a'
+            - 'MD5=16b9fa070d1982ae55051dae1bc73ad4'
+            - 'SHA1=4a0afc37e3a0f180ca3540aabe871d274caafc30'
+            - 'SHA1=e34b7603d8b43ee91ba2f82a648bd18ee8661293'
+            - 'SHA256=08f7a991816ce5009ee593b221853477724469be531961d55ec9f0d13ac5b793'
+            - 'SHA256=8f6d843cdec4d3477867225cf0804850e4901a541e095c01feab5634c3f3de99'
+            - 'IMPHASH=bf2ebfe7fdc706c13b4427fe5fa3413c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
