@@ -1,10 +1,11 @@
 #!/usr/bin/python
 
 '''
-Validates YAML files in a directory against a JSON schema.
+Validates YAML metadata and driver binary filenames.
 '''
 
 import glob
+import hashlib
 import json
 import jsonschema
 import re
@@ -16,6 +17,13 @@ from os import path, walk
 
 # UUID regex pattern (8-4-4-4-12 hex format)
 UUID_PATTERN = re.compile(r'^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$', re.IGNORECASE)
+MD5_PATTERN = re.compile(r'^[a-f0-9]{32}$', re.IGNORECASE)
+SHA256_PATTERN = re.compile(r'^[a-f0-9]{64}$', re.IGNORECASE)
+LFS_POINTER_PATTERN = re.compile(
+    rb'^version https://git-lfs.github.com/spec/v1\r?\n'
+    rb'oid sha256:([a-f0-9]{64})\r?\n',
+    re.IGNORECASE,
+)
 
 
 def check_filename_matches_id(yaml_file, yaml_data):
@@ -57,10 +65,80 @@ def check_hash_length(object, hash_algo, hash_length):
     return None
 
 
-def validate_schema(yaml_dir, schema_file, verbose):
+def collect_sample_hashes(yaml_data, sample_md5s_by_sha256):
+    """Collect valid MD5/SHA256 pairs for validating Git LFS pointers."""
+    for sample in yaml_data.get('KnownVulnerableSamples', []):
+        md5 = sample.get('MD5', '')
+        sha256 = sample.get('SHA256', '')
+        if (
+            isinstance(md5, str)
+            and isinstance(sha256, str)
+            and MD5_PATTERN.fullmatch(md5)
+            and SHA256_PATTERN.fullmatch(sha256)
+        ):
+            sample_md5s_by_sha256.setdefault(sha256.lower(), set()).add(md5.lower())
+
+
+def get_lfs_sha256(driver_file):
+    """Return the object SHA256 when a file is an unhydrated Git LFS pointer."""
+    if Path(driver_file).stat().st_size > 1024:
+        return None
+
+    with open(driver_file, 'rb') as stream:
+        match = LFS_POINTER_PATTERN.match(stream.read())
+    return match.group(1).decode('ascii').lower() if match else None
+
+
+def get_file_md5(driver_file):
+    """Calculate the MD5 used as the canonical driver filename."""
+    digest = hashlib.md5(usedforsecurity=False)
+    with open(driver_file, 'rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def check_driver_filenames(drivers_dir, sample_md5s_by_sha256, verbose=False):
+    """Validate that each .bin filename is the MD5 of its driver content."""
+    errors = []
+
+    for driver_file in sorted(glob.glob(path.join(drivers_dir, "*.bin"))):
+        if verbose:
+            print("processing driver file {0}".format(driver_file))
+
+        filename_md5 = Path(driver_file).stem.lower()
+        lfs_sha256 = get_lfs_sha256(driver_file)
+
+        if lfs_sha256:
+            expected_md5s = sample_md5s_by_sha256.get(lfs_sha256, set())
+            if expected_md5s and filename_md5 not in expected_md5s:
+                expected = ', '.join(sorted(expected_md5s))
+                errors.append(
+                    f"ERROR: Driver filename '{Path(driver_file).name}' does not match "
+                    f"the MD5 for Git LFS object SHA256 '{lfs_sha256}' (expected: {expected})"
+                )
+            elif not MD5_PATTERN.fullmatch(filename_md5):
+                errors.append(
+                    f"ERROR: Driver filename '{Path(driver_file).name}' is not an MD5 hash "
+                    "(expected: 32 hexadecimal characters plus .bin)"
+                )
+            continue
+
+        actual_md5 = get_file_md5(driver_file)
+        if filename_md5 != actual_md5:
+            errors.append(
+                f"ERROR: Driver filename '{Path(driver_file).name}' does not match "
+                f"file MD5 '{actual_md5}' (expected: {actual_md5}.bin)"
+            )
+
+    return errors
+
+
+def validate_schema(yaml_dir, schema_file, verbose, drivers_dir='drivers/'):
 
     error = False
     errors = []
+    sample_md5s_by_sha256 = {}
 
     try:
         with open(schema_file, 'rb') as f:
@@ -103,12 +181,19 @@ def validate_schema(yaml_dir, schema_file, verbose):
                 errors.append(check_error)
                 error = True
 
+        collect_sample_hashes(yaml_data, sample_md5s_by_sha256)
+
+    driver_errors = check_driver_filenames(drivers_dir, sample_md5s_by_sha256, verbose)
+    if driver_errors:
+        errors.extend(driver_errors)
+        error = True
+
     return error, errors
 
 
-def main(yaml_dir, schema_file, verbose):
+def main(yaml_dir, schema_file, verbose, drivers_dir='drivers/'):
 
-    error, errors = validate_schema(yaml_dir, schema_file, verbose)
+    error, errors = validate_schema(yaml_dir, schema_file, verbose, drivers_dir)
 
     for err in errors:
         print(err)
@@ -121,15 +206,16 @@ def main(yaml_dir, schema_file, verbose):
 
 if __name__ == "__main__":
     # grab arguments
-    parser = argparse.ArgumentParser(description="Validates YAML files in a directory against a JSON schema")
+    parser = argparse.ArgumentParser(description="Validates YAML metadata and driver binary filenames")
     parser.add_argument("-y", "--yaml_dir", default='yaml/', help="path to the directory containing YAML files")
     parser.add_argument("-s", "--schema_file", default='bin/spec/drivers.spec.json', help="path to the JSON schema file")
+    parser.add_argument("-d", "--drivers_dir", default='drivers/', help="path to the directory containing driver binaries")
     parser.add_argument("-v", "--verbose", required=False, action='store_true', help="prints verbose output")
     # parse them
     args = parser.parse_args()
     yaml_dir = args.yaml_dir
     schema_file = args.schema_file
+    drivers_dir = args.drivers_dir
     verbose = args.verbose
 
-    main(yaml_dir, schema_file, verbose)
-
+    main(yaml_dir, schema_file, verbose, drivers_dir)
