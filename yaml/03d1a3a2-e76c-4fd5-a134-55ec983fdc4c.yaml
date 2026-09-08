@@ -1,0 +1,292 @@
+Id: 03d1a3a2-e76c-4fd5-a134-55ec983fdc4c
+Tags:
+- PlugPlayService.sys
+- neonddu.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-09-08'
+MitreID: T1014
+Category: malicious
+Commands:
+  Command: ''
+  Description: Nextron Systems identified PlugPlayService.sys as a heavily obfuscated,
+    WHQL-signed malicious Windows kernel driver providing arbitrary memory access
+    and direct access to RAID devices. Nextron catalogs this exact sample as an obfuscated
+    kernel PE loader with arbitrary shellcode execution capabilities. Its embedded
+    signature uses Microsoft Windows Hardware Compatibility Publisher. Nextron reports
+    control-flow obfuscation similarities to RegPhantom and reports that xigmapper
+    has deployed similar drivers; these observations do not establish that this exact
+    sample is RegPhantom or was deployed by a particular xigmapper sample. Static
+    analysis confirms encoded indirect calls, system-thread creation, physical-memory
+    mapping, and enumeration of Disk driver device objects. The neonddu.sys sample
+    has byte-identical PE sections and the same Authentihash as PlugPlayService.sys,
+    but has a different embedded signature that fails cryptographic verification;
+    the WHQL signing observation applies to PlugPlayService.sys, not neonddu.sys.
+  Usecase: Kernel-mode memory access and payload execution.
+  Privileges: kernel
+  OperatingSystem: Windows x64
+Resources:
+- https://x.com/nextronresearch/status/2097265605183234075
+- https://github.com/NextronSystems/iocs/pull/5
+- https://github.com/NextronSystems/iocs/blob/e1fb663fa2e0716824a965d6776980cd60b6713b/reports/whql-signed/readme.md
+- https://www.nextron-systems.com/2026/03/20/regphantom-backdoor-threat-analysis/
+Detection: []
+Acknowledgement:
+  Person: Nextron Systems Research
+  Handle: '@nextronresearch'
+KnownVulnerableSamples:
+- Filename: neonddu.sys
+  MD5: 16b9fa070d1982ae55051dae1bc73ad4
+  SHA256: 08f7a991816ce5009ee593b221853477724469be531961d55ec9f0d13ac5b793
+  SHA1: e34b7603d8b43ee91ba2f82a648bd18ee8661293
+  Imphash: bf2ebfe7fdc706c13b4427fe5fa3413c
+  Authentihash:
+    MD5: 6390f2c0f5b3edd9c6cad31e03339dcc
+    SHA1: 74027fa2287728a599640b2b69c0d7247091d313
+    SHA256: 10d0c1f97625ee033b0bdf4136d47a34779a36cf83b82410722ad51fa50df5a6
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.7529746957983425
+      Virtual Size: '0x14a66'
+    .rdata:
+      Entropy: 4.186474255445014
+      Virtual Size: '0x620'
+    .data:
+      Entropy: 6.024210836260213
+      Virtual Size: '0x6d54'
+    .pdata:
+      Entropy: 4.597320932589694
+      Virtual Size: '0x258'
+    INIT:
+      Entropy: 4.856649542015883
+      Virtual Size: '0x3cd'
+    .reloc:
+      Entropy: 4.72927165066841
+      Virtual Size: '0x100'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-12-12 03:59:51'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - cng.sys
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePool
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IoDriverObjectType
+  - IoEnumerateDeviceObjectList
+  - IoGetDeviceObjectPointer
+  - KeDelayExecutionThread
+  - KeQuerySystemTimePrecise
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByName
+  - ObfDereferenceObject
+  - PsCreateSystemThread
+  - RtlInitUnicodeString
+  - RtlRandomEx
+  - ZwQuerySystemInformation
+  - __chkstk
+  - _vsnwprintf
+  - strlen
+  - strstr
+  - vDbgPrintExWithPrefix
+  - BCryptCloseAlgorithmProvider
+  - BCryptDestroyKey
+  - BCryptExportKey
+  - BCryptFinalizeKeyPair
+  - BCryptGenerateKeyPair
+  - BCryptOpenAlgorithmProvider
+  - KeStallExecutionProcessor
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, ST=Guangdong, L=Shenzhen, O=Shenzhen yundian Technology Co.,
+        Ltd, CN=Shenzhen yundian Technology Co., Ltd
+      ValidFrom: '2013-05-20 00:00:00'
+      ValidTo: '2014-05-20 23:59:59'
+      Signature: 1bae8106004f1ac2702bdcc897bf58debba45fca9d2c72082a3b54ef4a9df3dcbcd1468b1b588d975274ce37c3cbef125a8e334b1c6111e3ffc94eaf9c123b933c93352677f50c077cb8c771b94b21ef4fa882925a14fc580773ed66b54d49f668498e89047687bcc821385abf6ff579af7ab7dc45c60f270476e82fda4176ba85e9a29aa6f747aff19bd13ea0bc850d883e9681e53c5d5f97cb43af98514271b5a90efe591c7ea52aafa4a902fff0904690cd974625557e170b02aa4724010c4b614995ffa54687584f0a09f47e777931c0f132a3836ef31c55310bde34b10bf3cc5a7a546e2432c18645edbf018da59f8be29d4d334be3b78daa6dd35abc70
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 4efa7e7bba65ec1ab774f2b31357d599
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: f830820e8290f2defa077743ca6e7357
+        SHA1: 0b11022d5c65f12b15ea49da29c45a3bd51ff17b
+        SHA256: c3bf6618b96463285ef2dabd06f631513585742cd9f2be85513f4d3763710211
+        SHA384: c6079686cb82480e766a96ebe62d3a61fbf6e7dbbfb79248c0ac191dfe30b2e0017868a50f03a73caef4b8f730f6e014
+    - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 56fe535ce1c79ebca7ed7e536d6a144b518c405e805faaa4e82fef38c804c9ca3ecfdf3a584eb0d4b663c52957fa02059a454d68db2a1bd4343d9f00c35acb9549a56ee1b0c5fc414d414a6fd377c8d7388de419de18f31f1565836d450c53f90a9a2ea55dbf6f32811892196a5500ad631c52067e55d92968ae4a7c189a79886b2323d827382a298776cafbc7b662231fed7a564cdd9c325bf53d0c4618953b2a2368836441d9006d0f1924156872bdc571676eac4cdb90eb51a51a6207d0be6a00473c722fec4f613e7385ce5a0ab7bac01c1375e3223928dd6d1d09469d4fbae8408191c6a4ce94721b01cf2a6e15679589ae7db7b7cdf90a3d75b66b3c25
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
+        SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
+        SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
+    - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
+        thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
+      ValidFrom: '2011-02-22 19:31:57'
+      ValidTo: '2021-02-22 19:41:57'
+      Signature: 2dcc71b5e8ba94ff5ee64467007b6afc412c3ee70e41855ab12a932ba95b89f2f72b499c8003f297b8e760a80ed7fd5de545467594f4ed1c9de166228b61fb29f2c6a8bdf387c98f7f47e1c058b64a1aa2e7f718606969e083069e26c775c40c0d79da746b52b9fae8ea3359b9bb18dd291a14dfd36a37277a9da0dacffffc22c4faf009ff33e93e17ba1cc742cfce2743d30c0c5581303db96060ce02ece19ee81ddc852ce0a18d966d95ac17a4713ea16741b6281d2ce3b615e5b7e5a2f6256d86e320acf9f8314f8e629b9833376d6af735523e90feb03b5fc5b852a9e06ea0479a279e97aea24a9e531939ec357ec659de3ae0aaf533f06abda0821812dea18c4570ca2bd62e959145995a5c240049bd23b30ceca43df5b9e1d1b1825a38eea3fba1ab483a8c5dffa065223fd3d3fe4990db1446a3852e8a554b09ab38b2ab63a008d1fdad48e273d812bcc26ca516fad09ac05e38383a2b718e553aac42197a1f0d4220e7ab5d8c6880524ca1c0d488d02321fb901309007b4937afa9df486022abf4f6c2363bf8513c34bbc586e43ae19f4b90fe5461024b159c34176aa94b8d4cb69d2326c83af1d6b805cdda1d6240183a2f1b41cd3a993a0aa9d1d77eb8c4aff7b8c980105ed55df6ce7a9a02c50f6381efb564e9fc5bd8d2619a68c37cf9c78df91e87d5fa2cf816ae9dab068fc86dc741cda14e84e3dac26ebcfb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611fb0a400000000001d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a3f222107d4e1085e73b5b589c2f480b
+        SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
+        SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
+    Signer:
+    - SerialNumber: 4efa7e7bba65ec1ab774f2b31357d599
+      Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
+      Version: 1
+- Filename: PlugPlayService.sys
+  MD5: a26abe238cc339da81f4853ab16e1a6a
+  SHA1: 4a0afc37e3a0f180ca3540aabe871d274caafc30
+  SHA256: 8f6d843cdec4d3477867225cf0804850e4901a541e095c01feab5634c3f3de99
+  Imphash: bf2ebfe7fdc706c13b4427fe5fa3413c
+  Authentihash:
+    MD5: 6390f2c0f5b3edd9c6cad31e03339dcc
+    SHA1: 74027fa2287728a599640b2b69c0d7247091d313
+    SHA256: 10d0c1f97625ee033b0bdf4136d47a34779a36cf83b82410722ad51fa50df5a6
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Sections:
+    .text:
+      Entropy: 6.7529746957983425
+      Virtual Size: '0x14a66'
+    .rdata:
+      Entropy: 4.186474255445014
+      Virtual Size: '0x620'
+    .data:
+      Entropy: 6.024210836260213
+      Virtual Size: '0x6d54'
+    .pdata:
+      Entropy: 4.597320932589694
+      Virtual Size: '0x258'
+    INIT:
+      Entropy: 4.856649542015883
+      Virtual Size: '0x3cd'
+    .reloc:
+      Entropy: 4.72927165066841
+      Virtual Size: '0x100'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-12-12 03:59:51'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - cng.sys
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePool
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IoDriverObjectType
+  - IoEnumerateDeviceObjectList
+  - IoGetDeviceObjectPointer
+  - KeDelayExecutionThread
+  - KeQuerySystemTimePrecise
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - ObReferenceObjectByName
+  - ObfDereferenceObject
+  - PsCreateSystemThread
+  - RtlInitUnicodeString
+  - RtlRandomEx
+  - ZwQuerySystemInformation
+  - __chkstk
+  - _vsnwprintf
+  - strlen
+  - strstr
+  - vDbgPrintExWithPrefix
+  - BCryptCloseAlgorithmProvider
+  - BCryptDestroyKey
+  - BCryptExportKey
+  - BCryptFinalizeKeyPair
+  - BCryptGenerateKeyPair
+  - BCryptOpenAlgorithmProvider
+  - KeStallExecutionProcessor
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2024-10-10 19:04:53'
+      ValidTo: '2025-10-08 19:04:53'
+      Signature: 3870e583035a72db64856d80e17833cd3badd24f19abf9a3d7c7485743dd875f69102820df4992d74f8fba0529be4e16f4234910064a3a1863299a29b82d3fac869915a368ec0e5d0127282221bce84db444d2e9974dc2761a2080a7bc7508d7064f32b2d97b0263d0d937527a8af95f18bcb54ec21a453ba35e55869791416a2a8813fcf95e889e65158dbb5b4cba653c989179947d286051ef6b0d56f41da479db08c6b93c44fa5c8399e126594cc53dfa756180607a1dd29559061d828b0ce2c5a462245ed0995a196ad96223b6eb1a787b4d10b5a7d4e3a130750103bc9c713fc8f32015273bb238b15aae25e4765d7ab81c5d3df82ef6a7d3c2e7a61dab024ff02df6876a86ec7198aa6e28c8e69a015129a717b1036113911f0aeefa8d05081974d026196f24bc1e4ef942599fafbd1b2c316bda73237f1822296888df2344c92b08c363976beb7020242b3069e6691f19e715e1d1a19ddc03235263c9bb7b8390145af57603105ced358f394547e3be96718835917234eb7fd7134d9fb605656717ed6b15f0583068c84c6c01abf31cc1df1fe7c4d2935590e6017cf8cc5635e1cd7054240fd0059f168e90ec1a49f24e0f050034d99e4aa6599a64d280d00ea8af57d3125caddb342a0b2c160a2f95d97e6045e69dc1c1b3fa56dfd40380ce60536a59750edf0069dc7c27f8ccc8f073b46d169b8fed1fd40ac6f00c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 330000006e1229856f0ade6cfc00000000006e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 3066a9830894e57ce6e47f7a6b58b84f
+        SHA1: ce441ecd2f11e400515a85d5a592da38f950f3dc
+        SHA256: 3e30a731a3b620db0971ecd743ecd312bcdf14c82b9bdc9918102bacbf70520d
+        SHA384: 68c6537d64e3a4f02a2c1d04257c13ab1def23c9c54bafc434176be50a411a75c118c9f8edc81f97b8a1db2dc1d009e3
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 330000006e1229856f0ade6cfc00000000006e
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
