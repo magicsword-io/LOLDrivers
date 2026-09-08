@@ -22,5 +22,5 @@ jobs:
       run: curl -sSL https://install.python-poetry.org | python -
     - name: Install dependencies with Poetry
       run: poetry install
-    - name: Run YAML Checks
+    - name: Run YAML and Driver Checks
       run: poetry run python bin/validate.py -v
