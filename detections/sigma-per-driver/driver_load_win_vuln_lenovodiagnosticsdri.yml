@@ -15,7 +15,7 @@ references:
     - https://github.com/fluffycats31/vulnerable-drivers
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/08/31
+modified: 2026/09/08
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -31,14 +31,14 @@ detection:
             - 'MD5=121ee36aea275809e6dca642fa069091'
             - 'MD5=e0ae49af6741ca8b83b2246cf858f779'
             - 'MD5=b941c8364308990ee4cc6eadf7214e0f'
-            - 'SHA1=45624bb121a249100de540845c5d8995a2c14aa4'
             - 'SHA1=69b2f9735ccaf06c5ba3cd5205e5ffff31e08bc1'
+            - 'SHA1=45624bb121a249100de540845c5d8995a2c14aa4'
             - 'SHA1=a15049e59691214018ca1a6c063e080ab789422e'
             - 'SHA1=b89a8eef5aeae806af5ba212a8068845cafdab6f'
-            - 'SHA256=dc5bae2e403e639ef2ebab4c85b827f75853ed6cfbd122a847784f3d49a79e51'
             - 'SHA256=279cf7f22d08724fa346b8138a35cda22ff4bb7a6d19d2d44e8905b0e9634dfd'
-            - 'SHA256=b4dddea3fed5881aadcc8cce86eb2a50b613b6041bc63477fee4a8e6b0db65f1'
+            - 'SHA256=dc5bae2e403e639ef2ebab4c85b827f75853ed6cfbd122a847784f3d49a79e51'
             - 'SHA256=f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe'
+            - 'SHA256=b4dddea3fed5881aadcc8cce86eb2a50b613b6041bc63477fee4a8e6b0db65f1'
             - 'IMPHASH=225e24ee3c4081a16ef32831b70bf8ef'
             - 'IMPHASH=bbd6160fc0540d3c72d3fb19715bb7e3'
     condition: selection_hashes

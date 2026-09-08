@@ -251,7 +251,7 @@ sc.exe create zntport binPath= C:\windows\temp\zntport.sys type= kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/8fcec30c-f5ca-4aae-b2d8-77af60b78d42.yaml)
 
-*last_updated:* 2026-08-31
+*last_updated:* 2026-09-08
 
 {{< /column >}}
 {{< /block >}}

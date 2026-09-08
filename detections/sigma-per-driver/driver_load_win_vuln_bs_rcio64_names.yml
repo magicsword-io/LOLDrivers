@@ -1,19 +1,15 @@
-title: Driver Load - BS_RCIO64.sys
-id: 8618ea3d-a2ce-5b56-b14d-f94b8382a8e2
+title: Driver Load - bs_rcio64.sys
+id: 516427d4-306b-57c7-b9db-a303da4b4a00
 status: experimental
 description: |
-    Detects loading of driver BS_RCIO64.sys via name.
-    BIOSTAR BS_RCIO64_W10 exposes IOCTLs 0x226004 and 0x226008 that map caller-selected physical addresses with MmMapIoSpace and read from or write to the mapped range. Additional IOCTLs expose raw port and PCI configuration access, providing privileged hardware-control primitives suitable for kernel tampering.
+    Detects loading of driver bs_rcio64.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
 references:
-    - https://www.loldrivers.io/drivers/e7c958da-fd5d-40d6-975e-582c6fee7f69/
-    - https://github.com/jbaines-r7/dellicious
-    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-    - https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L54
-    - https://nephosec.com/cve-biostar-exploit/
-    - https://github.com/fluffycats31/vulnerable-drivers
+    - https://www.loldrivers.io/drivers/cacf18a5-6d7d-4a63-92d4-bda386a3da18/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 author: Michael Haag
-date: 2023/01/09
-modified: 2026/08/31
+date: 2023/07/22
+modified: 2026/09/08
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
