@@ -3,7 +3,7 @@ id: 536ea29e-1989-565b-977a-e3eda6bc9e9c
 status: experimental
 description: |
     Detects loading of driver AsusSAIO.sys via name.
-    ASUS System Analysis IO drivers affected by CVE-2024-55408 expose privileged hardware operations through the \\Device\\ASUSSAIO interface. This 1.0.1.0 build accepts FILE_ANY_ACCESS IOCTLs, including 0x80102074 and 0x80102078, that map caller-selected physical addresses with MmMapIoSpace for read and write operations. The interface also exposes direct I/O-port access without a caller-token authorization check, allowing a local user to cross the user-to-kernel security boundary.
+    ASUS System Analysis IO release lines before 1.0.30.0 and before 3.1.41.0 are affected by CVE-2024-55408. The tracked 1.0.1.0 through 1.0.9.0 builds fall inside the affected 1.x line and expose FILE_ANY_ACCESS platform-control IOCTLs through the \Device\AsusSAIO interface. Capabilities vary by build and include PCI-derived MMIO, SMBus, I/O-port, and model-specific register operations without a caller-token authorization gate, allowing local callers to misuse privileged hardware controls.
 references:
     - https://www.loldrivers.io/drivers/207b30f5-e3da-4eb2-829f-54b946eb526a/
     - https://github.com/magicsword-io/LOLDrivers/issues/409

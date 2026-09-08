@@ -3,7 +3,7 @@ id: 4f4ad9c5-2eb8-518f-9a83-212f80a1c1be
 status: experimental
 description: |
     Detects loading of driver pskmad_64.sys via hash.
-    Panda Kernel Memory Access Driver versions through 1.1.0.21 are affected by CVE-2023-6330, CVE-2023-6331, and CVE-2023-6332. This signed 1.0.0.17 build exposes the \\Device\\PSMEMDriver interface and handles IOCTL 0xB3702C08, which can trigger an out-of-bounds write or disclose arbitrary kernel memory because request data and memory ranges are not adequately validated. The flaws can cause a system crash, leak sensitive kernel data, and may support kernel code execution when chained with another weakness.
+    Panda Kernel Memory Access Driver versions through 1.1.0.21 are affected by CVE-2023-6330, CVE-2023-6331, and CVE-2023-6332. The tracked 1.0.0.16 and 1.0.0.17 builds expose IOCTL 0xB3702C08 through \Device\PSMEMDriver. After a fixed magic value, the request accepts a process, address, and caller-controlled length without relating that length to the fixed buffered-I/O header, allowing kernel-memory disclosure and buffered-output corruption.
 references:
     - https://www.loldrivers.io/drivers/c67ad48b-223e-40f8-bfc7-0cb904d0a3d7/
     - https://github.com/magicsword-io/LOLDrivers/issues/409
@@ -27,8 +27,11 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=9746d407113028f9cdac7031d717203e'
+            - 'MD5=f803473cd0e5d36d02eb58109f1294cd'
+            - 'SHA1=afa8295865d8a9b1d35522bf2e49ced6f2294f4f'
             - 'SHA1=c582269f43c2d4e1894ff53116bccb9f4abc5acc'
             - 'SHA256=7f9a397038732678c52a73e5e2238ab3619e3c1fcb2ce41efc8e5bd38d77f83e'
+            - 'SHA256=db6ffb4100bd35d491ff1c61fb3073049c2c18038d004a6d1e279a95ab8ba2ec'
             - 'IMPHASH=4cc218740b780c7d3e40804b184c2b5d'
     condition: selection_hashes
 falsepositives:

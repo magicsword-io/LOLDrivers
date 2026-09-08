@@ -3,7 +3,7 @@ id: 28f7137d-45b4-5687-a521-26c504a99e1c
 status: experimental
 description: |
     Detects loading of driver hax.sys via name.
-    Intel Hardware Accelerated Execution Manager versions before 7.7.1 are affected by CVE-2022-21812. The signed 7.6.5, 7.6.5.3, and 7.7.0 builds tracked here expose the \\Device\\GHAX interface. Improper access control in the driver allows an authenticated local user to cross the user-to-kernel security boundary and elevate privileges.
+    Intel Hardware Accelerated Execution Manager versions before 7.7.1 are affected by CVE-2022-21812. The tracked 6.1.0 through 7.7.0 IntelHaxm.sys builds all precede the fixed release. Improper access control on the \Device\GHAX interface allows an authenticated local user to cross the user-to-kernel security boundary and elevate privileges.
 references:
     - https://www.loldrivers.io/drivers/9771266b-72e2-4ed3-ac14-1ac25dc5fb25/
     - https://github.com/magicsword-io/LOLDrivers/issues/409

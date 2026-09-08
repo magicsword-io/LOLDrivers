@@ -3,9 +3,11 @@ id: 4afd56d9-86da-5bad-8bc1-af3c53c11e2f
 status: experimental
 description: |
     Detects loading of driver phymem64.sys via name.
-    phymem Application
+    Supermicro phymem drivers expose direct physical-memory operations to user mode. In the tracked 2.3.0.0 build, IOCTL 0x80002000 accepts a physical address and length, maps the range with MmMapIoSpace, builds an MDL, and maps the pages to user mode with MmMapLockedPagesSpecifyCache; 0x80002004 releases the mapping. Adjacent paths provide direct physical-memory reads and port I/O. An administrator with device access can use these primitives to inspect or modify kernel state.
 references:
     - https://www.loldrivers.io/drivers/47fe1aaf-02cd-4a41-8bf5-0047015a2a6e/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
     - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 author: Michael Haag
 date: 2023/01/09

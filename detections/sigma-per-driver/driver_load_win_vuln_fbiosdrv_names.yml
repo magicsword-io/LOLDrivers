@@ -3,7 +3,7 @@ id: 1a6c7913-4919-561b-a2d2-00c31ffc0d19
 status: experimental
 description: |
     Detects loading of driver fbiosdrv.sys via name.
-    Fujitsu BIOS Driver versions before 2.5.0.0 are affected by CVE-2025-65001. This signed 2.4.0.0 build creates the \\Device\\FBIOSDRV interface. A specially crafted request from a local authenticated administrator can trigger an out-of-bounds write, potentially causing arbitrary kernel code execution or a denial of service.
+    Fujitsu BIOS Driver versions before 2.5.0.0 are affected by CVE-2025-65001. The tracked 1.2.1.0 through 2.4.0.0 fBiosDrv.sys builds all precede the fixed release. A crafted request from a local authenticated administrator can trigger an out-of-bounds write, potentially causing arbitrary kernel code execution or denial of service.
 references:
     - https://www.loldrivers.io/drivers/dc82ae79-d3e2-439a-a4c7-ec1f23e1261b/
     - https://github.com/magicsword-io/LOLDrivers/issues/409

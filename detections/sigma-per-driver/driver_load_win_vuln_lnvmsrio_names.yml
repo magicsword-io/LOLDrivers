@@ -3,7 +3,7 @@ id: 985f5d18-4649-5a51-aff8-c21bf90dc1a1
 status: experimental
 description: |
     Detects loading of driver LnvMSRIO.sys via name.
-    LnvMSRIO.sys is a Lenovo Dispatcher driver affected by CVE-2025-8061. Vulnerable Lenovo Dispatcher 3.0 and 3.1 drivers expose the WinMsrDev device interface with insufficient access control. Public research documents primitives for physical memory read (IOCTL 0x9C406104), physical memory write (IOCTL 0x9C40A108), MSR read (IOCTL 0x9C402084), and MSR write (IOCTL 0x9C402088), enabling an authenticated local user to execute code with elevated privileges when Memory Integrity is not enabled. Lenovo reports Dispatcher 3.2 and driver versions 3.1.0.41 and later as not affected.
+    LnvMSRIO.sys is a Lenovo Dispatcher driver affected by CVE-2025-8061. The tracked 3.0.2.28 through 3.1.0.36 builds predate Lenovo's fixed 3.1.0.41 driver. The WinMsrDev interface exposes physical-memory read and write through IOCTLs 0x9C406104 and 0x9C40A108 and MSR read and write through 0x9C402084 and 0x9C402088, allowing an authenticated local user to execute code with elevated privileges when Memory Integrity is not enabled.
 references:
     - https://www.loldrivers.io/drivers/87680018-393b-47b6-8130-6b41bed2bc7c/
     - https://github.com/magicsword-io/LOLDrivers/issues/409

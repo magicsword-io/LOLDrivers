@@ -3,7 +3,7 @@ id: c61f42be-5cb7-5c5c-a69f-b011c57ad48a
 status: experimental
 description: |
     Detects loading of driver LnvMSRIO.sys via hash.
-    LnvMSRIO.sys is a Lenovo Dispatcher driver affected by CVE-2025-8061. Vulnerable Lenovo Dispatcher 3.0 and 3.1 drivers expose the WinMsrDev device interface with insufficient access control. Public research documents primitives for physical memory read (IOCTL 0x9C406104), physical memory write (IOCTL 0x9C40A108), MSR read (IOCTL 0x9C402084), and MSR write (IOCTL 0x9C402088), enabling an authenticated local user to execute code with elevated privileges when Memory Integrity is not enabled. Lenovo reports Dispatcher 3.2 and driver versions 3.1.0.41 and later as not affected.
+    LnvMSRIO.sys is a Lenovo Dispatcher driver affected by CVE-2025-8061. The tracked 3.0.2.28 through 3.1.0.36 builds predate Lenovo's fixed 3.1.0.41 driver. The WinMsrDev interface exposes physical-memory read and write through IOCTLs 0x9C406104 and 0x9C40A108 and MSR read and write through 0x9C402084 and 0x9C402088, allowing an authenticated local user to execute code with elevated privileges when Memory Integrity is not enabled.
 references:
     - https://www.loldrivers.io/drivers/87680018-393b-47b6-8130-6b41bed2bc7c/
     - https://github.com/magicsword-io/LOLDrivers/issues/409
@@ -29,15 +29,36 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=517917ff2e5008c791d007cecab5e335'
             - 'MD5=e2b952939b8e9d76cff7d130b797a74d'
+            - 'MD5=1a2093b0ca0537ecba6d2c83f2d0e6b7'
+            - 'MD5=517917ff2e5008c791d007cecab5e335'
+            - 'MD5=936835d0e5e7c0273c06bf2cdcaaa0e9'
+            - 'MD5=6352e0b787085eac256c1a8ea41322b7'
+            - 'MD5=2bc59df4371b1d1bdcdaa2f4dc119f69'
             - 'MD5=96b3465553341b1eb05a2cb2c4140f6b'
-            - 'SHA1=09528272cbefb4747bb07cdaed6b6f5cb5d3569f'
+            - 'MD5=48c61e32e034b15c5bbae481d7559272'
+            - 'MD5=41b61cad40d1593fae3a9b61257c55b0'
+            - 'MD5=d60fcf12d1c9a95f2033173c06c2083d'
+            - 'SHA1=9d5410a6033c7b3a13c5776ab3ff8160c17bbf20'
             - 'SHA1=f496bc9b6e77fef03f945b48f86b840baf61fe47'
+            - 'SHA1=0284be084b250a01fc01fdc8d3158ea055ee3bdf'
+            - 'SHA1=2511d969c12d56b5d84413af07514d9a0e33c9b9'
             - 'SHA1=0186912447648a5e4b9c9c31d718f605d5e5c925'
+            - 'SHA1=0f2b82c1ce7c82a542d8d781d596bfaaac9b219a'
+            - 'SHA1=09528272cbefb4747bb07cdaed6b6f5cb5d3569f'
+            - 'SHA1=269cc0f1c5222d5147af0dd77102699cbcb5699d'
+            - 'SHA1=339da25d115d67b65d2017139856277a86ed2f17'
+            - 'SHA1=a3a6c2a38f919f3c5d3fa861ff59a6fc40016ffb'
+            - 'SHA256=e76638b04f49ce7b01ed2b6ef66b2ac0e6a02643f8513344b71dfcb4aea13c79'
             - 'SHA256=7023f08c9f99076a5fb82a0f661847e2951800f095fca1793a0e6bd9c949b478'
-            - 'SHA256=245b6ab442a7d53dc30ece28e1c6de727c019669385877cbe929b81aa1a2ad2f'
+            - 'SHA256=358b54bdda20c7459d29857fb815548c00751ef486eed90e3f2e835b0bb42cc4'
             - 'SHA256=977d3b78bdf5723430e2e21cf1eb515a2335a0e370c76fa2dda4315ba062f429'
+            - 'SHA256=072ca56c765c937358d3e79c9ecd803c40283a0c32fc4c78e08ea1709d7a832f'
+            - 'SHA256=b529b658315577e49b9432ec046263a7feca2d3440aea295937350bc974098c4'
+            - 'SHA256=245b6ab442a7d53dc30ece28e1c6de727c019669385877cbe929b81aa1a2ad2f'
+            - 'SHA256=9eee4b43ee454fae44e661265de3025561a59060e8969aaeecce79784794ca4d'
+            - 'SHA256=ec18a0839ff1354dce451926d573e72ce4b2a78782cfceb5b0084e90e77f3220'
+            - 'SHA256=348e7fc97dd20b3db056e3971020da107aa6e82d99be9f04c2d2170f8f39cd58'
             - 'IMPHASH=3b2a2be6141c8dd9d480fe7ab5ede02b'
     condition: selection_hashes
 falsepositives:

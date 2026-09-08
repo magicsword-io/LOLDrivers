@@ -3,7 +3,7 @@ id: 6667861d-8bca-5911-8d07-268d18c6b9aa
 status: experimental
 description: |
     Detects loading of driver LenovoDiagnosticsDriver.sys via name.
-    Lenovo Diagnostics versions before 4.45 are affected by CVE-2022-3699. Public exploit research documents FILE_ANY_ACCESS IOCTLs 0x222010 and 0x222014 in LenovoDiagnosticsDriver.sys that map caller-selected physical addresses and copy values from or to mapped memory. These arbitrary physical-memory read and write primitives allow a low-privileged local user to execute code with elevated privileges.
+    Lenovo Diagnostics versions before 4.45 are covered by CVE-2022-3699. The vulnerable driver behavior tracked here is limited to confirmed 1.0.2.0 through 1.0.4.0 LenovoDiagnosticsDriver.sys builds. Their low-user device ACL exposes FILE_ANY_ACCESS IOCTLs 0x222010 and 0x222014, which map caller-selected physical addresses and provide unrestricted physical-memory read and write primitives. Later 3.1.0.0 code removed the write path, denied Builtin Users, and limited reads to allowlisted PCI registers, so that build is not tracked here.
 references:
     - https://www.loldrivers.io/drivers/81a73e57-2e92-4d21-97d3-1c21eb4c3aea/
     - https://github.com/magicsword-io/LOLDrivers/issues/409

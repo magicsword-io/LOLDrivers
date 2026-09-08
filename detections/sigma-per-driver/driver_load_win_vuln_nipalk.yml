@@ -3,10 +3,12 @@ id: b8299bc7-28be-598f-b1d8-ad56f45fb636
 status: experimental
 description: |
     Detects loading of driver nipalk.sys via hash.
-    nipalk.sys is the NI-PAL (Platform Abstraction Layer) core kernel driver that ships with every National Instruments product including NI-DAQmx, LabVIEW, and NI-VISA. The driver uses a single IOCTL gateway (0xABCD03C4) dispatching to a two-level service table. The device is created with IoCreateDevice (no DACL) and IRP_MJ_CREATE returns STATUS_SUCCESS unconditionally with zero caller validation. Exposes arbitrary physical memory read/write to usermode via ZwOpenSection on Device\PhysicalMemory with SECTION_ALL_ACCESS and ZwMapViewOfSection with PAGE_READWRITE, kernel pages mapped to usermode via MmBuildMdlForNonPagedPool and MmMapLockedPagesSpecifyCache, VA-to-PA translation via MmGetPhysicalAddress, contiguous DMA allocation via MmAllocateContiguousMemorySpecifyCache, full bus read/write, and PCI configuration space access. CVE-2021-38304 covers a different vulnerability class (improper input validation in versions prior to 20.0.1f0) but the physical memory mapping primitives documented here go beyond that CVE scope. EV code signing certificate valid until July 2027.
+    nipalk.sys is the NI-PAL core kernel driver. The tracked 18.0.0f0 build is within NI-PAL versions before 20.0.1f0 affected by CVE-2021-38304, where improper input validation can allow a local user to escalate privileges. The separately tracked 25.8 build is not attributed to that CVE; exact analysis of that build found physical-memory mapping, virtual-to-physical translation, DMA allocation, bus access, and PCI configuration operations reachable through its IOCTL service gateway.
 references:
     - https://www.loldrivers.io/drivers/5ff0ca63-fff8-4c2d-ac04-bb09fc84259f/
     - https://github.com/magicsword-io/LOLDrivers/issues/303
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
     - https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/improper-input-validation-in-ni-pal.html
     - https://nvd.nist.gov/vuln/detail/CVE-2021-38304
 author: Michael Haag
@@ -23,9 +25,13 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=484758b8103a25b25e0d8fe656fd1238'
             - 'MD5=a2aa28c34f463e231af56226f1aaea5d'
             - 'SHA1=75c86d280f6b3e1034668e065f30bffcc4e50d7d'
+            - 'SHA1=c649fa5e592b47fc1123f3efb1a92c584923adfb'
             - 'SHA256=1a6b4d5ad40c9ddf2599f6a44e94a1336aa3d28bf6a220b775f5c3305faecb2d'
+            - 'SHA256=d01c734b309a4ee5425afbb1a3181fcecffe5281dd6d654793a33394fd6b8e10'
+            - 'IMPHASH=357075b56e12f618aaa67809a3d498a5'
             - 'IMPHASH=830e72c6966821b4022e4ce6ac982c64'
     condition: selection_hashes
 falsepositives:

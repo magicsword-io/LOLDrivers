@@ -3,10 +3,13 @@ id: 92c847d6-be4c-5d71-bd58-22926a7ed881
 status: experimental
 description: |
     Detects loading of driver HwOs2Ec10x64.sys via hash.
-    HwOs2Ec
+    Huawei HwOs2Ec 1.0.0.1 exposes kernel process termination to administrative callers. In the tracked HwOs2Ec.sys build, IOCTL 0x22400C accepts a four-byte PID, rejects only PID 0 and PID 4, opens the target with full process access, and calls ZwTerminateProcess. Proofpoint observed this exact signed driver deployed by Cruciferra as an alternative BYOVD helper for tampering with endpoint security tools.
 references:
     - https://www.loldrivers.io/drivers/3ab0d182-6365-47a7-89f4-34121e889503/
+    - https://github.com/magicsword-io/LOLDrivers/issues/409
+    - https://github.com/fluffycats31/vulnerable-drivers
     - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+    - https://www.proofpoint.com/us/blog/threat-insight/unpacking-cruciferra-analysis-sophisticated-crypter-service
 author: Michael Haag
 date: 2023/01/09
 modified: 2026/09/08
@@ -21,9 +24,13 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=63bfd6567f4c704e8ed6530f5cdd704e'
             - 'MD5=37086ae5244442ba552803984a11d6cb'
+            - 'SHA1=080fdb73a6bbc99625c2190730257d1e54723952'
             - 'SHA1=dc0e97adb756c0f30b41840a59b85218cbdd198f'
+            - 'SHA256=c4e93449453cf67c5d5605bb8f425207a738a242fdb432d720acc32faa74926c'
             - 'SHA256=bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc'
+            - 'IMPHASH=dcf524d72961e33f0c6462f869bb6a4a'
             - 'IMPHASH=071356ee9d8c7f91cbe8fa3c448286a2'
     condition: selection_hashes
 falsepositives:
