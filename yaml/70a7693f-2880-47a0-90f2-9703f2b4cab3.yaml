@@ -1,0 +1,38 @@
+Id: 70a7693f-2880-47a0-90f2-9703f2b4cab3
+Tags:
+    - fortimon3.sys
+Author: Robel Campbell
+Created: '2026-09-09'
+MitreID: T1562.001
+CVE:
+    - CVE-2026-84386
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+    Command: ''
+    Description: ''
+    Usecase: ''
+    Privileges: administrator
+    OperatingSystem: Windows 10, Windows 11
+Resources:
+    - 'https://www.fortiguard.com/psirt/FG-IR-26-165'
+    - 'https://halcyon.ai'
+Acknowledgement:
+    Person: 'Robel Campbell, Halcyon'
+    Handle: '@RobelCampbell'
+Detection:
+-   type: sigma
+    value: 'https://github.com/magicsword-io/LOLDrivers/tree/main/detections'
+KnownVulnerableSamples:
+-   Filename: fortimon3.sys
+    MD5: e2b86d1430fbb4cdc6d88ad929713d7a
+    SHA1: f7a69dbb449ca5b965a4ca79f0714b1f4727c527
+    SHA256: 6f131b58dfe47cb7fc721f1023e55242a6f2043fa337467338844fdf338f010f
+    Publisher: Fortinet, Inc.
+    Company: Fortinet Inc.
+    Description: FortiClient File System Filter Driver
+    Product: Fortinet FortiClient
+    FileVersion: 2025.4.30.0
+    MachineType: AMD64
+    OriginalFilename: Fortimon3.sys
+    InternalName: fortimon3.sys
