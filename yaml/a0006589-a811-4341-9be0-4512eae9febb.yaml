@@ -1,0 +1,49 @@
+Id: a0006589-a811-4341-9be0-4512eae9febb
+Tags:
+- kgameprotect.sys
+Verified: 'FALSE'
+Author: Shiroko
+Created: '2026-09-11'
+MitreID: T1562.001
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create kgameprotect binPath= C:\windows\temp\kgameprotect.sys type= kernel && sc.exe start kgameprotect
+  Description: >-
+    kgameprotect.sys exposes FILE_ANY_ACCESS IOCTL 0x222048 through
+    \\.\kgameprotect. The handler accepts a caller-selected PID and opens that
+    process from KernelMode with PROCESS_TERMINATE before calling
+    ZwTerminateProcess. It performs no caller, registered-client, or target-PID
+    authorization on this IOCTL branch.
+  Usecase: >-
+    Terminate selected non-PPL processes to cause denial of service or impair
+    security controls.
+  Privileges: >-
+    Administrator to load; potentially unprivileged to trigger if the applied
+    device DACL permits opening the control device.
+  OperatingSystem: Windows 10, Windows 11 (x64)
+Resources:
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/defining-i-o-control-codes
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-iocreatedevice
+Acknowledgement:
+  Person: Shiroko
+  Handle: '@ShirokoLEET'
+Detection: []
+KnownVulnerableSamples:
+- Filename: kgameprotect.sys
+  MD5: cb1f1880aafd7d9bbdd70c54e56c9dd0
+  SHA1: 86f3b8e26e80db804086f095dd6bee79980d810c
+  SHA256: 6c1d596d18213e24f0c88d58ea7f3ca24114eded806b6198a8abc701251126ee
+  Imphash: 4de3dfcde82ad8ff50165c62d0501064
+  Authentihash:
+    MD5: 1bbaf5dc91831f9138f4ad266a5841d9
+    SHA1: 9f7d0ad9493857ea85e2074688df4244399e6ca6
+    SHA256: abe670579d00b0dbc2c1fc477d8d6e41f3af642e48d60dcf558a171a819137e6
+  CreationTimestamp: '2026-08-05 08:09:11 UTC'
+  FileVersion: 2.7.1.7
+  ProductVersion: 2.7.1.7
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  PDBPath: E:\yj_projects\source\driver\kgameprotect\x64\Release\kgameprotect.pdb
