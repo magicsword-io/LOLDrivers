@@ -4,19 +4,19 @@ const contributors = [
   {
     name: 'Michael Haag',
     profile: 'https://twitter.com/M_haggis',
-    bio: 'Senior Threat Researcher at Splunk',
+    bio: 'and serves as its CTO',
     image: 'michael-headshot.png',
   },
   {
     name: 'Jose Hernandez',
     profile: 'https://twitter.com/_josehelps',
-    bio: 'Director of Threat Research at Splunk (STRT)',
+    bio: "MagicSword's CEO and co-founder",
     image: 'jose-headshot.png',
   },
   {
     name: 'Nasreddine Bencherchali',
     profile: 'https://twitter.com/nas_bench',
-    bio: 'Threat Researcher at Nextron Systems',
+    bio: 'works at Cisco/Splunk',
     image: 'nas-headshot.png',
   },
 ] as const;
@@ -48,6 +48,15 @@ for (const { width, label } of [
       }
 
       await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
+      await expect(page.locator('.people-grid')).not.toContainText(
+        'Nextron Systems',
+      );
+      await expect(page.locator('.people-grid')).not.toContainText(
+        'Senior Threat Researcher at Splunk',
+      );
+      await expect(page.locator('.people-grid')).not.toContainText(
+        'Director of Threat Research at Splunk (STRT)',
+      );
       await expect(
         page.getByRole('heading', {
           name: 'About Living Off The Land Drivers',
@@ -72,10 +81,10 @@ for (const { width, label } of [
         'visit LOLRMM',
       );
       await expect(page.locator('.person-card').nth(0)).toContainText(
-        'the Atomic Red Team project and co-host of Atomics on a Friday.',
+        'He helped found Atomic Red Team, LOLDrivers, and LOLRMM, and co-hosts Atomics on a Friday.',
       );
       await expect(page.locator('.person-card').nth(1)).toContainText(
-        'including Splunk Attack Range, Splunk Security Content, Git-Wild-Hunt, Melting-Cobalt, and BlackCert.',
+        'include Splunk Attack Range, Splunk Security Content, Git-Wild-Hunt, Melting-Cobalt, and BlackCert.',
       );
       await expect(page.locator('.person-card').nth(1)).toContainText(
         'such as Atomic Red Team and LOLBAS.',
@@ -99,7 +108,7 @@ for (const { width, label } of [
       );
       await expect(
         page.getByRole('link', { name: 'Atomic Red Team' }).first(),
-      ).toHaveAttribute('href', 'https://github.com/Atomics-on-A-Friday');
+      ).toHaveAttribute('href', 'https://atomicredteam.io/');
       await expect(
         page.getByRole('link', { name: 'LOLBAS' }).first(),
       ).toHaveAttribute('href', 'https://lolbas-project.github.io/');
