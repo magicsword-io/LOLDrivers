@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — LOLDrivers">
+  <div class="document prose">
+    <div class="eyebrow">Community intelligence</div>
+    <h1>Living Off The Land Drivers</h1>
+    <p>
+      LOLDrivers is a community-maintained catalog of vulnerable and malicious
+      Windows drivers used by adversaries to bypass security controls. The
+      project brings together research, sample metadata, and detection resources
+      for defenders.
+    </p>
+    <h2>The people behind the project</h2>
+    <p>
+      LOLDrivers grew from Michael Haag's driver research and Jose Hernandez's
+      work building the project, with contributions from Nasreddine Bencherchali
+      and the wider security community. Thanks also to Florian Roth and Patrick
+      Bareiss for their early help.
+    </p>
+    <h2>Contribute a finding</h2>
+    <p>
+      Driver records live in YAML in the public repository. Contributions can
+      add samples, improve metadata, or link new research and detections.
+    </p>
+    <div class="resource-links">
+      <a href="https://github.com/magicsword-io/LOLDrivers/blob/main/CONTRIBUTING.md">
+        Contribution guide ↗
+      </a>
+      <a href="https://github.com/magicsword-io/LOLDrivers/issues/new/choose">
+        Submit a finding ↗
+      </a>
+      <a href="https://github.com/magicsword-io/LOLDrivers">
+        GitHub repository ↗
+      </a>
+    </div>
+    <h2>Related projects</h2>
+    <div class="resource-links">
+      <a href="https://lolbas-project.github.io/">LOLBAS ↗</a>
+      <a href="https://gtfobins.github.io/">GTFOBins ↗</a>
+      <a href="https://lolrmm.io/">LOLRMM ↗</a>
+    </div>
+  </div>
+</BaseLayout>
