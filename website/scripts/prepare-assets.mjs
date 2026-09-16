@@ -8,6 +8,9 @@ for (const name of [
   'logo-dark.png',
   'magicsword-logo-dark.png',
   'magicsword-logo-light.png',
+  'michael-headshot.png',
+  'jose-headshot.png',
+  'nas-headshot.png',
 ]) {
   await cp(
     new URL(`images/${name}`, source),
