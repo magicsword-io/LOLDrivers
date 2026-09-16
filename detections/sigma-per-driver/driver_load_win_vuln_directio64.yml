@@ -10,7 +10,7 @@ references:
     - https://github.com/floppywiggler/directio64-disclosure
 author: Michael Haag
 date: 2023/07/22
-modified: 2026/09/08
+modified: 2026/09/16
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -28,8 +28,8 @@ detection:
             - 'SHA1=e44297a2b750ec1958bef265e2f1ae6fa4323b28'
             - 'SHA256=d84e3e250a86227c64a96f6d5ac2b447674ba93d399160850acb2339da43eae5'
             - 'SHA256=b147a26dad59d9109710798b033ec3504a799f02e4356a358d6e32fdf7841b4a'
-            - 'IMPHASH=cef6a450f196b28e634aa3c0655d8eda'
             - 'IMPHASH=e8957f92fb9f2c1b4e23f2ae68c84a43'
+            - 'IMPHASH=cef6a450f196b28e634aa3c0655d8eda'
     condition: selection_hashes
 falsepositives:
     - Unknown
