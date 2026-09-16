@@ -10,9 +10,11 @@ CVE:
 Category: vulnerable driver
 Commands:
   Command: ''
-  Description: DCRCVDrv.sys exposes IOCTL 0x2205C0 which allows user-mode applications
-    to terminate arbitrary processes from the kernel via ZwTerminateProcess. The IOCTL
-    input buffer contains the PID to terminate. Abused by the Cruciferra MaaS loader,
+  Description: DCRCVDrv.sys exposes IOCTL 0x2205C0 to request kernel-mode process
+    termination for a caller-supplied PID. The handler requires at least four input
+    bytes and reaches ZwTerminateProcess through a process-handle acquisition helper.
+    Access requires the driver to be loaded and its device to be accessible; successful
+    termination of protected processes is not established. Abused by the Cruciferra MaaS loader,
     which writes the driver to C:\Windows\Temp\DCRCVDrv.sys, creates a service for
     it, and opens a handle via the symbolic link \\.\DCRCVDRV_U to kill AV/EDR processes.
   OperatingSystem: Windows
@@ -22,19 +24,20 @@ Resources:
 - https://www.esentire.com/blog/malware-as-a-service-cocktail-errtraffic-and-cruciferra-killing-your-edr-since-2025
 - https://github.com/magicsword-io/LOLDrivers/issues/412
 - https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend
+- https://github.com/DeathShotXD/0xCr0ssCrush/blob/main/docs/dcrcv-analysis.md
 Detection:
 - type: ''
   value: ''
 Acknowledgement:
-  Handle: '@eSentire_TRU'
-  Person: eSentire Threat Response Unit (TRU)
+  Handle: '@eSentire_TRU, @0xDeathShotXD'
+  Person: eSentire Threat Response Unit (TRU), DeathShotXD
 KnownVulnerableSamples:
 - Filename: DCRCVDrv.sys
   MD5: 567c158ee0858f8e941d4ab7a6c18dbc
   SHA1: 47d922b0fd5d704025d14ef98ded46e74830a423
   SHA256: 87e8d39db624f37d3e77aedf487a2dfd197f71a4730ea74f4e7a4341deaec2ff
   Signature:
-  - MocoMsys
+  - Microsoft Windows Hardware Compatibility Publisher
   Imphash: 3be3ab07a4108143e8c2d10beeaa1788
   Authentihash:
     MD5: d6f560a8e5f5476a632e83814ded5a7f
