@@ -65,49 +65,8 @@ C:\WINDOWS\System32\DriverStore\FileRepository
 
 ## 🏗️ Building and Testing Locally
 
-The Astro redesign is available as a separate review site in [`website/`](website/README.md), with local development instructions and a PR workflow that uploads a runnable static preview. The steps below build the current Hugo production site.
+The primary website uses **Astro** in [`website/`](website/README.md). See that guide for Node 24 / Python 3.11 setup, public API generation, local previews, and browser checks. Hugo and Go are no longer required to build or deploy the website.
 
-### Requirements
+The `Deploy Site` workflow validates production artifacts on pull requests and publishes the tested Astro artifact to GitHub Pages after a push to `main`. The separate preview workflow keeps analytics disabled. Tagged releases package driver downloads without deploying a website.
 
-* [Python 3.10](https://www.python.org/downloads/)
-* [Poetry](https://python-poetry.org/docs/#installation)
-* [Golang](https://go.dev/dl/)
-* [Hugo](https://gohugo.io/)
-
-### Steps to Build and Test Locally
-
-1. Clone the repository:
-
-```
-git clone https://github.com/magicsword-io/LOLDrivers.git
-```
-
-2. Change to the project directory:
-
-```
-cd LOLDrivers
-```
-
-3. Install dependencies:
-
-```
-poetry install
-```
-
-4. Activate the virtual environment:
-
-```
-poetry shell
-```
-
-5. Build the site using the files under the /yaml folder:
-
-```
-python bin/site.py
-```
-
-6. Run the website locally:
-
-```
-cd loldrivers.io && hugo serve
-```
+See the [production migration and rollback guide](docs/astro-migration.md) for the URL contract and remaining maintenance work.

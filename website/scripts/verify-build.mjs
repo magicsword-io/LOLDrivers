@@ -4,6 +4,7 @@ import { resolve, join } from 'node:path';
 
 const root = resolve(process.argv[2] || 'dist');
 const analytics = process.argv.includes('--analytics');
+const production = process.argv.includes('--production');
 const ids = (await readdir('../yaml'))
   .filter((name) => name.endsWith('.yaml'))
   .map((name) => name.slice(0, -5));
@@ -33,6 +34,16 @@ for (const path of [
     analytics ? 1 : 0,
     `${path}: analytics gating`,
   );
+  assert.equal(
+    html.includes('ASTRO REVIEW PREVIEW'),
+    !production,
+    `${path}: preview banner`,
+  );
+  assert.equal(
+    html.includes('noindex,nofollow'),
+    !production,
+    `${path}: indexing`,
+  );
   assert.ok(
     html.includes('/images/logo-dark.png') && html.includes('/images/logo.png'),
     `${path}: brand logos`,
@@ -52,6 +63,20 @@ for (const id of ids) {
   const html = await read(`drivers/${id}/index.html`);
   const raw = JSON.parse(await read(`data/drivers/${id}.json`));
   assert.equal(raw.Id, id);
+  assert.equal(
+    html.includes('ASTRO REVIEW PREVIEW'),
+    !production,
+    `${id}: preview banner`,
+  );
+  assert.equal(
+    html.includes('noindex,nofollow'),
+    !production,
+    `${id}: indexing`,
+  );
+  assert.ok(
+    html.includes(`https://www.loldrivers.io/drivers/${id}/`),
+    `${id}: canonical`,
+  );
   assert.equal(
     (html.match(/aria-label="MagicSword prevention"/g) || []).length,
     1,
@@ -76,3 +101,47 @@ for (const id of ids) {
 console.log(
   `Verified ${ids.length} UUID routes, all sample counts, banners, logos, search budget, and ${analytics ? 'enabled' : 'disabled'} analytics.`,
 );
+
+const sitemap = await read('sitemap.xml');
+const feed = await read('index.xml');
+const legacySearch = JSON.parse(await read('index.json'));
+assert.equal(legacySearch.length, ids.length);
+for (const id of ids) {
+  assert.ok(
+    sitemap.includes(`<loc>https://www.loldrivers.io/drivers/${id}/</loc>`),
+  );
+  assert.ok(
+    feed.includes(`<guid>https://www.loldrivers.io/drivers/${id}/</guid>`),
+  );
+}
+assert.ok(
+  (await read('robots.txt')).includes(production ? 'Allow: /' : 'Disallow: /'),
+);
+if (production) {
+  const api = JSON.parse(await read('api/drivers.json'));
+  assert.deepEqual(api.map((driver) => driver.Id).sort(), ids.sort());
+  for (const driver of api) {
+    assert.deepEqual(
+      // Python retains -0.0; JavaScript JSON serialization writes 0. Normalize
+      // that representation before comparing otherwise identical catalog records.
+      JSON.parse(JSON.stringify(driver)),
+      JSON.parse(await read(`data/drivers/${driver.Id}.json`)),
+      `${driver.Id}: public API diverged from website source`,
+    );
+  }
+  for (const path of [
+    'api/drivers.csv',
+    'drivers_table.csv',
+    'projects.csv',
+    'drivers_top_5_products.csv',
+    'drivers_top_5_publishers.csv',
+  ]) {
+    assert.ok(
+      (await stat(join(root, path))).size > 0,
+      `${path}: missing download`,
+    );
+  }
+  console.log(
+    'Verified production indexing, legacy endpoints, and same-revision public API records.',
+  );
+}

@@ -8,6 +8,9 @@ for (const name of [
   'logo-dark.png',
   'magicsword-logo-dark.png',
   'magicsword-logo-light.png',
+  'michael-headshot.png',
+  'jose-headshot.png',
+  'nas-headshot.png',
 ]) {
   await cp(
     new URL(`images/${name}`, source),
@@ -17,3 +20,15 @@ for (const name of [
 await cp(new URL('favicons/', source), new URL('favicons/', target), {
   recursive: true,
 });
+
+// Preserve existing public downloads which are not generated from the catalog.
+for (const name of [
+  'projects.csv',
+  'drivers_top_5_products.csv',
+  'drivers_top_5_publishers.csv',
+]) {
+  await cp(
+    new URL(`../../loldrivers.io/content/${name}`, import.meta.url),
+    new URL(name, target),
+  );
+}

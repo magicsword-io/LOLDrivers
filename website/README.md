@@ -1,8 +1,19 @@
 # LOLDrivers Astro website
 
-The approved redesign is implemented here as a static Astro review site. The existing Hugo site and production GitHub Pages workflows remain in `loldrivers.io/` and `.github/workflows/`. Merging this preview implementation does not switch the production site.
+This is the primary LOLDrivers website. `Deploy Site` builds Astro and publishes its validated `dist/` artifact to GitHub Pages at **https://www.loldrivers.io/** on main pushes. Pull requests validate the same production configuration without deployment permissions. Tagged releases do not publish a website. Legacy Hugo files remain as historical content and shared asset sources; Hugo is not part of the website build.
 
 ## Run locally
+
+Use Node 24 (`.nvmrc`) and Python 3.11. From the repository root, create an environment and generate the legacy public APIs from the same YAML used by Astro:
+
+```sh
+python3.11 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r website/requirements.txt
+python bin/export-api.py --output website/public/api
+```
+
+Re-run the exporter after YAML changes. It shares the established Python CSV formatter with the maintenance generator; it reads no driver binaries and downloads no blocklists.
 
 Use Node 24 (see `.nvmrc`; minimum supported version for the locked dependencies is 22.19).
 
@@ -12,7 +23,7 @@ npm ci
 npm run dev -- --host 127.0.0.1 --port 55060
 ```
 
-For a production-style preview:
+For a local review build (analytics disabled, preview notice and noindex enabled):
 
 ```sh
 npm run build
@@ -31,7 +42,7 @@ In Conductor, use the workspace's `$CONDUCTOR_PORT` instead of a fixed port when
 - Existing Defender and Splunk query text and attribution, and the existing community tool destinations.
 - Google Analytics component retaining `G-33C5VXLWPQ`. It is **off by default**. An explicit `PUBLIC_ENABLE_ANALYTICS=true` production build enables it; development does not. Normal document navigation emits the normal Google tag page view. There is no client-side router or duplicate manual page-view handler.
 
-The full driver JSON never enters the client JavaScript bundle. The explorer loads `/data/search.json` separately. Each `/data/drivers/<UUID>.json` record is generated from the same YAML as its page. Public API download links continue to use the existing production JSON/CSV endpoints; those exports can differ from unmerged YAML changes in a review branch.
+The full driver JSON never enters the client JavaScript bundle. The explorer loads `/data/search.json` separately. Each `/data/drivers/<UUID>.json` record is generated from the same YAML as its page. Production includes `/api/drivers.json`, `/api/drivers.csv`, and `/drivers_table.csv` generated from the same source revision as the pages. Production verification compares every API record against the page metadata. API links use the public domain, so review builds still link to live production downloads.
 
 ## Review a PR before merging
 
@@ -48,7 +59,7 @@ python3 -m http.server 4321
 
 Open `http://localhost:4321/`. Serve the artifact over HTTP; root-relative links will not work by double-clicking its HTML files. Artifact review needs no deployment credentials and works for fork PRs.
 
-This workflow **does not create a hosted preview URL**. To add hosted PR previews, connect a separate Netlify or Cloudflare Pages project to the repository, set the site build command to `npm --prefix website ci && npm --prefix website run build`, publish `website/dist`, and set Node 24 and `PUBLIC_ENABLE_ANALYTICS=false`. Keep repository root as the working directory for those commands so YAML and existing assets remain available. The provider connection is not configured by this PR. The production GitHub Pages site continues using Hugo until an explicit cutover.
+This workflow **does not create a hosted preview URL**. To add hosted PR previews, connect a separate Netlify or Cloudflare Pages project to the repository, set the site build command to `npm --prefix website ci && npm --prefix website run build`, publish `website/dist`, and set Node 24 and `PUBLIC_ENABLE_ANALYTICS=false`. Keep repository root as the working directory for those commands so YAML and existing assets remain available. The provider connection is not configured by this PR. Production is served independently by the Astro `Deploy Site` workflow.
 
 ## Validate
 
@@ -67,3 +78,19 @@ npm test
 The browser suite checks exact non-first-sample hash lookup, filters, pagination, URL restoration, unknown evidence, no-result and retry states, on-demand metadata, no-JavaScript browsing, persistent themes, responsive layout, and absence of analytics requests from previews. The artifact report contains homepage and driver screenshots at desktop and phone widths.
 
 See [the migration checklist](../docs/astro-migration.md) for production cutover and the existing build issues identified during design review.
+
+## Production validation and deployment
+
+From `website/`, after running the exporter above:
+
+```sh
+PUBLIC_SITE_MODE=production PUBLIC_ENABLE_ANALYTICS=true npm run build
+npm run verify:build -- dist --analytics --production
+TEST_PRODUCTION=true npm test
+```
+
+`PUBLIC_SITE_MODE=production` removes the review notice/noindex and allows crawling. Analytics is controlled separately by `PUBLIC_ENABLE_ANALYTICS=true`. Production browser tests intercept Google requests so QA does not send analytics traffic. Preview builds leave both production settings off. `verify:analytics` checks initialization without contacting Google.
+
+The production workflow runs the exporter compatibility tests, formatting/types, full artifact verification, and Chromium against the actual production artifact before uploading it. Only main pushes or manual runs on main can deploy; the deploy job alone gets Pages/OIDC permissions. All production runs share a concurrency group. The artifact contains `source-revision.txt` and is retained for 30 days.
+
+Legacy `/index.json`, RSS URLs, sitemap, robots, CSV downloads, and UUID routes are preserved. Empty legacy taxonomy pages redirect to the driver directory. See the [migration guide](../docs/astro-migration.md) for rollback and post-merge checks.

@@ -33,6 +33,7 @@ jobs:
         working-directory: website
     env:
       PUBLIC_ENABLE_ANALYTICS: 'false'
+      PUBLIC_SITE_MODE: preview
       ASTRO_TELEMETRY_DISABLED: '1'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

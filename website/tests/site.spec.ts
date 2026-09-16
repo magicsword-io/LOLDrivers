@@ -4,6 +4,14 @@ import type { DriverSummary } from '../src/lib/drivers';
 const catalog: DriverSummary[] = JSON.parse(
   readFileSync('dist/data/search.json', 'utf8'),
 );
+const production = process.env.TEST_PRODUCTION === 'true';
+test.beforeEach(async ({ context }) => {
+  // Exercise production markup without sending QA traffic to the real property.
+  await context.route(
+    /https:\/\/(www\.)?(googletagmanager|google-analytics)\.com\//,
+    (route) => route.abort(),
+  );
+});
 const total = catalog.length;
 const malicious = catalog.filter(
   (driver) => driver.category === 'malicious',
@@ -37,7 +45,7 @@ test('searches non-first sample hashes, persists URL state, and opens the matchi
         url.includes('google-analytics.com') ||
         url.includes('googletagmanager.com'),
     ),
-  ).toBe(false);
+  ).toBe(production);
   await page.locator('#rows .filename').click();
   await expect(page).toHaveURL(new RegExp(`/drivers/${dell}/`));
   await expect(page.locator('#sample-2')).toHaveAttribute('open', '');
@@ -159,3 +167,53 @@ for (const width of [390, 1440]) {
     expect(errors).toEqual([]);
   });
 }
+
+test('production mode, public downloads, and discovery endpoints', async ({
+  page,
+  request,
+}) => {
+  await page.goto('/');
+  await expect(
+    page.getByText('ASTRO REVIEW PREVIEW', { exact: true }),
+  ).toHaveCount(production ? 0 : 1);
+  await expect(page.locator('meta[name="robots"]')).toHaveCount(
+    production ? 0 : 1,
+  );
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    'https://www.loldrivers.io/',
+  );
+  for (const path of [
+    '/sitemap.xml',
+    '/index.xml',
+    '/drivers/index.xml',
+    '/about/index.xml',
+    '/tags/index.xml',
+    '/categories/index.xml',
+    '/index.json',
+    '/robots.txt',
+    '/projects.csv',
+    '/drivers_top_5_products.csv',
+    '/drivers_top_5_publishers.csv',
+  ]) {
+    expect((await request.get(path)).status(), path).toBe(200);
+  }
+  if (production) {
+    const api = await request.get('/api/drivers.json');
+    expect(api.status()).toBe(200);
+    const entries = await api.json();
+    expect(entries).toHaveLength(total);
+    expect(
+      entries.find((entry: { Id: string }) => entry.Id === dell)
+        .KnownVulnerableSamples[1].SHA256,
+    ).toBe(secondSample);
+    for (const path of ['/api/drivers.csv', '/drivers_table.csv']) {
+      const response = await request.get(path);
+      expect(response.status()).toBe(200);
+      expect(await response.text()).toContain(dell);
+    }
+    expect(await (await request.get('/robots.txt')).text()).toContain(
+      'Allow: /',
+    );
+  }
+});
