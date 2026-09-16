@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MagicSwordBanner from '../components/MagicSwordBanner.astro';
+import DriverExplorer from '../components/DriverExplorer.astro';
+import ResourceCards from '../components/ResourceCards.astro';
+import { drivers, totals, driverPath } from '../lib/drivers';
+const featured = drivers[0];
+const stats = [
+  ['Driver entries', totals.entries, 'Vulnerable & malicious drivers'],
+  ['Known samples', totals.samples, 'Across all catalog entries'],
+  ['Load despite HVCI', totals.yes, 'Samples with a recorded TRUE result'],
+  ['HVCI status unknown', totals.unknown, 'Samples without a recorded result'],
+] as const;
+---
+
+<BaseLayout>
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <div class="eyebrow">
+        <span class="dot"></span>Living Off The Land Drivers
+      </div>
+      <h1 id="hero-title">
+        Know the driver.
+        <br />
+        <span>Understand the risk.</span>
+      </h1>
+      <p class="intro">
+        Explore vulnerable and malicious Windows drivers. Find the hashes,
+        examine the evidence, and put detections to work.
+      </p>
+      <div class="hero-actions">
+        <a href="#explorer">Find a driver ↓</a>
+        <a href="/detections/">Get detections →</a>
+        <a href="/tools/">Explore tools →</a>
+      </div>
+    </div>
+    {featured && (
+      <article class="research">
+        <div class="research-top">
+          <span>Recently added</span>
+          <time>{featured.created}</time>
+        </div>
+        <h2>{featured.name}</h2>
+        <p>
+          {featured.description.length > 180
+            ? featured.description.slice(0, 180).replace(/\s+\S*$/, '') + '…'
+            : featured.description ||
+              'Explore sample hashes, recorded metadata, and references for this driver.'}
+        </p>
+        <div class="research-bottom">
+          <span
+            class:list={[
+              'badge',
+              featured.category === 'malicious' ? 'malicious' : 'vulnerable',
+            ]}
+          >
+            {featured.category === 'malicious' ? 'Malicious' : 'Vulnerable'}
+          </span>
+          <a href={driverPath(featured.id)} class="accent small">
+            Examine driver →
+          </a>
+        </div>
+      </article>
+    )}
+  </section>
+  <div class="stats" aria-label="Dataset summary">
+    {stats.map(([label, value, note], i) => (
+      <div class="stat">
+        <div class="stat-label">{label}</div>
+        <div class:list={['stat-value', { yes: i === 2 }]}>
+          {value.toLocaleString('en-US')}
+        </div>
+        <div class="stat-note">{note}</div>
+      </div>
+    ))}
+  </div>
+  <MagicSwordBanner />
+  <DriverExplorer />
+  <ResourceCards />
+</BaseLayout>

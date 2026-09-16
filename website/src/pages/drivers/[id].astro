@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MagicSwordBanner from '../../components/MagicSwordBanner.astro';
+import {
+  rawDrivers,
+  summarize,
+  strings,
+  text,
+  object,
+  status,
+  safeUrl,
+  sampleDownload,
+} from '../../lib/drivers';
+import type { RawDriver } from '../../lib/drivers';
+export function getStaticPaths() {
+  return rawDrivers.map((raw) => ({ params: { id: raw.Id }, props: { raw } }));
+}
+interface Props {
+  raw: RawDriver;
+}
+const { raw } = Astro.props;
+const driver = summarize(raw);
+const cves = [...new Set([...strings(raw.CVE), ...strings(raw.CVEs)])];
+const resources = strings(raw.Resources)
+  .map(safeUrl)
+  .filter((url): url is string => Boolean(url));
+const acknowledgement = object(raw.Acknowledgement);
+const detections = (Array.isArray(raw.Detection) ? raw.Detection : [])
+  .map((value) => object(value))
+  .filter((value) => safeUrl(value.value));
+const hasSHA256 = (value: unknown) => /^[a-f0-9]{64}$/i.test(text(value));
+const fields = (sample: Record<string, unknown>) =>
+  [
+    ...['MD5', 'SHA1', 'SHA256', 'Imphash'].map((key) => [
+      key,
+      text(sample[key]),
+    ]),
+    ...Object.entries(object(sample.Authentihash)).map(([key, value]) => [
+      `Authentihash ${key}`,
+      text(value),
+    ]),
+  ].filter(([, value]) => Boolean(value) && value !== '-');
+---
+
+<BaseLayout
+  title={`${driver.name} — LOLDrivers`}
+  description={
+    driver.description.slice(0, 180) ||
+    `Driver metadata and sample hashes for ${driver.name}.`
+  }
+>
+  <div class="driver-main">
+    <a class="crumb" href="/#explorer">
+      ← Back to driver explorer
+    </a>
+    <div class="driver-top">
+      <span class="eyebrow">Driver intelligence</span>
+      <span
+        class:list={[
+          'badge',
+          driver.category === 'malicious' ? 'malicious' : 'vulnerable',
+        ]}
+      >
+        {driver.category === 'malicious' ? 'Malicious' : 'Vulnerable'}
+      </span>
+      <span class="badge">{driver.verified ? 'Verified' : 'Unverified'}</span>
+    </div>
+    <h1>{driver.name}</h1>
+    <p class="driver-description">
+      {driver.description || 'Description not recorded.'}
+    </p>
+    <div class="driver-meta">
+      <span>UUID / {driver.id}</span>
+      <span>ADDED / {driver.created}</span>
+      <span>AUTHOR / {text(raw.Author)}</span>
+    </div>
+    {!driver.verified && (
+      <p class="notice">
+        The project has not confirmed this driver's sample hashes.
+      </p>
+    )}
+    <MagicSwordBanner driverName={driver.name} />
+    <div class="driver-sections">
+      <div>
+        <section id="samples" aria-labelledby="samples-heading">
+          <h2 id="samples-heading">
+            Known samples <span class="small">{driver.samples}</span>
+          </h2>
+          <p class="sample-note">
+            {driver.yes} recorded TRUE · {driver.no} recorded FALSE ·{' '}
+            {driver.unknown} unknown for loading despite HVCI. Results apply to
+            individual samples.
+          </p>
+          {raw.KnownVulnerableSamples.map((sample, index) => (
+            <details
+              class="sample"
+              id={`sample-${index + 1}`}
+              open={index === 0}
+              data-hashes={fields(sample)
+                .map(([, value]) => value.toLowerCase())
+                .join(' ')}
+            >
+              <summary>
+                <span>{text(sample.Filename) || driver.name}</span>
+                <span class="small">
+                  Sample {index + 1} ·{' '}
+                  {status(sample.LoadsDespiteHVCI) === 'yes'
+                    ? 'HVCI TRUE'
+                    : status(sample.LoadsDespiteHVCI) === 'no'
+                      ? 'HVCI FALSE'
+                      : 'HVCI unknown'}
+                </span>
+              </summary>
+              <dl>
+                {fields(sample).map(([label, value]) => (
+                  <>
+                    <dt>{label}</dt>
+                    <dd>
+                      <code>{value}</code>
+                      <button
+                        type="button"
+                        class="copy-button"
+                        data-copy={value}
+                        aria-label={`Copy ${label} for sample ${index + 1}`}
+                      >
+                        Copy
+                      </button>
+                    </dd>
+                  </>
+                ))}
+                <dt>Machine</dt>
+                <dd>
+                  {text(sample.MachineType) ||
+                    text(sample.Machine) ||
+                    'Not recorded'}
+                </dd>
+                <dt>Version</dt>
+                <dd>{text(sample.FileVersion) || 'Not recorded'}</dd>
+                <dt>Publisher</dt>
+                <dd>
+                  {text(sample.Publisher) ||
+                    text(sample.Company) ||
+                    text(sample.CompanyName) ||
+                    'Not recorded'}
+                </dd>
+              </dl>
+              <div class="sample-actions">
+                {sampleDownload(sample) && (
+                  <a href={sampleDownload(sample)}>
+                    Download{' '}
+                    {driver.category === 'malicious'
+                      ? 'malicious'
+                      : 'vulnerable'}{' '}
+                    sample ↗
+                  </a>
+                )}
+                {hasSHA256(sample.SHA256) && (
+                  <a
+                    href={`https://www.virustotal.com/gui/file/${text(sample.SHA256)}`}
+                  >
+                    View on VirusTotal ↗
+                  </a>
+                )}
+                <button
+                  class="outline"
+                  data-load-sample={index}
+                  data-driver-id={driver.id}
+                  aria-expanded="false"
+                  aria-controls={`metadata-${index}`}
+                >
+                  Load full sample metadata
+                </button>
+              </div>
+              <pre class="metadata" id={`metadata-${index}`} hidden></pre>
+            </details>
+          ))}
+        </section>
+        {text(raw.Commands?.Command) && (
+          <section class="document-section">
+            <h2>Recorded command</h2>
+            <pre><code>{text(raw.Commands?.Command)}</code></pre>
+            <p class="sample-note">
+              {text(raw.Commands?.Usecase)} · Privileges:{' '}
+              {text(raw.Commands?.Privileges) || 'Not recorded'} · OS:{' '}
+              {text(raw.Commands?.OperatingSystem) || 'Not recorded'}
+            </p>
+          </section>
+        )}
+        {resources.length > 0 && (
+          <section class="document-section">
+            <h2>Research & references</h2>
+            <ul class="reference-list">
+              {resources.map((url) => (
+                <li>
+                  <a href={url}>{url} ↗</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {(text(acknowledgement.Person) || text(acknowledgement.Handle)) && (
+          <p class="sample-note">
+            Acknowledgement: {text(acknowledgement.Person)}{' '}
+            {text(acknowledgement.Handle)}
+          </p>
+        )}
+      </div>
+      <aside class="driver-help">
+        <h2>Investigate this driver</h2>
+        <a
+          href={`https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/${driver.id}.yaml`}
+        >
+          Inspect source YAML ↗
+        </a>
+        <a href={`/data/drivers/${driver.id}.json`}>Download record JSON ↓</a>
+        <a href="/detections/">Browse detection resources →</a>
+        {text(raw.MitreID) && <p>MITRE ATT&CK: {text(raw.MitreID)}</p>}
+        {cves.length > 0 && (
+          <>
+            <h3>Recorded CVEs</h3>
+            {cves.map((cve) => (
+              <a
+                href={`https://www.cve.org/CVERecord?id=${encodeURIComponent(cve)}`}
+              >
+                {cve} ↗
+              </a>
+            ))}
+          </>
+        )}
+        {detections.length > 0 && (
+          <>
+            <h3>Detection links</h3>
+            {[
+              ...new Map(
+                detections.map((item) => [text(item.value), item]),
+              ).values(),
+            ].map((item) => (
+              <a href={safeUrl(item.value)}>
+                {text(item.type).replaceAll('_', ' ') || 'Detection resource'} ↗
+              </a>
+            ))}
+          </>
+        )}
+      </aside>
+    </div>
+    <p
+      id="copy-feedback"
+      role="status"
+      aria-live="polite"
+      class="sample-note"
+    ></p>
+  </div>
+</BaseLayout>
+<script src="../../scripts/driver.ts"></script>

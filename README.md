@@ -65,6 +65,8 @@ C:\WINDOWS\System32\DriverStore\FileRepository
 
 ## 🏗️ Building and Testing Locally
 
+The Astro redesign is available as a separate review site in [`website/`](website/README.md), with local development instructions and a PR workflow that uploads a runnable static preview. The steps below build the current Hugo production site.
+
 ### Requirements
 
 * [Python 3.10](https://www.python.org/downloads/)

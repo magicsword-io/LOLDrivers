@@ -1,0 +1,11 @@
+node_modules/
+.astro/
+dist/
+public/images/
+public/favicons/
+playwright-report/
+test-results/
+.analytics-check/
+
+# The repository's Python ignore rules also match application source folders.
+!src/lib/
