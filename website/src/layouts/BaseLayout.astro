@@ -9,7 +9,7 @@ const {
   title = 'LOLDrivers — Living Off The Land Drivers',
   description = 'Explore vulnerable and malicious Windows drivers, sample hashes, detections, and investigation tools.',
 } = Astro.props;
-const preview = import.meta.env.PUBLIC_ENABLE_ANALYTICS !== 'true';
+const preview = import.meta.env.PUBLIC_SITE_MODE !== 'production';
 const nav = [
   ['Drivers', '/'],
   ['Detections', '/detections/'],
@@ -27,6 +27,18 @@ const nav = [
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0c0e11" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta
+      property="og:image"
+      content={new URL('/images/logo.png', Astro.site)}
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="LOLDrivers"
+      href="/index.xml"
+    />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <link rel="icon" href="/favicons/favicon.ico" />

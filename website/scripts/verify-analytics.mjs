@@ -9,7 +9,11 @@ try {
     process.execPath,
     ['node_modules/astro/./bin/astro.mjs', 'build', '--outDir', directory],
     {
-      env: { ...process.env, PUBLIC_ENABLE_ANALYTICS: 'true' },
+      env: {
+        ...process.env,
+        PUBLIC_ENABLE_ANALYTICS: 'true',
+        PUBLIC_SITE_MODE: 'preview',
+      },
       encoding: 'utf8',
     },
   );
