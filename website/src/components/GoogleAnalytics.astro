@@ -1,0 +1,22 @@
+---
+const enabled =
+  import.meta.env.PROD && import.meta.env.PUBLIC_ENABLE_ANALYTICS === 'true';
+---
+
+{enabled && (
+  <>
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-33C5VXLWPQ"
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-33C5VXLWPQ');
+    </script>
+  </>
+)}

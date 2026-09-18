@@ -1,0 +1,16 @@
+# Website-only API exporter; versions match the repository's poetry.lock.
+# No driver binary, detection-generation, or network/blocklist dependencies.
+PyYAML==6.0.1
+pandas==2.1.3
+numpy==1.26.2
+python-dateutil==2.8.2
+pytz==2023.3.post1
+tzdata==2023.3
+six==1.16.0
+
+# Existing YAML/schema and LFS-pointer-aware filename validation.
+jsonschema==4.19.0
+attrs==23.1.0
+jsonschema-specifications==2023.7.1
+referencing==0.30.2
+rpds-py==0.10.2

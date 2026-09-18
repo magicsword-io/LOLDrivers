@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { tools } from '../lib/resources';
+---
+
+<BaseLayout title="Tools & integrations — LOLDrivers">
+  <div class="document">
+    <div class="eyebrow">Scan & investigate</div>
+    <h1>Tools & integrations</h1>
+    <p class="intro">
+      Use the catalog with community clients, scanners, and investigation
+      platforms.
+    </p>
+    <div class="resource-grid document-section">
+      {tools.map((tool) => (
+        <article class="resource-card">
+          <h2>{tool.name}</h2>
+          <p>{tool.description}</p>
+          <p class="small">Maintained by {tool.maintainer}</p>
+          <a class="resource-more" href={tool.url}>
+            Documentation & source ↗
+          </a>
+        </article>
+      ))}
+    </div>
+    <section class="document-section">
+      <h2>Build your own integration</h2>
+      <p>
+        The published JSON and CSV feeds make LOLDrivers available to your own
+        tools and workflows.
+      </p>
+      <a class="accent" href="/api/">
+        Explore the API →
+      </a>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="API & downloads — LOLDrivers">
+  <div class="document">
+    <div class="eyebrow">Connect your workflow</div>
+    <h1>API & downloads</h1>
+    <p class="intro">
+      The published feeds include vulnerable and malicious driver records and
+      their known samples.
+    </p>
+    <div class="resource-grid document-section">
+      <article class="resource-card">
+        <h2>JSON feed</h2>
+        <p>Nested records, hashes, signatures, and sample metadata.</p>
+        <a
+          class="resource-more"
+          href="https://www.loldrivers.io/api/drivers.json"
+        >
+          Download published JSON ↗
+        </a>
+      </article>
+      <article class="resource-card">
+        <h2>CSV feed</h2>
+        <p>
+          The existing flattened export for tabular analysis and integrations.
+        </p>
+        <a
+          class="resource-more"
+          href="https://www.loldrivers.io/api/drivers.csv"
+        >
+          Download published CSV ↗
+        </a>
+      </article>
+    </div>
+    <section class="document-section">
+      <h2>Fetch the catalog</h2>
+      <pre><code>curl -o drivers.json https://www.loldrivers.io/api/drivers.json</code></pre>
+      <h2>Understand the records</h2>
+      <p>
+        <code>Id</code> is the driver UUID. <code>Category</code> identifies
+        malicious or vulnerable entries. <code>KnownVulnerableSamples</code>{' '}
+        contains individual sample metadata for both categories. A single driver
+        can contain multiple samples with different hashes and HVCI evidence.
+      </p>
+      <p>
+        <code>Verified</code> and <code>LoadsDespiteHVCI</code> can be string
+        values such as <code>"TRUE"</code> and <code>"FALSE"</code>. Missing
+        evidence means unknown. Existing names and types remain part of the
+        published feed contract.
+      </p>
+      <p>
+        This review site reads repository YAML. The feed downloads above point
+        to the existing production exports and may differ from an unmerged
+        branch.
+      </p>
+      <a
+        class="accent"
+        href="https://github.com/magicsword-io/LOLDrivers/blob/main/bin/spec/drivers.spec.json"
+      >
+        Inspect the driver schema ↗
+      </a>
+    </section>
+  </div>
+</BaseLayout>

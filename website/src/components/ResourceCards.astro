@@ -1,0 +1,46 @@
+---
+import { detections, tools } from '../lib/resources';
+---
+
+<section class="resources" aria-labelledby="resources-title">
+  <div class="resources-heading">
+    <h2 id="resources-title">Put the intelligence to work.</h2>
+    <p>From a driver finding to your existing security workflow.</p>
+  </div>
+  <div class="resource-grid">
+    <article class="resource-card">
+      <div class="resource-label">01 / Detect & defend</div>
+      <h3>Detections & policies</h3>
+      <p>
+        Find rules, hunting queries, and block policies for your security stack.
+      </p>
+      <div class="resource-links">
+        {detections.slice(0, 4).map((item) => (
+          <a href={item.url}>{item.name} ↗</a>
+        ))}
+        <a href="/detections/#queries">Defender & Splunk queries →</a>
+      </div>
+      <a class="resource-more" href="/detections/">
+        Browse detection resources →
+      </a>
+    </article>
+    <article class="resource-card">
+      <div class="resource-label">02 / Scan & investigate</div>
+      <h3>Tools & integrations</h3>
+      <p>
+        Use the catalog with community clients, scanners, and investigation
+        platforms.
+      </p>
+      <div class="tool-list">
+        {tools.map((tool) => (
+          <a href={tool.url}>
+            {tool.name} ↗<span>{tool.description}</span>
+          </a>
+        ))}
+      </div>
+      <a class="resource-more" href="/tools/">
+        Explore tools & integrations →
+      </a>
+    </article>
+  </div>
+</section>
