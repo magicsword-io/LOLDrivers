@@ -1,0 +1,31 @@
+title: Driver Load - SakDriver.sys
+id: b0ead75e-39e3-5486-8ffa-6d4efa1ca46c
+status: experimental
+description: |
+    Detects loading of driver SakDriver.sys via hash.
+    SakDriver is a malicious Windows kernel rootkit analyzed by 0xSec. It uses a registry callback for command dispatch and process-memory manipulation, conceals its driver file and service registry entries, and hides network connections through an NSI hook. It also implements WFP destination filtering and HTTP reporting. The sample uses the device name \Device\SakDriverWFP and carries a CrackerDrv.pdb path. These findings apply to the analyzed sample; current Windows loadability and HVCI compatibility have not been established.
+references:
+    - https://www.loldrivers.io/drivers/7d9e8ee4-6725-4216-bc6b-ac3042018d5c/
+    - https://0xsec.gitbook.io/0xsec/malware-analysis/sakdriver-reversing-a-kernel-driver-rootkit
+author: Michael Haag
+date: 2026/09/16
+modified: 2026/09/18
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b5f122f3f07f618c0a7678fa40801faa'
+            - 'SHA1=7440358c5041eba34e8673100989df756a6426da'
+            - 'SHA256=4e95aba17c1a423cda5cc9f9f04f7cf8db17e294eb31ed1aa85063601b82fe8d'
+            - 'IMPHASH=7afd4d4bb61395a3cd7d1b040e1cfd9b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -3,13 +3,14 @@ id: c653d475-8790-5638-b11a-b3ec9407beab
 status: experimental
 description: |
     Detects loading of driver Alinubx.sys via hash.
-    Alinubx.sys exposes IOCTL 0x222024 which allows user-mode applications to terminate arbitrary processes from the kernel via ZwTerminateProcess. The IOCTL input buffer expects a structure containing the PID (DWORD) and an exit status code (DWORD). Abused by the Cruciferra MaaS loader to kill AV/EDR processes.
+    Alinubx.sys exposes IOCTL 0x222024 to request kernel-mode process termination through the device path \\.\Alinubx. The handler requires an eight-byte input containing a PID (DWORD) and exit status (DWORD), and passes both to a helper using PsLookupProcessByProcessId, ObOpenObjectByPointer, and ZwTerminateProcess. Access requires the driver to be loaded and its device to be accessible; successful termination of protected processes is not established. Abused by the Cruciferra MaaS loader to target AV/EDR processes.
 references:
     - https://www.loldrivers.io/drivers/84a3007a-de5e-4622-bfc5-f05d927c3618/
     - https://www.esentire.com/blog/malware-as-a-service-cocktail-errtraffic-and-cruciferra-killing-your-edr-since-2025
     - https://github.com/magicsword-io/LOLDrivers/issues/412
     - https://x.com/YungBinary/status/2092812095456936172
     - https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend
+    - https://github.com/DeathShotXD/0xCr0ssCrush/blob/main/docs/alinubx-analysis.md
 author: Jose Hernandez
 date: 2026/08/27
 modified: 2026/09/18
