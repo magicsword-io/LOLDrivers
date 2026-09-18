@@ -1,0 +1,33 @@
+title: Driver Load - kgameprotect.sys
+id: 315d0065-b0f1-55cc-9f40-9abb4f385066
+status: experimental
+description: |
+    Detects loading of driver kgameprotect.sys via hash.
+    kgameprotect.sys exposes FILE_ANY_ACCESS IOCTL 0x222048 through \\.\kgameprotect. The handler accepts a caller-selected PID and opens that process from KernelMode with PROCESS_TERMINATE before calling ZwTerminateProcess. It performs no caller, registered-client, or target-PID authorization on this IOCTL branch. The reviewed sample is version 2.7.1.7 and also registers a file-system minifilter, so correct minifilter installation is required. Static review confirms the process-termination path, but does not establish that unprivileged users can open the device or that protected processes can be terminated on every Windows configuration.
+references:
+    - https://www.loldrivers.io/drivers/a0006589-a811-4341-9be0-4512eae9febb/
+    - https://github.com/magicsword-io/LOLDrivers/pull/428
+    - https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/defining-i-o-control-codes
+    - https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-iocreatedevice
+author: Shiroko
+date: 2026/09/11
+modified: 2026/09/18
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=cb1f1880aafd7d9bbdd70c54e56c9dd0'
+            - 'SHA1=86f3b8e26e80db804086f095dd6bee79980d810c'
+            - 'SHA256=6c1d596d18213e24f0c88d58ea7f3ca24114eded806b6198a8abc701251126ee'
+            - 'IMPHASH=4de3dfcde82ad8ff50165c62d0501064'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
