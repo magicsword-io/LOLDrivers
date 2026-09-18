@@ -1,0 +1,78 @@
+name: Astro Website Preview
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'yaml/**'
+      - 'loldrivers.io/static/**'
+      - '.github/workflows/website-preview.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'yaml/**'
+      - 'loldrivers.io/static/**'
+      - '.github/workflows/website-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: astro-preview-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: website
+    env:
+      PUBLIC_ENABLE_ANALYTICS: 'false'
+      PUBLIC_SITE_MODE: preview
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: website/.nvmrc
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run check
+      - run: npm run build
+      - run: npm run verify:build
+      - run: npm run verify:analytics
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - name: Upload reviewable site
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: astro-preview-${{ github.event.pull_request.number || github.run_id }}
+          path: website/dist/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Upload browser report and screenshots
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: astro-browser-report-${{ github.run_id }}
+          path: |
+            website/playwright-report/
+            website/test-results/
+          retention-days: 14
+      - name: Preview instructions
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ### Review the Astro site before merging
+          Download and extract the `astro-preview-*` artifact, then run
+          `python3 -m http.server 4321` from its extracted root and open
+          `http://localhost:4321/`. Browser screenshots are in the report artifact.
+
+          This workflow builds an artifact; it does not publish a hosted URL or deploy production.
+          EOF

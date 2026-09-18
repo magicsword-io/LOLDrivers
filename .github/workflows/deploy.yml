@@ -1,62 +1,87 @@
 name: Deploy Site
 
 on:
-  workflow_run:
-    workflows: [Generate Site]
-    types: [completed]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One production publisher. PR validation uses a separate group and cannot deploy.
+concurrency:
+  group: pages-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
 
 jobs:
-    # Build job
-    build:
-      runs-on: ubuntu-latest
-      env:
-        HUGO_VERSION: 0.111.3
-      steps:
-        - name: Install Hugo CLI
-          run: |
-            wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-            && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
-        - name: Install Dart Sass Embedded
-          run: sudo snap install dart-sass-embedded
-        - name: Checkout
-          uses: actions/checkout@v3
-          with:
-            submodules: true
-            token: ${{ secrets.PUSH_TOKEN }}
-        - name: Setup Pages
-          id: pages
-          uses: actions/configure-pages@v3
-        - name: Install Node.js dependencies
-          run: |
-            cd loldrivers.io/
-            [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
-        - name: Build with Hugo
-          env:
-            # For maximum backward compatibility with Hugo modules
-            HUGO_ENVIRONMENT: production
-            HUGO_ENV: production
-          run: |
-            cd loldrivers.io/
-            hugo \
-              --gc \
-              --minify \
-              --baseURL "${{ steps.pages.outputs.base_url }}/"
-        - name: Upload artifact
-          uses: actions/upload-pages-artifact@v3.0.0
-          with:
-            path: ./loldrivers.io/public
-  
-    # Deployment job
-    deploy:
-        environment:
-          name: github-pages
-          url: ${{ steps.deployment.outputs.page_url }}
-        runs-on: ubuntu-latest
-        needs: build
-        permissions:
-          pages: write
-          id-token: write
-        steps:
-          - name: Deploy to GitHub Pages
-            id: deployment
-            uses: actions/deploy-pages@v4
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PUBLIC_ENABLE_ANALYTICS: 'true'
+      PUBLIC_SITE_MODE: production
+      TEST_PRODUCTION: 'true'
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: website/requirements.txt
+      - run: python -m pip install -r website/requirements.txt
+      - run: python bin/validate.py
+      - run: python -m unittest discover -s bin/tests -p test_api_exports.py
+      - name: Generate public APIs from this revision's YAML
+        run: python bin/export-api.py --output website/public/api
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: website/.nvmrc
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+        working-directory: website
+      - run: npm run format:check && npm run check
+        working-directory: website
+      - run: npm run build && npm run verify:build -- dist --analytics --production
+        working-directory: website
+      - run: npx playwright install --with-deps chromium
+        working-directory: website
+      - name: Test the production artifact (analytics requests intercepted)
+        run: npm test
+        working-directory: website
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: production-browser-report-${{ github.run_id }}
+          path: |
+            website/playwright-report/
+            website/test-results/
+      - name: Record artifact source
+        run: |
+          printf '%s\n' "$GITHUB_SHA" > website/dist/source-revision.txt
+          echo "Validated Astro production artifact for $GITHUB_SHA" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload validated Pages artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: website/dist
+          retention-days: 30
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy tested Astro artifact
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

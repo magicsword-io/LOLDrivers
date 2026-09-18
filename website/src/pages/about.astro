@@ -1,0 +1,417 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — LOLDrivers">
+  <article class="about-page">
+    <header class="about-intro">
+      <div>
+        <div class="eyebrow">Community intelligence</div>
+        <h1>About Living Off The Land Drivers</h1>
+        <p class="intro">
+          Living Off The Land Drivers is a community-driven project that
+          provides a curated list of all Windows drivers that have been found
+          abused by adversaries to bypass security controls and execute
+          malicious code.
+        </p>
+      </div>
+      <div class="about-summary">
+        <p>
+          The project was inspired by Michael Haag's work in hunting evil and
+          the need to track malicious drivers that adversaries use to evade
+          detection. Jose Enrique Hernandez is instrumental in putting the
+          project together and continues to contribute to its development.
+        </p>
+        <a class="outline about-catalog-link" href="/">
+          Browse the driver catalog →
+        </a>
+      </div>
+    </header>
+
+    <section
+      class="about-section about-mission"
+      aria-labelledby="mission-title"
+    >
+      <h2 id="mission-title">A shared defensive resource</h2>
+      <p>
+        Living Off The Land Drivers is an open-source project that welcomes
+        contributions from the security community. By sharing knowledge and
+        expertise, we can help each other stay informed and better defend
+        against emerging threats. Whether you're a researcher, incident
+        responder, or system administrator, we hope that Living Off The Land
+        Drivers will be a valuable resource in your fight against cyber attacks.
+      </p>
+      <p>
+        For related Living Off The Land research, visit{' '}
+        <a href="https://lolrmm.io/">LOLRMM</a>, which tracks remote monitoring
+        and management tooling abused by adversaries.
+      </p>
+    </section>
+
+    <section class="about-section" aria-labelledby="people-title">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Maintainers and contributors</div>
+          <h2 id="people-title">The people behind the project</h2>
+        </div>
+        <p>Research, catalog stewardship, and detection engineering.</p>
+      </div>
+
+      <div class="people-grid">
+        <article class="person-card">
+          <img
+            src="/images/michael-headshot.png"
+            alt="Portrait of Michael Haag"
+            width="200"
+            height="200"
+          />
+          <div>
+            <h3>
+              <a href="https://twitter.com/M_haggis">Michael Haag</a>
+            </h3>
+            <p>
+              Michael Haag co-founded{' '}
+              <a href="https://www.magicsword.io/about">MagicSword</a> and
+              serves as its CTO. Previously a principal threat researcher at
+              Splunk, he brings over a decade of experience across security
+              architecture, threat hunting, detection engineering, and complex
+              investigations.
+            </p>
+            <p>
+              He helped found{' '}
+              <a href="https://atomicredteam.io/">Atomic Red Team</a>,
+              LOLDrivers, and <a href="https://lolrmm.io/">LOLRMM</a>, and
+              co-hosts{' '}
+              <a href="https://www.youtube.com/@atomicsonafriday">
+                Atomics on a Friday
+              </a>
+              .
+            </p>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img
+            src="/images/jose-headshot.png"
+            alt="Portrait of Jose Hernandez"
+            width="200"
+            height="200"
+          />
+          <div>
+            <h3>
+              <a href="https://twitter.com/_josehelps">Jose Hernandez</a>
+            </h3>
+            <p>
+              Jose Enrique Hernandez is MagicSword's CEO and co-founder. His
+              work centers on practical security defenses, translating attacker
+              techniques into open-source tools and research. He previously led
+              threat research at Splunk and co-founded Zenedge, later acquired
+              by Oracle. His projects include{' '}
+              <a href="https://github.com/splunk/attack_range">
+                Splunk Attack Range
+              </a>
+              {', '}
+              <a href="https://github.com/splunk/security_content">
+                Splunk Security Content
+              </a>
+              {', '}
+              <a href="https://github.com/josehelps/git-wild-hunt">
+                Git-Wild-Hunt
+              </a>
+              {', '}
+              <a href="https://github.com/splunk/melting-cobalt">
+                Melting-Cobalt
+              </a>
+              {', and '}
+              <a href="https://github.com/josehelps/blackcert">BlackCert</a>.
+            </p>
+            <p>
+              He also works as a maintainer for security industry-critical
+              repositories such as{' '}
+              <a href="https://atomicredteam.io/">Atomic Red Team</a>
+              {' and '}
+              <a href="https://lolbas-project.github.io/">LOLBAS</a>.
+            </p>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img
+            src="/images/nas-headshot.png"
+            alt="Portrait of Nasreddine Bencherchali"
+            width="200"
+            height="200"
+          />
+          <div>
+            <h3>
+              <a href="https://twitter.com/nas_bench">
+                Nasreddine Bencherchali
+              </a>
+            </h3>
+            <p>
+              Nasreddine Bencherchali works at Cisco/Splunk, focusing on
+              detection engineering and threat hunting. Nasreddine is also one
+              of the maintainers of the SIGMA project and the co-founder of the{' '}
+              <a href="https://github.com/nasbench/EVTX-ETW-Resources/">
+                EVTX-ETW-Resources project
+              </a>
+              {'. He also writes a blog about '}
+              <a href="https://nasbench.medium.com">
+                detection and other security topics
+              </a>
+              {'.'}
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="honorable-mentions" aria-label="Honorable mentions">
+      <span class="eyebrow">Honorable mentions</span>
+      <p>
+        <a href="https://twitter.com/cyb3rops">Florian</a>
+        {' and '}
+        <a href="https://twitter.com/bareiss_patrick">Patrick</a> for all their
+        help getting the idea and the project off the ground.
+      </p>
+    </aside>
+
+    <section class="about-section" aria-labelledby="contribute-title">
+      <h2 id="contribute-title">Contribute a finding</h2>
+      <p>
+        Driver records live in YAML in the public repository. Contributions can
+        add samples, improve metadata, or link new research and detections.
+      </p>
+      <div class="resource-links">
+        <a href="https://github.com/magicsword-io/LOLDrivers/blob/main/CONTRIBUTING.md">
+          Contribution guide ↗
+        </a>
+        <a href="https://github.com/magicsword-io/LOLDrivers/issues/new/choose">
+          Submit a finding ↗
+        </a>
+        <a href="https://github.com/magicsword-io/LOLDrivers">
+          GitHub repository ↗
+        </a>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="related-projects-title">
+      <h2 id="related-projects-title">Related projects</h2>
+      <div class="resource-links">
+        <a href="https://lolbas-project.github.io/">LOLBAS ↗</a>
+        <a href="https://gtfobins.github.io/">GTFOBins ↗</a>
+        <a href="https://lolrmm.io/">LOLRMM ↗</a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding: 48px 0 32px;
+  }
+
+  .about-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    gap: 48px;
+    align-items: end;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    letter-spacing: -1.6px;
+  }
+
+  h2,
+  h3 {
+    letter-spacing: -0.5px;
+  }
+
+  .about-summary {
+    border-left: 2px solid var(--accent);
+    padding-left: 22px;
+  }
+
+  p {
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .about-summary p {
+    margin-top: 0;
+  }
+
+  .about-catalog-link {
+    display: inline-flex;
+    margin-top: 6px;
+  }
+
+  .about-section {
+    max-width: 980px;
+    margin-top: 44px;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .about-mission {
+    max-width: 760px;
+  }
+
+  .about-page a:not(.outline):hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 28px;
+    margin-bottom: 20px;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 0;
+  }
+
+  .section-heading > p {
+    max-width: 285px;
+    margin: 0 0 3px;
+    font-size: 12px;
+  }
+
+  .people-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .person-card {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+  }
+
+  .person-card img {
+    display: block;
+    width: 112px;
+    height: 112px;
+    margin-bottom: 18px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .person-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .person-card h3 a {
+    color: var(--text);
+  }
+
+  .person-card p {
+    margin: 10px 0;
+    font-size: 13px;
+  }
+
+  .person-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .person-card p a,
+  .about-mission p a,
+  .honorable-mentions p a {
+    color: var(--accent);
+  }
+
+  .honorable-mentions {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    max-width: 980px;
+    margin-top: 16px;
+    padding: 16px 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--chip);
+  }
+
+  .honorable-mentions .eyebrow {
+    flex: 0 0 auto;
+  }
+
+  .honorable-mentions p {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  @media (max-width: 980px) {
+    .people-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .person-card:last-child {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 740px) {
+    .about-page {
+      padding-top: 28px;
+    }
+
+    .about-intro {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding-bottom: 30px;
+    }
+
+    .about-summary {
+      padding-left: 16px;
+    }
+
+    .about-section {
+      margin-top: 32px;
+    }
+
+    .section-heading,
+    .honorable-mentions {
+      display: block;
+    }
+
+    .section-heading > p {
+      margin-top: 10px;
+    }
+
+    .people-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .person-card:last-child {
+      grid-column: auto;
+    }
+
+    .person-card {
+      padding: 18px;
+    }
+
+    .honorable-mentions {
+      padding: 16px;
+    }
+
+    .honorable-mentions p {
+      margin-top: 8px;
+    }
+  }
+</style>

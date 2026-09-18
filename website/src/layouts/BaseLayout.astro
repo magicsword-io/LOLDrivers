@@ -1,0 +1,163 @@
+---
+import '../styles/global.css';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'LOLDrivers — Living Off The Land Drivers',
+  description = 'Explore vulnerable and malicious Windows drivers, sample hashes, detections, and investigation tools.',
+} = Astro.props;
+const preview = import.meta.env.PUBLIC_SITE_MODE !== 'production';
+const nav = [
+  ['Drivers', '/'],
+  ['Detections', '/detections/'],
+  ['Tools', '/tools/'],
+  ['API', '/api/'],
+  ['About', '/about/'],
+];
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0c0e11" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta
+      property="og:image"
+      content={new URL('/images/logo.png', Astro.site)}
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="LOLDrivers"
+      href="/index.xml"
+    />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href="/favicons/favicon.ico" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    {preview && <meta name="robots" content="noindex,nofollow" />}
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem('loldrivers-theme');
+        if (theme === 'light' || theme === 'dark')
+          document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
+    <GoogleAnalytics />
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="/" aria-label="LOLDrivers home">
+          <span class="brand-emblem" aria-hidden="true">
+            <img
+              class="lol-logo-dark"
+              src="/images/logo-dark.png"
+              alt=""
+              width="1080"
+              height="1080"
+            />
+            <img
+              class="lol-logo-light"
+              src="/images/logo.png"
+              alt=""
+              width="1080"
+              height="1080"
+            />
+          </span>
+          <span>
+            LOLDrivers<small>THE DRIVER THREAT CATALOG</small>
+          </span>
+        </a>
+        <nav class="links" aria-label="Main navigation">
+          {nav.map(([label, href]) => (
+            <a
+              href={href}
+              class:list={{
+                active:
+                  href === '/'
+                    ? Astro.url.pathname === '/' ||
+                      Astro.url.pathname.startsWith('/drivers/')
+                    : Astro.url.pathname.startsWith(href),
+              }}
+              aria-current={Astro.url.pathname === href ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+        <div class="nav-right">
+          <a class="small" href="https://github.com/magicsword-io/LOLDrivers">
+            GitHub ↗
+          </a>
+          <button
+            class="outline theme"
+            id="theme"
+            aria-label="Switch to light theme"
+          >
+            ◐
+          </button>
+        </div>
+      </div>
+    </header>
+    {preview && (
+      <div class="banner">
+        <div class="wrap">
+          <span>ASTRO REVIEW PREVIEW</span>
+          <span class="optional">
+            Open source intelligence. Built for defenders.
+          </span>
+        </div>
+      </div>
+    )}
+    <main class="wrap" id="main">
+      <slot />
+    </main>
+    <footer class="wrap footer">
+      <div>
+        Community intelligence, maintained by{' '}
+        <a href="https://www.magicsword.io/">MagicSword ↗</a>
+      </div>
+      <div>
+        Have a driver to add?{' '}
+        <a href="https://github.com/magicsword-io/LOLDrivers/issues/new/choose">
+          Submit a finding ↗
+        </a>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.getElementById('theme');
+      function updateLabel() {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        toggle?.setAttribute(
+          'aria-label',
+          `Switch to ${dark ? 'light' : 'dark'} theme`,
+        );
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute('content', dark ? '#0c0e11' : '#f7f7f4');
+      }
+      updateLabel();
+      toggle?.addEventListener('click', () => {
+        const theme =
+          document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        try {
+          localStorage.setItem('loldrivers-theme', theme);
+        } catch {}
+        updateLabel();
+      });
+    </script>
+  </body>
+</html>
