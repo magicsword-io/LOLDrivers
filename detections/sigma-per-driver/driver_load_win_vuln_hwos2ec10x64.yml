@@ -12,7 +12,7 @@ references:
     - https://www.proofpoint.com/us/blog/threat-insight/unpacking-cruciferra-analysis-sophisticated-crypter-service
 author: Michael Haag
 date: 2023/01/09
-modified: 2026/09/16
+modified: 2026/09/18
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -30,8 +30,8 @@ detection:
             - 'SHA1=080fdb73a6bbc99625c2190730257d1e54723952'
             - 'SHA256=c4e93449453cf67c5d5605bb8f425207a738a242fdb432d720acc32faa74926c'
             - 'SHA256=bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc'
-            - 'IMPHASH=071356ee9d8c7f91cbe8fa3c448286a2'
             - 'IMPHASH=dcf524d72961e33f0c6462f869bb6a4a'
+            - 'IMPHASH=071356ee9d8c7f91cbe8fa3c448286a2'
     condition: selection_hashes
 falsepositives:
     - Unknown

@@ -1,0 +1,356 @@
+Id: 70a7693f-2880-47a0-90f2-9703f2b4cab3
+Tags:
+- fortimon3.sys
+Author: Robel Campbell
+Created: '2026-09-09'
+MitreID: T1562.001
+CVE:
+- CVE-2026-84386
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: ''
+  Description: Fortinet FortiClient's fortimon3.sys minifilter exposes the Fortimon3FilterAntiExploitPort
+    communication port to local administrators without additional caller ownership
+    validation. The reviewed 2025.4.30.0 sample accepts a caller-selected process
+    identifier and reaches ZwOpenProcess and ZwTerminateProcess from kernel context,
+    allowing process termination that can impair endpoint defenses. CVE-2026-84386
+    affects FortiClient for Windows 7.2 and 7.4.0 through 7.4.7; Fortinet recommends
+    upgrading to 7.4.8 or 8.0.0 and later. Product release numbers are distinct from
+    the driver's PE file version. The minifilter must be loaded and its communication
+    port accessible; this is not an unprivileged entry point.
+  Usecase: Terminate processes and impair endpoint defenses through a vulnerable minifilter.
+  Privileges: administrator
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://fortiguard.fortinet.com/psirt/FG-IR-26-165
+- https://www.cve.org/CVERecord?id=CVE-2026-84386
+- https://github.com/mein-0/forti-research
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/fltkernel/nf-fltkernel-fltbuilddefaultsecuritydescriptor
+- https://halcyon.ai
+Acknowledgement:
+  Person: Robel Campbell, Halcyon; Mirae Yim
+  Handle: '@RobelCampbell, @mein-0'
+Detection:
+- type: sigma
+  value: https://github.com/magicsword-io/LOLDrivers/tree/main/detections
+KnownVulnerableSamples:
+- Filename: fortimon3.sys
+  MD5: e2b86d1430fbb4cdc6d88ad929713d7a
+  SHA1: f7a69dbb449ca5b965a4ca79f0714b1f4727c527
+  SHA256: 6f131b58dfe47cb7fc721f1023e55242a6f2043fa337467338844fdf338f010f
+  Publisher: Fortinet, Inc.
+  Company: Fortinet Inc
+  Description: FortiClient File System Filter Driver
+  Product: Fortinet FortiClient
+  FileVersion: 2025.4.30.0
+  MachineType: AMD64
+  OriginalFilename: Fortimon3.sys
+  InternalName: fortimon3.sys
+  Imphash: ed630ef1b42d89c4808967f098bf6570
+  Authentihash:
+    MD5: dcc0b464af012965593102fd10f6b041
+    SHA1: e2b50ae6a5ac6195adb6ee1f85c868f424724c0e
+    SHA256: 47bf6eb5e5e30b734ad31214fd2c9bd938d129d3bc2a5b055615ed4056222d85
+  RichPEHeaderHash:
+    MD5: 59072e9af8f18b11441e3757f408d19c
+    SHA1: 1a90c4adc8aad80d96faf68a29cfd528620b0ec3
+    SHA256: 2d1a2b335fc63ce5b15163771802add2e5e73a136680f11223055a82ee4bfca6
+  Sections:
+    .text:
+      Entropy: 6.354497163188163
+      Virtual Size: '0x8b1a'
+    .rdata:
+      Entropy: 5.01173944027953
+      Virtual Size: '0x229c'
+    .data:
+      Entropy: 2.0443274961465527
+      Virtual Size: '0x2778'
+    .pdata:
+      Entropy: 4.789435625180955
+      Virtual Size: '0x864'
+    PAGE:
+      Entropy: 6.338586721565731
+      Virtual Size: '0x3cf6'
+    INIT:
+      Entropy: 5.597411845312843
+      Virtual Size: '0x19f2'
+    .rsrc:
+      Entropy: 3.5336697426716763
+      Virtual Size: '0x428'
+    .reloc:
+      Entropy: 4.637012452047065
+      Virtual Size: '0xac'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-04-30 17:23:15'
+  ProductVersion: 2025.4.30.0
+  Copyright: 2022 Fortinet Inc. All rights reserved.
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FltGetInstanceContext
+  - FltGetStreamContext
+  - FltReleaseContext
+  - FltGetVolumeFromFileObject
+  - FltEnumerateInstances
+  - FltObjectDereference
+  - FltCreateCommunicationPort
+  - FltCloseClientPort
+  - FltSendMessage
+  - FltGetFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltParseFileNameInformation
+  - FltAllocateContext
+  - FltGetVolumeContext
+  - FltObjectReference
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltIsDirectory
+  - FltCancelFileOpen
+  - FltSupportsStreamHandleContexts
+  - FltSetVolumeContext
+  - FltSetStreamContext
+  - FltSetStreamHandleContext
+  - FltDeleteStreamHandleContext
+  - FltGetStreamHandleContext
+  - FltGetDiskDeviceObject
+  - FltCloseCommunicationPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - FltCancellableWaitForSingleObject
+  - FltGetRequestorSessionId
+  - FltFindExtraCreateParameter
+  - FltGetEcpListFromCallbackData
+  - FltIsEcpFromUserMode
+  - FltAllocateCallbackData
+  - FltFreeCallbackData
+  - FltPerformSynchronousIo
+  - FltQueryInformationFile
+  - FltGetFileSystemType
+  - wcsncpy_s
+  - wcsrchr
+  - RtlInitUnicodeString
+  - RtlUnicodeStringToAnsiString
+  - RtlFreeAnsiString
+  - DbgPrint
+  - RtlTimeToTimeFields
+  - RtlTimeFieldsToTime
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - KeInitializeSpinLock
+  - KeAcquireInStackQueuedSpinLock
+  - KeReleaseInStackQueuedSpinLock
+  - KeQuerySystemTimePrecise
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExSystemTimeToLocalTime
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwCreateFile
+  - ZwWriteFile
+  - ZwClose
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - NtQueryInformationFile
+  - ZwDeleteFile
+  - _snprintf_s
+  - _vsnprintf_s
+  - _snwprintf_s
+  - wcsncat
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - ExInitializeResourceLite
+  - ExAcquireResourceSharedLite
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseResourceLite
+  - ExDeleteResourceLite
+  - ZwQueryInformationFile
+  - ZwSetInformationFile
+  - ZwReadFile
+  - RtlInitializeGenericTableAvl
+  - RtlInsertElementGenericTableAvl
+  - RtlDeleteElementGenericTableAvl
+  - wcsncat_s
+  - RtlEnumerateGenericTableAvl
+  - RtlGetElementGenericTableAvl
+  - KeResetEvent
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ProbeForWrite
+  - PsGetCurrentProcessId
+  - ZwTerminateProcess
+  - ZwOpenProcess
+  - NtClose
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - PsLookupProcessByProcessId
+  - FsRtlCreateSectionForDataScan
+  - ZwAllocateVirtualMemory
+  - ZwQueryInformationProcess
+  - ZwSetInformationProcess
+  - __C_specific_handler
+  - IoFileObjectType
+  - RtlCopyUnicodeString
+  - ObfReferenceObject
+  - FsRtlGetFileSize
+  - wcsncpy
+  - _wcsnicmp
+  - RtlGetVersion
+  - KeClearEvent
+  - PsGetVersion
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - IoGetDeviceObjectPointer
+  - IoGetStackLimits
+  - ZwOpenSymbolicLinkObject
+  - ZwQuerySymbolicLinkObject
+  - RtlVolumeDeviceToDosName
+  - PsGetCurrentThreadId
+  - PsGetProcessImageFileName
+  - _wcsicmp
+  - ObOpenObjectByPointer
+  - FsRtlIsNtstatusExpected
+  - wcscpy_s
+  - PsSetCreateProcessNotifyRoutineEx
+  - ZwQuerySystemInformation
+  - ExIsResourceAcquiredExclusiveLite
+  - RtlInitializeGenericTable
+  - RtlInsertElementGenericTable
+  - RtlDeleteElementGenericTable
+  - RtlLookupElementGenericTable
+  - RtlGetElementGenericTable
+  - PsSetCreateThreadNotifyRoutine
+  - PsRemoveCreateThreadNotifyRoutine
+  - MmGetSystemRoutineAddress
+  - strncpy_s
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwSetValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - RtlLookupElementGenericTableAvl
+  - KeQueryPerformanceCounter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-08-01 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 70a0bf435c55e7385fa0a3741b3db616d7f7bf5707bd9aaca1872cec855ea91abb22f8871a695422eda488776dbd1a14f4134a7a2f2db738eff4ff80b9f8a1f7f272de24bc5203c84ed02adefa2d56cff9f4f7ac307a9a8bb25ed4cfd143449b4321eb9672a148b499cb9d4fa7060313772744d4e77fe859a8f0bf2f0ba6e9f2343cecf703c787a8d24c401935466a6954b0b8a1568eeca4d53de8b1dcfd1cd8f4775a5c548c6fefa1503dfc760968849f6fcadb208d35601c0203cb20b0ac58a00e4063c59822c1b259f5556bcf27ab6c76ce6f232df47e716a236b22ff12b8542d277ed83ad9f0b68796fd5bd15cac18c34d9f73b701a99f57aa5e28e2b994
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 21a266bd49f2778b24d13d95641ea6ac
+        SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
+        SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
+        SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp 2024
+      ValidFrom: '2024-09-26 00:00:00'
+      ValidTo: '2035-11-25 23:59:59'
+      Signature: 3dad1e1f76995be338841247d94391f611db9b4e081dd1284fcfd3dc7b814b265eab78d28b91977963fbc422a1562ade2829c2b3ef06665dae55816f41efa93d349c549782652b0ca35242a1937698c7b0fcbe2da6a54d6d2a563bd4061707cc132eb41e87cde95e75b0c2cc5cd4cb7e156ab3e7bc85aba95a202b4a8cf2026187ffaa0c400874efca9187ac2f24d53a8278793abb823f541402f552bb892a54e709568cd94794516ffccf77ef8f184dea1753f7c56bd85625092ecc6dbe07bf9b303be6805f15949b75a90725ed815431881953558cea7cb0db7bd3e904a0c17e4fab69b4c50d95e85247bbccf82d77bfdfbd64e50acdf4540184b2c84998b6c9e996d0ff1965fc78cef496cd55e901bf64e07a6fa62e9b51ef222ba5a89d4495eb23e53307abc0964ffc6b5bbb708a95d3279fe2e69914e44d7a45204074ea75d9ac3c21086103fbc46c5904885d9a6e1b858b1503a1b65a034561a80b0c1ce99a4f75d38590cd8b9536cc72a152ce6e1c7746e81a106aeef92a235b87473e85ab5217ed369142e47ed0118ecc84a472ac17bbb9cca45bb79a0ae581b016f81ce2911550dcad981dc1a488a8c0e208b8380fe4cf5602b1d8480475ea073474fd977643043f9781b17edb7ff3063782b71cfe74bffd35647a3f6799462ef37043b5c7071d72a26ccb3fc971e10d7364a0f21dca7855024bbb69164ec2ac3aa4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0bae66bc5aba7f9587c6f9e904e33304
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 5faeccba4a92388250daca99221094c6
+        SHA1: e7399d858dbfec688f4e86d3f47d9f6b246b6b9f
+        SHA256: 353e1ce405ef48a69201d83710435c456e3afbab46e42ec7ae65a60c63993d20
+        SHA384: c4e718fa372b7de6b6a40a5ee138ca8fd346017641f4f2d9df254eddfb88cdb50584bb25e1aa1ef3f7dd38a3dc2f44e5
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=3321792, C=US, ST=California,
+        L=Sunnyvale, O=Fortinet, Inc., CN=Fortinet, Inc.
+      ValidFrom: '2023-12-12 00:00:00'
+      ValidTo: '2026-12-11 23:59:59'
+      Signature: 8a1276d6075accd6bf23bbdaa1edd89dcf1984058c44399397ef5ad0884924699ac940c73f895176212f00cb07347e589bb1ca14e4b6d2f6dea6681e2e242548c612b445369dc6669375e9f61654564a55c95703e432fd100a0e4644411a47780305790157b15b71a5f3aa79eeef34e3269b1f47ed2f13acedc051528d4e62cb523aa09a162a695e7460d45e4fca451ff1fefb800de2d80ce0bbb47c3338746bb1529017ebbd0ce26241fbdbbf03765d1449c2c1576f3e33705d1547f4bbd368bd2c246fc6627d5b153993b28f89976bda9cedd413cd6662eed455ed8ad8b336016e3bbb5997bd2b21764032d702886fc6d83482764adb825284c165bcd0c0c2286a9804a76b7160ee260026a0ef2f2e96f0b7ac5fea5c46eee6bc04fc6aca6636870dddaf000455007e0e28df06e133750895007e1b0c6b328d7a2b1facb6a52a60d5b8160d33521052c365cef8a0dcce97ab1b70f32f6d1d12b1835fa42ac555da0e2e18ee161547a118d08de8ac259d2536bea4e4f24795cc6e60211354d6a94a3bb9a78c4c1e63ae01502b2fcaa74c9a854dcebea554a093c95235d2b715d12f920f89d1740f8efd92c132d147150d97de010db692caf989409eb9900c563604b6d9c461135ba8830fdb0d9029c2b09831c5f187dce6e390881b60ec4045035cad55b66177e41f70bd19cf8f6d1e3b539ac60d51d596f4051923f3485557
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0b0fe572e7a79b99a2d2c403643422ad
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: f5ec88394728ba97e7d0b0a9c1077fe7
+        SHA1: 298a2d3fa031ac5e028963f885e7750770f1bcd2
+        SHA256: 02205e918b6a6a1dca0e1f611815cff3db5bb22be3ae8661a83500e82dfa55cd
+        SHA384: df8d926112f9f59a36d79b6b5dcf63e2409ac71d4f91dea0a80cd99ff53559622e6989ca2fc945a3a01c44e1d586bd1e
+    Signer:
+    - SerialNumber: 0b0fe572e7a79b99a2d2c403643422ad
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+  Signature:
+  - Fortinet, Inc.

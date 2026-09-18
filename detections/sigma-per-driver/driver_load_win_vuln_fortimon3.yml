@@ -1,0 +1,35 @@
+title: Driver Load - fortimon3.sys
+id: 3ddb090a-9651-5e3e-a744-019f197c0200
+status: experimental
+description: |
+    Detects loading of driver fortimon3.sys via hash.
+    Fortinet FortiClient's fortimon3.sys minifilter exposes the Fortimon3FilterAntiExploitPort communication port to local administrators without additional caller ownership validation. The reviewed 2025.4.30.0 sample accepts a caller-selected process identifier and reaches ZwOpenProcess and ZwTerminateProcess from kernel context, allowing process termination that can impair endpoint defenses. CVE-2026-84386 affects FortiClient for Windows 7.2 and 7.4.0 through 7.4.7; Fortinet recommends upgrading to 7.4.8 or 8.0.0 and later. Product release numbers are distinct from the driver's PE file version. The minifilter must be loaded and its communication port accessible; this is not an unprivileged entry point.
+references:
+    - https://www.loldrivers.io/drivers/70a7693f-2880-47a0-90f2-9703f2b4cab3/
+    - https://fortiguard.fortinet.com/psirt/FG-IR-26-165
+    - https://www.cve.org/CVERecord?id=CVE-2026-84386
+    - https://github.com/mein-0/forti-research
+    - https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/fltkernel/nf-fltkernel-fltbuilddefaultsecuritydescriptor
+    - https://halcyon.ai
+author: Robel Campbell
+date: 2026/09/09
+modified: 2026/09/18
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e2b86d1430fbb4cdc6d88ad929713d7a'
+            - 'SHA1=f7a69dbb449ca5b965a4ca79f0714b1f4727c527'
+            - 'SHA256=6f131b58dfe47cb7fc721f1023e55242a6f2043fa337467338844fdf338f010f'
+            - 'IMPHASH=ed630ef1b42d89c4808967f098bf6570'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
