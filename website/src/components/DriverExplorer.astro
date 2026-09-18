@@ -1,0 +1,173 @@
+---
+import { drivers, driverPath } from '../lib/drivers';
+---
+
+<section id="explorer" aria-labelledby="explorer-title">
+  <div class="section-title">
+    <h2 id="explorer-title">
+      Driver explorer <span>/ THE CATALOG</span>
+    </h2>
+    <div class="downloads">
+      <a href="https://www.loldrivers.io/api/drivers.json">JSON ↗</a>
+      <a href="https://www.loldrivers.io/api/drivers.csv">CSV ↗</a>
+    </div>
+  </div>
+  <div class="search-box">
+    <span aria-hidden="true">⌕</span>
+    <input
+      type="search"
+      id="search"
+      aria-label="Search drivers by filename, hash, publisher, or CVE"
+      placeholder="Search a filename, hash, publisher, or CVE…"
+      autocomplete="off"
+    />
+    <kbd>/</kbd>
+  </div>
+  <div class="catalog">
+    <aside class="filters" aria-label="Filter drivers">
+      <div class="filter-group">
+        <p class="filter-label">Classification</p>
+        {[
+          ['all', 'All drivers'],
+          ['vulnerable driver', 'Vulnerable'],
+          ['malicious', 'Malicious'],
+        ].map(([value, label]) => (
+          <button
+            class="filter-button"
+            data-category={value}
+            aria-pressed={value === 'all' ? 'true' : 'false'}
+          >
+            {label}
+            <span>
+              {value === 'all'
+                ? drivers.length
+                : drivers.filter((d) => d.category === value).length}
+            </span>
+          </button>
+        ))}
+      </div>
+      <div class="filter-group">
+        <label class="filter-label block" for="hvci">
+          HVCI evidence
+        </label>
+        <select id="hvci">
+          <option value="all">Any status</option>
+          <option value="yes">Has a TRUE sample</option>
+          <option value="no">Has a FALSE sample</option>
+          <option value="unknown">Has an unknown sample</option>
+        </select>
+        <p class="filter-help">
+          Statuses apply to individual samples. An entry can contain several
+          results.
+        </p>
+      </div>
+      <div class="source">
+        SOURCE: REPOSITORY YAML
+        <br />
+        <a
+          class="accent"
+          href="https://github.com/magicsword-io/LOLDrivers/blob/main/CONTRIBUTING.md"
+        >
+          Contribute intelligence ↗
+        </a>
+      </div>
+    </aside>
+    <div>
+      <div class="table-top">
+        <span id="result-count" role="status" aria-live="polite">
+          {drivers.length} driver entries
+        </span>
+        <label for="sort">
+          Sort by{' '}
+          <select id="sort">
+            <option value="recent">Newest added</option>
+            <option value="name">Driver name</option>
+            <option value="samples">Most samples</option>
+          </select>
+        </label>
+      </div>
+      <p id="search-error" class="sample-note" role="alert" hidden>
+        Search could not load.{' '}
+        <button id="retry-search" class="outline">
+          Retry
+        </button>{' '}
+        or <a href="/drivers/">browse all drivers</a>.
+      </p>
+      <noscript>
+        <p>
+          Enable JavaScript to search and filter, or{' '}
+          <a href="/drivers/">browse all drivers</a>.
+        </p>
+      </noscript>
+      <div
+        class="table-scroll"
+        role="region"
+        aria-label="Driver results, scroll horizontally for more columns"
+        tabindex="0"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Driver / publisher</th>
+              <th scope="col">Classification</th>
+              <th scope="col">HVCI TRUE</th>
+              <th scope="col">Samples</th>
+              <th scope="col">Added</th>
+            </tr>
+          </thead>
+          <tbody id="rows">
+            {drivers.slice(0, 12).map((d) => (
+              <tr>
+                <td>
+                  <a class="filename" href={driverPath(d.id)}>
+                    {d.name} →
+                  </a>
+                  <span class="publisher">
+                    {d.publisher || 'Publisher not recorded'}
+                  </span>
+                </td>
+                <td>
+                  <span
+                    class:list={[
+                      'badge',
+                      d.category === 'malicious' ? 'malicious' : 'vulnerable',
+                    ]}
+                  >
+                    {d.category === 'malicious' ? 'Malicious' : 'Vulnerable'}
+                  </span>
+                </td>
+                <td class:list={['cell-muted', { yes: d.yes > 0 }]}>
+                  {d.unknown === d.samples
+                    ? 'Unknown'
+                    : `${d.yes} / ${d.samples} samples`}
+                </td>
+                <td class="cell-muted">{d.samples}</td>
+                <td class="cell-muted">{d.created}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <a href="/drivers/">Browse all drivers</a>
+        <span id="page-label">
+          1–{Math.min(12, drivers.length)} of {drivers.length}
+        </span>
+        <div class="page-actions">
+          <button
+            class="outline"
+            id="previous"
+            aria-label="Previous page"
+            disabled
+          >
+            ←
+          </button>
+          <button class="outline" id="next" aria-label="Next page" disabled>
+            →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="../scripts/explorer.ts"></script>

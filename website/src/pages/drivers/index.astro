@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { drivers, driverPath } from '../../lib/drivers';
+---
+
+<BaseLayout title="All drivers — LOLDrivers">
+  <div class="document">
+    <div class="eyebrow">The catalog</div>
+    <h1>All drivers</h1>
+    <p>
+      Browse every catalog entry, or{' '}
+      <a href="/#explorer">search and filter the explorer</a>.
+    </p>
+    <ul class="driver-directory">
+      {[...drivers]
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((d) => (
+          <li>
+            <a href={driverPath(d.id)}>{d.name}</a>
+            <span class="small">
+              {d.category === 'malicious' ? 'Malicious' : 'Vulnerable'} ·{' '}
+              {d.samples} samples
+            </span>
+          </li>
+        ))}
+    </ul>
+  </div>
+</BaseLayout>

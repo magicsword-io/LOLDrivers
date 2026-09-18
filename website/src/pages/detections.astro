@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { detections } from '../lib/resources';
+import { defender, splunk } from '../lib/queries';
+---
+
+<BaseLayout title="Detections & policies — LOLDrivers">
+  <div class="document">
+    <div class="eyebrow">Detect & defend</div>
+    <h1>Detections & policies</h1>
+    <p class="intro">
+      Use the catalog in your security workflow with maintained rules, hunting
+      queries, and block policies.
+    </p>
+    <div class="resource-grid document-section">
+      {detections.map((item) => (
+        <article class="resource-card">
+          <h2>{item.name}</h2>
+          <p>{item.description}</p>
+          <a class="resource-more" href={item.url}>
+            Browse maintained resources ↗
+          </a>
+        </article>
+      ))}
+    </div>
+    <section class="document-section" id="queries">
+      <h2>SIEM queries</h2>
+      <p>
+        These examples are retained from the existing LOLDrivers homepage.
+        Follow each source's setup instructions and adapt the query to your
+        environment.
+      </p>
+      <h3>Microsoft Defender</h3>
+      <pre><code>{defender}</code></pre>
+      <button class="outline query-copy" data-query="defender">
+        Copy Defender query
+      </button>
+      <p class="small">
+        Credit: Mehmet Ergene (@Cyb3rMonk).{' '}
+        <a href="https://academy.bluraven.io/blog/detecting-vulnerable-drivers-using-defender-for-endpoint-kql">
+          Original query and setup ↗
+        </a>
+      </p>
+      <h3>Splunk</h3>
+      <pre><code>{splunk}</code></pre>
+      <button class="outline query-copy" data-query="splunk">
+        Copy Splunk query
+      </button>
+      <p class="small">
+        Credit: Michael Haag.{' '}
+        <a href="https://research.splunk.com/endpoint/a2b1f1ef-221f-4187-b2a4-d4b08ec745f4/">
+          Detection documentation ↗
+        </a>{' '}
+        ·{' '}
+        <a href="https://github.com/splunk/security_content/blob/develop/lookups/loldrivers.csv">
+          Lookup CSV ↗
+        </a>
+      </p>
+      <p id="query-feedback" role="status" aria-live="polite"></p>
+    </section>
+  </div>
+</BaseLayout>
+<script>
+  document
+    .querySelectorAll<HTMLButtonElement>('.query-copy')
+    .forEach((button) =>
+      button.addEventListener('click', async () => {
+        const code = button.previousElementSibling?.textContent || '';
+        try {
+          await navigator.clipboard.writeText(code);
+          document.getElementById('query-feedback')!.textContent =
+            'Query copied to clipboard.';
+        } catch {
+          document.getElementById('query-feedback')!.textContent =
+            'Copy was unavailable. Select and copy the displayed query.';
+        }
+      }),
+    );
+</script>

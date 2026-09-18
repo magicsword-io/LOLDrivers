@@ -1,0 +1,61 @@
+---
+interface Props {
+  driverName?: string;
+}
+const { driverName } = Astro.props;
+const url = new URL('https://www.magicsword.io/');
+url.search = new URLSearchParams({
+  utm_source: 'loldrivers',
+  utm_medium: 'website',
+  utm_campaign: 'free_prevention',
+  utm_content: driverName ? 'driver_block_banner' : 'homepage_cta',
+}).toString();
+---
+
+<aside class="ms-promotion" aria-label="MagicSword prevention">
+  <div class="ms-promotion-logo">
+    <img
+      class="ms-logo-dark"
+      src="/images/magicsword-logo-dark.png"
+      alt="MagicSword"
+      width="2048"
+      height="668"
+    />
+    <img
+      class="ms-logo-light"
+      src="/images/magicsword-logo-light.png"
+      alt="MagicSword"
+      width="2048"
+      height="668"
+    />
+  </div>
+  <div class="ms-promotion-copy">
+    <h2>
+      {driverName ? (
+        <>
+          Block <strong>{driverName}</strong> across your endpoints
+        </>
+      ) : (
+        <>
+          Stop BYOVD attacks with <strong>MagicSword.</strong>
+        </>
+      )}
+    </h2>
+    <p>
+      {driverName
+        ? 'Add this driver to your block policy in minutes with MagicSword, threat-driven application control.'
+        : 'Turn this driver list into enforceable block policies with threat-driven application control.'}
+    </p>
+  </div>
+  <div class="ms-promotion-action">
+    <a
+      class="ms-promotion-button"
+      href={url.href}
+      target="_blank"
+      rel="noopener"
+    >
+      Start Blocking for Free <span aria-hidden="true">↗</span>
+    </a>
+    <span class="ms-promotion-offer">Free for up to 100 endpoints</span>
+  </div>
+</aside>
