@@ -44,7 +44,7 @@ Binary-dependent signature generation, repository-generated content writers, and
 
 | Location | Finding | Required repair |
 | --- | --- | --- |
-| `generate-site.yml`, `release.yml`, `bin/gen-files.py` | Binary-dependent generation does not request LFS hydration. During the September 14 audit, 265 committed ClamAV rows matched the hash and byte length of committed LFS pointer text rather than the binary. | Hydrate LFS before binary-dependent generation; reject pointer inputs; regenerate and verify the affected signatures. Keep ordinary website builds independent of driver binary downloads. |
+| `bin/gen-files.py` ClamAV export | Unhydrated checkouts previously produced signatures for LFS pointer text instead of driver bytes. | Resolved: use the SHA256 object ID and binary size from valid LFS pointers, or hash real binary bytes in hydrated checkouts. Regenerate the database and gate generation on regression tests. Other binary-dependent generators still require separate review. |
 | `deploy.yml` | Previously deployed after any completed generator run. | Resolved: same-revision generation/build/tests and gated artifact publication in one workflow. |
 | `release.yml` | Previously rebuilt/deployed Hugo with untransferred generated output. | Resolved: remove website generation/deployment from tag releases; packaging depends on validation. |
 | `generate-site.yml`, `generate-counter.yml` | Competing main-branch writers, unrestricted `git add .`, and empty-commit behavior. | Serialize updates, restrict paths, skip empty diffs, and generate website-only assets during the build. |
@@ -52,3 +52,21 @@ Binary-dependent signature generation, repository-generated content writers, and
 | `bin/site.py` metrics | Cached blocklist XML is reused while the displayed generation date changes; blocklist percentages use a different denominator than the current card text. | Track source snapshot date/digest separately; display matchable and unknown denominators. Per-sample blocklist filters require exported verdicts, not inference from HVCI. |
 
 Remaining maintenance repairs require their own data-level validation; they are not evidence that detection artifacts are correct. Production is explicitly decoupled from these jobs by the same-revision website-only exporter.
+
+### ClamAV export contract
+
+`bin/gen-files.py::gen_clamav_hash_list` emits deterministic `SHA256:size:filename`
+rows in `detections/av/LOLDrivers.hdb`. A hydrated checkout and a checkout containing
+the corresponding canonical Git LFS pointers must produce the same rows. Pointer
+metadata identifies the expected binary; it does not prove that the remote LFS
+object is available or that a driver is malicious.
+
+Malformed or unsupported pointers and missing/empty input directories must fail
+without replacing an existing database. The complete output is validated before
+atomic replacement. Ordinary site builds remain independent of binary downloads.
+
+Run `python -m unittest discover -s bin/tests -p test_clamav_exports.py` for the
+focused regression suite. YAML/driver validation also runs the full Python export
+suite in CI, and detection generation runs the ClamAV tests before writing files.
+The existing `.hdb` path is preserved: ClamAV recognizes SHA256 signatures by hash
+length (see [hash-based signatures](https://docs.clamav.net/manual/Signatures/HashSignatures.html)).

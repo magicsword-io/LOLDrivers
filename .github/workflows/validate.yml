@@ -24,3 +24,5 @@ jobs:
       run: poetry install
     - name: Run YAML and Driver Checks
       run: poetry run python bin/validate.py -v
+    - name: Test API and detection exports
+      run: poetry run python -m unittest discover -s bin/tests -p 'test_*.py'
