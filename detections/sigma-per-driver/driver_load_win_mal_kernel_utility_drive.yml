@@ -11,7 +11,7 @@ references:
     - https://github.com/wwwab123/Tjbxld_Drv_CreateProcessCallbacksKiller_BYOVD
 author: Michael Haag
 date: 2026/08/28
-modified: 2026/09/16
+modified: 2026/09/18
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -29,8 +29,8 @@ detection:
             - 'SHA1=e11e7ee8824e45c25ab638fec6d6e7d4ab89cffa'
             - 'SHA256=962fb670510807fd5cab3a6e6f886aeb2b925c42054c29fa02f67011be935954'
             - 'SHA256=501ea082774f29adc752887402af6df0edf49bf7b3816b93f6e52c06a79685bc'
-            - 'IMPHASH=3df5f109bc00887b8230282740059e26'
             - 'IMPHASH=df691992834a38d3116d3b2a5bd39e29'
+            - 'IMPHASH=3df5f109bc00887b8230282740059e26'
     condition: selection_hashes
 falsepositives:
     - Unknown
