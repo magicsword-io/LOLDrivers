@@ -1,0 +1,34 @@
+title: Driver Load - pwdrvio.sys
+id: 9ba62c70-c2f8-522c-a444-109e481e76e6
+status: experimental
+description: |
+    Detects loading of driver pwdrvio.sys via hash.
+    MiniTool Partition Wizard's pwdrvio.sys exposes raw physical-disk read and write operations through the PartitionWizardDiskAccesser device namespace. The reviewed sample accepts a numeric device-name suffix, resolves the corresponding physical disk, and forwards caller-controlled read/write requests to the disk stack. Its device is created without FILE_DEVICE_SECURE_OPEN and its create handler does not authorize the caller opening that namespace path. Static analysis therefore supports the reported standard-user access to raw disk contents once the driver is loaded, which can bypass file-system access controls and enable privilege escalation. This is physical-disk access, not arbitrary physical-memory mapping; standard-user reachability was not reproduced locally.
+references:
+    - https://www.loldrivers.io/drivers/50eec1d1-87ea-405d-a7c0-d789c29630a7/
+    - https://github.com/magicsword-io/LOLDrivers/issues/426
+    - https://github.com/AmeerTheInteger/Windows-kernel-LPE-pwdrivio.sys
+    - https://github.com/canomer/CVE-2026-36981-Kernel-EoP-PoC
+    - https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/controlling-device-namespace-access
+author: AmeerTheInteger, Michael Haag
+date: 2026/09/18
+modified: 2026/09/18
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c32ecb99ad25e9a04f01c8665df29ef8'
+            - 'SHA1=c39334f452618af5087f3326758e7f77034f18cf'
+            - 'SHA256=0489b3dec6a33e50d8a48a8dad3f5b923a81f7300e4a71358d90d2879bac9aa2'
+            - 'IMPHASH=59e66ef22638bfa3854ecf84095d8092'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

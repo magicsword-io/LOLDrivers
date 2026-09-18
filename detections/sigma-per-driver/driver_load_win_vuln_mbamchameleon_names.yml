@@ -1,0 +1,29 @@
+title: Driver Load - mbamchameleon.sys
+id: 7a89c8ff-b288-57c4-a55c-d299d5bd79c8
+status: experimental
+description: |
+    Detects loading of driver mbamchameleon.sys via name.
+    Malwarebytes' mbamchameleon.sys 3.2.0.456 exposes process termination to verified, registered client processes. The reported Bring Your Own Trusted Caller technique abuses administrator-level control of a genuine signed Malwarebytes client: the driver's on-disk image verification does not attest to the integrity of code executing inside that client. Static analysis confirms client verification and registration through IOCTL 0x222008 and a current-process client-state gate before IOCTL 0x222024 reaches ZwTerminateProcess for a supplied process identifier. An unrelated unsigned process does not meet those checks. The driver must be loaded and the caller must execute inside a verified, registered client. This record is limited to the reviewed sample and does not assert that all current product versions are affected.
+references:
+    - https://www.loldrivers.io/drivers/c2feb6de-46fe-44ab-93c2-634ea6ab83a2/
+    - https://github.com/magicsword-io/LOLDrivers/issues/435
+    - https://xusheng.dev/posts/byotc/main/
+author: Xusheng Li, Michael Haag
+date: 2026/09/18
+modified: 2026/09/18
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\mbamchameleon.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

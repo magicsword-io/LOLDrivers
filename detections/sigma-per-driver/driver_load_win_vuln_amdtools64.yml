@@ -1,0 +1,32 @@
+title: Driver Load - AmdTools64.sys
+id: 1a7c0777-2fa7-562e-a308-cc46dc4f6803
+status: experimental
+description: |
+    Detects loading of driver AmdTools64.sys via hash.
+    AMD Special Tools Driver AmdTools64.sys 1.7.16.219 exposes physical-memory mapping through IOCTL 0xFFF028A4. Static analysis confirms that the handler passes a caller-supplied physical address and length to MmMapIoSpace, constructs an MDL, and maps the range into the caller's user-mode address space with MmMapLockedPagesSpecifyCache, without a physical-range authorization check. The device uses FILE_DEVICE_SECURE_OPEN and a security descriptor granting access only to LocalSystem and Builtin Administrators. This is an administrator/SYSTEM-gated physical-memory primitive, not a standard-user entry point. The PnP driver must be installed and its device interface started before the request can be used. The assessment is limited to this exact sample and does not assert an affected-version range.
+references:
+    - https://www.loldrivers.io/drivers/1bab0fae-7908-4fae-9db7-73562c7d92cd/
+    - https://github.com/magicsword-io/LOLDrivers/issues/430
+    - https://github.com/methmind/amdtools64
+author: Leonid (methmind), Michael Haag
+date: 2026/09/18
+modified: 2026/09/18
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c430d33293f9abf681899ff0e25de3ac'
+            - 'SHA1=0f0cd103690d744ec420dfea7a6b3f39686260a7'
+            - 'SHA256=891007bc9f3b55ae168fa60ccbb831ccdb5dce4da4a591d000806d5a2c6115c3'
+            - 'IMPHASH=53902688f54746da0dc34ecc87f09653'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

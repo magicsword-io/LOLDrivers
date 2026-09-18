@@ -1,0 +1,33 @@
+title: Driver Load - pxscan.sys
+id: 4d853309-fe98-5a65-a0ad-99907aad3b6e
+status: experimental
+description: |
+    Detects loading of driver pxscan.sys via name.
+    The legacy Prevx Scanner driver pxscan.sys 3.0.5.220 processes configurable file targets under its service's Files registry key when IOCTL 0x22E044 is requested. Static analysis confirms that the worker can delete selected files and terminate matching processes from kernel context. The process termination behavior is documented as CVE-2025-60349. The reviewed device uses FILE_DEVICE_SECURE_OPEN and a security descriptor granting full access only to LocalSystem and Builtin Administrators; modifying the service registry configuration also requires appropriate privileges. This is an administrator/SYSTEM-gated BYOVD primitive, not a standard-user privilege escalation. Protected-process termination was not tested locally.
+references:
+    - https://www.loldrivers.io/drivers/be1a3216-73db-46e4-b107-87d9b7751181/
+    - https://github.com/magicsword-io/LOLDrivers/issues/429
+    - https://github.com/wwwab123/pxscan_ZwDeleteFile_ZwTerminateProcess_BSOD_BYOVD
+    - https://github.com/djackreuter/CVE-2025-60349
+    - https://blog.shellntel.com/p/finding-an-undiscovered-process-termination-vulnerability-in-a-15-year-old-antivirus-driver
+    - https://www.cve.org/CVERecord?id=CVE-2025-60349
+    - https://cveawg.mitre.org/api/cve/CVE-2025-60349
+author: wwwab123, Michael Haag
+date: 2026/09/18
+modified: 2026/09/18
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\pxscan.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,32 @@
+title: Driver Load - pskmad.sys
+id: 9eaba453-99d5-55ae-ae44-20b55a79aeae
+status: experimental
+description: |
+    Detects loading of driver pskmad.sys via hash.
+    Panda Security's pskmad.sys 1.1.0.23 exposes a memory-read interface protected by a caller-supplied named-event and shared-section authentication exchange. An administrator-controlled process can satisfy that exchange and use the accepted handle to read memory through IOCTL 0xB3702C08. Static analysis of this exact sample confirms a path that copies from valid kernel virtual addresses into the IOCTL output. The device grants access to administrators and LocalSystem; this is not a standard-user entry point. This record tracks the newly reported authentication weakness, not the older Panda CVEs, and does not establish affected versions beyond this exact sample.
+references:
+    - https://www.loldrivers.io/drivers/b9216fc9-860e-43ae-8db2-e970c7e76b46/
+    - https://github.com/magicsword-io/LOLDrivers/issues/434
+    - https://xusheng.dev/posts/byotc/main/
+author: Xusheng Li, Michael Haag
+date: 2026/09/18
+modified: 2026/09/18
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=43fe428d3e109c81bb1737afd0f9bfa6'
+            - 'SHA1=7be590049b5396056f2384a3b56bf2db11b286e1'
+            - 'SHA256=9bf3b737afa4d4f5e7b00ec749d4b75656ad66d9a2b402e1e81934e95ba7df5b'
+            - 'IMPHASH=7170ec91f64a93d0b46d51b933b99cca'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
