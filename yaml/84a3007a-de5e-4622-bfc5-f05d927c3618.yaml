@@ -11,10 +11,13 @@ CVE:
 Category: vulnerable driver
 Commands:
   Command: ''
-  Description: Alinubx.sys exposes IOCTL 0x222024 which allows user-mode applications
-    to terminate arbitrary processes from the kernel via ZwTerminateProcess. The IOCTL
-    input buffer expects a structure containing the PID (DWORD) and an exit status
-    code (DWORD). Abused by the Cruciferra MaaS loader to kill AV/EDR processes.
+  Description: Alinubx.sys exposes IOCTL 0x222024 to request kernel-mode process
+    termination through the device path \\.\Alinubx. The handler requires an eight-byte
+    input containing a PID (DWORD) and exit status (DWORD), and passes both to a helper
+    using PsLookupProcessByProcessId, ObOpenObjectByPointer, and ZwTerminateProcess.
+    Access requires the driver to be loaded and its device to be accessible; successful
+    termination of protected processes is not established. Abused by the Cruciferra
+    MaaS loader to target AV/EDR processes.
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Terminate AV/EDR processes from kernel mode (BYOVD)
@@ -23,12 +26,13 @@ Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/412
 - https://x.com/YungBinary/status/2092812095456936172
 - https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend
+- https://github.com/DeathShotXD/0xCr0ssCrush/blob/main/docs/alinubx-analysis.md
 Detection:
 - type: ''
   value: ''
 Acknowledgement:
-  Handle: '@eSentire_TRU'
-  Person: eSentire Threat Response Unit (TRU)
+  Handle: '@eSentire_TRU, @0xDeathShotXD'
+  Person: eSentire Threat Response Unit (TRU), DeathShotXD
 KnownVulnerableSamples:
 - Filename: Alinubx.sys
   MD5: 10b3049f4a954665512eca5d24728c89
