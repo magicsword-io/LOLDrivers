@@ -1,0 +1,273 @@
+Id: c08e6fc3-38f6-56fa-b937-922442dcbfba
+Tags:
+- ccekrnl.dat
+Verified: 'TRUE'
+Author: Xusheng Li, Michael Haag
+Created: '2026-09-19'
+MitreID: T1562.001
+Category: vulnerable driver
+Commands:
+  Command: ''
+  Description: Comodo KillSwitch ccekrnl.dat (file version 12, 2, 2, 8012) is a kernel
+    driver despite its .dat extension. Its CCEKrnl device exposes IOCTL 0x22e01f,
+    whose handler passes a caller-supplied process identifier, desired access mask,
+    and output-handle pointer to ZwOpenProcess without a target or access-mask restriction
+    in that handler. The submitter reports opening the device from an unrelated client,
+    obtaining PROCESS_TERMINATE access to a self-created ordinary child, and terminating
+    it in user mode. This is a kernel process-handle broker, not a direct driver termination
+    command or a trusted-client injection chain. Static analysis confirms the device
+    and process-open dispatch path; the bounded runtime result is externally reported.
+    The driver must be loaded and its device accessible. Protected-process access,
+    EDR termination, and behavior of other versions are not established.
+  Usecase: Obtain a process handle through a kernel interface and use it for process
+    termination.
+  Privileges: Ability to load the driver if absent and open its CCEKrnl device; the
+    report uses an administrator-controlled environment.
+  OperatingSystem: Windows
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/443
+- https://gist.github.com/xusheng6/2b90dcba4b09bfeaf392c341654cf48e
+Acknowledgement:
+  Person: Xusheng Li
+  Handle: '@xusheng6'
+Detection: []
+KnownVulnerableSamples:
+- Filename: ccekrnl.dat
+  SHA256: bf0c3dde6b66a1ee7a43f7d9efef2a22334ad727bee2d4a72d7a8e82d3a781e5
+  MD5: d42b6b79e30f1184728675137652b022
+  SHA1: e6f9046228624eb14f9399e9d23187c144a5b1f9
+  Imphash: 99fce758a31c1cca1a50c983f3af756c
+  Authentihash:
+    MD5: 9de4a487bb8f3b3a93e1b9a1e5db9391
+    SHA1: 393fa808e71ae6c59c1a364578704f1e104b742b
+    SHA256: 70e4dcfd20467a7a7a6acf5842a278deb8e323a481219d6b45cac56be5f8a35a
+  RichPEHeaderHash:
+    MD5: 6dd2c8206330bb79135af78e0e75bb6f
+    SHA1: ac470357549b5106d536b285ea565b9555aaecfc
+    SHA256: 030740575eab705186d51a1558e28a4eb422418eb378dbf93aebc9e01cbf0a83
+  Sections:
+    .text:
+      Entropy: 6.220103631587617
+      Virtual Size: '0x914e'
+    .rdata:
+      Entropy: 3.318550499302864
+      Virtual Size: '0x111a4'
+    .data:
+      Entropy: 2.6728981334876476
+      Virtual Size: '0x9edc'
+    .pdata:
+      Entropy: 4.720496712032846
+      Virtual Size: '0x3f0'
+    INIT:
+      Entropy: 5.270777950315938
+      Virtual Size: '0xd20'
+    .rsrc:
+      Entropy: 3.364850808492976
+      Virtual Size: '0x3d0'
+    .reloc:
+      Entropy: 5.395808224090926
+      Virtual Size: '0x1a42'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-22 05:36:59'
+  Description: COMODO Cleaning Essentials Driver
+  Company: COMODO
+  InternalName: ccekrnl.sys
+  OriginalFilename: ccekrnl.sys
+  FileVersion: '12, 2, 2, 8012 built by: WinDDK'
+  Product: COMODO Cleaning Essentials Driver
+  ProductVersion: 12, 2, 2, 8012
+  Copyright: 2005-2020 COMODO. All rights reserved.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - _wcsicmp
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - PsSetLoadImageNotifyRoutine
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoRegisterLastChanceShutdownNotification
+  - KeInitializeEvent
+  - RtlGetVersion
+  - ZwCreateFile
+  - PsCreateSystemThread
+  - IoRegisterBootDriverReinitialization
+  - ZwClose
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ZwOpenKey
+  - wcschr
+  - sprintf
+  - RtlAnsiStringToUnicodeString
+  - ZwQueryFullAttributesFile
+  - _wcsnicmp
+  - ZwReadFile
+  - RtlAppendUnicodeToString
+  - RtlInitAnsiString
+  - ZwDeleteValueKey
+  - ZwSetValueKey
+  - KeInitializeTimer
+  - ZwSetInformationFile
+  - RtlFreeUnicodeString
+  - wcsstr
+  - ZwQueryValueKey
+  - ZwQueryDirectoryFile
+  - RtlAppendUnicodeStringToString
+  - KeWaitForSingleObject
+  - ZwQueryInformationFile
+  - ZwWriteFile
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - ZwQueryInformationProcess
+  - ObOpenObjectByPointer
+  - SeCreateAccessState
+  - KeSetEvent
+  - IoGetFileObjectGenericMapping
+  - ObCreateObject
+  - ObInsertObject
+  - IoFileObjectType
+  - ObReferenceObjectByHandle
+  - IoFreeIrp
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - IoGetDeviceObjectPointer
+  - RtlCompareUnicodeString
+  - MmIsAddressValid
+  - ExAcquireRundownProtection
+  - PsProcessType
+  - RtlWalkFrameChain
+  - RtlNumberGenericTableElements
+  - ExReleaseFastMutex
+  - ExAcquireFastMutex
+  - PsJobType
+  - KeInitializeApc
+  - KeInsertQueueApc
+  - ZwQueryObject
+  - ExReleaseRundownProtection
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - IoDriverObjectType
+  - ZwSetInformationProcess
+  - PsInitialSystemProcess
+  - PsThreadType
+  - PsGetProcessJob
+  - ZwOpenProcess
+  - ObReferenceObjectByName
+  - ZwQueryInformationThread
+  - KeStackAttachProcess
+  - _stricmp
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - ZwCreateSection
+  - rand
+  - _vsnwprintf
+  - PoStartNextPowerIrp
+  - IoFreeMdl
+  - IoGetDeviceAttachmentBaseRef
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - IoAllocateMdl
+  - ObOpenObjectByName
+  - KeReleaseSpinLock
+  - ZwOpenSymbolicLinkObject
+  - IofCallDriver
+  - KeAcquireSpinLockRaiseToDpc
+  - KeInitializeMutex
+  - ExInitializeNPagedLookasideList
+  - ExpInterlockedPushEntrySList
+  - ExpInterlockedPopEntrySList
+  - KeReleaseMutex
+  - wcsrchr
+  - ExQueryDepthSList
+  - CmRegisterCallback
+  - wcsncpy
+  - KeQueryTimeIncrement
+  - RtlInitializeGenericTable
+  - RtlInsertElementGenericTable
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust
+        External CA Root
+      ValidFrom: '2013-08-15 20:26:30'
+      ValidTo: '2023-08-15 20:36:30'
+      Signature: 362ba2f2e1331fe493f7f26985c6640ec99b632fe4703798fd94ec7bcff8a14246f9ed6a4e8d34693605557a1ebbad8c99429606e925a82684bec1bf16a97caa5b04b7fdd1c0f402be28edf577c79bfe3af6e8c17bd382abfa144ecf2bcfe5d5b54840b1a38f838bad2b2553aba634cef243f74f2ce9dd1e4e5ab6bae83b10992400bc50fd78f6e523a8899493f7b74130374a57b7e644d9c9df9905aa44fc74af8264cc07cb01b609c32ee3e832a7b49f4178c7a184365462f2ec150ac8ead084f8f1e06bf456125f95e0fcddb77693fe294a25e90400f1b4110ec9849edb177df51ea58e3629193a6d6c464bd7ab7024288d05a3d9d524f2f8a0d13c8239d4a8820e693a8109fc06f0c75933843693064191232c22a5a7012b50b428aedb46b0591b86b39b87e8494e390b6d14df4c03301e1f5f74aef55b590353ec9816e0d06235751b48b87d13e57a48b87752a40798253b069b7a4e6a6f44864f144f2779273d5073414c9c413edd290c73b1c7fb1f760c176504ebd25010924149ece4067d3615446f89bf697df94d40c13a98b6a07e31d2b5aecafb53d53f5086cd5e933b6d5d7c9a3f3ff7a9255884dd114900a2c7c89e37dd778e6d718be05b81345d54baccf59347886de7ef5be228e4801b40e40f2ad17f2315655aac9994433f465526d6c4fa8895e2919aa32d0b85deac8ce0f967709f71790231f761a229c4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000035d8d5595b0671412b000000000035
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 3d488d41aaeb5661974952080abef2fd
+        SHA1: df01e35e6befc7d65625319f17397b861e618d56
+        SHA256: 3d6ef38b5d26773dc77392e415e88b3a744b30ea9f2081e2a992b5818db2f0c4
+        SHA384: ac7c06916fe4a00307834b2499f12799d3fe463c2e63d1881df669a2786745beeee2b3a7d87cd6bc9e4fe293c22e5a59
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Certification Authority
+      ValidFrom: '2000-05-30 10:48:38'
+      ValidTo: '2020-05-30 10:48:38'
+      Signature: 64bf83f15f9a85d0cdb8a129570de85af7d1e93ef276046ef15270bb1e3cff4d0d746acc818225d3c3a02a5d4cf5ba8ba16dc4540975c7e3270e5d847937401377f5b4ac1cd03bab1712d6ef34187e2be979d3ab57450caf28fad0dbe5509588bbdf8557697d92d852ca7381bf1cf3e6b86e661105b31e942d7f91959259f14ccea391714c7c470c3b0b19f6a1b16c863e5caac42e82cbf90796ba484d90f294c8a973a2eb067b239ddea2f34d559f7a6145981868c75e406b23f5797aef8cb56b8bb76f46f47bf13d4b04d89380595ae041241db28f15605847dbef6e46fd15f5d95f9ab3dbd8b8e440b3cd9739ae85bb1d8ebcdc879bd1a6eff13b6f10386f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
+        SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
+        SHA256: 0d73a614eef7596cf5a34733f74daf2ccfe4df7b4a40069bf43c43e428264177
+        SHA384: 7ce102d63c57cb48f80a65d1a5e9b350a7a618482aa5a36775323ca933ddfcb00def83796a6340dec5ebf7596cfd8e5d
+    - Subject: serialNumber=3910805, JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=Delaware,
+        BUSINESS_CATEGORY=Private Organization, C=US, postalCode=07013, ST=NJ, L=Clifton,
+        STREET_ADDRESS=1255 Broad St, O=Comodo Security Solutions, Inc., CN=Comodo
+        Security Solutions, Inc.
+      ValidFrom: '2018-12-04 00:00:00'
+      ValidTo: '2021-12-03 23:59:59'
+      Signature: 7f4d3e6594a3e380fac36b00e97ccacce4786be2ecc13cf37e737aaca0328bb8bfdcd513daff94aba1c7ee00cc8a3bd073157a812f6e31f772781d0bb922a8b86932b296c2312cdf3b239c42bb443b4b1b89b36de34a7fae65ac63eb6ead8812f8d373fa6f1a4e8d9e62eb004caae3639e41e08ed48d640b04725b09b4411dc083587e7fe24b33d90677677960efa6299cc85c4b2bfae4cdfe36581d25e029f6af1a7e77f502882d87597f3cc5bb450a71f9fd57f43b321baa4cbe5213a48a2c5b785a9de4103d5029e4db79403e98784e51379d45a86996b183469e98470731d1a603eaa443a05527aca62f51631722dc0dfe5d74c8298d2aed885d34c9be61
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1b427b060e2866bfb586cc267e1c3eaa
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ab42fb079efdf0842861aabf833fa3ad
+        SHA1: 033a711619e6d8a9e0c334c2abb5389faf59c72f
+        SHA256: c6dcba6192a502eb4e7caebea466be00c8abbf2269740faa6156a5341ba0a2be
+        SHA384: b8911416b9c523e4e8815a764b50db6a59216535eee35f9d225d4dd9bbf898dfb5509c4cc3ddd375957ce464425ec95e
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Extended Validation Code Signing CA
+      ValidFrom: '2014-12-03 00:00:00'
+      ValidTo: '2029-12-02 23:59:59'
+      Signature: 664eecb716776f11e81b5d6a4ed9f28b6cb15628408bc031c49948233df80ee88097ef6d200b1f13c486fb173415e18e54f7c2b8007315e028d9dabafa8254c2f7ebbfc336d0309fe5a11c94dfef7ce8f62c78a2accf266a15a11531d6313498bd534fc48483a3c4965c3dd8fed6f954ff67936df83e2b6b2ca2087c5648813218b26eac90c1dbe4de398b86e5c7184059a4df9647bab27fb1f8570f858074380e3a58621efe52e3e6ae530986fe8f9bdb5656cc07b089c104f1530b6c6f77ecb21fecf65b4043600f1bab1854b410048ef80ee9cb83b17af2344e6a544ce9832ae9b030251cce628e0eeb85e629feb14ae3f2ae3c91f54ca1bec8170e5cbb424de31a8a92cd3e207edde975b1ea1f745c9e54c29437b261dd0716597f968016e099b5d26eb0c9230615acd123f4338bce75f0c186d3ffe12efa904ffe46f9bbdb4fbbb7fed10d2b04f1d2d195852c8a2eb88556f2c38452a1e933b1eb50c8a1b09fe3c38b3a879ee755d3d36d3417300d68220bd5b9ed733572c3eda737cde343ae45cd34bf28ca8762ed43a4affacb31cb215861465eb6c67aa61e532aa8f85c511f3a5a100f28c0e4748b74c604aaf84b26280a3289db9d2a60716ac3964e16b963bf6195678c4b2ebbb04e83e94d31e58e2722f53c267b4491d3d45af0d37cf438be149a990e8bb15beae48b0f119d7742821c5c3ad4daab882f8d573054
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: e3898a5cae592360ce7bfdf5ff3fb13f
+        SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
+        SHA256: 3a9b4006a9e125b4458344389c86dfb4f6728848b9871654c615a138514d02ec
+        SHA384: fcd8dd15125f14b84fec55838806355ec3787407188bac83c2c0d6c841adf9ac76ee83eccc5c9463f1f88fc5295a31ee
+    Signer:
+    - SerialNumber: 1b427b060e2866bfb586cc267e1c3eaa
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Extended Validation Code Signing CA
+      Version: 1
+  Signature:
+  - Comodo Security Solutions, Inc.

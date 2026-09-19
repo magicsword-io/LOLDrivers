@@ -1,0 +1,747 @@
+Id: 5cb0463b-cf28-56b7-b5cc-f2003c5c78d1
+Tags:
+- 360FsFlt_win10.sys
+- 360Box64_win10.sys
+Verified: 'TRUE'
+Author: Xusheng Li, Michael Haag
+Created: '2026-09-19'
+MitreID: T1562.001
+Category: vulnerable driver
+Commands:
+  Command: ''
+  Description: '360 Total Security 11.0.0.1314 is reported to permit a Bring Your
+    Own Trusted Caller (BYOTC) chain involving 360FsFlt_win10.sys 6.9.1.2719 and 360Box64_win10.sys
+    2.1.0.1463. Static analysis confirms that 360Box64 registers the Safe360BoxPort
+    filter communication port: command 0x13 updates internal sandbox-group membership,
+    and command 0x31 can select group members for ZwTerminateProcess. The submitter
+    reports reaching this interface from a modified genuine QHSafeMain.exe under the
+    trust relationship involving 360FsFlt, with Virtual Sandbox enabled, and terminating
+    a self-created ordinary child. The group-termination primitive is statically confirmed;
+    the cross-driver trust relationship and runtime bypass are externally reported.
+    These samples are tracked together as components of that chain, not as two independent
+    arbitrary-PID termination drivers. No protected-process or EDR termination is
+    established.'
+  Usecase: Abuse a trusted client to invoke sandbox-group process termination.
+  Privileges: Administrator-level control of the genuine QHSafeMain.exe client; reported
+    360 installation with Virtual Sandbox enabled.
+  OperatingSystem: Windows
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/441
+- https://gist.github.com/xusheng6/2e0bb4e3cd00f4869d4ebe7aebe896cb
+- https://xusheng.dev/posts/byotc/main/
+Acknowledgement:
+  Person: Xusheng Li
+  Handle: '@xusheng6'
+Detection: []
+KnownVulnerableSamples:
+- Filename: 360FsFlt_win10.sys
+  SHA256: 1c738be5e36be196c23c0d092ed1dd2e81b00158475e0f361105e0cdc9726d0c
+  MD5: 3e85c7fef77b908bead77d205596921d
+  SHA1: ad0e470925ac4e896ed008bcef1d9b4bd82a2071
+  Imphash: 1ad539d1de49fade735b4ff200f16f0b
+  Authentihash:
+    MD5: 6267fd99a07ca9e7255b50dc76aae499
+    SHA1: 2c54ef48b44d66c6f7037f4473df3906fdf03466
+    SHA256: 30d95679de6cd2fda37f172167bf21f8ead93347c902eb77e2d0ed6a07115598
+  RichPEHeaderHash:
+    MD5: f5ab3187267cfe54282ccb65187ed9a6
+    SHA1: cc3a20d4d9eacb4403e94d05644f8b1e11886375
+    SHA256: e960fdbf8180c4229202027493821f9457e2fd68b0802e01e267622faff702c3
+  Sections:
+    .text:
+      Entropy: 6.452370069408823
+      Virtual Size: '0x6f891'
+    .rdata:
+      Entropy: 5.622135075381055
+      Virtual Size: '0xce5c'
+    .data:
+      Entropy: 4.565478038670134
+      Virtual Size: '0x60d78'
+    .pdata:
+      Entropy: 5.798571309548235
+      Virtual Size: '0x2fb8'
+    INIT:
+      Entropy: 5.439845731568432
+      Virtual Size: '0x309a'
+    .rsrc:
+      Entropy: 3.343764443701514
+      Virtual Size: '0x408'
+    .reloc:
+      Entropy: 1.910990359403375
+      Virtual Size: '0xb72'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-07-21 00:55:24'
+  Description: 360 Total Security
+  Company: 360.cn
+  InternalName: 360FsFlt.sys
+  OriginalFilename: 360FsFlt.sys
+  FileVersion: 6.9.1.2719
+  Product: 360 Total Security
+  ProductVersion: 6.9.1.2719
+  Copyright: (C)Qihu 360 Software Co., Ltd. All rights reserved.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlCopySid
+  - RtlEqualUnicodeString
+  - FsRtlIsNameInExpression
+  - PsGetProcessSessionId
+  - ZwOpenProcess
+  - ZwQueryInformationProcess
+  - RtlLengthSid
+  - FsRtlLegalAnsiCharacterArray
+  - RtlCompareUnicodeString
+  - IoThreadToProcess
+  - IoAttachDeviceToDeviceStackSafe
+  - IoGetDeviceObjectPointer
+  - IofCompleteRequest
+  - IoCreateDevice
+  - PsGetProcessId
+  - IofCallDriver
+  - ExGetPreviousMode
+  - RtlPrefixUnicodeString
+  - _wcsicmp
+  - ZwUnloadKey
+  - ZwCreateKey
+  - RtlCreateAcl
+  - KeAreApcsDisabled
+  - RtlSetDaclSecurityDescriptor
+  - MmGetSystemRoutineAddress
+  - IoCreateFile
+  - ZwDeleteValueKey
+  - ZwSaveKey
+  - RtlAddAccessAllowedAce
+  - ZwSetInformationFile
+  - KeDelayExecutionThread
+  - _vsnwprintf
+  - ZwDeleteFile
+  - SeExports
+  - ZwLoadKey
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - RtlCreateSecurityDescriptor
+  - ExQueueWorkItem
+  - _stricmp
+  - ExAcquireResourceExclusiveLite
+  - ExReleaseFastMutex
+  - KeLeaveCriticalRegion
+  - ExAcquireFastMutex
+  - PsGetProcessImageFileName
+  - PsIsSystemThread
+  - PsIsThreadImpersonating
+  - KeInitializeEvent
+  - RtlGetVersion
+  - PsGetThreadId
+  - KeEnterCriticalRegion
+  - IoFileObjectType
+  - MmMapLockedPagesSpecifyCache
+  - ExAcquireResourceSharedLite
+  - ExReleaseResourceLite
+  - PsGetProcessInheritedFromUniqueProcessId
+  - ObCloseHandle
+  - PsGetVersion
+  - RtlEqualString
+  - ExDeleteResourceLite
+  - IoGetTopLevelIrp
+  - PsGetCurrentThreadId
+  - ExInitializeResourceLite
+  - PsGetProcessWow64Process
+  - MmSecureVirtualMemory
+  - RtlVolumeDeviceToDosName
+  - ZwCreateEvent
+  - RtlAnsiStringToUnicodeString
+  - ObOpenObjectByName
+  - ZwFsControlFile
+  - _wcsnicmp
+  - ZwReadFile
+  - IoIsFileOriginRemote
+  - PsReferenceImpersonationToken
+  - ZwMapViewOfSection
+  - wcsncpy
+  - RtlEqualSid
+  - RtlInitAnsiString
+  - MmHighestUserAddress
+  - IoQueryFileInformation
+  - SeTokenObjectType
+  - SeTokenIsRestricted
+  - SeLocateProcessImageName
+  - LdrAccessResource
+  - IoGetTransactionParameterBlock
+  - ObQueryNameString
+  - ZwWaitForSingleObject
+  - ZwCreateFile
+  - ZwUnmapViewOfSection
+  - ZwQueryDirectoryFile
+  - ZwFreeVirtualMemory
+  - RtlAppendUnicodeStringToString
+  - SeQueryInformationToken
+  - PsInitialSystemProcess
+  - PsDereferenceImpersonationToken
+  - ObfReferenceObject
+  - RtlUnicodeStringToInteger
+  - ZwCreateSection
+  - ZwOpenFile
+  - ZwTerminateProcess
+  - ZwQueryInformationToken
+  - ZwQueryInformationFile
+  - MmUnsecureVirtualMemory
+  - RtlUpcaseUnicodeChar
+  - RtlUpcaseUnicodeString
+  - IoQueryFileDosDeviceName
+  - PsGetCurrentThreadTeb
+  - ZwQueryKey
+  - ZwAllocateVirtualMemory
+  - LdrFindResource_U
+  - RtlCompareMemory
+  - PsGetProcessSectionBaseAddress
+  - ObRegisterCallbacks
+  - PsSetCreateThreadNotifyRoutine
+  - PsSetCreateProcessNotifyRoutine
+  - PoStartNextPowerIrp
+  - ZwQueryVolumeInformationFile
+  - _strnicmp
+  - RtlConvertSidToUnicodeString
+  - MmUserProbeAddress
+  - RtlFreeUnicodeString
+  - KeQueryTimeIncrement
+  - IoBuildDeviceIoControlRequest
+  - IoIs32bitProcess
+  - IoDriverObjectType
+  - IoGetDeviceAttachmentBaseRef
+  - IoGetAttachedDeviceReference
+  - ObReferenceObjectByName
+  - IoEnumerateDeviceObjectList
+  - MmUnmapLockedPages
+  - ExRaiseStatus
+  - IoFreeMdl
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - IoAllocateMdl
+  - RtlImageNtHeader
+  - KeBugCheckEx
+  - ZwOpenKey
+  - ExQueryDepthSList
+  - ZwQueryValueKey
+  - ExpInterlockedPopEntrySList
+  - ZwSetValueKey
+  - ExpInterlockedPushEntrySList
+  - PsDereferencePrimaryToken
+  - PsLookupThreadByThreadId
+  - KeStackAttachProcess
+  - DbgPrint
+  - ObOpenObjectByPointer
+  - ObfDereferenceObject
+  - MmIsAddressValid
+  - ExInitializePagedLookasideList
+  - RtlCopyUnicodeString
+  - PsGetCurrentProcessId
+  - PsThreadType
+  - KeWaitForSingleObject
+  - ObReferenceObjectByHandle
+  - ZwClose
+  - ExEventObjectType
+  - IoGetCurrentProcess
+  - ExAllocatePool
+  - ExDeletePagedLookasideList
+  - KeUnstackDetachProcess
+  - KeAcquireInStackQueuedSpinLock
+  - ZwQuerySystemInformation
+  - PsReferencePrimaryToken
+  - ProbeForWrite
+  - KeSetEvent
+  - RtlInitUnicodeString
+  - PsLookupProcessByProcessId
+  - KeReleaseInStackQueuedSpinLock
+  - ExFreePoolWithTag
+  - PsProcessType
+  - ProbeForRead
+  - NtFreeVirtualMemory
+  - RtlStringFromGUID
+  - SeSinglePrivilegeCheck
+  - IoRegisterDriverReinitialization
+  - PsJobType
+  - ZwQueryObject
+  - MmIsDriverVerifying
+  - DbgPrintEx
+  - ExRaiseAccessViolation
+  - RtlImageDirectoryEntryToData
+  - wcsstr
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - CmRegisterCallback
+  - IoCreateSymbolicLink
+  - KeReleaseSpinLock
+  - IoReleaseCancelSpinLock
+  - KeAcquireSpinLockRaiseToDpc
+  - ExInitializeNPagedLookasideList
+  - ExDeleteNPagedLookasideList
+  - IoGetRequestorProcessId
+  - RtlUnicodeStringToAnsiString
+  - RtlFreeAnsiString
+  - KeInitializeApc
+  - RtlIntegerToUnicodeString
+  - KeInsertQueueApc
+  - ZwDuplicateObject
+  - RtlFormatCurrentUserKeyPath
+  - PsGetThreadTeb
+  - ZwQuerySection
+  - ZwOpenSection
+  - NtQueryInformationThread
+  - NtQueryInformationProcess
+  - IoCreateFileSpecifyDeviceObjectHint
+  - ObMakeTemporaryObject
+  - RtlAppendUnicodeToString
+  - strncpy
+  - ExSystemTimeToLocalTime
+  - RtlTimeToTimeFields
+  - PsGetThreadProcessId
+  - IoIsSystemThread
+  - MmSectionObjectType
+  - ExInterlockedInsertTailList
+  - IoGetRequestorSessionId
+  - PsGetCurrentProcessSessionId
+  - wcsrchr
+  - RtlSubAuthoritySid
+  - SeTokenIsAdmin
+  - SeFilterToken
+  - ZwSetInformationProcess
+  - RtlSubAuthorityCountSid
+  - KeClearEvent
+  - PsSetLoadImageNotifyRoutine
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - PsRemoveLoadImageNotifyRoutine
+  - RtlTimeFieldsToTime
+  - _itow
+  - _vsnprintf
+  - PsGetContextThread
+  - IoGetStackLimits
+  - RtlxAnsiStringToUnicodeSize
+  - NlsMbOemCodePageTag
+  - ExLocalTimeToSystemTime
+  - ZwDeviceIoControlFile
+  - ExAcquireRundownProtection
+  - ExReleaseRundownProtection
+  - IoGetDeviceProperty
+  - ExAllocatePoolWithTag
+  - ZwWriteFile
+  - MmSystemRangeStart
+  - __C_specific_handler
+  - FltParseFileName
+  - FltCreateCommunicationPort
+  - FltGetVolumeFromFileObject
+  - FltGetTopInstance
+  - FltSetInformationFile
+  - FltGetFileNameInformationUnsafe
+  - FltWriteFile
+  - FltObjectDereference
+  - FltParseFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltGetRoutineAddress
+  - FltGetFileNameInformation
+  - FltAllocateContext
+  - FltClose
+  - FltReleaseContext
+  - FltQueryInformationFile
+  - FltCreateFile
+  - FltReadFile
+  - FltSetCallbackDataDirty
+  - FltDeleteContext
+  - FltGetDestinationFileNameInformation
+  - FltCancelFileOpen
+  - FltGetTunneledName
+  - FltGetRequestorProcessId
+  - FltSetStreamHandleContext
+  - FltSendMessage
+  - FltGetStreamHandleContext
+  - FltGetDeviceObject
+  - FltReferenceFileNameInformation
+  - FltStartFiltering
+  - FltRegisterFilter
+  - FltBuildDefaultSecurityDescriptor
+  - FltCloseCommunicationPort
+  - FltUnregisterFilter
+  - FltFreeSecurityDescriptor
+  - FltCloseClientPort
+  - KeQueryPerformanceCounter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2025-02-20 20:08:09'
+      ValidTo: '2026-02-18 20:08:09'
+      Signature: 65d17fbf1de2b60cfc46b9d9945a9c84c28a9bac84abe3f49280bca6ff239461c1ba338bfc578d94c884e783881036e134bfd12b52e916281b220f6d34b8ca017fd2880da3b76f90303f497eb18ceebd711083097fee149c5ed15e3b7b4d20ecccb93798c03c462f0039f11b260167512ffd103e20b7b306603f07c1f68940a7074b648a650271c2cbf1dda3e5ba29028c027373faaf255d2af35a86fe539dc5ab7134a4994d5994b4ba7f189bd428778554f9e6402ba8c2cc832bc9fc64d5f6058c2fb6c28ce11798762addd0d567d724e7727b9c3253ea7be34f357ff32c8bb91e8eb198d858118254ceed218f47e94482e8a15f7e095f98c36986f7fa06eb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000125f31cb555767340d6000000000125
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 581df130bb04487a6d19bc11b5098119
+        SHA1: 900451bd61a1199f8b4994f451af8201a1f40c7b
+        SHA256: 82efe580f6ea4f2a1f39e1f0eaf14983218c1eccbb5d7c80b421501bd4a05a90
+        SHA384: 0debca99ab93db249e18bef9f007861026c31369eacd2eed479765dc192da38c37eb02848f744df8e94ec9afe19fa0de
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 3300000125f31cb555767340d6000000000125
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+- Filename: 360Box64_win10.sys
+  SHA256: 08b9b779132fe1de4eaa653005cb448c7efec4dae1acb036ad8ead0083f47880
+  MD5: 88598baf92597ae6955390cbbf2a9c8f
+  SHA1: 7a77bd7c2438603076cc49da4777775a686f7d28
+  Imphash: 7ae9f43195c75111414f01b7d7954456
+  Authentihash:
+    MD5: a3c7572fa2c48d09978ed1f7ec964da1
+    SHA1: 3d736dc52d62ffe1d41d547218dc56ed0c6d17f3
+    SHA256: b2b03276fb5dcaa8f6c6b8005b0e27b807e20c3466f10b2a3d7230008c18033b
+  RichPEHeaderHash:
+    MD5: 0a879ace206f3f32859b99e7a90b3dfc
+    SHA1: bc77f54abd925b6839dd75e62d36e7f463f4d80f
+    SHA256: ebd29795111c1761bc9b4924201a34050caa07e0b12aff58d5a7d3c408c3bf9b
+  Sections:
+    .text:
+      Entropy: 6.389649268767272
+      Virtual Size: '0x36a33'
+    .rdata:
+      Entropy: 4.525310700952255
+      Virtual Size: '0x87fc'
+    .data:
+      Entropy: 3.5864484462745345
+      Virtual Size: '0x109a0'
+    .pdata:
+      Entropy: 5.5362237254881
+      Virtual Size: '0x16c8'
+    INIT:
+      Entropy: 5.444405412261907
+      Virtual Size: '0x2464'
+    .rsrc:
+      Entropy: 3.2978350790942303
+      Virtual Size: '0x3c0'
+    .reloc:
+      Entropy: 5.806643251529756
+      Virtual Size: '0x1a0e'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-10-08 03:19:39'
+  Description: 360Box64
+  Company: 360.cn
+  InternalName: 360Box64.sys
+  OriginalFilename: 360Box64.sys
+  FileVersion: 2.1.0.1463
+  Product: ''
+  ProductVersion: 2.1.0.1463
+  Copyright: (C) 360.cn Inc. All Rights Reserved.
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeDelayExecutionThread
+  - RtlMapGenericMask
+  - ExAcquireResourceSharedLite
+  - IoGetCurrentProcess
+  - ExReleaseResourceLite
+  - PsGetProcessInheritedFromUniqueProcessId
+  - PsGetProcessSessionId
+  - KeWaitForSingleObject
+  - PsGetVersion
+  - ExDeleteResourceLite
+  - PsGetCurrentThreadId
+  - PsGetCurrentProcessId
+  - ExInitializeResourceLite
+  - PsGetProcessId
+  - RtlGetAce
+  - RtlSubAuthoritySid
+  - RtlLengthRequiredSid
+  - _strnicmp
+  - SeTokenIsAdmin
+  - ProbeForRead
+  - PsProcessType
+  - IoBuildDeviceIoControlRequest
+  - ZwAssignProcessToJobObject
+  - IoGetBaseFileSystemDeviceObject
+  - ObOpenObjectByName
+  - RtlCreateAcl
+  - PsGetProcessImageFileName
+  - PsLookupProcessByProcessId
+  - ZwReadFile
+  - RtlSetDaclSecurityDescriptor
+  - ZwSetInformationJobObject
+  - wcsncpy
+  - RtlEqualSid
+  - PsReferencePrimaryToken
+  - ZwQuerySecurityObject
+  - IoQueryFileInformation
+  - ZwQuerySystemInformation
+  - ObInsertObject
+  - RtlEqualUnicodeString
+  - KeUnstackDetachProcess
+  - RtlAddAccessAllowedAce
+  - RtlImageDirectoryEntryToData
+  - ZwSetInformationFile
+  - RtlSetSaclSecurityDescriptor
+  - ObQueryNameString
+  - ObIsKernelHandle
+  - IoGetDeviceObjectPointer
+  - ZwSetInformationProcess
+  - ZwCreateJobObject
+  - RtlAppendUnicodeStringToString
+  - SeQueryInformationToken
+  - IoCreateFileSpecifyDeviceObjectHint
+  - ObCloseHandle
+  - ZwSetSecurityObject
+  - RtlInitializeSid
+  - IoGetDiskDeviceObject
+  - PsGetProcessJob
+  - ZwOpenProcess
+  - SeExports
+  - ZwQueryInformationProcess
+  - ObfReferenceObject
+  - RtlSubAuthorityCountSid
+  - SeGetLinkedToken
+  - ZwQueryInformationFile
+  - ZwWriteFile
+  - IoQueryFileDosDeviceName
+  - ObOpenObjectByPointer
+  - KeStackAttachProcess
+  - SeQueryAuthenticationIdToken
+  - ZwSetInformationToken
+  - RtlCreateSecurityDescriptor
+  - PsDereferencePrimaryToken
+  - IofCallDriver
+  - RtlSetOwnerSecurityDescriptor
+  - KeEnterCriticalRegion
+  - LpcPortObjectType
+  - PsSetCreateProcessNotifyRoutine
+  - RtlPrefixUnicodeString
+  - PsThreadType
+  - MmSectionObjectType
+  - ExReleaseFastMutexUnsafe
+  - ExAcquireFastMutexUnsafe
+  - MmUserProbeAddress
+  - CmRegisterCallback
+  - _stricmp
+  - KeInitializeApc
+  - KeInsertQueueApc
+  - ZwFreeVirtualMemory
+  - PsLookupThreadByThreadId
+  - PsGetProcessWow64Process
+  - ZwAllocateVirtualMemory
+  - RtlInitAnsiString
+  - RtlCompareMemory
+  - PsReferenceImpersonationToken
+  - IoDriverObjectType
+  - PsDereferenceImpersonationToken
+  - ObReferenceObjectByName
+  - KeBugCheckEx
+  - PsGetThreadId
+  - KeInitializeEvent
+  - MmGetSystemRoutineAddress
+  - IoGetFileObjectGenericMapping
+  - ExAcquireFastMutex
+  - KeLeaveCriticalRegion
+  - ExReleaseFastMutex
+  - IoThreadToProcess
+  - ExAcquireResourceExclusiveLite
+  - ExQueueWorkItem
+  - RtlCompareUnicodeString
+  - FsRtlIsNameInExpression
+  - FsRtlLegalAnsiCharacterArray
+  - RtlUpcaseUnicodeString
+  - ZwOpenKey
+  - ExQueryDepthSList
+  - ZwQueryValueKey
+  - ExpInterlockedPopEntrySList
+  - ZwSetValueKey
+  - ExpInterlockedPushEntrySList
+  - KeAcquireSpinLockRaiseToDpc
+  - DbgPrint
+  - IoCreateDevice
+  - ObfDereferenceObject
+  - ExInitializePagedLookasideList
+  - RtlCopyUnicodeString
+  - ObReferenceObjectByHandle
+  - IofCompleteRequest
+  - ZwClose
+  - IoRegisterDriverReinitialization
+  - ExGetPreviousMode
+  - ZwTerminateProcess
+  - RtlUpcaseUnicodeChar
+  - ZwDeleteValueKey
+  - RtlInsertUnicodePrefix
+  - RtlFreeUnicodeString
+  - RtlRemoveUnicodePrefix
+  - RtlInitializeUnicodePrefix
+  - ZwEnumerateValueKey
+  - RtlNextUnicodePrefix
+  - RtlFindUnicodePrefix
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - ZwQueryObject
+  - ZwWaitForSingleObject
+  - wcsncmp
+  - ExRaiseStatus
+  - IoGetStackLimits
+  - IoFreeMdl
+  - FsRtlPostStackOverflow
+  - MmMapLockedPagesSpecifyCache
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - FsRtlIsNtstatusExpected
+  - IoAllocateMdl
+  - ZwUnloadKey
+  - ZwCreateKey
+  - KeAreApcsDisabled
+  - ZwDeleteFile
+  - ZwLoadKey
+  - _wcsnicmp
+  - ProbeForWrite
+  - IoIs32bitProcess
+  - ZwFlushKey
+  - MmFlushImageSection
+  - IoGetTopLevelIrp
+  - MmIsAddressValid
+  - KeReleaseInStackQueuedSpinLock
+  - KeAcquireInStackQueuedSpinLock
+  - PsReleaseProcessExitSynchronization
+  - PsAcquireProcessExitSynchronization
+  - IoGetRequestorProcessId
+  - IoEnumerateDeviceObjectList
+  - ZwLoadKeyEx
+  - MmUnmapLockedPages
+  - _vsnwprintf
+  - ExEventObjectType
+  - ExAllocatePool
+  - ExDeletePagedLookasideList
+  - ZwCreateFile
+  - IoFileObjectType
+  - KeReleaseSpinLock
+  - IoCreateFile
+  - KeSetEvent
+  - IoDeleteDevice
+  - RtlInitUnicodeString
+  - IoRegisterShutdownNotification
+  - ExFreePoolWithTag
+  - ObRegisterCallbacks
+  - ExAllocatePoolWithTag
+  - __C_specific_handler
+  - FltCheckAndGrowNameControl
+  - FltQueryInformationFile
+  - FltCreateFile
+  - FltReadFile
+  - FltQuerySecurityObject
+  - FltSetInformationFile
+  - FltSetSecurityObject
+  - FltFreeGenericWorkItem
+  - FltQueueGenericWorkItem
+  - FltWriteFile
+  - FltAllocateGenericWorkItem
+  - FltGetRoutineAddress
+  - FltClose
+  - FltGetFileNameInformationUnsafe
+  - FltGetRequestorProcessId
+  - FltSetVolumeContext
+  - FltGetVolumeName
+  - FltEnumerateVolumes
+  - FltGetVolumeContext
+  - FltAllocateCallbackData
+  - FltGetVolumeFromFileObject
+  - FltPerformSynchronousIo
+  - FltGetVolumeInstanceFromName
+  - FltFreeCallbackData
+  - FltObjectDereference
+  - FltParseFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltGetFileNameInformation
+  - FltAllocateContext
+  - FltReleaseContext
+  - FltSetCallbackDataDirty
+  - FltGetDestinationFileNameInformation
+  - FltSetStreamHandleContext
+  - FltSendMessage
+  - FltGetStreamHandleContext
+  - FltStartFiltering
+  - FltRegisterFilter
+  - FltBuildDefaultSecurityDescriptor
+  - FltCloseCommunicationPort
+  - FltUnregisterFilter
+  - FltFreeSecurityDescriptor
+  - FltCreateCommunicationPort
+  - FltCloseClientPort
+  - FltParseFileName
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2024-05-16 22:16:06'
+      ValidTo: '2025-05-14 22:16:06'
+      Signature: 47aa9e6ebb9bdffbdf6d8d99645f726af89374c6136a5f4b2d2f6fe82d8c103a41d186ec5e5ed63749401c724cb5aa6091e023f9125ecfee62f444fbde29edb037b58bd6118a66288ab639cace557ee4a888fe098088aaba592199b25725d664d21269f4aee0bc3682c4a6758c9446b50081d066fdf8cad7b5677c18d63d3404d0ce4ffab1215acc7345dc6ea61c65caee9f6950f957e87b146f7fa34abd5970c79a777436f8d80b6ee5b8876b698bc8d547b47c3d11788c8a730c8c25c7fc878b03243ce55e2c2b898edd1755cb95553578b588122b456ab70dbc084323dcb0487aa462d57b9863a5ecfaa85e5f5d5d3da96dc20ecbc7c2203900fb2f5e84c8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000001112a0790aae5568529000000000111
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 778c1775b427242a721643a7a90eae19
+        SHA1: 553ed9bf72af4fce0ef52a7f0a2396245fc3d348
+        SHA256: 6910d4ed97543604c6ad630041532ff89e630311916332b6fda7b211aa29fa78
+        SHA384: dccc0fe272475403fc9e0c1db6c456428798dfbe00fb20c962f57858256565a2cf361acb4eba8c771ec7611f2aa06bc1
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 33000001112a0790aae5568529000000000111
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
