@@ -1,0 +1,142 @@
+Id: ade59ea2-0935-40e7-886b-1f4df2dd0b95
+Tags:
+- BS_LED64.sys
+Author: lzty(@ice_icat)
+Created: '2026-09-21'
+MitreID: T1068
+CVE:
+  - CVE-2026-94128
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create BS_LED64 binPath= C:\windows\temp\BS_LED64.sys type= kernel
+    && sc.exe start BS_LED64
+  Description: A security vulnerability has been detected in BioStar VIVID LED DJ 4.0.2411.1500. This affects the function sub_1105C of the file BS_LED64.sys of the component IOCTL Handler. The manipulation of the argument AssociatedIrp leads to write-what-where condition. Local access is required to approach this attack. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.
+  Usecase: Read(0x226040) and write(0x226044) physical memory below 4 GiB or trigger memory corruption through the
+    vulnerable IOCTL handler.
+  Privileges: Local user; device access may be available to
+    unprivileged users after installation
+  OperatingSystem: Windows NT, Windows 2000, Windows XP, Windows Server 2003, Windows
+    Vista
+Resources:
+- https://github.com/lzty/CVE-2026-94128
+KnownVulnerableSamples:
+- Filename: BS_LED64.sys
+  MD5: aeb412990d1540c294f98da981661cd2
+  SHA1: 3303a23d4217f9712b8659fbb5f4a51817aa4b75
+  SHA256: db86e3e131a899e1688522d2003d22c3131f8b7cdb432b084be37078b9a3429d
+  Signature:
+  - CLEVO CO.
+  CreationTimestamp: '2024-10-10 10:09:45'
+  Company: BIOSTAR Group
+  Description: I/O Interface driver file
+  Product: BIOSTAR I/O driver
+  ProductVersion: 10.0.2410.1000
+  FileVersion: 10.0.2410.1000
+  MachineType: AMD64
+  Authentihash:
+    MD5: b8013586ab533221020fd85b8f6997fa
+    SHA1: 6bc45fc592b03614b4ac0a828f5ddecb1a31bd49
+    SHA256: b3836a0167c7b84aeaa9f1c551d4e4c82aba0e79958776a7ae60ebeca67a606f
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeInitializeSemaphore
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - MmUnmapIoSpace
+  - KeDelayExecutionThread
+  - IoStartNextPacket
+  - MmMapIoSpace
+  - KeWaitForSingleObject
+  - IoDeleteDevice
+  - IoReleaseCancelSpinLock
+  - IoAcquireCancelSpinLock
+  - IoStartPacket
+  - IofCompleteRequest
+  - ObfDereferenceObject
+  - KeRemoveEntryDeviceQueue
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - KeReleaseSemaphore
+  - IoDeleteSymbolicLink
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  PDBPath: e:\code\driver_workspace\vividled\2024_10_10_for_i2c_isuse_bit\driver\objfre_wnet_amd64\amd64\BS_LED64.pdb
+  Imphash: fab7775e4272ac915bfb8e21eb66ef00
+  RichPEHeaderHash:
+    MD5: 9c46e5d6ce775c60ab36a06ee68cc3f1
+    SHA1: 1c19623dbac5512a95a473c2dff40f46a94f2992
+    SHA256: cc41aa0ebda7403bbdba9b726c776c8023514307ad9dabe09e67df059548432c
+  Sections:
+    .text:
+      Entropy: 6.394571224560284
+      Virtual Size: '0x1ae6'
+    .rdata:
+      Entropy: 4.717845789776128
+      Virtual Size: '0x248'
+    .data:
+      Entropy: 0.4546683345547283
+      Virtual Size: '0x13c'
+    .pdata:
+      Entropy: 3.765074361160817
+      Virtual Size: '0xfc'
+    INIT:
+      Entropy: 5.364829062045132
+      Virtual Size: '0x4a6'
+    .rsrc:
+      Entropy: 3.302993182635826
+      Virtual Size: '0x410'
+  MagicHeader: 50 45 0 0
+  InternalName: I/O driver
+  OriginalFilename: BS_LED64.sys
+  Copyright: Copyright (c) 2018-2024 BIOSTAR Group
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2024-01-11 20:09:15'
+      ValidTo: '2025-01-10 20:09:15'
+      Signature: 228d55d2a15bd3ce2c6a38898b66d52bf71d58ba49cd5818493fc17600146ed7f8944701bb39ea4127e9687175f35d9e89973d457d1d61fed4c960c9870dfd1bfe3fb78a4160a05436cf50e616693b89e5425b7a5a7f59c6ae804531b2a00b02c675fe834b1c429441b881518c625c1d55ff07a70ff8507e6eb53b43a3b738341b952594daee42c54ffb55126a04611b70601b02ed4405bedd33fa0bc60b23363b399d4fa0f146a17a1b08b0a26d222a5b76c79f78333db88d91f51e1b42ff3d0c1025603d50ea72535c1afa866a73a05def702f7526ece3efe3a926d72d4c1dc6a4f129711e29fb8255b2c4b21b1fbb497d071404c2fa9198d58305f7c499e69bd5ae2cbcad016376f5f991bf5873b9a7f8d9c5f89456e7da56260823c4ac599b64a8cb04047634246875c11f2e1f5eaa3cd76ae55191a73ee7bf84f0e11416532549ff72d4923f914c2695bbf58b0a6fed9e2580f5a79fa3616f753d91328f9ce45cbed45cba84df4d3e7cde354d58540f983bee532ea141c66c974d00bd848ba67503ea492e16914bab4f957004f5715f6d36840d9bf9dfa13677b7b8eaf086cb04bbe47347f1ef4f678a56b146f4ec82a8eeeb7a8dab9d6556bd180990971093df61f8fc1bfde24b9ad0c6f919476bf780664778ae99770dc6109771979d6a50b1cf84748714d011f37ccd946fb83b3dccd655e347365988ce24578d4173
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000699d42c97675b50882000000000069
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 49cb41d3f01f459bbbacb65cb9dffb2f
+        SHA1: ace514a82530e92c1d7916d1a3b58be972aa660c
+        SHA256: ea9539b995f79e1ef05650e777887c484c057b25d510a159f1a7856ce0e742de
+        SHA384: 1766558110aa8bf0c3aff2fe76b6bdd182d1598e70e786d2e02eec5a03169cfd6e87d0f551a4a50084046e426af672b3
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 33000000699d42c97675b50882000000000069
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: lzty(@ice_icat)
