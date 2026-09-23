@@ -16,12 +16,12 @@ import { detections, tools } from '../lib/resources';
       </p>
       <div class="resource-links">
         {detections.slice(0, 4).map((item) => (
-          <a href={item.url}>{item.name} ↗</a>
+          <a href={item.url}>{item.name}</a>
         ))}
-        <a href="/detections/#queries">Defender & Splunk queries →</a>
+        <a href="/detections/#queries">Defender & Splunk queries</a>
       </div>
       <a class="resource-more" href="/detections/">
-        Browse detection resources →
+        Browse detection resources
       </a>
     </article>
     <article class="resource-card">
@@ -34,12 +34,13 @@ import { detections, tools } from '../lib/resources';
       <div class="tool-list">
         {tools.map((tool) => (
           <a href={tool.url}>
-            {tool.name} ↗<span>{tool.description}</span>
+            {tool.name}
+            <span>{tool.description}</span>
           </a>
         ))}
       </div>
       <a class="resource-more" href="/tools/">
-        Explore tools & integrations →
+        Explore tools & integrations
       </a>
     </article>
   </div>

@@ -1,0 +1,636 @@
+---
+import { arc, pie, type PieArcDatum } from 'd3-shape';
+import { drivers, totals } from '../lib/drivers';
+
+const format = (value: number) => value.toLocaleString('en-US');
+const percent = (value: number, total: number) =>
+  total ? ((value / total) * 100).toFixed(1) : '0.0';
+const categories = [
+  { label: 'Vulnerable', category: 'vulnerable driver', tone: 'amber' },
+  { label: 'Malicious', category: 'malicious', tone: 'rose' },
+].map((item) => ({
+  ...item,
+  count: drivers.filter((driver) => driver.category === item.category).length,
+}));
+const bins = [
+  { label: '0', min: 0, max: 0 },
+  { label: '1', min: 1, max: 1 },
+  { label: '2–5', min: 2, max: 5 },
+  { label: '6–10', min: 6, max: 10 },
+  { label: '11–20', min: 11, max: 20 },
+  { label: '21+', min: 21, max: Infinity },
+]
+  .map((bin) => ({
+    ...bin,
+    count: drivers.filter(
+      (driver) => driver.samples >= bin.min && driver.samples <= bin.max,
+    ).length,
+  }))
+  .filter((bin) => bin.min !== 0 || bin.count > 0);
+const maxBin = Math.max(1, ...bins.map((bin) => bin.count));
+const results = [
+  {
+    key: 'yes',
+    label: 'Load despite HVCI',
+    short: 'recorded TRUE',
+    count: totals.yes,
+    tone: 'rose',
+  },
+  {
+    key: 'no',
+    label: 'Recorded FALSE',
+    short: 'recorded FALSE',
+    count: drivers.reduce((sum, driver) => sum + driver.no, 0),
+    tone: 'slate',
+  },
+  {
+    key: 'unknown',
+    label: 'Status unknown',
+    short: 'status unknown',
+    count: totals.unknown,
+    tone: 'amber',
+  },
+];
+type Result = (typeof results)[number];
+const slices = pie<Result>()
+  .sort(null)
+  .value((result) => result.count)
+  .padAngle(0.035)(results);
+const ring = arc<PieArcDatum<Result>>()
+  .innerRadius(67)
+  .outerRadius(85)
+  .cornerRadius(3);
+---
+
+<section class="metrics" aria-labelledby="metrics-heading" data-metrics>
+  <div class="metrics-heading">
+    <h2 id="metrics-heading">The catalog at a glance</h2>
+    <span>Full catalog · all known samples</span>
+  </div>
+  <div class="metrics-grid">
+    <article
+      class="metric-card catalog-card"
+      aria-labelledby="catalog-metric-heading"
+    >
+      <div class="metric-heading">
+        <h3 id="catalog-metric-heading">Driver entries</h3>
+        <span class="metric-symbol" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+          >
+            <path d="m12 3 9 5-9 5-9-5 9-5Z M3 12l9 5 9-5 M3 16l9 5 9-5" />
+          </svg>
+        </span>
+      </div>
+      <div class="metric-value">
+        <span class="sr-only">{format(totals.entries)}</span>
+        <span data-count={totals.entries} aria-hidden="true">
+          {format(totals.entries)}
+        </span>
+      </div>
+      <p class="metric-description">Vulnerable & malicious drivers</p>
+      <div class="classification-bar" aria-hidden="true" data-bar-reveal>
+        {categories.map((item) => (
+          <span
+            class={`tone-${item.tone}`}
+            style={`width: ${percent(item.count, totals.entries)}%`}
+          ></span>
+        ))}
+      </div>
+      <div class="category-legend">
+        {categories.map((item) => (
+          <a
+            href={`/?category=${encodeURIComponent(item.category)}#explorer`}
+            class="metric-row"
+          >
+            <span class={`legend-label tone-${item.tone}`}>
+              <i></i>
+              {item.label}
+            </span>
+            <strong>{format(item.count)}</strong>
+            <span class="metric-share">
+              {percent(item.count, totals.entries)}%
+            </span>
+          </a>
+        ))}
+      </div>
+    </article>
+
+    <article
+      class="metric-card samples-card"
+      aria-labelledby="samples-metric-heading"
+    >
+      <div class="metric-heading">
+        <h3 id="samples-metric-heading">Known samples</h3>
+        <span class="metric-symbol" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+          >
+            <path d="M5 3h9l5 5v13H5z M14 3v6h5 M8 13h8 M8 17h5" />
+          </svg>
+        </span>
+      </div>
+      <div class="metric-value">
+        <span class="sr-only">{format(totals.samples)}</span>
+        <span data-count={totals.samples} aria-hidden="true">
+          {format(totals.samples)}
+        </span>
+      </div>
+      <p class="metric-description">Driver entries by sample count</p>
+      <figure
+        class="sample-distribution"
+        aria-label="Distribution of driver entries by number of known samples"
+      >
+        <div class="distribution-bars">
+          {bins.map((bin) => (
+            <div
+              class="distribution-bin"
+              aria-label={`${format(bin.count)} driver entries with ${bin.label} samples`}
+            >
+              <span class="bin-value" aria-hidden="true">
+                {format(bin.count)}
+              </span>
+              <div class="bin-track" aria-hidden="true">
+                <span
+                  class="bin-bar"
+                  style={`height: ${(bin.count / maxBin) * 100}%`}
+                  data-column-reveal
+                ></span>
+              </div>
+              <span class="bin-label" aria-hidden="true">
+                {bin.label}
+              </span>
+            </div>
+          ))}
+        </div>
+        <figcaption>Samples per entry</figcaption>
+      </figure>
+    </article>
+
+    <article
+      class="metric-card hvci-card"
+      aria-labelledby="hvci-metric-heading"
+      data-hvci-chart
+    >
+      <div class="metric-heading">
+        <h3 id="hvci-metric-heading">HVCI sample results</h3>
+        <span class="metric-tag">{format(totals.samples)} samples</span>
+      </div>
+      <div class="hvci-visual">
+        <div class="hvci-ring" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs>
+              <mask
+                id="hvci-ring-mask"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="200"
+                height="200"
+              >
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="76"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="40"
+                  pathLength="1"
+                  stroke-dasharray="1"
+                  transform="rotate(-90 100 100)"
+                  data-ring-reveal
+                />
+              </mask>
+            </defs>
+            <circle
+              class="ring-track"
+              cx="100"
+              cy="100"
+              r="76"
+              fill="none"
+              stroke-width="18"
+            />
+            <g mask="url(#hvci-ring-mask)">
+              {slices.map((slice) => (
+                <path
+                  class={`ring-segment tone-${slice.data.tone}`}
+                  data-ring-segment={slice.data.key}
+                  transform="translate(100 100)"
+                  d={ring(slice) || ''}
+                />
+              ))}
+            </g>
+          </svg>
+          <div class="ring-label">
+            <strong>
+              <span data-ring-value>{percent(totals.yes, totals.samples)}</span>
+              <small>%</small>
+            </strong>
+            <span data-ring-label>recorded TRUE</span>
+          </div>
+        </div>
+        <div class="hvci-legend">
+          {results.map((result) => (
+            <a
+              class={`hvci-result tone-${result.tone}`}
+              href={`/?hvci=${result.key}#explorer`}
+              data-hvci-result={result.key}
+              data-percent={percent(result.count, totals.samples)}
+              data-label={result.short}
+              aria-label={`${result.label}: ${format(result.count)} samples, ${percent(result.count, totals.samples)}%. Browse matching driver entries.`}
+            >
+              <span class="legend-label">
+                <i></i>
+                {result.label}
+              </span>
+              <span class="hvci-result-values">
+                <strong>{format(result.count)}</strong>
+                <span>{percent(result.count, totals.samples)}%</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+      <p class="hvci-note">
+        Recorded per sample. Unknown results are kept separate.
+      </p>
+    </article>
+  </div>
+</section>
+
+<script src="../scripts/metrics.ts"></script>
+
+<style>
+  .metrics {
+    --metric-purple: #b4a0ff;
+    --metric-teal: #63d8cb;
+    --metric-rose: #ff8592;
+    --metric-amber: #f5bd68;
+    --metric-slate: #82899d;
+    margin-bottom: 30px;
+  }
+  :global([data-theme='light']) .metrics {
+    --metric-purple: #7150ba;
+    --metric-teal: #087e75;
+    --metric-rose: #be334b;
+    --metric-amber: #966009;
+    --metric-slate: #626c82;
+  }
+  .metrics-heading,
+  .metric-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .metrics-heading {
+    margin-bottom: 14px;
+  }
+  .metrics-heading h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.25px;
+  }
+  .metrics-heading > span {
+    color: var(--muted);
+    font-size: 11px;
+  }
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 16px;
+  }
+  .metric-card {
+    --card-accent: var(--metric-purple);
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-top: 2px solid
+      color-mix(in srgb, var(--card-accent) 65%, var(--line));
+    border-radius: 10px;
+    background: var(--panel);
+    padding: 20px 22px;
+  }
+  .samples-card {
+    --card-accent: var(--metric-teal);
+  }
+  .hvci-card {
+    --card-accent: var(--metric-rose);
+  }
+  .metric-heading {
+    min-height: 30px;
+  }
+  .metric-heading h3 {
+    margin: 0;
+    color: var(--muted);
+    text-transform: uppercase;
+    font: 10px var(--mono);
+    letter-spacing: 1px;
+  }
+  .metric-symbol {
+    display: grid;
+    place-items: center;
+    color: var(--card-accent);
+    background: color-mix(in srgb, var(--card-accent) 9%, transparent);
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+  }
+  .metric-symbol svg {
+    width: 18px;
+    height: 18px;
+  }
+  .metric-value {
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 1.1;
+    color: var(--card-accent);
+    margin-top: 8px;
+    font-variant-numeric: tabular-nums;
+  }
+  .metric-description {
+    color: var(--muted);
+    font-size: 11px;
+    margin: 8px 0 0;
+  }
+  .tone-amber {
+    --tone: var(--metric-amber);
+  }
+  .tone-rose {
+    --tone: var(--metric-rose);
+  }
+  .tone-slate {
+    --tone: var(--metric-slate);
+  }
+  .classification-bar {
+    display: flex;
+    height: 10px;
+    margin: 26px 0 12px;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+  .classification-bar span {
+    background: var(--tone);
+  }
+  .classification-bar span + span {
+    border-left: 3px solid var(--panel);
+  }
+  .metric-row {
+    display: grid;
+    grid-template-columns: 1fr auto 46px;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+  .metric-row:hover {
+    background: var(--hover);
+  }
+  .legend-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+  }
+  .legend-label i {
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--tone);
+  }
+  .metric-row strong {
+    font: 12px var(--mono);
+  }
+  .metric-share {
+    text-align: right;
+    color: var(--muted);
+    font: 10px var(--mono);
+  }
+  .sample-distribution {
+    margin: 17px 0 0;
+  }
+  .distribution-bars {
+    display: flex;
+    gap: 8px;
+  }
+  .distribution-bin {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+  }
+  .bin-value {
+    display: block;
+    font: 10px var(--mono);
+    color: var(--muted);
+    margin-bottom: 5px;
+  }
+  .bin-track {
+    display: flex;
+    align-items: flex-end;
+    height: 42px;
+    border-bottom: 1px solid var(--line);
+  }
+  .bin-bar {
+    display: block;
+    width: 100%;
+    background: var(--metric-teal);
+    border-radius: 2px 2px 0 0;
+  }
+  .bin-label {
+    display: block;
+    font: 10px var(--mono);
+    color: var(--muted);
+    padding-top: 6px;
+    white-space: nowrap;
+  }
+  figcaption {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 10px;
+  }
+  .metric-tag {
+    font: 10px var(--mono);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .hvci-visual {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 12px;
+  }
+  .hvci-ring {
+    position: relative;
+    width: 154px;
+    flex: 0 0 154px;
+  }
+  .hvci-ring svg {
+    display: block;
+    width: 100%;
+  }
+  .ring-track {
+    stroke: var(--line);
+  }
+  .ring-segment {
+    fill: var(--tone);
+  }
+  .hvci-card[data-highlight] .ring-segment {
+    opacity: 0.25;
+  }
+  .hvci-card[data-highlight] .ring-segment.is-active {
+    opacity: 1;
+  }
+  .ring-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+  .ring-label strong {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-variant-numeric: tabular-nums;
+  }
+  .ring-label small {
+    font-size: 14px;
+    color: var(--muted);
+    margin-left: 1px;
+  }
+  .ring-label > span {
+    font: 9px var(--mono);
+    color: var(--muted);
+    margin-top: 3px;
+  }
+  .hvci-legend {
+    flex: 1;
+    min-width: 0;
+  }
+  .hvci-result {
+    display: block;
+    padding: 7px 0;
+    border-radius: 4px;
+  }
+  .hvci-result:hover,
+  .hvci-result:focus-visible {
+    background: var(--hover);
+  }
+  .hvci-result .legend-label {
+    font-size: 10px;
+  }
+  .hvci-result-values {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 3px 0 0 14px;
+  }
+  .hvci-result strong {
+    color: var(--tone);
+    font: 16px var(--mono);
+  }
+  .hvci-result-values > span {
+    color: var(--muted);
+    font: 10px var(--mono);
+  }
+  .hvci-note {
+    font-size: 10px;
+    color: var(--muted);
+    margin: 12px 0 0;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .ring-segment {
+      transition: opacity 160ms;
+    }
+    .metric-card {
+      transition: border-color 180ms;
+    }
+    .metric-card:hover {
+      border-color: color-mix(in srgb, var(--card-accent) 50%, var(--line));
+    }
+  }
+  @media (max-width: 1100px) {
+    .metrics-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .hvci-card {
+      grid-column: 1 / -1;
+    }
+    .hvci-visual {
+      margin-top: 0;
+    }
+    .hvci-legend {
+      display: flex;
+      gap: 24px;
+    }
+    .hvci-result {
+      flex: 1;
+    }
+    .hvci-note {
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    .metrics-heading {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .metrics-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .metric-card {
+      padding: 18px 20px;
+    }
+    .metric-value {
+      font-size: 38px;
+    }
+    .classification-bar {
+      margin-top: 20px;
+    }
+    .hvci-ring {
+      width: 140px;
+      flex-basis: 140px;
+    }
+    .hvci-legend {
+      display: block;
+    }
+    .hvci-visual {
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .hvci-note {
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 360px) {
+    .hvci-ring {
+      width: 112px;
+      flex-basis: 112px;
+    }
+    .ring-label strong {
+      font-size: 23px;
+    }
+    .ring-label > span {
+      font-size: 8px;
+    }
+    .metric-tag {
+      font-size: 9px;
+    }
+  }
+</style>

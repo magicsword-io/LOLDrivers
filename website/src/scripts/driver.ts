@@ -1,19 +1,36 @@
-document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((button) =>
-  button.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(button.dataset.copy || '');
-      button.textContent = 'Copied';
-      document.getElementById('copy-feedback')!.textContent =
-        'Hash copied to clipboard.';
-      setTimeout(() => {
-        button.textContent = 'Copy';
-      }, 1500);
-    } catch {
-      document.getElementById('copy-feedback')!.textContent =
-        'Copy was unavailable. Select and copy the displayed hash.';
-    }
-  }),
-);
+document
+  .querySelectorAll<HTMLButtonElement>('[data-copy]')
+  .forEach((button) => {
+    let reset: ReturnType<typeof setTimeout> | undefined;
+    const label = button.getAttribute('aria-label') || 'Copy hash';
+    const title = button.title;
+    button.addEventListener('click', async () => {
+      clearTimeout(reset);
+      delete button.dataset.copied;
+      button.setAttribute('aria-label', label);
+      button.title = title;
+      const feedback = document.getElementById('copy-feedback')!;
+      feedback.textContent = '';
+      feedback.className = 'sr-only';
+      try {
+        await navigator.clipboard.writeText(button.dataset.copy || '');
+        button.dataset.copied = 'true';
+        button.setAttribute('aria-label', label.replace(/^Copy /, 'Copied '));
+        button.title = 'Copied!';
+        feedback.textContent = 'Hash copied to clipboard.';
+        reset = setTimeout(() => {
+          delete button.dataset.copied;
+          button.setAttribute('aria-label', label);
+          button.title = title;
+        }, 1500);
+      } catch {
+        button.title = 'Copy unavailable. Select and copy the hash.';
+        feedback.textContent =
+          'Copy was unavailable. Select and copy the displayed hash.';
+        feedback.className = 'sample-note';
+      }
+    });
+  });
 
 let record: Promise<{ KnownVulnerableSamples: unknown[] }> | undefined;
 document

@@ -8,6 +8,7 @@
   },
   "scripts": {
     "prepare:assets": "node scripts/prepare-assets.mjs",
+    "generate:social": "node scripts/generate-social-image.mjs",
     "dev": "npm run prepare:assets && astro dev",
     "check": "astro check",
     "build": "npm run prepare:assets && astro build",
@@ -19,11 +20,13 @@
   },
   "dependencies": {
     "astro": "7.3.2",
+    "d3-shape": "3.2.0",
     "yaml": "2.9.1"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
     "@playwright/test": "1.63.0",
+    "@types/d3-shape": "3.2.0",
     "@types/node": "22.20.3",
     "prettier": "3.9.7",
     "prettier-plugin-astro": "1.0.0",
