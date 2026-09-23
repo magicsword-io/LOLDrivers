@@ -39,6 +39,9 @@ In Conductor, use the workspace's `$CONDUCTOR_PORT` instead of a fixed port when
 - Static `/drivers/<UUID>/` pages with every sample, copyable hashes, existing binary-download links where a binary exists, source links, research references, CVEs, and detections. Large sample metadata is fetched only when requested.
 - Shared MagicSword banners on the homepage and every driver, preserving the existing logos, offer, CTA, and separate homepage/driver campaign parameters.
 - Homepage detection/tool callouts and dedicated Detections, Tools, API, About, Search, and all-driver directory pages.
+- A manual carousel of the five newest driver entries, with keyboard-accessible previous/next controls on desktop and mobile.
+- Visual catalog metrics: classification composition, driver entries grouped by sample count, and sample-level HVCI results. D3 generates the ring SVG at build time; small browser-native animations honor reduced motion. Counts and charts remain visible without JavaScript, and category/HVCI links open matching driver entries in the explorer.
+- A branded 1200 × 630 share image and Open Graph/X large-image card metadata on all pages. Driver links retain their own title and description.
 - Existing Defender and Splunk query text and attribution, and the existing community tool destinations.
 - Google Analytics component retaining `G-33C5VXLWPQ`. It is **off by default**. An explicit `PUBLIC_ENABLE_ANALYTICS=true` production build enables it; development does not. Normal document navigation emits the normal Google tag page view. There is no client-side router or duplicate manual page-view handler.
 
@@ -62,6 +65,8 @@ Open `http://localhost:4321/`. Serve the artifact over HTTP; root-relative links
 This workflow **does not create a hosted preview URL**. To add hosted PR previews, connect a separate Netlify or Cloudflare Pages project to the repository, set the site build command to `npm --prefix website ci && npm --prefix website run build`, publish `website/dist`, and set Node 24 and `PUBLIC_ENABLE_ANALYTICS=false`. Keep repository root as the working directory for those commands so YAML and existing assets remain available. The provider connection is not configured by this PR. Production is served independently by the Astro `Deploy Site` workflow.
 
 ## Validate
+
+The social image is committed at `public/social/loldrivers-card.png`. To edit it, update `assets/social-card.html`, install Chromium with `npx playwright install chromium`, and run `npm run generate:social`. Normal builds use the committed PNG without requiring a browser. Social platforms must fetch the deployed metadata and image before the new card appears.
 
 ```sh
 npm run format:check

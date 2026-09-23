@@ -1,0 +1,88 @@
+---
+import Icon from './Icon.astro';
+import { drivers, driverPath } from '../lib/drivers';
+const recent = drivers.slice(0, 5);
+---
+
+{recent.length > 0 && (
+  <section
+    class="research"
+    data-recent-drivers
+    aria-label="Recently added drivers"
+    aria-roledescription="carousel"
+  >
+    <div class="research-slides" id="recent-driver-slides">
+      {recent.map((driver, index) => (
+        <article
+          class="research-slide"
+          data-recent-slide
+          role="group"
+          aria-roledescription="slide"
+          aria-label={`${index + 1} of ${recent.length}: ${driver.name}`}
+          aria-hidden={index !== 0 ? 'true' : undefined}
+          inert={index !== 0}
+        >
+          <div class="research-top">
+            <span>Recently added</span>
+            <time datetime={driver.created}>{driver.created}</time>
+          </div>
+          <h2>{driver.name}</h2>
+          <p>
+            {driver.description.length > 180
+              ? driver.description.slice(0, 180).replace(/\s+\S*$/, '') + '…'
+              : driver.description ||
+                'Explore sample hashes, recorded metadata, and references for this driver.'}
+          </p>
+          <div class="research-bottom">
+            <span
+              class:list={[
+                'badge',
+                driver.category === 'malicious' ? 'malicious' : 'vulnerable',
+              ]}
+            >
+              {driver.category === 'malicious' ? 'Malicious' : 'Vulnerable'}
+            </span>
+            <a href={driverPath(driver.id)} class="accent small">
+              Examine driver
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="research-controls" data-recent-controls hidden>
+      <span class="research-position" data-recent-position aria-hidden="true">
+        1 / {recent.length}
+      </span>
+      <div class="page-actions">
+        <button
+          type="button"
+          class="icon-button"
+          data-recent-previous
+          aria-label="Previous recent driver"
+          aria-controls="recent-driver-slides"
+          title="Previous driver"
+        >
+          <Icon name="chevron-left" />
+        </button>
+        <button
+          type="button"
+          class="icon-button"
+          data-recent-next
+          aria-label="Next recent driver"
+          aria-controls="recent-driver-slides"
+          title="Next driver"
+        >
+          <Icon name="chevron-right" />
+        </button>
+      </div>
+    </div>
+    <span
+      class="sr-only"
+      data-recent-status
+      role="status"
+      aria-atomic="true"
+    ></span>
+  </section>
+)}
+
+<script src="../scripts/recent-drivers.ts"></script>

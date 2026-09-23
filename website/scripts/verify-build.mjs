@@ -9,6 +9,36 @@ const ids = (await readdir('../yaml'))
   .filter((name) => name.endsWith('.yaml'))
   .map((name) => name.slice(0, -5));
 const read = (path) => readFile(join(root, path), 'utf8');
+const shareImage = 'https://www.loldrivers.io/social/loldrivers-card.png';
+function verifySocialCard(html, path) {
+  for (const tag of [
+    `property="og:image" content="${shareImage}"`,
+    'property="og:image:width" content="1200"',
+    'property="og:image:height" content="630"',
+    'name="twitter:card" content="summary_large_image"',
+    `name="twitter:image" content="${shareImage}"`,
+  ]) {
+    assert.ok(html.includes(tag), `${path}: missing social metadata ${tag}`);
+  }
+  const content = (attribute, name) =>
+    html.match(
+      new RegExp(`<meta ${attribute}="${name}" content="([^"]*)"`),
+    )?.[1];
+  for (const key of ['title', 'description', 'image:alt']) {
+    const og = content('property', `og:${key}`);
+    assert.ok(og, `${path}: missing social ${key}`);
+    assert.equal(
+      content('name', `twitter:${key}`),
+      og,
+      `${path}: social ${key} mismatch`,
+    );
+  }
+}
+const card = await readFile(join(root, 'social/loldrivers-card.png'));
+assert.equal(card.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
+assert.equal(card.readUInt32BE(16), 1200, 'Share image width');
+assert.equal(card.readUInt32BE(20), 630, 'Share image height');
+assert.ok(card.length < 5_000_000, 'Share image exceeded 5 MB');
 const search = JSON.parse(await read('data/search.json'));
 assert.equal(search.length, ids.length);
 assert.equal(new Set(search.map((driver) => driver.id)).size, ids.length);
@@ -28,6 +58,7 @@ for (const path of [
   '404.html',
 ]) {
   const html = await read(path);
+  verifySocialCard(html, path);
   assert.equal(
     (html.match(/googletagmanager\.com\/gtag\/js\?id=G-33C5VXLWPQ/g) || [])
       .length,
@@ -61,6 +92,7 @@ assert.ok(
 );
 for (const id of ids) {
   const html = await read(`drivers/${id}/index.html`);
+  verifySocialCard(html, id);
   const raw = JSON.parse(await read(`data/drivers/${id}.json`));
   assert.equal(raw.Id, id);
   assert.equal(

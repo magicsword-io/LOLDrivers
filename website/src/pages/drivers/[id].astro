@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MagicSwordBanner from '../../components/MagicSwordBanner.astro';
+import Icon from '../../components/Icon.astro';
 import {
   rawDrivers,
   summarize,
@@ -115,15 +116,21 @@ const fields = (sample: Record<string, unknown>) =>
                 {fields(sample).map(([label, value]) => (
                   <>
                     <dt>{label}</dt>
-                    <dd>
+                    <dd class="hash-value">
                       <code>{value}</code>
                       <button
                         type="button"
-                        class="copy-button"
+                        class="icon-button copy-button"
                         data-copy={value}
                         aria-label={`Copy ${label} for sample ${index + 1}`}
+                        title={`Copy ${label}`}
                       >
-                        Copy
+                        <span class="copy-icon">
+                          <Icon name="copy" size={15} />
+                        </span>
+                        <span class="copied-icon">
+                          <Icon name="check" size={15} />
+                        </span>
                       </button>
                     </dd>
                   </>
@@ -151,14 +158,14 @@ const fields = (sample: Record<string, unknown>) =>
                     {driver.category === 'malicious'
                       ? 'malicious'
                       : 'vulnerable'}{' '}
-                    sample ↗
+                    sample
                   </a>
                 )}
                 {hasSHA256(sample.SHA256) && (
                   <a
                     href={`https://www.virustotal.com/gui/file/${text(sample.SHA256)}`}
                   >
-                    View on VirusTotal ↗
+                    View on VirusTotal
                   </a>
                 )}
                 <button
@@ -192,7 +199,7 @@ const fields = (sample: Record<string, unknown>) =>
             <ul class="reference-list">
               {resources.map((url) => (
                 <li>
-                  <a href={url}>{url} ↗</a>
+                  <a href={url}>{url}</a>
                 </li>
               ))}
             </ul>
@@ -210,10 +217,10 @@ const fields = (sample: Record<string, unknown>) =>
         <a
           href={`https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/${driver.id}.yaml`}
         >
-          Inspect source YAML ↗
+          Inspect source YAML
         </a>
-        <a href={`/data/drivers/${driver.id}.json`}>Download record JSON ↓</a>
-        <a href="/detections/">Browse detection resources →</a>
+        <a href={`/data/drivers/${driver.id}.json`}>Download record JSON</a>
+        <a href="/detections/">Browse detection resources</a>
         {text(raw.MitreID) && <p>MITRE ATT&CK: {text(raw.MitreID)}</p>}
         {cves.length > 0 && (
           <>
@@ -222,7 +229,7 @@ const fields = (sample: Record<string, unknown>) =>
               <a
                 href={`https://www.cve.org/CVERecord?id=${encodeURIComponent(cve)}`}
               >
-                {cve} ↗
+                {cve}
               </a>
             ))}
           </>
@@ -236,19 +243,14 @@ const fields = (sample: Record<string, unknown>) =>
               ).values(),
             ].map((item) => (
               <a href={safeUrl(item.value)}>
-                {text(item.type).replaceAll('_', ' ') || 'Detection resource'} ↗
+                {text(item.type).replaceAll('_', ' ') || 'Detection resource'}
               </a>
             ))}
           </>
         )}
       </aside>
     </div>
-    <p
-      id="copy-feedback"
-      role="status"
-      aria-live="polite"
-      class="sample-note"
-    ></p>
+    <p id="copy-feedback" role="status" aria-live="polite" class="sr-only"></p>
   </div>
 </BaseLayout>
 <script src="../../scripts/driver.ts"></script>
