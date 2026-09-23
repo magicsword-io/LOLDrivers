@@ -484,7 +484,7 @@ This download link contains the malicious driver!
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/e69e3427-97cd-43bb-aeda-f1fbbeaa75f6.yaml)
 
-*last_updated:* 2026-09-18
+*last_updated:* 2026-09-23
 
 {{< /column >}}
 {{< /block >}}

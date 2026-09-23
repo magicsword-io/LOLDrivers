@@ -1,0 +1,32 @@
+title: Driver Load - BS_LED64.sys
+id: 319f3905-cd00-59e1-be9a-74a9c8a549f0
+status: experimental
+description: |
+    Detects loading of driver BS_LED64.sys via hash.
+    BS_LED64.sys is the BIOSTAR I/O driver distributed with VIVID LED DJ. CVE-2026-94128 identifies vulnerable IOCTL handling in VIVID LED DJ 4.0.2411.1500. The included driver version 10.0.2410.1000 exposes physical-memory read and write operations through IOCTLs 0x226040 and 0x226044. These operations map a caller-supplied 32-bit physical starting address with MmMapIoSpace without an address allowlist. A public proof of concept embeds this exact driver sample. Exploitation requires the driver to be loaded and the caller to obtain access to its device; access from an unprivileged account has not been independently verified.
+references:
+    - https://www.loldrivers.io/drivers/ade59ea2-0935-40e7-886b-1f4df2dd0b95/
+    - https://github.com/lzty/CVE-2026-94128
+    - https://www.cve.org/CVERecord?id=CVE-2026-94128
+author: lzty(@ice_icat)
+date: 2026/09/21
+modified: 2026/09/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=aeb412990d1540c294f98da981661cd2'
+            - 'SHA1=3303a23d4217f9712b8659fbb5f4a51817aa4b75'
+            - 'SHA256=db86e3e131a899e1688522d2003d22c3131f8b7cdb432b084be37078b9a3429d'
+            - 'IMPHASH=fab7775e4272ac915bfb8e21eb66ef00'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -14,7 +14,7 @@ references:
     - https://cdn.wibu.com/fileadmin/wibu_downloads/security_advisories/AdvisoryWIBU-100057.pdf
 author: Michael Haag
 date: 2026/08/31
-modified: 2026/09/18
+modified: 2026/09/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -27,16 +27,16 @@ detection:
     selection_hashes:
         Hashes|contains:
             - 'MD5=392dd03ff1b0d32784407853cb400b2e'
-            - 'MD5=682588c4c5a28fcef48be859791c95b6'
             - 'MD5=63bcd4467778d02e53cb958afa66e964'
+            - 'MD5=682588c4c5a28fcef48be859791c95b6'
             - 'SHA1=6e06e8443f9551cfcd9f50370af0ba625a7c540d'
-            - 'SHA1=1b67d6c17a5201979d3276a2e40eaea15168fc5c'
             - 'SHA1=9094cdc8bddb487024379c4ed8438e87b21de930'
+            - 'SHA1=1b67d6c17a5201979d3276a2e40eaea15168fc5c'
             - 'SHA256=7ab52ce255f4ee1d192e9a3cc0b836eaea10bd3c2d0d732519eb2f5968617ffd'
-            - 'SHA256=3e74265e10f596a89f2725b1fb19bd7098113d16301208c81b32356b34ee378a'
             - 'SHA256=17cf356d124df2afd44bfd1e26c1bd0dd5c73dc4709525a4d84b481a2e44771b'
-            - 'IMPHASH=2596c98269f53b39773f6dd9df345e33'
+            - 'SHA256=3e74265e10f596a89f2725b1fb19bd7098113d16301208c81b32356b34ee378a'
             - 'IMPHASH=d17078994081d128a915504f53c91bab'
+            - 'IMPHASH=2596c98269f53b39773f6dd9df345e33'
     condition: selection_hashes
 falsepositives:
     - Unknown

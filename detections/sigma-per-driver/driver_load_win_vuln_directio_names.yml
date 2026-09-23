@@ -1,14 +1,14 @@
 title: Driver Load - DirectIo.sys
-id: 2ea0c25e-e1ea-5c99-844f-45fa5aa17b20
+id: ac61d7a1-d57f-5c5c-8418-8955a93f00b0
 status: experimental
 description: |
     Detects loading of driver DirectIo.sys via name.
 references:
-    - https://www.loldrivers.io/drivers/ce2d41fd-908f-414c-b6b5-338298f425b8/
-    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-author: Michael Haag
-date: 2023/01/09
-modified: 2026/09/18
+    - https://www.loldrivers.io/drivers/62e2a967-1f03-4225-a325-122b109208f3/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/09/23
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
