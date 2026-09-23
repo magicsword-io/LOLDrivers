@@ -22,12 +22,12 @@ detection:
         Hashes|contains:
             - 'MD5=11fb599312cb1cf43ca5e879ed6fb71e'
             - 'MD5=97221e16e7a99a00592ca278c49ffbfc'
-            - 'SHA1=943593e880b4d340f2548548e6e673ef6f61eed3'
             - 'SHA1=b4d014b5edd6e19ce0e8395a64faedf49688ecb5'
-            - 'SHA256=9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374'
+            - 'SHA1=943593e880b4d340f2548548e6e673ef6f61eed3'
             - 'SHA256=e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf'
-            - 'IMPHASH=85f86c7c8ce81a78e84efa545d7edc65'
+            - 'SHA256=9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374'
             - 'IMPHASH=9e15ce38f071c916bea830247f1241bb'
+            - 'IMPHASH=85f86c7c8ce81a78e84efa545d7edc65'
     condition: selection_hashes
 falsepositives:
     - Unknown

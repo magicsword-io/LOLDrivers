@@ -1,0 +1,31 @@
+title: Driver Load - AToolsKrnl64.sys
+id: 98bb4000-e2d5-5954-a4de-f8feba1fee05
+status: experimental
+description: |
+    Detects loading of driver AToolsKrnl64.sys via name.
+    Antiy ATool AToolsKrnl64.sys from the reported 2.0.26.819 package exposes process termination through IOCTL 0x99000050. Its caller check validates an Antiy-signed executable on disk and caches the accepted process, but does not verify the integrity of the running client. A modified genuine client can therefore pass this check and request termination of caller-selected processes. Static analysis of this sample confirms a world-readable device and a kernel-mode target-open path that does not require the caller to already hold termination rights. The termination path rejects targets with a nonzero driver-defined protection/state byte. The public demonstration terminates only a self-created ordinary child; protected-process and EDR termination are not established.
+references:
+    - https://www.loldrivers.io/drivers/643b121c-f883-5699-a032-f07c1e9eecfd/
+    - https://github.com/magicsword-io/LOLDrivers/issues/442
+    - https://gist.github.com/xusheng6/5b9503d94c67b867d495a2f35f0a6de1
+    - https://xusheng.dev/posts/byotc/main/
+    - https://vs.antiy.cn/tool/atool.html
+author: Xusheng Li
+date: 2026/09/23
+modified: 2026/09/23
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\atoolskrnl64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
