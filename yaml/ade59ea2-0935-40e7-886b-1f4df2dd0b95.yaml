@@ -5,29 +5,36 @@ Author: lzty(@ice_icat)
 Created: '2026-09-21'
 MitreID: T1068
 CVE:
-  - CVE-2026-94128
+- CVE-2026-94128
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
   Command: sc.exe create BS_LED64 binPath= C:\windows\temp\BS_LED64.sys type= kernel
     && sc.exe start BS_LED64
-  Description: A security vulnerability has been detected in BioStar VIVID LED DJ 4.0.2411.1500. This affects the function sub_1105C of the file BS_LED64.sys of the component IOCTL Handler. The manipulation of the argument AssociatedIrp leads to write-what-where condition. Local access is required to approach this attack. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.
-  Usecase: Read(0x226040) and write(0x226044) physical memory below 4 GiB or trigger memory corruption through the
-    vulnerable IOCTL handler.
-  Privileges: Local user; device access may be available to
-    unprivileged users after installation
-  OperatingSystem: Windows NT, Windows 2000, Windows XP, Windows Server 2003, Windows
-    Vista
+  Description: BS_LED64.sys is the BIOSTAR I/O driver distributed with VIVID LED DJ.
+    CVE-2026-94128 identifies vulnerable IOCTL handling in VIVID LED DJ 4.0.2411.1500.
+    The included driver version 10.0.2410.1000 exposes physical-memory read and write
+    operations through IOCTLs 0x226040 and 0x226044. These operations map a caller-supplied
+    32-bit physical starting address with MmMapIoSpace without an address allowlist.
+    A public proof of concept embeds this exact driver sample. Exploitation requires
+    the driver to be loaded and the caller to obtain access to its device; access
+    from an unprivileged account has not been independently verified.
+  Usecase: Read or modify physical memory through the BS_LED device, potentially compromising
+    kernel memory and enabling local privilege escalation.
+  Privileges: Administrator to install or load the driver; use requires an accessible
+    handle to the loaded driver's device.
+  OperatingSystem: Windows
 Resources:
 - https://github.com/lzty/CVE-2026-94128
+- https://www.cve.org/CVERecord?id=CVE-2026-94128
 KnownVulnerableSamples:
 - Filename: BS_LED64.sys
   MD5: aeb412990d1540c294f98da981661cd2
   SHA1: 3303a23d4217f9712b8659fbb5f4a51817aa4b75
   SHA256: db86e3e131a899e1688522d2003d22c3131f8b7cdb432b084be37078b9a3429d
   Signature:
-  - CLEVO CO.
-  CreationTimestamp: '2024-10-10 10:09:45'
+  - Microsoft Windows Hardware Compatibility Publisher
+  CreationTimestamp: '2024-10-10 02:09:45'
   Company: BIOSTAR Group
   Description: I/O Interface driver file
   Product: BIOSTAR I/O driver
