@@ -3,9 +3,10 @@ id: df3b84de-9a7c-51e9-aeb8-5fcb03ac26a8
 status: experimental
 description: |
     Detects loading of driver HWAuidoOs2Ec.sys via name.
-    Huawei HWAuidoOs2Ec.sys is a vulnerable kernel driver from public vulnerable-driver research. Public DragonForce reporting also lists this driver in BYOVD tradecraft used to disable endpoint security tooling.
+    Huawei HWAuidoOs2Ec.sys is a vulnerable kernel driver from public vulnerable-driver research. Public DragonForce reporting also lists this driver in BYOVD tradecraft used to disable endpoint security tooling. Beazley Security also reported this driver family in an INC ransomware affiliate intrusion; the report does not identify the exact sample hash for this family.
 references:
     - https://www.loldrivers.io/drivers/2c7d54ff-7b49-4da8-ae77-00ac6fa2944f/
+    - https://labs.beazley.security/articles/an-inc-ransomware-affiliates-byovd-buffet
     - https://github.com/magicsword-io/LOLDrivers/issues/325
     - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
     - https://www.security.com/threat-intelligence/dragonforce-msteams-backdoor
@@ -14,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLDrivers/issues/377
 author: Michael Haag
 date: 2026/04/17
-modified: 2026/09/23
+modified: 2026/09/28
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
