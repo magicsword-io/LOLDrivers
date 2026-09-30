@@ -1,6 +1,7 @@
 ---
 import { arc, pie, type PieArcDatum } from 'd3-shape';
 import { drivers, totals } from '../lib/drivers';
+import DriverGrowth from './DriverGrowth.astro';
 
 const format = (value: number) => value.toLocaleString('en-US');
 const percent = (value: number, total: number) =>
@@ -12,22 +13,6 @@ const categories = [
   ...item,
   count: drivers.filter((driver) => driver.category === item.category).length,
 }));
-const bins = [
-  { label: '0', min: 0, max: 0 },
-  { label: '1', min: 1, max: 1 },
-  { label: '2–5', min: 2, max: 5 },
-  { label: '6–10', min: 6, max: 10 },
-  { label: '11–20', min: 11, max: 20 },
-  { label: '21+', min: 21, max: Infinity },
-]
-  .map((bin) => ({
-    ...bin,
-    count: drivers.filter(
-      (driver) => driver.samples >= bin.min && driver.samples <= bin.max,
-    ).length,
-  }))
-  .filter((bin) => bin.min !== 0 || bin.count > 0);
-const maxBin = Math.max(1, ...bins.map((bin) => bin.count));
 const results = [
   {
     key: 'yes',
@@ -121,11 +106,11 @@ const ring = arc<PieArcDatum<Result>>()
     </article>
 
     <article
-      class="metric-card samples-card"
-      aria-labelledby="samples-metric-heading"
+      class="metric-card growth-card"
+      aria-labelledby="growth-metric-heading"
     >
       <div class="metric-heading">
-        <h3 id="samples-metric-heading">Known samples</h3>
+        <h3 id="growth-metric-heading">Known samples</h3>
         <span class="metric-symbol" aria-hidden="true">
           <svg
             viewBox="0 0 24 24"
@@ -134,7 +119,7 @@ const ring = arc<PieArcDatum<Result>>()
             stroke-width="1.5"
             stroke-linejoin="round"
           >
-            <path d="M5 3h9l5 5v13H5z M14 3v6h5 M8 13h8 M8 17h5" />
+            <path d="M3 3v18h18 M6 16l5-5 4 2 6-8 M16 5h5v5" />
           </svg>
         </span>
       </div>
@@ -144,35 +129,10 @@ const ring = arc<PieArcDatum<Result>>()
           {format(totals.samples)}
         </span>
       </div>
-      <p class="metric-description">Driver entries by sample count</p>
-      <figure
-        class="sample-distribution"
-        aria-label="Distribution of driver entries by number of known samples"
-      >
-        <div class="distribution-bars">
-          {bins.map((bin) => (
-            <div
-              class="distribution-bin"
-              aria-label={`${format(bin.count)} driver entries with ${bin.label} samples`}
-            >
-              <span class="bin-value" aria-hidden="true">
-                {format(bin.count)}
-              </span>
-              <div class="bin-track" aria-hidden="true">
-                <span
-                  class="bin-bar"
-                  style={`height: ${(bin.count / maxBin) * 100}%`}
-                  data-column-reveal
-                ></span>
-              </div>
-              <span class="bin-label" aria-hidden="true">
-                {bin.label}
-              </span>
-            </div>
-          ))}
-        </div>
-        <figcaption>Samples per entry</figcaption>
-      </figure>
+      <p class="metric-description">
+        Across {format(totals.entries)} driver entries
+      </p>
+      <DriverGrowth />
     </article>
 
     <article
@@ -319,7 +279,7 @@ const ring = arc<PieArcDatum<Result>>()
     background: var(--panel);
     padding: 20px 22px;
   }
-  .samples-card {
+  .growth-card {
     --card-accent: var(--metric-teal);
   }
   .hvci-card {
@@ -416,48 +376,6 @@ const ring = arc<PieArcDatum<Result>>()
     text-align: right;
     color: var(--muted);
     font: 10px var(--mono);
-  }
-  .sample-distribution {
-    margin: 17px 0 0;
-  }
-  .distribution-bars {
-    display: flex;
-    gap: 8px;
-  }
-  .distribution-bin {
-    flex: 1;
-    min-width: 0;
-    text-align: center;
-  }
-  .bin-value {
-    display: block;
-    font: 10px var(--mono);
-    color: var(--muted);
-    margin-bottom: 5px;
-  }
-  .bin-track {
-    display: flex;
-    align-items: flex-end;
-    height: 42px;
-    border-bottom: 1px solid var(--line);
-  }
-  .bin-bar {
-    display: block;
-    width: 100%;
-    background: var(--metric-teal);
-    border-radius: 2px 2px 0 0;
-  }
-  .bin-label {
-    display: block;
-    font: 10px var(--mono);
-    color: var(--muted);
-    padding-top: 6px;
-    white-space: nowrap;
-  }
-  figcaption {
-    margin-top: 7px;
-    color: var(--muted);
-    font-size: 10px;
   }
   .metric-tag {
     font: 10px var(--mono);
