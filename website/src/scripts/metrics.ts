@@ -83,27 +83,14 @@ if (metrics) {
         { duration: 1000, easing: 'cubic-bezier(.2,.8,.2,1)' },
       );
     });
-    metrics!.querySelectorAll('[data-column-reveal]').forEach((bar, index) => {
-      animate(
-        bar,
-        [
-          { transform: 'scaleY(0)', transformOrigin: 'bottom' },
-          { transform: 'scaleY(1)', transformOrigin: 'bottom' },
-        ],
-        {
-          duration: 800,
-          delay: index * 60,
+    metrics!
+      .querySelectorAll('[data-ring-reveal], [data-line-reveal]')
+      .forEach((ring) => {
+        animate(ring, [{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], {
+          duration: 1100,
           easing: 'cubic-bezier(.2,.8,.2,1)',
-          fill: 'backwards',
-        },
-      );
-    });
-    metrics!.querySelectorAll('[data-ring-reveal]').forEach((ring) => {
-      animate(ring, [{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], {
-        duration: 1100,
-        easing: 'cubic-bezier(.2,.8,.2,1)',
+        });
       });
-    });
     const start = performance.now();
     const tick = (now: number) => {
       const progress = Math.min(1, (now - start) / 1100);
