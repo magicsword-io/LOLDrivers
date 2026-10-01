@@ -34,8 +34,9 @@ KnownVulnerableSamples:
     MD5: 96dcdb8bb7934abdb6cd87c33d17be87
     SHA1: 5c0100a6b2fcc5e74649a356d322c2568a4e15ed
     Imphash: b28b9b353aa8985c6c7b7db3091e7346
-    Authentihash:
-      SHA256: 663cfcc91d31898f6274cf30b70f2fd54edee8445e4c10512405a416833ce88f
+    # Authentihash omitted: VirusTotal published only the SHA256 form, and the
+    # catalog convention is all three (MD5/SHA1/SHA256) or none. SHA256 authentihash
+    # 663cfcc91d31898f6274cf30b70f2fd54edee8445e4c10512405a416833ce88f is in the PR body.
     RichPEHeaderHash:
       MD5: 758e447a87fe0147bee066264c11a9a8
     CreationTimestamp: '2025-09-14 08:56:14'
