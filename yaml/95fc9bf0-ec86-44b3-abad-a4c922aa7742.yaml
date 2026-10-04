@@ -21,10 +21,11 @@ Commands:
 Resources:
 - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
 - https://github.com/GetRektBoy724/vuln-drivers/tree/main/pmxdrv.sys
+- https://github.com/3ggspl01t/pmxdrv
 Detection: []
 Acknowledgement:
-  Person: KDU Project / SharpKernel
-  Handle: '@hfiref0x / @hsheric0210'
+  Person: KDU Project / SharpKernel / 3ggspl01t
+  Handle: '@hfiref0x / @hsheric0210 / @3ggspl01t'
 KnownVulnerableSamples:
 - Filename: pmxdrv64.sys
   SHA256: b1a8ee1222eea5f199028d90b9b77c2acf46d6d84a9e125403b2888c6f681c72
@@ -207,3 +208,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing
         CA 7B
       Version: 1
+- Filename: pmxdrv.sys
+  SHA256: 82b30461dbf40ac15fce6a83b9bad2ebd05b27dea1b784eaa096422fe8927b
+  MD5: 0bee791c7c7ace453c134e73633c497d
+  SHA1: 17bdfa70fe84e515183e5fa675d72d5d0e2090e8
