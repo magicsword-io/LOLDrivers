@@ -1,0 +1,30 @@
+title: Driver Load - sysdiag.sys
+id: 0d72e265-e6c3-5b3c-9967-bb29ee4c4454
+status: experimental
+description: |
+    Detects loading of driver sysdiag.sys via name.
+    Huorong sysdiag.sys 6.0.0.3 contains an IOCTL 0x2200b8 path that resolves a supplied process identifier and calls ZwTerminateProcess. The reported Bring Your Own Trusted Caller (BYOTC) chain uses administrator-level control of a genuine Huorong client to reach the product-restricted interface; trusting the client image does not establish the integrity of code executing inside it. Static analysis of this exact sample confirms the dispatcher and termination helper, while the client-classification bypass and ordinary-child termination result are externally reported. The driver must be loaded and the product-specific caller conditions met. This record does not establish access from a standard user, termination of protected processes, or applicability to other versions.
+references:
+    - https://www.loldrivers.io/drivers/11d2230e-d9a4-5841-a508-ca8ffa827e56/
+    - https://github.com/magicsword-io/LOLDrivers/issues/440
+    - https://gist.github.com/xusheng6/8b53a102d81b22d53e0c47c03a3a5cda
+    - https://xusheng.dev/posts/byotc/main/
+author: Xusheng Li
+date: 2026/09/19
+modified: 2026/10/05
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sysdiag.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

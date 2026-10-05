@@ -8,9 +8,10 @@ references:
     - https://www.loldrivers.io/drivers/95fc9bf0-ec86-44b3-abad-a4c922aa7742/
     - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
     - https://github.com/GetRektBoy724/vuln-drivers/tree/main/pmxdrv.sys
+    - https://github.com/3ggspl01t/pmxdrv
 author: Michael Haag
 date: 2026/06/16
-modified: 2026/10/01
+modified: 2026/10/05
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -22,10 +23,14 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=0bee791c7c7ace453c134e73633c497d'
             - 'MD5=3807073232994eca5dafe266b9674743'
+            - 'SHA1=17bdfa70fe84e515183e5fa675d72d5d0e2090e8'
             - 'SHA1=9e5fcaea33c9a181c56f7d0e4d9c42f8edead252'
+            - 'SHA256=82b30461dbf40ac15fce6a83b9bad2ebd05b27dea1b784eaa096422fe8927b7b'
             - 'SHA256=b1a8ee1222eea5f199028d90b9b77c2acf46d6d84a9e125403b2888c6f681c72'
             - 'IMPHASH=3a1007f4b4aba578ddc0289781690ab6'
+            - 'IMPHASH=90b0b267ea9388c89393b4e84846c14e'
     condition: selection_hashes
 falsepositives:
     - Unknown

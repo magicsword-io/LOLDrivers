@@ -1,0 +1,30 @@
+title: Driver Load - 360FsFlt_win10.sys
+id: 9f303752-bcae-56f0-9bb7-53e12b4808c9
+status: experimental
+description: |
+    Detects loading of driver 360FsFlt_win10.sys via name.
+    360 Total Security 11.0.0.1314 is reported to permit a Bring Your Own Trusted Caller (BYOTC) chain involving 360FsFlt_win10.sys 6.9.1.2719 and 360Box64_win10.sys 2.1.0.1463. Static analysis confirms that 360Box64 registers the Safe360BoxPort filter communication port: command 0x13 updates internal sandbox-group membership, and command 0x31 can select group members for ZwTerminateProcess. The submitter reports reaching this interface from a modified genuine QHSafeMain.exe under the trust relationship involving 360FsFlt, with Virtual Sandbox enabled, and terminating a self-created ordinary child. The group-termination primitive is statically confirmed; the cross-driver trust relationship and runtime bypass are externally reported. These samples are tracked together as components of that chain, not as two independent arbitrary-PID termination drivers. No protected-process or EDR termination is established.
+references:
+    - https://www.loldrivers.io/drivers/5cb0463b-cf28-56b7-b5cc-f2003c5c78d1/
+    - https://github.com/magicsword-io/LOLDrivers/issues/441
+    - https://gist.github.com/xusheng6/2e0bb4e3cd00f4869d4ebe7aebe896cb
+    - https://xusheng.dev/posts/byotc/main/
+author: Xusheng Li
+date: 2026/09/19
+modified: 2026/10/05
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\360fsflt_win10.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,29 @@
+title: Driver Load - ccekrnl.dat
+id: cff33b96-9765-5877-951d-bd09b637d602
+status: experimental
+description: |
+    Detects loading of driver ccekrnl.dat via name.
+    Comodo KillSwitch ccekrnl.dat (file version 12, 2, 2, 8012) is a kernel driver despite its .dat extension. Its CCEKrnl device exposes IOCTL 0x22e01f, whose handler passes a caller-supplied process identifier, desired access mask, and output-handle pointer to ZwOpenProcess without a target or access-mask restriction in that handler. The submitter reports opening the device from an unrelated client, obtaining PROCESS_TERMINATE access to a self-created ordinary child, and terminating it in user mode. This is a kernel process-handle broker, not a direct driver termination command or a trusted-client injection chain. Static analysis confirms the device and process-open dispatch path; the bounded runtime result is externally reported. The driver must be loaded and its device accessible. Protected-process access, EDR termination, and behavior of other versions are not established.
+references:
+    - https://www.loldrivers.io/drivers/c08e6fc3-38f6-56fa-b937-922442dcbfba/
+    - https://github.com/magicsword-io/LOLDrivers/issues/443
+    - https://gist.github.com/xusheng6/2b90dcba4b09bfeaf392c341654cf48e
+author: Xusheng Li
+date: 2026/09/19
+modified: 2026/10/05
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ccekrnl.dat'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
