@@ -2,6 +2,8 @@ Id: c1143cd9-a709-4323-9678-2117285d1b47
 Author: Michael Haag
 Created: '2025-09-18'
 MitreID: T1068
+CVE:
+- CVE-2025-68947
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
@@ -14,8 +16,13 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - https://hexastrike.com/resources/blog/threat-intelligence/valleyrat-exploiting-byovd-to-kill-endpoint-security/
+- https://github.com/ANYLNK/NSecSoftBYOVD
+- https://symantec-blogs.broadcom.com/threat-intelligence/black-basta-ransomware-byovd
+- https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+- https://www.trendmicro.com/en_gb/research/26/c/dissecting-a-warlock-attack.html
+- https://www.security.com/threat-intelligence/warlock-ransomware-critical-infrastructure
 Acknowledgement:
-  Person: ''
+  Person: Liran Ravich, Cribl
   Handle: ''
 Detection:
 - type: yara_signature
