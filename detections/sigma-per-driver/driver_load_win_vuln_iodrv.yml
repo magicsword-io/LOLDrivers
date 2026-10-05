@@ -1,0 +1,31 @@
+title: Driver Load - IoDrv.sys
+id: af329ec4-e809-5a33-ac4c-7ec000bf2b84
+status: experimental
+description: |
+    Detects loading of driver IoDrv.sys via hash.
+    IoDrv.sys is a hardware I/O driver with an embedded TOPSTAR OVERSEAS ELECTRONICS Co.,Ltd signature. Beazley Security identified this exact sample, renamed Redacted.sys, in an INC ransomware affiliate intrusion. The accompanying Redacted EDR Blinder reportedly used the driver to modify security-driver code and impair endpoint defenses. The sample contains physical-memory mapping and port-I/O interfaces. The reported EDR-targeting logic belongs to the accompanying executable, not a built-in target list in the driver. Current Windows loading-policy compatibility and the runtime attack were not independently tested.
+references:
+    - https://www.loldrivers.io/drivers/a597bd2a-e3f6-5d53-bd3f-3f0b4a43defa/
+    - https://labs.beazley.security/articles/an-inc-ransomware-affiliates-byovd-buffet
+author: Michael Haag
+date: 2026/09/28
+modified: 2026/10/01
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a63d5ed574d0231c958551903c4ddf28'
+            - 'SHA1=844304be902d933f0b335b35bebbe620b6c8d613'
+            - 'SHA256=266d2027a8fc999773c88defd4591d02b8819cf6b07699182319338270b399d2'
+            - 'IMPHASH=85f86c7c8ce81a78e84efa545d7edc65'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

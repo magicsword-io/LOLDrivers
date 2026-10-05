@@ -5,6 +5,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import yaml
+
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPOSITORY_ROOT / 'bin'))
 
@@ -78,6 +80,61 @@ class ApiExportsCompatibilityTests(unittest.TestCase):
 
             with self.assertRaisesRegex(ApiExportError, 'does not match filename'):
                 load_drivers(catalog_dir)
+
+
+class ApiExportsAuthentihashTests(unittest.TestCase):
+    def test_exports_available_authentihashes(self):
+        hashes = {'MD5': 'a' * 32, 'SHA1': 'b' * 40, 'SHA256': 'c' * 64}
+        cases = [
+            ('SHA256 only', [{'Authentihash': {'SHA256': hashes['SHA256']}}],
+             ('', '', hashes['SHA256'])),
+            ('MD5 only', [{'Authentihash': {'MD5': hashes['MD5']}}],
+             (hashes['MD5'], '', '')),
+            ('SHA1 only', [{'Authentihash': {'SHA1': hashes['SHA1']}}],
+             ('', hashes['SHA1'], '')),
+            ('absent', [{}], ('', '', '')),
+            ('empty', [{'Authentihash': {}}], ('', '', '')),
+            ('null', [{'Authentihash': None}], ('', '', '')),
+            ('mixed samples', [
+                {'Authentihash': hashes},
+                {},
+                {'Authentihash': {}},
+                {'Authentihash': None},
+                {'Authentihash': {'SHA256': 'd' * 64}},
+                {'Authentihash': {'MD5': 'e' * 32, 'SHA1': 'f' * 40}},
+            ], (f"{hashes['MD5']}, {'e' * 32}",
+                f"{hashes['SHA1']}, {'f' * 40}",
+                f"{hashes['SHA256']}, {'d' * 64}")),
+        ]
+
+        for name, samples, expected in cases:
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as temporary_directory:
+                catalog_dir = Path(temporary_directory) / 'yaml'
+                catalog_dir.mkdir()
+                output_dir = Path(temporary_directory) / 'api'
+                driver = {
+                    'Id': 'test-driver',
+                    'Tags': ['test.sys'],
+                    'Category': 'vulnerable driver',
+                    'Created': '2026-01-01',
+                    'KnownVulnerableSamples': [
+                        {'Filename': 'test.sys', 'SHA256': '0' * 64, **sample}
+                        for sample in samples
+                    ],
+                }
+                (catalog_dir / 'test-driver.yaml').write_text(
+                    yaml.safe_dump(driver), encoding='utf-8')
+
+                export_api_files(catalog_dir, output_dir)
+
+                with (output_dir / 'drivers.csv').open(newline='', encoding='utf-8') as source:
+                    row, = list(csv.DictReader(source))
+                self.assertEqual(
+                    tuple(row[f'KnownVulnerableSamples_Authentihash_{algorithm}']
+                          for algorithm in ('MD5', 'SHA1', 'SHA256')),
+                    expected)
+                with (output_dir / 'drivers.json').open(encoding='utf-8') as source:
+                    self.assertEqual(json.load(source), [driver])
 
 
 if __name__ == '__main__':

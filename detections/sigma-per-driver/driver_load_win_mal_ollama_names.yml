@@ -1,0 +1,29 @@
+title: Driver Load - ollama.sys
+id: 9103a6c9-423b-53e3-88f1-c802f10456d2
+status: experimental
+description: |
+    Detects loading of driver ollama.sys via name.
+    Elastic Security Labs reports that RONINGLOADER writes ollama.sys to a temporary directory, creates a temporary service to load it, and sends target process IDs to the driver to terminate antivirus processes. The service is deleted after the termination request. The reported October 2025 sample uses standard signing procedures and does not contain the HookSignTool artifacts identified in earlier related samples.
+references:
+    - https://www.loldrivers.io/drivers/4364d33d-c0ef-4317-835e-b6705b94f756/
+    - https://www.elastic.co/security-labs/roningloader
+    - https://www.virustotal.com/gui/file/2515b546125d20013237aeadec5873e6438ada611347035358059a77a32c54f5/details
+author: Liran Ravich, Cribl
+date: 2026/10/01
+modified: 2026/10/01
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ollama.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

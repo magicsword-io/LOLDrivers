@@ -2,40 +2,48 @@ name: generate-svg-counter
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/generate-counter.yml'
+      - 'bin/gen-counter.py'
+      - 'bin/publish-counter.sh'
+      - 'bin/tests/test_counter.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  generate-counter:
+  test-counter:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
-          submodules: true
-          token: ${{ secrets.PUSH_TOKEN }}
+          python-version: '3.11'
+      - run: python -m pip install PyYAML==6.0.1
+      - name: Test counter generation and concurrent pushes
+        run: python -m unittest discover -s bin/tests -p test_counter.py -v
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v4.5.0
+  generate-counter:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: test-counter
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: readme-driver-counter-main
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-            python-version: 3.11
-      - name: Install Poetry
-        run: curl -sSL https://install.python-poetry.org | python -
-      - name: Install dependencies with Poetry
-        run: poetry install
-      - name: Generate shields.io URL
-        run: poetry run python bin/gen-counter.py -f yaml/
-        id: counter
-      - name: Update README
-        run: |
-          echo ${{ steps.counter.outputs.result }}
-          sed -i "s|https://img.shields.io/badge/Drivers-.*-flat.svg|${{ steps.counter.outputs.result }}|" README.md
-        shell: bash
-      - name: update github with new site
-        run: |
-          # configure git to prep for commit
-          git config user.email "bot@magicsword.io"
-          git config user.name "publish bot"
-          git config --global push.default simple
-          git add README.md
-          git commit --allow-empty -m "updating drivers count in README.md [ci skip]"
-          git push
+          ref: main
+          token: ${{ secrets.PUSH_TOKEN }}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.11'
+      - run: python -m pip install PyYAML==6.0.1
+      - name: Recount and publish the README badge
+        run: bash bin/publish-counter.sh
