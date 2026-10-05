@@ -1,6 +1,7 @@
 Id: 6e0786f5-2168-40a8-a068-e261c4eb10e7
 Tags:
 - throttlestop.sys
+- rwdrv.sys
 Author: Cristian Souza
 Created: '2025-05-29'
 MitreID: T1068
@@ -12,13 +13,23 @@ Commands:
   Description: ThrottleStop is developed by TechPowerUp and is designed to monitor
     for and correct CPU throttling issues. However, Kaspersky researchers from the Global
     Emergency Response Team (GERT) found out that it is being abused by attackers
-    to terminate defense mechanisms.
+    to terminate defense mechanisms. Akira ransomware affiliates have dropped this same
+    signed driver (same SHA256) as rwdrv.sys in %TEMP% and registered it as a kernel
+    service named mgdsrv, alongside the malicious hlpdrv.sys (service KMHLPSVC), to
+    disable Microsoft Defender. Note that the rwdrv.sys filename collides with the unrelated
+    RWEverything RwDrv.sys driver, so name-based hunting will conflate the two; hunt on
+    hash or the TechPowerUp LLC signer instead. Per the public CVE-2025-7771 PoC write-up,
+    the driver derives its device name from the service name, so device-name based
+    detections are also unreliable.
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
 Resources:
 - https://securelist.com/av-killer-exploiting-throttlestop-sys/117026/
 - https://www.cve.org/CVERecord?id=CVE-2025-7771
+- https://www.guidepointsecurity.com/blog/gritrep-akira-sonicwall/
+- https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/
+- https://github.com/enessakircolak/CVE-2025-7771
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar

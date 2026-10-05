@@ -13,12 +13,16 @@ Commands:
     by modifying registry settings. This driver has been observed in Akira ransomware
     campaigns, where it is deployed to facilitate AV/EDR evasion or disablement through
     a Bring Your Own Vulnerable Driver (BYOVD) exploitation chain. The malware modifies
-    the DisableAntiSpyware registry key via regedit.exe execution.'
+    the DisableAntiSpyware registry key via regedit.exe execution. In observed intrusions
+    it is dropped to the user %TEMP% folder (C:\Users\<user>\AppData\Local\Temp\hlpdrv.sys)
+    and registered as service KMHLPSVC alongside ThrottleStop.sys dropped as rwdrv.sys
+    (service mgdsrv).'
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - https://www.guidepointsecurity.com/blog/gritrep-akira-sonicwall/
+- https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/
 - https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/cf7cad39407d8cd93135be42b6bd258f.bin
 Acknowledgement:
   Person: GuidePoint Research and Intelligence Team (GRIT)
