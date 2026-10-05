@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LOLDrivers social card</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #0c0e11;
+        color: #f0f1f3;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .card {
+        position: relative;
+        height: 100%;
+        padding: 62px 68px 42px;
+        background: radial-gradient(
+          ellipse at 90% 35%,
+          #331a24 0%,
+          transparent 60%
+        );
+        border-top: 5px solid #ff7882;
+      }
+      .grid {
+        position: absolute;
+        inset: 0 0 0 670px;
+        background-image:
+          linear-gradient(#ffffff05 1px, transparent 1px),
+          linear-gradient(90deg, #ffffff05 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(to right, transparent, black);
+      }
+      .eyebrow {
+        color: #ff7882;
+        font: 16px monospace;
+        letter-spacing: 2.4px;
+      }
+      h1 {
+        font-size: 76px;
+        letter-spacing: -3.5px;
+        margin: 22px 0 32px;
+      }
+      .tagline {
+        font-size: 43px;
+        line-height: 1.2;
+        letter-spacing: -1.6px;
+        font-weight: 600;
+        margin: 0;
+      }
+      .tagline span {
+        color: #a0a7b2;
+      }
+      .description {
+        color: #a0a7b2;
+        font-size: 21px;
+        margin: 24px 0 0;
+      }
+      .logo {
+        position: absolute;
+        width: 440px;
+        height: 440px;
+        right: 28px;
+        top: 65px;
+      }
+      footer {
+        position: absolute;
+        left: 68px;
+        right: 68px;
+        bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #343038;
+        padding-top: 25px;
+        color: #a0a7b2;
+        font-size: 16px;
+      }
+      .url {
+        color: #f0f1f3;
+        font: 18px monospace;
+      }
+      .credit {
+        color: #90d3b8;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="grid"></div>
+      <div class="eyebrow">LIVING OFF THE LAND DRIVERS</div>
+      <h1>LOLDrivers</h1>
+      <p class="tagline">
+        Know the driver.<br /><span>Understand the risk.</span>
+      </p>
+      <p class="description">Vulnerable &amp; malicious Windows drivers.</p>
+      <img
+        class="logo"
+        src="../../loldrivers.io/static/images/logo-dark.png"
+        alt="LOLDrivers logo"
+      />
+      <footer>
+        <span class="url">loldrivers.io</span>
+        <span
+          >Community intelligence. Maintained by
+          <span class="credit">MagicSword.</span></span
+        >
+      </footer>
+    </main>
+  </body>
+</html>

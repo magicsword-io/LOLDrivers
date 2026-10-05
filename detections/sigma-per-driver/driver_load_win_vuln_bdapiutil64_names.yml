@@ -3,15 +3,16 @@ id: 1cd4c32f-fdec-5efb-a737-2afedbe95f3b
 status: experimental
 description: |
     Detects loading of driver BdApiUtil64.sys via name.
-    Driver can be used to load unsigned drivers
+    Driver can be used to load unsigned drivers. Beazley Security also reported this driver family in an INC ransomware affiliate intrusion; the report does not identify the exact sample hash for this family.
 references:
     - https://www.loldrivers.io/drivers/f8ed41ef-18f0-441c-99b8-def062214d0e/
+    - https://labs.beazley.security/articles/an-inc-ransomware-affiliates-byovd-buffet
     - https://github.com/BlackSnufkin/BYOVD
     - https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
     - https://github.com/magicsword-io/LOLDrivers/issues/377
 author: Michael Haag
 date: 2025/09/18
-modified: 2026/09/18
+modified: 2026/10/01
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
