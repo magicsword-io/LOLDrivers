@@ -1,16 +1,24 @@
 # LOLDrivers - Living Off The Land Drivers 🚗💨
 
 ![CI build](https://github.com/magicsword-io/LOLDrivers/actions/workflows/validate.yml/badge.svg) 
-![Drivers](https://img.shields.io/badge/Drivers-2407-flat.svg)
+![Driver Entries](https://img.shields.io/badge/Driver_Entries-702-blue.svg)
+![Known Samples](https://img.shields.io/badge/Known_Samples-2407-green.svg)
 
 Welcome to LOLDrivers (Living Off The Land Drivers), an exciting open-source project that brings together vulnerable, malicious, and known malicious Windows drivers in one comprehensive repository. Our mission is to empower organizations of all sizes with the knowledge and tools to understand and address driver-related security risks, making their systems safer and more reliable.
 
+## Catalog at a Glance
+
+The LOLDrivers catalog currently tracks **702 driver entries** (578 vulnerable, 124 malicious) with evidence from **2,407 known samples**. Each driver entry can have multiple known samples with different hashes, signatures, and HVCI results. The [live site](https://www.loldrivers.io/) shows real-time metrics, cumulative growth over time, and a searchable driver explorer.
+
 ## Key Features
 
-- An extensive and well-organized collection of vulnerable and malicious Windows drivers
-- Continuously updated with the latest information on driver vulnerabilities and threats
-- Easy-to-navigate categories and indices for quick access to relevant information
-- Seamless integration with Sigma for proactive defense using hash prevention
+- **Comprehensive driver catalog**: 702 driver entries covering vulnerable and malicious Windows drivers, with detailed metadata for 2,407 known samples
+- **Astro-powered website**: Fast, modern site with searchable driver explorer, growth charts, and catalog metrics at [loldrivers.io](https://www.loldrivers.io/)
+- **HVCI insights**: Sample-level evidence of load-despite-HVCI behavior, helping assess driver impact on hypervisor-protected code integrity
+- **Structured API feeds**: Programmatic access via JSON and CSV endpoints at `/api/drivers.json` and `/api/drivers.csv` — see [API documentation](https://www.loldrivers.io/api/)
+- **Detection resources**: Sigma, YARA, ClamAV (.hdb), Sysmon, and WDAC policies for proactive blocking and hunting
+- **LLM-friendly**: Discoverable via `/llms.txt` with guidance for research, sample verification, and defensive integration
+- **Continuously updated**: Community-maintained with the latest driver vulnerabilities, malicious samples, and research references
 
 ## How LOLDrivers Can Help Your Organization
 
@@ -47,7 +55,7 @@ For more detailed instructions, please refer to the [CONTRIBUTING.md](CONTRIBUTI
 
 ## 🚨 Sigma, Yara, ClamAV and Sysmon Detection
 
-![](loldrivers.io/static/images/detections.webp)
+![LOLDrivers homepage with catalog metrics and growth chart](loldrivers.io/static/images/homepage-metrics.png)
 
 LOLDrivers provides comprehensive Sigma, Yara, ClamAV and Sysmon detection rules to help you effectively detect potential threats. To explore these rules in detail, navigate to the [sigma](detections/sigma/), [yara](detections/yara), [av](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/av/LOLDrivers.hdb) and [sysmon](detections/sysmon/) directories under the detection folder. Also there is [WDAC](detections/wdac/) policy thanks to [Florian Stosse](https://github.com/Harvester57) and [HotCakeX](https://github.com/HotCakeX).
 
