@@ -11,7 +11,7 @@ references:
     - https://xusheng.dev/posts/byotc/main/
 author: Xusheng Li
 date: 2026/09/19
-modified: 2026/10/05
+modified: 2026/10/06
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -23,14 +23,14 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=88598baf92597ae6955390cbbf2a9c8f'
             - 'MD5=3e85c7fef77b908bead77d205596921d'
-            - 'SHA1=ad0e470925ac4e896ed008bcef1d9b4bd82a2071'
+            - 'MD5=88598baf92597ae6955390cbbf2a9c8f'
             - 'SHA1=7a77bd7c2438603076cc49da4777775a686f7d28'
+            - 'SHA1=ad0e470925ac4e896ed008bcef1d9b4bd82a2071'
             - 'SHA256=1c738be5e36be196c23c0d092ed1dd2e81b00158475e0f361105e0cdc9726d0c'
             - 'SHA256=08b9b779132fe1de4eaa653005cb448c7efec4dae1acb036ad8ead0083f47880'
-            - 'IMPHASH=7ae9f43195c75111414f01b7d7954456'
             - 'IMPHASH=1ad539d1de49fade735b4ff200f16f0b'
+            - 'IMPHASH=7ae9f43195c75111414f01b7d7954456'
     condition: selection_hashes
 falsepositives:
     - Unknown
