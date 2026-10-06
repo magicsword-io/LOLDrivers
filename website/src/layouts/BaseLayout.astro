@@ -1,14 +1,17 @@
 ---
 import '../styles/global.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import StructuredData from '../components/StructuredData.astro';
 import Icon from '../components/Icon.astro';
 interface Props {
   title?: string;
   description?: string;
+  structuredDataType?: 'home' | 'other';
 }
 const {
   title = 'LOLDrivers — Living Off The Land Drivers',
   description = 'Explore vulnerable and malicious Windows drivers, sample hashes, detections, and investigation tools.',
+  structuredDataType = 'other',
 } = Astro.props;
 const preview = import.meta.env.PUBLIC_SITE_MODE !== 'production';
 const shareImage = new URL('/social/loldrivers-card.png', Astro.site);
@@ -56,6 +59,7 @@ const nav = [
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <link rel="describedby" href="/llms.txt" />
     {preview && <meta name="robots" content="noindex,nofollow" />}
+    <StructuredData type={structuredDataType} />
     <script is:inline>
       try {
         const theme = localStorage.getItem('loldrivers-theme');
