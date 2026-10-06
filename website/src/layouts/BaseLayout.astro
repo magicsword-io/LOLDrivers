@@ -54,6 +54,7 @@ const nav = [
     <meta property="og:description" content={description} />
     <link rel="icon" href="/favicons/favicon.ico" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="describedby" href="/llms.txt" />
     {preview && <meta name="robots" content="noindex,nofollow" />}
     <script is:inline>
       try {
@@ -150,6 +151,8 @@ const nav = [
         <a href="https://github.com/magicsword-io/LOLDrivers/issues/new/choose">
           Submit a finding
         </a>
+        {' · '}
+        <a href="/llms.txt">LLM guide</a>
       </div>
     </footer>
     <script>
