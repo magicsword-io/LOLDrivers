@@ -15,7 +15,10 @@ Commands:
     functionality through vulnerable IOCTL paths documented in public BYOVD research.
     The tracked samples include the 11.26.18.0 build and the legacy 11.11.4.0 build;
     public research notes that affected versions can be abused to terminate endpoint
-    security processes from kernel context.
+    security processes from kernel context. IronChain ransomware bundles the 11.26.18
+    sample, but per ANY.RUN's static analysis its request (IOCTL 0xB822200C, 4-byte
+    input) does not match the driver's expected 0xB822A00C with at least 8 bytes,
+    so the kill path fails.
   Usecase: Disable security tools
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -24,6 +27,7 @@ Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/268
 - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/Safetica
 - https://github.com/BlackSnufkin/BYOVD/tree/main/STProcessMonitor-Killer
+- https://any.run/cybersecurity-blog/ironchain-analysis/
 Detection: []
 Acknowledgement:
   Person: ''

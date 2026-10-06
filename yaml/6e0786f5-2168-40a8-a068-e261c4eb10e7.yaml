@@ -20,7 +20,9 @@ Commands:
     RWEverything RwDrv.sys driver, so name-based hunting will conflate the two; hunt on
     hash or the TechPowerUp LLC signer instead. Per the public CVE-2025-7771 PoC write-up,
     the driver derives its device name from the service name, so device-name based
-    detections are also unreliable.
+    detections are also unreliable. IronChain ransomware also bundles this driver
+    and configures IOCTL 0x8000649C, but per ANY.RUN's static analysis never sends
+    it.
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
@@ -30,6 +32,7 @@ Resources:
 - https://www.guidepointsecurity.com/blog/gritrep-akira-sonicwall/
 - https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/
 - https://github.com/enessakircolak/CVE-2025-7771
+- https://any.run/cybersecurity-blog/ironchain-analysis/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar

@@ -16,7 +16,10 @@ Commands:
     The WinMsrDev interface exposes physical-memory read and write through IOCTLs
     0x9C406104 and 0x9C40A108 and MSR read and write through 0x9C402084 and 0x9C402088,
     allowing an authenticated local user to execute code with elevated privileges
-    when Memory Integrity is not enabled.
+    when Memory Integrity is not enabled. IronChain ransomware drops the 3.1.0.29
+    sample as BootRepair.sys, but per ANY.RUN's static analysis it opens \\.\BootRepair
+    instead of \\.\WinMsrDev and uses an unrelated IOCTL, so the driver interface
+    is not actually used.
   Usecase: Elevate privileges
   Privileges: User
   OperatingSystem: Windows 10, Windows 11
@@ -30,6 +33,7 @@ Resources:
 - https://support.lenovo.com/us/en/product_security/LEN-200860
 - https://github.com/segura2010/lenovo-dispatcher-poc
 - https://github.com/spawn451/CVE-2025-8061-Exploit
+- https://any.run/cybersecurity-blog/ironchain-analysis/
 Detection: []
 Acknowledgement:
   Person: nasbench, fluffycats31

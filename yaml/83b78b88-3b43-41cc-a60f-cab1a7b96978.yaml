@@ -18,13 +18,16 @@ Commands:
     (0x800021A0), and kernel-mode file creation via ObInsertObject/ZwCreateFile (0x80002324).
     The process termination primitive is exploited by the GoodBaiii EDR killer tool.
     Registry callback monitoring via CmRegisterCallback and process creation monitoring
-    via PsSetCreateProcessNotifyRoutine are also present.
+    via PsSetCreateProcessNotifyRoutine are also present. IronChain ransomware bundles
+    this sample and implements a matching process-kill path (\\.\BdApiUtil, IOCTL
+    0x800024B4, 4-byte PID), per ANY.RUN's static analysis.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/231
 - https://github.com/RainbowDynamix/GoodBaiii
+- https://any.run/cybersecurity-blog/ironchain-analysis/
 Detection: []
 Acknowledgement:
   Person: ''
