@@ -3,7 +3,7 @@ id: 985f5d18-4649-5a51-aff8-c21bf90dc1a1
 status: experimental
 description: |
     Detects loading of driver LnvMSRIO.sys via name.
-    LnvMSRIO.sys is a Lenovo Dispatcher driver affected by CVE-2025-8061. The tracked 3.0.2.28 through 3.1.0.36 builds predate Lenovo's fixed 3.1.0.41 driver. The WinMsrDev interface exposes physical-memory read and write through IOCTLs 0x9C406104 and 0x9C40A108 and MSR read and write through 0x9C402084 and 0x9C402088, allowing an authenticated local user to execute code with elevated privileges when Memory Integrity is not enabled.
+    LnvMSRIO.sys is a Lenovo Dispatcher driver affected by CVE-2025-8061. The tracked 3.0.2.28 through 3.1.0.36 builds predate Lenovo's fixed 3.1.0.41 driver. The WinMsrDev interface exposes physical-memory read and write through IOCTLs 0x9C406104 and 0x9C40A108 and MSR read and write through 0x9C402084 and 0x9C402088, allowing an authenticated local user to execute code with elevated privileges when Memory Integrity is not enabled. IronChain ransomware drops the 3.1.0.29 sample as BootRepair.sys, but per ANY.RUN's static analysis it opens \\.\BootRepair instead of \\.\WinMsrDev and uses an unrelated IOCTL, so the driver interface is not actually used.
 references:
     - https://www.loldrivers.io/drivers/87680018-393b-47b6-8130-6b41bed2bc7c/
     - https://github.com/magicsword-io/LOLDrivers/issues/409
@@ -15,9 +15,10 @@ references:
     - https://support.lenovo.com/us/en/product_security/LEN-200860
     - https://github.com/segura2010/lenovo-dispatcher-poc
     - https://github.com/spawn451/CVE-2025-8061-Exploit
+    - https://any.run/cybersecurity-blog/ironchain-analysis/
 author: Michael Haag
 date: 2026/06/16
-modified: 2026/10/06
+modified: 2026/10/07
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

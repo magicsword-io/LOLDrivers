@@ -377,7 +377,7 @@ This download link contains the vulnerable driver!
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/a597bd2a-e3f6-5d53-bd3f-3f0b4a43defa.yaml)
 
-*last_updated:* 2026-10-06
+*last_updated:* 2026-10-07
 
 {{< /column >}}
 {{< /block >}}

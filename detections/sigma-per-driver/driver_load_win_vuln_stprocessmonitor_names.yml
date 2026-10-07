@@ -3,16 +3,17 @@ id: c77952eb-ef18-523a-ae5a-a3e785067721
 status: experimental
 description: |
     Detects loading of driver STProcessMonitor.sys via name.
-    Safetica STProcessMonitor / ProcessMonitorDriver.sys exposes process-termination functionality through vulnerable IOCTL paths documented in public BYOVD research. The tracked samples include the 11.26.18.0 build and the legacy 11.11.4.0 build; public research notes that affected versions can be abused to terminate endpoint security processes from kernel context.
+    Safetica STProcessMonitor / ProcessMonitorDriver.sys exposes process-termination functionality through vulnerable IOCTL paths documented in public BYOVD research. The tracked samples include the 11.26.18.0 build and the legacy 11.11.4.0 build; public research notes that affected versions can be abused to terminate endpoint security processes from kernel context. IronChain ransomware bundles the 11.26.18 sample, but per ANY.RUN's static analysis its request (IOCTL 0xB822200C, 4-byte input) does not match the driver's expected 0xB822A00C with at least 8 bytes, so the kill path fails.
 references:
     - https://www.loldrivers.io/drivers/0712c54c-69fd-41f2-950a-da678ac51246/
     - https://www.cve.org/CVERecord?id=CVE-2025-70795
     - https://github.com/magicsword-io/LOLDrivers/issues/268
     - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/Safetica
     - https://github.com/BlackSnufkin/BYOVD/tree/main/STProcessMonitor-Killer
+    - https://any.run/cybersecurity-blog/ironchain-analysis/
 author: Michael Haag
 date: 2026/03/20
-modified: 2026/10/06
+modified: 2026/10/07
 tags:
     - attack.privilege_escalation
     - attack.t1543.003

@@ -11,7 +11,7 @@ references:
     - https://github.com/3ggspl01t/pmxdrv
 author: Michael Haag
 date: 2026/06/16
-modified: 2026/10/06
+modified: 2026/10/07
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -25,8 +25,8 @@ detection:
         Hashes|contains:
             - 'MD5=3807073232994eca5dafe266b9674743'
             - 'MD5=0bee791c7c7ace453c134e73633c497d'
-            - 'SHA1=9e5fcaea33c9a181c56f7d0e4d9c42f8edead252'
             - 'SHA1=17bdfa70fe84e515183e5fa675d72d5d0e2090e8'
+            - 'SHA1=9e5fcaea33c9a181c56f7d0e4d9c42f8edead252'
             - 'SHA256=b1a8ee1222eea5f199028d90b9b77c2acf46d6d84a9e125403b2888c6f681c72'
             - 'SHA256=82b30461dbf40ac15fce6a83b9bad2ebd05b27dea1b784eaa096422fe8927b7b'
             - 'IMPHASH=3a1007f4b4aba578ddc0289781690ab6'

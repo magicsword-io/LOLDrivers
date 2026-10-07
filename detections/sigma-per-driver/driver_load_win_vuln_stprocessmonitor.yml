@@ -3,16 +3,17 @@ id: 7d667d88-4b2e-5681-8ac2-3345fdd1d693
 status: experimental
 description: |
     Detects loading of driver STProcessMonitor.sys via hash.
-    Safetica STProcessMonitor / ProcessMonitorDriver.sys exposes process-termination functionality through vulnerable IOCTL paths documented in public BYOVD research. The tracked samples include the 11.26.18.0 build and the legacy 11.11.4.0 build; public research notes that affected versions can be abused to terminate endpoint security processes from kernel context.
+    Safetica STProcessMonitor / ProcessMonitorDriver.sys exposes process-termination functionality through vulnerable IOCTL paths documented in public BYOVD research. The tracked samples include the 11.26.18.0 build and the legacy 11.11.4.0 build; public research notes that affected versions can be abused to terminate endpoint security processes from kernel context. IronChain ransomware bundles the 11.26.18 sample, but per ANY.RUN's static analysis its request (IOCTL 0xB822200C, 4-byte input) does not match the driver's expected 0xB822A00C with at least 8 bytes, so the kill path fails.
 references:
     - https://www.loldrivers.io/drivers/0712c54c-69fd-41f2-950a-da678ac51246/
     - https://www.cve.org/CVERecord?id=CVE-2025-70795
     - https://github.com/magicsword-io/LOLDrivers/issues/268
     - https://github.com/KOSEC-LLC/BYOVD-Research/tree/main/Safetica
     - https://github.com/BlackSnufkin/BYOVD/tree/main/STProcessMonitor-Killer
+    - https://any.run/cybersecurity-blog/ironchain-analysis/
 author: Michael Haag
 date: 2026/03/20
-modified: 2026/10/06
+modified: 2026/10/07
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -24,12 +25,12 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
-            - 'MD5=5761bd63da03686fc480245da7bd1e9f'
             - 'MD5=485a04675df7cf40a8865706e003eb25'
-            - 'SHA1=68fec379f2ae76c3d2ce913f7be650cea1d06990'
+            - 'MD5=5761bd63da03686fc480245da7bd1e9f'
             - 'SHA1=711ef221526997039e804a18db9647c91680bbe2'
-            - 'SHA256=70bcec00c215fe52779700f74e9bd669ff836f594df92381cbfb7ee0568e7a8b'
+            - 'SHA1=68fec379f2ae76c3d2ce913f7be650cea1d06990'
             - 'SHA256=5b4f59236a9b950bcd5191b35d19125f60cfb9e1a1e1aa2e4f914b6745dde9df'
+            - 'SHA256=70bcec00c215fe52779700f74e9bd669ff836f594df92381cbfb7ee0568e7a8b'
             - 'IMPHASH=51777abf89572dc6d0ba931ade6ae5b9'
             - 'IMPHASH=ce19d9c0ab826dbae6f1376e7c9ef40f'
     condition: selection_hashes
