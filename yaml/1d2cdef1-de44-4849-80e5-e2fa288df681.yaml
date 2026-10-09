@@ -29,6 +29,7 @@ Resources:
 - https://github.com/Tare05/Intel-CVE-2015-2291
 - https://github.com/TheCruZ/kdmapper
 - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+- https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b.yara
