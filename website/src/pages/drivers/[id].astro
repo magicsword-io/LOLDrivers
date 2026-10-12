@@ -43,7 +43,9 @@ const fields = (sample: Record<string, unknown>) =>
   ].filter(([, value]) => Boolean(value) && value !== '-');
 
 const categoryLabel = driver.category === 'malicious' ? 'Malicious' : 'Vulnerable';
-const pageTitle = `${driver.name} – ${categoryLabel} Driver, Hashes & Detection | LOLDrivers`;
+const baseTitleWithSuffix = `${driver.name} – ${categoryLabel} Driver & Hashes | LOLDrivers`;
+const baseTitleWithoutSuffix = `${driver.name} – ${categoryLabel} Driver & Hashes`;
+const pageTitle = baseTitleWithSuffix.length <= 60 ? baseTitleWithSuffix : baseTitleWithoutSuffix;
 const cveText = cves.length > 0 ? ` CVE${cves.length > 1 ? 's' : ''}: ${cves.join(', ')}.` : '';
 const pageDescription = `${driver.name} is a known ${driver.category === 'malicious' ? 'malicious' : 'vulnerable'} driver abused for BYOVD. Get hashes,${cveText ? '' : ''} detection rules and blocklist guidance.${cveText}`.slice(0, 155);
 ---
