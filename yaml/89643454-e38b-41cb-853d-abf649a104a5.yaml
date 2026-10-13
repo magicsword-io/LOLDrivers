@@ -17,6 +17,9 @@ Commands:
     termination of protected processes is not established. Abused by the Cruciferra MaaS loader,
     which writes the driver to C:\Windows\Temp\DCRCVDrv.sys, creates a service for
     it, and opens a handle via the symbolic link \\.\DCRCVDRV_U to kill AV/EDR processes.
+    Also observed in-the-wild in the ClearFake/Amatera infection chain, where Chrome's
+    platform_experience_helper.exe sideloaded a malicious Secur32.dll, which loaded
+    DCRCVDrv.sys to terminate EDR processes via IOCTL 0x2205C0.
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Terminate AV/EDR processes from kernel mode (BYOVD)
@@ -25,6 +28,7 @@ Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/412
 - https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend
 - https://github.com/DeathShotXD/0xCr0ssCrush/blob/main/docs/dcrcv-analysis.md
+- https://blog.talosintelligence.com/clearfake-webdav-infection-chain/
 Detection:
 - type: ''
   value: ''
