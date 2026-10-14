@@ -1,9 +1,11 @@
 Id: d474d8ad-14d9-4664-addd-86b4a9b7a1a5
 Tags:
 - NeacSafe64.sys
+- NeacSafePort
+- FPSNeacSafePort
 - OWNeacSafePort
 Verified: 'TRUE'
-Author: Michael Haag
+Author: Michael Haag, Zhang Tingjia
 Created: '2026-06-16'
 MitreID: T1068
 CVE: CVE-2025-45737
@@ -22,10 +24,11 @@ Commands:
 Resources:
 - https://github.com/za233/NeacController
 - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
+- https://github.com/hax0r31337/vuln-driver-neacsafe64
 Detection: []
 Acknowledgement:
-  Person: za233
-  Handle: '@za233'
+  Person: za233, hax0r31337
+  Handle: '@za233, @hax0r31337'
 KnownVulnerableSamples:
 - Filename: NeacSafe64.sys
   SHA256: 65447f727801e8be8a51aaaafc07618c8196553e683affb0721da441e2430bad
@@ -352,3 +355,182 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+# FragPunk build, port \FPSNeacSafePort.
+- Filename: NeacSafe64.sys
+  SHA256: 1d828fe7d97620cd92275c6d14fe9721c9b04b514f4dce084f7f6ea05b7d5acd
+  MD5: 1607f41c32e67edf39d0968f332aef9f
+  SHA1: 555c8c25dee0a3c23256f9f9b66ce274f7b15aa1
+  Imphash: 30a629a38af80951a4e2301ee1d5feee
+  Authentihash:
+    MD5: aa2591313be9f531805de3ddb4071d61
+    SHA1: 00b873ecb9ee4ff59a76ba1f4b99531d4eac466b
+    SHA256: 9a44bc8e37db8fd7bcfab61e7236418377510816da3a8a20edd84d26284c5980
+  RichPEHeaderHash:
+    MD5: d5998514fc023b758d0e4bc54446392e
+    SHA1: 64e3799af17d2f67b7d5f7659aad42b0fa804e45
+    SHA256: 45195b72fe74421b8c1d6020fa50ea7607a275fe3aeea792e86dc63355c014cf
+  Sections:
+    .text:
+      Entropy: 6.677457616623464
+      Virtual Size: '0x7d449'
+    .rdata:
+      Entropy: 5.051079715148226
+      Virtual Size: '0x10af0b4'
+    .data:
+      Entropy: 4.24730756525089
+      Virtual Size: '0x2f56c'
+    .pdata:
+      Entropy: 5.954345329430121
+      Virtual Size: '0x23b8'
+    PAGE:
+      Entropy: 6.4483173931255005
+      Virtual Size: '0x4d26'
+    INIT:
+      Entropy: 6.578951100438162
+      Virtual Size: '0x9d156'
+    .rsrc:
+      Entropy: 3.19179103969721
+      Virtual Size: '0x250'
+    .reloc:
+      Entropy: 6.650608180914088
+      Virtual Size: '0x1954'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2026-01-30 01:57:30'
+  Description: ''
+  Company: "网易(杭州)网络有限公司杭州"
+  InternalName: ''
+  OriginalFilename: neacsafe
+  FileVersion: 1.0.0.0
+  Product: neacsafe
+  ProductVersion: 1.0.0.0
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  Publisher: Microsoft Windows Hardware Compatibility Publisher
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+# Overwatch (Chinese server) build, port \OWNeacSafePort.
+- Filename: NeacSafe64.sys
+  SHA256: f79a4ba7f5656fa9ccfe245a90e6e861e2d1aaf0f9d52240abaad0521da063be
+  MD5: ebfad15f91e3e4bd7f538c96dc855924
+  SHA1: 5b8194c13270963c29e5fa2e0ab01cc6fba4b786
+  Imphash: c4d7f42aad938be2184b7e1be80216f8
+  Authentihash:
+    MD5: a9c6084cc45f63c0b82f8ed9bc79542e
+    SHA1: e2b9255e5554b1568a01b91e9f65389926b5e377
+    SHA256: 3f26c7056416b92aaaa01aaa95ee4bed44eab881a476df7b80cd5a189e0daeaf
+  RichPEHeaderHash:
+    MD5: 1ba8c6d8525c77be685783b18d4f9e68
+    SHA1: 13f8b460ce0e8860854c3097318dc220264c3f7d
+    SHA256: c3631fbc40aa3a77d0bee3c8598fe3e46cb53f9459c200231ebd1b67362e5a0f
+  Sections:
+    .text:
+      Entropy: 6.6507580754145454
+      Virtual Size: '0x673c9'
+    .rdata:
+      Entropy: 5.249504566197215
+      Virtual Size: '0xe3ed0c'
+    .data:
+      Entropy: 4.034258427366
+      Virtual Size: '0x300dc'
+    .pdata:
+      Entropy: 5.726769928358638
+      Virtual Size: '0x3e64'
+    PAGE:
+      Entropy: 6.514000397899089
+      Virtual Size: '0x48b1'
+    INIT:
+      Entropy: 6.616653340232306
+      Virtual Size: '0x9af48'
+    .rsrc:
+      Entropy: 3.1910719454433334
+      Virtual Size: '0x250'
+    .reloc:
+      Entropy: 6.662733517858968
+      Virtual Size: '0x1958'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2026-04-03 03:00:01'
+  Description: ''
+  Company: "网易(杭州)网络有限公司杭州"
+  InternalName: ''
+  OriginalFilename: neacsafe
+  FileVersion: 1.0.0.0
+  Product: neacsafe
+  ProductVersion: 1.0.0.0
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  Publisher: Microsoft Windows Hardware Compatibility Publisher
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+# NARAKA: BLADEPOINT build, port \NeacSafePort.
+- Filename: NeacSafe64.sys
+  SHA256: b1147d9b4bed22d8b6e6dcc7366950ffb57ecc10fbfe8f4ee9615b3d3cdd2368
+  MD5: 7296e9a1ef2e6aaafc6915e1eb552780
+  SHA1: 8bc89c4564188385709a04fc941c82586febe771
+  Imphash: 36579a94b168b84abb2af8cc819813e2
+  Authentihash:
+    MD5: 64de48508b489bc662ce758872ec4c9c
+    SHA1: 1bc1927f305fc59a800b5cc025c5e1517c7683b1
+    SHA256: 094c3832057096dd966add98530f24fbcef27204b981a4d0bbbdba8dfb3eb2b3
+  RichPEHeaderHash:
+    MD5: 70ea073af5e7710a1e13a724d0293d90
+    SHA1: 270caaac0d60f4345ef6aac9c512d1e48b30f984
+    SHA256: 6ddbd0ff3c8ba45f8b3d119d5739795d103248219a8936a545a0631661aa0b29
+  Sections:
+    .text:
+      Entropy: 6.638922239516356
+      Virtual Size: '0x66409'
+    .rdata:
+      Entropy: 5.02170455412598
+      Virtual Size: '0xfbecf4'
+    .data:
+      Entropy: 4.029856674327286
+      Virtual Size: '0x300dc'
+    .pdata:
+      Entropy: 5.869427842519824
+      Virtual Size: '0x3e1c'
+    PAGE:
+      Entropy: 6.512371330262517
+      Virtual Size: '0x48b1'
+    INIT:
+      Entropy: 6.626759917855309
+      Virtual Size: '0x94812'
+    .rsrc:
+      Entropy: 3.191131648606731
+      Virtual Size: '0x250'
+    .reloc:
+      Entropy: 6.664797338448507
+      Virtual Size: '0x195c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2026-05-19 07:05:01'
+  Description: ''
+  Company: "网易(杭州)网络有限公司杭州"
+  InternalName: ''
+  OriginalFilename: neacsafe
+  FileVersion: 1.0.0.0
+  Product: neacsafe
+  ProductVersion: 1.0.0.0
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  Publisher: Microsoft Windows Hardware Compatibility Publisher
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
