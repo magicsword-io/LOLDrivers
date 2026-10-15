@@ -1,0 +1,102 @@
+Id: a2a53148-ff02-4d63-9269-e47966431c62
+Tags:
+- heysafe_drv.sys
+Verified: 'TRUE'
+Author: rommel193911-sudo
+Created: '2026-10-15'
+MitreID: T1562.001
+Category: malicious
+Commands:
+  Command: sc.exe create heysafe_drv binPath=C:\windows\temp\heysafe_drv.sys type=kernel && sc.exe start heysafe_drv
+  Description: "heysafe_drv.sys is a weaponized kernel driver signed with a stolen/expired certificate (Shanxi Shiheng Rail Technology Co., Ltd, VeriSign Class 3 Code Signing 2010 CA, expired 2013, no timestamp). Originally presented as part of the HeySafe-X antivirus project, it implements an aggressive process termination engine designed for defense evasion. Technical capabilities: (1) Strips ProcessBreakOnTermination flag (ZwSetInformationProcess class 29) to prevent BSODs when killing critical processes; (2) Recursively terminates entire process trees (via ZwQuerySystemInformation caching up to 512 related PIDs) to defeat watchdog architectures; (3) Executes asynchronously via System CriticalWorkQueue (ExQueueWorkItem) to spoof caller call stacks; (4) Actively counter-kills analysis tools (taskmgr.exe, procexp.exe, windbg.exe, devenv.exe) via ObRegisterCallbacks when they attempt to open handles to HeySafe processes. Despite multi-layer gating (System ACL, ChaCha20 encryption, Ed25519 signatures, lineage validation, kernel canaries), it remains vulnerable to Bring Your Own Trusted Caller (BYOTC) abuse due to lack of PPL protection on the userland orchestrator."
+  Usecase: Impair defenses by terminating security tools and processes
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/468
+- https://www.virustotal.com/gui/file/a188993dd8cac6628f97dfd390cfab8a9e510d581c39e32da66cbc4b559db27d
+Detection: []
+Acknowledgement:
+  Person: rommel193911-sudo
+  Handle: '@rommel193911-sudo'
+KnownVulnerableSamples:
+- Filename: heysafe_drv.sys
+  MD5: 752d3a88a9f7d2fee7bd0df2dbcd7e69
+  SHA1: d4ecc7d58c8a7645be17d20901ecaa786fd6081c
+  SHA256: a188993dd8cac6628f97dfd390cfab8a9e510d581c39e32da66cbc4b559db27d
+  Signature:
+  - Shanxi Shiheng Rail Technology Co., Ltd
+  - VeriSign Class 3 Code Signing 2010 CA
+  Date: ''
+  Publisher: Shanxi Shiheng Rail Technology Co., Ltd
+  Company: Windows (R) Win 7 DDK provider
+  Description: HeySafe-X thin protection filter driver
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  FileVersion: 10.0.10011.16384
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  InternalName: ''
+  Copyright: Copyright (C) 2026 HeySafe
+  Imports:
+  - ntoskrnl.exe
+  - fltmgr.sys
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ZwSetInformationProcess
+  - ZwQuerySystemInformation
+  - ExAllocatePool2
+  - ExQueueWorkItem
+  - FltCreateCommunicationPort
+  - ObRegisterCallbacks
+  - ZwTerminateProcess
+  - SeLocateProcessImageName
+  - PsGetProcessCreateTimeQuadPart
+  - PsGetProcessInheritedFromUniqueProcessId
+  - KeBugCheckEx
+  PDBPath: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN="Shanxi Shiheng Rail Technology Co., Ltd", O="Shanxi Shiheng Rail Technology Co., Ltd", L=Taiyuan, S=Shanxi, C=CN
+      ValidFrom: '2012-05-28 00:00:00'
+      ValidTo: '2013-05-29 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0b77a42478f55385522f3df9ba38bf9e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ''
+        SHA1: ''
+        SHA256: ''
+        SHA384: ''
+    - Subject: CN=VeriSign Class 3 Code Signing 2010 CA, O="VeriSign, Inc.", C=US
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: ''
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: ''
+        SHA1: ''
+        SHA256: ''
+        SHA384: ''
+    Signer:
+    - SerialNumber: 0b77a42478f55385522f3df9ba38bf9e
+      Issuer: CN=VeriSign Class 3 Code Signing 2010 CA, O="VeriSign, Inc.", C=US
+      Version: 1
+  LoadsDespiteHVCI: 'UNKNOWN'
