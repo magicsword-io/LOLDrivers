@@ -1,0 +1,216 @@
+Id: d1110c3d-3c4c-498e-b9ad-b8874b25841f
+Tags:
+- RtsUpx.sys
+Author: Element2023H
+Created: '2026-10-17'
+MitreID: T1068
+CVE:
+- CVE-2021-36922 CVE-2021-36923 CVE-2021-36924 CVE-2021-36925
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create RtsUpx binPath= C:\windows\temp\RtsUpx.sys type= kernel &&
+    sc.exe start RtsUpx
+  Description: RtsUpx.sys in Realtek RtsUpx USB Utility Driver for Camera/Hub/Audio
+    through 1.14.0.0 allows local low-privileged users to achieve an arbitrary read
+    or write operation from/to physical memory (leading to Escalation of Privileges,
+    Denial of Service, Code Execution, and Information Disclosure) via a crafted Device
+    IO Control packet to a device.
+  Usecase: Allows local low-privileged users to achieve an arbitrary read
+    or write operation from/to physical memory.
+  Privileges: local low-privileged users
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://nvd.nist.gov/vuln/detail/cve-2021-36922
+- https://nvd.nist.gov/vuln/detail/cve-2021-36923
+- https://nvd.nist.gov/vuln/detail/cve-2021-36924
+- https://nvd.nist.gov/vuln/detail/cve-2021-36925
+KnownVulnerableSamples:
+- Filename: RtsUpx.sys
+  MD5: 788697523de62efdd0cf1812531ce840
+  SHA1: 7352db51e2a1599b0ad671f91465a8304d41d135
+  SHA256: 6e29c49f9e97747c77e5929d026538b5e7e2d999fefe1dd502a6a422b7cb6485
+  Signature:
+  - Realtek Semiconductor Corp.
+  - Microsoft Windows Hardware Compatibility Publisher
+  CreationTimestamp: '2021-02-10 14:34:34'
+  Company: Realtek Semiconductor Corp.
+  Description: RtsUpx driver for Realtek USB device
+  Product: RtsUpx driver for Realtek USB device
+  ProductVersion: 1.13.0.0
+  FileVersion: 1.13.0.0
+  MachineType: AMD64
+  Authentihash:
+    MD5: 97de8956cfac9502d67da120e41aac5e
+    SHA1: 6ec3d3f71b940caafc3a2b0d4d9bd06c5e4b1fcd
+    SHA256: 777e171b7421454f7208762e4d7e9f7ffc251b176c087a0caf22f1ca3e31383d
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IoAllocateMdl
+  - IoBuildDeviceIoControlRequest
+  - IoBuildSynchronousFsdRequest
+  - IofCallDriver
+  - IoCancelIrp
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - IoGetDeviceObjectPointer
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - __C_specific_handler
+  - IoFileObjectType
+  PDBPath: E:\SW_Camera\Win_Driver\RtsProxy\RtsUpx\_output\x64_Release\RtsUpx.pdb
+  Imphash: ab986ade8b3cc340f30c1f64554034d7
+  RichPEHeaderHash:
+    MD5: ae86a7dd76598959a84fde249fa9078c
+    SHA1: 3259e91046b6730a9ae978bd578f3b481ee5de3e
+    SHA256: 79dbcf255d4ba197d0deedd5df34d59f5b3d8cdde78f3627386fec18d56bc399
+  Sections:
+    .text:
+      Entropy: 6.220648102927569
+      Virtual Size: '0xe77'
+    .rdata:
+      Entropy: 3.920107693867356
+      Virtual Size: '0x5dc'
+    .data:
+      Entropy: 2.591917186688699
+      Virtual Size: '0x20'
+    .pdata:
+      Entropy: 3.4733637478434383
+      Virtual Size: '0xc0'
+    PAGE:
+      Entropy: 5.87915204179382
+      Virtual Size: '0x3a6'
+    INIT:
+      Entropy: 5.511021734938948
+      Virtual Size: '0x614'
+    .rsrc:
+      Entropy: 3.2866111925752532
+      Virtual Size: '0x3c0'
+    .reloc:
+      Entropy: 2.7588718484453603
+      Virtual Size: '0x14'
+  MagicHeader: 50 45 0 0
+  InternalName: RtsUpx
+  OriginalFilename: RtsUpx
+  Copyright: Copyright (C) Realtek Semiconductor Corp.
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=TW, BUSINESS_CATEGORY=Private Organization,
+        serialNumber=22671299, C=TW, L=HSINCHU, O=Realtek Semiconductor Corp., CN=Realtek
+        Semiconductor Corp.
+      ValidFrom: '2020-01-06 00:00:00'
+      ValidTo: '2022-01-06 12:00:00'
+      Signature: 93dcbeb99faffc0bc496db0ac78a915207e3c86c511f9204197d9bdd417199053807de287461299e1085da6d43bf6ce04095b580292305a53cb4f86eb16f0350b8b82a4961ee81343caac4d93c03b743053aea93fcca6af867e677a2bb8a3039e1b1bb157f48c0e61ddd831032c4d752bfd565697692d402cd55c27445919165642eca4475304f41f7c82da1b4772230256588f90fb1ffb91eef4e2fa7cf47b5d39dff17eb2f1bcf856af31021ea2da792a7e612db7189399681cd1d7febf941198aa381f542499b67549b66eb91edfa2e94cc06d1573eea0cdae5e6a693a4399c5c94d0ca6c1dbe713b090d4ae69433795544bb9bb96bc55e29a9ac9d48ffc0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0bfcfac08e216a1c1fdaa6b77bb2d66e
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 2a58c42bb4a35c88a447db5a4be81650
+        SHA1: b973821e68ed2180ff2af8857c8318b71b9c9dac
+        SHA256: aa84fc498547cbebd677a800c19cd0ad9ea77832bcf6bbac2006b8896e898cb8
+        SHA384: fe49e032a6aba55e04f4ef6642f271ad1500c9af3c6a4cca1198d62d6ef1f0db6b85d320ac40dc5678cd66bd1d7ed2b4
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0bfcfac08e216a1c1fdaa6b77bb2d66e
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: Element2023H
