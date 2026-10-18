@@ -9,6 +9,11 @@ Verified: 'TRUE'
 Author: Nasreddine Bencherchali, Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
+CVE:
+- CVE-2025-1533
+- CVE-2025-3464
+- CVE-2026-8070
+- CVE-2026-16003
 Category: vulnerable driver
 Commands:
   Command: sc.exe create asio.sys binPath=C:\windows\temp\asio.sys type=kernel &&
