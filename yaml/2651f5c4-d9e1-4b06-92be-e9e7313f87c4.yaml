@@ -5499,3 +5499,168 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+- Filename: AsIO3_64.sys
+  MD5: faaba75a4e3b7d328763a85f00bf8d31
+  SHA1: e8fdc2a3fdaee9d07c66beaa709eb18dd8dfcd1e
+  SHA256: fbab63f19125c6759a3ff6ad0dda90c3555bc853329317693881499b2711df6b
+  Imphash: 82b4b590e115d9c7fc42f53a6352f8d3
+  Authentihash:
+    MD5: cb63bcc4cc10834ae7a818bb262bf6f8
+    SHA1: 064359c204e71212e589ee865dce29f8ce4ee48b
+    SHA256: aab7fc4cc14de4efda7b6401d88b48e18b8c228984cea0519de578237b3e0aee
+  RichPEHeaderHash:
+    MD5: a5216cda7007800c34c589ba9e8e576d
+    SHA1: a97ebd8cf704b0c37fbfd67ccdf01eb31ac57b7a
+    SHA256: 6645aa1f0c9cfb314fe52503a0a172bec86fd694e5b3f704fa225386f904edad
+  Sections:
+    .text:
+      Entropy: 6.437907541355905
+      Virtual Size: '0x693a'
+    .rdata:
+      Entropy: 4.293259838377175
+      Virtual Size: '0x8cc'
+    .data:
+      Entropy: 3.593070651069705
+      Virtual Size: '0x430'
+    .pdata:
+      Entropy: 4.103563927029969
+      Virtual Size: '0x228'
+    PAGE:
+      Entropy: 5.695687460526484
+      Virtual Size: '0x168'
+    INIT:
+      Entropy: 5.241966307054256
+      Virtual Size: '0x6b6'
+    .rsrc:
+      Entropy: 3.2488706950528963
+      Virtual Size: '0x300'
+    .reloc:
+      Entropy: 2.9345608142862893
+      Virtual Size: '0x18'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-02-12 09:37:02'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlCopyUnicodeString
+  - RtlFreeUnicodeString
+  - DbgPrint
+  - RtlGetVersion
+  - KeSetEvent
+  - KeDelayExecutionThread
+  - KeWaitForSingleObject
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmGetSystemRoutineAddress
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoCreateSynchronizationEvent
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoIs32bitProcess
+  - ObReferenceObjectByHandle
+  - RtlInitUnicodeString
+  - ZwClose
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - ZwOpenSymbolicLinkObject
+  - ZwQuerySymbolicLinkObject
+  - MmGetPhysicalAddress
+  - PsSetCreateProcessNotifyRoutineEx
+  - PsGetProcessImageFileName
+  - __C_specific_handler
+  - strcpy_s
+  - ZwOpenFile
+  - ZwQueryInformationFile
+  - ZwReadFile
+  - PsGetVersion
+  - ExAllocatePoolWithQuotaTag
+  - ZwQuerySystemInformation
+  - KeBugCheckEx
+  - wcscpy_s
+  - wcscat_s
+  - ObfDereferenceObject
+  - _stricmp
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-01-13 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 41f1a911f40f134779c9656a8dc0ee9804a4c6e30cf2a2b1e75f624fda935936cdf21ee11eec0fe11b3f91d4e40fc2e69834ff190f66281f4f6231a42ae12a13bad73ec7d192feabdddfaa9833461f4e9ebde0ed0746eb802ea4fdae53b4a4c1a4f5218d6bcc01adf519eed790a532522bdbcc730f18f8fbcede8371a7efbb515b04762fadadd3ea1dfcfd5393e58c89e36019b9e02f238e2c5c49cb7e2b88392bb9066188f3ae02767674c16491b8895197e5857d3dd357a6586e1feefb6961e25adc2821e863ba3ecf56ed9ae4f705eacaf3ec12df38cdda7b3e2b93532f5c510058de9048a30ac70bf43b6d5531f002cc47779651a35eb5bc5cc84311a1a7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0fd1bbca796bd7f8dd4c82e10a9a9631
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b7b45b8ea989e3bb49fef821df6b4153
+        SHA1: dfe27c66bf0e9730199a3c9b2bbc1c02d2d94914
+        SHA256: e66e90fa03738d0f0353cd15ea61d4a02d406c32e238e192be9d866c343d7152
+        SHA384: 7fb01804ee870a928e56cad8f50fbf3a4689d92c69b891000f845290a05da7be8a60bfb57032871a7eccf2656b9adbea
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, ST=Taipei
+        City, L=Beitou District, O=ASUSTeK COMPUTER INC., OU=OP BG,MB BU,SYS SW RD
+        Ctr, CN=ASUSTeK COMPUTER INC.
+      ValidFrom: '2024-09-24 00:00:00'
+      ValidTo: '2027-09-26 23:59:59'
+      Signature: 6b9fbe7ee2f6f55e93179652dc8b4d013ce3a12554ea12209372c2c8e0f8884ff2ab64b65e6169db9954357d7beab3dfce00a1d28dda28b38940446de6374eeba835c3960ecde4c9d399c60ca745d21c8eb4a835d4b74a7759bf8cef59c8ae874614abebede1a154293624d41d9d88bd0fb4b1276a951f6cb60a7fb3e523634284200e826b8ccc804c6b53867632a19b444f9295a6f10029d1126fb086ae7347f5e9c407ebcb6294a8e63836fce43a32aa9d30b35ae1445ed970710214317c98ee8838f265a749017ea63e3fd244eb433b047c3e2e92e31e75dee038ba3aa920a092beb244a4e547274ddcc0c1aac8b04133192619174f4a3fc5e495789d6505d5608b806ae74c15c69fdb8e810f14d3f7690ed5595d5b78598db8d7282001d74b8ccbe3d805793fa8ac62a873ba0951e8aa73cf6138676883ed4cf6b8b1e7080d9f3bee3775efbcb8e339ce2ccb222b5a1cdd2ce60d96c71c99349be418b4a156fa8f18a9c60f0989850157149782033a1f509568593de25a00c5231e0b20e4c06b743fbd597cfd2bc1a64a57199484b93dc8c18f4c8bc1a9c2b059a51cebd3825d744d8d8b99e00b939de78aeea1d90702e5aec092822ce32f80b9c36f300c4f8e1b94840d700a0b266c63d3ccfa1e52699060a06b26e865427a10e05d847005988081de151ed41bee60eff6f54497f0210c2163fc14f121c529b6ab7a6be9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 04e1d669bc6c5bca5d9cd26447776b07
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: c6f5e8bda6b08401b3b8b1bb48e47bd6
+        SHA1: fd483fad2e8c23c4ac196f9d6da5ac8b9929dcbe
+        SHA256: 5e862b7527c764419bbcc63e00439a97dd0fd1ab5fda0dfc3f75e5fe62e5f7da
+        SHA384: 3f4ce169bc1cef96a4257b58523624e6c242ea17c1fb638f8dd09422a1a4f3b7dcb33c825b770aada78f001f02c0e91f
+    Signer:
+    - SerialNumber: 04e1d669bc6c5bca5d9cd26447776b07
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
