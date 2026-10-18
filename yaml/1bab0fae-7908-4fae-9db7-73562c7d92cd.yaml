@@ -16,8 +16,10 @@ Commands:
     and a security descriptor granting access only to LocalSystem and Builtin Administrators.
     This is an administrator/SYSTEM-gated physical-memory primitive, not a standard-user
     entry point. The PnP driver must be installed and its device interface started
-    before the request can be used. The assessment is limited to this exact sample
-    and does not assert an affected-version range.
+    before the request can be used. The detailed handler assessment above concerns
+    the 1.7.16.219 sample. A separate 1.7.16.218 sample is listed by hash; an
+    isolated-VM privilege-escalation result was reported for it in the submission.
+    No affected-version range is asserted.
   Usecase: Map physical memory into user mode across the administrator-to-kernel boundary.
   Privileges: Administrator or LocalSystem with access to the started PnP device.
   OperatingSystem: Windows
@@ -244,3 +246,9 @@ KnownVulnerableSamples:
       Version: 1
   Signature:
   - Advanced Micro Devices Inc.
+- Filename: AmdTools64.sys
+  SHA256: eee1fb0995f1916820e25d6b4ee03ed7276ab66894f9654d30e6c33e759a0011
+  MD5: f3063aeff8b4ca56c6d870302ae80a0d
+  SHA1: 70fc66de22abaa47a88f888b6f3b59e3ea1eceb3
+  FileVersion: 1.7.16.218
+  ProductVersion: 1.7.16.218
