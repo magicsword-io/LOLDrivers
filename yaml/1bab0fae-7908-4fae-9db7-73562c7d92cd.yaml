@@ -8,27 +8,25 @@ MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: ''
-  Description: AMD Special Tools Driver AmdTools64.sys 1.7.16.219 exposes physical-memory
-    mapping through IOCTL 0xFFF028A4. Static analysis confirms that the handler passes
-    a caller-supplied physical address and length to MmMapIoSpace, constructs an MDL,
-    and maps the range into the caller's user-mode address space with MmMapLockedPagesSpecifyCache,
-    without a physical-range authorization check. The device uses FILE_DEVICE_SECURE_OPEN
-    and a security descriptor granting access only to LocalSystem and Builtin Administrators.
-    This is an administrator/SYSTEM-gated physical-memory primitive, not a standard-user
-    entry point. The PnP driver must be installed and its device interface started
-    before the request can be used. The detailed handler assessment above concerns
-    the 1.7.16.219 sample. A separate 1.7.16.218 sample is listed by hash; an
-    isolated-VM privilege-escalation result was reported for it in the submission.
-    No affected-version range is asserted.
+  Description: AMD Special Tools Driver AmdTools64.sys versions 1.7.16.218 and 1.7.16.219
+    expose physical-memory mapping through IOCTL 0xFFF028A4. Static inspection of both samples
+    shows caller-supplied physical addresses and lengths reaching MmMapIoSpace and user-mode
+    MDL mappings without a physical-range authorization check. The device security descriptor
+    restricts access to LocalSystem and Builtin Administrators. The PnP device interface must
+    be installed and started before use. The 1.7.16.218 submission includes a screenshot of
+    a SYSTEM shell reported from an isolated VM; that runtime result was not independently
+    reproduced. No affected-version range is asserted.
   Usecase: Map physical memory into user mode across the administrator-to-kernel boundary.
   Privileges: Administrator or LocalSystem with access to the started PnP device.
   OperatingSystem: Windows
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/430
 - https://github.com/methmind/amdtools64
+- https://github.com/magicsword-io/LOLDrivers/pull/473
+- https://github.com/CatCaller/AMDTools
 Acknowledgement:
-  Person: Leonid (methmind)
-  Handle: '@methmind'
+  Person: Leonid (methmind), CatCaller, junho462, bob-dev-byovd
+  Handle: '@methmind, @CatCaller, @junho462, @bob-dev-byovd'
 Detection: []
 KnownVulnerableSamples:
 - Filename: AmdTools64.sys
@@ -252,3 +250,193 @@ KnownVulnerableSamples:
   SHA1: 70fc66de22abaa47a88f888b6f3b59e3ea1eceb3
   FileVersion: 1.7.16.218
   ProductVersion: 1.7.16.218
+  Imphash: 6266125b2b152310922a52fb871984c8
+  Sections:
+    .text:
+      Entropy: 6.347848606570956
+      Virtual Size: '0x758c'
+    .rdata:
+      Entropy: 5.080265186135274
+      Virtual Size: '0x19e4'
+    .data:
+      Entropy: 2.800586052256417
+      Virtual Size: '0x5a90'
+    .pdata:
+      Entropy: 4.645438085425932
+      Virtual Size: '0x6e4'
+    PAGE:
+      Entropy: 6.229626912387258
+      Virtual Size: '0x1c4b'
+    INIT:
+      Entropy: 5.467410366643452
+      Virtual Size: '0xd92'
+    .rsrc:
+      Entropy: 3.326543401617388
+      Virtual Size: '0x3c0'
+    .reloc:
+      Entropy: 4.790851611074821
+      Virtual Size: '0x134'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2020-05-27 06:45:35'
+  Description: AMD Tools Driver
+  Company: ''
+  InternalName: AMDToolsDriver
+  OriginalFilename: amdtools64.sys
+  Product: AMD Tools Driver
+  Copyright: "Copyright\xA9 2003-2020. AMD Confidential - Advance Information"
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeInitializeEvent
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - KeWaitForSingleObject
+  - KeQueryActiveProcessors
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoAllocateMdl
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoFreeMdl
+  - IoGetDeviceObjectPointer
+  - ObfDereferenceObject
+  - ZwSetInformationThread
+  - ObReferenceObjectByName
+  - __C_specific_handler
+  - IoDriverObjectType
+  - KeInsertQueueDpc
+  - KeAcquireSpinLockAtDpcLevel
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - KfRaiseIrql
+  - ExInterlockedInsertTailList
+  - ExInterlockedRemoveHeadList
+  - IoCancelIrp
+  - IofCompleteRequest
+  - IoReleaseCancelSpinLock
+  - RtlFreeUnicodeString
+  - KeSetEvent
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoSetDeviceInterfaceState
+  - PoSetPowerState
+  - ExFreePool
+  - PoRequestPowerIrp
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - KeInitializeDpc
+  - KeInitializeSpinLock
+  - IoAllocateDriverObjectExtension
+  - IoAttachDeviceToDeviceStack
+  - IoGetDriverObjectExtension
+  - RtlInitAnsiString
+  - RtlAnsiStringToUnicodeString
+  - KeInitializeMutex
+  - KeReleaseMutex
+  - PsCreateSystemThread
+  - IoAllocateErrorLogEntry
+  - IoWriteErrorLogEntry
+  - IoRegisterDeviceInterface
+  - ObReferenceObjectByHandle
+  - ZwClose
+  - swprintf
+  - KeDelayExecutionThread
+  - KeQueryTimeIncrement
+  - ZwQueryValueKey
+  - KeLowerIrql
+  - RtlCompareMemory
+  - KeReleaseSpinLockFromDpcLevel
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwCreateKey
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - KeStallExecutionProcessor
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows
+        Hardware Compatibility Publisher
+      ValidFrom: '2020-03-11 17:47:59'
+      ValidTo: '2021-03-05 17:47:59'
+      Signature: 8cc6ee377f0a5d3ad001a9225b474ef5fc90271aaeccffb747abac30d630dca531d7d2f4138fa82ddd6e4417a83d735fb18f7f8470e9a946e4d67851baf4717f320f022d26bb3b5f30ba51e0f15c69c868c4f9f1d2cae2e8f8d74874d1e37c6ac0ec5c36b7a9ed3788d8a0bb9ac7d4aa3881a922e48cc29c9d54ce28a8216f8e30b120ed954bf11da41ef5ec477157740eefb1af563e10055115704a96a54167a79f43700b19842707e653edcde103dec04cd39b5d22e04da33ee2a844acf0e0cfc96a7fc6c21b2f08536204bc0c1500ee2ff84c572b2d5c619e50e6edac3756c001fbeb5a7066c9639ced5b7a09debba36077f545d84513f5ca07fc16d18953
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000097d79f85906ea318a4000000000097
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: af9faf08df320dec5f71177c81569769
+        SHA1: e622ea2688b80ce2554a9553f2cadc9c7a040bc9
+        SHA256: b2d0043751fa7483f5d5fb7f328b4a5b87de31a4324dd50ab6113c76fb827b51
+        SHA384: e1dcb7b77259e1231ac8f053ec2f9b7ade02c506451eb8272715526a7c1217eed0948eaeae297422aecdf88f41ca6b66
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows
+        Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 3300000097d79f85906ea318a4000000000097
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows
+        Third Party Component CA 2012
+      Version: 1
+  Authentihash:
+    MD5: ec390271394820e0adf14576230eb86c
+    SHA1: a35c812912756cb3c93f57d833eda14c8d604786
+    SHA256: 6d450227f24c6f9025655c21fe63623cbf8dae6a86a30ad212208de1530c910f
+  RichPEHeaderHash:
+    MD5: 033ef4d8ce5b474858e13e3f1080404b
+    SHA1: 1f5f7afa9558a91117befd79bb5f88d6855cd500
+    SHA256: 5b6766f3443b7611b17e18d2b702c49dd41876ac3fcf2650fecaadf342698e16
+  LoadsDespiteHVCI: UNKNOWN
