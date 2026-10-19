@@ -1,14 +1,13 @@
-title: Driver Load - directio.sys
-id: aaae2571-a93a-5a27-87b4-13005d5733da
+title: Driver Load - DirectIo.sys
+id: ac61d7a1-d57f-5c5c-8418-8955a93f00b0
 status: experimental
 description: |
-    Detects loading of driver directio.sys via name.
-    Confirmed vulnerable driver from Microsoft Block List
+    Detects loading of driver DirectIo.sys via name.
 references:
-    - https://www.loldrivers.io/drivers/a2c3f6e9-25a5-4b75-8c6b-ad2d4e155822/
-    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-author: Michael Haag
-date: 2023/07/22
+    - https://www.loldrivers.io/drivers/62e2a967-1f03-4225-a325-122b109208f3/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
 modified: 2026/10/19
 tags:
     - attack.privilege_escalation

@@ -3,12 +3,13 @@ id: 7c2b7339-c146-5a34-aad9-c108925c61ca
 status: experimental
 description: |
     Detects loading of driver NeacSafe64.sys via hash.
-    NetEase NeacSafe64.sys is an anti-cheat mini-filter driver referenced by KDU and public NeacController research. Versions prior to 1.0.0.8 expose IOCTL/message-handler paths that provide arbitrary kernel read/write primitives and can be chained for SYSTEM privilege escalation or kernel-mode code execution.
+    NetEase NeacSafe64.sys is an anti-cheat minifilter driver. Public NeacController research documents arbitrary kernel writes (opcode 70) in the 2025-02-20 sample, SHA256 65447f727801e8be8a51aaaafc07618c8196553e683affb0721da441e2430bad, associated with CVE-2025-45737. Separate research on the added 2026 FragPunk, Overwatch China and NARAKA builds reports that opcode 70 has been stubbed, while unauthenticated filter-port messages still expose process termination (opcode 20), process-protection changes (opcode 33), a pool overflow (opcode 52), and a system-crash path (opcode 63). The researcher reports termination and protection stripping of PPL processes. The filter port permits one connection, so an existing client can prevent access. All these builds report version 1.0.0.0 despite differing capabilities; use sample hashes to distinguish them. The older CVE's arbitrary-write claim is not applied to the added samples.
 references:
     - https://www.loldrivers.io/drivers/d474d8ad-14d9-4664-addd-86b4a9b7a1a5/
     - https://github.com/za233/NeacController
     - https://github.com/hfiref0x/KDU/blob/master/Help/providers.md
-author: Michael Haag
+    - https://github.com/hax0r31337/vuln-driver-neacsafe64
+author: Michael Haag, Zhang Tingjia
 date: 2026/06/16
 modified: 2026/10/19
 tags:
@@ -22,10 +23,22 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=7296e9a1ef2e6aaafc6915e1eb552780'
             - 'MD5=dcc288fafad0bf3b505c4b44791d423d'
+            - 'MD5=ebfad15f91e3e4bd7f538c96dc855924'
+            - 'MD5=1607f41c32e67edf39d0968f332aef9f'
+            - 'SHA1=5b8194c13270963c29e5fa2e0ab01cc6fba4b786'
             - 'SHA1=7e6dd5f1363c3070c59378ec8b23b6ec7b5671b4'
+            - 'SHA1=555c8c25dee0a3c23256f9f9b66ce274f7b15aa1'
+            - 'SHA1=8bc89c4564188385709a04fc941c82586febe771'
             - 'SHA256=65447f727801e8be8a51aaaafc07618c8196553e683affb0721da441e2430bad'
+            - 'SHA256=f79a4ba7f5656fa9ccfe245a90e6e861e2d1aaf0f9d52240abaad0521da063be'
+            - 'SHA256=1d828fe7d97620cd92275c6d14fe9721c9b04b514f4dce084f7f6ea05b7d5acd'
+            - 'SHA256=b1147d9b4bed22d8b6e6dcc7366950ffb57ecc10fbfe8f4ee9615b3d3cdd2368'
             - 'IMPHASH=7a377a157a35494d3fc033245b7fd077'
+            - 'IMPHASH=30a629a38af80951a4e2301ee1d5feee'
+            - 'IMPHASH=c4d7f42aad938be2184b7e1be80216f8'
+            - 'IMPHASH=36579a94b168b84abb2af8cc819813e2'
     condition: selection_hashes
 falsepositives:
     - Unknown

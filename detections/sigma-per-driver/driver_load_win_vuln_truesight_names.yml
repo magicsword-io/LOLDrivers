@@ -3,10 +3,13 @@ id: e1f2d813-2d4f-5956-914c-2ac9f5275eb5
 status: experimental
 description: |
     Detects loading of driver truesight.sys via name.
-    This is a C# AV/EDR Killer using Rogue Anti-Malware Driver 3.3. This driver is not present in the loldrivers or Windows blocklist at the time of this writing. The only reason I'm making this public is because the company has already published a fix in version 3.4, and Microsoft will likely block this driver soon. This driver can be used in Windows 23H2 with HVCI enabled, loldrivers blocklist, or WDAC enabled. HVCI is designed to ensure the integrity of code executed in the kernel, but it cannot protect against all possible vulnerabilities or actions that can be performed through drivers or system interfaces.
+    Adlice TrueSight.sys exposes kernel-mode process termination through IOCTL 0x22E044. Static inspection of the 2.0.2 sample confirms that a caller-supplied PID reaches ZwOpenProcess with PROCESS_TERMINATE and then ZwTerminateProcess. Public Darkside research documents abuse of version 3.3 and reports a fix in 3.4; Check Point describes exploitation of legacy builds. The 2.0.2 submitter reports process termination and automatic restart in a Windows 11 VM. That recording does not establish the target process's PPL status. Loading behavior depends on Windows policy, signing and blocklist state; no general HVCI or WDAC bypass is asserted for the added sample.
 references:
     - https://www.loldrivers.io/drivers/e0e93453-1007-4799-ad02-9b461b7e0398/
     - https://github.com/ph4nt0mbyt3/Darkside
+    - https://research.checkpoint.com/2025/large-scale-exploitation-of-legacy-driver/
+    - https://github.com/magicsword-io/LOLDrivers/pull/466
+    - https://web.archive.org/web/20160420143840id_/http://download.adlice.com/RogueKiller/RogueKillerX64.exe
 author: ph4nt0mbyt3, Michael Haag
 date: 2023/11/10
 modified: 2026/10/19
