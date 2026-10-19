@@ -13,12 +13,20 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create NeacSafe64 binPath=C:\windows\temp\NeacSafe64.sys type=kernel
     && sc.exe start NeacSafe64
-  Description: NetEase NeacSafe64.sys is an anti-cheat mini-filter driver referenced
-    by KDU and public NeacController research. Versions prior to 1.0.0.8 expose IOCTL/message-handler
-    paths that provide arbitrary kernel read/write primitives and can be chained for
-    SYSTEM privilege escalation or kernel-mode code execution.
-  Usecase: Abuse arbitrary kernel read/write primitives for local privilege escalation
-    and kernel-mode code execution.
+  Description: NetEase NeacSafe64.sys is an anti-cheat minifilter driver. Public
+    NeacController research documents arbitrary kernel writes (opcode 70) in the
+    2025-02-20 sample, SHA256 65447f727801e8be8a51aaaafc07618c8196553e683affb0721da441e2430bad,
+    associated with CVE-2025-45737. Separate research on the added 2026 FragPunk,
+    Overwatch China and NARAKA builds reports that opcode 70 has been stubbed,
+    while unauthenticated filter-port messages still expose process termination
+    (opcode 20), process-protection changes (opcode 33), a pool overflow (opcode 52),
+    and a system-crash path (opcode 63). The researcher reports termination and
+    protection stripping of PPL processes. The filter port permits one connection,
+    so an existing client can prevent access. All these builds report version
+    1.0.0.0 despite differing capabilities; use sample hashes to distinguish them.
+    The older CVE's arbitrary-write claim is not applied to the added samples.
+  Usecase: Abuse vulnerable message handlers for kernel writes in the older sample,
+    or process termination, protection changes and denial of service in the added builds.
   Privileges: kernel
   OperatingSystem: Windows 10, Windows 11
 Resources:
