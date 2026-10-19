@@ -7,25 +7,28 @@ Created: '2023-11-10'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create truesight.sys binPath=C:\windows\temp\truesight.sys type=kernel
-    && sc.exe start truesight.sys
-  Description: This is a C# AV/EDR Killer using Rogue Anti-Malware Driver 3.3. This
-    driver is not present in the loldrivers or Windows blocklist at the time of this
-    writing. The only reason I'm making this public is because the company has already
-    published a fix in version 3.4, and Microsoft will likely block this driver soon.
-    This driver can be used in Windows 23H2 with HVCI enabled, loldrivers blocklist,
-    or WDAC enabled. HVCI is designed to ensure the integrity of code executed in
-    the kernel, but it cannot protect against all possible vulnerabilities or actions
-    that can be performed through drivers or system interfaces.
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 11
+  Command: sc.exe create truesight.sys binPath=C:\windows\temp\truesight.sys type=kernel &&
+    sc.exe start truesight.sys
+  Description: Adlice TrueSight.sys exposes kernel-mode process termination through IOCTL
+    0x22E044. Static inspection of the 2.0.2 sample confirms that a caller-supplied PID reaches
+    ZwOpenProcess with PROCESS_TERMINATE and then ZwTerminateProcess. Public Darkside research
+    documents abuse of version 3.3 and reports a fix in 3.4; Check Point describes exploitation
+    of legacy builds. The 2.0.2 submitter reports process termination and automatic restart
+    in a Windows 11 VM. That recording does not establish the target process's PPL status.
+    Loading behavior depends on Windows policy, signing and blocklist state; no general HVCI
+    or WDAC bypass is asserted for the added sample.
+  Usecase: Terminate security processes from kernel mode.
+  Privileges: Administrator to load the driver; access to its device is required.
+  OperatingSystem: Windows
 Resources:
 - https://github.com/ph4nt0mbyt3/Darkside
+- https://research.checkpoint.com/2025/large-scale-exploitation-of-legacy-driver/
+- https://github.com/magicsword-io/LOLDrivers/pull/466
+- https://web.archive.org/web/20160420143840id_/http://download.adlice.com/RogueKiller/RogueKillerX64.exe
 Detection: []
 Acknowledgement:
-  Person: ''
-  Handle: ''
+  Person: ph4nt0mbyt3, junho462, bob-dev-byovd
+  Handle: '@ph4nt0mbyt3, @junho462, @bob-dev-byovd'
 KnownVulnerableSamples:
 -   Filename: Truesight
     Libraries:
@@ -396,9 +399,201 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
-- Filename: Truesight
+- Filename: truesight.sys
   MD5: 0d5a09b08568760ae85a801fcbc0f83d
   SHA1: 3ec1e15b4a903b92e965a44dd9514267c1ceff80
   SHA256: 347acba74fdcbeac671521739f8a34ec0e378caf716c31f55616f9f843e4d0d3
   FileVersion: 2.0.2
   ProductVersion: 2.0.2
+  Imphash: 17fec1f996adceb4112879eb84986897
+  Sections:
+    .text:
+      Entropy: 6.117715092322614
+      Virtual Size: '0x2cc4'
+    .rdata:
+      Entropy: 4.878549360310541
+      Virtual Size: '0x6ac'
+    .data:
+      Entropy: 1.5624164861624648
+      Virtual Size: '0x200'
+    .pdata:
+      Entropy: 4.040491434039326
+      Virtual Size: '0x1a4'
+    PAGE:
+      Entropy: 4.278783719048785
+      Virtual Size: '0x6c'
+    INIT:
+      Entropy: 5.432329011491992
+      Virtual Size: '0x816'
+    .rsrc:
+      Entropy: 3.266084443720434
+      Virtual Size: '0x3c8'
+    .reloc:
+      Entropy: 2.444574021773628
+      Virtual Size: '0x96'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2016-01-15 20:17:58'
+  Description: Antirootkit module
+  Company: Adlice Software
+  InternalName: Truesight
+  OriginalFilename: Truesight
+  Product: Truesight
+  Copyright: Copyright Adlice Software(C) 2014
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - DbgPrint
+  - ExFreePoolWithTag
+  - KeBugCheckEx
+  - _wcsicmp
+  - ZwQuerySystemInformation
+  - ExAllocatePool
+  - ZwClose
+  - ZwOpenProcess
+  - ObfDereferenceObject
+  - ZwTerminateProcess
+  - ObOpenObjectByName
+  - ZwOpenDirectoryObject
+  - ObQueryNameString
+  - IoDriverObjectType
+  - IoGetDeviceObjectPointer
+  - ObReferenceObjectByHandle
+  - ZwQueryDirectoryObject
+  - MmIsAddressValid
+  - KeResetEvent
+  - KeInitializeApc
+  - KeSetEvent
+  - KeInsertQueueApc
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - RtlCaptureStackBackTrace
+  - PsGetCurrentThreadId
+  - PsLookupThreadByThreadId
+  - ExAllocatePoolWithTag
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - ZwOpenKey
+  - IoFreeMdl
+  - MmMapLockedPagesSpecifyCache
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - IoAllocateMdl
+  - IoGetAttachedDevice
+  - IoGetRelatedDeviceObject
+  - IoCreateFile
+  - IoFileObjectType
+  - IoFreeIrp
+  - IoAllocateIrp
+  - IofCallDriver
+  - RtlGetVersion
+  - PsGetVersion
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=FR, ST=Loire Atlantique, L=Orvault, O=Adlice, CN=Adlice
+      ValidFrom: '2015-03-31 00:00:00'
+      ValidTo: '2018-06-28 12:00:00'
+      Signature: a4bafdba971f567a594df75a625b1ccac8e43187e912b686860c913cda04b79cadc1600da469632da14c043c4ddbbbf97a2ca6ed3917a4008fe5da5f9de201ba549b7875a382030a2048f6beec1f5bca4c841eea6962fde84c997153b72765f874eb02d97030b285435cc094835bdc09edf4138d6da6a5820730a8e09814baeebc7d66f3d24e69eae4c5a395035588f00129f5a650d82a8a430c4769d29220ce6e9a01efeee0219511dbd61c838422eb83fea6ad1b5ccec2cbea86d246d57789af690ad043e0315fd4a42151a7e7dbf67a94594382b14c20259cf02ad2248f9732b2c18271a0f8769a7d6962f58ce97e325e4d3d76a50327ddb41c317a179d3d
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 06e284cd38ee15623095dcbd38e65f9b
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: c59dbb2c1f1fc7067e1ef6ce01cfff45
+        SHA1: 8af7d1546e6993884df99015e2b8a320beb6e154
+        SHA256: c6ada9a4b9002f518b6664d3ab411825c795b67fbfa77a4fb43a368bb15da666
+        SHA384: 4c16ed6bb5a3fffd520d8e429e5bedfc20d7ba7f5518facdbe2e93b2a72d0b188019b91fd96bf01caceb280f2012d915
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance EV Root
+        CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance Code
+        Signing CA,1
+      ValidFrom: '2011-02-11 12:00:00'
+      ValidTo: '2026-02-10 12:00:00'
+      Signature: 49eb7c60beaeefc97cb3c5ba4b64df1669e286fa29d9de98857d406626332f4455aaaa90e935700a34bed3ae542e8e6500d67a32203e6c26b898a939b1bc95c7aae9f5ee4666c6b3e812f8b3979dff74588234997550ac448fe892ce7d8b0f3196c7dcd31130987416c6e56b4576a39401cd33007a48f66f8631c9562b3322d5f801b644ce8cb4ca88d2e416e3e7f6e23ee109c09d7943437f555c05ad9310c62c0d6bc09eea78e5d277d6b8da9a987fba4c922b9dbda488b1ddafc34cd2979b03c6ae5f1b440f333715e3cbff2f56d316a45b55679da2cadb346c0c734ab57ba4b6b3e935027870ec007acbfc4b4f2236bb1484c98f91dd0f3c758cca0b88e7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 829995f702421dea833a24fb2c7f4442
+        SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
+        SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
+    Signer:
+    - SerialNumber: 06e284cd38ee15623095dcbd38e65f9b
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance Code Signing
+        CA,1
+      Version: 1
+  Authentihash:
+    MD5: 05a8e40ca699688e768a230216655992
+    SHA1: b7ea0d3897e87a7f6380c4729cf6c891d1acaec5
+    SHA256: ecb07e72d6937ab5cee4a7b8176351cbdefa3e0b230a5973b8fc6c2f2c02f30d
+  RichPEHeaderHash:
+    MD5: dbef636f51139c6fd5ad771c12218bea
+    SHA1: b53d0812dd975181b732c0e5c5984d0e834c6a0c
+    SHA256: b133af91c881664a794e081e8176beb0a13aac9bd2784fdf11c0eb3dba1fa451
+  LoadsDespiteHVCI: UNKNOWN
