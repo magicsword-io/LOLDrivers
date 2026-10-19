@@ -1,0 +1,31 @@
+title: Driver Load - MonProcessControl.sys
+id: 2e7a9546-86d1-5d84-95c9-3d6a6c9b6863
+status: experimental
+description: |
+    Detects loading of driver MonProcessControl.sys via name.
+    HONOR's MonProcessControl.sys version 1.0.0.1 exposes process termination through IOCTL 0x22400C on \\.\MonProcessControl. Jehad Abudagga's KillerLand research publishes a proof of concept that submits a four-byte target PID and reports termination of protected AV/EDR processes. Static analysis confirms that the handler opens the supplied PID with ZwOpenProcess using a kernel handle and calls ZwTerminateProcess. The driver restricts device access to administrators and SYSTEM and checks that the calling process's image path ends with \HONOR\MagicAnimation\MagicSpaceTurbo.exe. The published proof of concept copies itself to that path before opening the device, satisfying this path-based check. Protected-process termination is reported by the researcher and was not independently reproduced here.
+references:
+    - https://www.loldrivers.io/drivers/de4bebdc-0f92-4855-989a-ac2cd1224190/
+    - https://github.com/redteamfortress/KillerLand
+    - https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/README.md
+    - https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/2.%20MonProcessControl/monproc_poc.c
+    - https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/2.%20MonProcessControl/MonProcessControl.sys
+author: Michael Haag
+date: 2026/10/19
+modified: 2026/10/19
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\monprocesscontrol.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
