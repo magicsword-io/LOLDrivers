@@ -1313,6 +1313,27 @@ rule MAL_Driver_Tonecinc_Idmtdisys_Internetdownloadmanager_2C1B {
 		uint16(0) == 0x5a4d and filesize < 2300KB and all of them
 }
 
+rule MAL_Driver_Windowsrwinddkprovider_Heysafedrvsys_Windowsrwinddkdriver_A188 {
+	meta:
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - heysafe_drv.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
+		author = "Florian Roth"
+		reference = "https://github.com/magicsword-io/LOLDrivers"
+		hash = "a188993dd8cac6628f97dfd390cfab8a9e510d581c39e32da66cbc4b559db27d"
+		date = "2026-10-19"
+		score = 85
+	strings:
+		$ = { 460069006c0065004400650073006300720069007000740069006f006e00[1-8]48006500790053006100660065002d00580020007400680069006e002000700072006f00740065006300740069006f006e002000660069006c007400650072002000640072006900760065007200 } /* FileDescription HeySafeXthinprotectionfilterdriver */
+		$ = { 43006f006d00700061006e0079004e0061006d006500[1-8]570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f0076006900640065007200 } /* CompanyName WindowsRWinDDKprovider */
+		$ = { 460069006c006500560065007200730069006f006e00[1-8]310030002e0030002e00310030003000310031002e0031003600330038003400 } /* FileVersion  */
+		$ = { 500072006f006400750063007400560065007200730069006f006e00[1-8]310030002e0030002e00310030003000310031002e0031003600330038003400 } /* ProductVersion  */
+		$ = { 49006e007400650072006e0061006c004e0061006d006500[1-8]68006500790073006100660065005f006400720076002e00730079007300 } /* InternalName heysafedrvsys */
+		$ = { 500072006f0064007500630074004e0061006d006500[1-8]570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000640072006900760065007200 } /* ProductName WindowsRWinDDKdriver */
+		$ = { 4f0072006900670069006e0061006c00460069006c0065006e0061006d006500[1-8]68006500790073006100660065005f006400720076002e00730079007300 } /* OriginalFilename heysafedrvsys */
+		$ = { 4c006500670061006c0043006f007000790072006900670068007400[1-8]43006f00700079007200690067006800740020002800430029002000320030003200360020004800650079005300610066006500 } /* LegalCopyright CopyrightCHeySafe */
+	condition:
+		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+}
+
 rule MAL_Driver_Windowsrwinddkprovider_Netfiltersys_Windowsrwinddkdriver_2060 {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_206006a1.sys. Investigate matches in context: expected filenames or standard vendor/system driver locations can be lower priority, while unexpected filenames or paths are more suspicious."
