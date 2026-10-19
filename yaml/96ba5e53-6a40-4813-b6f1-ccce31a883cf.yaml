@@ -15,11 +15,15 @@ Commands:
     its unauthenticated command channel can expose protected-process handles, read
     cross-process memory, terminate security processes, elevate privileges, and inject
     code from kernel context.
+    Beazley Security also reported this driver family in an INC ransomware
+    affiliate intrusion; the report does not identify the exact sample hash for
+    this family.
   Usecase: Terminate protected processes by abusing vulnerable xhunter1 kernel command
     paths.
   Privileges: kernel
   OperatingSystem: Windows 10, Windows 11
 Resources:
+- https://labs.beazley.security/articles/an-inc-ransomware-affiliates-byovd-buffet
 - https://github.com/BlackSnufkin/BYOVD/tree/main/Xhunter1-Killer
 - https://web.archive.org/web/20180820182619/https://x86.re/blog/xigncode3-xhunter1.sys-lpe/
 - https://blacksnufkin.github.io/posts/Hunting-the-Hunter/

@@ -20,6 +20,8 @@ jobs:
       run: curl -sSL https://install.python-poetry.org | python -
     - name: Install dependencies with Poetry
       run: poetry install
+    - name: Test ClamAV export
+      run: poetry run python -m unittest discover -s bin/tests -p test_clamav_exports.py
     - name: Run Site Generation 
       run: poetry run python bin/site.py -v
     - name: Run Site Generation 

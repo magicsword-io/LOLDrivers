@@ -1,5 +1,6 @@
 ---
 import { drivers, driverPath } from '../lib/drivers';
+import Icon from './Icon.astro';
 ---
 
 <section id="explorer" aria-labelledby="explorer-title">
@@ -8,8 +9,8 @@ import { drivers, driverPath } from '../lib/drivers';
       Driver explorer <span>/ THE CATALOG</span>
     </h2>
     <div class="downloads">
-      <a href="https://www.loldrivers.io/api/drivers.json">JSON ↗</a>
-      <a href="https://www.loldrivers.io/api/drivers.csv">CSV ↗</a>
+      <a href="https://www.loldrivers.io/api/drivers.json">JSON</a>
+      <a href="https://www.loldrivers.io/api/drivers.csv">CSV</a>
     </div>
   </div>
   <div class="search-box">
@@ -68,7 +69,7 @@ import { drivers, driverPath } from '../lib/drivers';
           class="accent"
           href="https://github.com/magicsword-io/LOLDrivers/blob/main/CONTRIBUTING.md"
         >
-          Contribute intelligence ↗
+          Contribute intelligence
         </a>
       </div>
     </aside>
@@ -120,7 +121,7 @@ import { drivers, driverPath } from '../lib/drivers';
               <tr>
                 <td>
                   <a class="filename" href={driverPath(d.id)}>
-                    {d.name} →
+                    {d.name}
                   </a>
                   <span class="publisher">
                     {d.publisher || 'Publisher not recorded'}
@@ -160,10 +161,10 @@ import { drivers, driverPath } from '../lib/drivers';
             aria-label="Previous page"
             disabled
           >
-            ←
+            <Icon name="chevron-left" size={14} />
           </button>
           <button class="outline" id="next" aria-label="Next page" disabled>
-            →
+            <Icon name="chevron-right" size={14} />
           </button>
         </div>
       </div>

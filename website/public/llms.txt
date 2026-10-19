@@ -1,0 +1,40 @@
+# LOLDrivers
+
+> LOLDrivers (Living Off The Land Drivers) is a community-maintained catalog of vulnerable and malicious Windows drivers. It provides sample hashes, metadata, research references, and detection resources for investigating driver abuse, including bring-your-own-vulnerable-driver (BYOVD) attacks.
+
+Use this guide to find driver evidence, published data, and defensive resources. Distinguish a vulnerable driver from a malicious driver, and verify the exact sample and hash before applying a record to a file. Individual samples can have different vulnerability or hypervisor-protected code integrity (HVCI) evidence; missing evidence means unknown. Cite the driver record and its original research references for specific claims.
+
+## Catalog and research
+
+- [LOLDrivers overview](https://www.loldrivers.io/): Project overview, catalog metrics, recent entries, and the driver explorer. Start here for the scope of the project.
+- [Driver directory](https://www.loldrivers.io/drivers/): Browse driver records and follow individual pages for sample hashes, signatures, references, and detections.
+- [Search](https://www.loldrivers.io/search/): Look up filenames, publishers, CVEs, record identifiers, and sample hashes. Use when investigating a particular driver.
+- [About LOLDrivers](https://www.loldrivers.io/about/): Project background, maintainers, and community context.
+
+## API and structured data
+
+- [API documentation](https://www.loldrivers.io/api/): JSON and CSV download guidance and field interpretation. Read this before integrating the feed, especially its category, sample, and HVCI fields.
+- [Driver JSON feed](https://www.loldrivers.io/api/drivers.json): Published records with sample hashes, signatures, and metadata. Use for programmatic lookups and bulk enrichment.
+- [Driver CSV feed](https://www.loldrivers.io/api/drivers.csv): Flattened tabular export. Use for spreadsheet analysis and integrations that require CSV.
+- [Record schema](https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/bin/spec/drivers.spec.json): Source schema for driver records. Use to understand field structure and validation requirements.
+- [Source records](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml): YAML records behind the site and feeds. Use for source references and change history.
+
+## Detections and defensive tools
+
+- [Detection guidance](https://www.loldrivers.io/detections/): Detection resources and hunting queries. Use for integrating LOLDrivers evidence with existing telemetry.
+- [Detection repository](https://github.com/magicsword-io/LOLDrivers/tree/main/detections): Sigma, YARA, ClamAV, Sysmon, and other defensive resources. Consult the individual files for their scope and requirements.
+- [WDAC policies](https://github.com/magicsword-io/LOLDrivers/tree/main/detections/wdac): Windows Defender Application Control policy resources. Review the policy contents and applicability before deployment.
+- [Community tools](https://www.loldrivers.io/tools/): Tools that consume or complement the catalog. Use for driver inspection and defensive workflow options.
+
+## Contributions and licensing
+
+- [Contribution guide](https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/CONTRIBUTING.md): How to report issues, submit research, and update driver records.
+- [Driver record template](https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/YML-Template.yml): Starting structure for a new driver entry. Use alongside the schema and contribution guide.
+- [Project README](https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/README.md): Project overview, repository resources, and development entry points.
+- [Issues and corrections](https://github.com/magicsword-io/LOLDrivers/issues): Report missing drivers, incorrect metadata, or project issues with supporting evidence.
+- [License](https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/LICENSE): Apache 2.0 license terms for the repository. Consult this source for reuse requirements.
+
+## Optional
+
+- [LOLRMM](https://lolrmm.io/): Companion catalog for remote monitoring, management, and remote access tools and their abuse potential.
+- [MagicSword threat intelligence](https://www.magicsword.io/threat-intelligence): How MagicSword uses driver and other threat research in application control.

@@ -84,7 +84,7 @@ function render() {
       .slice(page * pageSize, (page + 1) * pageSize)
       .map(
         (d) =>
-          `<tr><td><a class="filename" href="/drivers/${encodeURIComponent(d.id)}/${hash ? `?hash=${query}#samples` : ''}" title="${escapeHTML(d.name)}">${escapeHTML(d.name)} →</a><span class="publisher">${escapeHTML(d.publisher || 'Publisher not recorded')}</span></td><td><span class="badge ${d.category === 'malicious' ? 'malicious' : 'vulnerable'}">${d.category === 'malicious' ? 'Malicious' : 'Vulnerable'}</span></td><td class="cell-muted ${d.yes ? 'yes' : ''}">${d.unknown === d.samples ? 'Unknown' : `${d.yes} / ${d.samples} samples`}</td><td class="cell-muted">${d.samples}</td><td class="cell-muted">${escapeHTML(d.created)}</td></tr>`,
+          `<tr><td><a class="filename" href="/drivers/${encodeURIComponent(d.id)}/${hash ? `?hash=${query}#samples` : ''}" title="${escapeHTML(d.name)}">${escapeHTML(d.name)}</a><span class="publisher">${escapeHTML(d.publisher || 'Publisher not recorded')}</span></td><td><span class="badge ${d.category === 'malicious' ? 'malicious' : 'vulnerable'}">${d.category === 'malicious' ? 'Malicious' : 'Vulnerable'}</span></td><td class="cell-muted ${d.yes ? 'yes' : ''}">${d.unknown === d.samples ? 'Unknown' : `${d.yes} / ${d.samples} samples`}</td><td class="cell-muted">${d.samples}</td><td class="cell-muted">${escapeHTML(d.created)}</td></tr>`,
       )
       .join('') ||
     '<tr><td class="empty" colspan="5">No matching drivers. Try another hash or clear a filter.</td></tr>';

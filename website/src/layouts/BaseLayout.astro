@@ -1,15 +1,22 @@
 ---
 import '../styles/global.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import StructuredData from '../components/StructuredData.astro';
+import Icon from '../components/Icon.astro';
 interface Props {
   title?: string;
   description?: string;
+  structuredDataType?: 'home' | 'other';
 }
 const {
   title = 'LOLDrivers — Living Off The Land Drivers',
   description = 'Explore vulnerable and malicious Windows drivers, sample hashes, detections, and investigation tools.',
+  structuredDataType = 'other',
 } = Astro.props;
 const preview = import.meta.env.PUBLIC_SITE_MODE !== 'production';
+const shareImage = new URL('/social/loldrivers-card.png', Astro.site);
+const shareImageAlt =
+  'LOLDrivers — Know the driver. Understand the risk. Vulnerable and malicious Windows driver intelligence.';
 const nav = [
   ['Drivers', '/'],
   ['Detections', '/detections/'],
@@ -29,10 +36,17 @@ const nav = [
     <meta name="theme-color" content="#0c0e11" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
-    <meta
-      property="og:image"
-      content={new URL('/images/logo.png', Astro.site)}
-    />
+    <meta property="og:site_name" content="LOLDrivers" />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={shareImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={shareImage} />
+    <meta name="twitter:image:alt" content={shareImageAlt} />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -43,7 +57,9 @@ const nav = [
     <meta property="og:description" content={description} />
     <link rel="icon" href="/favicons/favicon.ico" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="describedby" href="/llms.txt" />
     {preview && <meta name="robots" content="noindex,nofollow" />}
+    <StructuredData type={structuredDataType} />
     <script is:inline>
       try {
         const theme = localStorage.getItem('loldrivers-theme');
@@ -98,8 +114,13 @@ const nav = [
           ))}
         </nav>
         <div class="nav-right">
-          <a class="small" href="https://github.com/magicsword-io/LOLDrivers">
-            GitHub ↗
+          <a
+            class="icon-button github-link"
+            href="https://github.com/magicsword-io/LOLDrivers"
+            aria-label="LOLDrivers on GitHub"
+            title="LOLDrivers on GitHub"
+          >
+            <Icon name="github" size={21} />
           </a>
           <button
             class="outline theme"
@@ -127,13 +148,15 @@ const nav = [
     <footer class="wrap footer">
       <div>
         Community intelligence, maintained by{' '}
-        <a href="https://www.magicsword.io/">MagicSword ↗</a>
+        <a href="https://www.magicsword.io/">MagicSword</a>
       </div>
       <div>
         Have a driver to add?{' '}
         <a href="https://github.com/magicsword-io/LOLDrivers/issues/new/choose">
-          Submit a finding ↗
+          Submit a finding
         </a>
+        {' · '}
+        <a href="/llms.txt">LLM guide</a>
       </div>
     </footer>
     <script>

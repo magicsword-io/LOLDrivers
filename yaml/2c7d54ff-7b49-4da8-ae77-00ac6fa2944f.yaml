@@ -13,10 +13,14 @@ Commands:
   Description: Huawei HWAuidoOs2Ec.sys is a vulnerable kernel driver from public vulnerable-driver
     research. Public DragonForce reporting also lists this driver in BYOVD tradecraft
     used to disable endpoint security tooling.
+    Beazley Security also reported this driver family in an INC ransomware
+    affiliate intrusion; the report does not identify the exact sample hash for
+    this family.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
+- https://labs.beazley.security/articles/an-inc-ransomware-affiliates-byovd-buffet
 - https://github.com/magicsword-io/LOLDrivers/issues/325
 - https://github.com/KeServiceDescriptorTable/vulnerable-drivers
 - https://www.security.com/threat-intelligence/dragonforce-msteams-backdoor

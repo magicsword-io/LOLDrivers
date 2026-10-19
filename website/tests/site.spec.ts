@@ -32,7 +32,7 @@ test('searches non-first sample hashes, persists URL state, and opens the matchi
   await expect(page.locator('#result-count')).toHaveText(
     `1 of ${total} driver entries`,
   );
-  await expect(page.locator('#rows .filename')).toHaveText('DBUtilDrv2.sys →');
+  await expect(page.locator('#rows .filename')).toHaveText('DBUtilDrv2.sys');
   await page.reload();
   await expect(page.getByRole('searchbox')).toHaveValue(
     secondSample.toUpperCase(),
@@ -120,12 +120,56 @@ test('renders the catalog without JavaScript', async ({ browser }) => {
   await page.goto('http://127.0.0.1:4321/');
   await expect(page.locator('#rows tr')).toHaveCount(12);
   await expect(page.locator('.ms-promotion')).toBeVisible();
+  await expect(page.locator('.research h2').first()).toHaveText(
+    catalog[0].name,
+  );
+  await expect(page.locator('.research a').first()).toHaveAttribute(
+    'href',
+    `/drivers/${catalog[0].id}/`,
+  );
+  await expect(
+    page.getByRole('button', { name: 'Next recent driver' }),
+  ).toBeHidden();
   await page.goto('http://127.0.0.1:4321/drivers/');
   await expect(page.locator('.driver-directory li')).toHaveCount(total);
   await context.close();
 });
 
 for (const width of [390, 1440]) {
+  test(`browses the five newest drivers with stable layout at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/');
+    const carousel = page.getByRole('region', {
+      name: 'Recently added drivers',
+    });
+    const next = carousel.getByRole('button', { name: 'Next recent driver' });
+    const previous = carousel.getByRole('button', {
+      name: 'Previous recent driver',
+    });
+    const height = (await carousel.boundingBox())!.height;
+    for (let i = 0; i < 5; i++) {
+      await expect(carousel.getByRole('heading')).toHaveText(catalog[i].name);
+      await expect(
+        carousel.getByRole('link', { name: 'Examine driver' }),
+      ).toHaveAttribute('href', `/drivers/${catalog[i].id}/`);
+      await expect(carousel.locator('[data-recent-position]')).toHaveText(
+        `${i + 1} / 5`,
+      );
+      expect((await carousel.boundingBox())!.height).toBe(height);
+      await next.click();
+    }
+    await expect(carousel.getByRole('heading')).toHaveText(catalog[0].name);
+    await previous.focus();
+    await page.keyboard.press('Enter');
+    await expect(carousel.getByRole('heading')).toHaveText(catalog[4].name);
+    await expect(previous).toBeFocused();
+    await expect(carousel.getByRole('status')).toContainText(catalog[4].name);
+    await carousel.getByRole('link', { name: 'Examine driver' }).click();
+    await expect(page).toHaveURL(new RegExp(`/drivers/${catalog[4].id}/`));
+  });
+
   test(`renders brand, sponsor, and resources at ${width}px`, async ({
     page,
   }, testInfo) => {
@@ -143,6 +187,9 @@ for (const width of [390, 1440]) {
     ]) {
       await page.goto(path);
       await expect(page.locator('.lol-logo-dark')).toBeVisible();
+      await expect(
+        page.getByRole('link', { name: 'LOLDrivers on GitHub' }),
+      ).toBeVisible();
       expect(
         await page
           .locator('.lol-logo-dark')
@@ -167,6 +214,42 @@ for (const width of [390, 1440]) {
     expect(errors).toEqual([]);
   });
 }
+
+test('copies exact hashes with icon feedback and recovers from clipboard denial', async ({
+  page,
+  context,
+}) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.goto(`/drivers/${dell}/`);
+  const copy = page.locator('[data-copy]').first();
+  const value = await copy.getAttribute('data-copy');
+  await copy.click();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(value);
+  await expect(copy.locator('.copied-icon')).toBeVisible();
+  await expect(page.locator('#copy-feedback')).toHaveText(
+    'Hash copied to clipboard.',
+  );
+  await expect(copy.locator('.copy-icon')).toBeVisible({ timeout: 3000 });
+
+  await page.evaluate(() => {
+    Object.defineProperty(navigator.clipboard, 'writeText', {
+      configurable: true,
+      value: () => Promise.reject(new Error('Clipboard permission denied')),
+    });
+  });
+  await copy.click();
+  await expect(page.locator('#copy-feedback')).toBeVisible();
+  await expect(page.locator('#copy-feedback')).toContainText(
+    'Select and copy the displayed hash',
+  );
+  await expect(copy.locator('.copy-icon')).toBeVisible();
+  await page.evaluate(() =>
+    Reflect.deleteProperty(navigator.clipboard, 'writeText'),
+  );
+  await copy.click();
+  await expect(copy.locator('.copied-icon')).toBeVisible();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(value);
+});
 
 test('production mode, public downloads, and discovery endpoints', async ({
   page,

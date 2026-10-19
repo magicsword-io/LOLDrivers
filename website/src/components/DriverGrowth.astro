@@ -1,0 +1,239 @@
+---
+import { area, line, curveStepAfter } from 'd3-shape';
+import { drivers } from '../lib/drivers';
+import { catalogGrowth } from '../lib/catalog-growth';
+
+const { points, undated } = catalogGrowth(drivers);
+const format = (value: number) => value.toLocaleString('en-US');
+const monthFormat = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+const latest = points.at(-1);
+const maximum = Math.max(1, latest?.total || 0);
+const step = 10 ** Math.floor(Math.log10(maximum));
+const ceiling = Math.ceil(maximum / step) * step;
+const left = 30;
+const right = 290;
+const top = 8;
+const bottom = 82;
+const y = (value: number) => bottom - (value / ceiling) * (bottom - top);
+const plotted = points.map((point, index) => ({
+  ...point,
+  label: monthFormat.format(new Date(`${point.month}-01T00:00:00Z`)),
+  x:
+    points.length === 1
+      ? right
+      : left + (index / (points.length - 1)) * (right - left),
+  y: y(point.total),
+}));
+type Point = (typeof plotted)[number];
+const outline = line<Point>()
+  .x((point) => point.x)
+  .y((point) => point.y)
+  .curve(curveStepAfter);
+const fill = area<Point>()
+  .x((point) => point.x)
+  .y0(bottom)
+  .y1((point) => point.y)
+  .curve(curveStepAfter);
+const first = plotted[0];
+const last = plotted.at(-1);
+const ticks = plotted.filter(
+  (_, index) =>
+    index === 0 ||
+    index === plotted.length - 1 ||
+    index === Math.floor((plotted.length - 1) / 2),
+);
+---
+
+{last ? (
+  <figure
+    class="growth-chart"
+    data-growth-chart
+    data-points={JSON.stringify(plotted)}
+  >
+    <p class="growth-title">Driver entries over time</p>
+    <div class="growth-plot" data-growth-plot>
+      <svg
+        viewBox="0 0 300 108"
+        role="img"
+        aria-labelledby="growth-chart-title growth-chart-description"
+      >
+        <title id="growth-chart-title">Cumulative driver entries over time</title>
+        <desc id="growth-chart-description">
+          {`${format(first.total)} entries in ${first.label}, growing to ${format(last.total)} in ${last.label}. Monthly totals based on the creation dates of current catalog entries.`}
+        </desc>
+        {[0, ceiling / 2, ceiling].filter(Number.isInteger).map((value) => (
+          <g class="growth-axis">
+            <line x1={left} x2={right} y1={y(value)} y2={y(value)} />
+            <text x={left - 7} y={y(value)} dy="0.35em" text-anchor="end">
+              {format(value)}
+            </text>
+          </g>
+        ))}
+        <path class="growth-area" d={fill(plotted) || ''} />
+        <path
+          class="growth-line"
+          d={outline(plotted) || ''}
+          pathLength="1"
+          data-line-reveal
+        />
+        <line
+          class="growth-guide"
+          x1={last.x}
+          x2={last.x}
+          y1={top}
+          y2={bottom}
+          data-growth-guide
+        />
+        <circle
+          class="growth-dot"
+          cx={last.x}
+          cy={last.y}
+          r="3.5"
+          data-growth-dot
+        />
+        {ticks.map((point, index) => (
+          <text
+            class="growth-date"
+            x={point.x}
+            y="103"
+            text-anchor={
+              index === 0 && ticks.length > 1
+                ? 'start'
+                : index === ticks.length - 1
+                  ? 'end'
+                  : 'middle'
+            }
+          >
+            {point.label}
+          </text>
+        ))}
+      </svg>
+      <input
+        class="growth-scrubber"
+        data-growth-scrubber
+        type="range"
+        min="0"
+        max={plotted.length - 1}
+        value={plotted.length - 1}
+        step="1"
+        aria-label="Month in catalog growth"
+        aria-describedby="growth-chart-help"
+        aria-valuetext={`${last.label}: ${format(last.total)} total driver entries, ${format(last.added)} added`}
+        hidden
+      />
+    </div>
+    <figcaption>
+      <div class="growth-readout">
+        <span>
+          <span data-growth-month>{last.label}</span> ·{' '}
+          <strong data-growth-total>{format(last.total)}</strong> entries
+        </span>
+        <strong class="growth-added" data-growth-added>
+          +{format(last.added)} added
+        </strong>
+      </div>
+      <p class="growth-source">Cumulative entries · by creation date</p>
+      <span class="sr-only" id="growth-chart-help">
+        Use the arrow keys to explore monthly totals and additions.
+      </span>
+    </figcaption>
+  </figure>
+) : (
+  <p class="growth-source">No dated driver entries available.</p>
+)}
+{undated > 0 && (
+  <p class="growth-source">
+    {format(undated)} entries without a valid creation date omitted.
+  </p>
+)}
+
+<script src="../scripts/growth.ts"></script>
+
+<style>
+  .growth-chart {
+    margin: 16px 0 0;
+  }
+  .growth-title {
+    color: var(--muted);
+    font-size: 11px;
+    margin: 0 0 10px;
+  }
+  .growth-plot {
+    position: relative;
+    border-radius: 3px;
+  }
+  .growth-plot:focus-within {
+    outline: 2px solid var(--card-accent);
+    outline-offset: 4px;
+  }
+  .growth-plot svg {
+    display: block;
+    width: 100%;
+    overflow: visible;
+  }
+  .growth-axis line {
+    stroke: var(--line);
+    stroke-dasharray: 2 3;
+  }
+  .growth-axis text,
+  .growth-date {
+    fill: var(--muted);
+    font: 10px var(--mono);
+  }
+  .growth-area {
+    fill: var(--card-accent);
+    fill-opacity: 0.1;
+  }
+  .growth-line {
+    fill: none;
+    stroke: var(--card-accent);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+  }
+  .growth-guide {
+    stroke: var(--card-accent);
+    stroke-opacity: 0.45;
+    stroke-dasharray: 2 3;
+  }
+  .growth-dot {
+    fill: var(--card-accent);
+    stroke: var(--panel);
+    stroke-width: 2;
+  }
+  .growth-scrubber {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .growth-readout {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    color: var(--muted);
+    font: 10px var(--mono);
+    margin-top: 8px;
+  }
+  .growth-readout strong {
+    font-weight: 500;
+    color: var(--text);
+  }
+  .growth-readout .growth-added {
+    color: var(--card-accent);
+  }
+  .growth-source {
+    color: var(--muted);
+    font-size: 10px;
+    margin: 7px 0 0;
+  }
+</style>

@@ -41,12 +41,43 @@ export const GET: APIRoute = ({ params }) => {
   const path = params.legacy!;
   if (path === 'robots.txt') {
     const production = import.meta.env.PUBLIC_SITE_MODE === 'production';
-    return new Response(
-      production
-        ? `User-agent: *\nAllow: /\nSitemap: ${site}/sitemap.xml\n`
-        : 'User-agent: *\nDisallow: /\n',
-      { headers: { 'Content-Type': 'text/plain; charset=utf-8' } },
-    );
+    if (production) {
+      const robots = [
+        'User-agent: *',
+        'Allow: /',
+        '',
+        '# AI crawlers welcome on public content',
+        'User-agent: GPTBot',
+        'Allow: /',
+        '',
+        'User-agent: ChatGPT-User',
+        'Allow: /',
+        '',
+        'User-agent: Google-Extended',
+        'Allow: /',
+        '',
+        'User-agent: Anthropic-AI',
+        'Allow: /',
+        '',
+        'User-agent: Claude-Web',
+        'Allow: /',
+        '',
+        'User-agent: CCBot',
+        'Allow: /',
+        '',
+        'User-agent: PerplexityBot',
+        'Allow: /',
+        '',
+        `Sitemap: ${site}/sitemap.xml`,
+        '',
+      ].join('\n');
+      return new Response(robots, {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      });
+    }
+    return new Response('User-agent: *\nDisallow: /\n', {
+      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+    });
   }
   if (path === 'index.json') {
     // Retain the legacy search endpoint and field names for existing consumers.

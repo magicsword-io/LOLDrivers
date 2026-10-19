@@ -1,0 +1,50 @@
+Id: 4364d33d-c0ef-4317-835e-b6705b94f756
+Tags:
+  - ollama.sys
+Author: Liran Ravich, Cribl
+Created: '2026-10-01'
+MitreID: T1685
+Category: malicious
+Verified: 'FALSE'
+Commands:
+  Command: ''
+  Description: >-
+    Elastic Security Labs reports that RONINGLOADER writes ollama.sys to a
+    temporary directory, creates a temporary service to load it, and sends
+    target process IDs to the driver to terminate antivirus processes. The
+    service is deleted after the termination request. The reported October
+    2025 sample uses standard signing procedures and does not contain the
+    HookSignTool artifacts identified in earlier related samples.
+  Usecase: Terminate antivirus processes through a malicious kernel driver.
+  Privileges: >-
+    Administrator privileges are required to load the driver; the device's
+    caller access requirements have not been independently verified.
+  OperatingSystem: Windows
+Resources:
+  - https://www.elastic.co/security-labs/roningloader
+  - https://www.virustotal.com/gui/file/2515b546125d20013237aeadec5873e6438ada611347035358059a77a32c54f5/details
+Acknowledgement:
+  Person: Liran Ravich, Cribl
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+  - Filename: ollama.sys
+    SHA256: 2515b546125d20013237aeadec5873e6438ada611347035358059a77a32c54f5
+    # Metadata below is from user-provided VirusTotal Details, 2026-10-01.
+    MD5: 96dcdb8bb7934abdb6cd87c33d17be87
+    SHA1: 5c0100a6b2fcc5e74649a356d322c2568a4e15ed
+    Imphash: b28b9b353aa8985c6c7b7db3091e7346
+    # VirusTotal published only the SHA256 authentihash.
+    Authentihash:
+      SHA256: 663cfcc91d31898f6274cf30b70f2fd54edee8445e4c10512405a416833ce88f
+    RichPEHeaderHash:
+      MD5: 758e447a87fe0147bee066264c11a9a8
+    CreationTimestamp: '2025-09-14 08:56:14'
+    MachineType: AMD64
+    # VT status: "Signed file, valid signature. Revoked."
+    # Signer labels do not establish current Windows kernel-loading trust.
+    Signature:
+      - Kunming Wuqi E-commerce Co., Ltd.
+      - Certum Code Signing 2021 CA
+      - Certum Trusted Network CA 2
+      - Certum Trusted Network CA

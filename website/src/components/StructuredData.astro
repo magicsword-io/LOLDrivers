@@ -1,0 +1,44 @@
+---
+interface Props {
+  type?: 'home' | 'other';
+}
+const { type = 'other' } = Astro.props;
+const site = 'https://www.loldrivers.io';
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'LOLDrivers',
+  url: site,
+  logo: `${site}/social/loldrivers-card.png`,
+  description:
+    'Living Off The Land Drivers — A community-maintained catalog of vulnerable and malicious Windows drivers with sample hashes, detections, and research.',
+  sameAs: ['https://github.com/magicsword-io/LOLDrivers'],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'LOLDrivers',
+  url: site,
+  description:
+    'Explore vulnerable and malicious Windows drivers, sample hashes, detections, and investigation tools.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${site}/search/?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const schemas =
+  type === 'home' ? [organizationSchema, websiteSchema] : [organizationSchema];
+---
+
+<script
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify(schemas)}
+></script>

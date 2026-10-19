@@ -34,9 +34,10 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
         dates = [s['Date'] for s in driver['KnownVulnerableSamples'] if 'Date' in s]
         companies = [s['Company'] for s in driver['KnownVulnerableSamples'] if 'Company' in s]
         descriptions = [s['Description'] for s in driver['KnownVulnerableSamples'] if 'Description' in s]
-        authentihash_md5s = [s['Authentihash']['MD5'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
-        authentihash_sha1s = [s['Authentihash']['SHA1'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
-        authentihash_sha256s = [s['Authentihash']['SHA256'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
+        authentihashes = [s.get('Authentihash') or {} for s in driver['KnownVulnerableSamples']]
+        authentihash_md5s = [a['MD5'] for a in authentihashes if 'MD5' in a]
+        authentihash_sha1s = [a['SHA1'] for a in authentihashes if 'SHA1' in a]
+        authentihash_sha256s = [a['SHA256'] for a in authentihashes if 'SHA256' in a]
 
         row = {
             'Id': driver.get('Id', ''),

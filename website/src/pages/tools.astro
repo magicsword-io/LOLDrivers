@@ -3,7 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { tools } from '../lib/resources';
 ---
 
-<BaseLayout title="Tools & integrations — LOLDrivers">
+<BaseLayout
+  title="Tools & integrations — LOLDrivers"
+  description="Community tools and integrations for scanning and investigating vulnerable and malicious Windows drivers using the LOLDrivers catalog."
+>
   <div class="document">
     <div class="eyebrow">Scan & investigate</div>
     <h1>Tools & integrations</h1>
@@ -18,7 +21,7 @@ import { tools } from '../lib/resources';
           <p>{tool.description}</p>
           <p class="small">Maintained by {tool.maintainer}</p>
           <a class="resource-more" href={tool.url}>
-            Documentation & source ↗
+            Documentation & source
           </a>
         </article>
       ))}
@@ -30,7 +33,7 @@ import { tools } from '../lib/resources';
         tools and workflows.
       </p>
       <a class="accent" href="/api/">
-        Explore the API →
+        Explore the API
       </a>
     </section>
   </div>
