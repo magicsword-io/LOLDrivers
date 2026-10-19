@@ -1,0 +1,452 @@
+Id: 0f50f568-bd09-4d8a-a73d-d37bdd0a1cb6
+Tags:
+- libwasys.sys
+Verified: 'TRUE'
+Author: Michael Haag
+Created: '2026-10-19'
+MitreID: T1562.001
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create libwasys binPath=C:\windows\temp\libwasys.sys type=kernel
+    && sc.exe start libwasys
+  Description: OPSWAT's libwasys.sys (OESIS V4 Helper Driver) exposes process termination
+    through IOCTL 0x22E00C on \\.\WasysControl. Jehad Abudagga's KillerLand research
+    publishes a proof of concept that submits a four-byte target PID and reports termination
+    of protected AV/EDR processes. Static analysis of versions 10.3.85.0 and 10.3.2951.0
+    confirms that this IOCTL resolves the supplied PID with PsLookupProcessByProcessId,
+    opens the process with ObOpenObjectByPointer using KernelMode, assigns it to a
+    job object, and calls ZwTerminateJobObject. The device security descriptor grants
+    generic-all access to built-in users. The shared README identifies version 10.3.85.0
+    by SHA256, while the bundled binary is version 10.3.2951.0; both samples contain
+    the termination path. Protected-process termination is reported by the researcher
+    and was not independently reproduced here.
+  Usecase: Terminate caller-selected processes from kernel mode to impair security
+    tools.
+  Privileges: Local user once the driver is loaded; administrator required to install
+    the driver.
+  OperatingSystem: Windows
+Resources:
+- https://github.com/redteamfortress/KillerLand
+- https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/README.md
+- https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/1.%20Libwasys/libwasys_poc.c
+- https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/1.%20Libwasys/libwasys.sys
+Acknowledgement:
+  Person: Jehad Abudagga
+  Handle: '@j3h4ck'
+Detection: []
+KnownVulnerableSamples:
+- Filename: libwasys.sys
+  MD5: faf0f09e10c49f78812d593674638ce2
+  SHA1: 6bde1a46226a962a6e0d33c5a2a4f081c5642da2
+  SHA256: 24a4dd32b633781c8c1193c9b445388ca7277799941a36ba9977b84382125e5c
+  Imphash: e28794f8ba03b47b4b3d6c8bc23f589f
+  Authentihash:
+    MD5: 3c734f4ad71d070d589a61f901f57b12
+    SHA1: e022f701efa328c8043e7d7b50d25a3d231fa2e9
+    SHA256: e107cd1af84df5ac1a91a7bd8b90dca3cb9a141152b109bb334199a79a36dff8
+  RichPEHeaderHash:
+    MD5: 187339cc43e72d90639ad2a7b524c433
+    SHA1: 6ba7e9720a19faadf76b4cd6fcfac9e90448c793
+    SHA256: 1bb732a9d20270e51008aa2b53e01bea43b49dd840651fb482bccba078f2cf1d
+  Sections:
+    .text:
+      Entropy: 6.181151905804858
+      Virtual Size: '0x11c8'
+    .rdata:
+      Entropy: 4.278110480765515
+      Virtual Size: '0xc2c'
+    .data:
+      Entropy: 2.0394503372172323
+      Virtual Size: '0x238'
+    .pdata:
+      Entropy: 4.08905368316516
+      Virtual Size: '0x258'
+    PAGE:
+      Entropy: 6.217959990674024
+      Virtual Size: '0x1c8c'
+    INIT:
+      Entropy: 5.261335702830072
+      Virtual Size: '0x6ea'
+    .rsrc:
+      Entropy: 3.370069065740873
+      Virtual Size: '0x390'
+    .reloc:
+      Entropy: 3.5277561990988673
+      Virtual Size: '0x2c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-06-24 01:40:55'
+  Description: OESIS V4 Helper Driver (x64)
+  Company: OPSWAT, Inc.
+  InternalName: libwasys.sys
+  OriginalFilename: libwasys.sys
+  FileVersion: 10.3.2951.0
+  Product: OESIS V4 Kernel Driver
+  ProductVersion: 10.3.2951.0
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateFile
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwQueryInformationFile
+  - ZwSetInformationFile
+  - ZwReadFile
+  - ZwClose
+  - ZwOpenKey
+  - ZwFlushKey
+  - ZwSetValueKey
+  - ZwDeviceIoControlFile
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - FsRtlAcquireFileExclusive
+  - FsRtlReleaseFile
+  - _vsnwprintf
+  - ZwCreateJobObject
+  - ZwAssignProcessToJobObject
+  - ZwTerminateJobObject
+  - IoFileObjectType
+  - PsProcessType
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - RtlFreeUnicodeString
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - KeBugCheckEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-06-09 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 9a1602a501ef81fb0db458b278ada82319d97337da609e51d7cbf82f40b9a31f7c404e333e903ce789017585e8627b1d56e071bade5ec637bc795c62004df8497a514d0632f3c5d2002a2720ea892e1539e02c3ef8757c2c824161350f23d0ed3595d288952943cbe0a658107c538e9f45c9203714c0ed19ba7e7739d25496c7a611df3433f67552424b1c9d8d96d5956c471214245f2641fa1a46bddeb0e5914703ac1808cbcbdb66897f2b9c65bfbe374ebe2df39d4ac3cccc475ec89595add1cbbb2a0620f93f72ea36eb4572927a297b14033cfb4dd648717a10118a0874cd6c1b045cd28a950376515053d62ef74a46c3ae102c714cb087b62737446044
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 01240afb1e380b8a16f14b719df4d3c0
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a780e8237c69d6012c9a0ce5576fbab0
+        SHA1: 613115803ff02f51d735686030790041e4207ecd
+        SHA256: 2a73e196c22294f2670b352ff3e37cb6c586d5754c67f2557c10dc49295e32dd
+        SHA384: 71f67d14277b8318635b771249919e29fa673b9f3b7b41ad50b83f38a0a128860d0a49f0fb212bec5bbacaf538749d57
+    - Subject: BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_C=US,
+        JURISDICTION_OF_INCORPORATION_SP=California, serialNumber=C2425568, C=US,
+        ST=California, L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2021-04-16 00:00:00'
+      ValidTo: '2024-05-03 23:59:59'
+      Signature: 9da2c04920da3b6c9206252461e01173d266e1269afece5f656db88cb6b1f5473d19365dbf4ca5369678a09c06d47cb313d44ae323f1cbe861c05e7fa8c5bb6133bf22c7258edc009380129cf82b9fc1ef4d07a7ee3bb2048dec5793167f3535491c0ce357e07f5283580c2998de663630aa8d8f9dfd429de1cccb1cc163b2484049650bb2457b65c2a659c0fbf090c2c243d956262851e9d400d34191df8482ace99964046f48ce648c1f03eb2031ee36ee973bcb2df491f8a8ad93693401c59fff8e4474339e493c22cde9ef16573d444b2edfd7e2004c7a45daf8d76c64977f5ac797c60ccf485d727a8a80fadd601279703283e0d01de47edd8a09afabd3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0400f4c96066815dceab393508654781
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: b4f6bfd1fbd6fc1ac15eca33a2ccfb8d
+        SHA1: aec37603f65f76e934b48db7110b8a8dd37629bc
+        SHA256: 68a46e95363e8be55392bc78085b4ce19760a57c7b178ed7003bab0c6ceff268
+        SHA384: 43da22b69ca42bf9cec9e73cb63dd43f2d8ff3e0d0b37bfdc192ea4ab29bfef609549ad21f2995b02ea97a85d07fe644
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 , 2
+      ValidFrom: '2022-03-29 00:00:00'
+      ValidTo: '2033-03-14 23:59:59'
+      Signature: 0d2d2374a6d1f5f8ea4b993f01e4f60ce4af169dd9b38c9782299c436f012dab38b57011bf84198b3f5de5864fbe933ade2a395a394ed88459a5bc1b98aae86cefd1486919385bcf89391d7070d94edf23226cd5dff659cba1c2ea4c76caa1dca12b96b89b55a91a6b7dd1f502094f82d6a57388c49880dfee4995b7b3ccc5a7ee0ee1ef1e388a9fef11c9314a58b6df387ccbfa5cf7e453bf6e0a7c7ed7de98d52965890fa29cc065f4012265c7ea5e74a65b3592507cf417a687644f3e46891663206bcbf27bd035e34a7048a9b6e71d60bd04221525700672a9443b694711d3eee9c7a03e4f10b93036e4f3aa6909a88b7e64a2659411fb6e32f1f5bb38adcdc09311d532784a4b372a4cf35cdcb685c0bb70305578d698fe546d7f71a9481a78dd46772e1b7ac0338af84a288c12a873cf2df9d323f29e19e00d9428a0ebdb1a51a095828e286ba4ce9d76dea973aa486a5943ae5feaf80f06429ddf066896fe2aa0745b6366de6b2cb878aa4d706df02cf107157e35b4e6b50ca299a5d7156b350e85d6e02ccce00c24b87c520b1e997cefc8c8c58c5869afab3de1cfcc7d15ae14bf8a71dfca97b1d847ea1c85e0454e121c142958cc6fd37fcbbec10e4a6f209caed973325908e72d92a11a11fe3298a65d2b97e08bd39ccc6db50dae47633847175b6f13da6a106e1f49b7445bb4080a875a59047611a1a77702131c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0a7a4a889ec99942900663384d86979d
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: d49300b4e758e36a3832679763a83c58
+        SHA1: ec3075370fcea680e09497d44a4b246012f24160
+        SHA256: fa5e895ff2603de9e15939a00299836f73e5778058f22194f696d19e79a8b010
+        SHA384: 13ab2eedcd7e712f635ca1da3dc30cd8d8e22cedcf5a2c4994181509dddbf76867d07925b9a514d123bc1d5cab41fe9f
+    Signer:
+    - SerialNumber: 0400f4c96066815dceab393508654781
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+- Filename: libwasys.sys
+  MD5: c64767a1c4ac46caf10e88b266444a25
+  SHA1: 046d49a2852f740f6214b0e241479c8fed62bae9
+  SHA256: 04fda396f42384d9295fe306336ee4a685a0c341debdc27ddf9169f0336b46a6
+  Imphash: e28794f8ba03b47b4b3d6c8bc23f589f
+  Authentihash:
+    MD5: 7ef743f66751ee553cdeb0a032a33a21
+    SHA1: c6c4bee94ab1b6151a48d1c7c34fd65bd8d2c69c
+    SHA256: e3e7db4209966247313576c1a8db3810dbf3d3bba830e3a02fb05b0473d7f798
+  RichPEHeaderHash:
+    MD5: 1d717a310c342c26aba51c57ff64f971
+    SHA1: 919f4e0c0d7b4e67607514c7299bdb876ee5c4d8
+    SHA256: c6e66bc9b0b3fe30db831f123a94d992f2e3a3c0155cc18ee877c476f8b1345e
+  Sections:
+    .text:
+      Entropy: 6.167334103346381
+      Virtual Size: '0x1188'
+    .rdata:
+      Entropy: 4.216810013849339
+      Virtual Size: '0xbdc'
+    .data:
+      Entropy: 2.0394503372172323
+      Virtual Size: '0x238'
+    .pdata:
+      Entropy: 4.045499535553896
+      Virtual Size: '0x258'
+    PAGE:
+      Entropy: 6.227670939328857
+      Virtual Size: '0x1c4b'
+    INIT:
+      Entropy: 5.270352847675557
+      Virtual Size: '0x6ea'
+    .rsrc:
+      Entropy: 3.3352965350178323
+      Virtual Size: '0x388'
+    .reloc:
+      Entropy: 3.5277561990988673
+      Virtual Size: '0x2c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-20 16:46:00'
+  Description: OESIS V4 Helper Driver (x64)
+  Company: OPSWAT, Inc.
+  InternalName: libwasys.sys
+  OriginalFilename: libwasys.sys
+  FileVersion: 10.3.85.0
+  Product: OESIS V4 Kernel Driver
+  ProductVersion: 10.3.85.0
+  Copyright: " \xA9 OPSWAT, Inc.  All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateFile
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwQueryInformationFile
+  - ZwSetInformationFile
+  - ZwReadFile
+  - ZwClose
+  - ZwOpenKey
+  - ZwFlushKey
+  - ZwSetValueKey
+  - ZwDeviceIoControlFile
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - FsRtlAcquireFileExclusive
+  - FsRtlReleaseFile
+  - _vsnwprintf
+  - ZwCreateJobObject
+  - ZwAssignProcessToJobObject
+  - ZwTerminateJobObject
+  - IoFileObjectType
+  - PsProcessType
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - RtlFreeUnicodeString
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - KeBugCheckEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee152d7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e140543fe3256027cfa79fc3c19c1776
+        SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
+        SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
+    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+        , G2
+      ValidFrom: '2016-05-24 00:00:00'
+      ValidTo: '2027-06-24 00:00:00'
+      Signature: 8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1121d699a764973ef1f8427ee919cc534114
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: acb5170547d76873f1e4ff18ed5de2eb
+        SHA1: bd6e261e75b807381bada7287de04d259258a5fa
+        SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: JURISDICTION_OF_INCORPORATION_C=US, JURISDICTION_OF_INCORPORATION_SP=California,
+        BUSINESS_CATEGORY=Private Organization, serialNumber=C2425568, C=US, ST=California,
+        L=San Francisco, O=OPSWAT, Inc., CN=OPSWAT, Inc.
+      ValidFrom: '2020-04-14 00:00:00'
+      ValidTo: '2021-04-21 12:00:00'
+      Signature: 40ec2df72b4f35b328cdfff45016f0b9a6ef08dc2a50e29ce7a509c90ad78e927e30a4bca43e382ec20011693908984cc087478bad64c6969e5440b0dc89680a30053c336c32ba77abb242199ad825575513e94536abacf5b695efaa2539fb83f4c4b625095cdbda1357d6dba794d12234ca2a9066cfc221c9f64f0e230c828d59c101aed47916d604e29d3420894223a568628a70e1f8ddca1f09216bcda68bcb86e9a1e16b5038aed4934174defc9bdd475eb133cd8d71975e391a46910c9db3ef87d83c5aa6001ca77433d3149bfb2eea362df201ed9b78c32f0cf5bb70f093b310a7ad02b151128184086fb74fc4cdbf48afc38261873f522248229bdcc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0832209918e2ca0eb3c5f0e4326b3108
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 9ccd6733a6bb8c5f242ab05625cbc2cd
+        SHA1: 9353901afa60e7336a8f342deafbd2086ea73263
+        SHA256: aa096601f1c000a14d20010a879846fe6ff74819777c1ff614179a030a54d599
+        SHA384: 6e09f685df0e59d631252d90cec2980bfc30ac16037f28bb0eb4ce9296d7316eb3af58982d662fdbdb1fffb021144dbf
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 0832209918e2ca0eb3c5f0e4326b3108
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
