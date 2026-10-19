@@ -1,17 +1,30 @@
 Id: a2a53148-ff02-4d63-9269-e47966431c62
 Tags:
 - heysafe_drv.sys
-Verified: 'TRUE'
+Verified: 'FALSE'
 Author: rommel193911-sudo
 Created: '2026-10-15'
 MitreID: T1562.001
 Category: malicious
 Commands:
-  Command: sc.exe create heysafe_drv binPath=C:\windows\temp\heysafe_drv.sys type=kernel && sc.exe start heysafe_drv
-  Description: "heysafe_drv.sys is a weaponized kernel driver signed with a stolen/expired certificate (Shanxi Shiheng Rail Technology Co., Ltd, VeriSign Class 3 Code Signing 2010 CA, expired 2013, no timestamp). Originally presented as part of the HeySafe-X antivirus project, it implements an aggressive process termination engine designed for defense evasion. Technical capabilities: (1) Strips ProcessBreakOnTermination flag (ZwSetInformationProcess class 29) to prevent BSODs when killing critical processes; (2) Recursively terminates entire process trees (via ZwQuerySystemInformation caching up to 512 related PIDs) to defeat watchdog architectures; (3) Executes asynchronously via System CriticalWorkQueue (ExQueueWorkItem) to spoof caller call stacks; (4) Actively counter-kills analysis tools (taskmgr.exe, procexp.exe, windbg.exe, devenv.exe) via ObRegisterCallbacks when they attempt to open handles to HeySafe processes. Despite multi-layer gating (System ACL, ChaCha20 encryption, Ed25519 signatures, lineage validation, kernel canaries), it remains vulnerable to Bring Your Own Trusted Caller (BYOTC) abuse due to lack of PPL protection on the userland orchestrator."
-  Usecase: Impair defenses by terminating security tools and processes
-  Privileges: kernel
-  OperatingSystem: Windows 10
+  Command: ''
+  Description: 'heysafe_drv.sys is a HeySafe-X protection minifilter submitted as malicious in issue
+    #468; that classification remains unconfirmed. Static analysis confirms a caller-validated communication
+    port whose message opcode 0x67 queues process-tree termination, and an attempt to clear ProcessBreakOnTermination
+    before ZwTerminateProcess. The termination path excludes several core Windows processes and registered
+    HeySafe processes. The object callback removes requested handle rights for protected HeySafe
+    processes and can queue termination of werfault.exe. Contrary to the submission, the cited helper
+    does not select Task Manager, Process Explorer, WinDbg or Visual Studio for termination; those
+    names occur in an exception path elsewhere in the callback. The proposed trusted-caller abuse
+    scenario, protected-process termination and certificate theft have not been demonstrated. The
+    work item uses DelayedWorkQueue, not CriticalWorkQueue, and does not establish stack spoofing.
+    Clearing the critical-process flag does not guarantee crash-free termination. The embedded code-signing
+    certificate expired in 2013 and has no signing timestamp.'
+  Usecase: Reported process-killer candidate; malicious classification and an exploitable authorization
+    bypass require confirmation.
+  Privileges: Administrator/SYSTEM access to the authenticated filter port, or driver-triggered callback
+    path.
+  OperatingSystem: Windows (current loading and HVCI behavior unknown)
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/468
 - https://www.virustotal.com/gui/file/a188993dd8cac6628f97dfd390cfab8a9e510d581c39e32da66cbc4b559db27d
@@ -26,7 +39,6 @@ KnownVulnerableSamples:
   SHA256: a188993dd8cac6628f97dfd390cfab8a9e510d581c39e32da66cbc4b559db27d
   Signature:
   - Shanxi Shiheng Rail Technology Co., Ltd
-  - VeriSign Class 3 Code Signing 2010 CA
   Date: ''
   Publisher: Shanxi Shiheng Rail Technology Co., Ltd
   Company: Windows (R) Win 7 DDK provider
@@ -35,38 +47,127 @@ KnownVulnerableSamples:
   ProductVersion: 10.0.10011.16384
   FileVersion: 10.0.10011.16384
   MachineType: AMD64
-  OriginalFilename: ''
+  OriginalFilename: heysafe_drv.sys
   Authentihash:
-    MD5: ''
-    SHA1: ''
-    SHA256: ''
-  InternalName: ''
+    MD5: 268200000129d81e4c8a28c7e5cc3f88
+    SHA1: 278a5b6956b824cd559cf4df893733c0294af16a
+    SHA256: 46a0fd304b596f1e92f7e1ec2f640fdffcc4e30afbc9ae50027dcf4c81e97206
+  InternalName: heysafe_drv.sys
   Copyright: Copyright (C) 2026 HeySafe
   Imports:
+  - FLTMGR.SYS
   - ntoskrnl.exe
-  - fltmgr.sys
+  - ksecdd.sys
   ExportedFunctions: ''
   ImportedFunctions:
-  - ZwSetInformationProcess
-  - ZwQuerySystemInformation
-  - ExAllocatePool2
-  - ExQueueWorkItem
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltGetFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltParseFileNameInformation
+  - FltReadFile
+  - FltQueryInformationFile
   - FltCreateCommunicationPort
-  - ObRegisterCallbacks
-  - ZwTerminateProcess
-  - SeLocateProcessImageName
-  - PsGetProcessCreateTimeQuadPart
-  - PsGetProcessInheritedFromUniqueProcessId
+  - FltCloseCommunicationPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - FltLockUserBuffer
+  - FltCloseClientPort
+  - FltSendMessage
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
   - KeBugCheckEx
+  - ExAllocatePool2
+  - ExFreePoolWithTag
+  - ProbeForRead
+  - ExQueueWorkItem
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - CmCallbackGetKeyObjectIDEx
+  - CmCallbackReleaseKeyObjectIDEx
+  - MmMapLockedPagesSpecifyCache
+  - IoGetCurrentProcess
+  - IoGetTopLevelIrp
+  - IoSetTopLevelIrp
+  - ObfDereferenceObject
+  - ObRegisterCallbacks
+  - ObUnRegisterCallbacks
+  - ZwCreateFile
+  - ZwSetInformationFile
+  - ZwWriteFile
+  - ZwClose
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - KeInitializeSpinLock
+  - PsSetCreateThreadNotifyRoutine
+  - PsRemoveCreateThreadNotifyRoutine
+  - PsSetLoadImageNotifyRoutine
+  - PsRemoveLoadImageNotifyRoutine
+  - PsGetCurrentProcessId
+  - PsGetProcessId
+  - PsGetThreadProcessId
+  - ZwTerminateProcess
+  - ZwOpenProcess
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - SeLocateProcessImageName
+  - PsLookupProcessByProcessId
+  - ZwDeleteFile
+  - _vsnwprintf
+  - ZwQuerySystemInformation
+  - PsGetProcessImageFileName
+  - PsGetProcessInheritedFromUniqueProcessId
+  - ZwSetInformationProcess
+  - __C_specific_handler
+  - __chkstk
+  - PsProcessType
+  - PsThreadType
+  - RtlCompareMemory
+  - KeClearEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - ProbeForWrite
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ObReferenceObjectByHandle
+  - ZwQueryInformationFile
+  - ZwReadFile
+  - PsGetProcessCreateTimeQuadPart
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoGetDeviceObjectPointer
+  - IoAttachDeviceToDeviceStackSafe
+  - PsInitialSystemProcess
+  - KeInitializeEvent
+  - KeGetCurrentIrql
+  - DbgPrint
+  - RtlEqualUnicodeString
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - PsSetCreateProcessNotifyRoutineEx
+  - BCryptFinishHash
+  - BCryptHashData
+  - BCryptCreateHash
+  - BCryptCloseAlgorithmProvider
+  - BCryptGetProperty
+  - BCryptOpenAlgorithmProvider
+  - BCryptDestroyHash
   PDBPath: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
-    - Subject: CN="Shanxi Shiheng Rail Technology Co., Ltd", O="Shanxi Shiheng Rail Technology Co., Ltd", L=Taiyuan, S=Shanxi, C=CN
+    - Subject: C=CN, ST=Shanxi, L=Taiyuan, O=Shanxi Shiheng Rail Technology Co., Ltd, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=Shanxi Shiheng Rail Technology Co., Ltd
       ValidFrom: '2012-05-28 00:00:00'
-      ValidTo: '2013-05-29 23:59:59'
-      Signature: ''
+      ValidTo: '2013-05-28 23:59:59'
+      Signature: 7bb1598fe794ee97d3d6342c2d70a590ed7d83e2c5fcb24b9d358532d8a5c9d339afd634224882e8f2ca126a73515dd6b8c34e3f25fddfc5ceda53429265f6a7b6c2210689e299576a8cc22c9dcf4d200b7154edcd9de643b5ed0e4259cbf62310490201ee8a422e870379d99c5831e8f81ae7f9376f17fd9ab5a9bbea7165c96098444f3f17f8379a779a9b889a03fbe3e92339a86b8410a8a3951e0d215461dfb00df335fe5779f7551aa6e6111741918fc711c04e5714d52be1355e2795e05b97d900131f1490eae4b20bd4584e1941e9f71fadacf88753186f9be74876c78de6fea829eb1aac547bceaddf07c20c24ebd6d4ce45a7f0b88dc3946743fad6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
       IsCertificateAuthority: false
       SerialNumber: 0b77a42478f55385522f3df9ba38bf9e
@@ -75,14 +176,32 @@ KnownVulnerableSamples:
       IsCodeSigning: true
       IsCA: false
       TBS:
-        MD5: ''
-        SHA1: ''
-        SHA256: ''
-        SHA384: ''
-    - Subject: CN=VeriSign Class 3 Code Signing 2010 CA, O="VeriSign, Inc.", C=US
+        MD5: 6a49d0b0217a8582a2f8079db780b4c5
+        SHA1: aaaaa42c6444a1ca15bba9d0b515914c3349442e
+        SHA256: d5e525a5713dc8e06611c0cdaed37e17396783c11dff380da85ccb4be3c12807
+        SHA384: 8b8546c969f17129ac7b27e657c43af04b424186fc3a1665b2d93f89f4846d30349410b0ec21cdcd446a0409fe7ba217
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign, Inc. , For
+        authorized use only, CN=VeriSign Class 3 Public Primary Certification Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at https://www.verisign.com/rpa
+        (c)10, CN=VeriSign Class 3 Code Signing 2010 CA
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
-      Signature: ''
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
@@ -91,12 +210,42 @@ KnownVulnerableSamples:
       IsCodeSigning: true
       IsCA: true
       TBS:
-        MD5: ''
-        SHA1: ''
-        SHA256: ''
-        SHA384: ''
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 0b77a42478f55385522f3df9ba38bf9e
-      Issuer: CN=VeriSign Class 3 Code Signing 2010 CA, O="VeriSign, Inc.", C=US
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at https://www.verisign.com/rpa
+        (c)10, CN=VeriSign Class 3 Code Signing 2010 CA
       Version: 1
-  LoadsDespiteHVCI: 'UNKNOWN'
+  LoadsDespiteHVCI: UNKNOWN
+  Imphash: 59c3371d7834af9f084786a501ff4158
+  Sections:
+    .text:
+      Entropy: 6.2539394142867515
+      Virtual Size: '0x10b55'
+    .rdata:
+      Entropy: 5.616478412675529
+      Virtual Size: '0x2f64'
+    .data:
+      Entropy: 0.3989899675255742
+      Virtual Size: '0x334edc'
+    .pdata:
+      Entropy: 4.840820620545098
+      Virtual Size: '0x6b4'
+    INIT:
+      Entropy: 5.257578648296344
+      Virtual Size: '0xcca'
+    .rsrc:
+      Entropy: 3.6250891728519323
+      Virtual Size: '0x468'
+    .reloc:
+      Entropy: 4.83934406667824
+      Virtual Size: '0x12c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2026-10-05 01:19:20'
+  RichPEHeaderHash:
+    MD5: b66cdba8e486308e7678aec7587e30cf
+    SHA1: 8f74f18f2e9fb7b176844cd234da87acf8f3fe47
+    SHA256: 8eb779cd44d1d3ab40279e16f3207cb88e856ceae29e3f0e76e5fce113b7dd04
