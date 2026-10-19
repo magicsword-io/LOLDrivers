@@ -10,7 +10,11 @@ Commands:
   Command: sc.exe create NSecKrnl
     binPath=C:\windows\temp\NSecKrnl.sys
     type=kernel && sc.exe start NSecKrnl
-  Description: Driver used by ValleyRAT malware, Reynolds ransomware (terminated 30+ security processes), and Warlock ransomware to terminate security processes via IOCTL 0x2248E0. Exploited via CVE-2025-68947 for EDR killing.
+  Description: NSecKrnl.sys exposes process termination through IOCTL 0x2248E0
+    (CVE-2025-68947). Public reporting documents its use by ValleyRAT malware
+    and the Reynolds and Warlock ransomware operations to terminate security
+    processes. SentinelOne reports that Reynolds targeted more than 30 security
+    processes.
   Usecase: Terminate security processes
   Privileges: kernel
   OperatingSystem: Windows 10
