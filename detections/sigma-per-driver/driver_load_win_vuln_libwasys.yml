@@ -1,0 +1,37 @@
+title: Driver Load - libwasys.sys
+id: d07895a2-5c3d-5a02-9466-7038557687a5
+status: experimental
+description: |
+    Detects loading of driver libwasys.sys via hash.
+    OPSWAT's libwasys.sys (OESIS V4 Helper Driver) exposes process termination through IOCTL 0x22E00C on \\.\WasysControl. Jehad Abudagga's KillerLand research publishes a proof of concept that submits a four-byte target PID and reports termination of protected AV/EDR processes. Static analysis of versions 10.3.85.0 and 10.3.2951.0 confirms that this IOCTL resolves the supplied PID with PsLookupProcessByProcessId, opens the process with ObOpenObjectByPointer using KernelMode, assigns it to a job object, and calls ZwTerminateJobObject. The device security descriptor grants generic-all access to built-in users. The shared README identifies version 10.3.85.0 by SHA256, while the bundled binary is version 10.3.2951.0; both samples contain the termination path. Protected-process termination is reported by the researcher and was not independently reproduced here.
+references:
+    - https://www.loldrivers.io/drivers/0f50f568-bd09-4d8a-a73d-d37bdd0a1cb6/
+    - https://github.com/redteamfortress/KillerLand
+    - https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/README.md
+    - https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/1.%20Libwasys/libwasys_poc.c
+    - https://github.com/redteamfortress/KillerLand/blob/efb10e494ecabfc42fe1a41ecf2ba79964cb8a91/1.%20Libwasys/libwasys.sys
+author: Michael Haag
+date: 2026/10/19
+modified: 2026/10/19
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=faf0f09e10c49f78812d593674638ce2'
+            - 'MD5=c64767a1c4ac46caf10e88b266444a25'
+            - 'SHA1=6bde1a46226a962a6e0d33c5a2a4f081c5642da2'
+            - 'SHA1=046d49a2852f740f6214b0e241479c8fed62bae9'
+            - 'SHA256=24a4dd32b633781c8c1193c9b445388ca7277799941a36ba9977b84382125e5c'
+            - 'SHA256=04fda396f42384d9295fe306336ee4a685a0c341debdc27ddf9169f0336b46a6'
+            - 'IMPHASH=e28794f8ba03b47b4b3d6c8bc23f589f'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
