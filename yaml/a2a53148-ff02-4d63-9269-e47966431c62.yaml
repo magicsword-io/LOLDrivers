@@ -1,33 +1,33 @@
 Id: a2a53148-ff02-4d63-9269-e47966431c62
 Tags:
 - heysafe_drv.sys
-Verified: 'FALSE'
+Verified: 'TRUE'
 Author: rommel193911-sudo
 Created: '2026-10-15'
 MitreID: T1562.001
 Category: malicious
 Commands:
   Command: ''
-  Description: 'heysafe_drv.sys is a HeySafe-X protection minifilter submitted as malicious in issue
-    #468; that classification remains unconfirmed. Static analysis confirms a caller-validated communication
-    port whose message opcode 0x67 queues process-tree termination, and an attempt to clear ProcessBreakOnTermination
-    before ZwTerminateProcess. The termination path excludes several core Windows processes and registered
-    HeySafe processes. The object callback removes requested handle rights for protected HeySafe
-    processes and can queue termination of werfault.exe. Contrary to the submission, the cited helper
-    does not select Task Manager, Process Explorer, WinDbg or Visual Studio for termination; those
-    names occur in an exception path elsewhere in the callback. The proposed trusted-caller abuse
-    scenario, protected-process termination and certificate theft have not been demonstrated. The
-    work item uses DelayedWorkQueue, not CriticalWorkQueue, and does not establish stack spoofing.
-    Clearing the critical-process flag does not guarantee crash-free termination. The embedded code-signing
-    certificate expired in 2013 and has no signing timestamp.'
-  Usecase: Reported process-killer candidate; malicious classification and an exploitable authorization
-    bypass require confirmation.
-  Privileges: Administrator/SYSTEM access to the authenticated filter port, or driver-triggered callback
-    path.
+  Description: 'heysafe_drv.sys is a HeySafe-X protection minifilter submitted as a malicious process
+    killer in issue #468. Static analysis verifies a caller-validated communication port whose message
+    opcode 0x67 queues process-tree termination and attempts to clear ProcessBreakOnTermination before
+    ZwTerminateProcess. The termination path excludes several core Windows processes and registered
+    HeySafe PIDs. The object callback restricts handle access to protected HeySafe processes and
+    can queue termination of werfault.exe. The cited callback helper does not select Task Manager,
+    Process Explorer, WinDbg or Visual Studio for termination. Work items use DelayedWorkQueue. The
+    catalog verification covers the sample identity and these static capabilities; malicious intent,
+    a trusted-caller authorization bypass, protected-process termination, stack spoofing and certificate
+    theft were not established by this review. The embedded code-signing certificate expired in 2013
+    and has no signing timestamp. Current Windows loading and HVCI behavior remain unknown.'
+  Usecase: Kernel-mode process-tree termination and restriction of handle access to HeySafe processes.
+  Privileges: Administrator/SYSTEM access plus acceptance by the filter-port caller validation, or
+    the driver-triggered callback path.
   OperatingSystem: Windows (current loading and HVCI behavior unknown)
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/468
 - https://www.virustotal.com/gui/file/a188993dd8cac6628f97dfd390cfab8a9e510d581c39e32da66cbc4b559db27d
+- https://github.com/magicsword-io/LOLDrivers/blob/main/evidence/heysafe_drv-ghidra-analysis.md
+- https://heysafex.com/
 Detection: []
 Acknowledgement:
   Person: rommel193911-sudo
