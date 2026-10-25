@@ -1,0 +1,396 @@
+Id: 7d4439c5-1ee3-4297-99ea-bb7eab3c256c
+Tags:
+- btfilter.sys
+Verified: 'TRUE'
+Author: Andrea Monzani
+Created: '2026-10-25'
+MitreID: T1068
+CVE:
+- CVE-2026-24076
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create btfilter binPath=C:\windows\temp\btfilter.sys type=kernel
+    && sc.exe start btfilter
+  Description: A vulnerable kernel driver that can be used to disable Code Integrity
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+- https://doi.org/10.1016/j.cose.2026.105194
+Detection: []
+Acknowledgement:
+  Person: Andrea Monzani, Davide Netti, Antonio Parata
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: btfilter.sys
+  MD5: b655e2e9a50e1db45ea492ae1025390f
+  SHA1: 086487217cba196f523f75958cba86fc5635dd89
+  SHA256: 415bfdd549ce7f0b0011fe45c7330e0c44935f1bbdcedd64246a9fdfb921196f
+  Imphash: f3dc67d28043552615e5c3e1c5ee2777
+  Authentihash:
+    MD5: 4da06c14aaf93398822a7af4dd617738
+    SHA1: 681a49470babca795fda69d002817936201ab220
+    SHA256: c8dc0947e07b5c52c194fe018f568dc31b7dbba7d06f241b22c857fcbe4cf81f
+  RichPEHeaderHash:
+    MD5: fa99347caf9c93641038e503e4a07493
+    SHA1: 851eb913a7bf59c0c864c763b17543e1187dd0dc
+    SHA256: f9d6510f205fd446b310781e26dada21ed08675685ec0ebe0ce817cb89145565
+  Sections:
+    .text:
+      Entropy: 6.273057227510697
+      Virtual Size: '0x1237c'
+    .rdata:
+      Entropy: 5.315051049848134
+      Virtual Size: '0x1a54'
+    .data:
+      Entropy: 1.7135239080098725
+      Virtual Size: '0xaa1'
+    .pdata:
+      Entropy: 5.051614562399583
+      Virtual Size: '0x834'
+    PAGE:
+      Entropy: 6.362229580437493
+      Virtual Size: '0x5b31'
+    INIT:
+      Entropy: 6.0331836673242725
+      Virtual Size: '0x2764'
+    .rsrc:
+      Entropy: 3.232475796138613
+      Virtual Size: '0x348'
+    .reloc:
+      Entropy: 3.799071367119249
+      Virtual Size: '0x30'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-08-27 13:25:21'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - USBD.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - memmove_s
+  - _strnicmp
+  - wcsncmp
+  - RtlInitAnsiString
+  - RtlInitUnicodeString
+  - RtlQueryRegistryValues
+  - MmGetSystemRoutineAddress
+  - RtlWriteRegistryValue
+  - RtlAnsiStringToUnicodeString
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlFreeUnicodeString
+  - RtlTimeToTimeFields
+  - KeGetCurrentIrql
+  - KeInitializeEvent
+  - KeClearEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - ExSystemTimeToLocalTime
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoCancelIrp
+  - IofCompleteRequest
+  - IoGetDeviceObjectPointer
+  - IoReleaseCancelSpinLock
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItem
+  - IoOpenDeviceRegistryKey
+  - ObfDereferenceObject
+  - ZwCreateFile
+  - ZwWriteFile
+  - ZwClose
+  - ZwOpenKey
+  - ZwEnumerateValueKey
+  - ZwQueryKey
+  - ZwQueryValueKey
+  - _snprintf_s
+  - KeInitializeSpinLock
+  - mbstowcs
+  - RtlCheckRegistryKey
+  - ExGetFirmwareEnvironmentVariable
+  - IoAttachDeviceToDeviceStack
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDetachDevice
+  - IoGetAttachedDeviceReference
+  - IoInitializeRemoveLockEx
+  - IoGetDeviceProperty
+  - IoRegisterDeviceInterface
+  - ZwSetValueKey
+  - RtlMultiByteToUnicodeN
+  - IoGetLowerDeviceObject
+  - RtlUnicodeStringToAnsiString
+  - RtlGetVersion
+  - KeInitializeMutex
+  - IoWMIRegistrationControl
+  - IoIs32bitProcess
+  - PoRequestPowerIrp
+  - PoUnregisterPowerSettingCallback
+  - DbgPrint
+  - KeQuerySystemTimePrecise
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ObReferenceObjectByHandle
+  - PsIsSystemThread
+  - _vsnprintf
+  - ExEventObjectType
+  - IoReleaseRemoveLockAndWaitEx
+  - IoSetDeviceInterfaceState
+  - IoAllocateIrp
+  - IoFreeIrp
+  - PoSetPowerState
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - ZwOpenFile
+  - ZwQueryInformationFile
+  - ZwReadFile
+  - KeDelayExecutionThread
+  - _vsnwprintf
+  - RtlCompareMemory
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: C=US, ST=California, L=San Jose, O=Qualcomm Atheros, Inc., CN=Qualcomm
+        Atheros, Inc.
+      ValidFrom: '2024-03-14 00:00:00'
+      ValidTo: '2027-04-26 23:59:59'
+      Signature: 4e62191d807fb915917be1086fb8df3057acb3291d1c403fb8c35de8261aa9b76f298f52cb80a179ecdf74006bcfce1ccf6a8fba6c38c553bc72e3b98de4290d54c6161210a45d4401c3859aee9d88f7686ba907c988b1f544cdae6677a3d8f70481b4952447c39cb2e301633620c0b4fa170062ae91a1a1dfc08c5b20a688bc6d53029ccc4310cdbef6e412a0a368ac3143977883455850146d1db7a8ad0a3d0ab348f7b5efcebc51beced9617700521f9cce994facfe68c52894b6d5a9af3f494a270681d891d9f9a2eb91893d6a9ba7e527a87d7b8e9d8b2f798e3ab6ee384ae7226a741668824f0c26f6c3a62a447fbc395d8e739ff9753bb4a2e5f77a7f4a2b3ac1645d9e04e2dfb46eaa09d9abf28fb9d3490fce4b50ad58948ba2d8bc023e8d021e4dc12c7970457b77b8bf8eb6eea140148a472bd10082f3a5dc91b2c4dc471a0b971302cfa337cd0de7894a45b652131bdb26b55ba24e1f326349abe5770d7eba98df13509b4935fc710c54949bf393a59a64eaf378a2070ff0d462ce0d2911609fd2a99e48855e10999347f608f3cfa0994d1efab1351ceebca567ea14ed16c45221efa05e89a1940aa3d5fbc6ab431f56fdb225ff45517c01756acc3d0daf29385fbf4517d6728a733d9c10105b5fb865bd429d73cb1d1bb4afd3d8fa014e61abc370a565f0d23e836963be25758d2c417db11668db908571154f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0c5577bbfc80d4dea071d13857132e45
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: edbcfff369fe7064193816af5686217c
+        SHA1: 767be4e6c6c15ec50bd0f2ca0ba35da942e4185c
+        SHA256: 6b4ff9815f5b045f2412893c4567e1648d2beef3fd36cdfd6211dd69e8f9b5ee
+        SHA384: bb49cabc9a2ae00447134e94bb7a072dd9e7495a103a3b2ec2cae4269f80f88cdf2500bf19b519aa5505e871366f403e
+    Signer:
+    - SerialNumber: 0c5577bbfc80d4dea071d13857132e45
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+- Filename: btfilter.sys
+  MD5: 52043b775e018d1d0c256cf955841565
+  SHA1: 3a91e221bbaa5045b517564c311904bd264b248f
+  SHA256: 8544781f315c3bbba896e11a0746a6ed1eeb618e6c39a9b7f2fbde0f24b02200
+  Imphash: 2a5367d97f5ac684ba43dd7dc1b9e109
+  Authentihash:
+    MD5: c0cb9a0af5a6612070966b955696e8ff
+    SHA1: 78d8c253c2186d892bab1556a44b23d052930b22
+    SHA256: a32a1b0d99f45e8433c05c1fb0413196b73d6ae15e5a082c580781efef98edfc
+  RichPEHeaderHash:
+    MD5: 63ed9e833d8541fa593f1b6cec40b8fb
+    SHA1: ab388497583c24f10ac5558e3d6c29896cd37478
+    SHA256: 49baf861b5b587fc74d6774a190e816852f3c624284935f30aa550a8e88b3ed1
+  Sections:
+    .text:
+      Entropy: 6.299661002976164
+      Virtual Size: '0xd19a'
+    .rdata:
+      Entropy: 4.964626032417345
+      Virtual Size: '0x11a4'
+    .data:
+      Entropy: 1.6447794158043039
+      Virtual Size: '0x801'
+    .pdata:
+      Entropy: 4.700779368962387
+      Virtual Size: '0x690'
+    PAGE:
+      Entropy: 6.314189754914045
+      Virtual Size: '0x3f51'
+    INIT:
+      Entropy: 6.093723079697007
+      Virtual Size: '0x23ca'
+    .rsrc:
+      Entropy: 3.2480660262223995
+      Virtual Size: '0x348'
+    .reloc:
+      Entropy: 3.551428324170389
+      Virtual Size: '0x30'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-11-23 07:14:12'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - USBD.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - _strnicmp
+  - wcsncmp
+  - RtlInitAnsiString
+  - RtlInitUnicodeString
+  - RtlQueryRegistryValues
+  - MmGetSystemRoutineAddress
+  - RtlWriteRegistryValue
+  - RtlAnsiStringToUnicodeString
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - RtlAppendUnicodeToString
+  - RtlFreeUnicodeString
+  - RtlTimeToTimeFields
+  - KeGetCurrentIrql
+  - KeInitializeEvent
+  - KeClearEvent
+  - KeReadStateEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - ExSystemTimeToLocalTime
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoCancelIrp
+  - IofCompleteRequest
+  - IoGetDeviceObjectPointer
+  - IoAcquireRemoveLockEx
+  - IoReleaseRemoveLockEx
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItem
+  - IoOpenDeviceRegistryKey
+  - ObfDereferenceObject
+  - ZwCreateFile
+  - ZwWriteFile
+  - ZwClose
+  - ZwOpenKey
+  - ZwEnumerateValueKey
+  - ZwQueryKey
+  - KeInitializeSpinLock
+  - _snprintf_s
+  - _vsnwprintf
+  - mbstowcs
+  - IoAttachDeviceToDeviceStack
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetAttachedDeviceReference
+  - IoInitializeRemoveLockEx
+  - IoGetDeviceProperty
+  - IoGetLowerDeviceObject
+  - RtlUnicodeStringToAnsiString
+  - RtlGetVersion
+  - KeInitializeMutex
+  - ExGetFirmwareEnvironmentVariable
+  - IoReleaseCancelSpinLock
+  - IoWMIRegistrationControl
+  - IoIs32bitProcess
+  - PoRequestPowerIrp
+  - PoUnregisterPowerSettingCallback
+  - DbgPrint
+  - KeQuerySystemTimePrecise
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ObReferenceObjectByHandle
+  - PsIsSystemThread
+  - ExEventObjectType
+  - IoDetachDevice
+  - IoReleaseRemoveLockAndWaitEx
+  - IoAllocateIrp
+  - IoFreeIrp
+  - PoSetPowerState
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - ZwOpenFile
+  - ZwQueryInformationFile
+  - ZwReadFile
+  - KeDelayExecutionThread
+  - ZwQueryValueKey
+  - USBD_CreateConfigurationRequestEx
+  - USBD_ParseConfigurationDescriptorEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    - Subject: C=US, ST=California, L=San Jose, O=Qualcomm Atheros, Inc., CN=Qualcomm
+        Atheros, Inc.
+      ValidFrom: '2021-04-01 00:00:00'
+      ValidTo: '2024-04-03 23:59:59'
+      Signature: e1538a8b084ced568c1fff0d2681c2fbb94edbd3c27d17b7f108e2c1babd78dcc091ff5fb99cacf0fc8caadba9e84d5d957060f03f102b74bf34db4e0ee49f8682a4b22b089894030fb618e93c505892afd4eb70df8136697cfb4f6a9237a37cfcf3d2e22b6b18ece37c3b5916ff0a44752e86df987e01045d6202a810b8c15bfa2b15c6262506a28f1d97a0a4a6d480b828544a74493c7e0b3e692b34afb1f408ae3dcb5ce0da63315d53883b2c37431c5473dfd406c216e8c5bc6ca70b19302160dc10d8b94f576cd0ed0020fbeb3b3097c514c10bd7f6a2f81fa8b64543d9e2f62ff49ed89baa8662d2bb54bbdcd5d06339642b975e603c9c5db043980ceb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 02154f7c8cd907a55be7b16ecae524b5
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: e3fb267bdd17ff096bdadf3e6de16464
+        SHA1: 1587995b3191e0573d7a6c4995b53ce15d96e5a7
+        SHA256: f5a168b0edc740cba3807f21603edf25f6860fbde91de72488f728543f985d11
+        SHA384: 5dd345dffb4a036a09e728efc61e184ac47bba4e4413bde6cffdc1837b42850ce617f4cb7287fddfc8583d406b0146be
+    Signer:
+    - SerialNumber: 02154f7c8cd907a55be7b16ecae524b5
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      Version: 1
