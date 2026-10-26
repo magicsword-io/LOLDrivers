@@ -1,0 +1,28 @@
+title: Driver Load - RCFlCtrl.sys
+id: ec7f2a1c-fee4-56e3-b046-716256b12b6f
+status: experimental
+description: |
+    Detects loading of driver RCFlCtrl.sys via name.
+    RCFlCtrl.sys, labeled as "RedCastle Control Driver", is a vulnerable kernel driver that can be used to terminate arbitrary processes via IOCTL 0x85000158
+references:
+    - https://www.loldrivers.io/drivers/a7d2a088-b00b-4f5c-96ca-7a98070dddd5/
+    - https://doi.org/10.1016/j.cose.2026.105194
+author: Andrea Monzani
+date: 2026/10/25
+modified: 2026/10/26
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rcflctrl.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low
