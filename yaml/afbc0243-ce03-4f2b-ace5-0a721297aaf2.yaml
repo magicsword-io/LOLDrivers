@@ -1,0 +1,170 @@
+Id: afbc0243-ce03-4f2b-ace5-0a721297aaf2
+Tags:
+- tosrfec.sys
+Verified: 'TRUE'
+Author: Andrea Monzani
+Created: '2026-10-25'
+MitreID: T1068
+CVE:
+- CVE-2026-35553
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create tosrfec binPath=C:\windows\temp\tosrfec.sys type=kernel &&
+    sc.exe start tosrfec
+  Description: A vulnerable kernel driver that can be used to disable Code Integrity
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+- https://doi.org/10.1016/j.cose.2026.105194
+Detection: []
+Acknowledgement:
+  Person: Andrea Monzani, Davide Netti, Antonio Parata
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: tosrfec.sys
+  MD5: f9e4534f2da02a7cb16152fcead48e57
+  SHA1: a43f3a8d0f75fd5ac65508a3c376ab4a99db981d
+  SHA256: 01aa894cb84ca218e4e54f87626aac7ce16755a18b62de8f406eae522846e4d7
+  Imphash: f0d48d5b9f1f4eabde6b5e0e8196d84d
+  Authentihash:
+    MD5: 6b98c3901c2ac48567c03b914fbbe012
+    SHA1: 53ea7f11fd01d31a1919b4b98b16578bafe75acb
+    SHA256: d52c4eac784ff2fb30ae24d1c61d85871cc8e96ee9a1397ca8ca0a3fded0e107
+  RichPEHeaderHash:
+    MD5: 5c3ab4200f621695cddbbd8b67bb9b5e
+    SHA1: 96ed1789d057141b6b60f7b3ff07c5f1c9281ac0
+    SHA256: 42aed4985d2f97b797801201db74415e0ec6afda2c4d0a99c09c0bfdf15fefcd
+  Sections:
+    .text:
+      Entropy: 6.191778247690096
+      Virtual Size: '0x2700'
+    .rdata:
+      Entropy: 4.278387418771408
+      Virtual Size: '0x890'
+    .data:
+      Entropy: 0.524821206928103
+      Virtual Size: '0x120'
+    .pdata:
+      Entropy: 4.081121847696394
+      Virtual Size: '0x264'
+    PAGE:
+      Entropy: 5.733660944439593
+      Virtual Size: '0x460'
+    INIT:
+      Entropy: 5.463719962892568
+      Virtual Size: '0xab4'
+    .rsrc:
+      Entropy: 3.604221045669179
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 3.610509293458488
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-10-08 03:43:51'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - WMILIB.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - RtlWriteRegistryValue
+  - RtlCheckRegistryKey
+  - DbgPrint
+  - RtlIsNtDdiVersionAvailable
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeDelayExecutionThread
+  - KeSetPriorityThread
+  - KeWaitForSingleObject
+  - KeInitializeSpinLock
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - ExAllocatePoolWithTag
+  - ExFreePool
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - IoAcquireCancelSpinLock
+  - IoAttachDeviceToDeviceStack
+  - IoBuildSynchronousFsdRequest
+  - IofCallDriver
+  - wcsncpy_s
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDetachDevice
+  - IoReleaseCancelSpinLock
+  - IoRegisterDeviceInterface
+  - IoSetDeviceInterfaceState
+  - ZwClose
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - RtlQueryRegistryValues
+  - MmGetSystemRoutineAddress
+  - RtlEqualUnicodeString
+  - MmLockPagableDataSection
+  - MmUnlockPagableImageSection
+  - IoBuildDeviceIoControlRequest
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwOpenFile
+  - ZwQueryInformationFile
+  - wcsncat_s
+  - IofCompleteRequest
+  - wcsstr
+  - WmiSystemControl
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    - Subject: C=JP, ST=Tokyo, L=Koto,ku, O=Dynabook Inc., OU=Dynabook Inc., CN=Dynabook
+        Inc.
+      ValidFrom: '2021-02-24 00:00:00'
+      ValidTo: '2023-03-14 23:59:59'
+      Signature: e5747510b1409868acbc983b6a77ad9e93ecc31ae44bbf2e6f5113bc0cc82388d31a759b9000e855c3e3a9b330782d5fadce5dd9341138ea02b0186dc0a95848fdbade22e94dc1800f1203f4f9077d9bc64bb4cc341fd32536cd2caecb2c31741bfca18afe87eaa41b43a952df56227bccf8dbccc1248a917228bb4627ca0efd1ac9c87d0bccad48cfed8db21ff4133b68de13bd4562704eeee36e15f795012feabc7284a93c349b597be222b5bb2ff4f3078473aac6ba95be8d6f80d5568d7355fe1525188dceb393e75adeff8e97e17bac9c290d76ff922ff09a0efd0fb53bca42f313c57492408437c27982ed70ad1216d03b19c5f2bd12914a565dc8083d
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 05c6b77fcca38c46fda07191919c7447
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 040b50c8c61841c1ea7ca98f078f6be8
+        SHA1: ae69cf708130cf753f41d64b5ce7c0789633c17d
+        SHA256: 913c0eb3f016c17eab7f1c9be781ceec89f3a79ce63623fa2a90458700c81299
+        SHA384: c84bbe0182423b6be1d54bba4b5d2280091afed617878231229e3c0da0fe8e09693eee78289cf2fbb55b5c8e69004c9e
+    Signer:
+    - SerialNumber: 05c6b77fcca38c46fda07191919c7447
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      Version: 1
