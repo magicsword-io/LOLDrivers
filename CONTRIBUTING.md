@@ -49,6 +49,15 @@ git push origin your-feature-branch
 
 To create a new YAML file for a driver or update an existing one, use the provided [YML-Template](YML-Template.yml) and follow the guidelines in the template.
 
+Driver samples belong in `drivers/<MD5>.bin`, alongside their metadata in
+`yaml/<Id>.yaml`. Run `git lfs install` once on your machine, then stage and commit
+the sample and YAML together. The wildcard in [`drivers/.gitattributes`](drivers/.gitattributes)
+already tracks every `.bin` sample with Git LFS, including new files.
+
+Do not run `git lfs track` for individual driver filenames or add per-sample rules
+to the root `.gitattributes`. Those duplicate rules cause merge conflicts when
+independent driver contributions are merged.
+
 ## 📖 Updating Documentation
 
 If you find any errors or gaps in the documentation, or if you have suggestions for improvements, feel free to create a new issue or submit a PR with your proposed changes.
