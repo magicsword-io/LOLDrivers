@@ -58,6 +58,11 @@ Do not run `git lfs track` for individual driver filenames or add per-sample rul
 to the root `.gitattributes`. Those duplicate rules cause merge conflicts when
 independent driver contributions are merged.
 
+Before submitting catalog or detection changes, run the [indicator safety checks](docs/indicator-safety.md).
+Use exact sample hashes for blocking. Names and signing metadata are research or
+hunting context; unavailable hashes must be omitted. Research-only samples require
+`DetectionScope: context-only` and a `ContextReason` and cannot produce detections.
+
 ## 📖 Updating Documentation
 
 If you find any errors or gaps in the documentation, or if you have suggestions for improvements, feel free to create a new issue or submit a PR with your proposed changes.

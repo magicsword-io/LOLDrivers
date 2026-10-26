@@ -1,0 +1,45 @@
+name: Indicator safety
+
+on:
+  pull_request:
+  merge_group:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  indicator-safety:
+    name: indicator-safety
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          lfs: true # Immutable sample objects are read statically, never executed.
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.11.14'
+          cache: pip
+          cache-dependency-path: bin/requirements-safety.txt
+      - name: Install pinned safety backends
+        run: python -m pip install -r bin/requirements-safety.txt
+      - name: Validate source schema and sample filenames
+        run: python bin/validate.py
+      - name: Run adversarial controls and native YARA matches
+        run: python -m unittest discover -s bin/tests -p 'test_*.py'
+      - name: Regenerate offline and validate committed and regenerated selectors
+        run: python bin/validate-safety.py --report "${RUNNER_TEMP}/indicator-safety.json"
+      - name: Match all YARA sets against hydrated samples using the native engine
+        run: python bin/yara-generator/validate-malicious-rules.py --skip-generate --all-categories --output-dir "${RUNNER_TEMP}/native-yara"
+      - name: Upload evidence review findings
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: indicator-evidence-review
+          path: |
+            ${{ runner.temp }}/indicator-safety.json
+            ${{ runner.temp }}/native-yara/summary.json
+      - name: Ensure validation did not modify sources or outputs
+        run: git diff --exit-code

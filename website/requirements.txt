@@ -1,4 +1,5 @@
-# Website-only API exporter; versions match the repository's poetry.lock.
+# Website-only API exporter; compatibility packages follow poetry.lock.
+# Certificate parsing pins below are shared with the indicator safety gate.
 # No driver binary, detection-generation, or network/blocklist dependencies.
 PyYAML==6.0.1
 pandas==2.1.3
@@ -14,3 +15,8 @@ attrs==23.1.0
 jsonschema-specifications==2023.7.1
 referencing==0.30.2
 rpds-py==0.10.2
+
+# Parse and verify embedded research certificates before publishing the API.
+cryptography==46.0.3
+cffi==2.1.1
+pycparser==3.12
