@@ -53,9 +53,9 @@ import Icon from './Icon.astro';
         </label>
         <select id="hvci">
           <option value="all">Any status</option>
-          <option value="yes">Has a TRUE sample</option>
-          <option value="no">Has a FALSE sample</option>
-          <option value="unknown">Has an unknown sample</option>
+          <option value="yes">Has a sample that still loads</option>
+          <option value="no">Has a sample that does not load</option>
+          <option value="unknown">Has a sample with no result</option>
         </select>
         <p class="filter-help">
           Statuses apply to individual samples. An entry can contain several
@@ -111,7 +111,7 @@ import Icon from './Icon.astro';
             <tr>
               <th scope="col">Driver / publisher</th>
               <th scope="col">Classification</th>
-              <th scope="col">HVCI TRUE</th>
+              <th scope="col">Loads with HVCI</th>
               <th scope="col">Samples</th>
               <th scope="col">Added</th>
             </tr>
