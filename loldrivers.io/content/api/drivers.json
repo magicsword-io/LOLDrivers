@@ -96612,6 +96612,9 @@
         "Author": "Michael Haag",
         "Created": "2026-04-17",
         "MitreID": "T1068",
+        "CVE": [
+            "CVE-2023-52972"
+        ],
         "Category": "vulnerable driver",
         "Commands": {
             "Command": "sc.exe create HWAuidoOs2Ec binPath=C:\\windows\\temp\\HWAuidoOs2Ec.sys type=kernel && sc.exe start HWAuidoOs2Ec",
@@ -97023,6 +97026,454 @@
                                     "SHA1": "63a7e376bad5ec2e419d514a403bcf46c8d31d95",
                                     "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c",
                                     "SHA384": "d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "4b18d6298c19a073602b9e7b",
+                                "Issuer": "C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , SHA256 , G3",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Filename": "HWAuidoOs2Ec.sys",
+                "MD5": "86a55adf4bfd51d90371764dcc7b7d93",
+                "SHA1": "fc6caac2ac63cc21e84d7f3e5beca18e358dce3d",
+                "SHA256": "10fb4c4b93e1a2e737d67377cf76983beeb631edfd013e5c60638e5cc23ad12d",
+                "Imphash": "9cfa9662095195fc2607e952710e62ae",
+                "Authentihash": {
+                    "MD5": "4b6c202c05245a7dbddd01acb683dcdc",
+                    "SHA1": "391a2ab9ca83703c891370c8da6f50168ba88b38",
+                    "SHA256": "bc01d15c1c3388026eda53d21c093374636a09681ce36cae299c6e0237fbe3a1"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "ec809457e9078dd8a4b7ee6c4d70d648",
+                    "SHA1": "b9d03997f9853069fe0e52239a90d412c0ce919b",
+                    "SHA256": "35105f2d18adff486d78788b8e54b5c4a71c331252ba59ced6efad5c5ddf3693"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.1696685102716895,
+                        "Virtual Size": "0xf84"
+                    },
+                    ".rdata": {
+                        "Entropy": 4.267501878210187,
+                        "Virtual Size": "0xc34"
+                    },
+                    ".data": {
+                        "Entropy": 1.5678688415266202,
+                        "Virtual Size": "0x31c"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.149136757164562,
+                        "Virtual Size": "0x2dc"
+                    },
+                    "PAGE": {
+                        "Entropy": 6.273633864756592,
+                        "Virtual Size": "0x2370"
+                    },
+                    "INIT": {
+                        "Entropy": 5.458490841678111,
+                        "Virtual Size": "0x700"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.313302820377281,
+                        "Virtual Size": "0x3a0"
+                    },
+                    ".reloc": {
+                        "Entropy": 3.4460865862747814,
+                        "Virtual Size": "0x2c"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2022-06-22 13:08:07",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "RtlInitUnicodeString",
+                    "DbgPrint",
+                    "IofCompleteRequest",
+                    "IoCreateSymbolicLink",
+                    "IoDeleteDevice",
+                    "IoDeleteSymbolicLink",
+                    "InitSafeBootMode",
+                    "MmGetSystemRoutineAddress",
+                    "RtlGetVersion",
+                    "ExAllocatePoolWithTag",
+                    "ExFreePoolWithTag",
+                    "ZwClose",
+                    "ZwTerminateProcess",
+                    "ZwOpenProcess",
+                    "__C_specific_handler",
+                    "RtlTimeToTimeFields",
+                    "KeInitializeEvent",
+                    "ExAcquireFastMutex",
+                    "ExReleaseFastMutex",
+                    "ExSystemTimeToLocalTime",
+                    "PsSetCreateProcessNotifyRoutineEx",
+                    "ZwCreateKey",
+                    "ZwSetSecurityObject",
+                    "IoDeviceObjectType",
+                    "IoCreateDevice",
+                    "ObOpenObjectByPointer",
+                    "RtlGetDaclSecurityDescriptor",
+                    "RtlGetGroupSecurityDescriptor",
+                    "RtlGetOwnerSecurityDescriptor",
+                    "RtlGetSaclSecurityDescriptor",
+                    "SeCaptureSecurityDescriptor",
+                    "_snwprintf",
+                    "RtlLengthSecurityDescriptor",
+                    "SeExports",
+                    "RtlCreateSecurityDescriptor",
+                    "_wcsnicmp",
+                    "wcschr",
+                    "RtlAbsoluteToSelfRelativeSD",
+                    "RtlAddAccessAllowedAce",
+                    "RtlLengthSid",
+                    "IoIsWdmVersionAvailable",
+                    "RtlSetDaclSecurityDescriptor",
+                    "ZwOpenKey",
+                    "ZwSetValueKey",
+                    "ZwQueryValueKey",
+                    "RtlFreeUnicodeString"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , SHA256 , G3",
+                                "ValidFrom": "2016-06-15 00:00:00",
+                                "ValidTo": "2024-06-15 00:00:00",
+                                "Signature": "1584280ceda1c31982db632741d7cc637dd6bccf369bcfd25d4c028b581a16087ab198997fd8338a5c9e620a9aea90c2c563040be887580600078259c3a89432d9e0144da0d523e0c7ddbaf069e24a45652d4d49907866320eb068c0b088b08eed5c06f85c10483f2373ba3b53845280cdf0b315c8110a8b0578465908d4beb7ff4bf59c6a4c9c76a21185458cd437ee50dde13334a9a11f3a0bf156448a6fb333d0b18ed10c6007ee32c2f0246fbfaffb81017667c4a3e8e0abdc335528e367473ceb6aa4df94e9f4a6c081d1529851a6d602b73cea4aefd0ba65d23783534b7e677c8c40f6071cb0af0406dcf86c4688729ceb4e9dc3b0b954a3b94e97ca14",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "481b6a0726d2e83f2602d4825acd",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "b35d3f705a99b93f2a1ade225053ed44",
+                                    "SHA1": "4f1dda8d1357ab594cec773c66c05e4bc8085801",
+                                    "SHA256": "06936bac8d2f85d9ce6f7348ea421a1a949219182845192667b0e671fe0e4285",
+                                    "SHA384": "d62c8126b964a1f15546d741362aa5cf56c08a0e998b12f9554dc0ff4dc9d10294f9dfa325c8727d48754ff36b3a9a3b"
+                                }
+                            },
+                            {
+                                "Subject": "C=CN, ST=Guangdong, L=Dongguan, O=Huawei Device Co., Ltd., OU=IT Dept., CN=Huawei Device Co., Ltd.",
+                                "ValidFrom": "2020-04-08 08:30:19",
+                                "ValidTo": "2023-04-09 08:30:19",
+                                "Signature": "562b6781159871db5a287d36a4faa5c04c039986bcee3f74a646d55cad7c5a9ed549279f5473bf39b7f0da2a8602542304eadedd6c118ded09a4db326cd0c1913d376df0803548a6820419ff4fd6e84966ec814315be2e780ec7194d3ce711c40ba6041437d86b07bfa6a193ed0ff61e4a1989a19ffe5e423d10421665d4f6a8bf810f3c516bc325ba00e87f2f4d2e08db325537a049c1546a51edf4fb037e291e5039c777afcb26cd4ad176055d8bb15ed5ae9d407e1b2be7d6d6ed832e088a843c058b9968fea30aa8a65f4f776b7f893055567c976a3b6eadd1b6d264986f590c415d950db2522b8918b2245d344c7ad54899dba116e3dd00b1888716dbeb",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "4b18d6298c19a073602b9e7b",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "71bdbc8a54046f3058155c9e75814db7",
+                                    "SHA1": "aa25f4b5fbeda167fa4308b99acb47a729cc5787",
+                                    "SHA256": "b5cfc93fce74edf4d63259ad1e0da3e8d115f22723c7f260248337f08144e5b6",
+                                    "SHA384": "6e32db4a37a11ad97e66ae8026979bf32988db16ab723c268086e5e9870d88953000a2c65526d64a7406179571abe3ec"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+                                "ValidFrom": "2022-06-09 00:00:00",
+                                "ValidTo": "2031-11-09 23:59:59",
+                                "Signature": "9a1602a501ef81fb0db458b278ada82319d97337da609e51d7cbf82f40b9a31f7c404e333e903ce789017585e8627b1d56e071bade5ec637bc795c62004df8497a514d0632f3c5d2002a2720ea892e1539e02c3ef8757c2c824161350f23d0ed3595d288952943cbe0a658107c538e9f45c9203714c0ed19ba7e7739d25496c7a611df3433f67552424b1c9d8d96d5956c471214245f2641fa1a46bddeb0e5914703ac1808cbcbdb66897f2b9c65bfbe374ebe2df39d4ac3cccc475ec89595add1cbbb2a0620f93f72ea36eb4572927a297b14033cfb4dd648717a10118a0874cd6c1b045cd28a950376515053d62ef74a46c3ae102c714cb087b62737446044",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.12",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "01240afb1e380b8a16f14b719df4d3c0",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "a780e8237c69d6012c9a0ce5576fbab0",
+                                    "SHA1": "613115803ff02f51d735686030790041e4207ecd",
+                                    "SHA256": "2a73e196c22294f2670b352ff3e37cb6c586d5754c67f2557c10dc49295e32dd",
+                                    "SHA384": "71f67d14277b8318635b771249919e29fa673b9f3b7b41ad50b83f38a0a128860d0a49f0fb212bec5bbacaf538749d57"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA",
+                                "ValidFrom": "2022-03-23 00:00:00",
+                                "ValidTo": "2037-03-22 23:59:59",
+                                "Signature": "7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "073637b724547cd847acfd28662a5e5b",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "e4b8ad9932ff9205f580cf8fb2afbb86",
+                                    "SHA1": "5301f7044d78bf94dd2b6e4871083a17fdba1dcc",
+                                    "SHA256": "c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa",
+                                    "SHA384": "84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 , 2",
+                                "ValidFrom": "2022-03-29 00:00:00",
+                                "ValidTo": "2033-03-14 23:59:59",
+                                "Signature": "0d2d2374a6d1f5f8ea4b993f01e4f60ce4af169dd9b38c9782299c436f012dab38b57011bf84198b3f5de5864fbe933ade2a395a394ed88459a5bc1b98aae86cefd1486919385bcf89391d7070d94edf23226cd5dff659cba1c2ea4c76caa1dca12b96b89b55a91a6b7dd1f502094f82d6a57388c49880dfee4995b7b3ccc5a7ee0ee1ef1e388a9fef11c9314a58b6df387ccbfa5cf7e453bf6e0a7c7ed7de98d52965890fa29cc065f4012265c7ea5e74a65b3592507cf417a687644f3e46891663206bcbf27bd035e34a7048a9b6e71d60bd04221525700672a9443b694711d3eee9c7a03e4f10b93036e4f3aa6909a88b7e64a2659411fb6e32f1f5bb38adcdc09311d532784a4b372a4cf35cdcb685c0bb70305578d698fe546d7f71a9481a78dd46772e1b7ac0338af84a288c12a873cf2df9d323f29e19e00d9428a0ebdb1a51a095828e286ba4ce9d76dea973aa486a5943ae5feaf80f06429ddf066896fe2aa0745b6366de6b2cb878aa4d706df02cf107157e35b4e6b50ca299a5d7156b350e85d6e02ccce00c24b87c520b1e997cefc8c8c58c5869afab3de1cfcc7d15ae14bf8a71dfca97b1d847ea1c85e0454e121c142958cc6fd37fcbbec10e4a6f209caed973325908e72d92a11a11fe3298a65d2b97e08bd39ccc6db50dae47633847175b6f13da6a106e1f49b7445bb4080a875a59047611a1a77702131c",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "0a7a4a889ec99942900663384d86979d",
+                                "Version": 3,
+                                "CertificateType": "Intermediate",
+                                "IsCodeSigning": false,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "d49300b4e758e36a3832679763a83c58",
+                                    "SHA1": "ec3075370fcea680e09497d44a4b246012f24160",
+                                    "SHA256": "fa5e895ff2603de9e15939a00299836f73e5778058f22194f696d19e79a8b010",
+                                    "SHA384": "13ab2eedcd7e712f635ca1da3dc30cd8d8e22cedcf5a2c4994181509dddbf76867d07925b9a514d123bc1d5cab41fe9f"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "4b18d6298c19a073602b9e7b",
+                                "Issuer": "C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , SHA256 , G3",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Filename": "HWAuidoOs2Ec.sys",
+                "MD5": "f76031d7790ed141be89fb1da288cbb3",
+                "SHA1": "bff45fc95fa037151164ecf1a0fe5f5093dbb281",
+                "SHA256": "13a2a2c57025c06a45c1aae8a0a13f5ab31ec986d419c9f5786468ee851744df",
+                "Imphash": "9cfa9662095195fc2607e952710e62ae",
+                "Authentihash": {
+                    "MD5": "ad032ab9cc573eefa5cd91203ed3688f",
+                    "SHA1": "cadb89b192a71167a1b22564b08fdf2b6e6e9461",
+                    "SHA256": "e6b0e121123bab1bd90f9ccad61b5ecd2682b44ec68910f563581823ed4e3b86"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "ec809457e9078dd8a4b7ee6c4d70d648",
+                    "SHA1": "b9d03997f9853069fe0e52239a90d412c0ce919b",
+                    "SHA256": "35105f2d18adff486d78788b8e54b5c4a71c331252ba59ced6efad5c5ddf3693"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.1696685102716895,
+                        "Virtual Size": "0xf84"
+                    },
+                    ".rdata": {
+                        "Entropy": 4.273063833776704,
+                        "Virtual Size": "0xc34"
+                    },
+                    ".data": {
+                        "Entropy": 1.5678688415266202,
+                        "Virtual Size": "0x31c"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.149136757164562,
+                        "Virtual Size": "0x2dc"
+                    },
+                    "PAGE": {
+                        "Entropy": 6.273633864756592,
+                        "Virtual Size": "0x2370"
+                    },
+                    "INIT": {
+                        "Entropy": 5.458490841678111,
+                        "Virtual Size": "0x700"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.313302820377281,
+                        "Virtual Size": "0x3a0"
+                    },
+                    ".reloc": {
+                        "Entropy": 3.4460865862747814,
+                        "Virtual Size": "0x2c"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2022-06-28 04:39:13",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "RtlInitUnicodeString",
+                    "DbgPrint",
+                    "IofCompleteRequest",
+                    "IoCreateSymbolicLink",
+                    "IoDeleteDevice",
+                    "IoDeleteSymbolicLink",
+                    "InitSafeBootMode",
+                    "MmGetSystemRoutineAddress",
+                    "RtlGetVersion",
+                    "ExAllocatePoolWithTag",
+                    "ExFreePoolWithTag",
+                    "ZwClose",
+                    "ZwTerminateProcess",
+                    "ZwOpenProcess",
+                    "__C_specific_handler",
+                    "RtlTimeToTimeFields",
+                    "KeInitializeEvent",
+                    "ExAcquireFastMutex",
+                    "ExReleaseFastMutex",
+                    "ExSystemTimeToLocalTime",
+                    "PsSetCreateProcessNotifyRoutineEx",
+                    "ZwCreateKey",
+                    "ZwSetSecurityObject",
+                    "IoDeviceObjectType",
+                    "IoCreateDevice",
+                    "ObOpenObjectByPointer",
+                    "RtlGetDaclSecurityDescriptor",
+                    "RtlGetGroupSecurityDescriptor",
+                    "RtlGetOwnerSecurityDescriptor",
+                    "RtlGetSaclSecurityDescriptor",
+                    "SeCaptureSecurityDescriptor",
+                    "_snwprintf",
+                    "RtlLengthSecurityDescriptor",
+                    "SeExports",
+                    "RtlCreateSecurityDescriptor",
+                    "_wcsnicmp",
+                    "wcschr",
+                    "RtlAbsoluteToSelfRelativeSD",
+                    "RtlAddAccessAllowedAce",
+                    "RtlLengthSid",
+                    "IoIsWdmVersionAvailable",
+                    "RtlSetDaclSecurityDescriptor",
+                    "ZwOpenKey",
+                    "ZwSetValueKey",
+                    "ZwQueryValueKey",
+                    "RtlFreeUnicodeString"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , SHA256 , G3",
+                                "ValidFrom": "2016-06-15 00:00:00",
+                                "ValidTo": "2024-06-15 00:00:00",
+                                "Signature": "1584280ceda1c31982db632741d7cc637dd6bccf369bcfd25d4c028b581a16087ab198997fd8338a5c9e620a9aea90c2c563040be887580600078259c3a89432d9e0144da0d523e0c7ddbaf069e24a45652d4d49907866320eb068c0b088b08eed5c06f85c10483f2373ba3b53845280cdf0b315c8110a8b0578465908d4beb7ff4bf59c6a4c9c76a21185458cd437ee50dde13334a9a11f3a0bf156448a6fb333d0b18ed10c6007ee32c2f0246fbfaffb81017667c4a3e8e0abdc335528e367473ceb6aa4df94e9f4a6c081d1529851a6d602b73cea4aefd0ba65d23783534b7e677c8c40f6071cb0af0406dcf86c4688729ceb4e9dc3b0b954a3b94e97ca14",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "481b6a0726d2e83f2602d4825acd",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "b35d3f705a99b93f2a1ade225053ed44",
+                                    "SHA1": "4f1dda8d1357ab594cec773c66c05e4bc8085801",
+                                    "SHA256": "06936bac8d2f85d9ce6f7348ea421a1a949219182845192667b0e671fe0e4285",
+                                    "SHA384": "d62c8126b964a1f15546d741362aa5cf56c08a0e998b12f9554dc0ff4dc9d10294f9dfa325c8727d48754ff36b3a9a3b"
+                                }
+                            },
+                            {
+                                "Subject": "C=CN, ST=Guangdong, L=Dongguan, O=Huawei Device Co., Ltd., OU=IT Dept., CN=Huawei Device Co., Ltd.",
+                                "ValidFrom": "2020-04-08 08:30:19",
+                                "ValidTo": "2023-04-09 08:30:19",
+                                "Signature": "562b6781159871db5a287d36a4faa5c04c039986bcee3f74a646d55cad7c5a9ed549279f5473bf39b7f0da2a8602542304eadedd6c118ded09a4db326cd0c1913d376df0803548a6820419ff4fd6e84966ec814315be2e780ec7194d3ce711c40ba6041437d86b07bfa6a193ed0ff61e4a1989a19ffe5e423d10421665d4f6a8bf810f3c516bc325ba00e87f2f4d2e08db325537a049c1546a51edf4fb037e291e5039c777afcb26cd4ad176055d8bb15ed5ae9d407e1b2be7d6d6ed832e088a843c058b9968fea30aa8a65f4f776b7f893055567c976a3b6eadd1b6d264986f590c415d950db2522b8918b2245d344c7ad54899dba116e3dd00b1888716dbeb",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "4b18d6298c19a073602b9e7b",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "71bdbc8a54046f3058155c9e75814db7",
+                                    "SHA1": "aa25f4b5fbeda167fa4308b99acb47a729cc5787",
+                                    "SHA256": "b5cfc93fce74edf4d63259ad1e0da3e8d115f22723c7f260248337f08144e5b6",
+                                    "SHA384": "6e32db4a37a11ad97e66ae8026979bf32988db16ab723c268086e5e9870d88953000a2c65526d64a7406179571abe3ec"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+                                "ValidFrom": "2022-06-09 00:00:00",
+                                "ValidTo": "2031-11-09 23:59:59",
+                                "Signature": "9a1602a501ef81fb0db458b278ada82319d97337da609e51d7cbf82f40b9a31f7c404e333e903ce789017585e8627b1d56e071bade5ec637bc795c62004df8497a514d0632f3c5d2002a2720ea892e1539e02c3ef8757c2c824161350f23d0ed3595d288952943cbe0a658107c538e9f45c9203714c0ed19ba7e7739d25496c7a611df3433f67552424b1c9d8d96d5956c471214245f2641fa1a46bddeb0e5914703ac1808cbcbdb66897f2b9c65bfbe374ebe2df39d4ac3cccc475ec89595add1cbbb2a0620f93f72ea36eb4572927a297b14033cfb4dd648717a10118a0874cd6c1b045cd28a950376515053d62ef74a46c3ae102c714cb087b62737446044",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.12",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "01240afb1e380b8a16f14b719df4d3c0",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "a780e8237c69d6012c9a0ce5576fbab0",
+                                    "SHA1": "613115803ff02f51d735686030790041e4207ecd",
+                                    "SHA256": "2a73e196c22294f2670b352ff3e37cb6c586d5754c67f2557c10dc49295e32dd",
+                                    "SHA384": "71f67d14277b8318635b771249919e29fa673b9f3b7b41ad50b83f38a0a128860d0a49f0fb212bec5bbacaf538749d57"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA",
+                                "ValidFrom": "2022-03-23 00:00:00",
+                                "ValidTo": "2037-03-22 23:59:59",
+                                "Signature": "7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "073637b724547cd847acfd28662a5e5b",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "e4b8ad9932ff9205f580cf8fb2afbb86",
+                                    "SHA1": "5301f7044d78bf94dd2b6e4871083a17fdba1dcc",
+                                    "SHA256": "c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa",
+                                    "SHA384": "84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 , 2",
+                                "ValidFrom": "2022-03-29 00:00:00",
+                                "ValidTo": "2033-03-14 23:59:59",
+                                "Signature": "0d2d2374a6d1f5f8ea4b993f01e4f60ce4af169dd9b38c9782299c436f012dab38b57011bf84198b3f5de5864fbe933ade2a395a394ed88459a5bc1b98aae86cefd1486919385bcf89391d7070d94edf23226cd5dff659cba1c2ea4c76caa1dca12b96b89b55a91a6b7dd1f502094f82d6a57388c49880dfee4995b7b3ccc5a7ee0ee1ef1e388a9fef11c9314a58b6df387ccbfa5cf7e453bf6e0a7c7ed7de98d52965890fa29cc065f4012265c7ea5e74a65b3592507cf417a687644f3e46891663206bcbf27bd035e34a7048a9b6e71d60bd04221525700672a9443b694711d3eee9c7a03e4f10b93036e4f3aa6909a88b7e64a2659411fb6e32f1f5bb38adcdc09311d532784a4b372a4cf35cdcb685c0bb70305578d698fe546d7f71a9481a78dd46772e1b7ac0338af84a288c12a873cf2df9d323f29e19e00d9428a0ebdb1a51a095828e286ba4ce9d76dea973aa486a5943ae5feaf80f06429ddf066896fe2aa0745b6366de6b2cb878aa4d706df02cf107157e35b4e6b50ca299a5d7156b350e85d6e02ccce00c24b87c520b1e997cefc8c8c58c5869afab3de1cfcc7d15ae14bf8a71dfca97b1d847ea1c85e0454e121c142958cc6fd37fcbbec10e4a6f209caed973325908e72d92a11a11fe3298a65d2b97e08bd39ccc6db50dae47633847175b6f13da6a106e1f49b7445bb4080a875a59047611a1a77702131c",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "0a7a4a889ec99942900663384d86979d",
+                                "Version": 3,
+                                "CertificateType": "Intermediate",
+                                "IsCodeSigning": false,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "d49300b4e758e36a3832679763a83c58",
+                                    "SHA1": "ec3075370fcea680e09497d44a4b246012f24160",
+                                    "SHA256": "fa5e895ff2603de9e15939a00299836f73e5778058f22194f696d19e79a8b010",
+                                    "SHA384": "13ab2eedcd7e712f635ca1da3dc30cd8d8e22cedcf5a2c4994181509dddbf76867d07925b9a514d123bc1d5cab41fe9f"
                                 }
                             }
                         ],
@@ -206715,6 +207166,222 @@
                             {
                                 "SerialNumber": "49e2bedc8e90afdb8ff4ff3320fbd9e4",
                                 "Issuer": "C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004 CA",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Id": "a7d2a088-b00b-4f5c-96ca-7a98070dddd5",
+        "Tags": [
+            "RCFlCtrl.sys"
+        ],
+        "Verified": "TRUE",
+        "Author": "Andrea Monzani",
+        "Created": "2026-10-25",
+        "MitreID": "T1068",
+        "Category": "vulnerable driver",
+        "Commands": {
+            "Command": "sc.exe create RCFlCtrl binPath=C:\\windows\\temp\\RCFlCtrl.sys type=kernel && sc.exe start RCFlCtrl",
+            "Description": "RCFlCtrl.sys, labeled as \"RedCastle Control Driver\", is a vulnerable kernel driver that can be used to terminate arbitrary processes via IOCTL 0x85000158",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://doi.org/10.1016/j.cose.2026.105194"
+        ],
+        "Detection": [],
+        "Acknowledgement": {
+            "Person": "Andrea Monzani, Davide Netti, Antonio Parata",
+            "Handle": ""
+        },
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "RCFlCtrl.sys",
+                "MD5": "e53dd75097a7afbb9bdf68713d47df01",
+                "SHA1": "8f0cb2d25448e326f4dcdb0d452b968938383d49",
+                "SHA256": "04bdcd0c70fb07e1c551be3078cf0e82cf53dd4dba3752b74e5db4a715933d16",
+                "Imphash": "e6952bf01526fcb4c51de27a2dd72f93",
+                "Authentihash": {
+                    "MD5": "21bcb4976b54a45dda39a23df45fa4e8",
+                    "SHA1": "8350ef2c3d6e4a89674b70fd77735015156e1318",
+                    "SHA256": "7a91bee028b7db8d24a406115c973a3d05e8403d8dda50293a802f5e7610ae97"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "01b15724a35610fe5fc3abfd7d2a65bd",
+                    "SHA1": "fc4e632f0320373a70f45616a6469f4c2184064b",
+                    "SHA256": "bdb7061981edd672beb18cc3e6e129616c81aeb95a1269542fcf4b11f1fb2efd"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.264028074769076,
+                        "Virtual Size": "0x13282"
+                    },
+                    ".rdata": {
+                        "Entropy": 5.119024646599587,
+                        "Virtual Size": "0xa90"
+                    },
+                    ".data": {
+                        "Entropy": 0.9617069852488362,
+                        "Virtual Size": "0xc44"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.904960046345334,
+                        "Virtual Size": "0x87c"
+                    },
+                    "INIT": {
+                        "Entropy": 5.191098235722947,
+                        "Virtual Size": "0x6b2"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.326830882969923,
+                        "Virtual Size": "0x408"
+                    },
+                    ".reloc": {
+                        "Entropy": 1.6437323213424917,
+                        "Virtual Size": "0x140"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2019-11-28 11:55:45",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "ExAllocatePoolWithTag",
+                    "ExFreePoolWithTag",
+                    "RtlCopySid",
+                    "strncpy",
+                    "IoGetCurrentProcess",
+                    "_stricmp",
+                    "ExAcquireResourceExclusiveLite",
+                    "_strnicmp",
+                    "KeLeaveCriticalRegion",
+                    "RtlEqualSid",
+                    "KeEnterCriticalRegion",
+                    "ExReleaseResourceLite",
+                    "_vsnprintf",
+                    "RtlCompareMemory",
+                    "ExDeleteResourceLite",
+                    "MmIsAddressValid",
+                    "ExInitializeResourceLite",
+                    "ExAcquireResourceSharedLite",
+                    "ProbeForWrite",
+                    "PsSetCreateProcessNotifyRoutine",
+                    "ExReleaseFastMutex",
+                    "ExAcquireFastMutex",
+                    "KeInitializeEvent",
+                    "ExSystemTimeToLocalTime",
+                    "RtlTimeToTimeFields",
+                    "PsLookupProcessByProcessId",
+                    "PsReferenceImpersonationToken",
+                    "PsReferencePrimaryToken",
+                    "ZwClose",
+                    "ZwOpenProcess",
+                    "ObfDereferenceObject",
+                    "ZwTerminateProcess",
+                    "ObOpenObjectByPointer",
+                    "RtlLengthSid",
+                    "strrchr",
+                    "RtlValidSid",
+                    "ZwQueryInformationToken",
+                    "RtlTimeToSecondsSince1970",
+                    "RtlInitUnicodeString",
+                    "RtlUnicodeStringToAnsiString",
+                    "DbgPrint",
+                    "IoBuildDeviceIoControlRequest",
+                    "IoDeleteSymbolicLink",
+                    "IoDeleteDevice",
+                    "MmMapLockedPagesSpecifyCache",
+                    "IoGetDeviceObjectPointer",
+                    "IofCompleteRequest",
+                    "IoCreateSymbolicLink",
+                    "IoCreateDevice",
+                    "IofCallDriver",
+                    "KeBugCheckEx",
+                    "__C_specific_handler"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3",
+                                "ValidFrom": "2016-03-16 00:00:00",
+                                "ValidTo": "2024-03-16 00:00:00",
+                                "Signature": "3b41bbc84f561182b719e3d96dc185ae9e690ec84326234b8d44c8e87d5f070e5341d563444a890bb874ac7db578792f8426e2d7f7bad1ae2dfd69cffa7c64dc24162a4adac097a9bbd5dd88e7a1929a0aa5f6f7bace85d6e4e3d455deeddc3e211f1bc87788cffc65fb05b48f12a630d30d66982f6c2e6f85187c8ff5f6fbb1ab10e183270885b07321ba5d2cba8330b73984dd5db67fd28bb455534c42a2bc4a6c78395b631ca37827bfbe34836b6d7b1e60fbc29b0d88ac8c72546bdc3b88ba81525e689783b8ce7fa3cdf9ea2f2676facd0b06ac4344497bf64c9442b2abcfd542d51942696e618664c7b37d078bdbe5767b6e5f65a91690a2cee4ae6492",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "47c30ffefc22bb280f96fea75251",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "729cf4baceff4ef7aa199ad4f4ebed3d",
+                                    "SHA1": "f478f0e790d5c8ec6056a3ab2567404a991d2837",
+                                    "SHA256": "c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c",
+                                    "SHA384": "e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872"
+                                }
+                            },
+                            {
+                                "Subject": "C=KR, ST=Seoul, L=Songpa,gu, O=SGA Solutions Co.,Ltd., CN=SGA Solutions Co.,Ltd.",
+                                "ValidFrom": "2019-09-03 09:01:34",
+                                "ValidTo": "2020-03-12 10:54:49",
+                                "Signature": "6674c0e6cad1da00533615c9b55cde28b2ec70e87c79ef4b0ac42ba8f9dfcfd5089decb50847483514f9932efc4c4a15910b146c7964c57a2908d44cf7d3fb47831624df02568fae2b6e44576fa92e3a58dda1cdd39ee818e8bb9a53dc0d8e7b3a4ad43d3dfec76594b06a8faffaa6fd921b28a2520c605cfd6f1bf1c33715bf4c6541c1a86bead7061c1ed490d6a40b2d4b1efadac55f5c23d299e41f4ca1c7c1aa43e747ca45e4005395b0dfbb42c7654d6fe4ed04fcca315b77b8be4899141a9ce7989128a304acec48f0e697ea6e366dd75433764bf655e21da76ea9e8051d9cdb67ced904768ab602ecd573463db313f81f7baa71fb34b3914f9ed1b430",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "6fcfa41675d1daa89f179f1f",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "aa5d3e22c156f6cfdb8ed59422525d13",
+                                    "SHA1": "1ad656e68dff090a37260b60f7af1588aa480e22",
+                                    "SHA256": "3ba492559bca582ab5e511fc88c572d92a7e3fa3c3ab98156b91b96332393693",
+                                    "SHA384": "af7948987ffcb5e06f76573f4ea261c381e2dfe5e0cf71ed3a6a6723e32e32cf4080f5a4261e448f896f3a9c044c205e"
+                                }
+                            },
+                            {
+                                "Subject": "C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA",
+                                "ValidFrom": "2011-04-15 19:55:08",
+                                "ValidTo": "2021-04-15 20:05:08",
+                                "Signature": "5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "6129152700000000002a",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "0bb058d116f02817737920f112d9fd3b",
+                                    "SHA1": "fd116235171a4feafedee586b7a59185fb5fd7e6",
+                                    "SHA256": "f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4",
+                                    "SHA384": "c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "6fcfa41675d1daa89f179f1f",
+                                "Issuer": "C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3",
                                 "Version": 1
                             }
                         ]
