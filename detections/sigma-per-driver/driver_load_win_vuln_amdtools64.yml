@@ -12,7 +12,7 @@ references:
     - https://github.com/CatCaller/AMDTools
 author: Leonid (methmind), Michael Haag
 date: 2026/09/18
-modified: 2026/10/23
+modified: 2026/10/26
 tags:
     - attack.privilege_escalation
     - attack.t1543.003
@@ -26,10 +26,10 @@ detection:
         Hashes|contains:
             - 'MD5=f3063aeff8b4ca56c6d870302ae80a0d'
             - 'MD5=c430d33293f9abf681899ff0e25de3ac'
-            - 'SHA1=70fc66de22abaa47a88f888b6f3b59e3ea1eceb3'
             - 'SHA1=0f0cd103690d744ec420dfea7a6b3f39686260a7'
-            - 'SHA256=891007bc9f3b55ae168fa60ccbb831ccdb5dce4da4a591d000806d5a2c6115c3'
+            - 'SHA1=70fc66de22abaa47a88f888b6f3b59e3ea1eceb3'
             - 'SHA256=eee1fb0995f1916820e25d6b4ee03ed7276ab66894f9654d30e6c33e759a0011'
+            - 'SHA256=891007bc9f3b55ae168fa60ccbb831ccdb5dce4da4a591d000806d5a2c6115c3'
             - 'IMPHASH=6266125b2b152310922a52fb871984c8'
             - 'IMPHASH=53902688f54746da0dc34ecc87f09653'
     condition: selection_hashes
