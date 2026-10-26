@@ -25,17 +25,17 @@ logsource:
 detection:
     selection_hashes:
         Hashes|contains:
+            - 'MD5=7e3a84e0684abf96af51607db10c3e18'
             - 'MD5=ecc5833db5e979c27d10505e01e6859a'
             - 'MD5=fa1a585828ee8097ea2aa7c5306abd1c'
-            - 'MD5=7e3a84e0684abf96af51607db10c3e18'
             - 'SHA1=6ffd13225c3c2b8bc20dc662ae8b53751826bd3c'
-            - 'SHA1=e50d565f5fc871bb861423a9ceaf970305f3959e'
             - 'SHA1=b0013d226ef75d61541cedc4a60cb80806dc92f0'
+            - 'SHA1=e50d565f5fc871bb861423a9ceaf970305f3959e'
             - 'SHA256=16f68c6e527aacd803cb2412766f00766527e1c880ed8da50bfedac501918320'
             - 'SHA256=d5b353dc323c12f4a6f85842a3d2c0a27e0288177ca0e0a051754b9ae4c6fcc9'
             - 'SHA256=009a13eeea05c09c132a7b05fff29624bcce3d36ded44c8299f09bc6f5870f5a'
-            - 'IMPHASH=b8b7d7d328fa26c1deac862146b74072'
             - 'IMPHASH=8ec2c090a23007b8e80ed4b55a216183'
+            - 'IMPHASH=b8b7d7d328fa26c1deac862146b74072'
     condition: selection_hashes
 falsepositives:
     - Unknown
