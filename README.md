@@ -1,8 +1,8 @@
 # LOLDrivers - Living Off The Land Drivers 🚗💨
 
 ![CI build](https://github.com/magicsword-io/LOLDrivers/actions/workflows/validate.yml/badge.svg) 
-![Driver Entries](https://img.shields.io/badge/Driver_Entries-707-blue.svg)
-![Known Samples](https://img.shields.io/badge/Known_Samples-2421-green.svg)
+![Driver Entries](https://img.shields.io/badge/Driver_Entries-713-blue.svg)
+![Known Samples](https://img.shields.io/badge/Known_Samples-2430-green.svg)
 
 Welcome to LOLDrivers (Living Off The Land Drivers), an exciting open-source project that brings together vulnerable, malicious, and known malicious Windows drivers in one comprehensive repository. Our mission is to empower organizations of all sizes with the knowledge and tools to understand and address driver-related security risks, making their systems safer and more reliable.
 
