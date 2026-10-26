@@ -1,0 +1,32 @@
+title: Driver Load - tmnciesc.sys
+id: 88d2cc20-b48c-5c48-ac2c-5d63eca43ffe
+status: experimental
+description: |
+    Detects loading of driver tmnciesc.sys via hash.
+    A vulnerable kernel driver that can be used to disable Code Integrity
+references:
+    - https://www.loldrivers.io/drivers/2b1e1095-5119-4419-9790-4206b23be0b5/
+    - https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+    - https://doi.org/10.1016/j.cose.2026.105194
+author: Andrea Monzani
+date: 2026/10/25
+modified: 2026/10/26
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0e21f1bd9c7eeb87665213810735b56c'
+            - 'SHA1=7dec39af5a6db63351efc71e30e6f710952ed13d'
+            - 'SHA256=a2071d1ed96b11763635580064d44fc9d14d1fe40cf36cd8f4e46aa2d084ab47'
+            - 'IMPHASH=f31392d62bc3b3a5a1d0d76c73aea777'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

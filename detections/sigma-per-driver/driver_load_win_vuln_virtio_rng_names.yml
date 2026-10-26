@@ -1,0 +1,29 @@
+title: Driver Load - virtio_rng.sys
+id: 011e0388-6bc2-59ad-984d-49930e7f6668
+status: experimental
+description: |
+    Detects loading of driver virtio_rng.sys via name.
+    A vulnerable kernel driver that can be used to disable Code Integrity
+references:
+    - https://www.loldrivers.io/drivers/1757aa0e-0e7c-477a-b224-a73ce07b9e3b/
+    - https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+    - https://doi.org/10.1016/j.cose.2026.105194
+author: Andrea Monzani
+date: 2026/10/25
+modified: 2026/10/26
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\virtio_rng.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

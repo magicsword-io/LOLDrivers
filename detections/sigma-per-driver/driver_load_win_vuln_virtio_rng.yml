@@ -1,0 +1,32 @@
+title: Driver Load - virtio_rng.sys
+id: 4b2ee73a-32c5-5bd9-9855-8347abed3aa1
+status: experimental
+description: |
+    Detects loading of driver virtio_rng.sys via hash.
+    A vulnerable kernel driver that can be used to disable Code Integrity
+references:
+    - https://www.loldrivers.io/drivers/1757aa0e-0e7c-477a-b224-a73ce07b9e3b/
+    - https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+    - https://doi.org/10.1016/j.cose.2026.105194
+author: Andrea Monzani
+date: 2026/10/25
+modified: 2026/10/26
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=90efcd59ca7522d9733d1493589a2676'
+            - 'SHA1=2a1623c931152f906240de1a50ec9a1e6271f7e6'
+            - 'SHA256=1f0ed057b98e7242b7a3a23fbfb05a4b9d29726132705948ce70045369152f10'
+            - 'IMPHASH=a146c524ad562ffdb24af0e97da6af14'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

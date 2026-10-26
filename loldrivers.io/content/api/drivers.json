@@ -14046,6 +14046,232 @@
         ]
     },
     {
+        "Id": "2b1e1095-5119-4419-9790-4206b23be0b5",
+        "Tags": [
+            "tmnciesc.sys"
+        ],
+        "Verified": "TRUE",
+        "Author": "Andrea Monzani",
+        "Created": "2026-10-25",
+        "MitreID": "T1068",
+        "Category": "vulnerable driver",
+        "Commands": {
+            "Command": "sc.exe create tmnciesc binPath=C:\\windows\\temp\\tmnciesc.sys type=kernel && sc.exe start tmnciesc",
+            "Description": "A vulnerable kernel driver that can be used to disable Code Integrity",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/",
+            "https://doi.org/10.1016/j.cose.2026.105194"
+        ],
+        "Detection": [],
+        "Acknowledgement": {
+            "Person": "Andrea Monzani, Davide Netti, Antonio Parata",
+            "Handle": ""
+        },
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "tmnciesc.sys",
+                "MD5": "0e21f1bd9c7eeb87665213810735b56c",
+                "SHA1": "7dec39af5a6db63351efc71e30e6f710952ed13d",
+                "SHA256": "a2071d1ed96b11763635580064d44fc9d14d1fe40cf36cd8f4e46aa2d084ab47",
+                "Imphash": "f31392d62bc3b3a5a1d0d76c73aea777",
+                "Authentihash": {
+                    "MD5": "29aae025b9bc97a8009a3d3ac0805926",
+                    "SHA1": "7b16aa69ad9d0cd7a67045dbd22e91a7da93aafc",
+                    "SHA256": "7fb441081c1435b6d78b8cb90478510ddc3f32d8c5ba932f54865f4a1c843064"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "73bd764fb83c01c8161e9aa86d317851",
+                    "SHA1": "8d989fc15fb9f616f380e77e28da516c3ec0c8ae",
+                    "SHA256": "4806404155d39a7f865cd721b465f00aabf59c9840d562beb2d491fee5583f13"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.60088080421368,
+                        "Virtual Size": "0x5d834"
+                    },
+                    ".rdata": {
+                        "Entropy": 6.18890082928605,
+                        "Virtual Size": "0x72f0"
+                    },
+                    ".data": {
+                        "Entropy": 3.6455204024533736,
+                        "Virtual Size": "0x51f0"
+                    },
+                    ".pdata": {
+                        "Entropy": 5.7058427782267,
+                        "Virtual Size": "0x2e68"
+                    },
+                    "PAGE": {
+                        "Entropy": 6.151186616624606,
+                        "Virtual Size": "0x81c"
+                    },
+                    "INIT": {
+                        "Entropy": 5.276356313420408,
+                        "Virtual Size": "0xa36"
+                    },
+                    ".rsrc": {
+                        "Entropy": 7.76475368317809,
+                        "Virtual Size": "0x31ec"
+                    },
+                    ".reloc": {
+                        "Entropy": 5.31755606528531,
+                        "Virtual Size": "0x25c"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2024-10-07 09:38:00",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "NDIS.SYS",
+                    "ntoskrnl.exe",
+                    "WDFLDR.SYS"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "NdisReleaseReadWriteLock",
+                    "NdisInitializeReadWriteLock",
+                    "NdisAcquireReadWriteLock",
+                    "ZwReadFile",
+                    "ZwWriteFile",
+                    "ZwClose",
+                    "ZwOpenKey",
+                    "ZwFlushKey",
+                    "ZwSetValueKey",
+                    "KeAcquireInStackQueuedSpinLock",
+                    "KeReleaseInStackQueuedSpinLock",
+                    "ExAllocatePoolWithTag",
+                    "ExFreePoolWithTag",
+                    "KeResetEvent",
+                    "KeSetEvent",
+                    "ObfDereferenceObject",
+                    "IofCompleteRequest",
+                    "ObReferenceObjectByHandle",
+                    "PsGetCurrentProcessId",
+                    "PsGetCurrentThreadId",
+                    "ExEventObjectType",
+                    "ExQueryDepthSList",
+                    "ExpInterlockedPopEntrySList",
+                    "ExpInterlockedPushEntrySList",
+                    "ExInitializeNPagedLookasideList",
+                    "ExDeleteNPagedLookasideList",
+                    "ExInitializePagedLookasideList",
+                    "ExDeletePagedLookasideList",
+                    "RtlAppendUnicodeStringToString",
+                    "RtlQueryRegistryValues",
+                    "KeAcquireSpinLockRaiseToDpc",
+                    "DbgPrint",
+                    "ZwSetInformationFile",
+                    "KeDelayExecutionThread",
+                    "KeSetPriorityThread",
+                    "KeEnterCriticalRegion",
+                    "KeLeaveCriticalRegion",
+                    "ExInitializeResourceLite",
+                    "ExAcquireResourceExclusiveLite",
+                    "ExReleaseResourceLite",
+                    "ExDeleteResourceLite",
+                    "ExCreateCallback",
+                    "ExRegisterCallback",
+                    "ExUnregisterCallback",
+                    "PsCreateSystemThread",
+                    "PsGetVersion",
+                    "IoCreateDevice",
+                    "IoCreateNotificationEvent",
+                    "IoCreateSymbolicLink",
+                    "IoDeleteDevice",
+                    "IoDeleteSymbolicLink",
+                    "IoRegisterShutdownNotification",
+                    "IoUnregisterShutdownNotification",
+                    "PsSetCreateProcessNotifyRoutine",
+                    "__C_specific_handler",
+                    "RtlFreeUnicodeString",
+                    "RtlStringFromGUID",
+                    "MmGetSystemRoutineAddress",
+                    "IoWMIRegistrationControl",
+                    "RtlInitUnicodeString",
+                    "KeReleaseSpinLock",
+                    "KeBugCheckEx",
+                    "RtlCopyUnicodeString",
+                    "RtlUpcaseUnicodeToMultiByteN",
+                    "RtlAnsiCharToUnicodeChar",
+                    "RtlUnicodeToMultiByteN",
+                    "ZwCreateFile",
+                    "PsTerminateSystemThread",
+                    "KeWaitForSingleObject",
+                    "KeInitializeEvent",
+                    "WdfVersionBindClass",
+                    "WdfVersionBind",
+                    "WdfVersionUnbind",
+                    "WdfVersionUnbindClass"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Hardware Compatibility Publisher",
+                                "ValidFrom": "2024-05-16 22:16:06",
+                                "ValidTo": "2025-05-14 22:16:06",
+                                "Signature": "47aa9e6ebb9bdffbdf6d8d99645f726af89374c6136a5f4b2d2f6fe82d8c103a41d186ec5e5ed63749401c724cb5aa6091e023f9125ecfee62f444fbde29edb037b58bd6118a66288ab639cace557ee4a888fe098088aaba592199b25725d664d21269f4aee0bc3682c4a6758c9446b50081d066fdf8cad7b5677c18d63d3404d0ce4ffab1215acc7345dc6ea61c65caee9f6950f957e87b146f7fa34abd5970c79a777436f8d80b6ee5b8876b698bc8d547b47c3d11788c8a730c8c25c7fc878b03243ce55e2c2b898edd1755cb95553578b588122b456ab70dbc084323dcb0487aa462d57b9863a5ecfaa85e5f5d5d3da96dc20ecbc7c2203900fb2f5e84c8",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "33000001112a0790aae5568529000000000111",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "778c1775b427242a721643a7a90eae19",
+                                    "SHA1": "553ed9bf72af4fce0ef52a7f0a2396245fc3d348",
+                                    "SHA256": "6910d4ed97543604c6ad630041532ff89e630311916332b6fda7b211aa29fa78",
+                                    "SHA384": "dccc0fe272475403fc9e0c1db6c456428798dfbe00fb20c962f57858256565a2cf361acb4eba8c771ec7611f2aa06bc1"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2012",
+                                "ValidFrom": "2012-04-18 23:48:38",
+                                "ValidTo": "2027-04-18 23:58:38",
+                                "Signature": "5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "610baac1000000000009",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "a569061297e8e824767dbc3184a69bea",
+                                    "SHA1": "adbb26a587a8f44b4fccaecb306f980d1c55a150",
+                                    "SHA256": "cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46",
+                                    "SHA384": "e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "33000001112a0790aae5568529000000000111",
+                                "Issuer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2012",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "Id": "66813e1f-13c8-4884-931a-62b46350c345",
         "Tags": [
             "834761775.sys"
@@ -40798,6 +41024,204 @@
                     "SHA1": "560d8869d48a71e59601b76240e9a6cffb068c9c",
                     "SHA256": "36875562e747136313ec5db58174e5fab870997a054ca8d3987d181599c7db6a"
                 }
+            }
+        ]
+    },
+    {
+        "Id": "1757aa0e-0e7c-477a-b224-a73ce07b9e3b",
+        "Tags": [
+            "virtio_rng.sys"
+        ],
+        "Verified": "TRUE",
+        "Author": "Andrea Monzani",
+        "Created": "2026-10-25",
+        "MitreID": "T1068",
+        "CVE": [
+            "CVE-2025-8412"
+        ],
+        "Category": "vulnerable driver",
+        "Commands": {
+            "Command": "sc.exe create virtio_rng binPath=C:\\windows\\temp\\virtio_rng.sys type=kernel && sc.exe start virtio_rng",
+            "Description": "A vulnerable kernel driver that can be used to disable Code Integrity",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/",
+            "https://doi.org/10.1016/j.cose.2026.105194"
+        ],
+        "Detection": [],
+        "Acknowledgement": {
+            "Person": "Andrea Monzani, Davide Netti, Antonio Parata",
+            "Handle": ""
+        },
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "virtio_rng.sys",
+                "MD5": "90efcd59ca7522d9733d1493589a2676",
+                "SHA1": "2a1623c931152f906240de1a50ec9a1e6271f7e6",
+                "SHA256": "1f0ed057b98e7242b7a3a23fbfb05a4b9d29726132705948ce70045369152f10",
+                "Imphash": "a146c524ad562ffdb24af0e97da6af14",
+                "Authentihash": {
+                    "MD5": "adab0078e3081974460da5d5ffb7484c",
+                    "SHA1": "02c80a03d1d09eb2251aeaa20bee8abb2b4f096c",
+                    "SHA256": "db421ce2f3379a515ae545f9c7e44be0484c91513b7fac4f379f9191cd7b41fd"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "5bcc37de4015676d39439577ea18640f",
+                    "SHA1": "cca5ccf5afbc7d009064855b40ef6f4a98171c2d",
+                    "SHA256": "07a888bcb5759602d32d4ec7f94ae0f9e6d256c8419ee4de59fca3dd62fd2745"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.33356054773931,
+                        "Virtual Size": "0x8f06"
+                    },
+                    ".rdata": {
+                        "Entropy": 4.636337104610637,
+                        "Virtual Size": "0xc30"
+                    },
+                    ".data": {
+                        "Entropy": 0.4429013514393896,
+                        "Virtual Size": "0x160"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.31975211285497,
+                        "Virtual Size": "0x4c8"
+                    },
+                    "PAGE_PWR": {
+                        "Entropy": 5.657773650114776,
+                        "Virtual Size": "0x228"
+                    },
+                    "INIT": {
+                        "Entropy": 5.411321778234934,
+                        "Virtual Size": "0x72c"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.3577487185740433,
+                        "Virtual Size": "0x3d8"
+                    },
+                    ".reloc": {
+                        "Entropy": 3.6348937534189765,
+                        "Virtual Size": "0x24"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2023-08-10 18:52:44",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe",
+                    "HAL.dll"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "RtlQueryRegistryValues",
+                    "MmGetSystemRoutineAddress",
+                    "KeInitializeDpc",
+                    "KeInitializeSpinLock",
+                    "IoAttachDeviceToDeviceStack",
+                    "IofCallDriver",
+                    "IofCompleteRequest",
+                    "IoCreateDevice",
+                    "IoDeleteDevice",
+                    "IoRegisterDeviceInterface",
+                    "PoStartNextPowerIrp",
+                    "KeGetCurrentIrql",
+                    "KeAcquireInStackQueuedSpinLock",
+                    "KeReleaseInStackQueuedSpinLock",
+                    "ExFreePoolWithTag",
+                    "IoAcquireCancelSpinLock",
+                    "IoDetachDevice",
+                    "IoReleaseCancelSpinLock",
+                    "PoCallDriver",
+                    "KeInsertQueueDpc",
+                    "RtlInitUnicodeString",
+                    "MmGetPhysicalAddress",
+                    "KeInitializeEvent",
+                    "KeDelayExecutionThread",
+                    "KeWaitForSingleObject",
+                    "IoBuildSynchronousFsdRequest",
+                    "IoGetAttachedDeviceReference",
+                    "ObfDereferenceObject",
+                    "ExAllocatePool3",
+                    "MmAllocateContiguousNodeMemory",
+                    "MmFreeContiguousMemory",
+                    "KeSetEvent",
+                    "MmUnmapIoSpace",
+                    "MmMapIoSpaceEx",
+                    "IoConnectInterrupt",
+                    "IoConnectInterruptEx",
+                    "IoDisconnectInterrupt",
+                    "IoDisconnectInterruptEx",
+                    "IoSetDeviceInterfaceState",
+                    "PoSetPowerState",
+                    "RtlUnicodeToMultiByteN",
+                    "ExAllocatePool2",
+                    "wcsstr",
+                    "KeStallExecutionProcessor"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, ST=Utah, L=Provo, O=SUSE LLC, OU=SUSE Labs, E&I, serialNumber=001073307, CN=SUSE LLC, ??=Private Organization, ??=Massachusetts, ??=US",
+                                "ValidFrom": "2020-08-13 23:02:35",
+                                "ValidTo": "2023-08-13 23:02:35",
+                                "Signature": "9f23cc604c71544ea66fd679586dc4dfe3c0fcdca3d07cbab981950163b8742ba57addcaf1deac88601080f67a6b80abc0bfed1a6c06fddb5f30b5d88f0ff74039b6002fc30679bb976e470fe25bbc00078890480d7c4462fc5f7ce58ec2bbc1730782b16799fd6e2ec7a4322aa84f8bd17b658bd9fa7e9536db81a14bdbc5b8fa12805116a0df1896994b370818ba697ab45e3ee96c7bd185ed8d3d490e3a26624974f24948e69278f8ab9610172f85c80232966b1f1874b2e37b8573436f73777cb2025c76af4b0d3455b6e9131b4037e368f811fc424376b88f654212f747cf631dbb7a9e0d50c6e91113f298e53d83fd83997f0256715d3985800482a57bab4bf14c23b9cffe220e87b59d6b13ade62c7b4fa5b010ff38c40e69d34863c6d9823a27a66fcf86acea9c5f3a65c7429203f30e70a9d8a5d39c09d79a419ce1eddc96cbf5b706c874ee732f1f796bcaed20fed6459ac89394fbbefefc3df39bb01e64ab8abeeafd6c92323314153c69a36834771a4c641982393ff4db0880699ddcf7fe8f50d51c0552791e054442aec3b8c6acc07691d6943d04573cb42a20a1a5252efcd6dc81a447b73d4ba68ee1b9f6ad9277f87c89e529b96b549402459def9782d9add8761e46e252607806aa8856a50c1a39e6da6446754eb4dc14ba8762d6ad95b301242c42977f04985edc6431b8ff58902d09f7837b22b91167eb",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "390c243ab43d99feed67815a7d014766",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "d49bbc4be9eb99799f23a22276989dc3",
+                                    "SHA1": "cea1af2bb44230fb0ed489ebe680421eabf72da1",
+                                    "SHA256": "5a3520589dac819dfa97605e62b9ee06badca54f434a595ef9d2277a97823fcc",
+                                    "SHA384": "4e3c192502e6fef30933911594f81088f46db57dde81308d19d9e39ecfe683e93aa93dcec23b93e16334838933c76fd8"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3",
+                                "ValidFrom": "2019-03-26 17:44:23",
+                                "ValidTo": "2034-03-22 17:44:23",
+                                "Signature": "728ffa81488291e26083255b7b8f2f940f8358ce8824fa99424e2d4e3789f89fb11eae744079f9decbf7ff2c25105298408f5438ff5dd12aa95ae6b702bbc87fee2ad3ff7fcc363c5529435d364996265d70e7f22b0567474c99581908f6b1c64f60d2fc38be02ac25d1880da52ce1ddd37d57cf6ac31960d26daa5d7b44e85a5b83dbc81b360a7e0af50a523678e29afb1354cc9cc947bf624e35af3ee1ba0fc993eed520b796b7507652357a9da13b2664371fcebc037bc461815289cc7bfe5a051a47aee412ca8e54e35a9fb0c18af2f95f4668b9afc7d93e84d12b2512383dbb9a01eadfcc66a8b6c51f6a9347b0ce069284ad43836a86395c4ce2024b7873ae4b28e6a4f8616980ccff34e8b02f6402490d8d2e1f7deba186050fed5e7034e5180200eb63be75266da71c905707ae99a58e37d2a7c3586ca5f4e7522235a75bbb6eeb48db9a72deaa5a6249099e902b120fc83adbaf68739dd9e379ca98f9681deae6582ea9186ccd993a9acd267044e666989c251e196ac7d8f3e7ffa63577fbf57dbb8c82c76f7d5432bbea990b39e82051152f89e32ae1c520f37a784e3daf176292548d278c9037dce329e84293b6f83b2b0b9950b8e434069823eeeadfb554bbaedbf1eadd72f945edb1da433b80fc6f6cdfdc916db8a5d4ef75cd654c642c59df132e021b4bfa0493c0bb371d1fb220d34f33af16a11cc0aaa888",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "424b6a53cec766141c2a63b1a51c4104",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "db3494d2a0da480f9a2dc03978395f8a",
+                                    "SHA1": "9cb274c1f98981dbdbe1a7630a9071458784c80d",
+                                    "SHA256": "49b229a10f850de5b85110a0e0f59c48dd12b116c9ad236a3f16c5bdfbc968d5",
+                                    "SHA384": "2012fa0acaa171e7e953cfad3301af5dc2947a64428d9fdc7bcd47afe88ab85fa580e0ed6d0f61e9629d46accc3b48ec"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "390c243ab43d99feed67815a7d014766",
+                                "Issuer": "C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -220423,6 +220847,459 @@
         ]
     },
     {
+        "Id": "7d4439c5-1ee3-4297-99ea-bb7eab3c256c",
+        "Tags": [
+            "btfilter.sys"
+        ],
+        "Verified": "TRUE",
+        "Author": "Andrea Monzani",
+        "Created": "2026-10-25",
+        "MitreID": "T1068",
+        "CVE": [
+            "CVE-2026-24076"
+        ],
+        "Category": "vulnerable driver",
+        "Commands": {
+            "Command": "sc.exe create btfilter binPath=C:\\windows\\temp\\btfilter.sys type=kernel && sc.exe start btfilter",
+            "Description": "A vulnerable kernel driver that can be used to disable Code Integrity",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/",
+            "https://doi.org/10.1016/j.cose.2026.105194"
+        ],
+        "Detection": [],
+        "Acknowledgement": {
+            "Person": "Andrea Monzani, Davide Netti, Antonio Parata",
+            "Handle": ""
+        },
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "btfilter.sys",
+                "MD5": "b655e2e9a50e1db45ea492ae1025390f",
+                "SHA1": "086487217cba196f523f75958cba86fc5635dd89",
+                "SHA256": "415bfdd549ce7f0b0011fe45c7330e0c44935f1bbdcedd64246a9fdfb921196f",
+                "Imphash": "f3dc67d28043552615e5c3e1c5ee2777",
+                "Authentihash": {
+                    "MD5": "4da06c14aaf93398822a7af4dd617738",
+                    "SHA1": "681a49470babca795fda69d002817936201ab220",
+                    "SHA256": "c8dc0947e07b5c52c194fe018f568dc31b7dbba7d06f241b22c857fcbe4cf81f"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "fa99347caf9c93641038e503e4a07493",
+                    "SHA1": "851eb913a7bf59c0c864c763b17543e1187dd0dc",
+                    "SHA256": "f9d6510f205fd446b310781e26dada21ed08675685ec0ebe0ce817cb89145565"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.273057227510697,
+                        "Virtual Size": "0x1237c"
+                    },
+                    ".rdata": {
+                        "Entropy": 5.315051049848134,
+                        "Virtual Size": "0x1a54"
+                    },
+                    ".data": {
+                        "Entropy": 1.7135239080098725,
+                        "Virtual Size": "0xaa1"
+                    },
+                    ".pdata": {
+                        "Entropy": 5.051614562399583,
+                        "Virtual Size": "0x834"
+                    },
+                    "PAGE": {
+                        "Entropy": 6.362229580437493,
+                        "Virtual Size": "0x5b31"
+                    },
+                    "INIT": {
+                        "Entropy": 6.0331836673242725,
+                        "Virtual Size": "0x2764"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.232475796138613,
+                        "Virtual Size": "0x348"
+                    },
+                    ".reloc": {
+                        "Entropy": 3.799071367119249,
+                        "Virtual Size": "0x30"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2024-08-27 13:25:21",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe",
+                    "USBD.SYS"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "KeAcquireSpinLockRaiseToDpc",
+                    "KeReleaseSpinLock",
+                    "ExAllocatePoolWithTag",
+                    "ExFreePoolWithTag",
+                    "memmove_s",
+                    "_strnicmp",
+                    "wcsncmp",
+                    "RtlInitAnsiString",
+                    "RtlInitUnicodeString",
+                    "RtlQueryRegistryValues",
+                    "MmGetSystemRoutineAddress",
+                    "RtlWriteRegistryValue",
+                    "RtlAnsiStringToUnicodeString",
+                    "RtlCopyUnicodeString",
+                    "RtlAppendUnicodeStringToString",
+                    "RtlAppendUnicodeToString",
+                    "RtlFreeUnicodeString",
+                    "RtlTimeToTimeFields",
+                    "KeGetCurrentIrql",
+                    "KeInitializeEvent",
+                    "KeClearEvent",
+                    "KeSetEvent",
+                    "KeWaitForSingleObject",
+                    "ExSystemTimeToLocalTime",
+                    "IoBuildDeviceIoControlRequest",
+                    "IofCallDriver",
+                    "IoCancelIrp",
+                    "IofCompleteRequest",
+                    "IoGetDeviceObjectPointer",
+                    "IoReleaseCancelSpinLock",
+                    "IoAcquireRemoveLockEx",
+                    "IoReleaseRemoveLockEx",
+                    "IoAllocateWorkItem",
+                    "IoFreeWorkItem",
+                    "IoQueueWorkItem",
+                    "IoOpenDeviceRegistryKey",
+                    "ObfDereferenceObject",
+                    "ZwCreateFile",
+                    "ZwWriteFile",
+                    "ZwClose",
+                    "ZwOpenKey",
+                    "ZwEnumerateValueKey",
+                    "ZwQueryKey",
+                    "ZwQueryValueKey",
+                    "_snprintf_s",
+                    "KeInitializeSpinLock",
+                    "mbstowcs",
+                    "RtlCheckRegistryKey",
+                    "ExGetFirmwareEnvironmentVariable",
+                    "IoAttachDeviceToDeviceStack",
+                    "IoCreateDevice",
+                    "IoCreateSymbolicLink",
+                    "IoDeleteDevice",
+                    "IoDeleteSymbolicLink",
+                    "IoDetachDevice",
+                    "IoGetAttachedDeviceReference",
+                    "IoInitializeRemoveLockEx",
+                    "IoGetDeviceProperty",
+                    "IoRegisterDeviceInterface",
+                    "ZwSetValueKey",
+                    "RtlMultiByteToUnicodeN",
+                    "IoGetLowerDeviceObject",
+                    "RtlUnicodeStringToAnsiString",
+                    "RtlGetVersion",
+                    "KeInitializeMutex",
+                    "IoWMIRegistrationControl",
+                    "IoIs32bitProcess",
+                    "PoRequestPowerIrp",
+                    "PoUnregisterPowerSettingCallback",
+                    "DbgPrint",
+                    "KeQuerySystemTimePrecise",
+                    "PsCreateSystemThread",
+                    "PsTerminateSystemThread",
+                    "ObReferenceObjectByHandle",
+                    "PsIsSystemThread",
+                    "_vsnprintf",
+                    "ExEventObjectType",
+                    "IoReleaseRemoveLockAndWaitEx",
+                    "IoSetDeviceInterfaceState",
+                    "IoAllocateIrp",
+                    "IoFreeIrp",
+                    "PoSetPowerState",
+                    "PoCallDriver",
+                    "PoStartNextPowerIrp",
+                    "ZwOpenFile",
+                    "ZwQueryInformationFile",
+                    "ZwReadFile",
+                    "KeDelayExecutionThread",
+                    "_vsnwprintf",
+                    "RtlCompareMemory",
+                    "USBD_CreateConfigurationRequestEx",
+                    "USBD_ParseConfigurationDescriptorEx"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+                                "ValidFrom": "2021-04-29 00:00:00",
+                                "ValidTo": "2036-04-28 23:59:59",
+                                "Signature": "3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.12",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "08ad40b260d29c4c9f5ecda9bd93aed9",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "5d8003a64dfa5a4d88365da1566038cb",
+                                    "SHA1": "79465b56bc7ad55a37bdf633943da8bfc84db228",
+                                    "SHA256": "84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332",
+                                    "SHA384": "65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, ST=California, L=San Jose, O=Qualcomm Atheros, Inc., CN=Qualcomm Atheros, Inc.",
+                                "ValidFrom": "2024-03-14 00:00:00",
+                                "ValidTo": "2027-04-26 23:59:59",
+                                "Signature": "4e62191d807fb915917be1086fb8df3057acb3291d1c403fb8c35de8261aa9b76f298f52cb80a179ecdf74006bcfce1ccf6a8fba6c38c553bc72e3b98de4290d54c6161210a45d4401c3859aee9d88f7686ba907c988b1f544cdae6677a3d8f70481b4952447c39cb2e301633620c0b4fa170062ae91a1a1dfc08c5b20a688bc6d53029ccc4310cdbef6e412a0a368ac3143977883455850146d1db7a8ad0a3d0ab348f7b5efcebc51beced9617700521f9cce994facfe68c52894b6d5a9af3f494a270681d891d9f9a2eb91893d6a9ba7e527a87d7b8e9d8b2f798e3ab6ee384ae7226a741668824f0c26f6c3a62a447fbc395d8e739ff9753bb4a2e5f77a7f4a2b3ac1645d9e04e2dfb46eaa09d9abf28fb9d3490fce4b50ad58948ba2d8bc023e8d021e4dc12c7970457b77b8bf8eb6eea140148a472bd10082f3a5dc91b2c4dc471a0b971302cfa337cd0de7894a45b652131bdb26b55ba24e1f326349abe5770d7eba98df13509b4935fc710c54949bf393a59a64eaf378a2070ff0d462ce0d2911609fd2a99e48855e10999347f608f3cfa0994d1efab1351ceebca567ea14ed16c45221efa05e89a1940aa3d5fbc6ab431f56fdb225ff45517c01756acc3d0daf29385fbf4517d6728a733d9c10105b5fb865bd429d73cb1d1bb4afd3d8fa014e61abc370a565f0d23e836963be25758d2c417db11668db908571154f",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "0c5577bbfc80d4dea071d13857132e45",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "edbcfff369fe7064193816af5686217c",
+                                    "SHA1": "767be4e6c6c15ec50bd0f2ca0ba35da942e4185c",
+                                    "SHA256": "6b4ff9815f5b045f2412893c4567e1648d2beef3fd36cdfd6211dd69e8f9b5ee",
+                                    "SHA384": "bb49cabc9a2ae00447134e94bb7a072dd9e7495a103a3b2ec2cae4269f80f88cdf2500bf19b519aa5505e871366f403e"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "0c5577bbfc80d4dea071d13857132e45",
+                                "Issuer": "C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Filename": "btfilter.sys",
+                "MD5": "52043b775e018d1d0c256cf955841565",
+                "SHA1": "3a91e221bbaa5045b517564c311904bd264b248f",
+                "SHA256": "8544781f315c3bbba896e11a0746a6ed1eeb618e6c39a9b7f2fbde0f24b02200",
+                "Imphash": "2a5367d97f5ac684ba43dd7dc1b9e109",
+                "Authentihash": {
+                    "MD5": "c0cb9a0af5a6612070966b955696e8ff",
+                    "SHA1": "78d8c253c2186d892bab1556a44b23d052930b22",
+                    "SHA256": "a32a1b0d99f45e8433c05c1fb0413196b73d6ae15e5a082c580781efef98edfc"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "63ed9e833d8541fa593f1b6cec40b8fb",
+                    "SHA1": "ab388497583c24f10ac5558e3d6c29896cd37478",
+                    "SHA256": "49baf861b5b587fc74d6774a190e816852f3c624284935f30aa550a8e88b3ed1"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.299661002976164,
+                        "Virtual Size": "0xd19a"
+                    },
+                    ".rdata": {
+                        "Entropy": 4.964626032417345,
+                        "Virtual Size": "0x11a4"
+                    },
+                    ".data": {
+                        "Entropy": 1.6447794158043039,
+                        "Virtual Size": "0x801"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.700779368962387,
+                        "Virtual Size": "0x690"
+                    },
+                    "PAGE": {
+                        "Entropy": 6.314189754914045,
+                        "Virtual Size": "0x3f51"
+                    },
+                    "INIT": {
+                        "Entropy": 6.093723079697007,
+                        "Virtual Size": "0x23ca"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.2480660262223995,
+                        "Virtual Size": "0x348"
+                    },
+                    ".reloc": {
+                        "Entropy": 3.551428324170389,
+                        "Virtual Size": "0x30"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2021-11-23 07:14:12",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe",
+                    "USBD.SYS"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "KeAcquireSpinLockRaiseToDpc",
+                    "KeReleaseSpinLock",
+                    "ExAllocatePoolWithTag",
+                    "ExFreePoolWithTag",
+                    "_strnicmp",
+                    "wcsncmp",
+                    "RtlInitAnsiString",
+                    "RtlInitUnicodeString",
+                    "RtlQueryRegistryValues",
+                    "MmGetSystemRoutineAddress",
+                    "RtlWriteRegistryValue",
+                    "RtlAnsiStringToUnicodeString",
+                    "RtlCopyUnicodeString",
+                    "RtlAppendUnicodeStringToString",
+                    "RtlAppendUnicodeToString",
+                    "RtlFreeUnicodeString",
+                    "RtlTimeToTimeFields",
+                    "KeGetCurrentIrql",
+                    "KeInitializeEvent",
+                    "KeClearEvent",
+                    "KeReadStateEvent",
+                    "KeSetEvent",
+                    "KeWaitForSingleObject",
+                    "ExSystemTimeToLocalTime",
+                    "IoBuildDeviceIoControlRequest",
+                    "IofCallDriver",
+                    "IoCancelIrp",
+                    "IofCompleteRequest",
+                    "IoGetDeviceObjectPointer",
+                    "IoAcquireRemoveLockEx",
+                    "IoReleaseRemoveLockEx",
+                    "IoAllocateWorkItem",
+                    "IoFreeWorkItem",
+                    "IoQueueWorkItem",
+                    "IoOpenDeviceRegistryKey",
+                    "ObfDereferenceObject",
+                    "ZwCreateFile",
+                    "ZwWriteFile",
+                    "ZwClose",
+                    "ZwOpenKey",
+                    "ZwEnumerateValueKey",
+                    "ZwQueryKey",
+                    "KeInitializeSpinLock",
+                    "_snprintf_s",
+                    "_vsnwprintf",
+                    "mbstowcs",
+                    "IoAttachDeviceToDeviceStack",
+                    "IoCreateDevice",
+                    "IoCreateSymbolicLink",
+                    "IoDeleteDevice",
+                    "IoDeleteSymbolicLink",
+                    "IoGetAttachedDeviceReference",
+                    "IoInitializeRemoveLockEx",
+                    "IoGetDeviceProperty",
+                    "IoGetLowerDeviceObject",
+                    "RtlUnicodeStringToAnsiString",
+                    "RtlGetVersion",
+                    "KeInitializeMutex",
+                    "ExGetFirmwareEnvironmentVariable",
+                    "IoReleaseCancelSpinLock",
+                    "IoWMIRegistrationControl",
+                    "IoIs32bitProcess",
+                    "PoRequestPowerIrp",
+                    "PoUnregisterPowerSettingCallback",
+                    "DbgPrint",
+                    "KeQuerySystemTimePrecise",
+                    "PsCreateSystemThread",
+                    "PsTerminateSystemThread",
+                    "ObReferenceObjectByHandle",
+                    "PsIsSystemThread",
+                    "ExEventObjectType",
+                    "IoDetachDevice",
+                    "IoReleaseRemoveLockAndWaitEx",
+                    "IoAllocateIrp",
+                    "IoFreeIrp",
+                    "PoSetPowerState",
+                    "PoCallDriver",
+                    "PoStartNextPowerIrp",
+                    "ZwOpenFile",
+                    "ZwQueryInformationFile",
+                    "ZwReadFile",
+                    "KeDelayExecutionThread",
+                    "ZwQueryValueKey",
+                    "USBD_CreateConfigurationRequestEx",
+                    "USBD_ParseConfigurationDescriptorEx"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured ID Code Signing CA",
+                                "ValidFrom": "2013-10-22 12:00:00",
+                                "ValidTo": "2028-10-22 12:00:00",
+                                "Signature": "3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "0409181b5fd5bb66755343b56f955008",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "9359496ca4f021408b9d8923cab8b179",
+                                    "SHA1": "2aed40d7759997830870769be250199fd609e40e",
+                                    "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65",
+                                    "SHA384": "5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, ST=California, L=San Jose, O=Qualcomm Atheros, Inc., CN=Qualcomm Atheros, Inc.",
+                                "ValidFrom": "2021-04-01 00:00:00",
+                                "ValidTo": "2024-04-03 23:59:59",
+                                "Signature": "e1538a8b084ced568c1fff0d2681c2fbb94edbd3c27d17b7f108e2c1babd78dcc091ff5fb99cacf0fc8caadba9e84d5d957060f03f102b74bf34db4e0ee49f8682a4b22b089894030fb618e93c505892afd4eb70df8136697cfb4f6a9237a37cfcf3d2e22b6b18ece37c3b5916ff0a44752e86df987e01045d6202a810b8c15bfa2b15c6262506a28f1d97a0a4a6d480b828544a74493c7e0b3e692b34afb1f408ae3dcb5ce0da63315d53883b2c37431c5473dfd406c216e8c5bc6ca70b19302160dc10d8b94f576cd0ed0020fbeb3b3097c514c10bd7f6a2f81fa8b64543d9e2f62ff49ed89baa8662d2bb54bbdcd5d06339642b975e603c9c5db043980ceb",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "02154f7c8cd907a55be7b16ecae524b5",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "e3fb267bdd17ff096bdadf3e6de16464",
+                                    "SHA1": "1587995b3191e0573d7a6c4995b53ce15d96e5a7",
+                                    "SHA256": "f5a168b0edc740cba3807f21603edf25f6860fbde91de72488f728543f985d11",
+                                    "SHA384": "5dd345dffb4a036a09e728efc61e184ac47bba4e4413bde6cffdc1837b42850ce617f4cb7287fddfc8583d406b0146be"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "02154f7c8cd907a55be7b16ecae524b5",
+                                "Issuer": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured ID Code Signing CA",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "Id": "9eb0156e-4c43-487f-be8c-40a7b19a4279",
         "Tags": [
             "ardrv.sys",
@@ -269608,6 +270485,606 @@
         ]
     },
     {
+        "Id": "8b8bbbfe-798b-47bf-991b-21a0a0becef3",
+        "Tags": [
+            "vsapint.sys"
+        ],
+        "Verified": "TRUE",
+        "Author": "Andrea Monzani",
+        "Created": "2026-10-25",
+        "MitreID": "T1068",
+        "Category": "vulnerable driver",
+        "Commands": {
+            "Command": "sc.exe create vsapint binPath=C:\\windows\\temp\\vsapint.sys type=kernel && sc.exe start vsapint",
+            "Description": "A vulnerable kernel driver that can be used to disable Code Integrity",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/",
+            "https://doi.org/10.1016/j.cose.2026.105194"
+        ],
+        "Detection": [],
+        "Acknowledgement": {
+            "Person": "Andrea Monzani, Davide Netti, Antonio Parata",
+            "Handle": ""
+        },
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "vsapint.sys",
+                "MD5": "3e62bffd59054488001977738bb917c6",
+                "SHA1": "109f48aad567df4dbb5a2b33b1baa5db0fa9e422",
+                "SHA256": "0e674d7e96e2e2e33ca96a5537cd4dd9db247249131ac91c44ebe9764efbfffe",
+                "Imphash": "78945e44f49de050f1aa5477c5f78ab8",
+                "Authentihash": {
+                    "MD5": "46f3e2fe2824a0283fe717c0fe89b567",
+                    "SHA1": "5ecef80a764c8e52ca66ad0febbce6e09aa2c1ea",
+                    "SHA256": "7e748ee7c0caaacbded97da7d2dd307de6520004a32bd96980e39523a19f744b"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "1d655196a84efc729e865813be7eff71",
+                    "SHA1": "3a8cc12028110dac08447af9825f68a449d5f33e",
+                    "SHA256": "ab50eed62287613b57467bbdd5b14bf1ae77d0395331384339c23361881f985f"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.550868691795445,
+                        "Virtual Size": "0x1c1d10"
+                    },
+                    ".rdata": {
+                        "Entropy": 7.8959302600495365,
+                        "Virtual Size": "0x4fd0b0"
+                    },
+                    ".data": {
+                        "Entropy": 4.34792119578486,
+                        "Virtual Size": "0x15558"
+                    },
+                    ".pdata": {
+                        "Entropy": 6.083863101931095,
+                        "Virtual Size": "0xc900"
+                    },
+                    ".edata": {
+                        "Entropy": 5.648542287348602,
+                        "Virtual Size": "0x2b74"
+                    },
+                    "INIT": {
+                        "Entropy": 4.970469162751867,
+                        "Virtual Size": "0x91e"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.3886971804341006,
+                        "Virtual Size": "0x3f0"
+                    },
+                    ".reloc": {
+                        "Entropy": 5.4651940687692315,
+                        "Virtual Size": "0x3b48"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2024-10-08 12:04:08",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe"
+                ],
+                "ExportedFunctions": [
+                    "AllocVsapiResourceForNtNativeResource",
+                    "FreeVsapiResourceForNtNativeResource",
+                    "IsVsapiWT",
+                    "KDGetFileAttributes",
+                    "KDGetFileAttributesW",
+                    "KDReadFile",
+                    "KDSetFileAttributes",
+                    "KDSetFileAttributesW",
+                    "KDWriteFile",
+                    "MapR0NameToR3Name",
+                    "MapR0NameToR3NameW",
+                    "MapR3NameToR0Name",
+                    "MapR3NameToR0NameW",
+                    "QueryKeyValue",
+                    "QueryStringValueUnderCurrentVersion",
+                    "QuerySystemRoot",
+                    "TMCopySecurityDescriptor",
+                    "TMQuerySecurityObject",
+                    "TMSetSecurityObject",
+                    "VSAccess",
+                    "VSAccessW",
+                    "VSActOnFile",
+                    "VSAddArchProcessExcludeExtName",
+                    "VSAddArchProcessExtName",
+                    "VSAddDataType",
+                    "VSAddPackPolicyExcludeName",
+                    "VSAddProcessExcludeExtName",
+                    "VSAddProcessExtName",
+                    "VSAddSpywareExcludeName",
+                    "VSAllocateMemoryArray",
+                    "VSArchFileNeedProcess",
+                    "VSBackupFile",
+                    "VSBackupFileW",
+                    "VSBackupResourceW",
+                    "VSBackupVSCData",
+                    "VSBaseName",
+                    "VSCalculateCRC",
+                    "VSCharType",
+                    "VSCheckPatternFileW",
+                    "VSCheckResourceIntegrity",
+                    "VSCleanVirus",
+                    "VSCleanVirusW",
+                    "VSClearArchProcessExcludeExtNameTable",
+                    "VSClearArchProcessExtNameTable",
+                    "VSClearPackPolicyExcludeNameTable",
+                    "VSClearProcessExcludeExtNameTable",
+                    "VSClearProcessExtNameTable",
+                    "VSClearSpywareExcludeNameTable",
+                    "VSCloseFile",
+                    "VSCloseIOFromHandle",
+                    "VSCloseResource",
+                    "VSConvertCharacter",
+                    "VSCopyFile",
+                    "VSCopyFileFD",
+                    "VSCopyFileW",
+                    "VSCrc32",
+                    "VSCreateDirectoryTree",
+                    "VSCreateDirectoryTreeA",
+                    "VSCreateDirectoryTreeU",
+                    "VSCreateDirectoryTreeW",
+                    "VSDCIsCompressed",
+                    "VSDataType",
+                    "VSDataTypeFD",
+                    "VSDecompress",
+                    "VSDecompressFile",
+                    "VSDelDataType",
+                    "VSDelUserDecodeFunc",
+                    "VSDeleteArchProcessExcludeExtName",
+                    "VSDeleteArchProcessExtName",
+                    "VSDeleteDirectoryFile",
+                    "VSDeleteDirectoryFileW",
+                    "VSDeleteFile",
+                    "VSDeleteFileW",
+                    "VSDeletePackPolicyExcludeName",
+                    "VSDeleteProcessExcludeExtName",
+                    "VSDeleteProcessExtName",
+                    "VSDeleteSpywareExcludeName",
+                    "VSDisablePattern",
+                    "VSEncBackupFile",
+                    "VSEncBackupFileW",
+                    "VSFileNeedProcess",
+                    "VSFindCloseFile",
+                    "VSFindFirstFile",
+                    "VSFindFirstFileW",
+                    "VSFindNextFile",
+                    "VSFindNextFileW",
+                    "VSFormatDate",
+                    "VSFreeMemUsageArray",
+                    "VSFreePatternList",
+                    "VSFreePatternNode",
+                    "VSFullPathTransform",
+                    "VSGetActiveScanFlag",
+                    "VSGetArchProcessExcludeExtName",
+                    "VSGetArchProcessExcludeExtNumber",
+                    "VSGetArchProcessExtName",
+                    "VSGetArchProcessExtNumber",
+                    "VSGetArchProcessExtTableSize",
+                    "VSGetBackupEncodeFlag",
+                    "VSGetBackupFileInfo",
+                    "VSGetBackupFileInfoW",
+                    "VSGetCharacterEnvType",
+                    "VSGetCleanBackupFlag",
+                    "VSGetCleanZipFlag",
+                    "VSGetConfChangeFlag",
+                    "VSGetConfig",
+                    "VSGetConfigEx",
+                    "VSGetCurrentPatternFileInternalVersion",
+                    "VSGetCurrentPatternFileVersion",
+                    "VSGetDataTypeInfo",
+                    "VSGetDebug",
+                    "VSGetDecodeFlag",
+                    "VSGetDecompressLayer",
+                    "VSGetDefaultExcludeExtList",
+                    "VSGetDefaultExcludeExtListSize",
+                    "VSGetDefaultExtList",
+                    "VSGetDefaultExtListSize",
+                    "VSGetDefaultHospitalPath",
+                    "VSGetDefaultPatternFile",
+                    "VSGetDefaultPatternPath",
+                    "VSGetDefaultTempPath",
+                    "VSGetDetectableVirusNumber",
+                    "VSGetDetectionExcludeNames",
+                    "VSGetEncodeAction",
+                    "VSGetEncryptTempFileFlag",
+                    "VSGetExpandLiteFlag",
+                    "VSGetExtractAmgFlag",
+                    "VSGetExtractArchiveFlag",
+                    "VSGetExtractFileCountLimit",
+                    "VSGetExtractFileRatioLimit",
+                    "VSGetExtractFileSizeLimit",
+                    "VSGetExtractFileSizeLimitByVSDT",
+                    "VSGetExtractPath",
+                    "VSGetFileAttributes",
+                    "VSGetFileAttributesByHandle",
+                    "VSGetFileAttributesW",
+                    "VSGetFileBasicInformation",
+                    "VSGetFileBasicInformationByHandle",
+                    "VSGetFileBasicInformationW",
+                    "VSGetFilePosition",
+                    "VSGetFileTimes",
+                    "VSGetFileTimesW",
+                    "VSGetHeuristicLevel",
+                    "VSGetKeepDecompressFileFlag",
+                    "VSGetMemUsage",
+                    "VSGetMemoryDecompressSize",
+                    "VSGetMsgScanLayer",
+                    "VSGetMultiPatternFilesInfo",
+                    "VSGetNormalizeMemScanFlag",
+                    "VSGetOleEmbedScanLayer",
+                    "VSGetPatternHandle",
+                    "VSGetPatternInternalVersion",
+                    "VSGetPatternPath",
+                    "VSGetPatternProperty",
+                    "VSGetProcessAllFileFlag",
+                    "VSGetProcessAllFileInArcFlag",
+                    "VSGetProcessAllSubDirFlag",
+                    "VSGetProcessExcludeExtName",
+                    "VSGetProcessExcludeExtNumber",
+                    "VSGetProcessExtName",
+                    "VSGetProcessExtNumber",
+                    "VSGetProcessExtTableSize",
+                    "VSGetProcessMemScanFlag",
+                    "VSGetRTFScanLayer",
+                    "VSGetRedAlertFlag",
+                    "VSGetScanBPFlag",
+                    "VSGetScanGenericMacroFlag",
+                    "VSGetScanJavaFlag",
+                    "VSGetScanMacroFlag",
+                    "VSGetScanMemoryFlag",
+                    "VSGetScanTask",
+                    "VSGetScanTaskStatus",
+                    "VSGetScriptTrapFlag",
+                    "VSGetServiceTable",
+                    "VSGetSmartDecompressFlag",
+                    "VSGetSoftMiceFlag",
+                    "VSGetSpywareExcludeName",
+                    "VSGetSpywareExcludeNameEx",
+                    "VSGetSpywareExcludeNumber",
+                    "VSGetStripMacroFlag",
+                    "VSGetTempPath",
+                    "VSGetVSCInfo",
+                    "VSGetVSDebug",
+                    "VSGetVSVerboseLevel",
+                    "VSGetVerboseLevel",
+                    "VSGetVersion",
+                    "VSGetVersionString",
+                    "VSGetVirusAction",
+                    "VSGetVirusDetectionInfo",
+                    "VSGetVirusHospitalPath",
+                    "VSGetVirusInfo",
+                    "VSGetVirusNameInfo",
+                    "VSGetVirusNameInfoEx",
+                    "VSGetVirusPatternInfo",
+                    "VSGetVirusPatternInfoEx",
+                    "VSGetVirusPatternInformation",
+                    "VSGetVirusPropertyByName",
+                    "VSInit",
+                    "VSIsDir",
+                    "VSIsEZDriveInstalled",
+                    "VSIsNewerEngine",
+                    "VSIsTwoByteWord",
+                    "VSKDCleanBootVirus",
+                    "VSKDGetLongPathName",
+                    "VSKDReadNewestPattern",
+                    "VSKDReadNewestPatternW",
+                    "VSKDScanBootSector",
+                    "VSKDScanPartitionTable",
+                    "VSKDSetCheckForInteropFlag",
+                    "VSKDSetPatternInsightCallbackFunc",
+                    "VSKDZwClose",
+                    "VSKDZwCreateFile",
+                    "VSKDZwQueryInformationFile",
+                    "VSKDZwSetInformationFile",
+                    "VSLoadCustomDefenseList",
+                    "VSLseekResource",
+                    "VSMakeDirectory",
+                    "VSMakeDirectoryW",
+                    "VSMatch",
+                    "VSOpenCreateFileW",
+                    "VSOpenFile",
+                    "VSOpenFileW",
+                    "VSOpenIOFromHandle",
+                    "VSOpenResource",
+                    "VSProcessFile",
+                    "VSQuit",
+                    "VSReadControlPattern",
+                    "VSReadFile",
+                    "VSReadPattern",
+                    "VSReadPatternInFile",
+                    "VSReadPatternInFileW",
+                    "VSReadPhysicalSector",
+                    "VSReadResource",
+                    "VSRemoveAllTempFile",
+                    "VSRemoveDirectory",
+                    "VSRemoveDirectoryW",
+                    "VSRemoveWhiteChar",
+                    "VSRenameFile",
+                    "VSRenameFileW",
+                    "VSResetConfChangeFlag",
+                    "VSResetCustomDefenseList",
+                    "VSResetScanCounter",
+                    "VSResourceDataType",
+                    "VSResourceSize",
+                    "VSRestoreFile",
+                    "VSRestoreFileW",
+                    "VSScanBP",
+                    "VSScanFile",
+                    "VSScanFileFD",
+                    "VSScanResource",
+                    "VSScanResourceNTKD",
+                    "VSScanShellCode",
+                    "VSSearchArchProcessExcludeExtName",
+                    "VSSearchArchProcessExtName",
+                    "VSSearchPackPolicyExcludeName",
+                    "VSSearchProcessExcludeExtName",
+                    "VSSearchSpywareExcludeName",
+                    "VSSeekFile",
+                    "VSSetActiveScanFlag",
+                    "VSSetAdvFileInfoCallBackFunc",
+                    "VSSetAskActionFunc",
+                    "VSSetBackupEncodeFlag",
+                    "VSSetCharacterEnvType",
+                    "VSSetCleanBackupFlag",
+                    "VSSetCleanZipFlag",
+                    "VSSetConfig",
+                    "VSSetConfigEx",
+                    "VSSetCountFileFlag",
+                    "VSSetDataTypeFD",
+                    "VSSetDataTypeInfo",
+                    "VSSetDecodeFlag",
+                    "VSSetDecompressLayer",
+                    "VSSetDefaultHospitalPath",
+                    "VSSetDefaultPatternFile",
+                    "VSSetDefaultPatternPath",
+                    "VSSetDefaultTempPath",
+                    "VSSetDetectionExcludeNames",
+                    "VSSetEncodeAction",
+                    "VSSetEncryptTempFileFlag",
+                    "VSSetEndOfFile",
+                    "VSSetExpandLiteFlag",
+                    "VSSetExtractAmgFlag",
+                    "VSSetExtractArchiveFlag",
+                    "VSSetExtractFileCountLimit",
+                    "VSSetExtractFileRatioLimit",
+                    "VSSetExtractFileSizeLimit",
+                    "VSSetExtractFileSizeLimitByVSDT",
+                    "VSSetExtractPath",
+                    "VSSetFeedbackCallBackFunc",
+                    "VSSetFileAttributes",
+                    "VSSetFileAttributesByHandle",
+                    "VSSetFileAttributesW",
+                    "VSSetFileBasicInformation",
+                    "VSSetFileBasicInformationByHandle",
+                    "VSSetFileBasicInformationW",
+                    "VSSetFilePosition",
+                    "VSSetFileTimes",
+                    "VSSetFileTimesW",
+                    "VSSetHeuristicLevel",
+                    "VSSetKeepDecompressFileFlag",
+                    "VSSetLogFilePath",
+                    "VSSetLogFilePathFunc",
+                    "VSSetLogFlag",
+                    "VSSetMemoryDecompressSize",
+                    "VSSetMsgScanLayer",
+                    "VSSetNormalizeMemScanFlag",
+                    "VSSetOleEmbedCallBackFunc",
+                    "VSSetOleEmbedScanLayer",
+                    "VSSetPatternPath",
+                    "VSSetPostExtractArchFunc",
+                    "VSSetPreExtractArchFunc",
+                    "VSSetProcessAllFileFlag",
+                    "VSSetProcessAllFileInArcFlag",
+                    "VSSetProcessAllSubDirFlag",
+                    "VSSetProcessFileCallBackFunc",
+                    "VSSetProcessMemScanFlag",
+                    "VSSetRTFScanLayer",
+                    "VSSetRealTimeFlag",
+                    "VSSetRedAlertFlag",
+                    "VSSetRenameFileNameFunc",
+                    "VSSetScanBPFlag",
+                    "VSSetScanGenericMacroFlag",
+                    "VSSetScanJavaFlag",
+                    "VSSetScanLiteFileFlag",
+                    "VSSetScanMacroFlag",
+                    "VSSetScanMemoryFlag",
+                    "VSSetScriptTrapFlag",
+                    "VSSetSmartDecompressFlag",
+                    "VSSetSoftMiceFlag",
+                    "VSSetStripMacroFlag",
+                    "VSSetTempPath",
+                    "VSSetUserDecodeFunc",
+                    "VSSetUserLogFunc",
+                    "VSSetVSCInfo",
+                    "VSSetVSVerboseLevel",
+                    "VSSetVerboseLevel",
+                    "VSSetVirusAction",
+                    "VSSetVirusHospitalPath",
+                    "VSShareVirusPattern",
+                    "VSStoreVSCData",
+                    "VSStricmp",
+                    "VSStrip",
+                    "VSStrnicmp",
+                    "VSSwapLong",
+                    "VSSwapLongTable",
+                    "VSSwapShort",
+                    "VSSwapShortTable",
+                    "VSToLowerString",
+                    "VSToUpperString",
+                    "VSUpdateZip",
+                    "VSVirusScan",
+                    "VSVirusScanFile",
+                    "VSVirusScanFileW",
+                    "VSVirusScanFileWithoutFNFilter",
+                    "VSWriteFile",
+                    "VSWriteResource",
+                    "VsapiEntry",
+                    "_VSBackSearchChar",
+                    "_VSGetThreadTidsAndInitThreadsGlobalArray",
+                    "_VSIScanEnableSignature",
+                    "_VSIScanGetVirusInfo",
+                    "_VSIScanGetVirusInfoEx",
+                    "_VSResetMemUsage",
+                    "_VSScanVirusInMemory",
+                    "mwcstombs",
+                    "mwcstombsn",
+                    "mwctomb"
+                ],
+                "ImportedFunctions": [
+                    "sprintf",
+                    "_stricmp",
+                    "IofCompleteRequest",
+                    "RtlInitUnicodeString",
+                    "ZwClose",
+                    "ZwCreateKey",
+                    "ZwSetValueKey",
+                    "mbstowcs",
+                    "RtlWriteRegistryValue",
+                    "RtlCopyUnicodeString",
+                    "RtlGetVersion",
+                    "KeInitializeEvent",
+                    "MmGetSystemRoutineAddress",
+                    "PsGetVersion",
+                    "IoCreateDevice",
+                    "IoCreateSymbolicLink",
+                    "IoDeleteDevice",
+                    "IoRegisterShutdownNotification",
+                    "wcsrchr",
+                    "_wcsicmp",
+                    "wcsncpy",
+                    "RtlQueryRegistryValues",
+                    "DbgPrint",
+                    "KeDelayExecutionThread",
+                    "ExAllocatePoolWithTag",
+                    "ExFreePoolWithTag",
+                    "ZwCreateFile",
+                    "ZwQueryInformationFile",
+                    "KeSetEvent",
+                    "KeWaitForSingleObject",
+                    "ObfDereferenceObject",
+                    "MmIsAddressValid",
+                    "MmMapViewInSystemSpace",
+                    "MmUnmapViewInSystemSpace",
+                    "MmCreateSection",
+                    "IoBuildDeviceIoControlRequest",
+                    "IofCallDriver",
+                    "IoGetDeviceObjectPointer",
+                    "ObReferenceObjectByHandle",
+                    "ZwSetInformationFile",
+                    "ZwReadFile",
+                    "ZwWriteFile",
+                    "ZwCreateSection",
+                    "ZwMapViewOfSection",
+                    "ZwUnmapViewOfSection",
+                    "ZwCreateEvent",
+                    "ZwQueryDirectoryFile",
+                    "ZwDuplicateObject",
+                    "ZwQuerySecurityObject",
+                    "IoDeleteSymbolicLink",
+                    "IoUnregisterShutdownNotification",
+                    "KeWaitForMultipleObjects",
+                    "PsCreateSystemThread",
+                    "PsTerminateSystemThread",
+                    "ZwOpenKey",
+                    "PsGetCurrentThreadId",
+                    "ZwNotifyChangeKey",
+                    "__C_specific_handler",
+                    "strchr",
+                    "strncpy",
+                    "strrchr",
+                    "strcmp",
+                    "strncmp",
+                    "wcschr",
+                    "swprintf",
+                    "atol",
+                    "strstr",
+                    "atoi",
+                    "_wcsnicmp",
+                    "tolower",
+                    "toupper",
+                    "_strnicmp",
+                    "RtlTimeToTimeFields",
+                    "KeEnterCriticalRegion",
+                    "KeLeaveCriticalRegion",
+                    "ExAcquireFastMutexUnsafe",
+                    "ExReleaseFastMutexUnsafe",
+                    "PsGetCurrentProcessId",
+                    "RtlUnicodeToMultiByteSize",
+                    "RtlUnicodeToMultiByteN",
+                    "NtSetSecurityObject",
+                    "ObOpenObjectByPointer",
+                    "KeBugCheckEx"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Hardware Compatibility Publisher",
+                                "ValidFrom": "2024-05-16 22:16:05",
+                                "ValidTo": "2025-05-14 22:16:05",
+                                "Signature": "59e526577072d951ca2b437f0eef40e4b19e73d0b8ec1c64d0e9a996978612e67bf32d77f143ae724db9ab2e2221da438aaab784799b2885c4a196315f7a6bfeda8be53518cd47cbb271d5e3dbdaa5917275d75b03097fe23504897a00797315aaa7e88d0b492956428b2086a866f4974bd1a282af175e3a27acd56c206d313cdecad2289c10867c8a3a7f24ea28831f9b574c47c86af5504c7d5647925cfa16e88c943f93aa6cc6bc3494d57661007189adf6498751ea2a8a607dfc79125d5e1398b8f98466b39427ac43b65c327c2e8347d4940c769054829ce7ca3ca32e0714532a075ed193bdc42fc8d102419acc65a565e0bd031efe41d7437148ca28af",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "3300000110bbda1909b3f83897000000000110",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "dca6a67d48ad7ecdb2e445f502a8eb98",
+                                    "SHA1": "3a7630b4eeaf580dd8212039061c044504cd2741",
+                                    "SHA256": "c7cd78241a66b6992cbe11a2773e8df626ecc6443c09204075b1818d6409caf7",
+                                    "SHA384": "a7a55fd7f70b614325a6b8a0a5dc29e051bf46a88c85471ec7b58e4860942ad1bb6a1cabac8d28ce59e79c8f26fc5799"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2012",
+                                "ValidFrom": "2012-04-18 23:48:38",
+                                "ValidTo": "2027-04-18 23:58:38",
+                                "Signature": "5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "610baac1000000000009",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "a569061297e8e824767dbc3184a69bea",
+                                    "SHA1": "adbb26a587a8f44b4fccaecb306f980d1c55a150",
+                                    "SHA256": "cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46",
+                                    "SHA384": "e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "3300000110bbda1909b3f83897000000000110",
+                                "Issuer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2012",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "Id": "4dd3289c-522c-4fce-b48e-5370efc90fa1",
         "Tags": [
             "iQVW64.SYS"
@@ -293362,6 +294839,458 @@
                 "Signatures": {},
                 "Imphash": "08c7f29f5cb29ba70e49879da2e8ddce",
                 "LoadsDespiteHVCI": "FALSE"
+            }
+        ]
+    },
+    {
+        "Id": "d009b5bf-d999-4d0b-a4be-1bcbe1effc15",
+        "Tags": [
+            "vdk.sys"
+        ],
+        "Verified": "TRUE",
+        "Author": "Andrea Monzani",
+        "Created": "2026-10-25",
+        "MitreID": "T1068",
+        "CVE": [
+            "CVE-2026-21709"
+        ],
+        "Category": "vulnerable driver",
+        "Commands": {
+            "Command": "sc.exe create vdk binPath=C:\\windows\\temp\\vdk.sys type=kernel && sc.exe start vdk",
+            "Description": "A vulnerable kernel driver that can be used to disable Code Integrity",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/",
+            "https://doi.org/10.1016/j.cose.2026.105194"
+        ],
+        "Detection": [],
+        "Acknowledgement": {
+            "Person": "Andrea Monzani, Davide Netti, Antonio Parata",
+            "Handle": ""
+        },
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "vdk.sys",
+                "MD5": "b0b671c32576d55a02c712b15f167a51",
+                "SHA1": "80dad0a6dbbd6e4535abbf5446f61c010e101aba",
+                "SHA256": "1ca23e5a2a57522fbca4325eb0cc4c5b4f77610f3557862b7b6548efe2dff26b",
+                "Imphash": "0314f30067e6b1b0687e9b7ade7720ac",
+                "Authentihash": {
+                    "MD5": "6258cb5a25bb2ea89f1c75d153ce27b2",
+                    "SHA1": "402d31b93abd526d901ea28a5b427ee7eba17ffd",
+                    "SHA256": "3b9499627b7a87dd611a2de18dec33274f438607fddbd31716119997ddbabee2"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "c10b8036d334bd658e94c12437eee642",
+                    "SHA1": "ee9df90815469f406b89c9c0a7c70ff2f36dec42",
+                    "SHA256": "64bbd2c46d2c21ebffaf097433608834626ce923f097f2552646d7b404c2944f"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.380542893347635,
+                        "Virtual Size": "0x8800"
+                    },
+                    ".rdata": {
+                        "Entropy": 4.652637351714975,
+                        "Virtual Size": "0xab4"
+                    },
+                    ".data": {
+                        "Entropy": 1.0152591009839942,
+                        "Virtual Size": "0x78"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.339766000544305,
+                        "Virtual Size": "0x3d8"
+                    },
+                    "PAGE": {
+                        "Entropy": 6.302075095282848,
+                        "Virtual Size": "0xa3f"
+                    },
+                    "INIT": {
+                        "Entropy": 5.266833087464733,
+                        "Virtual Size": "0xbe4"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.333130895444638,
+                        "Virtual Size": "0x460"
+                    },
+                    ".reloc": {
+                        "Entropy": 1.9669171866886992,
+                        "Virtual Size": "0x10"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2019-12-17 17:04:53",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "RtlInitializeBitMap",
+                    "RtlClearAllBits",
+                    "RtlFindClearBits",
+                    "RtlClearBits",
+                    "RtlSetBits",
+                    "RtlAreBitsClear",
+                    "KeAcquireSpinLockRaiseToDpc",
+                    "KeReleaseSpinLock",
+                    "ExAllocatePoolWithTag",
+                    "ExFreePoolWithTag",
+                    "__C_specific_handler",
+                    "DbgPrintEx",
+                    "KeInitializeEvent",
+                    "KeClearEvent",
+                    "KeSetEvent",
+                    "KeWaitForSingleObject",
+                    "KeAcquireSpinLockAtDpcLevel",
+                    "KeReleaseSpinLockFromDpcLevel",
+                    "ExQueryDepthSList",
+                    "ExpInterlockedPopEntrySList",
+                    "ExpInterlockedPushEntrySList",
+                    "ExInitializeNPagedLookasideList",
+                    "ExDeleteNPagedLookasideList",
+                    "IofCompleteRequest",
+                    "RtlInitializeGenericTableAvl",
+                    "RtlInsertElementGenericTableAvl",
+                    "RtlDeleteElementGenericTableAvl",
+                    "RtlLookupElementGenericTableAvl",
+                    "RtlEnumerateGenericTableAvl",
+                    "RtlEnumerateGenericTableLikeADirectory",
+                    "RtlGetElementGenericTableAvl",
+                    "RtlNumberGenericTableElementsAvl",
+                    "PsGetCurrentProcessId",
+                    "PsGetCurrentThreadId",
+                    "RtlInitUnicodeString",
+                    "PsCreateSystemThread",
+                    "IoCreateDevice",
+                    "IoCreateSymbolicLink",
+                    "IoDeleteDevice",
+                    "IoDeleteSymbolicLink",
+                    "ObReferenceObjectByHandle",
+                    "ObfDereferenceObject",
+                    "ZwClose",
+                    "ZwCreateDirectoryObject",
+                    "ZwMakeTemporaryObject",
+                    "IoGetConfigurationInformation",
+                    "swprintf",
+                    "RtlQueryRegistryValues",
+                    "RtlGetVersion",
+                    "ExInterlockedInsertTailList",
+                    "MmProbeAndLockPages",
+                    "MmUnlockPages",
+                    "MmGetSystemRoutineAddress",
+                    "MmMapLockedPagesSpecifyCache",
+                    "MmUnmapLockedPages",
+                    "PsGetVersion",
+                    "IoAllocateMdl",
+                    "IoFreeMdl",
+                    "IoGetDeviceObjectPointer",
+                    "IoGetDevicePropertyData",
+                    "ZwLoadDriver",
+                    "ZwCreateKey",
+                    "ZwOpenKey",
+                    "ZwSetValueKey",
+                    "IoGetLowerDeviceObject",
+                    "RtlImageNtHeader",
+                    "RtlImageDirectoryEntryToData",
+                    "KeFlushEntireTb",
+                    "IoSetPartitionInformation",
+                    "IoReadPartitionTableEx",
+                    "IoSetPartitionInformationEx",
+                    "RtlUnicodeStringToAnsiString",
+                    "KeWaitForMultipleObjects",
+                    "ZwQueryInformationFile",
+                    "IoAcquireVpbSpinLock",
+                    "IoReleaseVpbSpinLock",
+                    "RtlInitAnsiString",
+                    "RtlAnsiStringToUnicodeString",
+                    "RtlFreeUnicodeString",
+                    "RtlCompareMemory",
+                    "ZwCreateFile",
+                    "ZwSetInformationFile",
+                    "ZwReadFile",
+                    "ZwWriteFile",
+                    "KeSetPriorityThread",
+                    "ExInterlockedRemoveHeadList",
+                    "PsTerminateSystemThread",
+                    "IoEnumerateDeviceObjectList",
+                    "_snwprintf",
+                    "KeBugCheckEx"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Hardware Compatibility Publisher",
+                                "ValidFrom": "2019-06-05 18:06:32",
+                                "ValidTo": "2020-06-03 18:06:32",
+                                "Signature": "11f64665e99ee9a3212a8317075cf2122256a6cd5452564366da4b3e890c7a94b167d27a0cb1e962de146f371429f531349fc359cccece5f32fa84cd25231f892e44c4676b5ff4008ce6b3f3d9a2690a956a2a6a9e982ba8ebd4256971437156136a25b2e5184e11550aecb83f5ec8ae5467e866d6bbf44b9e8642c8bd5e316a4a494f676aa15eefad41893dd0a7187c881fa235b45f1a0696a8ad2d5c1531eed442d7281290b84f976f9ca241027378c241157a326739b2e8305adbfcef5005f5ccec402c1ab03d6e28c36987ae0d07cd12e41a348098d846f57c3225dbfed0c1b809ad311770854d368d150ee7767676c39a3d148f05cf7c2dcea5f1f7c6f2",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "33000000857f83dc2a6ca979b8000000000085",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "85e8c40624a19ac2076dd91f49d8fb53",
+                                    "SHA1": "621756d2a4e10231e34677a3c0f2a8d1fb0fb7ca",
+                                    "SHA256": "442ba2fb3fc8ab1b1b3c71a45f6ea08ce00cea7eae124ef915d4c17622eb336a",
+                                    "SHA384": "19b80fb83482cdb42c94c2eabac29e4db7777988905aab348bd7ed62e325d2ea1f4c80df0d7275abcb2b67585cfc7c36"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2012",
+                                "ValidFrom": "2012-04-18 23:48:38",
+                                "ValidTo": "2027-04-18 23:58:38",
+                                "Signature": "5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "610baac1000000000009",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "a569061297e8e824767dbc3184a69bea",
+                                    "SHA1": "adbb26a587a8f44b4fccaecb306f980d1c55a150",
+                                    "SHA256": "cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46",
+                                    "SHA384": "e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "33000000857f83dc2a6ca979b8000000000085",
+                                "Issuer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2012",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Filename": "vdk.sys",
+                "MD5": "411bf69a3b8b498dbad84d2764ea2878",
+                "SHA1": "a048fb2a98036248292612b5ffb15cdd8af41c95",
+                "SHA256": "2b5e3d36dcbae483ecbbc29725f21bf17438cd286f2f1c5eeea81502a75e695a",
+                "Imphash": "0859485bc1a79ac75cbcce07f2ff1c8f",
+                "Authentihash": {
+                    "MD5": "e7fd36b8c455196403998504bda5d2b7",
+                    "SHA1": "a7374e62e88952069acc986ebab16f3d24b88063",
+                    "SHA256": "093f886ab11212cacdbc5e1eedac657a2d3209987e5fd45c7b164a44fcd63a8b"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "4985e31815cd49a0250a3dd606b84b31",
+                    "SHA1": "04c5ce12b928f98d527211be94f5e63ca420aa76",
+                    "SHA256": "716b3c64771df855c3ec5955d7e77dec587df29443f1c6ab76b98514dd9adf27"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.349861040434346,
+                        "Virtual Size": "0x8d90"
+                    },
+                    ".rdata": {
+                        "Entropy": 4.544131262369595,
+                        "Virtual Size": "0xdb4"
+                    },
+                    ".data": {
+                        "Entropy": 0.5951173149449529,
+                        "Virtual Size": "0xf8"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.366408712691802,
+                        "Virtual Size": "0x420"
+                    },
+                    "PAGE": {
+                        "Entropy": 6.290323315153348,
+                        "Virtual Size": "0xa3e"
+                    },
+                    "INIT": {
+                        "Entropy": 5.274100429957643,
+                        "Virtual Size": "0xba2"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.2719577792136945,
+                        "Virtual Size": "0x368"
+                    },
+                    ".reloc": {
+                        "Entropy": 3.5141016549301782,
+                        "Virtual Size": "0x24"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2025-04-10 15:21:23",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "RtlInitializeBitMap",
+                    "RtlClearAllBits",
+                    "RtlFindClearBits",
+                    "RtlClearBits",
+                    "RtlSetBits",
+                    "KeAcquireSpinLockRaiseToDpc",
+                    "KeReleaseSpinLock",
+                    "ExFreePoolWithTag",
+                    "__C_specific_handler",
+                    "DbgPrintEx",
+                    "KeGetCurrentIrql",
+                    "KeInitializeEvent",
+                    "KeClearEvent",
+                    "KeSetEvent",
+                    "KeWaitForSingleObject",
+                    "KeAcquireSpinLockAtDpcLevel",
+                    "KeReleaseSpinLockFromDpcLevel",
+                    "ExQueryDepthSList",
+                    "ExpInterlockedPopEntrySList",
+                    "ExpInterlockedPushEntrySList",
+                    "ExInitializeNPagedLookasideList",
+                    "ExDeleteNPagedLookasideList",
+                    "IofCompleteRequest",
+                    "RtlInitializeGenericTableAvl",
+                    "RtlInsertElementGenericTableAvl",
+                    "RtlDeleteElementGenericTableAvl",
+                    "RtlLookupElementGenericTableAvl",
+                    "RtlEnumerateGenericTableAvl",
+                    "RtlEnumerateGenericTableLikeADirectory",
+                    "RtlGetElementGenericTableAvl",
+                    "RtlNumberGenericTableElementsAvl",
+                    "PsGetCurrentProcessId",
+                    "PsGetCurrentThreadId",
+                    "RtlInitUnicodeString",
+                    "PsCreateSystemThread",
+                    "IoCreateDevice",
+                    "IoCreateSymbolicLink",
+                    "IoDeleteDevice",
+                    "IoDeleteSymbolicLink",
+                    "ObReferenceObjectByHandle",
+                    "ObfDereferenceObject",
+                    "ZwClose",
+                    "ZwCreateDirectoryObject",
+                    "ZwMakeTemporaryObject",
+                    "IoGetConfigurationInformation",
+                    "swprintf",
+                    "RtlQueryRegistryValues",
+                    "RtlGetVersion",
+                    "ExInterlockedInsertTailList",
+                    "MmProbeAndLockPages",
+                    "MmUnlockPages",
+                    "MmGetSystemRoutineAddress",
+                    "MmMapLockedPagesSpecifyCache",
+                    "MmUnmapLockedPages",
+                    "PsGetVersion",
+                    "IoAllocateMdl",
+                    "IoFreeMdl",
+                    "IoGetDeviceObjectPointer",
+                    "IoGetDevicePropertyData",
+                    "ZwLoadDriver",
+                    "ZwCreateKey",
+                    "ZwOpenKey",
+                    "ZwSetValueKey",
+                    "IoGetLowerDeviceObject",
+                    "RtlImageNtHeader",
+                    "RtlImageDirectoryEntryToData",
+                    "KeFlushEntireTb",
+                    "IoReadPartitionTableEx",
+                    "IoSetPartitionInformationEx",
+                    "RtlUnicodeStringToAnsiString",
+                    "KeWaitForMultipleObjects",
+                    "ZwQueryInformationFile",
+                    "IoAcquireVpbSpinLock",
+                    "IoReleaseVpbSpinLock",
+                    "RtlInitAnsiString",
+                    "RtlAnsiStringToUnicodeString",
+                    "RtlFreeUnicodeString",
+                    "RtlCompareMemory",
+                    "ZwCreateFile",
+                    "ZwSetInformationFile",
+                    "ZwReadFile",
+                    "ZwWriteFile",
+                    "KeSetPriorityThread",
+                    "ExInterlockedRemoveHeadList",
+                    "PsTerminateSystemThread",
+                    "IoEnumerateDeviceObjectList",
+                    "_snwprintf",
+                    "KeBugCheckEx"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Hardware Compatibility Publisher",
+                                "ValidFrom": "2025-02-20 20:08:09",
+                                "ValidTo": "2026-02-18 20:08:09",
+                                "Signature": "65d17fbf1de2b60cfc46b9d9945a9c84c28a9bac84abe3f49280bca6ff239461c1ba338bfc578d94c884e783881036e134bfd12b52e916281b220f6d34b8ca017fd2880da3b76f90303f497eb18ceebd711083097fee149c5ed15e3b7b4d20ecccb93798c03c462f0039f11b260167512ffd103e20b7b306603f07c1f68940a7074b648a650271c2cbf1dda3e5ba29028c027373faaf255d2af35a86fe539dc5ab7134a4994d5994b4ba7f189bd428778554f9e6402ba8c2cc832bc9fc64d5f6058c2fb6c28ce11798762addd0d567d724e7727b9c3253ea7be34f357ff32c8bb91e8eb198d858118254ceed218f47e94482e8a15f7e095f98c36986f7fa06eb",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "3300000125f31cb555767340d6000000000125",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "581df130bb04487a6d19bc11b5098119",
+                                    "SHA1": "900451bd61a1199f8b4994f451af8201a1f40c7b",
+                                    "SHA256": "82efe580f6ea4f2a1f39e1f0eaf14983218c1eccbb5d7c80b421501bd4a05a90",
+                                    "SHA384": "0debca99ab93db249e18bef9f007861026c31369eacd2eed479765dc192da38c37eb02848f744df8e94ec9afe19fa0de"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2012",
+                                "ValidFrom": "2012-04-18 23:48:38",
+                                "ValidTo": "2027-04-18 23:58:38",
+                                "Signature": "5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "610baac1000000000009",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "a569061297e8e824767dbc3184a69bea",
+                                    "SHA1": "adbb26a587a8f44b4fccaecb306f980d1c55a150",
+                                    "SHA256": "cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46",
+                                    "SHA384": "e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "3300000125f31cb555767340d6000000000125",
+                                "Issuer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2012",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -346557,6 +348486,226 @@
                     }
                 ],
                 "LoadsDespiteHVCI": "TRUE"
+            },
+            {
+                "Filename": "iscflashx64.sys",
+                "MD5": "1aae4ad170471e4eab7d4b1de773e015",
+                "SHA1": "1db98a7ea14087ba75bfaf74d9536e0395a151a3",
+                "SHA256": "c27b8b61991079fdb644e56c33a43f47beaafe9230caad16d35bee110a408098",
+                "Imphash": "31a3c2c72c9a565dc4ba75ef26677569",
+                "Authentihash": {
+                    "MD5": "330caca19cfea46afa4146591707d46d",
+                    "SHA1": "0750a14272324cfa7c030d10a8ee4207dc36d1f4",
+                    "SHA256": "4750110bb3f4bd5693838f29e2f87af748625b15646081a463541034aa3e5cb3"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "f82e7f19deb8fecc1198a89402e0fb93",
+                    "SHA1": "c857be4931c2d81ebe09fe19f5b91b0637103ad0",
+                    "SHA256": "d7173fd31b00801de4324d5d712f9535c87b7fb838da44cd695d1cf6c3b02bb2"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.0773282483632824,
+                        "Virtual Size": "0x1f76"
+                    },
+                    "init": {
+                        "Entropy": 6.112892249831448,
+                        "Virtual Size": "0x9eb"
+                    },
+                    "page": {
+                        "Entropy": 6.24729426345191,
+                        "Virtual Size": "0x8133"
+                    },
+                    ".rdata": {
+                        "Entropy": 4.828819915145001,
+                        "Virtual Size": "0x970"
+                    },
+                    ".data": {
+                        "Entropy": 0.37870349348767507,
+                        "Virtual Size": "0x89c"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.428751110809376,
+                        "Virtual Size": "0x54c"
+                    },
+                    "INIT": {
+                        "Entropy": 5.076543186335887,
+                        "Virtual Size": "0x362"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.308326986644498,
+                        "Virtual Size": "0x3b0"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2013-02-22 11:43:25",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "_vsnprintf",
+                    "IofCompleteRequest",
+                    "IoDeleteDevice",
+                    "IoDeleteSymbolicLink",
+                    "RtlInitUnicodeString",
+                    "MmFreeContiguousMemorySpecifyCache",
+                    "MmGetPhysicalAddress",
+                    "MmAllocateContiguousMemorySpecifyCache",
+                    "MmUnmapIoSpace",
+                    "MmMapIoSpace",
+                    "ExFreePoolWithTag",
+                    "RtlCompareMemory",
+                    "ExAllocatePoolWithTag",
+                    "IoCreateSymbolicLink",
+                    "IoCreateDevice",
+                    "MmMapLockedPagesSpecifyCache",
+                    "RtlQueryRegistryValues",
+                    "ZwCreateFile",
+                    "ZwClose",
+                    "ZwWriteFile",
+                    "RtlTimeToTimeFields",
+                    "ExSystemTimeToLocalTime",
+                    "KeBugCheckEx"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA , G2",
+                                "ValidFrom": "2012-12-21 00:00:00",
+                                "ValidTo": "2020-12-30 23:59:59",
+                                "Signature": "03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "7e93ebfb7cc64e59ea4b9a77d406fc3b",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "d0785ad36e427c92b19f6826ab1e8020",
+                                    "SHA1": "365b7a9c21bd9373e49052c3e7b3e4646ddd4d43",
+                                    "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff",
+                                    "SHA384": "eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer , G4",
+                                "ValidFrom": "2012-10-18 00:00:00",
+                                "ValidTo": "2020-12-29 23:59:59",
+                                "Signature": "783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "0ecff438c8febf356e04d86a981b1a50",
+                                "Version": 3,
+                                "CertificateType": "Intermediate",
+                                "IsCodeSigning": false,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "e9d38360b914c8863f6cba3ee58764d3",
+                                    "SHA1": "4cba8eae47b6bf76f20b3504b98b8f062694a89b",
+                                    "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976",
+                                    "SHA384": "e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification Authority , G5",
+                                "ValidFrom": "2006-11-08 00:00:00",
+                                "ValidTo": "2021-11-07 23:59:59",
+                                "Signature": "1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "250ce8e030612e9f2b89f7054d7cf8fd",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "918d9eb6a6cd36c531eceb926170a7e1",
+                                    "SHA1": "0ae95700d65e6f59715aa47048993ca7858e676a",
+                                    "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166",
+                                    "SHA384": "e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority",
+                                "ValidFrom": "2006-05-23 17:01:29",
+                                "ValidTo": "2016-05-23 17:11:29",
+                                "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "610c120600000000001b",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": false,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
+                                    "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
+                                    "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+                                    "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
+                                }
+                            },
+                            {
+                                "Subject": "C=TW, ST=Taiwan, L=Taipei, O=Insyde Software Corp., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=Insyde Software Corp.",
+                                "ValidFrom": "2012-12-28 00:00:00",
+                                "ValidTo": "2016-01-27 23:59:59",
+                                "Signature": "19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "768c1a47836a7536fbc50e7be60e65ff",
+                                    "SHA1": "569a77bd8a095070b13b75bc81cd0422f746daa3",
+                                    "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369",
+                                    "SHA384": "92eb214d60e1c7342eb7b4863dd634d364d80494b4090301e872fba4d2efbec2a799d49f0ac9590f8c61e0fb3b905af3"
+                                }
+                            },
+                            {
+                                "Subject": "C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010 CA",
+                                "ValidFrom": "2010-02-08 00:00:00",
+                                "ValidTo": "2020-02-07 23:59:59",
+                                "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "b30c31a572b0409383ed3fbe17e56e81",
+                                    "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
+                                    "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+                                    "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
+                                "Issuer": "C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010 CA",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -403737,6 +405886,208 @@
                 ],
                 "LoadsDespiteHVCI": "TRUE",
                 "Imphash": "86915b1ccd40702f0a8d238c992bf841"
+            }
+        ]
+    },
+    {
+        "Id": "afbc0243-ce03-4f2b-ace5-0a721297aaf2",
+        "Tags": [
+            "tosrfec.sys"
+        ],
+        "Verified": "TRUE",
+        "Author": "Andrea Monzani",
+        "Created": "2026-10-25",
+        "MitreID": "T1068",
+        "CVE": [
+            "CVE-2026-35553"
+        ],
+        "Category": "vulnerable driver",
+        "Commands": {
+            "Command": "sc.exe create tosrfec binPath=C:\\windows\\temp\\tosrfec.sys type=kernel && sc.exe start tosrfec",
+            "Description": "A vulnerable kernel driver that can be used to disable Code Integrity",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/",
+            "https://doi.org/10.1016/j.cose.2026.105194"
+        ],
+        "Detection": [],
+        "Acknowledgement": {
+            "Person": "Andrea Monzani, Davide Netti, Antonio Parata",
+            "Handle": ""
+        },
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "tosrfec.sys",
+                "MD5": "f9e4534f2da02a7cb16152fcead48e57",
+                "SHA1": "a43f3a8d0f75fd5ac65508a3c376ab4a99db981d",
+                "SHA256": "01aa894cb84ca218e4e54f87626aac7ce16755a18b62de8f406eae522846e4d7",
+                "Imphash": "f0d48d5b9f1f4eabde6b5e0e8196d84d",
+                "Authentihash": {
+                    "MD5": "6b98c3901c2ac48567c03b914fbbe012",
+                    "SHA1": "53ea7f11fd01d31a1919b4b98b16578bafe75acb",
+                    "SHA256": "d52c4eac784ff2fb30ae24d1c61d85871cc8e96ee9a1397ca8ca0a3fded0e107"
+                },
+                "RichPEHeaderHash": {
+                    "MD5": "5c3ab4200f621695cddbbd8b67bb9b5e",
+                    "SHA1": "96ed1789d057141b6b60f7b3ff07c5f1c9281ac0",
+                    "SHA256": "42aed4985d2f97b797801201db74415e0ec6afda2c4d0a99c09c0bfdf15fefcd"
+                },
+                "Sections": {
+                    ".text": {
+                        "Entropy": 6.191778247690096,
+                        "Virtual Size": "0x2700"
+                    },
+                    ".rdata": {
+                        "Entropy": 4.278387418771408,
+                        "Virtual Size": "0x890"
+                    },
+                    ".data": {
+                        "Entropy": 0.524821206928103,
+                        "Virtual Size": "0x120"
+                    },
+                    ".pdata": {
+                        "Entropy": 4.081121847696394,
+                        "Virtual Size": "0x264"
+                    },
+                    "PAGE": {
+                        "Entropy": 5.733660944439593,
+                        "Virtual Size": "0x460"
+                    },
+                    "INIT": {
+                        "Entropy": 5.463719962892568,
+                        "Virtual Size": "0xab4"
+                    },
+                    ".rsrc": {
+                        "Entropy": 3.604221045669179,
+                        "Virtual Size": "0x450"
+                    },
+                    ".reloc": {
+                        "Entropy": 3.610509293458488,
+                        "Virtual Size": "0x24"
+                    }
+                },
+                "MagicHeader": "50 45 0 0",
+                "CreationTimestamp": "2021-10-08 03:43:51",
+                "Description": "",
+                "Company": "",
+                "InternalName": "",
+                "OriginalFilename": "",
+                "FileVersion": "",
+                "Product": "",
+                "ProductVersion": "",
+                "Copyright": "",
+                "MachineType": "AMD64",
+                "Imports": [
+                    "ntoskrnl.exe",
+                    "WMILIB.SYS"
+                ],
+                "ExportedFunctions": "",
+                "ImportedFunctions": [
+                    "RtlInitUnicodeString",
+                    "RtlWriteRegistryValue",
+                    "RtlCheckRegistryKey",
+                    "DbgPrint",
+                    "RtlIsNtDdiVersionAvailable",
+                    "KeInitializeEvent",
+                    "KeSetEvent",
+                    "KeDelayExecutionThread",
+                    "KeSetPriorityThread",
+                    "KeWaitForSingleObject",
+                    "KeInitializeSpinLock",
+                    "KeAcquireSpinLockRaiseToDpc",
+                    "KeReleaseSpinLock",
+                    "ExAllocatePoolWithTag",
+                    "ExFreePool",
+                    "PsCreateSystemThread",
+                    "PsTerminateSystemThread",
+                    "IoAcquireCancelSpinLock",
+                    "IoAttachDeviceToDeviceStack",
+                    "IoBuildSynchronousFsdRequest",
+                    "IofCallDriver",
+                    "wcsncpy_s",
+                    "IoCreateDevice",
+                    "IoDeleteDevice",
+                    "IoDetachDevice",
+                    "IoReleaseCancelSpinLock",
+                    "IoRegisterDeviceInterface",
+                    "IoSetDeviceInterfaceState",
+                    "ZwClose",
+                    "ZwOpenKey",
+                    "ZwQueryValueKey",
+                    "ZwSetValueKey",
+                    "RtlQueryRegistryValues",
+                    "MmGetSystemRoutineAddress",
+                    "RtlEqualUnicodeString",
+                    "MmLockPagableDataSection",
+                    "MmUnlockPagableImageSection",
+                    "IoBuildDeviceIoControlRequest",
+                    "PoCallDriver",
+                    "PoStartNextPowerIrp",
+                    "ObReferenceObjectByHandle",
+                    "ObfDereferenceObject",
+                    "ZwOpenFile",
+                    "ZwQueryInformationFile",
+                    "wcsncat_s",
+                    "IofCompleteRequest",
+                    "wcsstr",
+                    "WmiSystemControl"
+                ],
+                "Signatures": [
+                    {
+                        "CertificatesInfo": "",
+                        "SignerInfo": "",
+                        "Certificates": [
+                            {
+                                "Subject": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured ID Code Signing CA",
+                                "ValidFrom": "2013-10-22 12:00:00",
+                                "ValidTo": "2028-10-22 12:00:00",
+                                "Signature": "3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": true,
+                                "SerialNumber": "0409181b5fd5bb66755343b56f955008",
+                                "Version": 3,
+                                "CertificateType": "CA",
+                                "IsCodeSigning": true,
+                                "IsCA": true,
+                                "TBS": {
+                                    "MD5": "9359496ca4f021408b9d8923cab8b179",
+                                    "SHA1": "2aed40d7759997830870769be250199fd609e40e",
+                                    "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65",
+                                    "SHA384": "5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c"
+                                }
+                            },
+                            {
+                                "Subject": "C=JP, ST=Tokyo, L=Koto,ku, O=Dynabook Inc., OU=Dynabook Inc., CN=Dynabook Inc.",
+                                "ValidFrom": "2021-02-24 00:00:00",
+                                "ValidTo": "2023-03-14 23:59:59",
+                                "Signature": "e5747510b1409868acbc983b6a77ad9e93ecc31ae44bbf2e6f5113bc0cc82388d31a759b9000e855c3e3a9b330782d5fadce5dd9341138ea02b0186dc0a95848fdbade22e94dc1800f1203f4f9077d9bc64bb4cc341fd32536cd2caecb2c31741bfca18afe87eaa41b43a952df56227bccf8dbccc1248a917228bb4627ca0efd1ac9c87d0bccad48cfed8db21ff4133b68de13bd4562704eeee36e15f795012feabc7284a93c349b597be222b5bb2ff4f3078473aac6ba95be8d6f80d5568d7355fe1525188dceb393e75adeff8e97e17bac9c290d76ff922ff09a0efd0fb53bca42f313c57492408437c27982ed70ad1216d03b19c5f2bd12914a565dc8083d",
+                                "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                "IsCertificateAuthority": false,
+                                "SerialNumber": "05c6b77fcca38c46fda07191919c7447",
+                                "Version": 3,
+                                "CertificateType": "Leaf (Code Signing)",
+                                "IsCodeSigning": true,
+                                "IsCA": false,
+                                "TBS": {
+                                    "MD5": "040b50c8c61841c1ea7ca98f078f6be8",
+                                    "SHA1": "ae69cf708130cf753f41d64b5ce7c0789633c17d",
+                                    "SHA256": "913c0eb3f016c17eab7f1c9be781ceec89f3a79ce63623fa2a90458700c81299",
+                                    "SHA384": "c84bbe0182423b6be1d54bba4b5d2280091afed617878231229e3c0da0fe8e09693eee78289cf2fbb55b5c8e69004c9e"
+                                }
+                            }
+                        ],
+                        "Signer": [
+                            {
+                                "SerialNumber": "05c6b77fcca38c46fda07191919c7447",
+                                "Issuer": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured ID Code Signing CA",
+                                "Version": 1
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },

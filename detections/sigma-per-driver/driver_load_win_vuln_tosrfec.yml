@@ -1,0 +1,32 @@
+title: Driver Load - tosrfec.sys
+id: ffbe85b6-b1a6-5c98-9ea1-4c79b5690a66
+status: experimental
+description: |
+    Detects loading of driver tosrfec.sys via hash.
+    A vulnerable kernel driver that can be used to disable Code Integrity
+references:
+    - https://www.loldrivers.io/drivers/afbc0243-ce03-4f2b-ace5-0a721297aaf2/
+    - https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+    - https://doi.org/10.1016/j.cose.2026.105194
+author: Andrea Monzani
+date: 2026/10/25
+modified: 2026/10/26
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f9e4534f2da02a7cb16152fcead48e57'
+            - 'SHA1=a43f3a8d0f75fd5ac65508a3c376ab4a99db981d'
+            - 'SHA256=01aa894cb84ca218e4e54f87626aac7ce16755a18b62de8f406eae522846e4d7'
+            - 'IMPHASH=f0d48d5b9f1f4eabde6b5e0e8196d84d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
