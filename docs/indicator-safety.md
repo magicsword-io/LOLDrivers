@@ -14,6 +14,9 @@ git lfs pull
 .venv/bin/python bin/validate-safety.py --report .context/indicator-review.json
 .venv/bin/python bin/yara-generator/validate-malicious-rules.py \
   --skip-generate --all-categories --output-dir .context/yara-validation
+npm --prefix website ci
+PUBLIC_SITE_MODE=preview PUBLIC_ENABLE_ANALYTICS=false npm --prefix website run build
+npm --prefix website run verify:build
 ```
 
 The checks and generators operate offline after dependency installation and
@@ -98,6 +101,13 @@ metadata columns empty, and provides a compact context-only reference to the
 JSON evidence. Its `IndicatorSemantics` column explicitly distinguishes hash
 blocking from filename hunting. CSV rows do not contain large unscoped certificate blobs.
 `bin/export-api.py` and the legacy `bin/site.py` use the same projection.
+
+The website's separate `/data/drivers/<UUID>.json` download is entirely research
+evidence: `DetectionScope: context-only`, with the original record under
+`ResearchEvidence`. The metadata viewer requires and preserves that scope. The
+artifact verifier compares these records directly with source YAML, and compares
+production indicator APIs with the validated canonical projection. The required
+`indicator-safety` job builds and verifies these actual JSON artifacts too.
 
 ## Final rule checks and ownership
 

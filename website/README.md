@@ -45,7 +45,7 @@ In Conductor, use the workspace's `$CONDUCTOR_PORT` instead of a fixed port when
 - Existing Defender and Splunk query text and attribution, and the existing community tool destinations.
 - Google Analytics component retaining `G-33C5VXLWPQ`. It is **off by default**. An explicit `PUBLIC_ENABLE_ANALYTICS=true` production build enables it; development does not. Normal document navigation emits the normal Google tag page view. There is no client-side router or duplicate manual page-view handler.
 
-The full driver JSON never enters the client JavaScript bundle. The explorer loads `/data/search.json` separately. Each `/data/drivers/<UUID>.json` record is generated from the same YAML as its page. Production includes `/api/drivers.json`, `/api/drivers.csv`, and `/drivers_table.csv` generated from the same source revision as the pages. Production verification compares every API record against the page metadata. API links use the public domain, so review builds still link to live production downloads.
+The full driver JSON never enters the client JavaScript bundle. The explorer loads `/data/search.json` separately. Each `/data/drivers/<UUID>.json` download wraps the page's original YAML metadata in `DetectionScope: context-only` and `ResearchEvidence`; the on-demand viewer preserves that scope. Production includes `/api/drivers.json`, `/api/drivers.csv`, and `/drivers_table.csv` with the validated indicator projection from the same source revision. Verification compares every research record directly with source YAML and every production API record with the validated canonical export. API links use the public domain, so review builds still link to live production downloads.
 
 ## Review a PR before merging
 

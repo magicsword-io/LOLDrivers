@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir, stat } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
+import { parse } from 'yaml';
 
 const root = resolve(process.argv[2] || 'dist');
 const analytics = process.argv.includes('--analytics');
@@ -93,7 +94,21 @@ assert.ok(
 for (const id of ids) {
   const html = await read(`drivers/${id}/index.html`);
   verifySocialCard(html, id);
-  const raw = JSON.parse(await read(`data/drivers/${id}.json`));
+  const metadata = JSON.parse(await read(`data/drivers/${id}.json`));
+  assert.deepEqual(
+    Object.keys(metadata).sort(),
+    ['DetectionScope', 'ResearchEvidence'],
+    `${id}: unscoped metadata fields escaped the research envelope`,
+  );
+  assert.equal(metadata.DetectionScope, 'context-only');
+  const raw = metadata.ResearchEvidence;
+  assert.deepEqual(
+    raw,
+    JSON.parse(
+      JSON.stringify(parse(await readFile(`../yaml/${id}.yaml`, 'utf8'))),
+    ),
+    `${id}: research metadata diverged from website source`,
+  );
   assert.equal(raw.Id, id);
   assert.equal(
     html.includes('ASTRO REVIEW PREVIEW'),
@@ -151,14 +166,19 @@ assert.ok(
 );
 if (production) {
   const api = JSON.parse(await read('api/drivers.json'));
+  const canonical = new Map(
+    JSON.parse(
+      await readFile('../loldrivers.io/content/api/drivers.json', 'utf8'),
+    ).map((driver) => [driver.Id, driver]),
+  );
   assert.deepEqual(api.map((driver) => driver.Id).sort(), ids.sort());
   for (const driver of api) {
     assert.deepEqual(
       // Python retains -0.0; JavaScript JSON serialization writes 0. Normalize
       // that representation before comparing otherwise identical catalog records.
       JSON.parse(JSON.stringify(driver)),
-      JSON.parse(await read(`data/drivers/${driver.Id}.json`)),
-      `${driver.Id}: public API diverged from website source`,
+      JSON.parse(JSON.stringify(canonical.get(driver.Id))),
+      `${driver.Id}: public API diverged from validated canonical indicators`,
     );
   }
   for (const path of [

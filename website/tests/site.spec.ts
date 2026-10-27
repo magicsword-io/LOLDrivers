@@ -100,11 +100,19 @@ test('loads metadata only on request and retains theme across navigation', async
   await page.getByRole('button', { name: 'Switch to light theme' }).click();
   await expect(page.locator('.lol-logo-light')).toBeVisible();
   await expect(page.locator('.ms-logo-light')).toBeVisible();
+  const metadataResponse = page.waitForResponse((response) =>
+    response.url().includes(`/data/drivers/${dell}.json`),
+  );
   await page
     .getByRole('button', { name: 'Load full sample metadata' })
     .first()
     .click();
   await expect(page.locator('#metadata-0')).toContainText('SHA256');
+  await expect(page.locator('#metadata-0')).toContainText('context-only');
+  const downloaded = await (await metadataResponse).json();
+  expect(downloaded.DetectionScope).toBe('context-only');
+  expect(downloaded).not.toHaveProperty('KnownVulnerableSamples');
+  expect(downloaded.ResearchEvidence.Id).toBe(dell);
   expect(metadataRequests).toHaveLength(1);
   await page
     .getByRole('link', { name: 'LOLDrivers home', exact: true })
