@@ -44,21 +44,27 @@ const fields = (sample: Record<string, unknown>) =>
 
 const categoryLabel =
   driver.category === 'malicious' ? 'Malicious' : 'Vulnerable';
-const baseTitleWithSuffix = `${driver.name} – ${categoryLabel} Driver & Hashes | LOLDrivers`;
-const baseTitleWithoutSuffix = `${driver.name} – ${categoryLabel} Driver & Hashes`;
+
+const isBareHash = /^[a-f0-9]{64}$/i.test(driver.name);
+const displayName = isBareHash ? `${driver.name.slice(0, 12)}…` : driver.name;
+
+const withFullSuffix = `${displayName} – ${categoryLabel} Driver & Hashes`;
+const withoutHashes = `${displayName} – ${categoryLabel} Driver`;
+
 const pageTitle =
-  baseTitleWithSuffix.length <= 60
-    ? baseTitleWithSuffix
-    : baseTitleWithoutSuffix;
+  withFullSuffix.length <= 60
+    ? withFullSuffix
+    : withoutHashes;
+
 const cveText =
   cves.length > 0
     ? ` CVE${cves.length > 1 ? 's' : ''}: ${cves.join(', ')}.`
     : '';
+const fullDescription = `${driver.name} is a known ${driver.category === 'malicious' ? 'malicious' : 'vulnerable'} driver abused for BYOVD. Get hashes,${cveText ? '' : ''} detection rules and blocklist guidance.${cveText}`;
 const pageDescription =
-  `${driver.name} is a known ${driver.category === 'malicious' ? 'malicious' : 'vulnerable'} driver abused for BYOVD. Get hashes,${cveText ? '' : ''} detection rules and blocklist guidance.${cveText}`.slice(
-    0,
-    155,
-  );
+  fullDescription.length <= 155
+    ? fullDescription
+    : fullDescription.slice(0, fullDescription.lastIndexOf(' ', 155));
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
