@@ -17,7 +17,11 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    container:
+      # Keep this version aligned with @playwright/test in website/package-lock.json.
+      image: mcr.microsoft.com/playwright:v1.63.0-noble@sha256:eff16c30e6f3f4af0a03fa4b706120d5e9b0891c344a27d64559aff5900a4a27
+      options: --init --ipc=host
     timeout-minutes: 20
     env:
       PUBLIC_ENABLE_ANALYTICS: 'true'
@@ -46,8 +50,6 @@ jobs:
       - run: npm run format:check && npm run check
         working-directory: website
       - run: npm run build && npm run verify:build -- dist --analytics --production
-        working-directory: website
-      - run: npx playwright install --with-deps chromium
         working-directory: website
       - name: Test the production artifact (analytics requests intercepted)
         run: npm test

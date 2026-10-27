@@ -122,10 +122,13 @@ test('loads metadata only on request and retains theme across navigation', async
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
 });
 
-test('renders the catalog without JavaScript', async ({ browser }) => {
-  const context = await browser.newContext({ javaScriptEnabled: false });
+test('renders the catalog without JavaScript', async ({ browser, baseURL }) => {
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    baseURL,
+  });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4321/');
+  await page.goto('/');
   await expect(page.locator('#rows tr')).toHaveCount(12);
   await expect(page.locator('.ms-promotion')).toBeVisible();
   await expect(page.locator('.research h2').first()).toHaveText(
@@ -138,7 +141,7 @@ test('renders the catalog without JavaScript', async ({ browser }) => {
   await expect(
     page.getByRole('button', { name: 'Next recent driver' }),
   ).toBeHidden();
-  await page.goto('http://127.0.0.1:4321/drivers/');
+  await page.goto('/drivers/');
   await expect(page.locator('.driver-directory li')).toHaveCount(total);
   await context.close();
 });
