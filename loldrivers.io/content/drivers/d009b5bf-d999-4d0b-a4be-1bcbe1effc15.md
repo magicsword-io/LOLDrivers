@@ -550,7 +550,7 @@ sc.exe create vdk binPath=C:\windows\temp\vdk.sys type=kernel &amp;&amp; sc.exe 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/d009b5bf-d999-4d0b-a4be-1bcbe1effc15.yaml)
 
-*last_updated:* 2026-10-26
+*last_updated:* 2026-10-27
 
 {{< /column >}}
 {{< /block >}}
