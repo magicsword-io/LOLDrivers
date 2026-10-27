@@ -1,12 +1,35 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { drivers, driverPath } from '../../lib/drivers';
+
+const site = 'https://www.loldrivers.io';
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'All drivers — LOLDrivers',
+  description: 'Complete alphabetical directory of all vulnerable and malicious Windows drivers in the LOLDrivers catalog with sample counts and classifications.',
+  numberOfItems: drivers.length,
+  itemListElement: [...drivers]
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .slice(0, 100)
+    .map((d, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `${site}${driverPath(d.id)}`,
+      name: d.name,
+    })),
+};
 ---
 
 <BaseLayout
   title="All drivers — LOLDrivers"
   description="Complete alphabetical directory of all vulnerable and malicious Windows drivers in the LOLDrivers catalog with sample counts and classifications."
 >
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(itemListSchema)}
+  ></script>
   <div class="document">
     <div class="eyebrow">The catalog</div>
     <h1>All drivers</h1>
