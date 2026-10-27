@@ -13,7 +13,7 @@ permissions:
 # One production publisher. PR validation uses a separate group and cannot deploy.
 concurrency:
   group: pages-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
