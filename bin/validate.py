@@ -14,6 +14,7 @@ import sys
 import argparse
 from pathlib import Path
 from os import path, walk
+from indicator_safety import validate_record, SafetyError, load_yaml
 
 # UUID regex pattern (8-4-4-4-12 hex format)
 UUID_PATTERN = re.compile(r'^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$', re.IGNORECASE)
@@ -154,7 +155,7 @@ def validate_schema(yaml_dir, schema_file, verbose, drivers_dir='drivers/'):
 
         with open(yaml_file, 'r') as stream:
             try:
-                yaml_data = yaml.safe_load(stream)
+                yaml_data = load_yaml(stream)
             except yaml.YAMLError as exc:
                 print(exc)
                 print("Error reading {0}".format(yaml_file))
@@ -168,6 +169,11 @@ def validate_schema(yaml_dir, schema_file, verbose, drivers_dir='drivers/'):
             error = True
 
         # Additional YAML checks
+        try:
+            validate_record(yaml_data, yaml_file)
+        except SafetyError as exc:
+            errors.extend(map(str, exc.findings))
+            error = True
         check_errors = [
             check_filename_matches_id(yaml_file, yaml_data),
             check_category(yaml_data),

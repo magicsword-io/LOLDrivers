@@ -32,7 +32,11 @@ document
     });
   });
 
-let record: Promise<{ KnownVulnerableSamples: unknown[] }> | undefined;
+interface ResearchRecord {
+  DetectionScope: 'context-only';
+  ResearchEvidence: { KnownVulnerableSamples: unknown[] };
+}
+let record: Promise<ResearchRecord> | undefined;
 document
   .querySelectorAll<HTMLButtonElement>('[data-load-sample]')
   .forEach((button) =>
@@ -53,13 +57,26 @@ document
       try {
         record ??= fetch(
           `/data/drivers/${encodeURIComponent(button.dataset.driverId!)}.json`,
-        ).then((response) => {
+        ).then(async (response) => {
           if (!response.ok) throw new Error('Metadata unavailable');
-          return response.json();
+          const data = await response.json();
+          if (
+            data?.DetectionScope !== 'context-only' ||
+            !Array.isArray(data.ResearchEvidence?.KnownVulnerableSamples)
+          ) {
+            throw new Error('Unscoped metadata unavailable');
+          }
+          return data;
         });
         const data = await record;
         pre.textContent = JSON.stringify(
-          data.KnownVulnerableSamples[Number(button.dataset.loadSample)],
+          {
+            DetectionScope: data.DetectionScope,
+            ResearchEvidence:
+              data.ResearchEvidence.KnownVulnerableSamples[
+                Number(button.dataset.loadSample)
+              ],
+          },
           null,
           2,
         );

@@ -10,7 +10,8 @@ import zipfile
 import xml.etree.ElementTree as ET
 import jinja2
 import requests
-from api_exports import write_drivers_csv, write_drivers_table_csv
+from api_exports import write_drivers_csv, write_drivers_table_csv, export_api_files
+from indicator_safety import validate_record, load_yaml
 
 
 SIPOLICY_NS = '{urn:schemas-microsoft-com:sipolicy}'
@@ -114,7 +115,7 @@ def sample_signer_match(sample, signer_only_rules):
             v = tbs.get(k)
             if v:
                 sample_tbs.add(str(v).lower().strip())
-        if leaf_cn is None and not c.get('IsCA'):
+        if leaf_cn is None and not c.get('IsCA', c.get('IsCertificateAuthority')):
             cn = extract_cn(c.get('Subject'))
             if cn:
                 leaf_cn = cn
@@ -170,8 +171,8 @@ def parse_sipolicy_hashes(xml_path):
       - <Deny> with Hash attribute (Authenticode SHA256/SHA1)
       - <Deny> with FileName + MinimumFileVersion / MaximumFileVersion
       - <FileAttrib> with FileName + version range, referenced by <DeniedSigners>
-    Both filename mechanisms scope by version range; we capture those so callers
-    can confirm the sample's actual version is inside what MS denies.
+    Standalone filename denies retain version ranges. Signer-linked FileAttrib
+    rules are counted but left unevaluated so signer scope is never dropped.
     """
     tree = ET.parse(xml_path)
     root = tree.getroot()
@@ -213,7 +214,9 @@ def parse_sipolicy_hashes(xml_path):
         filename = fa.get('FileName', '').strip()
         if filename:
             fileattrib_count += 1
-            add_rule(filename, fa.get('MinimumFileVersion'), fa.get('MaximumFileVersion'))
+            # FileAttrib must remain AND-linked to its signer. It is research
+            # evidence, not a standalone filename deny. Conservatively leave
+            # constrained signer rules unevaluated in these summary metrics.
 
     signers_by_id = {}
     for signer in root.iter(f'{SIPOLICY_NS}Signer'):
@@ -283,8 +286,8 @@ def compute_metrics(drivers, sipolicy_data):
       - its signing cert chain contains a CA whose TBS hash is on MS's denied-signer
         list AND (if the deny rule specifies one) the leaf cert CN matches the MS
         publisher value. Only signer rules with no <FileAttribRef> are counted here;
-        signer rules that scope by file attribute are already covered by the
-        filename match above.
+        signer rules that scope by file attribute are left unevaluated rather
+        than flattened into a broader filename match.
 
     Filename hits where MS scoped the deny to a version window and the sample's
     FileVersion falls outside it are NOT counted — surfaced as
@@ -444,12 +447,13 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
 
         with open(manifest_file, 'r') as stream:
             try:
-                object = list(yaml.safe_load_all(stream))[0]
+                object = load_yaml(stream)
             except yaml.YAMLError as exc:
                 print(exc)
                 print("Error reading {0}".format(manifest_file))
                 sys.exit(1)
 
+        validate_record(object, manifest_file)
         drivers.append(object)
 
     # write markdowns
@@ -465,16 +469,13 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     messages.append("site_gen.py wrote {0} drivers markdown to: {1}".format(len(drivers),OUTPUT_DIR + '/content/drivers/'))
 
     # write api csv
-    write_drivers_csv(drivers, os.path.join(OUTPUT_DIR, 'content', 'api'), VERBOSE)
+    export_api_files(REPO_PATH, os.path.join(OUTPUT_DIR, 'content', 'api'), VERBOSE)
     messages.append("site_gen.py wrote drivers CSV to: {0}".format(OUTPUT_DIR + '/content/api/drivers.csv'))
 
     # write api json
-    with open(OUTPUT_DIR + '/content/api/' + 'drivers.json', 'w', encoding='utf-8') as f:
-        json.dump(drivers, f, ensure_ascii=False, indent=4)
     messages.append("site_gen.py wrote drivers JSON to: {0}".format(OUTPUT_DIR + '/content/api/drivers.json'))
 
     # write listing csv
-    write_drivers_table_csv(drivers, os.path.join(OUTPUT_DIR, 'content'))
     messages.append("site_gen.py wrote drivers table to: {0}".format(OUTPUT_DIR + '/content/drivers_table.csv'))
 
     # write top 5 publishers (kept for backward compatibility but no longer on landing page)
@@ -528,7 +529,9 @@ if __name__ == "__main__":
     drivers, messages = generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE)
 
     # compute and write blocklist/HVCI metrics
-    sipolicy_xml = download_sipolicy(OUTPUT_DIR, args.sipolicy)
+    # Historical third-party policy evidence must never be republished as a
+    # current detection artifact. Downloads, if needed, stay outside public roots.
+    sipolicy_xml = download_sipolicy(os.path.join(REPO_PATH, '../.context/blocklist-research'), args.sipolicy)
     if sipolicy_xml:
         sipolicy_data = parse_sipolicy_hashes(sipolicy_xml)
         print(f"  SiPolicy: {len(sipolicy_data['auth_sha256s'])} unique SHA256, {len(sipolicy_data['auth_sha1s'])} unique SHA1 authenticode hashes")

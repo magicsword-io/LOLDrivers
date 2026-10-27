@@ -32,11 +32,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install YARA
-        run: sudo apt-get update && sudo apt-get install -y yara
-
       - name: Install validator dependencies
-        run: python -m pip install -r ./bin/yara-generator/requirements.txt
+        run: python -m pip install -r bin/requirements-safety.txt
 
       - name: Validate committed malicious YARA rules
         run: >

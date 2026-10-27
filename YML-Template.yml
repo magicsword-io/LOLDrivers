@@ -1,6 +1,12 @@
 # YML-Template.yml
 # Use this template to create similar YAML files
 # Note that our enrichment process will fill everything within the KnownVulnerableSamples section.
+# Omit unavailable hashes; do not submit literal placeholders from this template.
+# Filename rules are hunting leads; signing/PE metadata is research evidence.
+# For research-only records or samples, add both:
+# DetectionScope: context-only
+# ContextReason: Explain why this evidence must not generate detections.
+# See docs/indicator-safety.md for reviewed patterns and the public API contract.
 
 Id: UUIDv4 # Example: 77363871-44a7-4d98-9fdc-46d7db0352f2
 Tags:
