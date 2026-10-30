@@ -27,6 +27,7 @@ Resources:
 - https://github.com/andreisss/KslDump
 - https://github.com/carved4/gokatz
 - https://github.com/Muz1K1zuM/kslkatz_bof
+- https://flashpoint.io/blog/defenderkiller-how-vulnerable-drivers-are-being-abused-to-disable-endpoint-security/
 Acknowledgement:
   Person: Noam Pomerantz
   Handle: Pumi96
@@ -212,3 +213,8 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
       Version: 1
+- Filename: KSLDriver.sys
+  SHA256: d5764d24e78914ab2a9db6b24e323342d0b37998f43add1a9e49b00992b0d645
+  FileVersion: 1.1.0013.0
+  Company: Microsoft Corporation
+  Description: Used by DefenderKiller malware to terminate security processes
