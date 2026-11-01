@@ -1,0 +1,202 @@
+Id: 3d90ea8a-2137-45c4-a97e-68e4cca48148
+Tags:
+- shield.sys
+Author: Element2023H
+Created: '2026-11-01'
+MitreID: T1068
+CVE:
+- CVE-2026-120232
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create shield binPath= C:\windows\temp\shield.sys type= kernel &&
+    sc.exe start shield
+  Description: A Local Privilege Escalation (LPE) vulnerability exists in the core kernel driver shield.sys of Horizon DataSys Reboot Restore Standard v13.2. The driver utilizes the legacy IoCreateDevice API to create its device object named \.\EAZShield without specifying restrictive security descriptors (SDDL). Consequently, the device object inherits permissive default Access Control Lists (ACLs), allowing any local authenticated unprivileged user (Standard User) to open a handle to it.When handling IOCTL requests within the dispatch function sub_24394, the driver exposes control code 0x96102014. After passing basic header validations (such as v8[1] == 'DMCw'), the execution path enters sub_23908 to process the sub-control code 0xF0016.
+  Usecase: Arbitrary kernel memory read/write from any authenticated user.
+    Full system compromise via token theft, privilege escalation, disabling
+    security products, ring-0 code execution. Attractive BYOVD target.
+  Privileges: Any user can install; device access may be available to
+    unprivileged users after installation
+  OperatingSystem: Windows 10, Windows 11
+Resources:
+- https://github.com/Element2023H/CVE-2026-120232
+- https://www.cve.org/CVERecord?id=CVE-2026-120232
+KnownVulnerableSamples:
+- Filename: shield.sys
+  MD5: 7eb4abddee88a9c63a1a42bec84ab175
+  SHA1: ab4431f9d9adea7e4fb731b69655df28d9292a97
+  SHA256: 88bedb050ce323e751c0a5136476a46b4112e7a875819980126190715a0edf40
+  Signature:
+  - New Horizon Datasys Inc.
+  CreationTimestamp: '2026-06-03 13:05:40'
+  Company: Horizon Datasys, Inc.
+  Description: Shield disk filter driver
+  Product: Reboot Restore Standard
+  ProductVersion: v13.2
+  FileVersion: v13.2
+  MachineType: AMD64
+  Authentihash:
+    MD5: 498f33ffd77d1cfc4c3a931afb015f69
+    SHA1: bb4b56dd6b6c81cf91cb6624d24ea7907abef554
+    SHA256: d3a0df7b48a8fdbea5a960caea8b39756e30e1a15f157711072da0905bd9a07a
+  Imports:
+  - ntoskrnl.exe
+  - fwpkclnt.sys
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlGetVersion
+  - KeAcquireInStackQueuedSpinLock
+  - IoFreeMdl
+  - PsCreateSystemThread
+  - IoGetDeviceObjectPointer
+  - IoBuildAsynchronousFsdRequest
+  - ZwQueryValueKey
+  - ExInterlockedInsertTailList
+  - PsTerminateSystemThread
+  - IoAllocateWorkItem
+  - PoStartNextPowerIrp
+  - KeQueryTimeIncrement
+  - ZwClose
+  - IofCompleteRequest
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - IoFreeIrp
+  - IoAttachDeviceToDeviceStack
+  - PoCallDriver
+  - IoAllocateIrp
+  - ExInterlockedRemoveHeadList
+  - MmUnlockPages
+  - IoCreateSymbolicLink
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - KeInitializeEvent
+  - IoAllocateMdl
+  - IofCallDriver
+  - ZwOpenKey
+  - KeDelayExecutionThread
+  - IoDetachDevice
+  - sprintf
+  - vsprintf
+  - KeBugCheckEx
+  - MmFreeMappingAddress
+  - MmMapLockedPagesWithReservedMapping
+  - MmAllocateMappingAddress
+  - MmUnmapReservedMapping
+  - MmMapLockedPagesSpecifyCache
+  - MmIsAddressValid
+  - MmUnmapLockedPages
+  - IoBuildDeviceIoControlRequest
+  - MmAllocatePagesForMdlEx
+  - MmFreePagesFromMdl
+  - KeClearEvent
+  - KeReleaseSpinLock
+  - PsGetCurrentProcessId
+  - KeAcquireSpinLockRaiseToDpc
+  - IoDriverObjectType
+  - ObReferenceObjectByName
+  - IoFreeWorkItem
+  - KeSetEvent
+  - IoDeleteDevice
+  - RtlInitUnicodeString
+  - KeSetPriorityThread
+  - _wcsnicmp
+  - IoBuildPartialMdl
+  - KeReleaseInStackQueuedSpinLock
+  - PsSetLoadImageNotifyRoutine
+  - IoRegisterShutdownNotification
+  - ExFreePoolWithTag
+  - IoQueueWorkItem
+  - ExAllocatePoolWithTag
+  - FwpmSubLayerAdd0
+  - FwpsQueryPacketInjectionState0
+  - FwpsInjectionHandleCreate0
+  - FwpmTransactionCommit0
+  - FwpmCalloutAdd0
+  - FwpsCalloutRegister0
+  - FwpmTransactionAbort0
+  - FwpmEngineOpen0
+  - FwpmFilterAdd0
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpsCalloutUnregisterById0
+  PDBPath: e:\svnhome\shield6_build\trunk\core\driver\shdsysex\objfre_win7_amd64\amd64\Shield.pdb
+  Imphash: 814ff5123980aa72132abc2d18aef873
+  RichPEHeaderHash:
+    MD5: f36d6a2afa5d98e490de5cec1c142164
+    SHA1: 30be8165e9985f7c0da5be3b7a5753ed22a262e3
+    SHA256: 5a203922cf229f0e5f2f73e5cda688fbe7c0ba122284c8c7f6e1468c6c96abc0
+  Sections:
+    .text:
+      Entropy: 6.547987333435011
+      Virtual Size: '0x1960e'
+    .rdata:
+      Entropy: 5.469547048786585
+      Virtual Size: '0xe64'
+    .data:
+      Entropy: 6.45020265565585
+      Virtual Size: '0x5f58'
+    .pdata:
+      Entropy: 5.034082601070014
+      Virtual Size: '0xa80'
+    INIT:
+      Entropy: 5.338037969737857
+      Virtual Size: '0x9da'
+    .rsrc:
+      Entropy: 3.2948601844538237
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 1.9473387961875537
+      Virtual Size: '0xc'
+  MagicHeader: 50 45 0 0
+  InternalName: Shield
+  OriginalFilename: Shield.sys
+  Copyright: Copyright (C) Horizon Datasys, Inc. All rights reserved.
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 5d8003a64dfa5a4d88365da1566038cb
+        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+    - Subject: JURISDICTION_OF_INCORPORATION_C=CA, JURISDICTION_OF_INCORPORATION_SP=British
+        Columbia, BUSINESS_CATEGORY=Private Organization, serialNumber=BC0522416,
+        C=CA, ST=British Columbia, L=Vancouver, O=New Horizon Datasys Inc., CN=New
+        Horizon Datasys Inc.
+      ValidFrom: '2026-03-06 00:00:00'
+      ValidTo: '2027-06-07 23:59:59'
+      Signature: c3c87921114a17b8712470e99d6accb8af1c33eb8006a2dfdc5a68fa621d8b994ab5259cab262faa3f62a60d0eaccf3f57a628c53b772a4bbce1ffed69b550a33298feb345af388d5d64c0f1ad2f57b48678f6329dfbb597ddd2fe633532f80241883a46981eba10f836bb9fa5e22bae1150daed971a45be8bd250a27cc7d73d5460debb84aeba55a85fb4113d8490a577f2750af34345f576b6bb207986eef1e6afee7e99e88ff2edb26b43f5668bc3a5de25cd5597bf584665e385eacfe9251bc5e3050a3be93c17ef3c0134d53b393fddc00d695b38c579352c9b1b85e5d1f2e0c97b2cea40bc7738da1424778e182a90c98dc3cf615a3401411d6cf12956390f011e364bc6a5d04623c7a3341f4c9fe7c447709b285191259de9cf8e9f3ac6061d693dfb6b7e7a5d42847b02e14f0d53d8fd2fc8d636992636b7d1105f0d4dd6a81e76fb7f2c4f2408f2ec8c2bb8af5d53de1d6f826e02ab0890d59413288f8d5ef58e6075382299cd5abc7cc584e1923b1260f3a58d75f39fee247ee09c07e068d40cd76643708871baa7f2b5563ae9d0274c3872cae6585924aa0ac813fd630f4de950d5b97867b2c99f7fd66874ead1b9a03242029880b81dc0625926d7f8181f614bb42ac67346f7cdd5d6cc00199111073d36afa9101c9ea086a49c2c0fd89c4aa09f8ab0030b4244cbdddf491df011c4ec69a4d4b78946fa9bd4d7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 05df7125cc5f22b5bf9f0300814e8d6c
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 0852c71acb87bae071409696f1cf45ee
+        SHA1: 6cbd277acfbcc85865e5fa9b7bd5fe1f0318d129
+        SHA256: 98180e7bd6d38ad2dcb54d156af1c0ead4050cd57a481cf3bb869c66f8c38342
+        SHA384: 44835264e936c9519fb616c52cdd734ac75d9fcd7fc631c06b22c98df17a5f311b992f5f0b9fd8d4c6b10fd316436185
+    Signer:
+    - SerialNumber: 05df7125cc5f22b5bf9f0300814e8d6c
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      Version: 1
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: Element2023H
