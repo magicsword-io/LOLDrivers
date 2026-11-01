@@ -15,6 +15,7 @@ Commands:
   Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
+- https://en.hackita.it/articoli/seloaddriverprivilege/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c.yara
