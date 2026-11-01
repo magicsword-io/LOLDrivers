@@ -25,6 +25,7 @@ Resources:
 - https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b
 - https://github.com/namazso/physmem_drivers
 - https://github.com/hmnthabit/CVE-2018-19320-LPE
+- https://en.hackita.it/articoli/seloaddriverprivilege/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427.yara
