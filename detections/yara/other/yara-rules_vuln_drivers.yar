@@ -4063,6 +4063,46 @@ rule LOLDrivers_23f11e19_0776_4dd4_9c9c_7f6b60f8553f_SHA256_ecb4b15a847e888d36ca
         hash.sha256(0, filesize) == "ecb4b15a847e888d36ca4e317a5d1d8963a305cc9705896a7a6d3769697d9f2d"
 }
 
+rule LOLDrivers_24a64171_3bde_4c59_bf3d_4b2a1a42f180_SHA256_b8228fa1995bef013cf4686f1cb25c02a3d5b5e82110d86b47f46755472d1db7 {
+    meta:
+        source = "yaml/24a64171-3bde-4c59-bf3d-4b2a1a42f180.yaml"
+        category = "vulnerable driver"
+        digest_type = "raw-file-SHA256"
+        hash = "b8228fa1995bef013cf4686f1cb25c02a3d5b5e82110d86b47f46755472d1db7"
+    condition:
+        hash.sha256(0, filesize) == "b8228fa1995bef013cf4686f1cb25c02a3d5b5e82110d86b47f46755472d1db7"
+}
+
+rule LOLDrivers_24a64171_3bde_4c59_bf3d_4b2a1a42f180_SHA256_64939e21c785d6a552162433e1d08bcb3d611a88b67d20660f23a9e7b80e1581 {
+    meta:
+        source = "yaml/24a64171-3bde-4c59-bf3d-4b2a1a42f180.yaml"
+        category = "vulnerable driver"
+        digest_type = "raw-file-SHA256"
+        hash = "64939e21c785d6a552162433e1d08bcb3d611a88b67d20660f23a9e7b80e1581"
+    condition:
+        hash.sha256(0, filesize) == "64939e21c785d6a552162433e1d08bcb3d611a88b67d20660f23a9e7b80e1581"
+}
+
+rule LOLDrivers_24a64171_3bde_4c59_bf3d_4b2a1a42f180_SHA256_6c2ef9f6ad0032f01d352b52d1a682b8d6d2cca0265ed6e949fde1be101616f7 {
+    meta:
+        source = "yaml/24a64171-3bde-4c59-bf3d-4b2a1a42f180.yaml"
+        category = "vulnerable driver"
+        digest_type = "raw-file-SHA256"
+        hash = "6c2ef9f6ad0032f01d352b52d1a682b8d6d2cca0265ed6e949fde1be101616f7"
+    condition:
+        hash.sha256(0, filesize) == "6c2ef9f6ad0032f01d352b52d1a682b8d6d2cca0265ed6e949fde1be101616f7"
+}
+
+rule LOLDrivers_24a64171_3bde_4c59_bf3d_4b2a1a42f180_SHA256_52ab9eb6279e2676045d78ab4a50c3ac1f2e8f038cb789ad1224f7d57c30d5c5 {
+    meta:
+        source = "yaml/24a64171-3bde-4c59-bf3d-4b2a1a42f180.yaml"
+        category = "vulnerable driver"
+        digest_type = "raw-file-SHA256"
+        hash = "52ab9eb6279e2676045d78ab4a50c3ac1f2e8f038cb789ad1224f7d57c30d5c5"
+    condition:
+        hash.sha256(0, filesize) == "52ab9eb6279e2676045d78ab4a50c3ac1f2e8f038cb789ad1224f7d57c30d5c5"
+}
+
 rule LOLDrivers_24cc4f8d_a88d_4b2d_a912_bc773d12a524_SHA256_2ccd04383dc2f1f777b7712c6f8ee6d05afac98d22cad8e96f5172ba9c5c53b0 {
     meta:
         source = "yaml/24cc4f8d-a88d-4b2d-a912-bc773d12a524.yaml"
