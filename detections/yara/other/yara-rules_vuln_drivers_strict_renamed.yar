@@ -7043,6 +7043,16 @@ rule LOLDrivers_3d7da79b_fe34_45cd_a0c9_d4432d40611c_SHA256_f4e500a9ac5991da5bf1
         hash.sha256(0, filesize) == "f4e500a9ac5991da5bf114fa80e66456a2cde3458a3d41c14e127ac09240c114" and not (filename matches /nvoclock\.sys$/i)
 }
 
+rule LOLDrivers_3d90ea8a_2137_45c4_a97e_68e4cca48148_SHA256_88bedb050ce323e751c0a5136476a46b4112e7a875819980126190715a0edf40 {
+    meta:
+        source = "yaml/3d90ea8a-2137-45c4-a97e-68e4cca48148.yaml"
+        category = "vulnerable driver"
+        digest_type = "raw-file-SHA256"
+        hash = "88bedb050ce323e751c0a5136476a46b4112e7a875819980126190715a0edf40"
+    condition:
+        hash.sha256(0, filesize) == "88bedb050ce323e751c0a5136476a46b4112e7a875819980126190715a0edf40" and not (filename matches /shield\.sys$/i)
+}
+
 rule LOLDrivers_3dc0b91e_6afe_4938_ad9a_2cdf10c2c1e6_SHA256_6665b05e6fd430b729326a0b125cfcb70c387dbee46ef3f768f7dbdf0e0a6bab {
     meta:
         source = "yaml/3dc0b91e-6afe-4938-ad9a-2cdf10c2c1e6.yaml"
