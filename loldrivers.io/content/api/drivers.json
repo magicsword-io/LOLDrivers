@@ -82370,6 +82370,273 @@
         }
     },
     {
+        "Id": "1a768bca-478e-4552-8e7d-7e4863a984d3",
+        "Author": "Element2023H",
+        "Created": "2026-11-07",
+        "MitreID": "T1068",
+        "Category": "vulnerable driver",
+        "Verified": "FALSE",
+        "Commands": {
+            "Command": "sc create usafe type= filesys start= demand binPath= \"C:\\Users\\TestComputer\\Desktop\\usafe.sys\" group= \"FSFilter Activity Monitor\" and fltmc load usafe",
+            "Description": "The driver creates a communication port named L\"\\\\{39341D19-B97D-4969-ADCE-4C7E934FDF49}\" but fails to perform proper security verification or authentication on requesting processes within its ConnectNotifyCallback function. Furthermore, the MessageNotifyCallback function (specifically sub_140001D90) exposes a hardcoded cryptographic key. By establishing a 36-byte handshake utilizing the MagicNumber 0x55484C4F and an activation command MagicNumber 0x7576, a local unprivileged attacker can send a specialized command (0x757B) to terminate arbitrary processes. This allows attackers to bypass security software, terminate EDR/antivirus agents, or kill Protected Process Light (PPL) processes from user mode.",
+            "Usecase": "Terminate arbitrary processes from kernel mode.",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10, Windows 11"
+        },
+        "Resources": [
+            "https://www.virustotal.com/gui/file/a598e5068f759e4daa2e9f7b18dfdd74037872f8f0891f773a912bfba151184a"
+        ],
+        "KnownVulnerableSamples": [
+            {
+                "MD5": "bddd19e05c07e416a3192449beb9f50f",
+                "SHA1": "3556af939f158f78fd4cbe2be8c1196a7027840f",
+                "SHA256": "a598e5068f759e4daa2e9f7b18dfdd74037872f8f0891f773a912bfba151184a",
+                "Authentihash": {
+                    "MD5": "d21c7a9cb6e31f458e362a55ed3600ff",
+                    "SHA1": "d3fbab4495a6666067d8f4bce28252afc0c8d159",
+                    "SHA256": "903fe30b67b9cdc8a604dca6b3c7f0c22ca47f6caa35537edbe61069b8f15245"
+                },
+                "ResearchEvidence": {
+                    "Filename": "usafe.sys",
+                    "Signature": [
+                        "\\u4E0A\\u6D77\\u901A\\u5457\\u4FE1\\u606F\\u6280\\u672F\\u6709\\u9650\\u516C\\u53F8",
+                        "Microsoft Windows Hardware Compatibility Publisher"
+                    ],
+                    "CreationTimestamp": "2026-09-17 19:47:18",
+                    "Company": "Youpin",
+                    "Description": "USafe kernel-mode minifilter driver",
+                    "Product": "USafe",
+                    "ProductVersion": "4.0.0.0",
+                    "FileVersion": "4.0.0.0",
+                    "MachineType": "AMD64",
+                    "Imports": [
+                        "ntoskrnl.exe",
+                        "FLTMGR.SYS"
+                    ],
+                    "ExportedFunctions": "",
+                    "ImportedFunctions": [
+                        "KeGetCurrentIrql",
+                        "ExAllocatePoolWithTag",
+                        "ExFreePoolWithTag",
+                        "ZwCreateFile",
+                        "ZwSetInformationFile",
+                        "ZwClose",
+                        "KeClearEvent",
+                        "KeSetEvent",
+                        "KeWaitForSingleObject",
+                        "PsCreateSystemThread",
+                        "PsTerminateSystemThread",
+                        "ZwWaitForSingleObject",
+                        "ObfDereferenceObject",
+                        "PsGetCurrentProcessId",
+                        "PsGetProcessCreateTimeQuadPart",
+                        "PsGetProcessId",
+                        "ZwTerminateProcess",
+                        "ZwOpenProcess",
+                        "PsLookupProcessByProcessId",
+                        "ObRegisterCallbacks",
+                        "ObUnRegisterCallbacks",
+                        "PsGetThreadProcess",
+                        "PsProcessType",
+                        "PsThreadType",
+                        "MmCopyMemory",
+                        "RtlCompareMemory",
+                        "__C_specific_handler",
+                        "ZwQuerySystemInformation",
+                        "IoGetCurrentProcess",
+                        "ExWaitForRundownProtectionRelease",
+                        "ExRundownCompleted",
+                        "ExReleaseRundownProtection",
+                        "ExAcquireRundownProtection",
+                        "ExReInitializeRundownProtection",
+                        "ProbeForRead",
+                        "KeReleaseSpinLock",
+                        "KeAcquireSpinLockRaiseToDpc",
+                        "RtlCompareUnicodeString",
+                        "RtlInitUnicodeString",
+                        "ExInitializeRundownProtection",
+                        "KeInitializeSpinLock",
+                        "KeInitializeEvent",
+                        "RtlGetVersion",
+                        "DbgPrintEx",
+                        "PsSetCreateProcessNotifyRoutineEx",
+                        "MmGetSystemRoutineAddress",
+                        "PsGetVersion",
+                        "ExAllocatePoolWithQuotaTag",
+                        "FltSendMessage",
+                        "FltGetRequestorProcessId",
+                        "FltReleasePushLockEx",
+                        "FltAcquirePushLockExclusiveEx",
+                        "FltFreeSecurityDescriptor",
+                        "FltBuildDefaultSecurityDescriptor",
+                        "FltCloseClientPort",
+                        "FltCloseCommunicationPort",
+                        "FltCreateCommunicationPort",
+                        "FltParseFileNameInformation",
+                        "FltReleaseFileNameInformation",
+                        "FltGetFileNameInformation",
+                        "FltStartFiltering",
+                        "FltUnregisterFilter",
+                        "FltRegisterFilter",
+                        "FltDeletePushLock",
+                        "FltInitializePushLock"
+                    ],
+                    "PDBPath": "C:\\jenkins\\workspace\\rent-login-resource\\anti-cheat-driver\\build\\usafe-driver\\prod\\bin\\Release\\usafe.pdb",
+                    "Imphash": "878c75d7c90070843dbad0382f352784",
+                    "RichPEHeaderHash": {
+                        "MD5": "026527cfe6219d32fbb6e2aebca69a3c",
+                        "SHA1": "ac456d0eaa65da7d2b01ba638421385e505dc283",
+                        "SHA256": "013c83ce0b159a5a4552926815653603df84d80d9f62167f4ef95cea5db23310"
+                    },
+                    "Sections": {
+                        ".text": {
+                            "Entropy": 6.314685267727006,
+                            "Virtual Size": "0x69b7"
+                        },
+                        "fothk": {
+                            "Entropy": 0.03037337037012526,
+                            "Virtual Size": "0x1000"
+                        },
+                        ".rdata": {
+                            "Entropy": 4.975560228335461,
+                            "Virtual Size": "0x1790"
+                        },
+                        ".data": {
+                            "Entropy": 0.30140680731160896,
+                            "Virtual Size": "0x4934"
+                        },
+                        ".pdata": {
+                            "Entropy": 4.4356136842620515,
+                            "Virtual Size": "0x654"
+                        },
+                        "PAGE": {
+                            "Entropy": 6.007978282443197,
+                            "Virtual Size": "0x328"
+                        },
+                        "INIT": {
+                            "Entropy": 5.245037290803002,
+                            "Virtual Size": "0x8d4"
+                        },
+                        ".rsrc": {
+                            "Entropy": 3.083605424662682,
+                            "Virtual Size": "0x2e0"
+                        },
+                        ".reloc": {
+                            "Entropy": 2.8838385708120127,
+                            "Virtual Size": "0xd8"
+                        }
+                    },
+                    "MagicHeader": "50 45 0 0",
+                    "InternalName": "usafe.sys",
+                    "OriginalFilename": "usafe.sys",
+                    "Copyright": "",
+                    "Signatures": [
+                        {
+                            "CertificatesInfo": "",
+                            "SignerInfo": "",
+                            "Certificates": [
+                                {
+                                    "Subject": "CN=GlobalSign Code Signing Root R45,O=GlobalSign nv-sa,C=BE",
+                                    "Issuer": "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R3",
+                                    "DER": "MIIFojCCBIqgAwIBAgIQeAMYQkVwikHPbwG47rSpVDANBgkqhkiG9w0BAQwFADBMMSAwHgYDVQQLExdHbG9iYWxTaWduIFJvb3QgQ0EgLSBSMzETMBEGA1UEChMKR2xvYmFsU2lnbjETMBEGA1UEAxMKR2xvYmFsU2lnbjAeFw0yMDA3MjgwMDAwMDBaFw0yOTAzMTgwMDAwMDBaMFMxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMSkwJwYDVQQDEyBHbG9iYWxTaWduIENvZGUgU2lnbmluZyBSb290IFI0NTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBALYtxTDdeuirkD0DcrA6S5kWYbLl/6VnHTcc5X7sk4OqhPWjQ5uYRYq4Y1ddmwCIBCXp+GiSS4LYS8lKA/Oof2qPimEnvaFE0P31PyLCo0+RjbMFsiiCkV37WYgFC5cGwpj4LKczJO5QOkHM8KCwex1N0qhYOJbp3/kbkbuLECzSx0Mdogl0oYCve+YzCgxZa4689Ktal3t/rlX7hPCA/oRM1+K6vcR1oW+9YRB0RLKYB+J0q/9o3GwmPukf5eAEh60w0wyNA3xVuBZwXCR4ICXrZ2eIq7pONJhrcBHeOMrUvqHAnOHfHgIB2DvhZ0OEts/8dLcvhKO/ugk3PWdssUVcGWGrQYP1rB3rdw1GR3POv72Vle2dK4gQ/vpY6KdX4bPPqFrpByWbEsSegHI9k9yMlN87ROYmgPzSwwPwjAzSRdYu54+YnuYE7kJuZ35CFnFi5wT5YMZkobacgSFOK8ZtaJSGxpl0c2cxepHy1Ix5bnymu35Gb03FhRIrz5oiRAiohTfOB2FXBhcSJMDEMXOhmDVXR34QOkXZLaRRkJipoAc3xGUaqhxrFnf3p5fsPxkwmW8x++pAsufSxPrJ0PBQdnRZ+o1tFzK++Ol+A/Tnh3Wa1EqRLIUDEwIrQoDyiWo2z8hMoM6e+MuNrRan097VmxinxpI68YJj8S4OJGTfAgMBAAGjggF3MIIBczAOBgNVHQ8BAf8EBAMCAYYwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUHwC/RoAK/Hg5t6W0Q9lWULvOljswHwYDVR0jBBgwFoAUj/BLf6guRSSuTVD6Y5qL3uLdG7wwegYIKwYBBQUHAQEEbjBsMC0GCCsGAQUFBzABhiFodHRwOi8vb2NzcC5nbG9iYWxzaWduLmNvbS9yb290cjMwOwYIKwYBBQUHMAKGL2h0dHA6Ly9zZWN1cmUuZ2xvYmFsc2lnbi5jb20vY2FjZXJ0L3Jvb3QtcjMuY3J0MDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9jcmwuZ2xvYmFsc2lnbi5jb20vcm9vdC1yMy5jcmwwRwYDVR0gBEAwPjA8BgRVHSAAMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8vd3d3Lmdsb2JhbHNpZ24uY29tL3JlcG9zaXRvcnkvMA0GCSqGSIb3DQEBDAUAA4IBAQCs98wVizB5qB0LKIgZCdccf/6GvXtaM24NZw57YtnhGFywvRNdHSOuOVB2N6pE/V8BI1mGVkzMrbxkExQwpCCo4D/onHLcfvPYDCO6qC2qPPbsn4cxB2X1OadRgnXh8i+X9tHhZZaDZP6hHVH7tSSb9dJ3abyFLFz6WHfRrqexC+LWd7uptDRKqW899PMNlV3m+XpFsCUXMS7b9w9o5oMfqffl1J2YjNNhSy/DKH563pMOtH2gCm2SxLRmP32nWO6s9+zDCAGrOPwKHKnFl7KIyAkCGfZcmhrxTWww1LMGqwBgSA14q88XrZKTYiB3dWy9yDK03E3r2d/BkJYpvcF/",
+                                    "Thumbprint": {
+                                        "SHA1": "4c5d80d2cd06b1a493c49b2e9bed4a57c2f873e5",
+                                        "SHA256": "05e0634b1feb98ae6b4cf101728cf9d5a1793ceace301506ff332b22d4cf08eb"
+                                    },
+                                    "ValidFrom": "2020-07-28 00:00:00",
+                                    "ValidTo": "2029-03-18 00:00:00",
+                                    "Signature": "acf7cc158b3079a81d0b28881909d71c7ffe86bd7b5a336e0d670e7b62d9e1185cb0bd135d1d23ae39507637aa44fd5f01235986564cccadbc64131430a420a8e03fe89c72dc7ef3d80c23baa82daa3cf6ec9f87310765f539a7518275e1f22f97f6d1e165968364fea11d51fbb5249bf5d27769bc852c5cfa5877d1aea7b10be2d677bba9b4344aa96f3df4f30d955de6f97a45b02517312edbf70f68e6831fa9f7e5d49d988cd3614b2fc3287e7ade930eb47da00a6d92c4b4663f7da758eeacf7ecc30801ab38fc0a1ca9c597b288c8090219f65c9a1af14d6c30d4b306ab0060480d78abcf17ad9293622077756cbdc832b4dc4debd9dfc1909629bdc17f",
+                                    "SignatureAlgorithmOID": "1.2.840.113549.1.1.12",
+                                    "IsCertificateAuthority": true,
+                                    "SerialNumber": "7803184245708a41cf6f01b8eeb4a954",
+                                    "Version": 3,
+                                    "CertificateType": "CA",
+                                    "IsCodeSigning": true,
+                                    "IsCA": true,
+                                    "TBS": {
+                                        "MD5": "a33260428269bc902bc1cd280e4b1837",
+                                        "SHA1": "254209ca172cffcc67bd2a88996556d2f09538f0",
+                                        "SHA256": "a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868",
+                                        "SHA384": "fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba"
+                                    }
+                                },
+                                {
+                                    "Subject": "CN=GlobalSign GCC R45 EV CodeSigning CA 2020,O=GlobalSign nv-sa,C=BE",
+                                    "Issuer": "CN=GlobalSign Code Signing Root R45,O=GlobalSign nv-sa,C=BE",
+                                    "DER": "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",
+                                    "Thumbprint": {
+                                        "SHA1": "c10bb76ad4ee815242406a1e3e1117ffec743d4f",
+                                        "SHA256": "cd0e144dd10bac221fe2fb901058d16450a0578b3c47c770908f2e9ada28ef12"
+                                    },
+                                    "ValidFrom": "2020-07-28 00:00:00",
+                                    "ValidTo": "2030-07-28 00:00:00",
+                                    "Signature": "2575a009c939bab7a139892f189fabd6eb1d4be8947c0d07689b1c9def71b6176a6b024fb33f864587cc659b4ce35806022266d56102c5638fd4a2f1b65e250b7796e9cd7140338829eceef3a26dbc4db53e064bc97333ca08142d3d4ce8b0ba75a6742da4583a6c1349f8a5150a149685b16a68342542af9656f410fa247df12b72c116e16bebe6a998c73e5af4d0189dfd74978677462a3d237d28738aaeef2b1b9abf6c53a7149e3c8771c05e8ec8fbd32a9233ea574d5e075ecac118ac812d1a21fa6ecf97617bdf717a3aca63f7d530443732febb4385dcbafca6ca33192b776ddbcb05f07e5f752ea2b6bf35aa3663c9ce64d9bdfcbc2cf3495600c8122bc627bb37af57efc4cf1e29c4f4e22dce2a61cf57edf50a40e2f518d61ee9902fcad3875f938a481a111de537859f2e66629a5e814e95ac555743dc538b257e3c610f8a0bbaf53fa6d78ef704565e21bb9fd76a7180bf96de7203d8d8222bf327164f38e851400cae92efbe3d7df780c64c36578495a7841548300e5227088d8ea2bd22c719c9a6ca0ea87a36db6aba615f112495a4e28e68ee19a949995ed0b434bdd6f940c710973152393529118724d3c4fba963cb7748d5fa62fc24e0047a4ed0e46edece9e385026f4217165d70925d4c907007ab8c7f377e8c5d4e255d0d31ef67f52e2498db911720c88442633660144dfe4330e21de62894807daf5",
+                                    "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                    "IsCertificateAuthority": true,
+                                    "SerialNumber": "77bd0e05b7590bb61d4761531e3f75ed",
+                                    "Version": 3,
+                                    "CertificateType": "CA",
+                                    "IsCodeSigning": true,
+                                    "IsCA": true,
+                                    "TBS": {
+                                        "MD5": "65fd1dac1f115d9507f4e1840c8cb36a",
+                                        "SHA1": "c7cf5607e19b22fe60c055e71d9b555d70f71f66",
+                                        "SHA256": "d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe",
+                                        "SHA384": "defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab"
+                                    }
+                                },
+                                {
+                                    "Subject": "CN=上海通呗信息技术有限公司,O=上海通呗信息技术有限公司,L=上海,ST=上海,C=CN,1.3.6.1.4.1.311.60.2.1.2=Shanghai,1.3.6.1.4.1.311.60.2.1.3=CN,2.5.4.5=91310120MAC10LJLX5,2.5.4.15=Private Organization",
+                                    "Issuer": "CN=GlobalSign GCC R45 EV CodeSigning CA 2020,O=GlobalSign nv-sa,C=BE",
+                                    "DER": "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",
+                                    "Thumbprint": {
+                                        "SHA1": "6477262a001a80d3f907e13bbba050706d5aa77e",
+                                        "SHA256": "2dfc94d432e8e86ce865a4227ee1b0fddfacd099388e5eeb262cb67a1350a3fb"
+                                    },
+                                    "ValidFrom": "2026-04-17 05:24:17",
+                                    "ValidTo": "2027-04-18 05:24:17",
+                                    "Signature": "7010a4c75df3b27d3cdd91b150c0d46970b60fd39e0361848f551ab977b5dd1dd0842e3e6a3e0faf801475b82f5cda4388e6c81542f664652bae8e40dc765583c3b332de31eb1fea0521d80b58685e0331722c8815a7c7c78a36992be9770de54df4fcc9fc69d3dd5e5d0de0d6e0f45e38ab66003cc8a673c82b525ec9be45d9700d1435a402436fd41334ace27b283b4af65adbee334b24751cdbdcd44707d263e3edccfe538e358fd3a5a14d6857795b38c2c15115570c2e5a6c210cf656166ffe2d4e71b7d2c9828922406e4dc15d1a6da051786cf3952b96a1315b8ae44452e166dbf31fd809ed73cb61e6661eeeed5ae3fb64778c121dee79e493d74b9141420cc57342a4d28cba9c0bef7be87ad29ad005a241342e99a95d618c7745dd8f0afeff15c100f7d9a5a38b17218880a47d1c43886417ab7709e7047a6335a44e47a1db3c514a33167560a6f539d7f793fadf843cc3962e5d13c8198c1201c2c64b287aed1b1dff9f36b7cf5ba2a4776cd475e115809ca9fa17773caa59d2be56e084d6fb7c20069e45f14bba793304a8faa39d815b9b629dc46f4485e234af57df576c8ee070a4c68aab7d17e5edfde5dda4102ad30913787056c145f13f6cb4f947f13349188c323afa962a2e02003fbb457e2d5e93e58599269af171ac49ab8db40dc15bfdeb0cecb7a176b003e70ea4a30520e20ef3e8d1105fcbac8d61",
+                                    "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
+                                    "IsCertificateAuthority": false,
+                                    "SerialNumber": "7aced42afe6f1a4cdd0eb620",
+                                    "Version": 3,
+                                    "CertificateType": "Leaf (Code Signing)",
+                                    "IsCodeSigning": true,
+                                    "IsCA": false,
+                                    "TBS": {
+                                        "MD5": "97ae347e3082b70beb2a6da684750994",
+                                        "SHA1": "e775550ecc004000e713eda3eeaaa9133ee0530b",
+                                        "SHA256": "e1c8b19a5d0966e45db79e1b7a858737303fc721924150ba171a9c0c057143bb",
+                                        "SHA384": "b7111e7a286802efefe5355845ffa8e3dd755285ad40f8daa4cdec8b2e8935ab86926893936b063452dae20f91748b8a"
+                                    }
+                                }
+                            ],
+                            "Signer": [
+                                {
+                                    "SerialNumber": "7aced42afe6f1a4cdd0eb620",
+                                    "Issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020",
+                                    "Version": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "DetectionScope": "context-only"
+                }
+            }
+        ],
+        "Tags": [
+            "usafe.sys"
+        ],
+        "IndicatorSemantics": "Exact file/Authenticode hashes only for blocking; Tags are hunting names. ResearchEvidence is context-only.",
+        "ResearchEvidence": {
+            "DetectionScope": "context-only",
+            "Tags": [
+                "usafe.sys"
+            ],
+            "Detection": []
+        }
+    },
+    {
         "Id": "1ab1ec8c-1231-4ba4-8804-4a2cda103bb8",
         "Verified": "TRUE",
         "Author": "Michael Haag",

@@ -3103,6 +3103,16 @@ rule LOLDrivers_1a1cf88a_96d0_46cd_a24d_1535e4a5f6e3_SHA256_6de84caa2ca18673e01b
         hash.sha256(0, filesize) == "6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492" and not (filename matches /msrhook\.sys$/i)
 }
 
+rule LOLDrivers_1a768bca_478e_4552_8e7d_7e4863a984d3_SHA256_a598e5068f759e4daa2e9f7b18dfdd74037872f8f0891f773a912bfba151184a {
+    meta:
+        source = "yaml/1a768bca-478e-4552-8e7d-7e4863a984d3.yaml"
+        category = "vulnerable driver"
+        digest_type = "raw-file-SHA256"
+        hash = "a598e5068f759e4daa2e9f7b18dfdd74037872f8f0891f773a912bfba151184a"
+    condition:
+        hash.sha256(0, filesize) == "a598e5068f759e4daa2e9f7b18dfdd74037872f8f0891f773a912bfba151184a" and not (filename matches /usafe\.sys$/i)
+}
+
 rule LOLDrivers_1ab1ec8c_1231_4ba4_8804_4a2cda103bb8_SHA256_e2ec3b2a93c473d88bfdf2deb1969d15ab61737acc1ee8e08234bc5513ee87ea {
     meta:
         source = "yaml/1ab1ec8c-1231-4ba4-8804-4a2cda103bb8.yaml"
