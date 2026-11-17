@@ -1,0 +1,30 @@
+Id: e4b89f2a-6c1d-4e3b-9a7f-8d2c5b1e0f4a
+Tags:
+    - j.sys
+Author: Kitcat
+Created: '2026-11-18'
+MitreID: T1068
+Category: malicious
+Verified: 'TRUE'
+Commands:
+    Command: 'sc.exe create j.sys type= kernel start= demand binPath=C:\windows\temp\j.sys && sc.exe start j.sys'
+    Description: 'Loads the maliciously signed driver using a leaked 2014 VeriSign cross-signed certificate with a 2022 timestamp. Sending IOCTL 0x222000 and buffer format just a pid (int32_t) to register a target PID in ObRegisterCallbacks, executing handle &= ~1 to strip PROCESS_TERMINATE rights.'
+    Usecase: 'Bypass security controls by preventing process termination'
+    Privileges: kernel
+    OperatingSystem: Windows 10, Windows 11
+Resources: []
+Acknowledgement:
+    Person: 'Chong Chan Hao'
+    Handle: '@Kitcatsys'
+Detection: []
+KnownVulnerableSamples:
+-   Filename: j.sys
+    MD5: 428a3062dd00922a410e4629aecf211d
+    SHA1: 4802f924a31b8429e1bfe2274edc220e9e32b83f
+    SHA256: 9adbcda4f133fbdecfb12ca9b24cc49451c4e7683e39b667340f35c5222b21b5
+    Signature:
+        - 'Shenzhen Jinxian Technology Co., Ltd.'
+    Date: '2022-09-20'
+    Publisher: 'Shenzhen Jinxian Technology Co., Ltd.'
+    Company: 'Shenzhen Jinxian Technology Co., Ltd.'
+    Description: 'Malicious driver utilizing ObRegisterCallbacks (handle &= ~1) to strip PROCESS_TERMINATE access rights.'
