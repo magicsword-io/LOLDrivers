@@ -5,6 +5,17 @@ import { tmpdir } from 'node:os';
 import { resolve, join } from 'node:path';
 import { parse } from 'yaml';
 
+// Decode HTML entities for accurate character counting
+function decodeHTML(html) {
+  return html
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
+}
+
 const root = resolve(process.argv[2] || 'dist');
 const analytics = process.argv.includes('--analytics');
 const production = process.argv.includes('--production');
@@ -147,6 +158,23 @@ for (const id of ids) {
       .length,
     analytics ? 1 : 0,
     `${id}: analytics gating`,
+  );
+
+  // Verify SEO title and description length limits
+  const titleMatch = html.match(/<title>([^<]*)<\/title>/);
+  const titleRaw = titleMatch?.[1] || '';
+  const title = decodeHTML(titleRaw);
+  assert.ok(
+    title.length > 0 && title.length <= 60,
+    `${id}: title length ${title.length} exceeds 60 chars: "${title}"`,
+  );
+
+  const descMatch = html.match(/<meta name="description" content="([^"]*)"/);
+  const descriptionRaw = descMatch?.[1] || '';
+  const description = decodeHTML(descriptionRaw);
+  assert.ok(
+    description.length > 0 && description.length <= 155,
+    `${id}: description length ${description.length} exceeds 155 chars`,
   );
 }
 console.log(
