@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
-import { readFile, readdir, stat } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
+import { mkdtemp, readFile, readdir, rm, stat } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
 import { resolve, join } from 'node:path';
+import { parse } from 'yaml';
 
 const root = resolve(process.argv[2] || 'dist');
 const analytics = process.argv.includes('--analytics');
@@ -93,8 +96,24 @@ assert.ok(
 for (const id of ids) {
   const html = await read(`drivers/${id}/index.html`);
   verifySocialCard(html, id);
-  const raw = JSON.parse(await read(`data/drivers/${id}.json`));
+  const metadata = JSON.parse(await read(`data/drivers/${id}.json`));
+  assert.deepEqual(
+    Object.keys(metadata).sort(),
+    ['DetectionScope', 'ResearchEvidence'],
+    `${id}: unscoped metadata fields escaped the research envelope`,
+  );
+  assert.equal(metadata.DetectionScope, 'context-only');
+  const raw = metadata.ResearchEvidence;
   assert.equal(raw.Id, id);
+  assert.deepEqual(
+    raw,
+    JSON.parse(
+      JSON.stringify(
+        parse(await readFile(resolve('../yaml', `${id}.yaml`), 'utf8')),
+      ),
+    ),
+    `${id}: website metadata diverged from source YAML`,
+  );
   assert.equal(
     html.includes('ASTRO REVIEW PREVIEW'),
     !production,
@@ -152,14 +171,41 @@ assert.ok(
 if (production) {
   const api = JSON.parse(await read('api/drivers.json'));
   assert.deepEqual(api.map((driver) => driver.Id).sort(), ids.sort());
-  for (const driver of api) {
-    assert.deepEqual(
-      // Python retains -0.0; JavaScript JSON serialization writes 0. Normalize
-      // that representation before comparing otherwise identical catalog records.
-      JSON.parse(JSON.stringify(driver)),
-      JSON.parse(await read(`data/drivers/${driver.Id}.json`)),
-      `${driver.Id}: public API diverged from website source`,
+  // Pages retain original research metadata. The public API intentionally moves
+  // that evidence outside active indicators, so verify its canonical projection.
+  const canonical = await mkdtemp(join(tmpdir(), 'loldrivers-api-'));
+  try {
+    execFileSync(
+      process.env.PYTHON || 'python3',
+      [
+        resolve('../bin/export-api.py'),
+        '--input',
+        resolve('../yaml'),
+        '--output',
+        join(canonical, 'api'),
+      ],
+      { stdio: 'inherit' },
     );
+    const records = JSON.parse(
+      await readFile(join(canonical, 'api/drivers.json'), 'utf8'),
+    );
+    const byId = new Map(records.map((driver) => [driver.Id, driver]));
+    for (const driver of api) {
+      assert.deepEqual(
+        driver,
+        byId.get(driver.Id),
+        `${driver.Id}: public API diverged from canonical indicator projection`,
+      );
+    }
+    for (const path of ['api/drivers.csv', 'drivers_table.csv']) {
+      assert.equal(
+        await read(path),
+        await readFile(join(canonical, path), 'utf8'),
+        `${path}: public API diverged from canonical indicator projection`,
+      );
+    }
+  } finally {
+    await rm(canonical, { recursive: true, force: true });
   }
   for (const path of [
     'api/drivers.csv',

@@ -100,11 +100,19 @@ test('loads metadata only on request and retains theme across navigation', async
   await page.getByRole('button', { name: 'Switch to light theme' }).click();
   await expect(page.locator('.lol-logo-light')).toBeVisible();
   await expect(page.locator('.ms-logo-light')).toBeVisible();
+  const metadataResponse = page.waitForResponse((response) =>
+    response.url().includes(`/data/drivers/${dell}.json`),
+  );
   await page
     .getByRole('button', { name: 'Load full sample metadata' })
     .first()
     .click();
   await expect(page.locator('#metadata-0')).toContainText('SHA256');
+  await expect(page.locator('#metadata-0')).toContainText('context-only');
+  const downloaded = await (await metadataResponse).json();
+  expect(downloaded.DetectionScope).toBe('context-only');
+  expect(downloaded).not.toHaveProperty('KnownVulnerableSamples');
+  expect(downloaded.ResearchEvidence.Id).toBe(dell);
   expect(metadataRequests).toHaveLength(1);
   await page
     .getByRole('link', { name: 'LOLDrivers home', exact: true })
@@ -114,10 +122,13 @@ test('loads metadata only on request and retains theme across navigation', async
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
 });
 
-test('renders the catalog without JavaScript', async ({ browser }) => {
-  const context = await browser.newContext({ javaScriptEnabled: false });
+test('renders the catalog without JavaScript', async ({ browser, baseURL }) => {
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    baseURL,
+  });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4321/');
+  await page.goto('/');
   await expect(page.locator('#rows tr')).toHaveCount(12);
   await expect(page.locator('.ms-promotion')).toBeVisible();
   await expect(page.locator('.research h2').first()).toHaveText(
@@ -130,7 +141,7 @@ test('renders the catalog without JavaScript', async ({ browser }) => {
   await expect(
     page.getByRole('button', { name: 'Next recent driver' }),
   ).toBeHidden();
-  await page.goto('http://127.0.0.1:4321/drivers/');
+  await page.goto('/drivers/');
   await expect(page.locator('.driver-directory li')).toHaveCount(total);
   await context.close();
 });

@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - 'README.md'
       - '.github/workflows/generate-counter.yml'
       - 'bin/gen-counter.py'
       - 'bin/publish-counter.sh'
@@ -45,5 +46,5 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install PyYAML==6.0.1
-      - name: Recount and publish the README badge
+      - name: Recount and publish the README badges
         run: bash bin/publish-counter.sh

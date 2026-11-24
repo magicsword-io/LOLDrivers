@@ -1,53 +1,16 @@
-import requests
-import textwrap
+"""Generate the Lacework query from this revision's local validated catalog."""
+import argparse
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'bin'))
+from detection_generation import REPO, build_outputs
+from indicator_safety import load_catalog
 
-def fetch_hashes(url):
-    response = requests.get(url)
-    if response.status_code != 200:
-        print("Error fetching data.")
-        return None
-    return response.text.strip().split("\n")
-
-def generate_lql(hashes):
-    hashes_condition = "\n            OR ".join(f"files.FILEDATA_HASH = '{hash_}'" for hash_ in hashes)
-    query = textwrap.dedent(f"""\
-    queryId: LOLDriver_Malicious_Hashes
-    queryText: |-
-        {{
-            source {{
-                LW_HE_FILES files
-            }}
-            filter {{
-                {hashes_condition}
-            }}
-            return distinct {{
-                files.FILEDATA_HASH,
-                files.FILE_ACCESSED_TIME,
-                files.FILE_CREATED_TIME,
-                files.FILE_MODIFIED_TIME,
-                files.FILE_NAME,
-                files.FILE_PERMISSIONS,
-                files.FILE_TYPE,
-                files.HARD_LINK_COUNT,
-                files.LINK_ABS_DEST_PATH,
-                files.LINK_DEST_PATH,
-                files.MID,
-                files.OWNER_GID,
-                files.OWNER_UID,
-                files.OWNER_USERNAME,
-                files.PATH,
-                files.RECORD_CREATED_TIME,
-                files.SIZE
-            }}
-        }}""")
-
-    with open('LOLDriver_Malicious_Hashes.yaml', 'w') as file:
-        file.write(query)
-
-    print("Query saved to 'LOLDriver_Malicious_Hashes.yaml'.")
-
-url = 'https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/detections/hashes/samples_malicious.sha256'
-hashes = fetch_hashes(url)
-if hashes:
-    generate_lql(hashes)
-
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--catalog', type=Path, default=REPO / 'yaml')
+    parser.add_argument('--output', type=Path, default=Path(__file__).with_name('LOLDriver_Malicious_Hashes.yaml'))
+    args = parser.parse_args()
+    # No network fetch or execution of samples; use the shared generator.
+    outputs = build_outputs(load_catalog(args.catalog), Path('/nonexistent/no-driver-input'))
+    args.output.write_text(outputs['detections/lacework/LOLDriver_Malicious_Hashes.yaml'])

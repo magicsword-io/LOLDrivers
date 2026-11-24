@@ -1,0 +1,568 @@
+Id: 8b8bbbfe-798b-47bf-991b-21a0a0becef3
+Tags:
+- vsapint.sys
+Verified: 'TRUE'
+Author: Andrea Monzani
+Created: '2026-10-25'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create vsapint binPath=C:\windows\temp\vsapint.sys type=kernel &&
+    sc.exe start vsapint
+  Description: A vulnerable kernel driver that can be used to disable Code Integrity
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://web.archive.org/web/20160808182709/https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+- https://doi.org/10.1016/j.cose.2026.105194
+Detection: []
+Acknowledgement:
+  Person: Andrea Monzani, Davide Netti, Antonio Parata
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: vsapint.sys
+  MD5: 3e62bffd59054488001977738bb917c6
+  SHA1: 109f48aad567df4dbb5a2b33b1baa5db0fa9e422
+  SHA256: 0e674d7e96e2e2e33ca96a5537cd4dd9db247249131ac91c44ebe9764efbfffe
+  Imphash: 78945e44f49de050f1aa5477c5f78ab8
+  Authentihash:
+    MD5: 46f3e2fe2824a0283fe717c0fe89b567
+    SHA1: 5ecef80a764c8e52ca66ad0febbce6e09aa2c1ea
+    SHA256: 7e748ee7c0caaacbded97da7d2dd307de6520004a32bd96980e39523a19f744b
+  RichPEHeaderHash:
+    MD5: 1d655196a84efc729e865813be7eff71
+    SHA1: 3a8cc12028110dac08447af9825f68a449d5f33e
+    SHA256: ab50eed62287613b57467bbdd5b14bf1ae77d0395331384339c23361881f985f
+  Sections:
+    .text:
+      Entropy: 6.550868691795445
+      Virtual Size: '0x1c1d10'
+    .rdata:
+      Entropy: 7.8959302600495365
+      Virtual Size: '0x4fd0b0'
+    .data:
+      Entropy: 4.34792119578486
+      Virtual Size: '0x15558'
+    .pdata:
+      Entropy: 6.083863101931095
+      Virtual Size: '0xc900'
+    .edata:
+      Entropy: 5.648542287348602
+      Virtual Size: '0x2b74'
+    INIT:
+      Entropy: 4.970469162751867
+      Virtual Size: '0x91e'
+    .rsrc:
+      Entropy: 3.3886971804341006
+      Virtual Size: '0x3f0'
+    .reloc:
+      Entropy: 5.4651940687692315
+      Virtual Size: '0x3b48'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2024-10-08 12:04:08'
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions:
+  - AllocVsapiResourceForNtNativeResource
+  - FreeVsapiResourceForNtNativeResource
+  - IsVsapiWT
+  - KDGetFileAttributes
+  - KDGetFileAttributesW
+  - KDReadFile
+  - KDSetFileAttributes
+  - KDSetFileAttributesW
+  - KDWriteFile
+  - MapR0NameToR3Name
+  - MapR0NameToR3NameW
+  - MapR3NameToR0Name
+  - MapR3NameToR0NameW
+  - QueryKeyValue
+  - QueryStringValueUnderCurrentVersion
+  - QuerySystemRoot
+  - TMCopySecurityDescriptor
+  - TMQuerySecurityObject
+  - TMSetSecurityObject
+  - VSAccess
+  - VSAccessW
+  - VSActOnFile
+  - VSAddArchProcessExcludeExtName
+  - VSAddArchProcessExtName
+  - VSAddDataType
+  - VSAddPackPolicyExcludeName
+  - VSAddProcessExcludeExtName
+  - VSAddProcessExtName
+  - VSAddSpywareExcludeName
+  - VSAllocateMemoryArray
+  - VSArchFileNeedProcess
+  - VSBackupFile
+  - VSBackupFileW
+  - VSBackupResourceW
+  - VSBackupVSCData
+  - VSBaseName
+  - VSCalculateCRC
+  - VSCharType
+  - VSCheckPatternFileW
+  - VSCheckResourceIntegrity
+  - VSCleanVirus
+  - VSCleanVirusW
+  - VSClearArchProcessExcludeExtNameTable
+  - VSClearArchProcessExtNameTable
+  - VSClearPackPolicyExcludeNameTable
+  - VSClearProcessExcludeExtNameTable
+  - VSClearProcessExtNameTable
+  - VSClearSpywareExcludeNameTable
+  - VSCloseFile
+  - VSCloseIOFromHandle
+  - VSCloseResource
+  - VSConvertCharacter
+  - VSCopyFile
+  - VSCopyFileFD
+  - VSCopyFileW
+  - VSCrc32
+  - VSCreateDirectoryTree
+  - VSCreateDirectoryTreeA
+  - VSCreateDirectoryTreeU
+  - VSCreateDirectoryTreeW
+  - VSDCIsCompressed
+  - VSDataType
+  - VSDataTypeFD
+  - VSDecompress
+  - VSDecompressFile
+  - VSDelDataType
+  - VSDelUserDecodeFunc
+  - VSDeleteArchProcessExcludeExtName
+  - VSDeleteArchProcessExtName
+  - VSDeleteDirectoryFile
+  - VSDeleteDirectoryFileW
+  - VSDeleteFile
+  - VSDeleteFileW
+  - VSDeletePackPolicyExcludeName
+  - VSDeleteProcessExcludeExtName
+  - VSDeleteProcessExtName
+  - VSDeleteSpywareExcludeName
+  - VSDisablePattern
+  - VSEncBackupFile
+  - VSEncBackupFileW
+  - VSFileNeedProcess
+  - VSFindCloseFile
+  - VSFindFirstFile
+  - VSFindFirstFileW
+  - VSFindNextFile
+  - VSFindNextFileW
+  - VSFormatDate
+  - VSFreeMemUsageArray
+  - VSFreePatternList
+  - VSFreePatternNode
+  - VSFullPathTransform
+  - VSGetActiveScanFlag
+  - VSGetArchProcessExcludeExtName
+  - VSGetArchProcessExcludeExtNumber
+  - VSGetArchProcessExtName
+  - VSGetArchProcessExtNumber
+  - VSGetArchProcessExtTableSize
+  - VSGetBackupEncodeFlag
+  - VSGetBackupFileInfo
+  - VSGetBackupFileInfoW
+  - VSGetCharacterEnvType
+  - VSGetCleanBackupFlag
+  - VSGetCleanZipFlag
+  - VSGetConfChangeFlag
+  - VSGetConfig
+  - VSGetConfigEx
+  - VSGetCurrentPatternFileInternalVersion
+  - VSGetCurrentPatternFileVersion
+  - VSGetDataTypeInfo
+  - VSGetDebug
+  - VSGetDecodeFlag
+  - VSGetDecompressLayer
+  - VSGetDefaultExcludeExtList
+  - VSGetDefaultExcludeExtListSize
+  - VSGetDefaultExtList
+  - VSGetDefaultExtListSize
+  - VSGetDefaultHospitalPath
+  - VSGetDefaultPatternFile
+  - VSGetDefaultPatternPath
+  - VSGetDefaultTempPath
+  - VSGetDetectableVirusNumber
+  - VSGetDetectionExcludeNames
+  - VSGetEncodeAction
+  - VSGetEncryptTempFileFlag
+  - VSGetExpandLiteFlag
+  - VSGetExtractAmgFlag
+  - VSGetExtractArchiveFlag
+  - VSGetExtractFileCountLimit
+  - VSGetExtractFileRatioLimit
+  - VSGetExtractFileSizeLimit
+  - VSGetExtractFileSizeLimitByVSDT
+  - VSGetExtractPath
+  - VSGetFileAttributes
+  - VSGetFileAttributesByHandle
+  - VSGetFileAttributesW
+  - VSGetFileBasicInformation
+  - VSGetFileBasicInformationByHandle
+  - VSGetFileBasicInformationW
+  - VSGetFilePosition
+  - VSGetFileTimes
+  - VSGetFileTimesW
+  - VSGetHeuristicLevel
+  - VSGetKeepDecompressFileFlag
+  - VSGetMemUsage
+  - VSGetMemoryDecompressSize
+  - VSGetMsgScanLayer
+  - VSGetMultiPatternFilesInfo
+  - VSGetNormalizeMemScanFlag
+  - VSGetOleEmbedScanLayer
+  - VSGetPatternHandle
+  - VSGetPatternInternalVersion
+  - VSGetPatternPath
+  - VSGetPatternProperty
+  - VSGetProcessAllFileFlag
+  - VSGetProcessAllFileInArcFlag
+  - VSGetProcessAllSubDirFlag
+  - VSGetProcessExcludeExtName
+  - VSGetProcessExcludeExtNumber
+  - VSGetProcessExtName
+  - VSGetProcessExtNumber
+  - VSGetProcessExtTableSize
+  - VSGetProcessMemScanFlag
+  - VSGetRTFScanLayer
+  - VSGetRedAlertFlag
+  - VSGetScanBPFlag
+  - VSGetScanGenericMacroFlag
+  - VSGetScanJavaFlag
+  - VSGetScanMacroFlag
+  - VSGetScanMemoryFlag
+  - VSGetScanTask
+  - VSGetScanTaskStatus
+  - VSGetScriptTrapFlag
+  - VSGetServiceTable
+  - VSGetSmartDecompressFlag
+  - VSGetSoftMiceFlag
+  - VSGetSpywareExcludeName
+  - VSGetSpywareExcludeNameEx
+  - VSGetSpywareExcludeNumber
+  - VSGetStripMacroFlag
+  - VSGetTempPath
+  - VSGetVSCInfo
+  - VSGetVSDebug
+  - VSGetVSVerboseLevel
+  - VSGetVerboseLevel
+  - VSGetVersion
+  - VSGetVersionString
+  - VSGetVirusAction
+  - VSGetVirusDetectionInfo
+  - VSGetVirusHospitalPath
+  - VSGetVirusInfo
+  - VSGetVirusNameInfo
+  - VSGetVirusNameInfoEx
+  - VSGetVirusPatternInfo
+  - VSGetVirusPatternInfoEx
+  - VSGetVirusPatternInformation
+  - VSGetVirusPropertyByName
+  - VSInit
+  - VSIsDir
+  - VSIsEZDriveInstalled
+  - VSIsNewerEngine
+  - VSIsTwoByteWord
+  - VSKDCleanBootVirus
+  - VSKDGetLongPathName
+  - VSKDReadNewestPattern
+  - VSKDReadNewestPatternW
+  - VSKDScanBootSector
+  - VSKDScanPartitionTable
+  - VSKDSetCheckForInteropFlag
+  - VSKDSetPatternInsightCallbackFunc
+  - VSKDZwClose
+  - VSKDZwCreateFile
+  - VSKDZwQueryInformationFile
+  - VSKDZwSetInformationFile
+  - VSLoadCustomDefenseList
+  - VSLseekResource
+  - VSMakeDirectory
+  - VSMakeDirectoryW
+  - VSMatch
+  - VSOpenCreateFileW
+  - VSOpenFile
+  - VSOpenFileW
+  - VSOpenIOFromHandle
+  - VSOpenResource
+  - VSProcessFile
+  - VSQuit
+  - VSReadControlPattern
+  - VSReadFile
+  - VSReadPattern
+  - VSReadPatternInFile
+  - VSReadPatternInFileW
+  - VSReadPhysicalSector
+  - VSReadResource
+  - VSRemoveAllTempFile
+  - VSRemoveDirectory
+  - VSRemoveDirectoryW
+  - VSRemoveWhiteChar
+  - VSRenameFile
+  - VSRenameFileW
+  - VSResetConfChangeFlag
+  - VSResetCustomDefenseList
+  - VSResetScanCounter
+  - VSResourceDataType
+  - VSResourceSize
+  - VSRestoreFile
+  - VSRestoreFileW
+  - VSScanBP
+  - VSScanFile
+  - VSScanFileFD
+  - VSScanResource
+  - VSScanResourceNTKD
+  - VSScanShellCode
+  - VSSearchArchProcessExcludeExtName
+  - VSSearchArchProcessExtName
+  - VSSearchPackPolicyExcludeName
+  - VSSearchProcessExcludeExtName
+  - VSSearchSpywareExcludeName
+  - VSSeekFile
+  - VSSetActiveScanFlag
+  - VSSetAdvFileInfoCallBackFunc
+  - VSSetAskActionFunc
+  - VSSetBackupEncodeFlag
+  - VSSetCharacterEnvType
+  - VSSetCleanBackupFlag
+  - VSSetCleanZipFlag
+  - VSSetConfig
+  - VSSetConfigEx
+  - VSSetCountFileFlag
+  - VSSetDataTypeFD
+  - VSSetDataTypeInfo
+  - VSSetDecodeFlag
+  - VSSetDecompressLayer
+  - VSSetDefaultHospitalPath
+  - VSSetDefaultPatternFile
+  - VSSetDefaultPatternPath
+  - VSSetDefaultTempPath
+  - VSSetDetectionExcludeNames
+  - VSSetEncodeAction
+  - VSSetEncryptTempFileFlag
+  - VSSetEndOfFile
+  - VSSetExpandLiteFlag
+  - VSSetExtractAmgFlag
+  - VSSetExtractArchiveFlag
+  - VSSetExtractFileCountLimit
+  - VSSetExtractFileRatioLimit
+  - VSSetExtractFileSizeLimit
+  - VSSetExtractFileSizeLimitByVSDT
+  - VSSetExtractPath
+  - VSSetFeedbackCallBackFunc
+  - VSSetFileAttributes
+  - VSSetFileAttributesByHandle
+  - VSSetFileAttributesW
+  - VSSetFileBasicInformation
+  - VSSetFileBasicInformationByHandle
+  - VSSetFileBasicInformationW
+  - VSSetFilePosition
+  - VSSetFileTimes
+  - VSSetFileTimesW
+  - VSSetHeuristicLevel
+  - VSSetKeepDecompressFileFlag
+  - VSSetLogFilePath
+  - VSSetLogFilePathFunc
+  - VSSetLogFlag
+  - VSSetMemoryDecompressSize
+  - VSSetMsgScanLayer
+  - VSSetNormalizeMemScanFlag
+  - VSSetOleEmbedCallBackFunc
+  - VSSetOleEmbedScanLayer
+  - VSSetPatternPath
+  - VSSetPostExtractArchFunc
+  - VSSetPreExtractArchFunc
+  - VSSetProcessAllFileFlag
+  - VSSetProcessAllFileInArcFlag
+  - VSSetProcessAllSubDirFlag
+  - VSSetProcessFileCallBackFunc
+  - VSSetProcessMemScanFlag
+  - VSSetRTFScanLayer
+  - VSSetRealTimeFlag
+  - VSSetRedAlertFlag
+  - VSSetRenameFileNameFunc
+  - VSSetScanBPFlag
+  - VSSetScanGenericMacroFlag
+  - VSSetScanJavaFlag
+  - VSSetScanLiteFileFlag
+  - VSSetScanMacroFlag
+  - VSSetScanMemoryFlag
+  - VSSetScriptTrapFlag
+  - VSSetSmartDecompressFlag
+  - VSSetSoftMiceFlag
+  - VSSetStripMacroFlag
+  - VSSetTempPath
+  - VSSetUserDecodeFunc
+  - VSSetUserLogFunc
+  - VSSetVSCInfo
+  - VSSetVSVerboseLevel
+  - VSSetVerboseLevel
+  - VSSetVirusAction
+  - VSSetVirusHospitalPath
+  - VSShareVirusPattern
+  - VSStoreVSCData
+  - VSStricmp
+  - VSStrip
+  - VSStrnicmp
+  - VSSwapLong
+  - VSSwapLongTable
+  - VSSwapShort
+  - VSSwapShortTable
+  - VSToLowerString
+  - VSToUpperString
+  - VSUpdateZip
+  - VSVirusScan
+  - VSVirusScanFile
+  - VSVirusScanFileW
+  - VSVirusScanFileWithoutFNFilter
+  - VSWriteFile
+  - VSWriteResource
+  - VsapiEntry
+  - _VSBackSearchChar
+  - _VSGetThreadTidsAndInitThreadsGlobalArray
+  - _VSIScanEnableSignature
+  - _VSIScanGetVirusInfo
+  - _VSIScanGetVirusInfoEx
+  - _VSResetMemUsage
+  - _VSScanVirusInMemory
+  - mwcstombs
+  - mwcstombsn
+  - mwctomb
+  ImportedFunctions:
+  - sprintf
+  - _stricmp
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - ZwClose
+  - ZwCreateKey
+  - ZwSetValueKey
+  - mbstowcs
+  - RtlWriteRegistryValue
+  - RtlCopyUnicodeString
+  - RtlGetVersion
+  - KeInitializeEvent
+  - MmGetSystemRoutineAddress
+  - PsGetVersion
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoRegisterShutdownNotification
+  - wcsrchr
+  - _wcsicmp
+  - wcsncpy
+  - RtlQueryRegistryValues
+  - DbgPrint
+  - KeDelayExecutionThread
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ZwCreateFile
+  - ZwQueryInformationFile
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - ObfDereferenceObject
+  - MmIsAddressValid
+  - MmMapViewInSystemSpace
+  - MmUnmapViewInSystemSpace
+  - MmCreateSection
+  - IoBuildDeviceIoControlRequest
+  - IofCallDriver
+  - IoGetDeviceObjectPointer
+  - ObReferenceObjectByHandle
+  - ZwSetInformationFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwCreateSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - ZwCreateEvent
+  - ZwQueryDirectoryFile
+  - ZwDuplicateObject
+  - ZwQuerySecurityObject
+  - IoDeleteSymbolicLink
+  - IoUnregisterShutdownNotification
+  - KeWaitForMultipleObjects
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ZwOpenKey
+  - PsGetCurrentThreadId
+  - ZwNotifyChangeKey
+  - __C_specific_handler
+  - strchr
+  - strncpy
+  - strrchr
+  - strcmp
+  - strncmp
+  - wcschr
+  - swprintf
+  - atol
+  - strstr
+  - atoi
+  - _wcsnicmp
+  - tolower
+  - toupper
+  - _strnicmp
+  - RtlTimeToTimeFields
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - ExAcquireFastMutexUnsafe
+  - ExReleaseFastMutexUnsafe
+  - PsGetCurrentProcessId
+  - RtlUnicodeToMultiByteSize
+  - RtlUnicodeToMultiByteN
+  - NtSetSecurityObject
+  - ObOpenObjectByPointer
+  - KeBugCheckEx
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2024-05-16 22:16:05'
+      ValidTo: '2025-05-14 22:16:05'
+      Signature: 59e526577072d951ca2b437f0eef40e4b19e73d0b8ec1c64d0e9a996978612e67bf32d77f143ae724db9ab2e2221da438aaab784799b2885c4a196315f7a6bfeda8be53518cd47cbb271d5e3dbdaa5917275d75b03097fe23504897a00797315aaa7e88d0b492956428b2086a866f4974bd1a282af175e3a27acd56c206d313cdecad2289c10867c8a3a7f24ea28831f9b574c47c86af5504c7d5647925cfa16e88c943f93aa6cc6bc3494d57661007189adf6498751ea2a8a607dfc79125d5e1398b8f98466b39427ac43b65c327c2e8347d4940c769054829ce7ca3ca32e0714532a075ed193bdc42fc8d102419acc65a565e0bd031efe41d7437148ca28af
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000110bbda1909b3f83897000000000110
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: dca6a67d48ad7ecdb2e445f502a8eb98
+        SHA1: 3a7630b4eeaf580dd8212039061c044504cd2741
+        SHA256: c7cd78241a66b6992cbe11a2773e8df626ecc6443c09204075b1818d6409caf7
+        SHA384: a7a55fd7f70b614325a6b8a0a5dc29e051bf46a88c85471ec7b58e4860942ad1bb6a1cabac8d28ce59e79c8f26fc5799
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 3300000110bbda1909b3f83897000000000110
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1

@@ -1,8 +1,8 @@
 # LOLDrivers - Living Off The Land Drivers 🚗💨
 
 ![CI build](https://github.com/magicsword-io/LOLDrivers/actions/workflows/validate.yml/badge.svg) 
-![Driver Entries](https://img.shields.io/badge/Driver_Entries-702-blue.svg)
-![Known Samples](https://img.shields.io/badge/Known_Samples-2407-green.svg)
+![Driver Entries](https://img.shields.io/badge/Driver_Entries-713-blue.svg)
+![Known Samples](https://img.shields.io/badge/Known_Samples-2430-green.svg)
 
 Welcome to LOLDrivers (Living Off The Land Drivers), an exciting open-source project that brings together vulnerable, malicious, and known malicious Windows drivers in one comprehensive repository. Our mission is to empower organizations of all sizes with the knowledge and tools to understand and address driver-related security risks, making their systems safer and more reliable.
 
@@ -58,6 +58,12 @@ For more detailed instructions, please refer to the [CONTRIBUTING.md](CONTRIBUTI
 ![LOLDrivers homepage with catalog metrics and growth chart](loldrivers.io/static/images/homepage-metrics.png)
 
 LOLDrivers provides comprehensive Sigma, Yara, ClamAV and Sysmon detection rules to help you effectively detect potential threats. To explore these rules in detail, navigate to the [sigma](detections/sigma/), [yara](detections/yara), [av](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/av/LOLDrivers.hdb) and [sysmon](detections/sysmon/) directories under the detection folder. Also there is [WDAC](detections/wdac/) policy thanks to [Florian Stosse](https://github.com/Harvester57) and [HotCakeX](https://github.com/HotCakeX).
+
+See [indicator safety and policy semantics](docs/indicator-safety.md) before consuming
+the feeds. Blocking artifacts use exact file or Authenticode hashes; filename rules
+are hunting leads that can also identify fixed versions. Public API research
+evidence is explicitly separated from active indicators. Historical contributed
+policies remain available as context-only evidence under [evidence/policies](evidence/policies/).
 
 Happy hunting! 🕵️‍♂️
 

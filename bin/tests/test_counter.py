@@ -17,38 +17,82 @@ counter = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(counter)
 
 
-def readme(count):
+def legacy_readme(count):
     return f'# LOLDrivers\n\n![Drivers](https://img.shields.io/badge/Drivers-{count}-flat.svg)\n\nKeep this documentation.\n'
 
 
+def readme(count, entries=1):
+    return (
+        '# LOLDrivers\n\n'
+        f'![Driver Entries](https://img.shields.io/badge/Driver_Entries-{entries}-blue.svg)\n'
+        f'![Known Samples](https://img.shields.io/badge/Known_Samples-{count}-green.svg)\n'
+        '\nKeep this documentation.\n'
+    )
+
+
 class CounterGenerationTests(unittest.TestCase):
-    def test_counts_samples_and_preserves_github_output(self):
+    def test_updates_repository_readme_counts_and_preserves_github_output(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
-            (root / 'one.yaml').write_text('KnownVulnerableSamples: [{}, {}]\n')
+            (root / 'one.yaml').write_text('KnownVulnerableSamples: [{}, {}, {}]\n')
             (root / 'two.yaml').write_text('KnownVulnerableSamples: [{}]\n')
             (root / 'empty.yaml').write_text('')
             (root / 'other.yaml').write_text('Tags: [example]\n')
+            original = (BIN.parent / 'README.md').read_text(encoding='utf-8')
+            path = root / 'README.md'
+            path.write_text(original, encoding='utf-8')
             output = root / 'output.txt'
             result = subprocess.run(
-                [sys.executable, str(BIN / 'gen-counter.py'), '-f', folder],
+                [sys.executable, str(BIN / 'gen-counter.py'), '-f', folder, '--readme', str(path)],
                 env={**os.environ, 'GITHUB_OUTPUT': str(output)},
                 text=True, capture_output=True, check=True,
             )
-            self.assertEqual(result.stdout.strip(), counter.badge_url(folder))
-            self.assertEqual(output.read_text(), f'result={counter.badge_url(folder)}\n')
-            self.assertIn('Drivers-3-flat.svg', result.stdout)
+            self.assertEqual(counter.catalog_counts(folder), (3, 4))
+            self.assertEqual(result.stdout.strip(), 'https://img.shields.io/badge/Drivers-4-flat.svg')
+            self.assertEqual(output.read_text(), 'result=https://img.shields.io/badge/Drivers-4-flat.svg\n')
+            entry_badge = next(line for line in original.splitlines() if line.startswith('![Driver Entries]'))
+            sample_badge = next(line for line in original.splitlines() if line.startswith('![Known Samples]'))
+            expected = original.replace(
+                entry_badge, '![Driver Entries](https://img.shields.io/badge/Driver_Entries-3-blue.svg)',
+            ).replace(
+                sample_badge, '![Known Samples](https://img.shields.io/badge/Known_Samples-4-green.svg)',
+            )
+            self.assertEqual(path.read_text(encoding='utf-8'), expected)
 
-    def test_readme_update_preserves_other_text_and_rejects_missing_badge(self):
+    def test_readme_update_preserves_other_text_and_badge_styles(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / 'README.md'
-            path.write_text(readme(1))
-            counter.update_readme(path, 'https://img.shields.io/badge/Drivers-2-flat.svg')
-            self.assertEqual(path.read_text(), readme(2))
-            path.write_text('# Missing badge\n')
-            with self.assertRaises(ValueError):
-                counter.update_readme(path, 'https://img.shields.io/badge/Drivers-2-flat.svg')
-            self.assertEqual(path.read_text(), '# Missing badge\n')
+            path.write_text(readme(1, entries=8).replace('green.svg', 'brightgreen.svg?style=flat'))
+            counter.update_readme(path, 3, 9)
+            self.assertEqual(path.read_text(), readme(9, entries=3).replace('green.svg', 'brightgreen.svg?style=flat'))
+
+    def test_legacy_readme_badge_still_counts_samples(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'README.md'
+            path.write_text(legacy_readme(1))
+            counter.update_readme(path, 3, 9)
+            self.assertEqual(path.read_text(), legacy_readme(9))
+
+    def test_missing_partial_and_duplicate_badges_leave_readme_unchanged(self):
+        entry_badge = '![Driver Entries](https://img.shields.io/badge/Driver_Entries-1-blue.svg)\n'
+        sample_badge = '![Known Samples](https://img.shields.io/badge/Known_Samples-1-green.svg)\n'
+        invalid = [
+            '# Missing badges\n',
+            entry_badge,
+            sample_badge,
+            readme(1) + entry_badge,
+            readme(1) + sample_badge,
+            legacy_readme(1) * 2,
+            legacy_readme(1) + entry_badge,
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'README.md'
+            for original in invalid:
+                with self.subTest(original=original):
+                    path.write_text(original)
+                    with self.assertRaises(ValueError):
+                        counter.update_readme(path, 3, 9)
+                    self.assertEqual(path.read_text(), original)
 
 
 class CounterPublishingTests(unittest.TestCase):
@@ -148,12 +192,13 @@ if {repeat!r} or not marker.exists():
 
     def test_racing_push_recounts_and_preserves_the_new_readme(self):
         self.write_samples(3)
+        (self.writer / 'yaml/second.yaml').write_text('KnownVulnerableSamples: [{}]\n')
         (self.writer / 'README.md').write_text(readme(0) + '\nConcurrent documentation update.\n')
         self.commit_writer('Add a sample and documentation')
         self.install_race()
         result = self.publish()
         self.assertIn('recounting', result.stdout)
-        self.assertEqual(self.git(self.remote, 'show', 'main:README.md'), (readme(3) + '\nConcurrent documentation update.\n').strip())
+        self.assertEqual(self.git(self.remote, 'show', 'main:README.md'), (readme(4, entries=2) + '\nConcurrent documentation update.\n').strip())
         self.assertEqual(self.git(self.remote, 'rev-list', '--count', 'main'), '3')
 
     def test_concurrent_counter_winner_needs_no_extra_commit(self):

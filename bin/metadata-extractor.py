@@ -7,6 +7,7 @@ from  datetime import datetime
 import os
 import argparse
 import hashlib
+import base64
 import yaml
 from cryptography import x509
 from cryptography.x509.oid import ExtendedKeyUsageOID
@@ -170,10 +171,16 @@ def get_metadata(driver):
             if len(sig.certificates) > 0:
                 sig_info['Certificates'] = []
                 for cert in sig.certificates:
-                    tmp_cert_dict = {}
-                    # TODO: Add more info
-                    subject_str = cert.subject if isinstance(cert.subject, str) else cert.subject.decode('utf-8', errors='replace')
-                    tmp_cert_dict['Subject'] = subject_str.replace('\\', '').replace('-', ',') # We remove these special character for YAML
+                    raw_cert = x509.load_der_x509_certificate(cert.raw)
+                    tmp_cert_dict = {
+                        'Subject': raw_cert.subject.rfc4514_string(),
+                        'Issuer': raw_cert.issuer.rfc4514_string(),
+                        'DER': base64.b64encode(cert.raw).decode('ascii'),
+                        'Thumbprint': {
+                            'SHA1': hashlib.sha1(cert.raw).hexdigest(),
+                            'SHA256': hashlib.sha256(cert.raw).hexdigest(),
+                        },
+                    }
                     # Note: This long python foo is just to convert the date from a list to a string
                     tmp_cert_dict['ValidFrom'] = str(datetime.fromisoformat("-".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_from[0:3]]) + " " + ":".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_from[3:]])))
                     tmp_cert_dict['ValidTo'] = str(datetime.fromisoformat("-".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_to[0:3]]) + " " + ":".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_to[3:]])))
@@ -184,7 +191,6 @@ def get_metadata(driver):
                     tmp_cert_dict['Version'] = cert.version
 
                     # Calculate TBS Hashes // Thanks @yarden_shafir - https://twitter.com/yarden_shafir
-                    raw_cert = x509.load_der_x509_certificate(cert.raw)
                     
                     # Classify the certificate with error handling
                     cert_type = "Unknown"
@@ -235,7 +241,7 @@ def get_metadata(driver):
                 for signer in sig.signers:
                     tmp_signer_dict = {}
                     tmp_signer_dict['SerialNumber'] = signer.serial_number.hex()
-                    tmp_signer_dict['Issuer'] = signer.issuer.replace('\\', '').replace('-', ',') # We remove these special character for YAML
+                    tmp_signer_dict['Issuer'] = signer.issuer
                     tmp_signer_dict['Version'] = signer.version
 
                     sig_info['Signer'].append(tmp_signer_dict)
@@ -280,7 +286,10 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
                     sample['MD5'] = metadata_['MD5']
                     sample['SHA1'] = metadata_['SHA1']
                     sample['SHA256'] = metadata_['SHA256']
-                    sample['Imphash'] = metadata_['Imphash']
+                    if metadata_['Imphash']:
+                        sample['Imphash'] = metadata_['Imphash']
+                    else:
+                        sample.pop('Imphash', None)
                     sample['Authentihash'] = {
                         'MD5':metadata_['AuthentihashMD5'],
                         'SHA1': metadata_['AuthentihashSHA1'],
@@ -291,6 +300,9 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
                         'SHA1': metadata_['RichPEHeaderSHA1'],
                         'SHA256': metadata_['RichPEHeaderSHA256']
                     }
+                    sample['RichPEHeaderHash'] = {k: v for k, v in sample['RichPEHeaderHash'].items() if v}
+                    if not sample['RichPEHeaderHash']:
+                        sample.pop('RichPEHeaderHash')
 
                     sample['Sections'] = metadata_['Sections']
                     sample['MagicHeader'] = metadata_['MagicHeader']

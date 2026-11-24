@@ -7,6 +7,12 @@ export function getStaticPaths() {
   }));
 }
 export const GET: APIRoute = ({ props }) =>
-  new Response(JSON.stringify(props.driver), {
-    headers: { 'Content-Type': 'application/json' },
-  });
+  new Response(
+    JSON.stringify({
+      DetectionScope: 'context-only',
+      ResearchEvidence: props.driver,
+    }),
+    {
+      headers: { 'Content-Type': 'application/json' },
+    },
+  );

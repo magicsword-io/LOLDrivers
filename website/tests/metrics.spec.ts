@@ -86,10 +86,14 @@ test('chart totals reconcile with the catalog and HVCI links filter driver entri
 test('metrics render without JavaScript and respect reduced motion', async ({
   browser,
   page,
+  baseURL,
 }) => {
-  const context = await browser.newContext({ javaScriptEnabled: false });
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    baseURL,
+  });
   const staticPage = await context.newPage();
-  await staticPage.goto('http://127.0.0.1:4321/');
+  await staticPage.goto('/');
   await expect(staticPage.locator('[data-count]')).toHaveText([
     format(catalog.length),
     format(samples),
@@ -238,8 +242,10 @@ test('growth chart supports pointer and keyboard inspection of monthly additions
 
 test('tapping the growth chart keeps the selected month on mobile', async ({
   browser,
+  baseURL,
 }) => {
   const context = await browser.newContext({
+    baseURL,
     viewport: { width: 390, height: 844 },
     hasTouch: true,
     isMobile: true,
@@ -250,7 +256,7 @@ test('tapping the growth chart keeps the selected month on mobile', async ({
     (route) => route.abort(),
   );
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4321/');
+  await page.goto('/');
   const chart = page.locator('[data-growth-chart]');
   const points: { label: string; total: number; x: number }[] = JSON.parse(
     (await chart.getAttribute('data-points'))!,

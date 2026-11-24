@@ -2,44 +2,109 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "Id": {"type": "string", "example": "1ed9d02f-17cf-43dd-9645-a54452468a5e"},
-    "Author": {"type": "string", "example": "Your Name"},
-    "Created": {"type": "string", "format": "date", "example": "2023-04-15"},
-    "MitreID": {"type": "string", "example": "TXXXX"},
-    "Category": {"type": "string", "enum": ["vulnerable driver", "malicious"], "example": "vulnerable driver"},
-    "Verified": {"type": "string", "example": "TRUE"},
+    "Id": {
+      "type": "string",
+      "example": "1ed9d02f-17cf-43dd-9645-a54452468a5e"
+    },
+    "Author": {
+      "type": "string",
+      "example": "Your Name"
+    },
+    "Created": {
+      "type": "string",
+      "format": "date",
+      "example": "2023-04-15"
+    },
+    "MitreID": {
+      "type": "string",
+      "example": "TXXXX"
+    },
+    "Category": {
+      "type": "string",
+      "enum": [
+        "vulnerable driver",
+        "malicious"
+      ],
+      "example": "vulnerable driver"
+    },
+    "Verified": {
+      "type": "string",
+      "example": "TRUE"
+    },
     "Commands": {
       "type": "object",
       "properties": {
-        "Command": {"type": "string", "example": "Command example"},
-        "Description": {"type": "string", "example": "Command description"},
-        "Usecase": {"type": "string", "example": "Use case description"},
-        "Privileges": {"type": "string", "example": "Required privileges"},
-        "OperatingSystem": {"type": "string", "example": "Operating system"}
+        "Command": {
+          "type": "string",
+          "example": "Command example"
+        },
+        "Description": {
+          "type": "string",
+          "example": "Command description"
+        },
+        "Usecase": {
+          "type": "string",
+          "example": "Use case description"
+        },
+        "Privileges": {
+          "type": "string",
+          "example": "Required privileges"
+        },
+        "OperatingSystem": {
+          "type": "string",
+          "example": "Operating system"
+        }
       },
-      "required": ["Command", "Description", "Usecase", "Privileges", "OperatingSystem"]
+      "required": [
+        "Command",
+        "Description",
+        "Usecase",
+        "Privileges",
+        "OperatingSystem"
+      ]
     },
     "Resources": {
       "type": "array",
-      "items": {"type": "string", "example": "Resource URL"}
+      "items": {
+        "type": "string",
+        "example": "Resource URL"
+      }
     },
     "Acknowledgement": {
       "type": "object",
       "properties": {
-        "Person": {"type": "string", "example": "Person name"},
-        "Handle": {"type": "string", "example": "Handle name"}
+        "Person": {
+          "type": "string",
+          "example": "Person name"
+        },
+        "Handle": {
+          "type": "string",
+          "example": "Handle name"
+        }
       },
-      "required": ["Person", "Handle"]
+      "required": [
+        "Person",
+        "Handle"
+      ]
     },
     "Detection": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "type": {"type": "string", "example": "Detection Type"},
-          "value": {"type": "string", "example": "Detection method description"}
+          "type": {
+            "type": "string",
+            "example": "Detection Type"
+          },
+          "value": {
+            "type": "string",
+            "example": "Detection method description"
+          }
         },
-        "required": ["type", "value"]
+        "required": [
+          "type",
+          "value"
+        ]
       }
     },
     "KnownVulnerableSamples": {
@@ -47,22 +112,169 @@
       "items": {
         "type": "object",
         "properties": {
-          "Filename": {"type": "string", "example": "FILENAME.sys"},
-          "MD5": {"type": "string", "example": "778b7feea3c750d44745d3bf294bd4ce"},
-          "SHA1": {"type": "string", "example": "2261198385d62d2117f50f631652eded0ecc71db"},
-          "SHA256": {"type": "string", "example": "04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162"}
+          "Filename": {
+            "type": "string",
+            "example": "FILENAME.sys"
+          },
+          "MD5": {
+            "type": "string",
+            "example": "778b7feea3c750d44745d3bf294bd4ce",
+            "minLength": 32,
+            "maxLength": 32,
+            "pattern": "^[a-fA-F0-9]{32}$"
+          },
+          "SHA1": {
+            "type": "string",
+            "example": "2261198385d62d2117f50f631652eded0ecc71db",
+            "minLength": 40,
+            "maxLength": 40,
+            "pattern": "^[a-fA-F0-9]{40}$"
+          },
+          "SHA256": {
+            "type": "string",
+            "example": "04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162",
+            "minLength": 64,
+            "maxLength": 64,
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "DetectionScope": {
+            "enum": [
+              "active",
+              "context-only"
+            ]
+          },
+          "ContextReason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "Authentihash": {
+            "type": "object",
+            "properties": {
+              "MD5": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{32}$"
+              },
+              "SHA1": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{40}$"
+              },
+              "SHA256": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            },
+            "additionalProperties": false
+          }
         },
-        "required": ["Filename"],
+        "required": [
+          "Filename"
+        ],
         "anyOf": [
-          {"required": ["MD5"]},
-          {"required": ["SHA1"]},
-          {"required": ["SHA256"]}
-        ]        
+          {
+            "required": [
+              "MD5"
+            ]
+          },
+          {
+            "required": [
+              "SHA1"
+            ]
+          },
+          {
+            "required": [
+              "SHA256"
+            ]
+          },
+          {
+            "required": [
+              "Authentihash"
+            ]
+          },
+          {
+            "required": [
+              "AuthentihashSHA256"
+            ]
+          },
+          {
+            "required": [
+              "AuthentihashSHA1"
+            ]
+          },
+          {
+            "required": [
+              "AuthentihashMD5"
+            ]
+          },
+          {
+            "required": [
+              "DetectionScope"
+            ],
+            "properties": {
+              "DetectionScope": {
+                "const": "context-only"
+              }
+            }
+          }
+        ]
       }
     },
     "Tags": {
       "type": "array",
-      "items": {"type": "string", "example": "Tag Name"}
+      "items": {
+        "type": "string",
+        "example": "Tag Name"
+      }
+    },
+    "DetectionScope": {
+      "enum": [
+        "active",
+        "context-only"
+      ]
+    },
+    "ContextReason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "DetectionNames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "Pattern",
+          "Reviewed",
+          "Reason",
+          "PositiveExamples",
+          "NegativeExamples"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "Pattern": {
+            "type": "string",
+            "minLength": 1
+          },
+          "Reviewed": {
+            "const": true
+          },
+          "Reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "PositiveExamples": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "NegativeExamples": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
     }
   },
   "required": [
@@ -74,6 +286,5 @@
     "Resources",
     "Verified",
     "Tags"
-  ]  
+  ]
 }
-        

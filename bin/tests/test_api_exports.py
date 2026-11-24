@@ -1,4 +1,5 @@
 import csv
+import hashlib
 import json
 import sys
 import tempfile
@@ -9,6 +10,8 @@ import yaml
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPOSITORY_ROOT / 'bin'))
+
+from indicator_safety import public_record, SafetyError
 
 from api_exports import (  # noqa: E402
     ApiExportError,
@@ -42,7 +45,7 @@ class ApiExportsCompatibilityTests(unittest.TestCase):
             return {row['Id']: row for row in csv.DictReader(source)}
 
     def test_json_matches_the_same_revision_yaml_catalog(self):
-        expected = self.records_by_id(load_drivers(self.catalog_dir))
+        expected = self.records_by_id([public_record(d) for d in load_drivers(self.catalog_dir)])
 
         with (self.output_dir / 'drivers.json').open(encoding='utf-8') as source:
             actual = self.records_by_id(json.load(source))
@@ -84,7 +87,8 @@ class ApiExportsCompatibilityTests(unittest.TestCase):
 
 class ApiExportsAuthentihashTests(unittest.TestCase):
     def test_exports_available_authentihashes(self):
-        hashes = {'MD5': 'a' * 32, 'SHA1': 'b' * 40, 'SHA256': 'c' * 64}
+        hashes = {a: hashlib.new(a.lower(), b'authenticode fixture').hexdigest() for a in ('MD5', 'SHA1', 'SHA256')}
+        extra = {a: hashlib.new(a.lower(), b'second authenticode fixture').hexdigest() for a in hashes}
         cases = [
             ('SHA256 only', [{'Authentihash': {'SHA256': hashes['SHA256']}}],
              ('', '', hashes['SHA256'])),
@@ -94,17 +98,15 @@ class ApiExportsAuthentihashTests(unittest.TestCase):
              ('', hashes['SHA1'], '')),
             ('absent', [{}], ('', '', '')),
             ('empty', [{'Authentihash': {}}], ('', '', '')),
-            ('null', [{'Authentihash': None}], ('', '', '')),
             ('mixed samples', [
                 {'Authentihash': hashes},
                 {},
                 {'Authentihash': {}},
-                {'Authentihash': None},
-                {'Authentihash': {'SHA256': 'd' * 64}},
-                {'Authentihash': {'MD5': 'e' * 32, 'SHA1': 'f' * 40}},
-            ], (f"{hashes['MD5']}, {'e' * 32}",
-                f"{hashes['SHA1']}, {'f' * 40}",
-                f"{hashes['SHA256']}, {'d' * 64}")),
+                {'Authentihash': {'SHA256': extra['SHA256']}},
+                {'Authentihash': {'MD5': extra['MD5'], 'SHA1': extra['SHA1']}},
+            ], (f"{hashes['MD5']}, {extra['MD5']}",
+                f"{hashes['SHA1']}, {extra['SHA1']}",
+                f"{hashes['SHA256']}, {extra['SHA256']}")),
         ]
 
         for name, samples, expected in cases:
@@ -118,7 +120,7 @@ class ApiExportsAuthentihashTests(unittest.TestCase):
                     'Category': 'vulnerable driver',
                     'Created': '2026-01-01',
                     'KnownVulnerableSamples': [
-                        {'Filename': 'test.sys', 'SHA256': '0' * 64, **sample}
+                        {'Filename': 'test.sys', 'SHA256': hashlib.sha256(b'raw file fixture').hexdigest(), **sample}
                         for sample in samples
                     ],
                 }
@@ -134,7 +136,7 @@ class ApiExportsAuthentihashTests(unittest.TestCase):
                           for algorithm in ('MD5', 'SHA1', 'SHA256')),
                     expected)
                 with (output_dir / 'drivers.json').open(encoding='utf-8') as source:
-                    self.assertEqual(json.load(source), [driver])
+                    self.assertEqual(json.load(source), [public_record(driver)])
 
 
 if __name__ == '__main__':

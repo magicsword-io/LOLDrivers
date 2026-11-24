@@ -5,8 +5,9 @@ import json
 import os
 from pathlib import Path
 
-import pandas as pd
 import yaml
+
+from indicator_safety import public_record, validate_record, load_yaml
 
 
 class ApiExportError(ValueError):
@@ -14,6 +15,7 @@ class ApiExportError(ValueError):
 
 
 def write_drivers_csv(drivers, output_dir, VERBOSE):
+    drivers = [public_record(d) if 'IndicatorSemantics' not in d else d for d in drivers]
     output_file = os.path.join(output_dir, 'drivers.csv')
 
     header = ['Id', 'Author', 'Created', 'Command', 'Description', 'Usecase', 'Category', 'Privileges', 'MitreID',
@@ -21,7 +23,7 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
               'KnownVulnerableSamples_MD5', 'KnownVulnerableSamples_SHA1', 'KnownVulnerableSamples_SHA256',
               'KnownVulnerableSamples_Publisher', 'KnownVulnerableSamples_Date',
               'KnownVulnerableSamples_Company', 'KnownVulnerableSamples_Description',
-              'KnownVulnerableSamples_Authentihash_MD5', 'KnownVulnerableSamples_Authentihash_SHA1', 'KnownVulnerableSamples_Authentihash_SHA256', 'Verified', 'Tags']
+              'KnownVulnerableSamples_Authentihash_MD5', 'KnownVulnerableSamples_Authentihash_SHA1', 'KnownVulnerableSamples_Authentihash_SHA256', 'Verified', 'Tags', 'IndicatorSemantics', 'ResearchEvidence']
     rows = []
     for driver in drivers:
         if VERBOSE:
@@ -66,22 +68,29 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
             'KnownVulnerableSamples_Authentihash_SHA1': ', '.join(str(sha1) for sha1 in authentihash_sha1s),
             'KnownVulnerableSamples_Authentihash_SHA256': ', '.join(str(sha256) for sha256 in authentihash_sha256s),
             'Verified': driver.get('Verified', ''),
-            'Tags': ', '.join(str(tag) for tag in driver['Tags'])
+            'Tags': ', '.join(str(tag) for tag in driver['Tags']),
+            'IndicatorSemantics': driver['IndicatorSemantics'],
+            'ResearchEvidence': json.dumps({'DetectionScope': 'context-only', 'Id': driver['Id'],
+                'Source': 'drivers.json#ResearchEvidence'}, sort_keys=True)
         }
 
         rows.append(row)
 
-    df = pd.DataFrame(rows, columns=header)
-    df.to_csv(output_file, quoting=1, index=False)
+    with open(output_file, 'w', encoding='utf-8', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=header, quoting=csv.QUOTE_ALL, lineterminator='\n')
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def write_drivers_table_csv(drivers, output_dir):
     output_file = os.path.join(output_dir, 'drivers_table.csv')
-    with open(output_file, 'w') as output_file:
-        writer = csv.writer(output_file)
+    with open(output_file, 'w', encoding='utf-8', newline='') as output_file:
+        writer = csv.writer(output_file, lineterminator='\n')
         for driver in drivers:
-            link = '[' + driver['Tags'][0] + '](drivers/' + driver["Id"] + '/)'
-            if ('SHA256' not in driver['KnownVulnerableSamples'][0]) or (driver['KnownVulnerableSamples'][0]['SHA256'] is None ) or (driver['KnownVulnerableSamples'][0]['SHA256'] == ''):
+            label = (driver['Tags'] or driver.get('ResearchEvidence', {}).get('Tags') or [driver['Id']])[0]
+            link = '[' + label + '](drivers/' + driver["Id"] + '/)'
+            samples = driver.get('KnownVulnerableSamples') or [{}]
+            if not samples[0].get('SHA256'):
                 sha256='not available '
             else:
                 sha256='[' + driver['KnownVulnerableSamples'][0]['SHA256'] + '](drivers/' + driver["Id"]+ '/)'
@@ -99,7 +108,7 @@ def load_drivers(input_dir):
     seen_ids = set()
     for yaml_file in yaml_files:
         with yaml_file.open(encoding='utf-8') as stream:
-            driver = yaml.safe_load(stream)
+            driver = load_yaml(stream)
 
         if not isinstance(driver, dict):
             raise ApiExportError(f'{yaml_file}: expected a YAML mapping')
@@ -114,6 +123,7 @@ def load_drivers(input_dir):
             raise ApiExportError(f'{yaml_file}: duplicate Id {driver_id!r}')
 
         seen_ids.add(driver_id)
+        validate_record(driver, yaml_file)
         drivers.append(driver)
 
     return drivers
@@ -121,7 +131,7 @@ def load_drivers(input_dir):
 
 def export_api_files(input_dir, output_dir, verbose=False):
     """Write same-revision JSON and CSV public exports to ``output_dir``."""
-    drivers = load_drivers(input_dir)
+    drivers = [public_record(driver) for driver in load_drivers(input_dir)]
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 

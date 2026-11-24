@@ -16,22 +16,22 @@ const categories = [
 const results = [
   {
     key: 'yes',
-    label: 'Load despite HVCI',
-    short: 'recorded TRUE',
+    label: 'Still load with HVCI',
+    short: 'still load',
     count: totals.yes,
     tone: 'rose',
   },
   {
     key: 'no',
-    label: 'Recorded FALSE',
-    short: 'recorded FALSE',
+    label: 'Recorded as not loading',
+    short: 'do not load',
     count: drivers.reduce((sum, driver) => sum + driver.no, 0),
     tone: 'slate',
   },
   {
     key: 'unknown',
-    label: 'Status unknown',
-    short: 'status unknown',
+    label: 'No result recorded',
+    short: 'unknown',
     count: totals.unknown,
     tone: 'amber',
   },
@@ -141,9 +141,16 @@ const ring = arc<PieArcDatum<Result>>()
       data-hvci-chart
     >
       <div class="metric-heading">
-        <h3 id="hvci-metric-heading">HVCI sample results</h3>
+        <h3 id="hvci-metric-heading">The HVCI coverage gap</h3>
         <span class="metric-tag">{format(totals.samples)} samples</span>
       </div>
+      <p class="hvci-context">
+        HVCI enforces{' '}
+        <a href="https://learn.microsoft.com/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules">
+          Microsoft’s vulnerable driver blocklist
+        </a>
+        , but known risky drivers can still load.
+      </p>
       <div class="hvci-visual">
         <div class="hvci-ring" aria-hidden="true">
           <svg viewBox="0 0 200 200">
@@ -194,7 +201,7 @@ const ring = arc<PieArcDatum<Result>>()
               <span data-ring-value>{percent(totals.yes, totals.samples)}</span>
               <small>%</small>
             </strong>
-            <span data-ring-label>recorded TRUE</span>
+            <span data-ring-label>still load</span>
           </div>
         </div>
         <div class="hvci-legend">
@@ -219,8 +226,12 @@ const ring = arc<PieArcDatum<Result>>()
           ))}
         </div>
       </div>
+      <a class="hvci-explore" href="/?hvci=yes#explorer">
+        Explore drivers that still load <span aria-hidden="true">→</span>
+      </a>
       <p class="hvci-note">
-        Recorded per sample. Unknown results are kept separate.
+        Based on per-sample catalog records, not a live comparison with the
+        latest blocklist. Results vary by Windows and blocklist version.
       </p>
     </article>
   </div>
@@ -388,6 +399,21 @@ const ring = arc<PieArcDatum<Result>>()
     align-items: center;
     margin-top: 12px;
   }
+  .hvci-context {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+    margin: 8px 0 0;
+  }
+  .hvci-context a {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: 3px;
+  }
+  .hvci-context a:hover {
+    text-decoration-color: currentColor;
+  }
   .hvci-ring {
     position: relative;
     width: 154px;
@@ -423,6 +449,13 @@ const ring = arc<PieArcDatum<Result>>()
     font-weight: 500;
     letter-spacing: -1px;
     font-variant-numeric: tabular-nums;
+    color: var(--metric-rose);
+  }
+  .hvci-card[data-highlight='no'] .ring-label strong {
+    color: var(--metric-slate);
+  }
+  .hvci-card[data-highlight='unknown'] .ring-label strong {
+    color: var(--metric-amber);
   }
   .ring-label small {
     font-size: 14px;
@@ -467,8 +500,26 @@ const ring = arc<PieArcDatum<Result>>()
   }
   .hvci-note {
     font-size: 10px;
+    line-height: 1.6;
     color: var(--muted);
-    margin: 12px 0 0;
+    margin: 10px 0 0;
+  }
+  .hvci-explore {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    margin-top: 12px;
+    border: 1px solid color-mix(in srgb, var(--metric-rose) 25%, var(--line));
+    border-radius: 5px;
+    background: color-mix(in srgb, var(--metric-rose) 6%, transparent);
+    color: var(--metric-rose);
+    font-size: 11px;
+  }
+  .hvci-explore:hover,
+  .hvci-explore:focus-visible {
+    background: color-mix(in srgb, var(--metric-rose) 12%, transparent);
   }
   @media (prefers-reduced-motion: no-preference) {
     .ring-segment {
@@ -497,9 +548,6 @@ const ring = arc<PieArcDatum<Result>>()
     }
     .hvci-result {
       flex: 1;
-    }
-    .hvci-note {
-      margin-top: 0;
     }
   }
   @media (max-width: 600px) {
