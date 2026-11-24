@@ -50,11 +50,23 @@ const displayName = isBareHash ? `${driver.name.slice(0, 12)}…` : driver.name;
 
 const withFullSuffix = `${displayName} – ${categoryLabel} Driver & Hashes`;
 const withoutHashes = `${displayName} – ${categoryLabel} Driver`;
+const justDriver = `${displayName} Driver`;
 
-const pageTitle =
-  withFullSuffix.length <= 60
-    ? withFullSuffix
-    : withoutHashes;
+// Hard guard: ensure final title is always <= 60 chars
+let pageTitle: string;
+if (withFullSuffix.length <= 60) {
+  pageTitle = withFullSuffix;
+} else if (withoutHashes.length <= 60) {
+  pageTitle = withoutHashes;
+} else if (justDriver.length <= 60) {
+  pageTitle = justDriver;
+} else {
+  // Truncate the name to fit within 60 chars total
+  // " Driver" = 7 chars, so name can be at most 53 chars
+  const maxNameLength = 53;
+  const truncatedName = displayName.slice(0, maxNameLength - 1) + '…';
+  pageTitle = `${truncatedName} Driver`;
+}
 
 const cveText =
   cves.length > 0
