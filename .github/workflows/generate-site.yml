@@ -16,16 +16,16 @@ jobs:
       uses: actions/setup-python@v4.5.0
       with:
         python-version: 3.11
-    - name: Install Poetry
-      run: curl -sSL https://install.python-poetry.org | python -
-    - name: Install dependencies with Poetry
-      run: poetry install
+    - name: Install pinned generation dependencies
+      run: python -m pip install -r bin/requirements-safety.txt
     - name: Test ClamAV export
-      run: poetry run python -m unittest discover -s bin/tests -p test_clamav_exports.py
+      run: python -m unittest discover -s bin/tests -p test_clamav_exports.py
     - name: Run Site Generation 
-      run: poetry run python bin/site.py -v
+      run: python bin/site.py -v
     - name: Run Site Generation 
-      run: poetry run python bin/gen-files.py
+      run: python bin/gen-files.py
+    - name: Validate generated policy selectors before publishing
+      run: python bin/validate-safety.py
     - name: Commit Generated Data
       run: |
           git config --global user.name "Github Actions"

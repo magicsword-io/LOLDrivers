@@ -685,7 +685,7 @@ sc.exe create vsapint binPath=C:\windows\temp\vsapint.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/8b8bbbfe-798b-47bf-991b-21a0a0becef3.yaml)
 
-*last_updated:* 2026-10-26
+*last_updated:* 2026-10-27
 
 {{< /column >}}
 {{< /block >}}

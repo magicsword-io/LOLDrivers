@@ -96,7 +96,7 @@ def sample_cert_chain(sample_signatures):
             v = tbs.get(k)
             if v:
                 tbs_set.add(str(v).lower().strip())
-        if leaf_cn is None and not c.get('IsCA'):
+        if leaf_cn is None and not c.get('IsCA', c.get('IsCertificateAuthority')):
             cn = extract_cn(c.get('Subject'))
             if cn:
                 leaf_cn = cn
@@ -172,7 +172,8 @@ def parse_sipolicy(xml_path):
         filename = fa.get('FileName', '').strip()
         if filename:
             fileattrib_count += 1
-            add_rule(filename, fa.get('MinimumFileVersion'), fa.get('MaximumFileVersion'))
+            # This attribute is AND-linked to a signer; never flatten it into
+            # an independent filename match. Report constrained rules separately.
 
     signers_by_id = {}
     for signer in root.iter(f'{NS}Signer'):

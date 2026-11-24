@@ -45,7 +45,7 @@ In Conductor, use the workspace's `$CONDUCTOR_PORT` instead of a fixed port when
 - Existing Defender and Splunk query text and attribution, and the existing community tool destinations.
 - Google Analytics component retaining `G-33C5VXLWPQ`. It is **off by default**. An explicit `PUBLIC_ENABLE_ANALYTICS=true` production build enables it; development does not. Normal document navigation emits the normal Google tag page view. There is no client-side router or duplicate manual page-view handler.
 
-The full driver JSON never enters the client JavaScript bundle. The explorer loads `/data/search.json` separately. Each `/data/drivers/<UUID>.json` record is generated from the same YAML as its page. Production includes `/api/drivers.json`, `/api/drivers.csv`, and `/drivers_table.csv` generated from the same source revision as the pages. Production verification compares every API record against the page metadata. API links use the public domain, so review builds still link to live production downloads.
+The full driver JSON never enters the client JavaScript bundle. The explorer loads `/data/search.json` separately. Each `/data/drivers/<UUID>.json` download wraps the original YAML metadata in `DetectionScope: context-only` and `ResearchEvidence`; the on-demand viewer preserves that scope. Verification compares that research metadata directly with source YAML. Production includes `/api/drivers.json`, `/api/drivers.csv`, and `/drivers_table.csv` generated from the same source revision, with research evidence separated from active indicators. Production verification regenerates the canonical API in a temporary directory and compares every JSON record and both CSV downloads against it. API links use the public domain, so review builds still link to live production downloads.
 
 ## Review a PR before merging
 
@@ -82,6 +82,8 @@ npm test
 
 The browser suite checks exact non-first-sample hash lookup, filters, pagination, URL restoration, unknown evidence, no-result and retry states, on-demand metadata, no-JavaScript browsing, persistent themes, responsive layout, and absence of analytics requests from previews. The artifact report contains homepage and driver screenshots at desktop and phone widths.
 
+Set `PLAYWRIGHT_PORT` when another workspace is already using port 4321. In Conductor, run `PLAYWRIGHT_PORT="$CONDUCTOR_PORT" npm test` to use the workspace's assigned port.
+
 See [the migration checklist](../docs/astro-migration.md) for production cutover and the existing build issues identified during design review.
 
 ## Production validation and deployment
@@ -95,6 +97,10 @@ TEST_PRODUCTION=true npm test
 ```
 
 `PUBLIC_SITE_MODE=production` removes the review notice/noindex and allows crawling. Analytics is controlled separately by `PUBLIC_ENABLE_ANALYTICS=true`. Production browser tests intercept Google requests so QA does not send analytics traffic. Preview builds leave both production settings off. `verify:analytics` checks initialization without contacting Google.
+
+Keep the Python environment above activated for production verification; it invokes the canonical Python API exporter. Set `PYTHON` to an interpreter path if a different executable is needed.
+
+The preview and production build jobs use a version- and digest-pinned Playwright container with browsers and their system dependencies already installed. Keep both workflow image versions aligned with `@playwright/test` in `package-lock.json` when upgrading Playwright.
 
 The production workflow runs the exporter compatibility tests, formatting/types, full artifact verification, and Chromium against the actual production artifact before uploading it. Only main pushes or manual runs on main can deploy; the deploy job alone gets Pages/OIDC permissions. All production runs share a concurrency group. The artifact contains `source-revision.txt` and is retained for 30 days.
 

@@ -1,2 +1,5 @@
 # Driver binaries are covered by the wildcard in drivers/.gitattributes.
 # Add samples under drivers/; do not add per-file LFS rules here.
+
+# Preserve historical policy evidence byte-for-byte, including CRLF endings.
+evidence/policies/*.context-only -text whitespace=cr-at-eol
