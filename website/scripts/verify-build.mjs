@@ -159,7 +159,7 @@ for (const id of ids) {
     analytics ? 1 : 0,
     `${id}: analytics gating`,
   );
-  
+
   // Verify SEO title and description length limits
   const titleMatch = html.match(/<title>([^<]*)<\/title>/);
   const titleRaw = titleMatch?.[1] || '';
@@ -168,7 +168,7 @@ for (const id of ids) {
     title.length > 0 && title.length <= 60,
     `${id}: title length ${title.length} exceeds 60 chars: "${title}"`,
   );
-  
+
   const descMatch = html.match(/<meta name="description" content="([^"]*)"/);
   const descriptionRaw = descMatch?.[1] || '';
   const description = decodeHTML(descriptionRaw);

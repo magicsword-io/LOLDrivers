@@ -7,7 +7,8 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'All drivers — LOLDrivers',
-  description: 'Complete alphabetical directory of all vulnerable and malicious Windows drivers in the LOLDrivers catalog with sample counts and classifications.',
+  description:
+    'Complete alphabetical directory of all vulnerable and malicious Windows drivers in the LOLDrivers catalog with sample counts and classifications.',
   numberOfItems: drivers.length,
   itemListElement: [...drivers]
     .sort((a, b) => a.name.localeCompare(b.name))
