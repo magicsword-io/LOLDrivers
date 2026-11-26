@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  actions: write
 
 jobs:
   indicator-safety:
@@ -17,7 +18,53 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          lfs: true # Immutable sample objects are read statically, never executed.
+          # Leave samples as pointers. The plan step hydrates only the bytes
+          # this run actually scans.
+          lfs: false
+
+      - name: Fetch comparison commit
+        id: base
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+          base=""
+          # Push to main and the merge queue scan the full corpus and do not
+          # need a diff. Pull requests do.
+          if [ "$EVENT" = "pull_request" ]; then
+            base="$PR_BASE"
+            git fetch --no-tags --depth=1 origin "$base"
+          fi
+          echo "sha=${base}" >> "$GITHUB_OUTPUT"
+
+      - name: Plan selective Git LFS fetch
+        id: plan
+        env:
+          EVENT: ${{ github.event_name }}
+          REF: ${{ github.ref }}
+          BASE: ${{ steps.base.outputs.sha }}
+        run: |
+          # metadata steps below accept pointers.
+          # Native corpus scan (needs every driver byte) runs on push to main,
+          # in the merge queue, and on pull requests that change detections/yara
+          # or bin/yara-generator (except README and requirements.txt).
+          # Pull requests that only change drivers/*.bin hydrate those paths
+          # and scan them with --allow-unhydrated.
+          # Other pull requests hydrate just the two unit-test samples.
+          .github/scripts/lfs-plan.sh \
+            --policy indicator \
+            --event "$EVENT" \
+            --ref "$REF" \
+            --base "$BASE" \
+            --head HEAD
+
+      - name: Cache and fetch needed Git LFS objects
+        uses: ./.github/actions/git-lfs
+        with:
+          fetch: ${{ steps.plan.outputs.fetch }}
+          include: ${{ steps.plan.outputs.include }}
+
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.11.14'
@@ -26,13 +73,38 @@ jobs:
       - name: Install pinned safety backends
         run: python -m pip install -r bin/requirements-safety.txt
       - name: Validate source schema and sample filenames
+        # Pointer-safe. Filename checks use the LFS oid when the file is a pointer
+        # and the file MD5 when this run hydrated it.
         run: python bin/validate.py
       - name: Run adversarial controls and native YARA matches
+        # Needs bytes only for drivers/3a00cd7cb37b2b4bfaa9e7715fdd13d5.bin and
+        # drivers/8ff0f73158ec15de8e548b00608c5822.bin. Other tests use fixtures.
         run: python -m unittest discover -s bin/tests -p 'test_*.py'
       - name: Regenerate offline and validate committed and regenerated selectors
+        # Pointer-safe. ClamAV sizes come from the pointer, and sample evidence
+        # checks the pointer SHA256. This step does not scan driver bytes.
         run: python bin/validate-safety.py --report "${RUNNER_TEMP}/indicator-safety.json"
-      - name: Match all YARA sets against hydrated samples using the native engine
+      - name: Match all YARA sets against the hydrated corpus
+        # Needs every drivers/*.bin byte. Unhydrated pointers fail this step.
+        if: steps.plan.outputs.scan == 'all'
         run: python bin/yara-generator/validate-malicious-rules.py --skip-generate --all-categories --output-dir "${RUNNER_TEMP}/native-yara"
+      - name: Match YARA sets against drivers changed in this pull request
+        # Needs bytes for the changed drivers only. Other samples stay pointers
+        # and are not failures. Missing or unexpected matches on hydrated bytes
+        # still fail.
+        if: steps.plan.outputs.scan == 'partial'
+        run: python bin/yara-generator/validate-malicious-rules.py --skip-generate --all-categories --allow-unhydrated --output-dir "${RUNNER_TEMP}/native-yara"
+      - name: Record skipped native corpus scan
+        if: steps.plan.outputs.scan == 'skip'
+        run: |
+          mkdir -p "${RUNNER_TEMP}/native-yara"
+          cat > "${RUNNER_TEMP}/native-yara/summary.json" <<'EOF'
+          {
+            "validation_status": "skipped",
+            "reason": "This pull request does not change driver binaries or YARA rules. YAML, pointer, and unit-test checks still ran. The full native corpus scan runs on push to main and in the merge queue."
+          }
+          EOF
+          echo "Native corpus scan skipped; this change does not require driver bytes beyond the two unit-test samples." >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: website/.nvmrc
@@ -42,6 +114,7 @@ jobs:
         run: npm ci
         working-directory: website
       - name: Validate actual website research JSON artifacts against source
+        # Builds from YAML and committed API files. Does not read driver bytes.
         run: npm run build && npm run verify:build
         working-directory: website
         env:

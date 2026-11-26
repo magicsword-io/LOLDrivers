@@ -29,8 +29,10 @@ existing target file is refused. Full repository regeneration should use
 Validation uses pinned yara-python/libyara, scans sample bytes statically, and
 exits nonzero for missing or unexpected matches, absent positive coverage, or
 unhydrated LFS objects. No driver is executed. By default it checks the two
-malicious sets; `--all-categories` checks all five. JSON details are written to
-`summary.json`; `--json-output` also prints them.
+malicious sets; `--all-categories` checks all five. `--allow-unhydrated` is for
+a checkout that hydrated only the drivers under test: pointers are not a
+failure, and missing or unexpected matches on hydrated bytes still are. JSON
+details are written to `summary.json`; `--json-output` also prints them.
 
 See [the complete safety contract](../../docs/indicator-safety.md) for source
 fields, exclusions, API migration, CI requirements and engine limitations.

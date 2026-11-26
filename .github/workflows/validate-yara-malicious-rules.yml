@@ -18,26 +18,99 @@ on:
       - "yaml/**"
       - "detections/yara/**"
 
+permissions:
+  contents: read
+  actions: write
+
 jobs:
   validate-malicious-yara-rules:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          lfs: true
+          # Pointers only. The plan step downloads driver bytes when this
+          # change actually needs a native scan.
+          lfs: false
           submodules: true
 
+      - name: Fetch comparison commit
+        id: base
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          base=""
+          if [ "$EVENT" = "pull_request" ]; then
+            base="$PR_BASE"
+            git fetch --no-tags --depth=1 origin "$base"
+          elif [ "$EVENT" = "push" ] && [ "${GITHUB_REF}" != "refs/heads/main" ]; then
+            if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              git fetch --no-tags --depth=1 origin main
+              base="$(git rev-parse FETCH_HEAD)"
+            else
+              base="$BEFORE"
+              git fetch --no-tags --depth=1 origin "$base"
+            fi
+          fi
+          echo "sha=${base}" >> "$GITHUB_OUTPUT"
+
+      - name: Plan selective Git LFS fetch
+        id: plan
+        env:
+          EVENT: ${{ github.event_name }}
+          REF: ${{ github.ref }}
+          BASE: ${{ steps.base.outputs.sha }}
+        run: |
+          # This job only scans sample bytes. YAML-only changes do not download
+          # the corpus; bin/validate.py already checks that metadata on pointers.
+          # Rule or generator changes, push to main, and the merge path fetch
+          # every drivers/*.bin. A change that also edits driver binaries, with
+          # no rule change, hydrates those paths and scans them.
+          .github/scripts/lfs-plan.sh \
+            --policy rules \
+            --event "$EVENT" \
+            --ref "$REF" \
+            --base "$BASE" \
+            --head HEAD
+
+      - name: Cache and fetch needed Git LFS objects
+        uses: ./.github/actions/git-lfs
+        with:
+          fetch: ${{ steps.plan.outputs.fetch }}
+          include: ${{ steps.plan.outputs.include }}
+
       - name: Set up Python 3.11
+        if: steps.plan.outputs.scan != 'skip'
         uses: actions/setup-python@v4.5.0
         with:
           python-version: "3.11"
 
       - name: Install validator dependencies
+        if: steps.plan.outputs.scan != 'skip'
         run: python -m pip install -r bin/requirements-safety.txt
 
-      - name: Validate committed malicious YARA rules
+      - name: Validate committed malicious YARA rules against the corpus
+        # Needs every drivers/*.bin byte. Pointers fail the scan.
+        if: steps.plan.outputs.scan == 'all'
         run: >
           python ./bin/yara-generator/validate-malicious-rules.py
           --skip-generate
           --json-output
           --output-dir "${RUNNER_TEMP}/yara-malicious-validation"
+
+      - name: Validate committed malicious YARA rules against changed drivers
+        # Needs bytes for the changed drivers only.
+        if: steps.plan.outputs.scan == 'partial'
+        run: >
+          python ./bin/yara-generator/validate-malicious-rules.py
+          --skip-generate
+          --allow-unhydrated
+          --json-output
+          --output-dir "${RUNNER_TEMP}/yara-malicious-validation"
+
+      - name: Skip native scan for metadata-only changes
+        if: steps.plan.outputs.scan == 'skip'
+        run: |
+          echo "No driver binaries or YARA rules changed, so this run does not download Git LFS objects. YAML validation runs on pointers in the Validate YAMLs workflow. A full malicious-rule byte scan runs on push to main and when rules change." >> "$GITHUB_STEP_SUMMARY"

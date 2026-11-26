@@ -185,7 +185,11 @@ without remote `main` fetches or stale YARA merges.
 The gate cross-checks every declared raw digest that can be associated with a
 hydrated binary. Contradictory sample hashes fail, even when another digest
 matches. Git LFS pointers permit SHA256/size checks without inventing SHA1/MD5
-values; full engine controls require hydrated objects. Binaries without a raw
+values; full engine controls require hydrated objects. CI hydrates the whole
+`drivers/` corpus on push to `main`, in the merge queue, and when a pull
+request changes YARA rules or the generator. Other pull requests leave the
+corpus as pointers and hydrate only changed `drivers/*.bin` files plus the two
+real samples the native unit test reads. Binaries without a raw
 catalog link are reported for attribution review and cannot supply new generated
 raw-hash indicators; independently cataloged Authenticode rules retain their scope.
 `--report` writes source/field/value/rule/remediation for those
@@ -219,9 +223,12 @@ generated WDAC policy uses exact image hashes instead of inferring version range
 Configure branch rules/rulesets on `main` to require the **`indicator-safety`**
 status from the **Indicator safety** workflow for the current revision. That job
 has no path filter and runs on every PR and merge-queue group, with source checks,
-adversarial controls, isolated regeneration and native scans of all five YARA
-sets. Existing YAML/website checks may remain required separately. The older
-path-filtered malicious-YARA workflow is supplementary, not a replacement.
+adversarial controls, and isolated regeneration. Native scans of all five YARA
+sets run on push to `main`, in the merge queue, and on pull requests that change
+YARA rules or `bin/yara-generator`. Pull requests that only change driver
+binaries scan those hydrated files. YAML-only pull requests do not download the
+driver corpus. Existing YAML/website checks may remain required separately. The
+older path-filtered malicious-YARA workflow is supplementary, not a replacement.
 
 Workflow files alone do **not** enforce branch protection. Requiring the check
 is a separate repository administration operation; verify the live branch rules

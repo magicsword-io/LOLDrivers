@@ -1,11 +1,15 @@
 name: Validate YAMLs
 
-on: 
+on:
   push:
     branches:
       - "*"
   pull_request:
     branches: [main]
+
+permissions:
+  contents: read
+  actions: write
 
 jobs:
   validate-yaml:
@@ -14,7 +18,53 @@ jobs:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         submodules: true
-        lfs: true # Native YARA controls require driver bytes, not LFS pointers.
+        # Pointers only. bin/validate.py checks YAML schema, categories, hash
+        # lengths, and driver filenames against Git LFS pointer SHA256 values.
+        # It does not need the driver corpus.
+        lfs: false
+
+    - name: Fetch comparison commit
+      id: base
+      env:
+        EVENT: ${{ github.event_name }}
+        PR_BASE: ${{ github.event.pull_request.base.sha }}
+        BEFORE: ${{ github.event.before }}
+      run: |
+        set -euo pipefail
+        base=""
+        if [ "$EVENT" = "pull_request" ]; then
+          base="$PR_BASE"
+          git fetch --no-tags --depth=1 origin "$base"
+        elif [ "$EVENT" = "push" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ]; then
+          base="$BEFORE"
+          git fetch --no-tags --depth=1 origin "$base"
+        fi
+        echo "sha=${base}" >> "$GITHUB_OUTPUT"
+
+    - name: Plan selective Git LFS fetch
+      id: plan
+      env:
+        EVENT: ${{ github.event_name }}
+        REF: ${{ github.ref }}
+        BASE: ${{ steps.base.outputs.sha }}
+      run: |
+        # Bytes this job needs: the two real samples read by
+        # CatalogEngineControls in bin/tests/test_indicator_safety.py.
+        # Changed drivers/*.bin paths are included too so filename checks hash
+        # those bytes. The rest of the corpus stays as pointers.
+        .github/scripts/lfs-plan.sh \
+          --policy metadata \
+          --event "$EVENT" \
+          --ref "$REF" \
+          --base "$BASE" \
+          --head HEAD
+
+    - name: Cache and fetch needed Git LFS objects
+      uses: ./.github/actions/git-lfs
+      with:
+        fetch: ${{ steps.plan.outputs.fetch }}
+        include: ${{ steps.plan.outputs.include }}
+
     - name: Set up Python 3.11
       uses: actions/setup-python@v4.5.0
       with:

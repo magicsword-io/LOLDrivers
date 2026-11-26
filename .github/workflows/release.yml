@@ -10,6 +10,9 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: true
+        # YAML checks accept LFS pointers. The release archive job below is
+        # the step that needs every driver byte.
+        lfs: false
     - name: Set up Python 3.11
       uses: actions/setup-python@v4.5.0
       with:
@@ -24,12 +27,25 @@ jobs:
   create_release:
     needs: validate-yaml
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        lfs: true
-  
+        # drivers.zip must contain real binaries, not pointers. Download them
+        # after the cache restore inside the next step; checkout itself must
+        # not pull LFS or every release re-downloads the corpus.
+        lfs: false
+
+    - name: Cache and fetch every Git LFS object
+      # Full corpus. The cache key is the Git LFS inventory, so a repeat of
+      # the same drivers does not spend LFS bandwidth again.
+      uses: ./.github/actions/git-lfs
+      with:
+        fetch: all
+
     - name: Build drivers.zip
       run: |
         mkdir -p build/metadata

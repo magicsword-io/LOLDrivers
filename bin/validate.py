@@ -2,6 +2,10 @@
 
 '''
 Validates YAML metadata and driver binary filenames.
+
+YAML schema checks never read driver bytes. Filename checks accept a Git LFS
+pointer and compare its oid to the catalog SHA256, and hash file bytes only
+when the object is hydrated. CI can leave the corpus as pointers.
 '''
 
 import glob
