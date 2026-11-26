@@ -229,6 +229,13 @@ h1 span {
   line-height: 1.7;
   margin-bottom: 0;
 }
+.intro a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.intro a:hover {
+  color: var(--text);
+}
 .research {
   min-width: 0;
   border: 1px solid var(--line);
@@ -529,8 +536,8 @@ tr:hover td {
 }
 .footer {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  flex-direction: column;
+  gap: 12px;
   border-top: 1px solid var(--line);
   padding-top: 24px;
   padding-bottom: 28px;
@@ -538,8 +545,45 @@ tr:hover td {
   font-size: 11px;
   color: var(--muted);
 }
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
 .footer a {
   color: var(--text);
+}
+.footer-resources {
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.footer-resources h4 {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: var(--text);
+}
+.footer-resources ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+.footer-resources li {
+  margin: 0;
+  padding: 0;
+}
+.footer-resources a {
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.footer-resources a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 .empty {
   text-align: center;
@@ -653,10 +697,15 @@ tr:hover td {
     display: none;
   }
   .footer {
-    display: block;
+    gap: 16px;
   }
-  .footer div + div {
-    margin-top: 9px;
+  .footer-info {
+    flex-direction: column;
+    gap: 9px;
+  }
+  .footer-resources ul {
+    flex-direction: column;
+    gap: 8px;
   }
   .table-top {
     font-size: 10px;
@@ -971,6 +1020,23 @@ tr:hover td {
   color: var(--muted);
   margin: 0;
   max-width: 625px;
+}
+.ms-promotion-learn {
+  font-size: 11px;
+  margin-top: 8px;
+}
+.ms-promotion-learn a {
+  color: #72e4ba;
+  text-decoration: underline;
+}
+.ms-promotion-learn a:hover {
+  color: #8becce;
+}
+[data-theme='light'] .ms-promotion-learn a {
+  color: #126443;
+}
+[data-theme='light'] .ms-promotion-learn a:hover {
+  color: #0d4c30;
 }
 .ms-promotion-action {
   display: flex;
