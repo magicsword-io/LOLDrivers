@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Statically scan repository samples with the native YARA engine; never execute them."""
+"""Statically scan repository samples with the native YARA engine; never execute them.
+
+By default every drivers/*.bin object must be hydrated. --allow-unhydrated scans
+the hydrated samples and does not fail only because other Git LFS pointers were
+left in place. Missing and unexpected matches on hydrated bytes still fail.
+"""
 import argparse
 import hashlib
 import json
@@ -14,6 +19,30 @@ from generated_safety import OutputValidator
 from indicator_safety import detection_record, load_catalog
 
 
+def validation_status(summary, malicious_samples_expected, allow_unhydrated):
+    """Return ('ok' or 'failed', missing matches).
+
+    Pointers fail closed unless allow_unhydrated is set. That mode still fails
+    when a hydrated sample is missing or unexpected. The coverage failure for
+    "no malicious bytes at all" is skipped only when pointers were left on
+    purpose, because those sample bytes were not downloaded.
+    """
+    missing = list(summary['missing'])
+    pointers_left = bool(summary['unhydrated_lfs'])
+    if (
+        malicious_samples_expected
+        and not summary['expected_matches']
+        and not (allow_unhydrated and pointers_left)
+    ):
+        missing.append({
+            'file': '<coverage>',
+            'rules': 'No known affected sample bytes were available',
+        })
+    unhydrated_blocks = pointers_left and not allow_unhydrated
+    status = 'failed' if missing or summary['unexpected'] or unhydrated_blocks else 'ok'
+    return status, missing
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--repo-root', type=Path, default=REPO)
@@ -21,6 +50,14 @@ def main():
     parser.add_argument('--all-categories', action='store_true', help='Also validate all vulnerable and renamed rule sets')
     parser.add_argument('--output-dir', type=Path, default=Path('/tmp/yara-malicious-validation'))
     parser.add_argument('--json-output', '--json', action='store_true')
+    parser.add_argument(
+        '--allow-unhydrated',
+        action='store_true',
+        help='Scan hydrated samples without failing because other Git LFS pointers remain. '
+             'Missing and unexpected matches on hydrated bytes still fail. '
+             'Pull requests use this for changed drivers. Push to main keeps the default, '
+             'which requires every sample byte.',
+    )
     args = parser.parse_args()
     records = load_catalog(args.repo_root / 'yaml')
     expected = {category: {a: set() for a in ('MD5', 'SHA1', 'SHA256')}
@@ -62,9 +99,9 @@ def main():
                     summary['missing'].append({'file': path.name, 'rules': name})
                 if matches and not known[category]:
                     summary['unexpected'].append({'file': path.name, 'rules': name})
-    if any(expected['malicious'].values()) and not summary['expected_matches']:
-        summary['missing'].append({'file': '<coverage>', 'rules': 'No known affected sample bytes were available'})
-    summary['validation_status'] = 'failed' if summary['missing'] or summary['unexpected'] or summary['unhydrated_lfs'] else 'ok'
+    summary['unhydrated_policy'] = 'allowed' if args.allow_unhydrated else 'required'
+    summary['validation_status'], summary['missing'] = validation_status(
+        summary, any(expected['malicious'].values()), args.allow_unhydrated)
     (args.output_dir / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     if args.json_output:
         print(json.dumps(summary, indent=2))

@@ -1,0 +1,106 @@
+name: Cache and fetch Git LFS
+description: >
+  Cache .git/lfs on a hash of `git lfs ls-files -l`, then fetch either every
+  object or an include list. Checkout must use lfs:false so the download
+  happens after the cache restore and repeat runs do not hit Git LFS bandwidth.
+
+inputs:
+  fetch:
+    description: "none, include, or all"
+    required: true
+    default: none
+  include:
+    description: "Comma-separated git lfs pull --include paths"
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Fingerprint Git LFS inventory
+      id: inventory
+      shell: bash
+      env:
+        LFS_FETCH: ${{ inputs.fetch }}
+        LFS_INCLUDE: ${{ inputs.include }}
+      run: |
+        set -euo pipefail
+        # Sorted so the key does not depend on git-lfs output order.
+        # The listing is the index, not downloaded bytes.
+        inventory="$(git lfs ls-files -l | LC_ALL=C sort | sha256sum | awk '{print $1}')"
+        include_hash="$(printf '%s' "$LFS_INCLUDE" | sha256sum | awk '{print $1}')"
+        full_key="git-lfs-all-${inventory}"
+        if [ "$LFS_FETCH" = "all" ]; then
+          primary="$full_key"
+        elif [ "$LFS_FETCH" = "include" ]; then
+          # Scope is part of the key so a partial object store is never saved
+          # as the complete corpus for this inventory.
+          primary="git-lfs-include-${inventory}-${include_hash}"
+        else
+          primary="git-lfs-none-${inventory}"
+        fi
+        {
+          echo "inventory=${inventory}"
+          echo "primary=${primary}"
+          echo "full_key=${full_key}"
+        } >> "$GITHUB_OUTPUT"
+        echo "Git LFS inventory \`${inventory}\`; fetch \`${LFS_FETCH}\`." >> "$GITHUB_STEP_SUMMARY"
+
+    - name: Restore Git LFS object cache
+      id: cache
+      if: inputs.fetch != 'none'
+      uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      with:
+        path: .git/lfs
+        key: ${{ steps.inventory.outputs.primary }}
+        # Prefer the complete store for this inventory, then a partial store
+        # for it, then any earlier complete store. `git lfs pull` still runs
+        # and downloads only objects that are missing.
+        restore-keys: |
+          git-lfs-all-${{ steps.inventory.outputs.inventory }}
+          git-lfs-include-${{ steps.inventory.outputs.inventory }}-
+          git-lfs-all-
+
+    - name: Fetch Git LFS objects
+      if: inputs.fetch != 'none'
+      shell: bash
+      env:
+        LFS_FETCH: ${{ inputs.fetch }}
+        LFS_INCLUDE: ${{ inputs.include }}
+      run: |
+        set -euo pipefail
+        # Local clean/smudge filters keep `git diff` clean after hydration.
+        # Checkout with lfs:false does not install them.
+        git lfs install --local
+        if [ "$LFS_FETCH" = "all" ]; then
+          # Release archives and full native scans need every drivers/*.bin.
+          git lfs pull
+          left="$(git lfs ls-files -l | awk '$2 != "*" { c++ } END { print c + 0 }')"
+          if [ "$left" != "0" ]; then
+            echo "::error::Full Git LFS pull left ${left} pointer(s)." >&2
+            exit 1
+          fi
+        elif [ -z "$LFS_INCLUDE" ]; then
+          echo "No LFS include paths."
+        else
+          git lfs pull --include="$LFS_INCLUDE"
+          left="$(git lfs ls-files -l -I "$LFS_INCLUDE" | awk '$2 != "*" { c++ } END { print c + 0 }')"
+          if [ "$left" != "0" ]; then
+            echo "::error::Selective Git LFS pull left ${left} requested pointer(s)." >&2
+            git lfs ls-files -l -I "$LFS_INCLUDE" | awk '$2 != "*" { print }' >&2
+            exit 1
+          fi
+        fi
+
+    - name: Save Git LFS object cache
+      # Save a complete corpus under the all-key, or a small include-only
+      # store when nothing was restored. Do not republish a restored corpus
+      # under a new include key.
+      if: >-
+        inputs.fetch != 'none' &&
+        steps.cache.outputs.cache-hit != 'true' &&
+        (inputs.fetch == 'all' || steps.cache.outputs.cache-matched-key == '')
+      uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      with:
+        path: .git/lfs
+        key: ${{ steps.inventory.outputs.primary }}
