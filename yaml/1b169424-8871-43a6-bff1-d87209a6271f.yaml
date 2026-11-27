@@ -1,0 +1,59 @@
+Id: 1b169424-8871-43a6-bff1-d87209a6271f
+Tags:
+    - FileLock.sys
+Author: Ege Balcı
+Created: '2026-11-27'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+    Command: sc.exe create FileLock binPath=C:\windows\temp\FileLock.sys type=kernel && sc.exe start FileLock
+    Description: >-
+        FileLock.sys (ESAFENET SmartSec V1.0.240) is a file system minifilter that creates the
+        communication port \eFileLockPort with a NULL DACL and accepts every connection. Port
+        commands perform ZwCreateFile/ZwReadFile/ZwWriteFile/ZwSetInformationFile from kernel
+        mode without OBJ_FORCE_ACCESS_CHECK, so a standard user can copy (0x3a) and rename/move
+        (0x54) arbitrary files past their DACLs, and terminate arbitrary processes by PID (0x16).
+        The trusted-PID gate (0x0a) is protected only by a password that is a fixed arithmetic
+        function of the PID and can be computed by any caller. Chaining the file copy and rename
+        primitives to replace an image executed by SYSTEM gives standard user to SYSTEM local
+        privilege escalation.
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10, Windows 11
+Resources:
+    - https://github.com/EgeBalci/ESAFNET-SmartSec-LPE-PoC
+Acknowledgement:
+    Person: Ege Balcı
+    Handle: '@EgeBalci'
+Detection: []
+KnownVulnerableSamples:
+-   Filename: FileLock.sys
+    MD5: b7e232130a7430f3d3fbf1508af81ca7
+    SHA1: 5ac81c088554f9be50b842efa40b326a50b223c3
+    SHA256: 3f4c8f8ddcf2838071ff38099dac9af81935d88b7d62d94b1628b81626b8a353
+    Signature:
+        - 北京亿赛通科技发展有限责任公司
+        - GlobalSign GCC R45 EV CodeSigning CA 2020
+        - GlobalSign Code Signing Root R45
+    Company: ESAFENET S&T CO.,LTD
+    Description: Windows x64 Driver for SmartSec
+    Product: SmartSec for Windows
+    ProductVersion: V1.0.240
+    FileVersion: V1.0.240
+    MachineType: AMD64
+    OriginalFilename: FileLock.sys
+    Authentihash:
+        MD5: f60787c1c6e24244c0528809c96c988b
+        SHA1: a53d92ca5bf90f97945698be24bb0a03a3ab86ee
+        SHA256: 0849e3fa9e384d7f796fcfb53b058c574c2a0802a4a4d22716278c15fec0d2fa
+    InternalName: FileLock.sys
+    Copyright: ESAFENET Corporation. All rights reserved.
+    Imports:
+        - ntoskrnl.exe
+        - ksecdd.sys
+        - FLTMGR.SYS
+        - fwpkclnt.sys
+        - NETIO.SYS
+    ExportedFunctions: ''
+    PDBPath: d:\drv-project\00.code\trunk\FileLock\bin\fre\amd64\FilelockW764.pdb
